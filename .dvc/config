@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-ndb-ufes
+['remote "dvc-ndb-ufes"']
+    url = s3://dvc-ndb-ufes/data/
