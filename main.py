@@ -23,10 +23,36 @@ def parse_args():
     parser.add_argument("-lp", "--link_path", default="data/ndb_ufes/link", help="Path to \
                         directory that saves figures and csv that compares patch to detected point in the \
                         original image.")
+    parser.add_argument("-c", "--use_checkpoint", action="store_true", help="Continues linking images, \
+                        considering images already linked in link path images directory.")
+    parser.add_argument("--ignore_patches", default=[], help="List of ids (int) of patches that \
+                        should be ignored.", nargs="+", type=int)
     return parser.parse_args()
 
 def main():
     pass
+
+def use_checkpoint(links_path, patches_list, patch_paths):
+    links_path = links_path / "images"
+    linked_images = set([img.name[6:11] for img in links_path.iterdir()])
+
+    new_images = set(patches_list) - linked_images
+    linked_index = set([patches_list.index(name) for name in new_images])
+
+    new_patches_list = sorted([patches_list[i] for i in linked_index])
+    new_patch_paths = sorted([patch_paths[i] for i in linked_index])
+
+    return new_patches_list, new_patch_paths
+
+def ignore_patches(ignore_ids, patches_list, patch_paths):
+    ignore_parsed = [f"p{id:04}" for id in ignore_ids]
+    print(ignore_parsed)
+    ignored_ids = set([patches_list.index(name) for name in patches_list if name not in ignore_parsed])
+
+    new_patches_list = sorted([patches_list[i] for i in ignored_ids])
+    new_patch_paths = sorted([patch_paths[i] for i in ignored_ids])   
+
+    return new_patches_list, new_patch_paths
 
 if __name__ == "__main__":
     args = parse_args()
@@ -65,12 +91,26 @@ if __name__ == "__main__":
     origin_list = sorted(origin_list)
     origin_paths = sorted(origin_paths)
 
+    if args.use_checkpoint:
+        patches_list, patch_paths = use_checkpoint(LINK_PATH, 
+                                                   patches_list,
+                                                   patch_paths)
+        
+    if len(args.ignore_patches):
+        patches_list, patch_paths = ignore_patches(args.ignore_patches,
+                                                   patches_list,
+                                                   patch_paths)
+
+    last_img_index = 0
     for rows in link_df.iterrows():
         index = rows[0]
         index_info = rows[1]
 
         patch_path = index_info.patch_path
         patch_name = index_info.patch_id
+
+        if patch_name not in patches_list:
+            continue
 
         if not os.path.exists(patch_path) and patch_path != "/":
             continue
@@ -81,7 +121,10 @@ if __name__ == "__main__":
 
         print(f"Searching for origin of patch {patch_name}")
 
-        for origin_name, origin_path in zip(origin_list, origin_paths):
+        origin_paths[last_img_index], origin_paths[0] = origin_paths[0], origin_paths[last_img_index]
+        origin_list[last_img_index], origin_list[0] = origin_list[0], origin_list[last_img_index]
+
+        for index, (origin_name, origin_path) in enumerate(zip(origin_list, origin_paths)):
             print(f"Reading path of image {origin_path}")
 
             if not os.path.exists(origin_path) and origin_path != "/":
@@ -123,6 +166,17 @@ if __name__ == "__main__":
             plt.title('Detected point'), plt.xticks([]), plt.yticks([])
             
             plt.savefig(LINK_PATH / "images" /f"patch_{patch_name}_origin_{origin_name}")
+            last_img_used = index
             break
 
-    link_df.to_csv(LINK_PATH / "ndb_pndb_relation.csv")
+    add = 0
+
+    while True:
+        if not add:
+            path = LINK_PATH / "ndb_pndb_relation.csv"
+        else:
+            path = LINK_PATH / f"ndb_pndb_relation_{add}.csv"
+
+        if not os.path.exists(path):
+            link_df.to_csv(path, index=False)
+            break
