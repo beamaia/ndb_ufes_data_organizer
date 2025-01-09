@@ -166,7 +166,7 @@ if __name__ == "__main__":
             plt.title('Detected point'), plt.xticks([]), plt.yticks([])
             
             plt.savefig(LINK_PATH / "images" /f"patch_{patch_name}_origin_{origin_name}")
-            last_img_used = index
+            last_img_index = index
             break
 
     add = 0
