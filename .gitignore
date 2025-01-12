@@ -170,6 +170,8 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 
+# mac stuff
+.DS_Store
 
 # data files and directory
 data
