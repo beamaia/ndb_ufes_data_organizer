@@ -12,6 +12,7 @@ botocore==1.35.88
 
 # image
 opencv-python==4.10.0.84
+scikit-image==0.25.1
 
 # plot
 matplotlib==3.10.0
