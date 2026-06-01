@@ -1,0 +1,161 @@
+# Model Registry for PyTorch + HuggingFace models for feature extraction
+# Priority: 1 = Recommended, 2 = Good, 3 = Alternative
+# Category: histopathology = domain-specific, imagenet = general vision
+
+# Global configuration
+num_labels: 3  # Default num_labels for models that require it (fixes Virchow config issue)
+
+models:
+  # ---------- PATHOLOGY FOUNDATION MODELS (Priority 1 - Recommended) ---------- 
+  uni:
+    description: "UNI - Pathology Foundation Model (768D, pretrained on billions of patches)"
+    source: "huggingface"
+    model_id: "MahmoodLab/UNI"
+    category: "histopathology"
+    priority: 1
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Chen, R. J., et al. (2024). "Towards a general-purpose foundation model for computational pathology." Nature Medicine
+  # Reason why chosen: This model is a massive-scale Vision Transformer (ViT-L) pretrained on over 100,000 whole slide images and 100 million patches using the DINOv2 framework to learn generalizable morphological representations
+
+  virchow:
+    description: "Virchow - Pathology Foundation Model (1024D)"
+    source: "huggingface"
+    model_id: "paige-ai/Virchow"
+    category: "histopathology"
+    priority: 1
+    input_size: 224
+    output_dim: 1024
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Vorontsov, E., et al. (2024). "A foundation model for clinical-grade computational pathology and rare cancers detection." Nature Medicine
+  # Reason why chosen: Virchow was pretrained on a dataset of 1.5 million slides from Memorial Sloan Kettering Cancer Center, totaling over 2 billion patches, specifically designed for high-resolution histopathological analysis
+
+  ctranspath:
+    description: "CTransPath - Transformer pre-trained on histopathology (768D)"
+    source: "huggingface"
+    model_id: "kaczmarj/CTransPath"
+    category: "histopathology"
+    priority: 1
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Wang, X., et al. (2021). "TransPath: Transformer-Based Self-supervised Learning for Histopathological Image Classification." MICCAI
+  # Reason why chosen: CTransPath pioneers the use of a hybrid CNN-Transformer (specifically a Swin Transformer) design trained through Semantically Relevant Contrastive Learning (SRCL) on 15 million pathology patches
+
+  mocov3_vit_small:
+    description: "MoCo v3 ViT-Small (self-supervised histopathology, 384D)"
+    source: "huggingface"
+    model_id: "1aurent/vit_small_patch16_224.transpath_mocov3"
+    category: "histopathology"
+    priority: 2
+    input_size: 224
+    output_dim: 384
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Chen, X., Xie, S., & He, K. (2021). "An empirical study of training self-supervised vision transformers." ICCV.
+  # Context: MoCo v3 is a framework for Momentum Contrastive Learning specifically optimized for Vision Transformers, helping models learn robust features from unlabeled data through a contrastive objective
+
+  #  ---------- VISION TRANSFORMERS (Priority 2 - Good alternative / tests for comparison) ---------- 
+  vit_base_patch16_224:
+    description: "ViT-Base (ImageNet-pretrained, 768D)"
+    source: "huggingface"
+    model_id: "google/vit-base-patch16-224"
+    category: "imagenet"
+    priority: 2
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+
+  vit_large_patch16_224:
+    description: "ViT-Large (ImageNet-pretrained, 1024D)"
+    source: "huggingface"
+    model_id: "google/vit-large-patch16-224"
+    category: "imagenet"
+    priority: 2
+    input_size: 224
+    output_dim: 1024
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+
+  vit_base_patch32_224:
+    description: "ViT-Base-32 (ImageNet-pretrained, 768D, larger patches)"
+    source: "huggingface"
+    model_id: "openai/clip-vit-base-patch32"
+    category: "imagenet"
+    priority: 3
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+
+  # Reference for all ViT: Dosovitskiy, A., et al. (2021). "An image is worth 16x16 words: Transformers for image recognition at scale." ICLR
+  # Reason why chosen: Transformer, demonstrating that pure transformer architectures could match or exceed CNN performance on image classification tasks by treating patches as "visual words". Used in our original paper
+
+  deit_base_patch16_224:
+    description: "DeiT-Base (ImageNet-pretrained, 768D)"
+    source: "huggingface"
+    model_id: "facebook/deit-base-patch16-224"
+    category: "imagenet"
+    priority: 2
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Touvron, H., et al. (2021). "Training data-efficient image transformers & distillation through attention." ICML.
+  # Reason why chosen: DeiT introduces a teacher-student distillation strategy that allows Transformers to be trained more effectively on smaller datasets (like ImageNet-1k) without the need for the massive pre-training data originally required by ViT
+
+  swin_base_patch4_window7_224:
+    description: "Swin Transformer Base (ImageNet-pretrained, 768D)"
+    source: "huggingface"
+    model_id: "microsoft/swin-base-patch4-window7-224"
+    category: "imagenet"
+    priority: 2
+    input_size: 224
+    output_dim: 768
+    extract_method: "cls_token"
+    pretrained: true
+    weights_path: null
+  # Reference: Liu, Z., et al. (2021). "Swin Transformer: Hierarchical Vision Transformer using Shifted Windows." ICCV.
+  # Reason why chosen: Swin introduces shifted windows for hierarchical representation and reduced computational complexity by computing self-attention locally within windows
+
+  #  ---------- CONVOLUTIONAL NEURAL NETWORKS (Priority 2 - CNN baseline) ---------- 
+  efficientnet_b0:
+    description: "EfficientNet-B0 (ImageNet-pretrained, 1280D)"
+    source: "torchvision"
+    model_id: "efficientnet_b0"
+    category: "imagenet"
+    priority: 2
+    input_size: 224
+    output_dim: 1280
+    extract_method: "global_avg_pool"
+    pretrained: true
+    weights_path: null
+  # Reference: Tan, M., & Le, Q. V. (2019). "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks." ICML.
+  # Reason why chosen: EfficientNet achieves state-of-the-art accuracy and efficiency through compound scaling of depth, width, and resolution, providing a strong CNN baseline for comparison with transformer-based methods
+
+  efficientnet_b1:
+    description: "EfficientNet-B1 (ImageNet-pretrained, 1280D, 240x240 input)"
+    source: "torchvision"
+    model_id: "efficientnet_b1"
+    category: "imagenet"
+    priority: 2
+    input_size: 240
+    output_dim: 1280
+    extract_method: "global_avg_pool"
+    pretrained: true
+    weights_path: null
+  # Reference: Tan, M., & Le, Q. V. (2019). "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks." ICML.
+  # Reason why chosen: EfficientNet-B1 represents a scaled-up variant from B0, testing the efficiency of compound scaling while maintaining computational efficiency
