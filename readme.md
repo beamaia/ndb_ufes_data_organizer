@@ -61,11 +61,7 @@ Provisional fold artifacts observed in this working tree:
 - `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv`
 - `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_with_images.csv`
 
-Current Phase 2 outputs:
-
-- `results/phase2_tuning/phase2_all_results_{model}_run{n}.csv`
-- `results/phase2_tuning/phase2_all_results_{model}_averaged.csv`
-- `results/phase2_tuning/clustering_params_{model}.json`
+Phase 2 is expected to be rerun before final fold creation, so intermediate tuning outputs are not listed as fixed artifacts here.
 
 ## Dataset Snapshot
 
@@ -99,6 +95,10 @@ This repository is mid-reorganization. Before final cleanup or commit:
 - verify all fold invariants;
 - decide which root Markdown files should be promoted, archived, or deleted;
 - resolve or document empty top-level Phase 3/4 scripts;
+
+## Implementation Support
+
+This project uses AI-assisted tools, including GitHub Copilot, Claude, and OpenAI Codex, to enhance productivity and improve documentation.
 
 ## Citation
 
