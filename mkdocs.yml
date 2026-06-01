@@ -1,0 +1,60 @@
+site_name: NDB-UFES Data Organizer
+site_description: Stratified folding pipeline for oral cancer histopathology dataset
+site_url: https://beamaia.github.io/ndb_ufes_data_organizer/
+repo_url: https://github.com/beamaia/ndb_ufes_data_organizer
+repo_name: ndb_ufes_data_organizer
+
+theme:
+  name: material
+  locale: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+nav:
+  - Home: index.md
+  - Dataset Factsheet: factsheet.md
+  - Exploratory Analysis: exploratory-analysis.md
+  - Contamination Checks: contamination-analysis.md
+  - Setup & Installation: setup.md
+  - Pipeline Overview: pipeline.md
+  - Implementation Status: status.md
+  - Reproducibility: reproducibility.md
+  - Phase 1:
+    - Code Reference: phase1-code.md
+    - Results & Visualizations: phase1-results.md
+  - Data Dictionary: data-dictionary.md
+
+plugins:
+  - search:
+      lang: en
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - tables
+  - codehilite
+  - meta
+  - admonition
+  - toc:
+      permalink: true
+
+copyright: Copyright © 2026 NDB-UFES Data Organizer Team
