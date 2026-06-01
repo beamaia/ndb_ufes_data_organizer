@@ -40,7 +40,6 @@ class ModelLoader:
             with open(self.registry_path, 'r') as f:
                 config = yaml.safe_load(f)
             
-            breakpoint()
             registry = ModelRegistry(**config)
             return registry
         except yaml.YAMLError as e:

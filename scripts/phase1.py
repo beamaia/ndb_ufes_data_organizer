@@ -54,7 +54,6 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
         device: Device ('mps', 'cuda', or 'cpu')
         batch_size: Batch size for feature extraction
     """
-    breakpoint()
     run_timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
     metadata_tracker = MetadataTracker()
