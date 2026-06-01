@@ -1,0 +1,1695 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Stratified folding pipeline for oral cancer histopathology dataset">
+      
+      
+      
+        <link rel="canonical" href="https://beamaia.github.io/ndb_ufes_data_organizer/data-dictionary/">
+      
+      
+        <link rel="prev" href="../phase1-results/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Data Dictionary - NDB-UFES Data Organizer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-dictionary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NDB-UFES Data Organizer" class="md-header__button md-logo" aria-label="NDB-UFES Data Organizer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NDB-UFES Data Organizer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Data Dictionary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/beamaia/ndb_ufes_data_organizer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ndb_ufes_data_organizer
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../factsheet/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dataset Factsheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exploratory-analysis/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exploratory Analysis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contamination-analysis/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contamination Checks
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setup/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Setup & Installation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../pipeline/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Pipeline Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../status/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Implementation Status
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../reproducibility/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Reproducibility
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../phase1-code/" class="md-tabs__link">
+          
+  
+  
+  Phase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Data Dictionary
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NDB-UFES Data Organizer" class="md-nav__button md-logo" aria-label="NDB-UFES Data Organizer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    NDB-UFES Data Organizer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/beamaia/ndb_ufes_data_organizer" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ndb_ufes_data_organizer
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../factsheet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dataset Factsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exploratory-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exploratory Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contamination-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contamination Checks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup & Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipeline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pipeline Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Implementation Status
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reproducibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reproducibility
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phase 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Phase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1-code/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phase1-results/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Results & Visualizations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Dictionary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Levels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-counts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current Counts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Class Labels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-fold-assignment-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required Fold Assignment Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Required Fold Assignment Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origin-level-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origin-Level Folds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-level-fold-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch-Level Fold Summary
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-level-detailed-folds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch-Level Detailed Folds
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-level-folds-with-image-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch-Level Folds With Image Paths
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-metadata-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source Metadata Files
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source Metadata Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Patch Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#origin-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origin Metadata
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Labels
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#demographics-and-risk-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Demographics and Risk Factors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisional-fold-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provisional Fold Artifacts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisional Fold Artifacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stratification-variable-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratification Variable Audit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#morphology-clusters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Morphology Clusters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-status-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Status Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="data-dictionary">Data Dictionary<a class="headerlink" href="#data-dictionary" title="Permanent link">&para;</a></h1>
+<p>This page documents the current organized data files used by this repository. It focuses on public reuse: what each file contains, how files relate to each other, and which fields require caution.</p>
+<h2 id="dataset-levels">Dataset Levels<a class="headerlink" href="#dataset-levels" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Meaning</th>
+<th>Current key files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin / WSI</td>
+<td>Original whole-slide or origin-level image/metadata row.</td>
+<td><code>data/ndb_ufes/origin_level/csvs/ndb-ufes.csv</code>, <code>data/ndb_ufes/origin_level/csvs/fold_assignments_origin.csv</code></td>
+</tr>
+<tr>
+<td>Patch</td>
+<td>Patch-level rows linked back to an origin.</td>
+<td><code>data/ndb_ufes/patch/parcial_pndb_ufes.csv</code>, <code>data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv</code></td>
+</tr>
+<tr>
+<td>Link</td>
+<td>Relationship images/files between original NDB-UFES and patch data.</td>
+<td><code>data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="current-counts">Current Counts<a class="headerlink" href="#current-counts" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th style="text-align: right;">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Origin metadata rows in <code>ndb-ufes.csv</code></td>
+<td style="text-align: right;">237</td>
+</tr>
+<tr>
+<td>Matched origins currently available for fold design</td>
+<td style="text-align: right;">203</td>
+</tr>
+<tr>
+<td>Patch rows in <code>parcial_pndb_ufes.csv</code></td>
+<td style="text-align: right;">3,086</td>
+</tr>
+<tr>
+<td>Patch rows available for fold design</td>
+<td style="text-align: right;">3,086</td>
+</tr>
+<tr>
+<td>Planned number of folds</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<p>The difference between 237 origin metadata rows and 203 matched origins should be documented as part of the matching/filtering process. Do not assume all original origins are present in the fold-design subset.</p>
+<h2 id="class-labels">Class Labels<a class="headerlink" href="#class-labels" title="Permanent link">&para;</a></h2>
+<p>Patch-level diagnosis distribution in the organized subset:</p>
+<table>
+<thead>
+<tr>
+<th>Diagnosis</th>
+<th style="text-align: right;">Patch count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSCC</td>
+<td style="text-align: right;">1,517</td>
+</tr>
+<tr>
+<td>Leukoplakia with dysplasia</td>
+<td style="text-align: right;">930</td>
+</tr>
+<tr>
+<td>Leukoplakia without dysplasia</td>
+<td style="text-align: right;">639</td>
+</tr>
+</tbody>
+</table>
+<p>Origin-level diagnosis distribution in the matched fold-design subset:</p>
+<table>
+<thead>
+<tr>
+<th>Diagnosis</th>
+<th style="text-align: right;">Origin count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OSCC</td>
+<td style="text-align: right;">81</td>
+</tr>
+<tr>
+<td>Leukoplakia with dysplasia</td>
+<td style="text-align: right;">72</td>
+</tr>
+<tr>
+<td>Leukoplakia without dysplasia</td>
+<td style="text-align: right;">50</td>
+</tr>
+</tbody>
+</table>
+<h2 id="required-fold-assignment-files">Required Fold Assignment Files<a class="headerlink" href="#required-fold-assignment-files" title="Permanent link">&para;</a></h2>
+<h3 id="origin-level-folds">Origin-Level Folds<a class="headerlink" href="#origin-level-folds" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/origin_level/csvs/fold_assignments_origin.csv
+</code></pre></div>
+<p>Rows: 203</p>
+<p>Columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>origin_id</code></td>
+<td>Origin/WSI identifier used by the matched fold-design subset.</td>
+</tr>
+<tr>
+<td><code>true_class</code></td>
+<td>Origin-level diagnostic class.</td>
+</tr>
+<tr>
+<td><code>morph_cluster</code></td>
+<td>Morphology cluster assigned during stratification. Existing artifacts use four clusters, but this should be audited against Phase 2.</td>
+</tr>
+<tr>
+<td><code>patch_count</code></td>
+<td>Number of patches from this origin in the matched subset.</td>
+</tr>
+<tr>
+<td><code>fold</code></td>
+<td>Fold assignment, integer <code>0</code> through <code>5</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Audit invariant: each <code>origin_id</code> must appear exactly once and have exactly one <code>fold</code>.</p>
+<h3 id="patch-level-fold-summary">Patch-Level Fold Summary<a class="headerlink" href="#patch-level-fold-summary" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level.csv
+</code></pre></div>
+<p>Rows: 203</p>
+<p>This file is origin-level in practice, despite the filename. It contains one row per origin with comma-separated patch IDs and pipe-separated image paths.</p>
+<p>Columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>origin_id</code></td>
+<td>Origin identifier.</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Diagnostic class.</td>
+</tr>
+<tr>
+<td><code>patch_count</code></td>
+<td>Number of patches for the origin.</td>
+</tr>
+<tr>
+<td><code>patch_ids</code></td>
+<td>Comma-separated patch IDs.</td>
+</tr>
+<tr>
+<td><code>image_paths</code></td>
+<td>Pipe-separated image paths.</td>
+</tr>
+<tr>
+<td><code>fold</code></td>
+<td>Fold assignment.</td>
+</tr>
+</tbody>
+</table>
+<p>Audit note: because this file is not one row per patch, downstream users who need patch-level rows should use the detailed or image-expanded files below.</p>
+<h3 id="patch-level-detailed-folds">Patch-Level Detailed Folds<a class="headerlink" href="#patch-level-detailed-folds" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv
+</code></pre></div>
+<p>Rows: 3,086</p>
+<p>Columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patch_id</code></td>
+<td>Synthetic patch identifier in the current fold artifact, e.g. <code>0_0</code>.</td>
+</tr>
+<tr>
+<td><code>origin_id</code></td>
+<td>Parent origin.</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Patch/origin diagnostic class used for fold balancing.</td>
+</tr>
+<tr>
+<td><code>morph_cluster</code></td>
+<td>Morphology cluster inherited from the origin.</td>
+</tr>
+<tr>
+<td><code>fold</code></td>
+<td>Fold assignment inherited from the origin.</td>
+</tr>
+</tbody>
+</table>
+<p>Audit invariant: every patch row must have a fold and all rows with the same <code>origin_id</code> must share the same fold.</p>
+<h3 id="patch-level-folds-with-image-paths">Patch-Level Folds With Image Paths<a class="headerlink" href="#patch-level-folds-with-image-paths" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_with_images.csv
+</code></pre></div>
+<p>Rows: 3,086</p>
+<p>Columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patch_id</code></td>
+<td>Synthetic patch identifier in the current fold artifact.</td>
+</tr>
+<tr>
+<td><code>origin_id</code></td>
+<td>Parent origin.</td>
+</tr>
+<tr>
+<td><code>image_name</code></td>
+<td>Patch image name, e.g. <code>p0321</code>.</td>
+</tr>
+<tr>
+<td><code>image_path</code></td>
+<td>Path to patch image.</td>
+</tr>
+<tr>
+<td><code>class</code></td>
+<td>Diagnostic class.</td>
+</tr>
+<tr>
+<td><code>morph_cluster</code></td>
+<td>Morphology cluster inherited from the origin.</td>
+</tr>
+<tr>
+<td><code>fold</code></td>
+<td>Fold assignment inherited from the origin.</td>
+</tr>
+</tbody>
+</table>
+<p>This is the most convenient public file for users who need one row per patch plus an image reference.</p>
+<h2 id="source-metadata-files">Source Metadata Files<a class="headerlink" href="#source-metadata-files" title="Permanent link">&para;</a></h2>
+<h3 id="patch-metadata">Patch Metadata<a class="headerlink" href="#patch-metadata" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/patch/parcial_pndb_ufes.csv
+</code></pre></div>
+<p>Rows: 3,086</p>
+<p>Important columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>patch</code></td>
+<td>Patch image ID, e.g. <code>p0000</code>.</td>
+</tr>
+<tr>
+<td><code>origin</code></td>
+<td>Origin/WSI ID.</td>
+</tr>
+<tr>
+<td><code>public_id</code>, <code>lesion_id</code>, <code>patient_id</code></td>
+<td>Identifiers from the source dataset.</td>
+</tr>
+<tr>
+<td><code>path</code></td>
+<td>Origin image path/name from source metadata.</td>
+</tr>
+<tr>
+<td><code>localization</code></td>
+<td>Lesion/localization field.</td>
+</tr>
+<tr>
+<td><code>larger_size</code></td>
+<td>Size-related metadata field from source.</td>
+</tr>
+<tr>
+<td><code>tobacco_use</code></td>
+<td>Risk factor field: <code>Yes</code>, <code>No</code>, <code>Former</code>, or <code>Not informed</code>.</td>
+</tr>
+<tr>
+<td><code>alcohol_consumption</code></td>
+<td>Risk factor field: <code>Yes</code>, <code>No</code>, <code>Former</code>, or <code>Not informed</code>.</td>
+</tr>
+<tr>
+<td><code>sun_exposure</code></td>
+<td>Risk factor field: <code>Yes</code>, <code>No</code>, or <code>Not informed</code>.</td>
+</tr>
+<tr>
+<td><code>gender</code></td>
+<td><code>M</code> or <code>F</code> in current organized subset.</td>
+</tr>
+<tr>
+<td><code>skin_color</code></td>
+<td><code>White</code>, <code>Black</code>, <code>Brown</code>, or <code>Not informed</code> in current organized subset.</td>
+</tr>
+<tr>
+<td><code>age_group</code></td>
+<td>Encoded age group from source metadata: <code>0</code> = younger than 40 years, <code>1</code> = 40-60 years, <code>2</code> = older than 60 years.</td>
+</tr>
+<tr>
+<td><code>diagnosis</code></td>
+<td>Diagnostic class.</td>
+</tr>
+<tr>
+<td><code>dysplasia_severity</code></td>
+<td>Dysplasia severity metadata where applicable.</td>
+</tr>
+<tr>
+<td><code>TaskII</code>, <code>TaskIII</code>, <code>TaskIV</code></td>
+<td>Source task labels.</td>
+</tr>
+<tr>
+<td><code>top_left_x</code>, <code>top_left_y</code>, <code>bottom_right_x</code>, <code>bottom_right_y</code></td>
+<td>ROI/patch coordinate fields. Deferred for analysis until patch-origin-coordinate associations are rerun; some prior image-origin associations were incorrect.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="origin-metadata">Origin Metadata<a class="headerlink" href="#origin-metadata" title="Permanent link">&para;</a></h3>
+<p>Path:</p>
+<div class="highlight"><pre><span></span><code>data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+</code></pre></div>
+<p>Rows: 237</p>
+<p>This file contains origin-level metadata with similar diagnosis, demographic, risk factor, and task-label columns. The matched fold-design subset is smaller than this file.</p>
+<h2 id="task-labels">Task Labels<a class="headerlink" href="#task-labels" title="Permanent link">&para;</a></h2>
+<p>The source study defines four classification tasks across RMDS and NDB-UFES. This repository organizes NDB-UFES, so Task II, Task III, and Task IV are the relevant task fields.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Dataset</th>
+<th>Labels</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task I</td>
+<td>RMDS</td>
+<td>Normal / OSCC</td>
+<td>Histopathological-image classification for normal versus OSCC samples. No demographic or clinical data are available. Not part of this NDB-UFES organizer.</td>
+</tr>
+<tr>
+<td>Task II</td>
+<td>NDB-UFES</td>
+<td>Leukoplakia / OSCC</td>
+<td>Differentiates samples diagnosed as leukoplakia or OSCC.</td>
+</tr>
+<tr>
+<td>Task III</td>
+<td>NDB-UFES</td>
+<td>Absence / Presence of dysplasia</td>
+<td>Differentiates samples identified with or without dysplasia. OSCC lesions are labeled as presence of dysplasia.</td>
+</tr>
+<tr>
+<td>Task IV</td>
+<td>NDB-UFES</td>
+<td>OSCC / Leukoplakia with dysplasia / Leukoplakia without dysplasia</td>
+<td>Three-class diagnosis task.</td>
+</tr>
+</tbody>
+</table>
+<p>Observed task label values in the current patch metadata:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Observed values</th>
+<th>Interpretation for users</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TaskII</code></td>
+<td><code>OSCC</code>, <code>Leukoplakia</code></td>
+<td>Binary OSCC vs leukoplakia grouping.</td>
+</tr>
+<tr>
+<td><code>TaskIII</code></td>
+<td><code>Presence</code>, <code>Absence</code></td>
+<td>Dysplasia presence grouping; OSCC is included in <code>Presence</code>.</td>
+</tr>
+<tr>
+<td><code>TaskIV</code></td>
+<td><code>OSCC</code>, <code>Leukoplakia with dysplasia</code>, <code>Leukoplakia without dysplasia</code></td>
+<td>Three-class diagnostic task.</td>
+</tr>
+</tbody>
+</table>
+<p>The source paper reports the full origin-level NDB-UFES task counts as: Task II: 146 leukoplakia and 91 OSCC; Task III: 180 presence and 57 absence; Task IV: 91 OSCC, 89 leukoplakia with dysplasia, and 57 leukoplakia without dysplasia.</p>
+<h2 id="demographics-and-risk-factors">Demographics and Risk Factors<a class="headerlink" href="#demographics-and-risk-factors" title="Permanent link">&para;</a></h2>
+<p>Patch-level observed distributions:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gender</code></td>
+<td><code>M</code>: 1,850; <code>F</code>: 1,236</td>
+</tr>
+<tr>
+<td><code>skin_color</code></td>
+<td><code>Not informed</code>: 1,393; <code>White</code>: 1,184; <code>Black</code>: 335; <code>Brown</code>: 174</td>
+</tr>
+<tr>
+<td><code>tobacco_use</code></td>
+<td><code>Not informed</code>: 1,425; <code>Yes</code>: 920; <code>No</code>: 496; <code>Former</code>: 245</td>
+</tr>
+<tr>
+<td><code>alcohol_consumption</code></td>
+<td><code>Not informed</code>: 1,425; <code>No</code>: 743; <code>Former</code>: 500; <code>Yes</code>: 418</td>
+</tr>
+<tr>
+<td><code>sun_exposure</code></td>
+<td><code>Not informed</code>: 1,465; <code>No</code>: 1,123; <code>Yes</code>: 498</td>
+</tr>
+<tr>
+<td><code>age_group</code></td>
+<td><code>2</code> (&gt; 60 years): 1,496; <code>1</code> (40-60 years): 1,392; <code>0</code> (&lt; 40 years): 198</td>
+</tr>
+</tbody>
+</table>
+<p>These fields are useful for factsheets, subgroup summaries, and fairness-aware reporting. They should not be treated as causal adjustment variables without a separate causal design.</p>
+<h2 id="provisional-fold-artifacts">Provisional Fold Artifacts<a class="headerlink" href="#provisional-fold-artifacts" title="Permanent link">&para;</a></h2>
+<p>Existing fold CSVs are present in the worktree from an earlier run. Because the project is still auditing Phase 2 morphology selection, these files should be read as provisional artifacts rather than final public folds. Their schemas are still useful for audit, but final counts should be published only after Phase 2 is accepted and Phase 3 is rerun or explicitly validated.</p>
+<h3 id="stratification-variable-audit">Stratification Variable Audit<a class="headerlink" href="#stratification-variable-audit" title="Permanent link">&para;</a></h3>
+<p>Path after rerunning the current Phase 3 implementation:</p>
+<div class="highlight"><pre><span></span><code>results/phase3_fold_creation/stratification_variables_audit.csv
+</code></pre></div>
+<p>Columns:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>column</code></td>
+<td>Candidate origin-level variable reviewed for fold construction.</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td><code>required</code>, <code>optional</code>, <code>descriptive</code>, or <code>missing_from_data</code>.</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Inclusion/exclusion decision, such as <code>included_required</code>, <code>included_optional</code>, <code>excluded_descriptive_only</code>, <code>excluded_high_missingness</code>, <code>excluded_low_category_support</code>, or <code>excluded_leakage_risk</code>.</td>
+</tr>
+<tr>
+<td><code>missing_count</code></td>
+<td>Number of origin rows considered missing after normalizing null-like values and <code>Not informed</code>.</td>
+</tr>
+<tr>
+<td><code>missing_rate</code></td>
+<td>Fraction of origin rows considered missing.</td>
+</tr>
+<tr>
+<td><code>n_categories</code></td>
+<td>Number of non-missing categories.</td>
+</tr>
+<tr>
+<td><code>min_category_count</code></td>
+<td>Smallest non-missing category count.</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Human-readable explanation for the decision.</td>
+</tr>
+</tbody>
+</table>
+<p>By default, fold construction should use <code>origin_diagnosis</code>, <code>morph_cluster</code>, <code>gender</code>, and <code>age_group</code>. Other demographic and clinical variables are descriptive factsheet fields unless they are explicitly promoted and pass the audit gate. Variables with high <code>Not informed</code> or missingness should not silently affect fold assignment.</p>
+<h2 id="morphology-clusters">Morphology Clusters<a class="headerlink" href="#morphology-clusters" title="Permanent link">&para;</a></h2>
+<p>The provisional fold files use four morphology clusters:</p>
+<table>
+<thead>
+<tr>
+<th>Cluster</th>
+<th style="text-align: right;">Patch count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td style="text-align: right;">758</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: right;">1,231</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">563</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">534</td>
+</tr>
+</tbody>
+</table>
+<p>Important caveat: provisional fold artifacts may reflect an earlier morphology-clustering configuration. Keep this caveat visible until Phase 2 is rerun and Phase 3 either justifies the existing fold artifacts or regenerates them.</p>
+<h2 id="file-status-notes">File Status Notes<a class="headerlink" href="#file-status-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>data/</code> is ignored by Git in the current <code>.gitignore</code>; data files are expected to be handled by DVC or local regeneration.</li>
+<li><code>results/</code> is currently untracked and includes generated artifacts.</li>
+<li>Several root Markdown files are untracked audit/deliverable notes and should be promoted, archived, or deleted after manual review.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 NDB-UFES Data Organizer Team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "content.code.copy", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
