@@ -1,0 +1,11 @@
+{
+  "pca_components": 2,
+  "kmeans_clusters": 4,
+  "silhouette_score": 0.41023537575618285,
+  "silhouette_std": 0.00040002587440352775,
+  "explained_variance": 0.8016267133679807,
+  "inertia": 2396.9111386140626,
+  "inertia_std": 0.33500115024178784,
+  "random_state": 42,
+  "runs": 5
+}

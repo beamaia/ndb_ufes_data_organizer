@@ -1,0 +1,203 @@
+origin_id,origin_diagnosis,patch_diagnoses,gender,skin_color,age_group,tobacco_use,alcohol_consumption,sun_exposure,localization,larger_size,morph_cluster,patch_count,stratification_key,fold
+1,OSCC,OSCC,M,Black,2,Yes,No,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+2,OSCC,OSCC,M,White,1,Yes,Former,Yes,Tongue,2.5,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,5
+3,OSCC,OSCC,M,White,1,Yes,Former,Yes,Tongue,2.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,5
+4,OSCC,OSCC,F,White,2,Former,Yes,Yes,Lip,1.5,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,3
+5,OSCC,OSCC,F,White,2,Former,Yes,Yes,Lip,1.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,2
+6,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,11,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+7,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,14,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+8,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,19,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+9,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,16,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+10,OSCC,OSCC,M,White,1,Yes,Former,No,Floor of mouth,3.0,0,45,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,1
+11,OSCC,OSCC,M,White,1,Yes,Former,No,Floor of mouth,3.0,0,64,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,2
+12,OSCC,OSCC,M,White,1,Yes,Former,No,Floor of mouth,3.0,0,16,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,0
+13,OSCC,OSCC,M,White,1,Yes,Former,No,Floor of mouth,3.0,0,10,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,1
+14,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,2,Not informed,Not informed,Not informed,Tongue,0.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,2
+15,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,2,Not informed,Not informed,Not informed,Tongue,0.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,1
+18,OSCC,OSCC,M,White,2,Former,No,No,Palate,1.5,0,10,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+19,OSCC,OSCC,M,White,2,Former,No,No,Palate,1.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+20,OSCC,OSCC,M,White,2,Former,No,No,Palate,1.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+21,OSCC,OSCC,M,White,2,Former,No,No,Palate,1.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+22,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Former,No,No,Gingiva,2.0,0,5,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,2
+23,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Former,No,No,Gingiva,2.0,0,14,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,4
+24,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.7,0,4,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,3
+25,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.7,0,17,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,3
+26,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.7,0,8,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,0
+28,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,2.0,0,11,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,0
+29,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,2.0,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+30,OSCC,OSCC,M,White,2,No,No,Yes,Lip,0.3,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+31,OSCC,OSCC,M,White,2,No,No,Yes,Lip,0.3,0,14,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+32,OSCC,OSCC,F,White,2,Not informed,Not informed,Not informed,Tongue,1.2,0,2,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,1
+33,OSCC,OSCC,F,White,2,Not informed,Not informed,Not informed,Tongue,1.2,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,0
+34,OSCC,OSCC,F,White,2,Not informed,Not informed,Not informed,Tongue,1.0,0,12,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,5
+35,OSCC,OSCC,F,White,2,Not informed,Not informed,Not informed,Tongue,1.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,1
+36,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Yes,Yes,Yes,Buccal mucosa,0.2,0,2,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,4
+37,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Yes,Yes,Yes,Buccal mucosa,0.2,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,1
+38,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Yes,Yes,Yes,Buccal mucosa,0.2,0,13,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,5
+39,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Yes,Yes,Yes,Buccal mucosa,0.2,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,0
+41,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,37,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,0
+42,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,2
+43,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,No,Yes,No,Tongue,0.4,0,19,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+46,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Lip,1.5,0,18,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,1
+47,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Lip,1.5,0,3,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,5
+48,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,12,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,5
+49,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,4,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,0
+50,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,5
+51,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,14,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,3
+52,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,15,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,3
+53,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,4.5,0,13,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,4
+54,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Black,1,Yes,Yes,Not informed,Buccal mucosa,0.0,0,6,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+55,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Black,1,Yes,Yes,Not informed,Buccal mucosa,0.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+56,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Black,1,Yes,Yes,Not informed,Buccal mucosa,0.0,0,5,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+57,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Black,1,Yes,Yes,Not informed,Buccal mucosa,0.0,0,9,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+58,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.0,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,0
+59,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.0,0,8,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,2
+60,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,8,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,1
+61,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,5
+62,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,2
+63,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,4
+64,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,0
+65,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.1,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,2
+66,OSCC,OSCC,M,White,2,No,Yes,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+67,OSCC,OSCC,M,White,2,No,Yes,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+68,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Brown,0,Yes,No,Yes,Gingiva,1.5,0,14,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=0,3
+69,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Brown,0,Yes,No,Yes,Gingiva,1.5,0,16,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=0,0
+70,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Brown,0,Yes,No,Yes,Gingiva,1.5,0,13,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=0,4
+71,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Brown,0,Yes,No,Yes,Gingiva,1.5,0,20,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=0,5
+72,OSCC,OSCC,M,Not informed,2,Yes,Former,Yes,Floor of mouth,3.5,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+73,OSCC,OSCC,M,Not informed,2,Yes,Former,Yes,Floor of mouth,3.5,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+74,OSCC,OSCC,M,Not informed,2,Yes,Former,Yes,Floor of mouth,3.5,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+75,OSCC,OSCC,M,Not informed,2,Yes,Former,Yes,Floor of mouth,3.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+76,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Yes,Former,Yes,Lip,0.0,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,2
+77,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Yes,Former,Yes,Lip,0.0,0,19,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,2
+78,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.0,0,13,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,5
+79,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,1
+80,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,3.2,0,10,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,1
+81,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,3.2,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,2
+82,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Yes,No,No,Gingiva,0.3,0,11,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,3
+83,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Yes,No,No,Gingiva,0.3,0,11,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,5
+84,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Yes,No,No,Gingiva,0.3,0,12,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,4
+85,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Yes,No,No,Gingiva,0.3,0,12,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,2
+86,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,Yes,No,No,Gingiva,0.3,0,3,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,0
+87,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,2,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+88,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,16,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+89,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,7,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+90,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,14,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,5
+91,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,15,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,0
+92,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,1
+93,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,10,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,1
+94,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Gingiva,4.5,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,2
+95,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.1,0,11,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+96,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.1,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+97,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.1,0,20,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+98,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.1,0,16,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+99,OSCC,OSCC,M,Not informed,1,Not informed,Not informed,Not informed,Floor of mouth,1.0,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,3
+100,OSCC,OSCC,M,Not informed,1,Not informed,Not informed,Not informed,Floor of mouth,1.0,0,7,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,3
+101,OSCC,OSCC,M,Not informed,1,Not informed,Not informed,Not informed,Floor of mouth,1.0,0,13,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,4
+102,OSCC,OSCC,M,Not informed,1,Not informed,Not informed,Not informed,Floor of mouth,1.0,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,4
+103,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,1.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+104,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,1.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+105,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,0,No,No,Yes,Gingiva,0.0,0,4,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=0,2
+106,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,0,No,No,Yes,Gingiva,0.0,0,4,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=0,3
+107,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,0,No,No,Yes,Gingiva,0.0,0,16,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=0,4
+108,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,0,No,No,Yes,Gingiva,0.0,0,15,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=0,5
+109,OSCC,OSCC,F,White,2,No,No,No,Tongue,2.0,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,4
+110,OSCC,OSCC,F,White,2,No,No,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,5
+111,OSCC,OSCC,F,White,2,No,No,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,4
+112,OSCC,OSCC,F,White,2,No,No,No,Tongue,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=2,3
+113,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,5.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+114,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,5.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+115,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,5.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+116,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,5.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+117,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Brown,1,Yes,No,Yes,Buccal mucosa,2.0,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,2
+119,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Brown,1,Yes,No,Yes,Buccal mucosa,2.0,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,2
+120,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Gingiva,1.0,0,13,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+121,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Gingiva,1.0,0,5,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+122,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Gingiva,1.0,0,16,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+123,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Gingiva,1.0,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+126,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,No,No,Buccal mucosa,1.5,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+128,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,No,No,Buccal mucosa,1.5,0,7,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+129,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,No,No,Buccal mucosa,1.5,0,2,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+130,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,No,No,Buccal mucosa,1.5,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,0
+131,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,No,No,Buccal mucosa,1.5,0,13,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+132,OSCC,OSCC,M,White,1,Yes,No,Yes,Floor of mouth,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,0
+133,OSCC,OSCC,M,White,1,Yes,No,Yes,Floor of mouth,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,3
+134,OSCC,OSCC,M,White,1,Yes,No,Yes,Floor of mouth,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,4
+135,OSCC,OSCC,M,White,1,Yes,No,Yes,Floor of mouth,2.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,5
+136,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,3.0,0,15,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,0
+137,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,3.0,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,1
+138,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,1
+139,OSCC,OSCC,F,Not informed,1,Not informed,Not informed,Not informed,Tongue,3.0,0,19,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=1,3
+140,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.1,0,6,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,1
+141,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.1,0,12,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,0
+142,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,No,No,No,Gingiva,0.8,0,4,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,4
+143,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,No,No,No,Gingiva,0.8,0,16,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,5
+144,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,No,No,No,Gingiva,0.8,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,0
+147,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,2,No,No,No,Gingiva,0.8,0,6,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=2,2
+148,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.0,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+149,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.0,0,14,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+150,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.5,0,14,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,1
+151,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.5,0,10,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,5
+152,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.5,0,13,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,2
+153,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,0.5,0,7,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,3
+154,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Lip,2.0,0,7,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+155,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Lip,2.0,0,2,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,5
+156,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,0.4,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+157,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Tongue,0.4,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+158,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.3,0,12,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,3
+159,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Black,1,Not informed,Not informed,Not informed,Tongue,0.3,0,17,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,2
+160,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,Yes,Yes,No,Tongue,3.0,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+161,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,Yes,Yes,No,Tongue,3.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,2
+162,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,Yes,Yes,No,Tongue,3.0,0,9,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,0
+163,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,1,Yes,Yes,No,Tongue,3.0,0,20,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=1,1
+164,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.5,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,1
+165,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,1.5,0,15,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,2
+166,OSCC,OSCC,M,Brown,1,Yes,Former,Yes,Floor of mouth,5.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=1,0
+168,OSCC,OSCC,F,White,0,No,No,No,Tongue,2.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=0,3
+169,OSCC,OSCC,F,White,0,No,No,No,Tongue,2.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=0,5
+170,OSCC,OSCC,F,White,0,No,No,No,Tongue,2.5,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=F|age_group=0,4
+171,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,2,No,Former,No,Lip,1.0,0,11,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,1
+172,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,2,No,Former,No,Lip,1.0,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,4
+173,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,2,Yes,No,Yes,Palate,3.0,0,4,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,4
+174,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,White,2,Yes,No,Yes,Palate,3.0,0,17,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,2
+175,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,19,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+176,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+177,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+178,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+179,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,19,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+180,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Floor of mouth,0.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+181,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,2.0,1,1,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c1|gender=F|age_group=2,1
+182,Leukoplakia with dysplasia,Leukoplakia with dysplasia,F,Not informed,2,Not informed,Not informed,Not informed,Buccal mucosa,2.0,0,16,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=F|age_group=2,3
+183,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.5,0,17,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+184,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Tongue,0.5,0,12,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=1,2
+185,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,1,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,0
+186,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,16,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,0
+187,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,18,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,5
+188,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,18,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,4
+189,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,4,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,3
+190,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,White,1,Yes,Former,No,Lip,1.5,0,7,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,5
+191,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,3.0,0,16,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+192,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+194,OSCC,OSCC,M,Not informed,2,Not informed,Not informed,Not informed,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+195,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Black,2,No,Yes,No,Buccal mucosa,1.5,0,7,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,2
+196,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Black,2,No,Yes,No,Buccal mucosa,1.5,0,11,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,0
+197,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Black,2,No,Yes,No,Buccal mucosa,1.5,0,19,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,0
+198,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Black,2,No,Yes,No,Buccal mucosa,1.5,0,10,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=2,2
+199,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Buccal mucosa,2.0,0,15,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,4
+200,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,1,Not informed,Not informed,Not informed,Buccal mucosa,2.0,0,18,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=1,0
+201,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Lip,2.0,0,16,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,0
+202,Leukoplakia without dysplasia,Leukoplakia without dysplasia,M,Not informed,2,Not informed,Not informed,Not informed,Lip,2.0,0,11,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=M|age_group=2,4
+203,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,0,Not informed,Not informed,Not informed,Gingiva,3.0,0,19,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=0,4
+204,Leukoplakia without dysplasia,Leukoplakia without dysplasia,F,Not informed,0,Not informed,Not informed,Not informed,Gingiva,3.0,0,17,origin_diagnosis=Leukoplakia-without-dysplasia|morph_cluster=c0|gender=F|age_group=0,5
+205,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,19,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+206,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,3
+207,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+208,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,4
+209,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,0
+210,OSCC,OSCC,M,White,2,Former,Former,No,Gingiva,3.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+211,OSCC,OSCC,M,Brown,2,Yes,No,No,Floor of mouth,0.0,0,20,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+212,OSCC,OSCC,M,Brown,2,Yes,No,No,Floor of mouth,0.0,0,18,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,1
+213,OSCC,OSCC,M,Brown,2,Yes,No,No,Floor of mouth,0.0,0,17,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,5
+214,OSCC,OSCC,M,Brown,2,Yes,No,No,Floor of mouth,0.0,0,16,origin_diagnosis=OSCC|morph_cluster=c0|gender=M|age_group=2,2
+215,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Palate,0.3,0,9,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,0
+216,Leukoplakia with dysplasia,Leukoplakia with dysplasia,M,Not informed,1,Not informed,Not informed,Not informed,Palate,0.3,0,15,origin_diagnosis=Leukoplakia-with-dysplasia|morph_cluster=c0|gender=M|age_group=1,1

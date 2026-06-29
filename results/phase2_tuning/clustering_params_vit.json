@@ -1,0 +1,7 @@
+{
+  "pca_components": 2,
+  "kmeans_clusters": 2,
+  "silhouette_score": 0.6907187039319933,
+  "explained_variance": 0.5099037337010427,
+  "random_state": 42
+}
