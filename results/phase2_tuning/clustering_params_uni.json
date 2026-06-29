@@ -6,6 +6,19 @@
   "explained_variance": 0.7718469225525996,
   "inertia": 15686.152395793975,
   "inertia_std": 0.0,
+  "min_cluster_size": 69,
+  "mean_min_cluster_size": 69.0,
+  "max_cluster_size": 134,
+  "mean_max_cluster_size": 134.0,
+  "max_cluster_size_ratio": 1.9420289855072463,
+  "mean_cluster_size_ratio": 1.9420289855072463,
+  "selection_constraints": {
+    "min_cluster_size": 11,
+    "max_cluster_size_ratio": 5.0
+  },
   "random_state": 42,
-  "runs": 5
+  "runs": 5,
+  "eligibility_status": "eligible",
+  "eligible_configuration_count": 81,
+  "configurations_evaluated": 112
 }

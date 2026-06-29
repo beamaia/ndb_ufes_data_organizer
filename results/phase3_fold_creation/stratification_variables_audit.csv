@@ -1,11 +1,11 @@
 column,role,status,missing_count,missing_rate,n_categories,min_category_count,reason
-origin_diagnosis,required,included_required,0,0.0,3,50,required fold-construction variable
-morph_cluster,required,included_required,0,0.0,2,1,required fold-construction variable
-gender,required,included_required,0,0.0,2,88,required fold-construction variable
-age_group,required,included_required,0,0.0,3,13,required fold-construction variable
-skin_color,descriptive,excluded_high_missingness,96,0.4752475247524752,3,11,missing_rate exceeds 25% threshold
-tobacco_use,descriptive,excluded_high_missingness,98,0.48514851485148514,3,14,missing_rate exceeds 25% threshold
-alcohol_consumption,descriptive,excluded_high_missingness,98,0.48514851485148514,3,27,missing_rate exceeds 25% threshold
-sun_exposure,descriptive,excluded_high_missingness,102,0.504950495049505,2,33,missing_rate exceeds 25% threshold
-localization,descriptive,excluded_descriptive_only,0,0.0,6,8,descriptive factsheet field; not automatically used for stratification
-larger_size,descriptive,excluded_low_category_support,0,0.0,18,2,at least one non-missing category has fewer than 6 origins
+origin_diagnosis,required,included_required,0,0.0,3,50,required variable passed missingness and support checks
+morph_cluster,required,included_required,0,0.0,3,35,required variable passed missingness and support checks
+gender,required,included_required,0,0.0,2,88,required variable passed missingness and support checks
+age_group,required,included_required,0,0.0,3,13,required variable passed missingness and support checks
+skin_color,descriptive,excluded_high_missingness,96,0.4729064039408867,3,11,missing rate exceeds 25%
+tobacco_use,descriptive,excluded_high_missingness,98,0.4827586206896552,3,14,missing rate exceeds 25%
+alcohol_consumption,descriptive,excluded_high_missingness,98,0.4827586206896552,3,27,missing rate exceeds 25%
+sun_exposure,descriptive,excluded_high_missingness,102,0.5024630541871922,2,33,missing rate exceeds 25%
+localization,descriptive,excluded_descriptive_only,0,0.0,6,8,"retained for reporting, not fold construction"
+larger_size,descriptive,excluded_low_support,0,0.0,18,2,a category has fewer than 6 origins

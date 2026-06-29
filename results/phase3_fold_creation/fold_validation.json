@@ -1,0 +1,48 @@
+{
+  "origin_count": 203,
+  "patch_count": 3086,
+  "fold_origin_counts": {
+    "0": 31,
+    "1": 36,
+    "2": 31,
+    "3": 34,
+    "4": 37,
+    "5": 34
+  },
+  "fold_patch_counts": {
+    "0": 520,
+    "1": 510,
+    "2": 511,
+    "3": 511,
+    "4": 524,
+    "5": 510
+  },
+  "patch_imbalance_ratio": 1.0274509803921568,
+  "max_stratum_fold_count_range": 1,
+  "max_folds_per_origin": 1,
+  "model_name": "virchow",
+  "embeddings_file": "/Volumes/ssd/thesis_organization/ndb_ufes_data_organizer/data/embeddings/embeddings_wsi_level_virchow_20260628_223154.pkl",
+  "pca_components": 2,
+  "kmeans_clusters": 3,
+  "random_state": 42,
+  "selection_constraints": {
+    "min_cluster_size": 11,
+    "max_cluster_size_ratio": 5.0
+  },
+  "clustering": {
+    "explained_variance": 0.45761120239885555,
+    "inertia": 8592.549995266272,
+    "cluster_sizes": [
+      101,
+      67,
+      35
+    ],
+    "cluster_size_ratio": 2.8857142857142857
+  },
+  "stratification_columns": [
+    "origin_diagnosis",
+    "morph_cluster",
+    "gender",
+    "age_group"
+  ]
+}

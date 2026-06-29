@@ -1,11 +1,24 @@
 {
   "pca_components": 2,
   "kmeans_clusters": 4,
-  "silhouette_score": 0.41023537575618285,
-  "silhouette_std": 0.00040002587440352775,
+  "silhouette_score": 0.4102353757561828,
+  "silhouette_std": 0.0004000258744035,
   "explained_variance": 0.8016267133679807,
   "inertia": 2396.9111386140626,
-  "inertia_std": 0.33500115024178784,
+  "inertia_std": 0.3350011502417878,
+  "min_cluster_size": 20,
+  "mean_min_cluster_size": 20.0,
+  "max_cluster_size": 75,
+  "mean_max_cluster_size": 73.6,
+  "max_cluster_size_ratio": 3.75,
+  "mean_cluster_size_ratio": 3.68,
+  "selection_constraints": {
+    "min_cluster_size": 11,
+    "max_cluster_size_ratio": 5.0
+  },
   "random_state": 42,
-  "runs": 5
+  "runs": 5,
+  "eligibility_status": "eligible",
+  "eligible_configuration_count": 57,
+  "configurations_evaluated": 112
 }

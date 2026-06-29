@@ -3,9 +3,22 @@
   "kmeans_clusters": 2,
   "silhouette_score": 0.5559692911494287,
   "silhouette_std": 0.0,
-  "explained_variance": 0.45824173753608977,
+  "explained_variance": 0.4582417375360897,
   "inertia": 7.144004198245666,
   "inertia_std": 0.0,
+  "min_cluster_size": 101,
+  "mean_min_cluster_size": 101.0,
+  "max_cluster_size": 102,
+  "mean_max_cluster_size": 102.0,
+  "max_cluster_size_ratio": 1.00990099009901,
+  "mean_cluster_size_ratio": 1.00990099009901,
+  "selection_constraints": {
+    "min_cluster_size": 11,
+    "max_cluster_size_ratio": 5.0
+  },
   "random_state": 42,
-  "runs": 5
+  "runs": 5,
+  "eligibility_status": "eligible",
+  "eligible_configuration_count": 112,
+  "configurations_evaluated": 112
 }
