@@ -39,7 +39,13 @@ nav:
   - Phase 1:
     - Code Reference: phase1-code.md
     - Results & Visualizations: phase1-results.md
+  - Phase 2:
+    - Code Reference: phase2-code.md
+  - Phase 3:
+    - Code Reference: phase3-code.md
+    - Fold Structure: fold-structure-explained.md
   - Data Dictionary: data-dictionary.md
+  - Audit Guide: audit-guide.md
 
 plugins:
   - search:
