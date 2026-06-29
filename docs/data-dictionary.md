@@ -243,13 +243,13 @@ Patch-level observed distributions:
 
 These fields are useful for factsheets, subgroup summaries, and fairness-aware reporting. They should not be treated as causal adjustment variables without a separate causal design.
 
-## Provisional Fold Artifacts
+## Validated Fold Artifacts
 
-Existing fold CSVs are present in the worktree from an earlier run. Because the project is still auditing Phase 2 morphology selection, these files should be read as provisional artifacts rather than final public folds. Their schemas are still useful for audit, but final counts should be published only after Phase 2 is accepted and Phase 3 is rerun or explicitly validated.
+The canonical current files are under `results/phase3_fold_creation/`. They contain 203 origin rows and 3,086 patch rows and were regenerated from the accepted Virchow/PCA=2/K=3 selection. Earlier Swin-based and 202-origin files are superseded.
 
 ### Stratification Variable Audit
 
-Path after rerunning the current Phase 3 implementation:
+Path:
 
 ```text
 results/phase3_fold_creation/stratification_variables_audit.csv
@@ -260,8 +260,8 @@ Columns:
 | Column | Meaning |
 | --- | --- |
 | `column` | Candidate origin-level variable reviewed for fold construction. |
-| `role` | `required`, `optional`, `descriptive`, or `missing_from_data`. |
-| `status` | Inclusion/exclusion decision, such as `included_required`, `included_optional`, `excluded_descriptive_only`, `excluded_high_missingness`, `excluded_low_category_support`, or `excluded_leakage_risk`. |
+| `role` | `required`, `optional`, or `descriptive`. |
+| `status` | Inclusion/exclusion decision, such as `included_required`, `included_optional`, `excluded_descriptive_only`, `excluded_high_missingness`, or `excluded_low_support`. |
 | `missing_count` | Number of origin rows considered missing after normalizing null-like values and `Not informed`. |
 | `missing_rate` | Fraction of origin rows considered missing. |
 | `n_categories` | Number of non-missing categories. |
@@ -272,16 +272,15 @@ By default, fold construction should use `origin_diagnosis`, `morph_cluster`, `g
 
 ## Morphology Clusters
 
-The provisional fold files use four morphology clusters:
+The accepted origin-level morphology clusters contain:
 
-| Cluster | Patch count |
+| Cluster | Origin count |
 | --- | ---: |
-| 0 | 758 |
-| 1 | 1,231 |
-| 2 | 563 |
-| 3 | 534 |
+| 0 | 101 |
+| 1 | 67 |
+| 2 | 35 |
 
-Important caveat: provisional fold artifacts may reflect an earlier morphology-clustering configuration. Keep this caveat visible until Phase 2 is rerun and Phase 3 either justifies the existing fold artifacts or regenerates them.
+Cluster labels are nominal K-Means identifiers, not diagnoses or severity levels.
 
 ## File Status Notes
 

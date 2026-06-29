@@ -171,7 +171,7 @@ print(f"Patches per origin (mean): {np.mean([e.shape[0] for e in embeddings.valu
 | **Virchow** | 2560 | ⏳ Higher dim | CLS token concatenated with mean patch token; not yet evaluated |
 | **ViT-B (ImageNet)** | 768 | ⚠️ Moderate | Generic vision model, decent but less specific |
 
-**Recommendation**: Use **UNI** or **CTransPath** for downstream clustering (Phase 2).
+**Historical note:** this exploratory recommendation predates the completed eligibility-aware Phase 2 comparison. The accepted morphology signal is now **Virchow with PCA=2 and K=3**; see [Phase 2](phase2-code.md).
 
 ---
 

@@ -6,7 +6,7 @@ The final product of this repo is not a trained model. It is a public data organ
 
 ## Repository Purpose
 
-- Create 6-fold assignments where all patches from the same origin image stay in the same fold, after Phase 2 morphology selection is accepted.
+- Create 6-fold assignments where all patches from the same origin image stay in the same fold.
 - Document the dataset so external users can understand labels, demographics, risk factors, task fields, known limitations, and correct usage.
 - Use frozen pretrained embeddings only as an optional morphology-aware stratification signal.
 - Avoid downstream model-training claims or fold choices based on validation/test performance.
@@ -23,7 +23,7 @@ The final product of this repo is not a trained model. It is a public data organ
 | [Contamination Checks](contamination-analysis.md) | Image-level checks for suspicious patch similarity and origin-patch matching behavior. |
 | [Reproducibility](reproducibility.md) | Commands, expected outputs, and audit checkpoints for regenerating artifacts. |
 | [Pipeline](pipeline.md) | Concise explanation of why each phase exists and how outputs flow. |
-| [Implementation Status](status.md) | WIP status for each phase and notes about what still needs review. |
+| [Implementation Status](status.md) | Verified status, accepted Phase 2 selection, and Phase 3 validation. |
 
 ## Dataset at a Glance
 
@@ -49,11 +49,11 @@ Original origin-level metadata currently contains 237 rows. The matched fold-des
 
 ## Implementation Status
 
-Phases 1 through 3 are now implemented and active:
+Phases 1 through 3 are implemented and the current outputs are validated:
 
 - **Phase 1** (Feature Extraction): Extracts embeddings from patch images using pretrained models. Executable via `scripts/phase1.py`.
-- **Phase 2** (Morphology Tuning): Evaluates PCA and K-Means parameters on frozen embeddings to select clustering configuration. Executable via `scripts/phase2.py`. Parameters saved to `clustering_params.json`.
-- **Phase 3** (Fold Creation): Creates stratified six-fold assignments using Phase 2 morphology clusters. Executable via `scripts/phase3.py`. Outputs fold assignments under `results/phase3_fold_creation/`.
+- **Phase 2** (Morphology Tuning): Selected Virchow/PCA=2/K=3 after rejecting configurations that fail cluster-support constraints. Parameters are saved to `clustering_params.json`.
+- **Phase 3** (Fold Creation): Assigned all 203 origins and 3,086 patches with no origin leakage and a 1.02745 patch-count ratio.
 
 **Phase 4** (Validation and Reporting) remains in planning.
 
