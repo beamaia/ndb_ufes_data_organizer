@@ -1,0 +1,13 @@
+{
+  "model_name": "swin_base_patch4_window7_224",
+  "embeddings_file": "/Volumes/ssd/thesis_organization/ndb_ufes_data_organizer/data/embeddings/embeddings_wsi_level_swin_base_patch4_window7_224_20260628_224929.pkl",
+  "pca_components": 2,
+  "kmeans_clusters": 2,
+  "silhouette_score": 0.9701654337644179,
+  "silhouette_std": 0.0,
+  "explained_variance": 0.7983775695363493,
+  "inertia": 421.3128641000291,
+  "inertia_std": 0.0,
+  "random_state": 42,
+  "runs": 5
+}
