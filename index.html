@@ -568,10 +568,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#current-implementation-caveat" class="md-nav__link">
+  <a href="#implementation-status" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Current Implementation Caveat
+        Implementation Status
       
     </span>
   </a>
@@ -1049,15 +1049,15 @@
 <li>Read the <a href="pipeline/">Pipeline</a> to understand how folds are intended to be produced.</li>
 <li>Check <a href="status/">Implementation Status</a> before trusting, deleting, or committing generated artifacts.</li>
 </ol>
-<h2 id="current-implementation-caveat">Current Implementation Caveat<a class="headerlink" href="#current-implementation-caveat" title="Permanent link">&para;</a></h2>
-<p>The repository is mid-reorganization. Some documentation and root Markdown files were generated during previous audit sessions and should not be assumed canonical. The current docs intentionally identify stale paths, empty top-level scripts, and artifacts that need manual verification.</p>
-<p>Known high-priority checks:</p>
+<h2 id="implementation-status">Implementation Status<a class="headerlink" href="#implementation-status" title="Permanent link">&para;</a></h2>
+<p>Phases 1 through 3 are now implemented and active:</p>
 <ul>
-<li><code>scripts/phase3.py</code> is now active as the Phase 3 runner; <code>scripts/phase4.py</code> remains an empty entrypoint.</li>
-<li>Phase 3 implementation exists under <code>scripts/src/phase3/</code>; Phase 4 implementations are still undergoing review.</li>
-<li>Phase 2 morphology tuning is expected to be rerun before final fold publication, and provisional fold artifacts should be checked against the accepted configuration.</li>
-<li>Root Markdown files should be promoted into <code>docs/</code>, archived, or deleted after manual audit.</li>
+<li><strong>Phase 1</strong> (Feature Extraction): Extracts embeddings from patch images using pretrained models. Executable via <code>scripts/phase1.py</code>.</li>
+<li><strong>Phase 2</strong> (Morphology Tuning): Evaluates PCA and K-Means parameters on frozen embeddings to select clustering configuration. Executable via <code>scripts/phase2.py</code>. Parameters saved to <code>clustering_params.json</code>.</li>
+<li><strong>Phase 3</strong> (Fold Creation): Creates stratified six-fold assignments using Phase 2 morphology clusters. Executable via <code>scripts/phase3.py</code>. Outputs fold assignments under <code>results/phase3_fold_creation/</code>.</li>
 </ul>
+<p><strong>Phase 4</strong> (Validation and Reporting) remains in planning.</p>
+<p>See <a href="status/">Implementation Status</a> for detailed phase-by-phase progress and <a href="phase2-code/">Phase 2 Code</a> and <a href="phase3-code/">Phase 3 Code</a> for implementation details.</p>
 <h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h2>
 <p>Falcao Ribeiro de Assis, Maria Clara; Lima, Leandro Muniz de; de Barros, Liliana Aparecida Pimenta; Velloso, Tania Regina; Krohling, Renato; Camisasca, Danielle (2023), "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data", Mendeley Data, V4, doi: 10.17632/bbmmm4wgr8.4.</p>
 

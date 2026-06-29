@@ -888,6 +888,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#understanding-fold-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understanding Fold Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Understanding Fold Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#origin-level-locking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Origin-Level Locking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fold-stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fold Stratification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#required-fold-assignment-files" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1195,6 +1234,23 @@
 </tr>
 </tbody>
 </table>
+<h2 id="understanding-fold-structure">Understanding Fold Structure<a class="headerlink" href="#understanding-fold-structure" title="Permanent link">&para;</a></h2>
+<p>Folds ensure leakage-safe training and validation. This section explains the design.</p>
+<h3 id="origin-level-locking">Origin-Level Locking<a class="headerlink" href="#origin-level-locking" title="Permanent link">&para;</a></h3>
+<p>The fundamental invariant is: <strong>one origin → one fold</strong>. All patches from an origin must be assigned to the same fold. This prevents the model from training and evaluating on different patches from the same specimen.</p>
+<p>Example:
+- Origin 5 has 20 patches
+- Origin 5 is assigned to fold 2
+- All patches 5_0, 5_1, ..., 5_19 are assigned to fold 2
+- No patch from Origin 5 appears in folds 0, 1, 3, 4, or 5</p>
+<h3 id="fold-stratification">Fold Stratification<a class="headerlink" href="#fold-stratification" title="Permanent link">&para;</a></h3>
+<p>Folds are not randomly assigned. Instead, origins are distributed across folds to balance diagnostic class, morphological characteristics, gender, and age group. This ensures each fold is representative of the full dataset.</p>
+<p>The stratification process:
+1. Group origins by a stratification key (concatenation of diagnosis, morphology cluster, gender, age group)
+2. Within each group, sort origins by patch count (largest first)
+3. Assign each origin to the fold with the current smallest total patch count (greedy Longest Processing Time algorithm)</p>
+<p>Result: folds have balanced patch counts and balanced representation of key variables.</p>
+<p>See <a href="../fold-structure-explained/">Fold Structure Explained</a> for algorithm details, balance metrics, and leakage safety guarantees.</p>
 <h2 id="required-fold-assignment-files">Required Fold Assignment Files<a class="headerlink" href="#required-fold-assignment-files" title="Permanent link">&para;</a></h2>
 <h3 id="origin-level-folds">Origin-Level Folds<a class="headerlink" href="#origin-level-folds" title="Permanent link">&para;</a></h3>
 <p>Path:</p>

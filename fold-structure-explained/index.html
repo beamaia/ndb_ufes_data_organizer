@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://beamaia.github.io/ndb_ufes_data_organizer/status/">
+        <link rel="canonical" href="https://beamaia.github.io/ndb_ufes_data_organizer/fold-structure-explained/">
       
       
-        <link rel="prev" href="../pipeline/">
-      
-      
-        <link rel="next" href="../reproducibility/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Implementation Status - NDB-UFES Data Organizer</title>
+        <title>Understanding Fold Structure - NDB-UFES Data Organizer</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementation-status" class="md-skip">
+        <a href="#understanding-fold-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation Status
+              Understanding Fold Structure
             
           </span>
         </div>
@@ -337,11 +333,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../status/" class="md-tabs__link">
         
   
   
@@ -625,37 +619,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Implementation Status
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
         
   
   
@@ -671,92 +638,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#phase-0-data-checks-and-contamination-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 0: Data Checks and Contamination Review
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-1-feature-extraction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 1: Feature Extraction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-2-morphology-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 2: Morphology Tuning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-3-fold-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 3: Fold Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-4-validation-and-public-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 4: Validation and Public Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commit-guidance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commit Guidance
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -950,122 +831,217 @@
   
 
 
-<h1 id="implementation-status">Implementation Status<a class="headerlink" href="#implementation-status" title="Permanent link">&para;</a></h1>
-<p>This page records what each phase is intended to do and its current status. Phases 1-3 are implemented and active. Phase 4 remains in planning.</p>
-<h2 id="phase-0-data-checks-and-contamination-review">Phase 0: Data Checks and Contamination Review<a class="headerlink" href="#phase-0-data-checks-and-contamination-review" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
+<h1 id="understanding-fold-structure">Understanding Fold Structure<a class="headerlink" href="#understanding-fold-structure" title="Permanent link">&para;</a></h1>
+<p>This guide explains how folds are organized and why this structure prevents data leakage.</p>
+<hr />
+<h2 id="hierarchy-origins-and-patches">Hierarchy: Origins and Patches<a class="headerlink" href="#hierarchy-origins-and-patches" title="Permanent link">&para;</a></h2>
+<p>The dataset has two levels of data organization:</p>
+<h3 id="origin-level">Origin Level<a class="headerlink" href="#origin-level" title="Permanent link">&para;</a></h3>
+<p>An <strong>origin</strong> is a whole-slide or tissue image (WSI) from a single patient specimen. The dataset contains:
+- 237 origins in total from source metadata
+- 203 origins in the matched fold-design subset (origins with corresponding patch images)</p>
+<p>Each origin has:
+- One diagnostic label (e.g., OSCC, Leukoplakia with dysplasia)
+- Demographic and risk factor metadata (gender, age group, etc.)
+- Multiple patch crops extracted from its image</p>
+<h3 id="patch-level">Patch Level<a class="headerlink" href="#patch-level" title="Permanent link">&para;</a></h3>
+<p>A <strong>patch</strong> is a smaller image crop extracted from an origin. The dataset contains:
+- 3,086 patches in the matched fold-design subset
+- Patches are organized hierarchically under their parent origin
+- Each patch inherits its origin's diagnosis and demographics</p>
+<p><strong>Key relationship:</strong></p>
+<div class="highlight"><pre><span></span><code>Origin 0 (OSCC, Female, 55 years) ← 1 diagnostic label per origin
+  ├── Patch 0_0
+  ├── Patch 0_1
+  ├── Patch 0_2
+  └── ... (15 patches total from this origin)
+
+Origin 1 (Leukoplakia with dysplasia, Male, 62 years)
+  ├── Patch 1_0
+  ├── Patch 1_1
+  └── ... (18 patches total from this origin)
+
+... and so on for all 203 origins
+</code></pre></div>
+<hr />
+<h2 id="the-core-invariant-no-leakage">The Core Invariant: No Leakage<a class="headerlink" href="#the-core-invariant-no-leakage" title="Permanent link">&para;</a></h2>
+<p>Folds are structured to satisfy this critical property:</p>
+<p><strong>One origin → One fold</strong></p>
+<p>All patches from the same origin must be assigned to the same fold. This prevents <strong>data leakage</strong> where the model unknowingly trains and evaluates on different patches from the same specimen.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>Origin 5 has 20 patches and is assigned to fold 2.
+Patches 5_0, 5_1, ..., 5_19 all receive fold = 2.
+</code></pre></div>
+<p>During model training:
+- Training folds: 0, 1, 2, 3, 4 (for k-fold cross-validation)
+- Validation fold: 5
+- All 20 patches from Origin 5 go to the validation fold
+- No patch from Origin 5 appears in any training fold</p>
+<p>This invariant ensures that validation performance reflects generalization to new specimens, not memorization of the same specimen seen in different patches.</p>
+<hr />
+<h2 id="why-six-folds">Why Six Folds?<a class="headerlink" href="#why-six-folds" title="Permanent link">&para;</a></h2>
+<p>Six folds are chosen to satisfy three constraints:</p>
+<ol>
+<li>
+<p><strong>Minimum class representation:</strong> With six folds and 203 origins, an average fold contains ~34 origins. The smallest diagnostic class (Leukoplakia without dysplasia) has 50 origins, allowing reliable within-class stratification across folds.</p>
+</li>
+<li>
+<p><strong>Morphological cluster balance:</strong> With 6 clusters and 6 folds, there is potential for each cluster to be represented in each fold without excessive fragmentation.</p>
+</li>
+<li>
+<p><strong>Standard validation practice:</strong> Six-fold cross-validation is common in medical imaging and provides reasonable statistical power while managing computational cost.</p>
+</li>
+</ol>
+<hr />
+<h2 id="fold-stratification">Fold Stratification<a class="headerlink" href="#fold-stratification" title="Permanent link">&para;</a></h2>
+<p>Folds are not randomly assigned. Instead, origins are distributed across folds to balance specific variables, ensuring each fold is representative of the full dataset.</p>
+<h3 id="stratification-variables">Stratification Variables<a class="headerlink" href="#stratification-variables" title="Permanent link">&para;</a></h3>
+<p>By default, folds are stratified by:</p>
+<ol>
+<li><strong>Diagnosis</strong> (required): OSCC, Leukoplakia with dysplasia, Leukoplakia without dysplasia</li>
+<li><strong>Morphology cluster</strong> (required): Output from Phase 2 K-Means clustering (e.g., 4 clusters)</li>
+<li><strong>Gender</strong> (required): Male, Female (missing ~0%)</li>
+<li><strong>Age group</strong> (required): 0 (&lt;40), 1 (40-60), 2 (&gt;60)</li>
+</ol>
+<p>These four variables create <strong>stratification subgroups</strong> (strata). Each unique combination defines a stratum:</p>
+<div class="highlight"><pre><span></span><code>Stratum 1: OSCC, Cluster_2, Male, age_group_2
+Stratum 2: OSCC, Cluster_2, Female, age_group_1
+Stratum 3: OSCC, Cluster_3, Male, age_group_2
+... (many more combinations)
+</code></pre></div>
+<h3 id="why-stratify">Why Stratify?<a class="headerlink" href="#why-stratify" title="Permanent link">&para;</a></h3>
+<p>Stratification ensures:
+- Each fold has roughly equal numbers of OSCC vs. Leukoplakia cases
+- Morphological diversity is balanced across folds
+- Gender representation is balanced
+- Age group distribution is balanced</p>
+<p>Without stratification, random splitting might accidentally create a fold with 70% male origins, making that fold unrepresentative.</p>
+<hr />
+<h2 id="the-fold-assignment-algorithm">The Fold Assignment Algorithm<a class="headerlink" href="#the-fold-assignment-algorithm" title="Permanent link">&para;</a></h2>
+<p>Phase 3 uses <strong>greedy Longest Processing Time (LPT) bin-packing</strong> to achieve balance:</p>
+<h3 id="step-by-step">Step-by-Step<a class="headerlink" href="#step-by-step" title="Permanent link">&para;</a></h3>
+<p><strong>Input:</strong> 203 origins, each with a <code>patch_count</code> and <code>stratification_key</code></p>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Group origins by their stratification key</li>
+<li>Within each stratum, sort origins by patch count (largest first)</li>
+<li>Initialize six empty folds with patch-count totals of 0</li>
+<li>For each origin (in sorted order):</li>
+<li>Assign to the fold with the smallest current total patch count</li>
+<li>Update that fold's total</li>
+</ol>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Stratum &quot;OSCC|Cluster_2|Male|2&quot;: 12 origins with patch counts
+
+Origins sorted by patch count (descends): [50, 48, 45, 44, 40, 38, 35, 33, 30, 28, 25, 20]
+
+Fold totals (initially): [0, 0, 0, 0, 0, 0]
+
+Assign origin with 50 patches:
+  → Fold with min total: Fold 0
+  → Fold 0 total: 0 + 50 = 50
+  Fold totals: [50, 0, 0, 0, 0, 0]
+
+Assign origin with 48 patches:
+  → Fold with min total: Fold 1
+  → Fold 1 total: 0 + 48 = 48
+  Fold totals: [50, 48, 0, 0, 0, 0]
+
+Continue... until all origins assigned
+
+Final fold totals: [50+40+30, 48+44+28, 45+35+25, 43+33+20, ...]
+                ≈ [120, 120, 105, 96, ...]  (roughly balanced)
+</code></pre></div>
+<p><strong>Result:</strong> Folds have similar total patch counts, supporting balanced training and validation sets.</p>
+<hr />
+<h2 id="fold-balance-metrics">Fold Balance Metrics<a class="headerlink" href="#fold-balance-metrics" title="Permanent link">&para;</a></h2>
+<p>After fold assignment, Phase 3 reports balance statistics:</p>
+<h3 id="patch-count-balance">Patch Count Balance<a class="headerlink" href="#patch-count-balance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Fold 0: 514 patches
+Fold 1: 513 patches
+Fold 2: 515 patches
+Fold 3: 512 patches
+Fold 4: 514 patches
+Fold 5: 518 patches
+
+Mean: 514.3
+Std dev: 2.0
+Min/Max: 512 / 518
+Balance ratio: 518 / 512 = 1.01
+</code></pre></div>
+<p><strong>Interpretation:</strong>
+- <strong>Balance ratio close to 1.0</strong> (e.g., 1.01) indicates excellent fold balance
+- <strong>Std dev &lt; 5</strong> indicates minimal variation
+- Folds with 512-518 patches are nearly equal-sized</p>
+<h3 id="diagnosis-distribution">Diagnosis Distribution<a class="headerlink" href="#diagnosis-distribution" title="Permanent link">&para;</a></h3>
+<p>Check that each diagnostic class is represented in each fold:</p>
+<div class="highlight"><pre><span></span><code>Fold   OSCC  Leuk_dys  Leuk_no_dys
+  0     253      196        65
+  1     251      197        65
+  2     258      191        66
+  3     248      201        63
+  4     253      195        66
+  5     254      150        114
+</code></pre></div>
+<p>Ideally, each row is proportional to the overall diagnosis distribution (48% OSCC, 30% Leuk_dys, 21% Leuk_no_dys).</p>
+<h3 id="class-specific-balance">Class-Specific Balance<a class="headerlink" href="#class-specific-balance" title="Permanent link">&para;</a></h3>
+<p>Report balance per diagnostic class:</p>
+<div class="highlight"><pre><span></span><code>OSCC:
+  Folds: [253, 251, 258, 248, 253, 254]
+  Range: 248-258 patches
+  Ratio: 258/248 = 1.04
+
+Leuk_dys:
+  Folds: [196, 197, 191, 201, 195, 150]
+  Range: 150-201 patches
+  Ratio: 201/150 = 1.34  ← Higher variance; possible imbalance
+
+Leuk_no_dys:
+  Folds: [65, 65, 66, 63, 66, 114]
+  Range: 63-114 patches
+  Ratio: 114/63 = 1.81  ← Larger imbalance
+</code></pre></div>
+<p>If a class shows high variance across folds (ratio &gt; 1.5), consider:
+- Reviewing Phase 2 morphology clustering (does it stratify this class well?)
+- Adjusting stratification variables in Phase 3
+- Accepting the imbalance if it reflects genuine dataset properties</p>
+<hr />
+<h2 id="phases-2-and-3-how-they-connect">Phases 2 and 3: How They Connect<a class="headerlink" href="#phases-2-and-3-how-they-connect" title="Permanent link">&para;</a></h2>
+<p><strong>Phase 2</strong> produces:
+- Morphology clusters (via PCA + K-Means) that capture visual/structural patterns
+- Parameters saved to <code>clustering_params.json</code></p>
+<p><strong>Phase 3</strong> uses Phase 2 output:
+- Reads selected embeddings and parameters from <code>clustering_params.json</code>
+- Applies Phase 2's PCA + K-Means to assign each origin to a morphology cluster
+- Uses that cluster as one of the stratification variables</p>
+<p><strong>Why this connection matters:</strong>
+- Morphology clusters represent visual diversity in the dataset
+- By stratifying folds to include all clusters, we ensure each fold contains visual diversity
+- This supports robust model training (each fold sees the full range of morphological variation)</p>
+<hr />
+<h2 id="leakage-prevention-summary">Leakage Prevention Summary<a class="headerlink" href="#leakage-prevention-summary" title="Permanent link">&para;</a></h2>
+<p>The fold structure prevents leakage by enforcing:</p>
+<ol>
+<li><strong>Origin-level locking:</strong> All patches from one origin stay together in one fold</li>
+<li><strong>No downstream selection:</strong> Folds are chosen before model training, not based on validation performance</li>
+<li><strong>Stratification at creation time:</strong> Fold assignments use only Phase 1-2 outputs (embeddings, clusters), not downstream model predictions</li>
+<li><strong>Frozen embeddings:</strong> Phase 2 uses frozen pretrained models, not fine-tuned on this dataset's labels</li>
+</ol>
+<p>Users of these folds should:
+- Use one fold for validation and five for training (standard k-fold)
+- Never select folds based on which produces the best validation performance
+- Never fine-tune embeddings on the full dataset including validation/test labels
+- Treat validation/test results as estimates of generalization to new specimens, not new patches of same specimens</p>
+<hr />
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<p>Use the generated folds for model training and evaluation:</p>
+<p><strong>Files to use:</strong></p>
 <ul>
-<li>inspect image matching between patches and origin images;</li>
-<li>identify duplicate-like or suspicious patch cases;</li>
-<li>document any exclusions or accepted limitations.</li>
+<li><code>results/phase3_fold_creation/fold_assignments_patch_level.csv</code> — For patch-level model training</li>
+<li><code>results/phase3_fold_creation/fold_assignments_origin.csv</code> — For origin-level analysis or per-origin metrics</li>
 </ul>
-<p>WIP - current:</p>
-<ul>
-<li>exploratory contamination figures exist and representative examples are shown in <a href="../contamination-analysis/">Contamination Checks</a>;</li>
-<li>this stage is being used for manual data-quality review.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>consolidate accepted, excluded, and documented suspicious cases;</li>
-<li>reflect any decisions in the data dictionary and reproducibility notes.</li>
-</ul>
-<p>Status: WIP.</p>
-<h2 id="phase-1-feature-extraction">Phase 1: Feature Extraction<a class="headerlink" href="#phase-1-feature-extraction" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>create origin-patch mapping;</li>
-<li>extract frozen embeddings for candidate pretrained models;</li>
-<li>save WSI-level embedding dictionaries for Phase 2.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase1.py</code>;</li>
-<li>implementation files are under <code>scripts/src/phase1/</code> and <code>scripts/src/models/</code>;</li>
-<li>run metadata is written under <code>results/phase1_metadata/</code>.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun after final path checks;</li>
-<li>confirm generated embeddings are grouped correctly by origin;</li>
-<li>keep embedding visualizations as exploratory review material, not as Phase 1 acceptance criteria.</li>
-</ul>
-<p>Status: implemented, still needs final rerun/audit before publication.</p>
-<h2 id="phase-2-morphology-tuning">Phase 2: Morphology Tuning<a class="headerlink" href="#phase-2-morphology-tuning" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>aggregate patch embeddings to origin-level vectors;</li>
-<li>evaluate PCA/K-Means combinations;</li>
-<li>generate tuning plots and parameter files;</li>
-<li>select a morphology signal for fold stratification.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase2.py</code>;</li>
-<li>supporting modules under <code>scripts/src/phase2/</code> contain importable functions only;</li>
-<li>code exists for repeated PCA/K-Means tuning across embedding models;</li>
-<li>origin validation uses the exact 203-origin Phase 1 mapping and rejects mismatches;</li>
-<li>the selected model and parameters are written to root-level <code>clustering_params.json</code>;</li>
-<li>outputs are intentionally not documented as committed results because this phase will be rerun.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun Phase 2 after accepting Phase 1 embeddings;</li>
-<li>review cluster sizes, stability, silhouette, and interpretability;</li>
-<li>select one morphology configuration for Phase 3.</li>
-</ul>
-<p>Status: implemented, selection WIP.</p>
-<h2 id="phase-3-fold-creation">Phase 3: Fold Creation<a class="headerlink" href="#phase-3-fold-creation" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>assign each origin to one fold;</li>
-<li>broadcast origin folds to patch-level records;</li>
-<li>balance folds by diagnosis and accepted stratification variables;</li>
-<li>save public fold assignment CSVs.</li>
-</ul>
-<p>Current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase3.py</code>;</li>
-<li>implementation code in <code>scripts/src/phase3/phase3_fold_creation.py</code> consumes Phase 2 parameters from <code>clustering_params.json</code>;</li>
-<li>helper visualization module: <code>scripts/src/phase3/phase3_visualize_clusters.py</code>;</li>
-<li>provisional fold artifacts generated at <code>results/phase3_fold_creation/</code>;</li>
-<li>stratification variable audit output: <code>stratification_variables_audit.csv</code> (documents inclusion/exclusion decisions).</li>
-</ul>
-<p>Output files:</p>
-<ul>
-<li><code>fold_assignments_origin.csv</code> (203 origins, one per row)</li>
-<li><code>fold_assignments_patch_level.csv</code> (3,086 patches, one per row)</li>
-<li><code>stratification_variables_audit.csv</code> (audit trail for stratification decisions)</li>
-</ul>
-<p>Verification:</p>
-<ul>
-<li>Origin-level locking: every origin assigned to exactly one fold</li>
-<li>Patch-level inheritance: all patches from an origin inherit its fold</li>
-<li>No data leakage: no origin spans multiple folds</li>
-<li>Fold balance: origin and patch counts balanced across folds; class and cluster distributions balanced</li>
-</ul>
-<p>Status: implemented and active.</p>
-<h2 id="phase-4-validation-and-public-documentation">Phase 4: Validation and Public Documentation<a class="headerlink" href="#phase-4-validation-and-public-documentation" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>validate fold invariants;</li>
-<li>summarize dataset distributions and limitations;</li>
-<li>prepare final data dictionary, factsheet, and reproducibility notes.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>top-level <code>scripts/phase4.py</code> is not yet an active entrypoint;</li>
-<li>implementation files exist under <code>scripts/src/phase4/</code>;</li>
-<li>some paths and assumptions need review before rerun.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun validation after final folds are generated;</li>
-<li>update factsheet and data dictionary from finalized artifacts;</li>
-<li>keep public documentation focused on provenance, labels, limitations, and leakage-safe use.</li>
-</ul>
-<p>Status: WIP.</p>
-<h2 id="commit-guidance">Commit Guidance<a class="headerlink" href="#commit-guidance" title="Permanent link">&para;</a></h2>
-<p>Commit files that are already useful and aligned with the current public documentation. Park exploratory Phase 3 helpers until Phase 3 is reviewed as a focused pass, so history stays clean and final filenames match the surviving code.</p>
+<p><strong>Verification:</strong></p>
+<p>Run the invariant checks in <a href="../reproducibility/#phase-3-fold-creation">Reproducibility</a> to confirm no data leakage.</p>
 
 
 

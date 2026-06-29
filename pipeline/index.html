@@ -1006,6 +1006,7 @@
 </ul>
 <h2 id="phase-2-morphology-tuning">Phase 2: Morphology Tuning<a class="headerlink" href="#phase-2-morphology-tuning" title="Permanent link">&para;</a></h2>
 <p>Goal: identify frozen embedding models and PCA/K-Means settings that produce useful morphology strata for fold balancing.</p>
+<p>See <a href="../phase2-code/">Phase 2: Morphology Tuning</a> for detailed implementation guide.</p>
 <p>Current entrypoint:</p>
 <div class="highlight"><pre><span></span><code>uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>scripts/phase2.py
 </code></pre></div>
@@ -1049,6 +1050,7 @@
 <li>Existing provisional folds should be checked against the final accepted Phase 2 configuration before publication.</li>
 </ul>
 <h2 id="phase-3-fold-creation">Phase 3: Fold Creation<a class="headerlink" href="#phase-3-fold-creation" title="Permanent link">&para;</a></h2>
+<p>See <a href="../phase3-code/">Phase 3: Fold Creation</a> for detailed implementation guide and <a href="../fold-structure-explained/">Understanding Fold Structure</a> for algorithm explanation.</p>
 <p>Goal: assign every origin to exactly one fold, then broadcast that assignment to every patch.</p>
 <p>Current state:</p>
 <ul>

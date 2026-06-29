@@ -802,7 +802,7 @@
   <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        📖 Overview
+        Overview
       
     </span>
   </a>
@@ -813,7 +813,7 @@
   <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🏗️ Architecture
+        Architecture
       
     </span>
   </a>
@@ -821,15 +821,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#complete-api-reference" class="md-nav__link">
+  <a href="#api-reference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🔧 Complete API Reference
+        API Reference
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🔧 Complete API Reference">
+    <nav class="md-nav" aria-label="API Reference">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -941,12 +941,12 @@
   <a href="#execution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        🚀 Execution
+        Execution
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="🚀 Execution">
+    <nav class="md-nav" aria-label="Execution">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1198,8 +1198,8 @@
 <h1 id="phase-1-feature-extraction">Phase 1: Feature Extraction<a class="headerlink" href="#phase-1-feature-extraction" title="Permanent link">&para;</a></h1>
 <p>Comprehensive guide to Phase 1 implementation, including complete API documentation, code walkthrough, and execution instructions.</p>
 <hr />
-<h2 id="overview">📖 Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><strong>Phase 1 Goal</strong>: Extract semantic embeddings from histopathology patch images and create a mapping of patches to their origins (WSIs).</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>Phase 1 Goal:</strong> Extract semantic embeddings from histopathology patch images and create a mapping of patches to their origins (WSIs).</p>
 <p><strong>Input</strong>:
 - 3,086 histopathology patch images (512×512 PNG)
 - Patch-to-origin mapping (from <code>parcial_pndb_ufes.csv</code>)</p>
@@ -1208,7 +1208,7 @@
 - <strong>Mapping CSV</strong>: <code>data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv</code> — 203 origins with patch lists</p>
 <p><strong>Status</strong>: implemented, but final rerun/audit is still WIP.</p>
 <hr />
-<h2 id="architecture">🏗️ Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
 <p>Phase 1 is organized around mapping and embedding extraction:</p>
 <div class="highlight"><pre><span></span><code>scripts/phase1.py                          ← Main execution script
 ├── calls: create_origin_patch_mapping()
@@ -1230,7 +1230,7 @@ scripts/src/utils/
 └── logger.py                              ← Logging configuration
 </code></pre></div>
 <hr />
-<h2 id="complete-api-reference">🔧 Complete API Reference<a class="headerlink" href="#complete-api-reference" title="Permanent link">&para;</a></h2>
+<h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
 <h3 id="1-featureextractor-class">1. FeatureExtractor Class<a class="headerlink" href="#1-featureextractor-class" title="Permanent link">&para;</a></h3>
 <p><strong>Location</strong>: <code>scripts/src/phase1/feature_extractor.py</code></p>
 <p>Main class responsible for loading models and extracting embeddings from patch images.</p>
@@ -1395,7 +1395,7 @@ scripts/src/utils/
 </tbody>
 </table>
 <hr />
-<h2 id="execution">🚀 Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
+<h2 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">&para;</a></h2>
 <h3 id="running-phase-1">Running Phase 1<a class="headerlink" href="#running-phase-1" title="Permanent link">&para;</a></h3>
 <h4 id="full-pipeline">Full Pipeline<a class="headerlink" href="#full-pipeline" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># Run entire Phase 1 (creates mapping + extracts all models + visualizes)</span>

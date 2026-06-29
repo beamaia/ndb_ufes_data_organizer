@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://beamaia.github.io/ndb_ufes_data_organizer/status/">
+        <link rel="canonical" href="https://beamaia.github.io/ndb_ufes_data_organizer/phase3-code/">
       
       
-        <link rel="prev" href="../pipeline/">
-      
-      
-        <link rel="next" href="../reproducibility/">
       
       
         
@@ -27,7 +23,7 @@
     
     
       
-        <title>Implementation Status - NDB-UFES Data Organizer</title>
+        <title>Phase 3: Fold Creation - NDB-UFES Data Organizer</title>
       
     
     
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementation-status" class="md-skip">
+        <a href="#phase-3-fold-creation" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation Status
+              Phase 3: Fold Creation
             
           </span>
         </div>
@@ -337,11 +333,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../status/" class="md-tabs__link">
         
   
   
@@ -625,37 +619,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Implementation Status
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
         
   
   
@@ -671,92 +638,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#phase-0-data-checks-and-contamination-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 0: Data Checks and Contamination Review
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-1-feature-extraction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 1: Feature Extraction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-2-morphology-tuning" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 2: Morphology Tuning
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-3-fold-creation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 3: Fold Creation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phase-4-validation-and-public-documentation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Phase 4: Validation and Public Documentation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#commit-guidance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Commit Guidance
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -950,122 +831,243 @@
   
 
 
-<h1 id="implementation-status">Implementation Status<a class="headerlink" href="#implementation-status" title="Permanent link">&para;</a></h1>
-<p>This page records what each phase is intended to do and its current status. Phases 1-3 are implemented and active. Phase 4 remains in planning.</p>
-<h2 id="phase-0-data-checks-and-contamination-review">Phase 0: Data Checks and Contamination Review<a class="headerlink" href="#phase-0-data-checks-and-contamination-review" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
+<h1 id="phase-3-fold-creation">Phase 3: Fold Creation<a class="headerlink" href="#phase-3-fold-creation" title="Permanent link">&para;</a></h1>
+<p>Implementation guide for stratified cross-validation fold assignment.</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>Phase 3 creates six-fold assignments where all patches from an origin stay in the same fold, stratified by diagnosis, morphological cluster, gender, and age group. The algorithm ensures leakage-safe partitions suitable for training, validation, and test splits.</p>
+<p><strong>Input:</strong>
+- Phase 2 parameters: <code>clustering_params.json</code>
+- Phase 2 selected embeddings: path specified in <code>clustering_params.json</code>
+- Patch metadata: <code>data/ndb_ufes/patch/parcial_pndb_ufes.csv</code>
+- Origin mapping: <code>data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv</code></p>
+<p><strong>Output:</strong>
+- Origin-level folds: <code>results/phase3_fold_creation/fold_assignments_origin.csv</code>
+- Patch-level folds: <code>results/phase3_fold_creation/fold_assignments_patch_level.csv</code>
+- Stratification audit: <code>results/phase3_fold_creation/stratification_variables_audit.csv</code></p>
+<hr />
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>Phase 3 is structured as a top-level runner with one main implementation module:</p>
+<div class="highlight"><pre><span></span><code>scripts/phase3.py                           ← Main execution entry point
+├── calls: phase3_fold_creation.main()
+
+scripts/src/phase3/
+├── phase3_fold_creation.py                 ← Core fold creation
+│   ├── load_patch_metadata()               ← Load patch CSV
+│   ├── aggregate_to_origin_level()         ← Compute origin stats
+│   ├── apply_pca_kmeans()                  ← Apply Phase 2 params
+│   ├── create_stratification_keys()        ← Build fold strata
+│   ├── greedy_lpt_fold_assignment()        ← Assign folds
+│   ├── broadcast_to_patch_level_and_save() ← Expand to patches
+│   └── validate_folds()                    ← Check invariants
+└── phase3_visualize_clusters.py            ← Optional visualizations
+
+scripts/src/utils/logger.py                 ← Logging
+</code></pre></div>
+<p>All functions are importable with no side effects. Only <code>scripts/phase3.py</code> executes work.</p>
+<hr />
+<h2 id="algorithm">Algorithm<a class="headerlink" href="#algorithm" title="Permanent link">&para;</a></h2>
+<h3 id="step-1-load-and-prepare-data">Step 1: Load and Prepare Data<a class="headerlink" href="#step-1-load-and-prepare-data" title="Permanent link">&para;</a></h3>
+<p>Phase 3 loads patch-level metadata and aggregates statistics to origin level:</p>
+<div class="highlight"><pre><span></span><code><span class="n">patch_df</span> <span class="o">=</span> <span class="n">load_patch_metadata</span><span class="p">(</span><span class="s2">&quot;data/ndb_ufes/patch/parcial_pndb_ufes.csv&quot;</span><span class="p">)</span>
+<span class="n">origin_df</span> <span class="o">=</span> <span class="n">aggregate_to_origin_level</span><span class="p">(</span><span class="n">patch_df</span><span class="p">)</span>
+</code></pre></div>
+<p>For each origin, compute:
+- <code>origin_diagnosis</code>: most common diagnosis across patches
+- <code>patch_count</code>: number of patches
+- <code>gender</code>, <code>skin_color</code>, <code>age_group</code>: modal value across patches</p>
+<h3 id="step-2-apply-pca-and-k-means">Step 2: Apply PCA and K-Means<a class="headerlink" href="#step-2-apply-pca-and-k-means" title="Permanent link">&para;</a></h3>
+<p>Load the Phase 2 selected parameters and embeddings:</p>
+<div class="highlight"><pre><span></span><code><span class="n">params</span> <span class="o">=</span> <span class="n">load_params</span><span class="p">(</span><span class="s2">&quot;clustering_params.json&quot;</span><span class="p">)</span>
+<span class="n">embeddings_file</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="s2">&quot;embeddings_file&quot;</span><span class="p">]</span>
+
+<span class="n">embeddings_dict</span> <span class="o">=</span> <span class="n">load_embeddings</span><span class="p">(</span><span class="n">embeddings_file</span><span class="p">)</span>
+<span class="n">embeddings</span> <span class="o">=</span> <span class="n">aggregate_embeddings_to_wsi</span><span class="p">(</span><span class="n">embeddings_dict</span><span class="p">,</span> <span class="n">origin_ids</span><span class="p">)</span>
+</code></pre></div>
+<p>Apply PCA and K-Means with Phase 2 parameters:</p>
+<div class="highlight"><pre><span></span><code><span class="n">clusters</span> <span class="o">=</span> <span class="n">apply_pca_kmeans</span><span class="p">(</span><span class="n">embeddings</span><span class="p">,</span> <span class="n">params</span><span class="p">)</span>
+<span class="n">origin_df</span><span class="p">[</span><span class="s2">&quot;morph_cluster&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">clusters</span>
+</code></pre></div>
+<p>Result: each origin is assigned a morphological cluster (0, 1, 2, 3, etc.).</p>
+<h3 id="step-3-create-stratification-keys">Step 3: Create Stratification Keys<a class="headerlink" href="#step-3-create-stratification-keys" title="Permanent link">&para;</a></h3>
+<p>Audit which variables should enter fold construction:</p>
+<div class="highlight"><pre><span></span><code><span class="n">audit_df</span> <span class="o">=</span> <span class="n">evaluate_stratification_variables</span><span class="p">(</span><span class="n">origin_df</span><span class="p">)</span>
+<span class="n">audit_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;results/phase3_fold_creation/stratification_variables_audit.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The audit gate checks each variable for:
+- <strong>Missingness:</strong> If missing rate exceeds 25%, exclude
+- <strong>Category support:</strong> If any non-missing category has fewer than 6 origins, exclude
+- <strong>Requirement:</strong> Required variables (<code>origin_diagnosis</code>, <code>morph_cluster</code>, <code>gender</code>, <code>age_group</code>) are always included</p>
+<p>Create a stratification key by concatenating included variables:</p>
+<div class="highlight"><pre><span></span><code><span class="n">stratification_key</span> <span class="o">=</span> <span class="s2">&quot;origin_diagnosis=OSCC|morph_cluster=c2|gender=M|age_group=2&quot;</span>
+</code></pre></div>
+<p>Each unique key defines a stratum (subgroup). Origins in the same stratum will be distributed across folds as evenly as possible.</p>
+<h3 id="step-4-greedy-lpt-bin-packing">Step 4: Greedy LPT Bin-Packing<a class="headerlink" href="#step-4-greedy-lpt-bin-packing" title="Permanent link">&para;</a></h3>
+<p>Assign each origin to a fold using the Longest Processing Time (LPT) greedy algorithm:</p>
+<p><strong>Algorithm:</strong></p>
+<p>For each unique stratification key:
+1. Collect all origins with that key
+2. Sort origins by <code>patch_count</code> (descending)
+3. For each origin (largest-first):
+   - Assign to the fold with the current minimum total patch count
+   - Update that fold's total patch count</p>
+<p><strong>Rationale:</strong> Processing largest origins first ensures large clusters are distributed across folds, producing balanced fold sizes.</p>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code>Stratum &quot;OSCC|c2|M|2&quot;: 20 origins with patch counts [50, 48, 45, 40, ...]
+
+Fold sizes (initially): [0, 0, 0, 0, 0, 0]
+
+Assign origin with 50 patches to fold 0: [50, 0, 0, 0, 0, 0]
+Assign origin with 48 patches to fold 1: [50, 48, 0, 0, 0, 0]
+Assign origin with 45 patches to fold 2: [50, 48, 45, 0, 0, 0]
+...continue until all origins assigned
+
+Final fold sizes: [514, 513, 515, 512, 514, 518]  (well balanced)
+</code></pre></div>
+<h3 id="step-5-broadcast-to-patch-level">Step 5: Broadcast to Patch Level<a class="headerlink" href="#step-5-broadcast-to-patch-level" title="Permanent link">&para;</a></h3>
+<p>Create a mapping from origin_id to fold:</p>
+<div class="highlight"><pre><span></span><code><span class="n">origin_fold_map</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">origin_df</span><span class="p">[</span><span class="s2">&quot;origin_id&quot;</span><span class="p">],</span> <span class="n">origin_df</span><span class="p">[</span><span class="s2">&quot;fold&quot;</span><span class="p">]))</span>
+</code></pre></div>
+<p>Map each patch to its origin's fold:</p>
+<div class="highlight"><pre><span></span><code><span class="n">patch_df</span><span class="p">[</span><span class="s2">&quot;fold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">patch_df</span><span class="p">[</span><span class="s2">&quot;origin_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">origin_fold_map</span><span class="p">)</span>
+</code></pre></div>
+<p>Save origin-level and patch-level assignments:</p>
+<div class="highlight"><pre><span></span><code>results/phase3_fold_creation/fold_assignments_origin.csv  (203 rows)
+results/phase3_fold_creation/fold_assignments_patch_level.csv  (3,086 rows)
+</code></pre></div>
+<h3 id="step-6-validate">Step 6: Validate<a class="headerlink" href="#step-6-validate" title="Permanent link">&para;</a></h3>
+<p>Check fold invariants:</p>
 <ul>
-<li>inspect image matching between patches and origin images;</li>
-<li>identify duplicate-like or suspicious patch cases;</li>
-<li>document any exclusions or accepted limitations.</li>
+<li>All origins assigned to exactly one fold</li>
+<li>All patches inherit their origin's fold</li>
+<li>No origin spans multiple folds (zero data leakage)</li>
+<li>Fold sizes are balanced (within acceptable range)</li>
 </ul>
-<p>WIP - current:</p>
-<ul>
-<li>exploratory contamination figures exist and representative examples are shown in <a href="../contamination-analysis/">Contamination Checks</a>;</li>
-<li>this stage is being used for manual data-quality review.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>consolidate accepted, excluded, and documented suspicious cases;</li>
-<li>reflect any decisions in the data dictionary and reproducibility notes.</li>
-</ul>
-<p>Status: WIP.</p>
-<h2 id="phase-1-feature-extraction">Phase 1: Feature Extraction<a class="headerlink" href="#phase-1-feature-extraction" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>create origin-patch mapping;</li>
-<li>extract frozen embeddings for candidate pretrained models;</li>
-<li>save WSI-level embedding dictionaries for Phase 2.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase1.py</code>;</li>
-<li>implementation files are under <code>scripts/src/phase1/</code> and <code>scripts/src/models/</code>;</li>
-<li>run metadata is written under <code>results/phase1_metadata/</code>.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun after final path checks;</li>
-<li>confirm generated embeddings are grouped correctly by origin;</li>
-<li>keep embedding visualizations as exploratory review material, not as Phase 1 acceptance criteria.</li>
-</ul>
-<p>Status: implemented, still needs final rerun/audit before publication.</p>
-<h2 id="phase-2-morphology-tuning">Phase 2: Morphology Tuning<a class="headerlink" href="#phase-2-morphology-tuning" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>aggregate patch embeddings to origin-level vectors;</li>
-<li>evaluate PCA/K-Means combinations;</li>
-<li>generate tuning plots and parameter files;</li>
-<li>select a morphology signal for fold stratification.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase2.py</code>;</li>
-<li>supporting modules under <code>scripts/src/phase2/</code> contain importable functions only;</li>
-<li>code exists for repeated PCA/K-Means tuning across embedding models;</li>
-<li>origin validation uses the exact 203-origin Phase 1 mapping and rejects mismatches;</li>
-<li>the selected model and parameters are written to root-level <code>clustering_params.json</code>;</li>
-<li>outputs are intentionally not documented as committed results because this phase will be rerun.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun Phase 2 after accepting Phase 1 embeddings;</li>
-<li>review cluster sizes, stability, silhouette, and interpretability;</li>
-<li>select one morphology configuration for Phase 3.</li>
-</ul>
-<p>Status: implemented, selection WIP.</p>
-<h2 id="phase-3-fold-creation">Phase 3: Fold Creation<a class="headerlink" href="#phase-3-fold-creation" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>assign each origin to one fold;</li>
-<li>broadcast origin folds to patch-level records;</li>
-<li>balance folds by diagnosis and accepted stratification variables;</li>
-<li>save public fold assignment CSVs.</li>
-</ul>
-<p>Current:</p>
-<ul>
-<li>active entrypoint: <code>scripts/phase3.py</code>;</li>
-<li>implementation code in <code>scripts/src/phase3/phase3_fold_creation.py</code> consumes Phase 2 parameters from <code>clustering_params.json</code>;</li>
-<li>helper visualization module: <code>scripts/src/phase3/phase3_visualize_clusters.py</code>;</li>
-<li>provisional fold artifacts generated at <code>results/phase3_fold_creation/</code>;</li>
-<li>stratification variable audit output: <code>stratification_variables_audit.csv</code> (documents inclusion/exclusion decisions).</li>
-</ul>
-<p>Output files:</p>
-<ul>
-<li><code>fold_assignments_origin.csv</code> (203 origins, one per row)</li>
-<li><code>fold_assignments_patch_level.csv</code> (3,086 patches, one per row)</li>
-<li><code>stratification_variables_audit.csv</code> (audit trail for stratification decisions)</li>
-</ul>
-<p>Verification:</p>
-<ul>
-<li>Origin-level locking: every origin assigned to exactly one fold</li>
-<li>Patch-level inheritance: all patches from an origin inherit its fold</li>
-<li>No data leakage: no origin spans multiple folds</li>
-<li>Fold balance: origin and patch counts balanced across folds; class and cluster distributions balanced</li>
-</ul>
-<p>Status: implemented and active.</p>
-<h2 id="phase-4-validation-and-public-documentation">Phase 4: Validation and Public Documentation<a class="headerlink" href="#phase-4-validation-and-public-documentation" title="Permanent link">&para;</a></h2>
-<p>Purpose:</p>
-<ul>
-<li>validate fold invariants;</li>
-<li>summarize dataset distributions and limitations;</li>
-<li>prepare final data dictionary, factsheet, and reproducibility notes.</li>
-</ul>
-<p>WIP - current:</p>
-<ul>
-<li>top-level <code>scripts/phase4.py</code> is not yet an active entrypoint;</li>
-<li>implementation files exist under <code>scripts/src/phase4/</code>;</li>
-<li>some paths and assumptions need review before rerun.</li>
-</ul>
-<p>WIP - planned:</p>
-<ul>
-<li>rerun validation after final folds are generated;</li>
-<li>update factsheet and data dictionary from finalized artifacts;</li>
-<li>keep public documentation focused on provenance, labels, limitations, and leakage-safe use.</li>
-</ul>
-<p>Status: WIP.</p>
-<h2 id="commit-guidance">Commit Guidance<a class="headerlink" href="#commit-guidance" title="Permanent link">&para;</a></h2>
-<p>Commit files that are already useful and aligned with the current public documentation. Park exploratory Phase 3 helpers until Phase 3 is reviewed as a focused pass, so history stays clean and final filenames match the surviving code.</p>
+<hr />
+<h2 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h2>
+<h3 id="main"><code>main()</code><a class="headerlink" href="#main" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Execute the complete Phase 3 pipeline.</p>
+<p><strong>Parameters:</strong> None (uses configuration constants in module)</p>
+<p><strong>Returns:</strong> None (writes files to disk)</p>
+<p><strong>Constants:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">N_FOLDS</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">RANDOM_STATE</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">MAX_MISSING_RATE_FOR_STRATIFICATION</span> <span class="o">=</span> <span class="mf">0.25</span>
+
+<span class="n">REQUIRED_STRATIFICATION_COLUMNS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;origin_diagnosis&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;morph_cluster&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gender&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;age_group&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">OPTIONAL_STRATIFICATION_COLUMNS</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># Add only after audit gate</span>
+
+<span class="n">DESCRIPTIVE_METADATA_COLUMNS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s2">&quot;gender&quot;</span><span class="p">,</span> <span class="s2">&quot;skin_color&quot;</span><span class="p">,</span> <span class="s2">&quot;age_group&quot;</span><span class="p">,</span> <span class="s2">&quot;tobacco_use&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;alcohol_consumption&quot;</span><span class="p">,</span> <span class="s2">&quot;sun_exposure&quot;</span><span class="p">,</span> <span class="s2">&quot;localization&quot;</span><span class="p">,</span> <span class="s2">&quot;larger_size&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">src.phase3.phase3_fold_creation</span><span class="w"> </span><span class="kn">import</span> <span class="n">main</span>
+
+<span class="n">main</span><span class="p">()</span>  <span class="c1"># Runs full pipeline</span>
+</code></pre></div>
+<h3 id="apply_pca_kmeansembeddings-params"><code>apply_pca_kmeans(embeddings, params)</code><a class="headerlink" href="#apply_pca_kmeansembeddings-params" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Apply PCA and K-Means clustering to embeddings.</p>
+<p><strong>Parameters:</strong>
+- <code>embeddings</code> (np.ndarray): Shape (n_origins, embedding_dim)
+- <code>params</code> (dict): Keys <code>pca_components</code>, <code>kmeans_clusters</code></p>
+<p><strong>Returns:</strong>
+- Cluster assignments (np.ndarray): Shape (n_origins,), values 0 to K-1</p>
+<h3 id="greedy_lpt_fold_assignmentorigin_df-n_folds6"><code>greedy_lpt_fold_assignment(origin_df, n_folds=6)</code><a class="headerlink" href="#greedy_lpt_fold_assignmentorigin_df-n_folds6" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose:</strong> Assign origins to folds using LPT bin-packing within strata.</p>
+<p><strong>Parameters:</strong>
+- <code>origin_df</code> (DataFrame): Must have <code>patch_count</code> and <code>stratification_key</code> columns
+- <code>n_folds</code> (int): Number of folds</p>
+<p><strong>Returns:</strong>
+- origin_df with new <code>fold</code> column</p>
+<hr />
+<h2 id="stratification-variable-audit">Stratification Variable Audit<a class="headerlink" href="#stratification-variable-audit" title="Permanent link">&para;</a></h2>
+<p>The audit file <code>stratification_variables_audit.csv</code> documents which variables enter fold construction:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>column</code></td>
+<td>Variable name</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td><code>required</code>, <code>optional</code>, <code>descriptive</code>, or <code>missing_from_data</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>Inclusion decision: <code>included_required</code>, <code>included_optional</code>, <code>excluded_high_missingness</code>, <code>excluded_low_category_support</code>, <code>excluded_descriptive_only</code></td>
+</tr>
+<tr>
+<td><code>missing_count</code></td>
+<td>Null/<code>Not informed</code> count</td>
+</tr>
+<tr>
+<td><code>missing_rate</code></td>
+<td>Fraction missing</td>
+</tr>
+<tr>
+<td><code>n_categories</code></td>
+<td>Non-missing category count</td>
+</tr>
+<tr>
+<td><code>min_category_count</code></td>
+<td>Smallest category size</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Human-readable explanation</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong> By default, <code>origin_diagnosis</code>, <code>morph_cluster</code>, <code>gender</code>, and <code>age_group</code> should have status <code>included_required</code>. All other demographic/clinical fields should have status <code>excluded_descriptive_only</code> (retained in output CSVs but not used for fold construction).</p>
+<hr />
+<h2 id="output-files">Output Files<a class="headerlink" href="#output-files" title="Permanent link">&para;</a></h2>
+<h3 id="origin-level-folds">Origin-Level Folds<a class="headerlink" href="#origin-level-folds" title="Permanent link">&para;</a></h3>
+<p>Path: <code>results/phase3_fold_creation/fold_assignments_origin.csv</code></p>
+<p>Rows: 203 (one per origin)</p>
+<p>Columns:
+- <code>origin_id</code>: Origin identifier
+- <code>origin_diagnosis</code>: Diagnostic class used for stratification
+- <code>patch_diagnoses</code>: Unique diagnoses in patches from this origin
+- <code>gender</code>, <code>skin_color</code>, <code>age_group</code>: Demographics
+- <code>morph_cluster</code>: Morphology cluster from Phase 2
+- <code>patch_count</code>: Number of patches in matched subset
+- <code>stratification_key</code>: Concatenated stratification variables
+- <code>fold</code>: Fold assignment (0-5)</p>
+<p><strong>Use this file when you need origin-level statistics or want to audit stratification.</strong></p>
+<h3 id="patch-level-folds">Patch-Level Folds<a class="headerlink" href="#patch-level-folds" title="Permanent link">&para;</a></h3>
+<p>Path: <code>results/phase3_fold_creation/fold_assignments_patch_level.csv</code></p>
+<p>Rows: 3,086 (one per patch)</p>
+<p>Columns:
+- <code>origin_id</code>: Parent origin
+- <code>patch</code>: Patch identifier
+- <code>diagnosis</code>: Diagnostic class
+- <code>gender</code>, <code>skin_color</code>, <code>age_group</code>: Demographics
+- <code>fold</code>: Fold assignment (inherited from origin)</p>
+<p><strong>Use this file when training models on patch-level data.</strong></p>
+<hr />
+<h2 id="running-phase-3">Running Phase 3<a class="headerlink" href="#running-phase-3" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/Volumes/ssd/thesis_organization/ndb_ufes_data_organizer
+uv<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>scripts/phase3.py
+</code></pre></div>
+<p>Phase 3 reads the selected parameters from Phase 2 output (<code>clustering_params.json</code>) and the embedding file path it specifies, then creates folds and writes outputs under <code>results/phase3_fold_creation/</code>.</p>
+<p>Verify outputs:
+- Check fold balance (similar patch counts across folds)
+- Review stratification audit (required variables included, descriptive excluded)
+- Confirm no origin spans multiple folds</p>
 
 
 
