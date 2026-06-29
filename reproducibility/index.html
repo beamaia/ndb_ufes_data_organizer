@@ -1000,15 +1000,15 @@
 </tr>
 <tr>
 <td><code>scripts/phase3.py</code></td>
-<td>Empty top-level file; do not rely on it yet.</td>
-</tr>
-<tr>
-<td><code>scripts/phase4.py</code></td>
-<td>Empty top-level file; do not rely on it yet.</td>
+<td>Implemented entrypoint for Phase 3 fold creation.</td>
 </tr>
 <tr>
 <td><code>scripts/src/phase3/phase3_fold_creation.py</code></td>
-<td>Phase 3 implementation exists, but paths and morphology-clustering assumptions need audit before rerun.</td>
+<td>Implemented Phase 3 fold creation module using Phase 2-selected embeddings and parameters.</td>
+</tr>
+<tr>
+<td><code>scripts/src/phase3/phase3_visualize_clusters.py</code></td>
+<td>Optional Phase 3 visualization helper module.</td>
 </tr>
 <tr>
 <td><code>scripts/src/phase4/*.py</code></td>
@@ -1049,7 +1049,9 @@
 <li>averaged tuning summaries;</li>
 <li>selected-parameter files;</li>
 <li>visual summaries for reviewing PCA/K-Means behavior.</li>
+<li><code>clustering_params.json</code>, recording the selected model and exact embedding input for Phase 3.</li>
 </ul>
+<p><code>scripts/phase2.py</code> is the only Phase 2 executable. Modules under <code>scripts/src/phase2/</code> expose reusable loading, tuning, averaging, selection, and visualization functions without import-time execution.</p>
 <p>These files are not treated as fixed documentation artifacts yet because Phase 2 is expected to be rerun.</p>
 <p>Recommended policy:</p>
 <ul>
@@ -1060,7 +1062,7 @@
 </ul>
 <p>After rerun, summarize candidate configurations only after confirming the output schema and accepted model list.</p>
 <h2 id="phase-3-fold-creation">Phase 3: Fold Creation<a class="headerlink" href="#phase-3-fold-creation" title="Permanent link">&para;</a></h2>
-<p>Do not treat the top-level <code>scripts/phase3.py</code> as working until it is implemented.</p>
+<p>Use the top-level <code>scripts/phase3.py</code> runner for Phase 3 fold creation; audit outputs and parameters as needed.</p>
 <p>Implementation file to audit:</p>
 <div class="highlight"><pre><span></span><code>scripts/src/phase3/phase3_fold_creation.py
 </code></pre></div>

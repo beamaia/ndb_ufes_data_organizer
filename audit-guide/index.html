@@ -853,7 +853,7 @@ git<span class="w"> </span>ls-files
 <ul>
 <li>many root Markdown files are untracked;</li>
 <li><code>mkdocs.yml</code> and <code>docs/</code> are untracked;</li>
-<li><code>scripts/phase3.py</code> and <code>scripts/phase4.py</code> are empty;</li>
+<li><code>scripts/phase3.py</code> is now the active Phase 3 runner; <code>scripts/phase4.py</code> is still empty;</li>
 <li><code>main.py</code> contains an obvious typo: <code>neimport os</code>.</li>
 </ul>
 <h2 id="2-raw-data-lineage">2. Raw Data Lineage<a class="headerlink" href="#2-raw-data-lineage" title="Permanent link">&para;</a></h2>
@@ -903,7 +903,7 @@ git<span class="w"> </span>ls-files
 <ul>
 <li>path drift: <code>patch/</code> versus <code>patch_level/</code>;</li>
 <li>cache behavior: cached embeddings can hide changes;</li>
-<li>preprocessing: ImageNet normalization is applied broadly, even for pathology foundation models;</li>
+<li>preprocessing: each model declares its required normalization, resize, crop, and interpolation settings in the Phase 1 registry; there is no universal fallback;</li>
 <li>wrapper behavior: models with different output shapes are forced through a common interface;</li>
 <li>metadata wording: counts may refer to origins even when labeled as patches.</li>
 </ul>
@@ -965,7 +965,7 @@ git<span class="w"> </span>ls-files
 <ul>
 <li><code>scripts/phase3.py</code></li>
 <li><code>scripts/src/phase3/phase3_fold_creation.py</code></li>
-<li><code>scripts/src/phase3/phase3_fold_visualization.py</code></li>
+<li><code>scripts/src/phase3/phase3_visualize_clusters.py</code></li>
 <li>existing fold CSVs under <code>data/ndb_ufes/*/csvs/</code></li>
 </ul>
 <p>What it should do:</p>
@@ -979,8 +979,8 @@ git<span class="w"> </span>ls-files
 </ul>
 <p>Focal points:</p>
 <ul>
-<li>top-level <code>scripts/phase3.py</code> is empty;</li>
-<li>implementation file may write to <code>results/phase3_fold_creation/</code>, while current artifacts are under <code>data/ndb_ufes/</code>;</li>
+<li>top-level <code>scripts/phase3.py</code> is now the active Phase 3 runner;</li>
+<li>implementation file writes to <code>results/phase3_fold_creation/</code>, while current provisional artifacts remain under <code>data/ndb_ufes/</code>;</li>
 <li>existing folds may rely on an older morphology-clustering configuration;</li>
 <li>default fold-construction variables should be origin diagnosis, morphology cluster, gender, and age group;</li>
 <li>inspect <code>stratification_variables_audit.csv</code> before accepting any rerun;</li>

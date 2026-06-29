@@ -1001,7 +1001,10 @@
 <p>WIP - current:</p>
 <ul>
 <li>active entrypoint: <code>scripts/phase2.py</code>;</li>
+<li>supporting modules under <code>scripts/src/phase2/</code> contain importable functions only;</li>
 <li>code exists for repeated PCA/K-Means tuning across embedding models;</li>
+<li>origin validation uses the exact 203-origin Phase 1 mapping and rejects mismatches;</li>
+<li>the selected model and parameters are written to root-level <code>clustering_params.json</code>;</li>
 <li>outputs are intentionally not documented as committed results because this phase will be rerun.</li>
 </ul>
 <p>WIP - planned:</p>
@@ -1021,14 +1024,15 @@
 </ul>
 <p>WIP - current:</p>
 <ul>
-<li>top-level <code>scripts/phase3.py</code> is not yet an active entrypoint;</li>
-<li>implementation code exists under <code>scripts/src/phase3/</code>;</li>
-<li>some helper visualization scripts are exploratory and should be reviewed before committing as final pipeline code;</li>
+<li>top-level <code>scripts/phase3.py</code> is now an active Phase 3 runner;</li>
+<li>implementation code exists under <code>scripts/src/phase3/phase3_fold_creation.py</code>;</li>
+<li>the remaining helper visualization module is <code>scripts/src/phase3/phase3_visualize_clusters.py</code>;</li>
+<li>prior exploratory Phase 3 helpers were removed from the active source tree;</li>
 <li>provisional fold artifacts exist, but should be compared against the accepted Phase 2 configuration.</li>
 </ul>
 <p>WIP - planned:</p>
 <ul>
-<li>wire a clean Phase 3 entrypoint;</li>
+<li>review Phase 3 fold creation outputs and visualization helpers;</li>
 <li>generate final origin-level and patch-level fold CSVs;</li>
 <li>verify origin integrity, patch inheritance, and fold balance;</li>
 <li>decide which visualization helpers survive as part of the final phase.</li>

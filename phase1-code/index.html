@@ -1257,7 +1257,7 @@ scripts/src/utils/
 <p><strong>Parameters</strong>:
 - <code>image_tensors</code> (torch.Tensor): Batch of images with shape <code>(B, 3, H, W)</code> where B=batch size</p>
 <p><strong>Returns</strong>:
-- <code>embeddings</code> (np.ndarray): Shape <code>(B, output_dim)</code> where output_dim is 768 for ViT-B/UNI/CTransPath or 1024 for Virchow</p>
+- <code>embeddings</code> (np.ndarray): Shape <code>(B, output_dim)</code>; for example, 768 for ViT-B/CTransPath, 1024 for UNI, and 2560 for Virchow</p>
 <p><strong>Example</strong>:
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 
@@ -1364,15 +1364,15 @@ scripts/src/utils/
 <tbody>
 <tr>
 <td><strong>uni</strong></td>
-<td>768</td>
+<td>1024</td>
 <td>Histopathology</td>
 <td>UNI foundation model, 100M+ patches</td>
 </tr>
 <tr>
 <td><strong>virchow</strong></td>
-<td>1024</td>
+<td>2560</td>
 <td>Histopathology</td>
-<td>Clinical pathology, 2B+ patches</td>
+<td>CLS token concatenated with mean patch token</td>
 </tr>
 <tr>
 <td><strong>ctranspath</strong></td>

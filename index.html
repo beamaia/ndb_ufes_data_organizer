@@ -1053,8 +1053,8 @@
 <p>The repository is mid-reorganization. Some documentation and root Markdown files were generated during previous audit sessions and should not be assumed canonical. The current docs intentionally identify stale paths, empty top-level scripts, and artifacts that need manual verification.</p>
 <p>Known high-priority checks:</p>
 <ul>
-<li><code>scripts/phase3.py</code> and <code>scripts/phase4.py</code> are currently empty top-level entrypoints.</li>
-<li>Phase 3 and Phase 4 implementations exist under <code>scripts/src/phase3/</code> and <code>scripts/src/phase4/</code>, but some paths are stale.</li>
+<li><code>scripts/phase3.py</code> is now active as the Phase 3 runner; <code>scripts/phase4.py</code> remains an empty entrypoint.</li>
+<li>Phase 3 implementation exists under <code>scripts/src/phase3/</code>; Phase 4 implementations are still undergoing review.</li>
 <li>Phase 2 morphology tuning is expected to be rerun before final fold publication, and provisional fold artifacts should be checked against the accepted configuration.</li>
 <li>Root Markdown files should be promoted into <code>docs/</code>, archived, or deleted after manual audit.</li>
 </ul>

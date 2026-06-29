@@ -1002,6 +1002,7 @@
 <li>Confirm output embeddings are grouped by origin and contain patch-level vectors.</li>
 <li>Confirm caches are not stale before accepting regenerated outputs.</li>
 <li>Confirm model wrappers and preprocessing are appropriate for each model family.</li>
+<li>Confirm every model explicitly declares normalization, resize, crop, and interpolation settings; Phase 1 intentionally has no generic normalization fallback.</li>
 </ul>
 <h2 id="phase-2-morphology-tuning">Phase 2: Morphology Tuning<a class="headerlink" href="#phase-2-morphology-tuning" title="Permanent link">&para;</a></h2>
 <p>Goal: identify frozen embedding models and PCA/K-Means settings that produce useful morphology strata for fold balancing.</p>
@@ -1010,7 +1011,11 @@
 </code></pre></div>
 <p>Main implementation files:</p>
 <ul>
-<li><code>scripts/phase2.py</code></li>
+<li><code>scripts/phase2.py</code> (the only executable Phase 2 entrypoint)</li>
+<li><code>scripts/src/phase2/tune_clustering.py</code></li>
+<li><code>scripts/src/phase2/phase2_average_results.py</code></li>
+<li><code>scripts/src/phase2/phase2_save_params.py</code></li>
+<li><code>scripts/src/phase2/phase2_enhanced_visualizations.py</code></li>
 <li><code>scripts/src/phase2/config.yaml</code></li>
 </ul>
 <p>Current configuration:</p>
@@ -1023,7 +1028,7 @@
 <p>Expected inputs:</p>
 <ul>
 <li><code>data/embeddings/embeddings_wsi_level_*.pkl</code></li>
-<li><code>data/ndb_ufes/origin_level/csvs/ndb-ufes.csv</code></li>
+<li><code>data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv</code></li>
 </ul>
 <p>Expected outputs when rerun:</p>
 <ul>
@@ -1031,7 +1036,9 @@
 <li>averaged tuning summaries;</li>
 <li>selected-parameter files;</li>
 <li>visual summaries for reviewing PCA/K-Means behavior.</li>
+<li>root-level <code>clustering_params.json</code> containing the selected model, embedding file, and parameters for Phase 3.</li>
 </ul>
+<p>Library modules under <code>scripts/src/phase2/</code> define importable functions only. They do not execute work when imported. Origin IDs must match the Phase 1 mapping exactly; Phase 2 no longer inserts zero vectors for missing origins.</p>
 <p>These files are not treated as committed documentation artifacts yet because Phase 2 will be rerun before final fold creation.</p>
 <p>Audit focus:</p>
 <ul>
@@ -1045,8 +1052,10 @@
 <p>Goal: assign every origin to exactly one fold, then broadcast that assignment to every patch.</p>
 <p>Current state:</p>
 <ul>
-<li><code>scripts/phase3.py</code> is empty.</li>
+<li><code>scripts/phase3.py</code> is now the active Phase 3 runner.</li>
 <li>Implementation exists at <code>scripts/src/phase3/phase3_fold_creation.py</code>.</li>
+<li>Optional visualization helper is <code>scripts/src/phase3/phase3_visualize_clusters.py</code>.</li>
+<li>Current Phase 3 outputs are written under <code>results/phase3_fold_creation/</code> when rerun.</li>
 <li>Existing provisional fold outputs are currently under <code>data/ndb_ufes/origin_level/csvs/</code> and <code>data/ndb_ufes/patch_level/csvs/</code>.</li>
 </ul>
 <p>Provisional fold artifacts observed:</p>
