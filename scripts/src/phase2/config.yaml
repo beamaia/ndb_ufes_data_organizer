@@ -14,6 +14,12 @@ tuning:
   # Random state for reproducibility
   random_state: 42
 
+selection:
+  # Each morphology cluster must be large enough for six-fold stratification.
+  min_cluster_size: 11
+  # Reject highly imbalanced partitions such as the former Swin 202/1 split.
+  max_cluster_size_ratio: 5.0
+
 # Paths - auto-discover embeddings
 input:
   # Pattern to find all embedding files from Phase 1
@@ -23,6 +29,7 @@ input:
 output:
   results_dir: "results/phase2_tuning"
   selected_params_file: "clustering_params.json"
+  selection_summary_file: "results/phase2_tuning/phase2_model_selection.csv"
   params_template: "results/phase2_tuning/clustering_params_{model}.json"
   run_results_template: "results/phase2_tuning/phase2_all_results_{model}_run{run_id}.csv"
   averaged_results_template: "results/phase2_tuning/phase2_all_results_{model}_averaged.csv"

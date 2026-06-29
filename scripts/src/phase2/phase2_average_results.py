@@ -17,6 +17,12 @@ def average_results(run_results: list[pd.DataFrame]) -> pd.DataFrame:
         inertia_std=("inertia", "std"),
         silhouette_mean=("silhouette", "mean"),
         silhouette_std=("silhouette", "std"),
+        min_cluster_size_min=("min_cluster_size", "min"),
+        min_cluster_size_mean=("min_cluster_size", "mean"),
+        max_cluster_size_max=("max_cluster_size", "max"),
+        max_cluster_size_mean=("max_cluster_size", "mean"),
+        cluster_size_ratio_max=("cluster_size_ratio", "max"),
+        cluster_size_ratio_mean=("cluster_size_ratio", "mean"),
         runs=("run", "nunique"),
     )
 

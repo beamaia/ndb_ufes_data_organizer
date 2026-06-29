@@ -166,6 +166,7 @@ def run_grid_search(
                     f"K-Means produced {len(np.unique(labels))} clusters; "
                     f"expected {cluster_count}"
                 )
+            cluster_sizes = np.bincount(labels, minlength=cluster_count)
             results.append({
                 "pca_components": component_count,
                 "kmeans_clusters": cluster_count,
@@ -173,6 +174,11 @@ def run_grid_search(
                 "inertia": float(kmeans.inertia_),
                 "silhouette": float(
                     silhouette_score(distances, labels, metric="precomputed")
+                ),
+                "min_cluster_size": int(cluster_sizes.min()),
+                "max_cluster_size": int(cluster_sizes.max()),
+                "cluster_size_ratio": float(
+                    cluster_sizes.max() / cluster_sizes.min()
                 ),
                 "run": run_id,
                 "random_state": random_state,

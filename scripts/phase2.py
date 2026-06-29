@@ -1,12 +1,18 @@
 from pathlib import Path
 
+import pandas as pd
+
 from src.phase2.phase2_average_results import average_results, save_averaged_results
 from src.phase2.phase2_enhanced_visualizations import (
     create_basic_visualizations,
     create_enhanced_visualizations,
 )
-from src.phase2.phase2_save_params import select_optimal_params, save_optimal_params
-from scripts.src.phase2.phase2_tune_clustering import (
+from src.phase2.phase2_save_params import (
+    NoEligibleClusteringError,
+    save_optimal_params,
+    select_optimal_params,
+)
+from src.phase2.phase2_tune_clustering import (
     aggregate_to_wsi_level,
     discover_latest_embeddings,
     load_config,
@@ -40,7 +46,11 @@ def log_phase_start(model_count: int) -> None:
     logger.info(LOG_SEPARATOR)
 
 
-def log_phase_end(optimal_params: dict[str, dict], selected_params: dict) -> None:
+def log_phase_end(
+    optimal_params: dict[str, dict],
+    rejected_models: dict[str, str],
+    selected_params: dict,
+) -> None:
     logger.info(LOG_SEPARATOR)
     logger.info("PHASE 2 COMPLETE")
     logger.info(LOG_SEPARATOR)
@@ -51,6 +61,8 @@ def log_phase_end(optimal_params: dict[str, dict], selected_params: dict) -> Non
             f"silhouette={params['silhouette_score']:.4f} "
             f"+/- {params['silhouette_std']:.4f}"
         )
+    for model_name, reason in sorted(rejected_models.items()):
+        logger.info(f"{model_name:30s} REJECTED: {reason}")
     logger.info("-" * 80)
     logger.info(
         f"Selected model: {selected_params['model_name']} "
@@ -63,6 +75,7 @@ def log_phase_end(optimal_params: dict[str, dict], selected_params: dict) -> Non
 def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
     config = load_config(config_path)
     tuning = config["tuning"]
+    selection = config["selection"]
     inputs = config["input"]
     outputs = config["output"]
     visualizations = config.get("visualizations", {})
@@ -75,6 +88,8 @@ def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
     log_phase_start(len(embedding_files))
 
     all_optimal_params = {}
+    rejected_models = {}
+    selection_records = []
     failed_models = {}
 
     for model_index, (model_name, embeddings_path) in enumerate(
@@ -138,20 +153,63 @@ def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
                 output_dir=project_path(outputs["results_dir"]),
             )
 
-            params = select_optimal_params(
-                averaged_results,
-                random_state=tuning["random_state"],
-            )
             params_path = configured_output_path(
                 outputs["params_template"],
                 model=model_name,
             )
+            constraints = {
+                "min_cluster_size": selection["min_cluster_size"],
+                "max_cluster_size_ratio": selection["max_cluster_size_ratio"],
+            }
+            eligible_count = int((
+                (averaged_results["min_cluster_size_min"] >= selection["min_cluster_size"])
+                & (
+                    averaged_results["cluster_size_ratio_max"]
+                    <= selection["max_cluster_size_ratio"]
+                )
+            ).sum())
+            try:
+                params = select_optimal_params(
+                    averaged_results,
+                    random_state=tuning["random_state"],
+                    min_cluster_size=selection["min_cluster_size"],
+                    max_cluster_size_ratio=selection["max_cluster_size_ratio"],
+                )
+            except NoEligibleClusteringError as error:
+                reason = str(error)
+                rejected_models[model_name] = reason
+                rejection = {
+                    "model_name": model_name,
+                    "embeddings_file": str(embeddings_path),
+                    "eligibility_status": "rejected",
+                    "eligibility_reason": reason,
+                    "eligible_configuration_count": eligible_count,
+                    "configurations_evaluated": int(len(averaged_results)),
+                    "selection_constraints": constraints,
+                }
+                save_optimal_params(rejection, params_path)
+                selection_records.append(rejection)
+                logger.warning(f"Rejected model from selection: {reason}")
+                continue
+
+            params.update({
+                "eligibility_status": "eligible",
+                "eligible_configuration_count": eligible_count,
+                "configurations_evaluated": int(len(averaged_results)),
+            })
             save_optimal_params(params, params_path)
             all_optimal_params[model_name] = params
+            selection_records.append({
+                "model_name": model_name,
+                "embeddings_file": str(embeddings_path),
+                **params,
+            })
             logger.info(
                 f"Selected PCA={params['pca_components']}, "
                 f"K={params['kmeans_clusters']}, "
-                f"silhouette={params['silhouette_score']:.4f}"
+                f"silhouette={params['silhouette_score']:.4f}, "
+                f"minimum cluster={params['min_cluster_size']}, "
+                f"maximum ratio={params['max_cluster_size_ratio']:.2f}"
             )
         except Exception as error:
             failed_models[model_name] = str(error)
@@ -162,6 +220,8 @@ def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
             f"{model}: {error}" for model, error in sorted(failed_models.items())
         )
         raise RuntimeError(f"Phase 2 failed for {len(failed_models)} models: {failures}")
+    if not all_optimal_params:
+        raise RuntimeError("Phase 2 found no eligible model configurations")
 
     selected_model = max(
         all_optimal_params,
@@ -175,9 +235,23 @@ def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
     selected_params_path = project_path(outputs["selected_params_file"])
     save_optimal_params(selected_params, selected_params_path)
 
-    log_phase_end(all_optimal_params, selected_params)
+    selection_summary = pd.DataFrame(selection_records)
+    selection_summary["selection_constraints"] = selection_summary[
+        "selection_constraints"
+    ].astype(str)
+    selection_summary = selection_summary.sort_values(
+        ["eligibility_status", "silhouette_score"],
+        ascending=[True, False],
+        na_position="last",
+    )
+    selection_summary_path = project_path(outputs["selection_summary_file"])
+    selection_summary_path.parent.mkdir(parents=True, exist_ok=True)
+    selection_summary.to_csv(selection_summary_path, index=False)
+
+    log_phase_end(all_optimal_params, rejected_models, selected_params)
     logger.info(f"Results saved under {project_path(outputs['results_dir'])}")
     logger.info(f"Selected model parameters saved to {selected_params_path}")
+    logger.info(f"Model selection summary saved to {selection_summary_path}")
     return selected_params
 
 
