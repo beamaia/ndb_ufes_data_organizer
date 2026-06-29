@@ -247,7 +247,7 @@ Frozen external pretrained embeddings used only for unsupervised morphology-awar
 ## Known Caveats
 
 - The repo is mid-reorganization; some generated root Markdown files are not canonical.
-- `scripts/phase3.py` and `scripts/phase4.py` are currently empty top-level entrypoints.
+- `scripts/phase3.py` is now active as the Phase 3 runner; `scripts/phase4.py` remains an empty top-level entrypoint.
 - Phase 2 morphology tuning will be rerun before final fold publication; provisional fold artifacts should not be treated as final until they are checked against the accepted configuration.
 - Some script paths still disagree about `patch/` versus `patch_level/`.
 - The file named `fold_assignments_patch_level.csv` currently has one row per origin, not one row per patch; use `fold_assignments_patch_level_detailed.csv` or `fold_assignments_patch_level_with_images.csv` for patch-level rows.

@@ -166,9 +166,9 @@ print(f"Patches per origin (mean): {np.mean([e.shape[0] for e in embeddings.valu
 
 | Model | Output Dim | Result | Remarks |
 |-------|-----------|--------|---------|
-| **UNI** | 768 | ✅ Clear separation | Domain-specific pathology model, best results |
+| **UNI** | 1024 | ✅ Clear separation | Domain-specific pathology model, best results |
 | **CTransPath** | 768 | ✅ Good separation | Contrastive learning, close to UNI |
-| **Virchow** | 1024 | ⏳ Higher dim | Larger embeddings, not yet evaluated |
+| **Virchow** | 2560 | ⏳ Higher dim | CLS token concatenated with mean patch token; not yet evaluated |
 | **ViT-B (ImageNet)** | 768 | ⚠️ Moderate | Generic vision model, decent but less specific |
 
 **Recommendation**: Use **UNI** or **CTransPath** for downstream clustering (Phase 2).
@@ -177,7 +177,7 @@ print(f"Patches per origin (mean): {np.mean([e.shape[0] for e in embeddings.valu
 
 ## 🔍 Embedding Statistics
 
-### UNI Model (768D)
+### UNI Model (1024D)
 
 ```
 Total patches: 3,086
@@ -218,7 +218,7 @@ uv run python scripts/phase1.py
 # Output generation timeline
 # 2026-04-21 18:31:14 — Started Phase 1
 # 2026-04-21 18:31:45 — Created origin-patch mapping (203 origins from 3,086 patches)
-# 2026-04-21 18:32:30 — Extracted UNI embeddings (768D × 3,086 patches)
+# 2026-04-21 18:32:30 — Extracted UNI embeddings (1024D × 3,086 patches)
 # 2026-04-21 18:32:54 — Extracted CTransPath embeddings
 # 2026-04-21 18:33:16 — Generated 3D/2D visualizations
 # 2026-04-21 18:33:25 — Phase 1 complete (total: ~1 minute)

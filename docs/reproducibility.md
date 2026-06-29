@@ -22,9 +22,9 @@ uv run dvc pull
 | --- | --- |
 | `scripts/phase1.py` | Implemented entrypoint for feature extraction. |
 | `scripts/phase2.py` | Implemented entrypoint for PCA/K-Means tuning. |
-| `scripts/phase3.py` | Empty top-level file; do not rely on it yet. |
-| `scripts/phase4.py` | Empty top-level file; do not rely on it yet. |
-| `scripts/src/phase3/phase3_fold_creation.py` | Phase 3 implementation exists, but paths and morphology-clustering assumptions need audit before rerun. |
+| `scripts/phase3.py` | Implemented entrypoint for Phase 3 fold creation. |
+| `scripts/src/phase3/phase3_fold_creation.py` | Implemented Phase 3 fold creation module using Phase 2-selected embeddings and parameters. |
+| `scripts/src/phase3/phase3_visualize_clusters.py` | Optional Phase 3 visualization helper module. |
 | `scripts/src/phase4/*.py` | Phase 4 implementations exist, but some paths are stale and require audit before rerun. |
 
 ## Phase 1: Feature Extraction
@@ -71,6 +71,9 @@ Expected outputs when rerun:
 - averaged tuning summaries;
 - selected-parameter files;
 - visual summaries for reviewing PCA/K-Means behavior.
+- `clustering_params.json`, recording the selected model and exact embedding input for Phase 3.
+
+`scripts/phase2.py` is the only Phase 2 executable. Modules under `scripts/src/phase2/` expose reusable loading, tuning, averaging, selection, and visualization functions without import-time execution.
 
 These files are not treated as fixed documentation artifacts yet because Phase 2 is expected to be rerun.
 
@@ -85,7 +88,7 @@ After rerun, summarize candidate configurations only after confirming the output
 
 ## Phase 3: Fold Creation
 
-Do not treat the top-level `scripts/phase3.py` as working until it is implemented.
+Use the top-level `scripts/phase3.py` runner for Phase 3 fold creation; audit outputs and parameters as needed.
 
 Implementation file to audit:
 

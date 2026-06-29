@@ -28,7 +28,7 @@ Current known state:
 
 - many root Markdown files are untracked;
 - `mkdocs.yml` and `docs/` are untracked;
-- `scripts/phase3.py` and `scripts/phase4.py` are empty;
+- `scripts/phase3.py` is now the active Phase 3 runner; `scripts/phase4.py` is still empty;
 - `main.py` contains an obvious typo: `neimport os`.
 
 ## 2. Raw Data Lineage
@@ -83,7 +83,7 @@ Focal points:
 
 - path drift: `patch/` versus `patch_level/`;
 - cache behavior: cached embeddings can hide changes;
-- preprocessing: ImageNet normalization is applied broadly, even for pathology foundation models;
+- preprocessing: each model declares its required normalization, resize, crop, and interpolation settings in the Phase 1 registry; there is no universal fallback;
 - wrapper behavior: models with different output shapes are forced through a common interface;
 - metadata wording: counts may refer to origins even when labeled as patches.
 
@@ -151,7 +151,7 @@ Open:
 
 - `scripts/phase3.py`
 - `scripts/src/phase3/phase3_fold_creation.py`
-- `scripts/src/phase3/phase3_fold_visualization.py`
+- `scripts/src/phase3/phase3_visualize_clusters.py`
 - existing fold CSVs under `data/ndb_ufes/*/csvs/`
 
 What it should do:
@@ -165,8 +165,8 @@ What it should do:
 
 Focal points:
 
-- top-level `scripts/phase3.py` is empty;
-- implementation file may write to `results/phase3_fold_creation/`, while current artifacts are under `data/ndb_ufes/`;
+- top-level `scripts/phase3.py` is now the active Phase 3 runner;
+- implementation file writes to `results/phase3_fold_creation/`, while current provisional artifacts remain under `data/ndb_ufes/`;
 - existing folds may rely on an older morphology-clustering configuration;
 - default fold-construction variables should be origin diagnosis, morphology cluster, gender, and age group;
 - inspect `stratification_variables_audit.csv` before accepting any rerun;

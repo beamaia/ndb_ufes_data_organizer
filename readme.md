@@ -48,7 +48,7 @@ uv run python scripts/phase1.py
 uv run python scripts/phase2.py
 ```
 
-Important: `scripts/phase3.py` and `scripts/phase4.py` are currently empty top-level entrypoints. Phase 3/4 implementations exist under `scripts/src/phase3/` and `scripts/src/phase4/`, but still WIP (not commited.)
+Important: `scripts/phase3.py` is now the active Phase 3 runner. Phase 3 implementation is at `scripts/src/phase3/phase3_fold_creation.py` and the helper visualization module is `scripts/src/phase3/phase3_visualize_clusters.py`. `scripts/phase4.py` remains an empty top-level entrypoint and Phase 4 still needs wiring.
 
 ## Current Key Artifacts
 

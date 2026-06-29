@@ -49,6 +49,7 @@ Audit focus:
 - Confirm output embeddings are grouped by origin and contain patch-level vectors.
 - Confirm caches are not stale before accepting regenerated outputs.
 - Confirm model wrappers and preprocessing are appropriate for each model family.
+- Confirm every model explicitly declares normalization, resize, crop, and interpolation settings; Phase 1 intentionally has no generic normalization fallback.
 
 ## Phase 2: Morphology Tuning
 
@@ -62,7 +63,11 @@ uv run python scripts/phase2.py
 
 Main implementation files:
 
-- `scripts/phase2.py`
+- `scripts/phase2.py` (the only executable Phase 2 entrypoint)
+- `scripts/src/phase2/tune_clustering.py`
+- `scripts/src/phase2/phase2_average_results.py`
+- `scripts/src/phase2/phase2_save_params.py`
+- `scripts/src/phase2/phase2_enhanced_visualizations.py`
 - `scripts/src/phase2/config.yaml`
 
 Current configuration:
@@ -75,7 +80,7 @@ Current configuration:
 Expected inputs:
 
 - `data/embeddings/embeddings_wsi_level_*.pkl`
-- `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`
+- `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv`
 
 Expected outputs when rerun:
 
@@ -83,6 +88,9 @@ Expected outputs when rerun:
 - averaged tuning summaries;
 - selected-parameter files;
 - visual summaries for reviewing PCA/K-Means behavior.
+- root-level `clustering_params.json` containing the selected model, embedding file, and parameters for Phase 3.
+
+Library modules under `scripts/src/phase2/` define importable functions only. They do not execute work when imported. Origin IDs must match the Phase 1 mapping exactly; Phase 2 no longer inserts zero vectors for missing origins.
 
 These files are not treated as committed documentation artifacts yet because Phase 2 will be rerun before final fold creation.
 
@@ -100,8 +108,10 @@ Goal: assign every origin to exactly one fold, then broadcast that assignment to
 
 Current state:
 
-- `scripts/phase3.py` is empty.
+- `scripts/phase3.py` is now the active Phase 3 runner.
 - Implementation exists at `scripts/src/phase3/phase3_fold_creation.py`.
+- Optional visualization helper is `scripts/src/phase3/phase3_visualize_clusters.py`.
+- Current Phase 3 outputs are written under `results/phase3_fold_creation/` when rerun.
 - Existing provisional fold outputs are currently under `data/ndb_ufes/origin_level/csvs/` and `data/ndb_ufes/patch_level/csvs/`.
 
 Provisional fold artifacts observed:

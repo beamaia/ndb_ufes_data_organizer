@@ -53,8 +53,8 @@ The repository is mid-reorganization. Some documentation and root Markdown files
 
 Known high-priority checks:
 
-- `scripts/phase3.py` and `scripts/phase4.py` are currently empty top-level entrypoints.
-- Phase 3 and Phase 4 implementations exist under `scripts/src/phase3/` and `scripts/src/phase4/`, but some paths are stale.
+- `scripts/phase3.py` is now active as the Phase 3 runner; `scripts/phase4.py` remains an empty entrypoint.
+- Phase 3 implementation exists under `scripts/src/phase3/`; Phase 4 implementations are still undergoing review.
 - Phase 2 morphology tuning is expected to be rerun before final fold publication, and provisional fold artifacts should be checked against the accepted configuration.
 - Root Markdown files should be promoted into `docs/`, archived, or deleted after manual audit.
 

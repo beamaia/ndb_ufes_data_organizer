@@ -87,7 +87,7 @@ Extract embeddings from a batch of preprocessed image tensors.
 - `image_tensors` (torch.Tensor): Batch of images with shape `(B, 3, H, W)` where B=batch size
 
 **Returns**:
-- `embeddings` (np.ndarray): Shape `(B, output_dim)` where output_dim is 768 for ViT-B/UNI/CTransPath or 1024 for Virchow
+- `embeddings` (np.ndarray): Shape `(B, output_dim)`; for example, 768 for ViT-B/CTransPath, 1024 for UNI, and 2560 for Virchow
 
 **Example**:
 ```python
@@ -216,8 +216,8 @@ Defines all available models for feature extraction.
 
 | Model | Output Dim | Category | Notes |
 |-------|-----------|----------|-------|
-| **uni** | 768 | Histopathology | UNI foundation model, 100M+ patches |
-| **virchow** | 1024 | Histopathology | Clinical pathology, 2B+ patches |
+| **uni** | 1024 | Histopathology | UNI foundation model, 100M+ patches |
+| **virchow** | 2560 | Histopathology | CLS token concatenated with mean patch token |
 | **ctranspath** | 768 | Histopathology | Swin Transformer + contrastive learning |
 | **vit_base_patch16_224** | 768 | ImageNet | Standard ViT-B |
 | **vit_small_patch16_224** | 384 | ImageNet | Standard ViT-S |
