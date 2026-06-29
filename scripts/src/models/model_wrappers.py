@@ -13,13 +13,12 @@ class BaseModelWrapper(nn.Module):
         self.model.eval()
     
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        """Standard forward pass returning embeddings"""
         return self.forward_features(x)
     
     def forward_features(self, x: torch.Tensor) -> torch.Tensor:
         """
         Extract features from input. Should be overridden by subclasses.
-        
+
         Args:
             x: Input tensor (B, 3, H, W)
             
@@ -39,6 +38,19 @@ class HFViTWrapper(BaseModelWrapper):
         # HF vit returns last_hidden_state which is (B, num_tokens, D)
         last_hidden_state = outputs.last_hidden_state
         return last_hidden_state
+
+
+class HFCLIPVisionWrapper(BaseModelWrapper):
+    def forward_features(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        CLIPModel wraps text and vision towers. Use only the vision tower so Phase 1
+        receives ViT-style hidden states: (B, num_tokens, D).
+        """
+        if hasattr(self.model, "vision_model"):
+            outputs = self.model.vision_model(pixel_values=x, output_hidden_states=False)
+        else:
+            outputs = self.model(pixel_values=x, output_hidden_states=False)
+        return outputs.last_hidden_state
 
 
 class HFDeiTWrapper(BaseModelWrapper):
@@ -105,15 +117,12 @@ class HFPathologyFoundationWrapper(BaseModelWrapper):
 
 
 class UNIWrapper(HFPathologyFoundationWrapper):
-    """Specific wrapper for UNI model (MahmoodLab/UNI)"""
     pass
 
 class VirchowWrapper(HFPathologyFoundationWrapper):
-    """Specific wrapper for Virchow model (paige-ai/Virchow)"""
     pass
 
 class CTransPathWrapper(HFPathologyFoundationWrapper):
-    """Specific wrapper for CTransPath model (kaczmarj/CTransPath)"""
     pass
 
 class HFMoCoV3VitWrapper(BaseModelWrapper):
@@ -222,12 +231,9 @@ class ModelWrapperFactory:
             return TimmModelWrapper(model, model_name)
     
     def __call__(self, model, model_name: str, source: str) -> BaseModelWrapper:
-        """Allow the factory to be called directly"""
         return self.wrap(model, model_name, source)
     
-    def _wrap_huggingface(self, model, model_name: str) -> BaseModelWrapper:
-        """Wrap HuggingFace models with appropriate wrapper"""
-        
+    def _wrap_huggingface(self, model, model_name: str) -> BaseModelWrapper:        
         # pathology foundation models
         if 'uni' in model_name.lower() or 'MahmoodLab' in str(model):
             logger.info(f"  -> Using UNI wrapper")
@@ -250,6 +256,10 @@ class ModelWrapperFactory:
             return HFMoCoV3VitWrapper(model, model_name)
         
         # vit
+        elif 'clip' in model_name.lower() or hasattr(model, "vision_model"):
+            logger.info(f"  -> Using CLIP vision wrapper")
+            return HFCLIPVisionWrapper(model, model_name)
+
         elif 'vit' in model_name.lower() and 'deit' not in model_name.lower():
             logger.info(f"  -> Using HF ViT wrapper")
             return HFViTWrapper(model, model_name)
@@ -271,9 +281,7 @@ class ModelWrapperFactory:
             logger.info(f"  -> Using generic HF ViT wrapper (default for HuggingFace)")
             return HFViTWrapper(model, model_name)
     
-    def _wrap_torchvision(self, model, model_name: str) -> BaseModelWrapper:
-        """Wrap Torchvision models with appropriate wrapper"""
-        
+    def _wrap_torchvision(self, model, model_name: str) -> BaseModelWrapper:        
         if 'resnet' in model_name.lower():
             logger.info(f"  -> Using Torchvision ResNet wrapper")
             return TorchvisionResNetWrapper(model, model_name)

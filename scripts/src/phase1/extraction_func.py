@@ -7,10 +7,6 @@ import numpy as np
 from src.phase1.feature_extractor import FeatureExtractor
 from src.utils.logger import logger
 
-# ----------------------------------------------------------------------------
-# CONSTANTS
-# ----------------------------------------------------------------------------
-
 SOURCE_CSV_PATH = 'data/ndb_ufes/patch_level/csvs/parcial_pndb_ufes.csv'
 PATCH_IMAGE_DIR = 'data/ndb_ufes/patch_level/images'
 OUTPUT_MAPPING_CSV = 'data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv'
@@ -24,7 +20,6 @@ DEFAULT_EMBEDDINGS_DIR = 'data/embeddings'
 # ----------------------------------------------------------------------------
 
 def load_patch_dataframe(fold_csv_path):
-    """Load patch-level data from existing fold CSV."""
     df = pd.read_csv(fold_csv_path)
     logger.info(f"Loaded {len(df)} patches from {fold_csv_path}")
     logger.info(f"Columns: {list(df.columns)}")

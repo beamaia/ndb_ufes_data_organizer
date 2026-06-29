@@ -60,7 +60,6 @@ class MetadataTracker:
         logger.info(f"MetadataTracker initialized at {self.metadata_dir}")
     
     def _load_existing_runs(self):
-        """Load existing run metadata from master file"""
         if self.master_file.exists():
             try:
                 with open(self.master_file, 'r') as f:
@@ -84,7 +83,6 @@ class MetadataTracker:
         logger.info(f"Added metadata for {metadata.model_name} to tracker")
     
     def save(self):
-        """Save all tracked runs to master JSON file"""
         try:
             runs_data = [asdict(run) for run in self.runs]
             
@@ -107,7 +105,6 @@ class MetadataTracker:
             raise
     
     def _save_summary(self):
-        """Save a human-readable summary of all runs"""
         try:
             summary_file = self.metadata_dir / "runs_summary.txt"
             
@@ -177,11 +174,9 @@ class MetadataTracker:
     
     
     def get_failed_runs(self) -> List[ModelRunMetadata]:
-        """Get all failed model runs (usefull for notebook)"""
         return [r for r in self.runs if r.status == "failed"]
     
     def get_stats(self) -> Dict[str, Any]:
-        """Get overall statistics across all tracked runs"""
         if not self.runs:
             return {
                 "total_runs": 0,

@@ -1,9 +1,12 @@
 import torch
 import torch.nn.functional as F
 from torchvision import transforms
+from torchvision.transforms import InterpolationMode
 from PIL import Image
 import numpy as np
 from pathlib import Path
+import hashlib
+import json
 from tqdm import tqdm
 from collections import defaultdict
 import gc
@@ -12,15 +15,11 @@ import psutil
 from src.utils.logger import logger
 from src.models.model_loader import ModelLoader
 
-# ImageNet normalization (standard for all models? will decide later)
-IMAGENET_MEAN = [0.485, 0.456, 0.406]
-IMAGENET_STD = [0.229, 0.224, 0.225]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 class FeatureExtractor:    
     def __init__(self, model_name, device='mps', batch_size=32, registry_path=None):
-        """
-        Initialize feature extractor with a model from registry.
-        
+        """        
         Args:
             model_name: Name of model from registry (e.g., 'vit_base_patch16_224', 'uni', 'resnet50')
             device: 'mps' (Metal on Mac), 'cpu', or 'cuda'
@@ -44,16 +43,15 @@ class FeatureExtractor:
         
         logger.info(f"{'-'*80}")
         logger.info(f"FeatureExtractor Initialized")
-        logger.info(f"  Model: {model_name}")
-        logger.info(f"  Description: {self.config.description}")
-        logger.info(f"  Input size: {self.config.input_size}x{self.config.input_size}")
-        logger.info(f"  Output dim: {self.config.output_dim}")
-        logger.info(f"  Extract method: {self.config.extract_method}")
-        logger.info(f"  Device: {self.device}")
-        logger.info(f"  Batch size: {batch_size}")
+        logger.info(f"Model: {model_name}")
+        logger.info(f"Description: {self.config.description}")
+        logger.info(f"Input size: {self.config.input_size}x{self.config.input_size}")
+        logger.info(f"Output dim: {self.config.output_dim}")
+        logger.info(f"Extract method: {self.config.extract_method}")
+        logger.info(f"Device: {self.device}")
+        logger.info(f"Batch size: {batch_size}")
         logger.info(f"{'-'*80}\n")
         
-        # setup caching
         self.cache_dir = self._get_cache_dir()
         self.cache_enabled = True
         self.cache_hits = 0
@@ -65,14 +63,26 @@ class FeatureExtractor:
         self.current_batch_level = 0  # index batch_size_levels
     
     def _get_cache_dir(self):
-        """Get cache directory for this model, creating it if needed."""
-        cache_base = Path('results/phase1_feature_cache')
-        cache_path = cache_base / self.model_name
+        cache_config = {
+            "model_id": self.config.model_id,
+            "input_size": self.config.input_size,
+            "resize_size": self.config.resize_size,
+            "crop_size": self.config.crop_size,
+            "interpolation": str(self.config.interpolation),
+            "output_dim": self.config.output_dim,
+            "extract_method": str(self.config.extract_method),
+            "normalization_mean": self.config.normalization_mean,
+            "normalization_std": self.config.normalization_std,
+        }
+        fingerprint = hashlib.sha256(
+            json.dumps(cache_config, sort_keys=True).encode("utf-8")
+        ).hexdigest()[:12]
+        cache_base = PROJECT_ROOT / 'results/phase1_feature_cache'
+        cache_path = cache_base / self.model_name / fingerprint
         cache_path.mkdir(parents=True, exist_ok=True)
         return cache_path
     
     def clear_cache(self):
-        """Clear all cached embeddings for this model."""
         import shutil
         if self.cache_dir.exists():
             shutil.rmtree(self.cache_dir)
@@ -82,12 +92,10 @@ class FeatureExtractor:
             logger.info(f"Cleared cache for model: {self.model_name}")
     
     def _get_cache_file_path(self, patch_path):
-        """Generate cache file path for a patch."""
         patch_name = Path(patch_path).stem 
         return self.cache_dir / f"{patch_name}.pkl"
     
     def _load_from_cache(self, patch_path):
-        """Load embedding from cache if it exists."""
         if not self.cache_enabled:
             return None
         
@@ -97,6 +105,10 @@ class FeatureExtractor:
                 import pickle
                 with open(cache_file, 'rb') as f:
                     embedding = pickle.load(f)
+                if np.asarray(embedding).shape[-1] != self.config.output_dim:
+                    logger.warning(f"Ignoring incompatible cache entry: {cache_file}")
+                    self.cache_misses += 1
+                    return None
                 self.cache_hits += 1
                 return embedding
             except Exception as e:
@@ -107,7 +119,6 @@ class FeatureExtractor:
         return None
     
     def _save_to_cache(self, patch_path, embedding):
-        """Save embedding to cache."""
         if not self.cache_enabled:
             return
         
@@ -120,11 +131,9 @@ class FeatureExtractor:
             logger.warning(f"Failed to save cache for {patch_path}: {e}")
     
     def _get_available_memory_gb(self):
-        """Get available system ram in gb"""
         return psutil.virtual_memory().available / (1024 ** 3)
     
     def _adjust_batch_size_if_needed(self):
-        """Check memory and reduce batch size if threshold exceeded"""
         available_gb = self._get_available_memory_gb()
         
         if available_gb < self.memory_threshold_gb and self.current_batch_level < len(self.batch_size_levels) - 1:
@@ -145,7 +154,6 @@ class FeatureExtractor:
         return False
     
     def _setup_device(self, device='mps'):
-        """Setup and validate device"""
         if device == 'mps':
             if torch.backends.mps.is_available():
                 logger.info("Metal (apple M4) device available")
@@ -163,16 +171,23 @@ class FeatureExtractor:
         return 'cpu'
     
     def _get_transforms(self):
-        """Get transforms for the model based on input size"""
-        input_size = self.config.input_size
-        return transforms.Compose([
-            transforms.Resize((input_size, input_size)),
+        interpolation = {
+            "bilinear": InterpolationMode.BILINEAR,
+            "bicubic": InterpolationMode.BICUBIC,
+        }[str(self.config.interpolation)]
+        operations = [
+            transforms.Resize(self.config.resize_size, interpolation=interpolation),
+        ]
+        if self.config.crop_size is not None:
+            operations.append(transforms.CenterCrop(self.config.crop_size))
+        operations.extend([
             transforms.ToTensor(),
             transforms.Normalize(
-                mean=IMAGENET_MEAN,
-                std=IMAGENET_STD # ? i wonder if I should always use it
-            )
+                mean=self.config.normalization_mean,
+                std=self.config.normalization_std,
+            ),
         ])
+        return transforms.Compose(operations)
     
     def extract_batch(self, image_tensors):
         """
@@ -193,6 +208,13 @@ class FeatureExtractor:
                 # vit: use [CLS] token (position 0)
                 output = self.model.forward_features(image_tensors)  # (B, num_tokens, dim)
                 embeddings = output[:, 0, :]  # (B, dim) - take [CLS] token
+
+            elif extract_method == "cls_mean_concat":
+                # Virchow: concatenate CLS with the mean of all patch tokens.
+                output = self.model.forward_features(image_tensors)
+                class_token = output[:, 0, :]
+                mean_patch_token = output[:, 1:, :].mean(dim=1)
+                embeddings = torch.cat((class_token, mean_patch_token), dim=-1)
                 
             elif extract_method == "global_avg_pool":
                 # ResNet, EfficientNet, Swin: global average pooling
@@ -208,6 +230,12 @@ class FeatureExtractor:
                     embeddings = features.mean(dim=1)  # (B, dim)
             else:
                 raise ValueError(f"Unknown extract method: {extract_method}")
+
+            if embeddings.ndim != 2 or embeddings.shape[1] != self.config.output_dim:
+                raise ValueError(
+                    f"{self.model_name} produced embeddings with shape "
+                    f"{tuple(embeddings.shape)}; expected (batch, {self.config.output_dim})"
+                )
             
             embeddings = embeddings.cpu().numpy()
         

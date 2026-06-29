@@ -1,0 +1,38 @@
+# Phase 2: Clustering Parameter Tuning Configuration
+# Automatically discovers and processes all embeddings from Phase 1
+
+tuning:
+  # PCA dimensionality reduction - test 2 to 30 components
+  pca_components_to_test: [2, 3, 4, 5, 6, 7, 8, 10, 12, 15, 18, 20, 25, 30]
+  
+  # K-Means clustering - test 2 to 9 clusters  
+  kmeans_clusters_to_test: [2, 3, 4, 5, 6, 7, 8, 9]
+  
+  # Number of runs for stability assessment
+  n_runs: 5
+  
+  # Random state for reproducibility
+  random_state: 42
+
+# Paths - auto-discover embeddings
+input:
+  # Pattern to find all embedding files from Phase 1
+  embeddings_pattern: "data/embeddings/embeddings_wsi_level_*.pkl"
+  origin_metadata_file: "data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv"
+
+output:
+  results_dir: "results/phase2_tuning"
+  selected_params_file: "clustering_params.json"
+  params_template: "results/phase2_tuning/clustering_params_{model}.json"
+  run_results_template: "results/phase2_tuning/phase2_all_results_{model}_run{run_id}.csv"
+  averaged_results_template: "results/phase2_tuning/phase2_all_results_{model}_averaged.csv"
+
+# Metrics
+metrics:
+  primary: "silhouette"  # maximize silhouette score
+  secondary: "inertia"   # minimize inertia (elbow)
+
+# Visualizations
+visualizations:
+  elbow_curves_template: "results/phase2_tuning/elbow_curves_{model}.png"
+  silhouette_heatmap_template: "results/phase2_tuning/silhouette_heatmap_{model}_averaged.png"

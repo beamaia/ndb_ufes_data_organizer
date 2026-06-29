@@ -3,7 +3,15 @@ from datetime import datetime
 from pathlib import Path
 import shutil
 
-from huggingface_hub import login
+PROJECT_ROOT = Path(__file__).parent.parent
+EXTERNAL_MODEL_CACHE_DIR = PROJECT_ROOT / ".cache"
+
+from src.utils.model_environment import (
+    authenticate_huggingface,
+    configure_external_model_caches,
+)
+
+configure_external_model_caches(EXTERNAL_MODEL_CACHE_DIR)
 
 from src.utils.logger import logger
 from src.phase1.extraction_func import (
@@ -16,9 +24,6 @@ from src.phase1.metadata_tracker import MetadataTracker, ModelRunMetadata
 # ---------------------------------------
 # CONFIGURATION
 # ---------------------------------------
-
-# get project root
-PROJECT_ROOT = Path(__file__).parent.parent
 
 # models
 REGISTRY_PATH = str(PROJECT_ROOT / 'scripts/src/phase1/config.yaml')
@@ -36,10 +41,66 @@ CACHE_DIR = str(PROJECT_ROOT / 'results/phase1_feature_cache')
 # other
 BATCH_SIZE = 32
 DEVICE = 'mps'  # Apple M4
+LOG_SEPARATOR = "-" * 80
 
 # ---------------------------------------
+def log_phase_start(run_timestamp: str):
+    logger.info(LOG_SEPARATOR)
+    logger.info("PHASE 1: FEATURE EXTRACTION PIPELINE")
+    logger.info(LOG_SEPARATOR)
+    logger.info(f"Run timestamp: {run_timestamp}")
+    logger.info("")
+
+
+def log_step_start(step_number: int, description: str):
+    logger.info(LOG_SEPARATOR)
+    logger.info(f"STEP {step_number}: {description}")
+    logger.info(LOG_SEPARATOR)
+    logger.info("")
+
+
+def log_model_start(idx: int, total_models: int, model_name: str, model_config):
+    logger.info(LOG_SEPARATOR)
+    logger.info(f"MODEL {idx}/{total_models}: {model_name.upper()}")
+    logger.info(LOG_SEPARATOR)
+    logger.info("")
+    logger.info(f"Model config: {model_config.description}")
+    logger.info(f"\tPriority: {model_config.priority}")
+    logger.info(f"\tCategory: {model_config.category}")
+    logger.info(f"\tOutput dim: {model_config.output_dim}")
+    logger.info("")
+    logger.info(f"Extracting features for {model_name}...")
+
+
+def log_phase_end(
+    successful_extractions: int,
+    total_models: int,
+    metadata_tracker: MetadataTracker
+):
+    stats = metadata_tracker.get_stats()
+
+    logger.info(LOG_SEPARATOR)
+    logger.info("PHASE 1 COMPLETE")
+    logger.info(LOG_SEPARATOR)
+    logger.info("")
+    logger.info("Extraction summary:")
+    logger.info(f"\tSuccessfully extracted {successful_extractions}/{total_models} models")
+    logger.info("")
+    logger.info("Overall Statistics:")
+    logger.info(f"\tSuccess Rate: {stats['success_rate']:.1f}%")
+    logger.info(f"\tAvg Extraction Time: {stats['avg_extraction_time']:.2f}s")
+    logger.info(f"\tTotal Patches Processed: {stats['total_patches_processed']}")
+    logger.info(f"\tTotal Extraction Time: {stats['total_extraction_time']:.2f}s")
+    logger.info("")
+    logger.info(LOG_SEPARATOR)
+    logger.info("Metadata Location:")
+    logger.info(f"\tMaster File: {metadata_tracker.master_file}")
+    logger.info(f"\tSummary File: {metadata_tracker.metadata_dir / 'runs_summary.txt'}")
+    logger.info(LOG_SEPARATOR)
+    logger.info("")
+
+
 def cleanup_cache():
-    """Delete cache directory after Phase 1 completion (runs only once)."""
     cache_path = Path(CACHE_DIR)
     if cache_path.exists():
         logger.info("Cleaning up temporary cache...")
@@ -58,14 +119,10 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
     
     metadata_tracker = MetadataTracker()
     
-    logger.info("-" * 80)
-    logger.info("PHASE 1: FEATURE EXTRACTION PIPELINE")
-    logger.info("-" * 80)
-    logger.info(f"Run timestamp: {run_timestamp}")
-    logger.info("")
+    log_phase_start(run_timestamp)
     
     logger.info("Authenticating with HuggingFace Hub")
-    login()
+    authenticate_huggingface(PROJECT_ROOT / ".env")
     logger.info("Successfully authenticated")
     logger.info("")
     
@@ -74,10 +131,7 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
     logger.info(f"Registry loaded with {len(loader.registry.models)} models")
     logger.info("")
     
-    logger.info("-" * 80)
-    logger.info("STEP 1: Creating origin-patch mapping (one-time)")
-    logger.info("-" * 80)
-    logger.info("")
+    log_step_start(1, "Creating origin-patch mapping (one-time)")
     
     origin_patch_mapping = create_origin_patch_mapping(
         source_csv_path=SOURCE_CSV_PATH,
@@ -89,18 +143,7 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
     successful_extractions = 0
     
     for idx, (model_name, model_config) in enumerate(loader.registry.models.items(), 1):
-        logger.info("-" * 80)
-        logger.info(f"MODEL {idx}/{total_models}: {model_name.upper()}")
-        logger.info("-" * 80)
-        logger.info("")
-        
-        logger.info(f"Model config: {model_config.description}")
-        logger.info(f"\tPriority: {model_config.priority}")
-        logger.info(f"\tCategory: {model_config.category}")
-        logger.info(f"\tOutput dim: {model_config.output_dim}")
-        logger.info("")
-        
-        logger.info(f"Extracting features for {model_name}...")
+        log_model_start(idx, total_models, model_name, model_config)
         
         extraction_start_time = time.time()
         
@@ -153,7 +196,6 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
         except Exception as e:
             extraction_duration = time.time() - extraction_start_time
             
-            # create failed metadata record
             metadata = ModelRunMetadata(
                 run_timestamp=run_timestamp,
                 model_name=model_name,
@@ -186,34 +228,11 @@ def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
             
             logger.error(f"Extraction failed for {model_name}: {e}")
         
-        logger.info("-" * 80)
+        logger.info(LOG_SEPARATOR)
         logger.info("")
     
     metadata_tracker.save()
-    
-    logger.info("-" * 80)
-    logger.info("PHASE 1 COMPLETE")
-    logger.info("-" * 80)
-    logger.info("")
-    
-    logger.info("Extraction summary:")
-    logger.info(f"\tSuccessfully extracted {successful_extractions}/{total_models} models")
-    logger.info("")
-    
-    stats = metadata_tracker.get_stats()
-    logger.info("Overall Statistics:")
-    logger.info(f"\tSuccess Rate: {stats['success_rate']:.1f}%")
-    logger.info(f"\tAvg Extraction Time: {stats['avg_extraction_time']:.2f}s")
-    logger.info(f"\tTotal Patches Processed: {stats['total_patches_processed']}")
-    logger.info(f"\tTotal Extraction Time: {stats['total_extraction_time']:.2f}s")
-    logger.info("")
-    
-    logger.info("-" * 80)
-    logger.info("Metadata Location:")
-    logger.info(f"\tMaster File: {metadata_tracker.master_file}")
-    logger.info(f"\tSummary File: {metadata_tracker.metadata_dir / 'runs_summary.txt'}")
-    logger.info("-" * 80)
-    logger.info("")
+    log_phase_end(successful_extractions, total_models, metadata_tracker)
 
 if __name__ == "__main__":
     run()

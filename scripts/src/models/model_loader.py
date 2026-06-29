@@ -5,6 +5,7 @@ from pydantic import ValidationError
 
 import torch
 from torchvision import models as torchvision_models
+from timm.layers import SwiGLUPacked
 
 from transformers import AutoModel, AutoConfig
 from transformers import ViTModel, SwinModel
@@ -35,7 +36,6 @@ class ModelLoader:
         logger.info(f"\tGlobal num_labels: {self.registry.num_labels}")
     
     def _load_registry(self) -> ModelRegistry:
-        """Load and validate the YAML registry"""
         try:
             with open(self.registry_path, 'r') as f:
                 config = yaml.safe_load(f)
@@ -69,14 +69,12 @@ class ModelLoader:
             raise
     
     def list_available_models(self) -> Dict[str, str]:
-        """Get all available models with descriptions"""
         return {
             name: config.description 
             for name, config in self.registry.models.items()
         }
     
     def list_histopathology_models(self) -> Dict[str, str]:
-        """Get all histopathology models"""
         models = self.registry.list_histogram_models()
         return {
             name: config.description 
@@ -84,7 +82,6 @@ class ModelLoader:
         }
     
     def list_preferred_models(self) -> Dict[str, str]:
-        """Get Priority 1 models"""
         models = self.registry.get_preferred_models()
         return {
             name: config.description 
@@ -155,19 +152,24 @@ class ModelLoader:
     def _load_virchow_model(self, model_config: ModelConfig, device: str):
         """
         Load Virchow model with special configuration handling.
-        Virchow has a TIMM wrapper configuration that needs num_labels to be properly set.
-        Uses global num_labels from registry to avoid config initialization errors.
+        Virchow is a TIMM-wrapper model. Its upstream config stores num_classes
+        inside model_args, while Transformers also passes num_classes=0 when
+        creating the TIMM feature extractor. Remove the duplicate model_args
+        value to avoid passing num_classes twice.
         """
         try:
             logger.info(f"Loading Virchow model with special handling...")
-            logger.info(f"  Using global num_labels: {self.registry.num_labels}")
             
-            # important: set num_labels from registry
             config = AutoConfig.from_pretrained(
                 model_config.model_id,
                 trust_remote_code=True,
-                num_labels=self.registry.num_labels
+                # TimmWrapperConfig treats 0 as missing while parsing, but the
+                # actual feature model is still created with num_classes=0.
+                num_labels=1,
             )
+            if getattr(config, "model_args", None):
+                config.model_args.pop("num_classes", None)
+                config.model_args["mlp_layer"] = SwiGLUPacked
 
             model = AutoModel.from_pretrained(
                 model_config.model_id,
@@ -196,8 +198,7 @@ class ModelLoader:
             try:
                 model = AutoModel.from_pretrained(
                     model_config.model_id,
-                    trust_remote_code=True,
-                    _from_remote=True
+                    trust_remote_code=True
                 )
             except ValueError as e:
                 if "Unrecognized model" in str(e):
@@ -231,8 +232,7 @@ class ModelLoader:
             try:
                 model = AutoModel.from_pretrained(
                     model_config.model_id,
-                    trust_remote_code=True,
-                    _from_remote=True
+                    trust_remote_code=True
                 )
             except ValueError as e:
                 if "Unrecognized model" in str(e):
@@ -379,11 +379,9 @@ class ModelLoader:
         return wrapped_model
     
     def print_registry(self):
-        """Print formatted registry information"""
         logger.info(str(self.registry))
     
     def print_available_models(self):
-        """Print all available models by category and priority"""
         logger.info("\n" + str(self.registry))
         
         logger.info("\nHistopathology Models (Domain-specific):")
