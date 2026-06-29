@@ -55,6 +55,8 @@ Audit focus:
 
 Goal: identify frozen embedding models and PCA/K-Means settings that produce useful morphology strata for fold balancing.
 
+See [Phase 2: Morphology Tuning](phase2-code.md) for detailed implementation guide.
+
 Current entrypoint:
 
 ```bash
@@ -103,6 +105,8 @@ Audit focus:
 - Existing provisional folds should be checked against the final accepted Phase 2 configuration before publication.
 
 ## Phase 3: Fold Creation
+
+See [Phase 3: Fold Creation](phase3-code.md) for detailed implementation guide and [Understanding Fold Structure](fold-structure-explained.md) for algorithm explanation.
 
 Goal: assign every origin to exactly one fold, then broadcast that assignment to every patch.
 

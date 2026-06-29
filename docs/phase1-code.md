@@ -4,9 +4,9 @@ Comprehensive guide to Phase 1 implementation, including complete API documentat
 
 ---
 
-## 📖 Overview
+## Overview
 
-**Phase 1 Goal**: Extract semantic embeddings from histopathology patch images and create a mapping of patches to their origins (WSIs).
+**Phase 1 Goal:** Extract semantic embeddings from histopathology patch images and create a mapping of patches to their origins (WSIs).
 
 **Input**:
 - 3,086 histopathology patch images (512×512 PNG)
@@ -20,7 +20,7 @@ Comprehensive guide to Phase 1 implementation, including complete API documentat
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 Phase 1 is organized around mapping and embedding extraction:
 
@@ -47,7 +47,7 @@ scripts/src/utils/
 
 ---
 
-## 🔧 Complete API Reference
+## API Reference
 
 ### 1. FeatureExtractor Class
 
@@ -224,7 +224,7 @@ Defines all available models for feature extraction.
 
 ---
 
-## 🚀 Execution
+## Execution
 
 ### Running Phase 1
 

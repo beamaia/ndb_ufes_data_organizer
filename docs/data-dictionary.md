@@ -40,6 +40,33 @@ Origin-level diagnosis distribution in the matched fold-design subset:
 | Leukoplakia with dysplasia | 72 |
 | Leukoplakia without dysplasia | 50 |
 
+## Understanding Fold Structure
+
+Folds ensure leakage-safe training and validation. This section explains the design.
+
+### Origin-Level Locking
+
+The fundamental invariant is: **one origin → one fold**. All patches from an origin must be assigned to the same fold. This prevents the model from training and evaluating on different patches from the same specimen.
+
+Example:
+- Origin 5 has 20 patches
+- Origin 5 is assigned to fold 2
+- All patches 5_0, 5_1, ..., 5_19 are assigned to fold 2
+- No patch from Origin 5 appears in folds 0, 1, 3, 4, or 5
+
+### Fold Stratification
+
+Folds are not randomly assigned. Instead, origins are distributed across folds to balance diagnostic class, morphological characteristics, gender, and age group. This ensures each fold is representative of the full dataset.
+
+The stratification process:
+1. Group origins by a stratification key (concatenation of diagnosis, morphology cluster, gender, age group)
+2. Within each group, sort origins by patch count (largest first)
+3. Assign each origin to the fold with the current smallest total patch count (greedy Longest Processing Time algorithm)
+
+Result: folds have balanced patch counts and balanced representation of key variables.
+
+See [Fold Structure Explained](fold-structure-explained.md) for algorithm details, balance metrics, and leakage safety guarantees.
+
 ## Required Fold Assignment Files
 
 ### Origin-Level Folds

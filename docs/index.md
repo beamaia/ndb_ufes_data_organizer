@@ -47,16 +47,17 @@ Original origin-level metadata currently contains 237 rows. The matched fold-des
 3. Read the [Pipeline](pipeline.md) to understand how folds are intended to be produced.
 4. Check [Implementation Status](status.md) before trusting, deleting, or committing generated artifacts.
 
-## Current Implementation Caveat
+## Implementation Status
 
-The repository is mid-reorganization. Some documentation and root Markdown files were generated during previous audit sessions and should not be assumed canonical. The current docs intentionally identify stale paths, empty top-level scripts, and artifacts that need manual verification.
+Phases 1 through 3 are now implemented and active:
 
-Known high-priority checks:
+- **Phase 1** (Feature Extraction): Extracts embeddings from patch images using pretrained models. Executable via `scripts/phase1.py`.
+- **Phase 2** (Morphology Tuning): Evaluates PCA and K-Means parameters on frozen embeddings to select clustering configuration. Executable via `scripts/phase2.py`. Parameters saved to `clustering_params.json`.
+- **Phase 3** (Fold Creation): Creates stratified six-fold assignments using Phase 2 morphology clusters. Executable via `scripts/phase3.py`. Outputs fold assignments under `results/phase3_fold_creation/`.
 
-- `scripts/phase3.py` is now active as the Phase 3 runner; `scripts/phase4.py` remains an empty entrypoint.
-- Phase 3 implementation exists under `scripts/src/phase3/`; Phase 4 implementations are still undergoing review.
-- Phase 2 morphology tuning is expected to be rerun before final fold publication, and provisional fold artifacts should be checked against the accepted configuration.
-- Root Markdown files should be promoted into `docs/`, archived, or deleted after manual audit.
+**Phase 4** (Validation and Reporting) remains in planning.
+
+See [Implementation Status](status.md) for detailed phase-by-phase progress and [Phase 2 Code](phase2-code.md) and [Phase 3 Code](phase3-code.md) for implementation details.
 
 ## Citation
 

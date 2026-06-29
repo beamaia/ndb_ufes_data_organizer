@@ -1,6 +1,6 @@
 # Implementation Status
 
-This page records what each phase is intended to do and what still needs review. The repository is mid-reorganization, so this page is intentionally conservative.
+This page records what each phase is intended to do and its current status. Phases 1-3 are implemented and active. Phase 4 remains in planning.
 
 ## Phase 0: Data Checks and Contamination Review
 
@@ -79,22 +79,28 @@ Purpose:
 - balance folds by diagnosis and accepted stratification variables;
 - save public fold assignment CSVs.
 
-WIP - current:
+Current:
 
-- top-level `scripts/phase3.py` is now an active Phase 3 runner;
-- implementation code exists under `scripts/src/phase3/phase3_fold_creation.py`;
-- the remaining helper visualization module is `scripts/src/phase3/phase3_visualize_clusters.py`;
-- prior exploratory Phase 3 helpers were removed from the active source tree;
-- provisional fold artifacts exist, but should be compared against the accepted Phase 2 configuration.
+- active entrypoint: `scripts/phase3.py`;
+- implementation code in `scripts/src/phase3/phase3_fold_creation.py` consumes Phase 2 parameters from `clustering_params.json`;
+- helper visualization module: `scripts/src/phase3/phase3_visualize_clusters.py`;
+- provisional fold artifacts generated at `results/phase3_fold_creation/`;
+- stratification variable audit output: `stratification_variables_audit.csv` (documents inclusion/exclusion decisions).
 
-WIP - planned:
+Output files:
 
-- review Phase 3 fold creation outputs and visualization helpers;
-- generate final origin-level and patch-level fold CSVs;
-- verify origin integrity, patch inheritance, and fold balance;
-- decide which visualization helpers survive as part of the final phase.
+- `fold_assignments_origin.csv` (203 origins, one per row)
+- `fold_assignments_patch_level.csv` (3,086 patches, one per row)
+- `stratification_variables_audit.csv` (audit trail for stratification decisions)
 
-Status: WIP.
+Verification:
+
+- Origin-level locking: every origin assigned to exactly one fold
+- Patch-level inheritance: all patches from an origin inherit its fold
+- No data leakage: no origin spans multiple folds
+- Fold balance: origin and patch counts balanced across folds; class and cluster distributions balanced
+
+Status: implemented and active.
 
 ## Phase 4: Validation and Public Documentation
 
