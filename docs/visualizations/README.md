@@ -13,6 +13,8 @@ uv run python scripts/copy_visualizations.py
 
 This script copies regenerated HTML visualization files into `docs/visualizations/` and normalizes their filenames for cleaner URLs.
 
+The visualization HTML files use the shared local `plotly-3.5.0.min.js` asset in this directory instead of embedding a full Plotly bundle in every file. This keeps GitHub Pages deployments smaller while preserving offline/local rendering.
+
 ## Expected Files
 
 - `patch_clusters_3d_uni.html` — Patch-level 3D clustering (UNI model)
