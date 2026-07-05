@@ -24,6 +24,7 @@ This script copies regenerated HTML visualization files into `docs/visualization
 ## Viewing
 
 Once files are in place:
+
 1. Run `uv run mkdocs serve` from project root
 2. Navigate to the Visualizations page in the docs
 3. Visualizations will be embedded as interactive iframes

@@ -45,6 +45,7 @@ uv sync
 ```
 
 **Key packages** (see `pyproject.toml` for full list):
+
 - `torch>=2.0.0` — Deep learning framework
 - `torchvision>=0.15.0` — Vision utilities
 - `transformers>=4.30.0` — HuggingFace model hub
@@ -82,6 +83,7 @@ uv run dvc pull
 ```
 
 **Expected download**:
+
 - `data/ndb_ufes/origin_level/` — 238 WSI images (~5 GB)
 - `data/ndb_ufes/patch_level/images/` — 3,768 patch images (~2 GB)
 - `data/ndb_ufes/patch_level/csvs/` — Metadata CSVs (~1 MB)
@@ -170,6 +172,7 @@ ls -la scripts/src/phase1/
 ```
 
 **Expected**:
+
 - `data/ndb_ufes/patch_level/images/` contains ~3,768 PNG files (p0001.png, p0002.png, ...)
 - `data/ndb_ufes/patch_level/csvs/` contains `parcial_pndb_ufes.csv`
 - `scripts/src/phase1/` contains `extraction_func.py`, `feature_extractor.py`, `metadata_tracker.py`, and `config.yaml`
@@ -186,6 +189,7 @@ uv run python scripts/phase1.py
 ```
 
 **Expected**:
+
 - Creates `data/embeddings/embeddings_wsi_level_uni_*.pkl` (embeddings file)
 - Creates `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv` (mapping file)
 - Writes run metadata under `results/phase1_metadata/`
@@ -243,6 +247,7 @@ uv run mkdocs serve
 Then open **http://localhost:8000** in your browser.
 
 **Features**:
+
 - Navigate all documentation pages
 - View embedded 3D cluster visualizations
 - Full-text search (Ctrl+K / Cmd+K)
