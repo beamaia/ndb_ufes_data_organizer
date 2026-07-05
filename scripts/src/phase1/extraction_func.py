@@ -12,12 +12,10 @@ PATCH_IMAGE_DIR = 'data/ndb_ufes/patch_level/images'
 OUTPUT_MAPPING_CSV = 'data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv'
 
 BATCH_SIZE = 32  
-DEVICE = 'mps'   # Apple M4
+DEVICE = 'mps'
 
-# Output
 DEFAULT_EMBEDDINGS_DIR = 'data/embeddings'
 
-# ----------------------------------------------------------------------------
 
 def load_patch_dataframe(fold_csv_path):
     df = pd.read_csv(fold_csv_path)
@@ -47,7 +45,6 @@ def create_origin_patch_mapping(source_csv_path, patch_image_dir, output_csv_pat
     logger.info(f"Creating mapping from {len(df)} patches")
     
     for origin_id, group in df.groupby('origin'):
-        # use 'diagnosis' as class label
         class_label = group['diagnosis'].iloc[0]
         patch_ids = group['patch'].unique().tolist()
         
@@ -101,7 +98,6 @@ def extract_wsi_level_features(
         batch_size=batch_size
     )
     
-    # build list of patch paths and origin ids
     all_patch_paths = []
     all_origin_ids = []
     

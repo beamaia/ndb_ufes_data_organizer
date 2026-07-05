@@ -314,4 +314,4 @@ torch.cuda.get_device_name(0)  # Should show GPU name
 
 ---
 
-**Last updated**: April 2026
+**Last updated**: June 2026

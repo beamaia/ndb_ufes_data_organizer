@@ -28,7 +28,7 @@ class FeatureExtractor:
         """
         self.model_name = model_name
         self.batch_size = batch_size
-        self.original_batch_size = batch_size  # track original for adaptive sizing
+        self.original_batch_size = batch_size
         
         try:
             self.loader = ModelLoader(registry_path=registry_path)
@@ -57,10 +57,9 @@ class FeatureExtractor:
         self.cache_hits = 0
         self.cache_misses = 0
         
-        # setup adaptive batch sizing
-        self.memory_threshold_gb = 2.0  # minimum free ram threshold
+        self.memory_threshold_gb = 2.0
         self.batch_size_levels = [self.batch_size, max(16, self.batch_size // 2), max(8, self.batch_size // 4)]
-        self.current_batch_level = 0  # index batch_size_levels
+        self.current_batch_level = 0
     
     def _get_cache_dir(self):
         cache_config = {
@@ -137,14 +136,12 @@ class FeatureExtractor:
         available_gb = self._get_available_memory_gb()
         
         if available_gb < self.memory_threshold_gb and self.current_batch_level < len(self.batch_size_levels) - 1:
-            # need to reduce batch size
             self.current_batch_level += 1
             new_batch_size = self.batch_size_levels[self.current_batch_level]
             logger.warning(f"Low memory ({available_gb:.2f}GB free). Reducing batch size from {self.batch_size} to {new_batch_size}")
             self.batch_size = new_batch_size
             return True
         elif available_gb >= self.memory_threshold_gb * 1.5 and self.current_batch_level > 0:
-            # can increase batch size IF memory recovered
             self.current_batch_level -= 1
             new_batch_size = self.batch_size_levels[self.current_batch_level]
             logger.info(f"Memory recovered ({available_gb:.2f}GB free). Increasing batch size to {new_batch_size}")
@@ -205,9 +202,8 @@ class FeatureExtractor:
             extract_method = self.config.extract_method
             
             if extract_method == "cls_token":
-                # vit: use [CLS] token (position 0)
-                output = self.model.forward_features(image_tensors)  # (B, num_tokens, dim)
-                embeddings = output[:, 0, :]  # (B, dim) - take [CLS] token
+                output = self.model.forward_features(image_tensors)
+                embeddings = output[:, 0, :]
 
             elif extract_method == "cls_mean_concat":
                 # Virchow: concatenate CLS with the mean of all patch tokens.
@@ -217,17 +213,13 @@ class FeatureExtractor:
                 embeddings = torch.cat((class_token, mean_patch_token), dim=-1)
                 
             elif extract_method == "global_avg_pool":
-                # ResNet, EfficientNet, Swin: global average pooling
-                features = self.model.forward_features(image_tensors)  # (B, dim, H, W) or (B, num_tokens, dim)
+                features = self.model.forward_features(image_tensors)
                 
-                # handles transformers and cnn
                 if features.dim() == 4:
-                    # CNN features (B, C, H, W) -> 3d
-                    embeddings = F.adaptive_avg_pool2d(features, (1, 1))  # (B, C, 1, 1)
-                    embeddings = embeddings.squeeze(-1).squeeze(-1)  # (B, C)
+                    embeddings = F.adaptive_avg_pool2d(features, (1, 1))
+                    embeddings = embeddings.squeeze(-1).squeeze(-1)
                 else:
-                    # transformer features (B, num_tokens, dim) - take mean -> 2d
-                    embeddings = features.mean(dim=1)  # (B, dim)
+                    embeddings = features.mean(dim=1)
             else:
                 raise ValueError(f"Unknown extract method: {extract_method}")
 
@@ -239,7 +231,6 @@ class FeatureExtractor:
             
             embeddings = embeddings.cpu().numpy()
         
-        # memory cleanup
         del image_tensors
         if self.device == 'mps':
             torch.mps.empty_cache()
@@ -280,11 +271,9 @@ class FeatureExtractor:
                 for i, path in enumerate(batch_paths):
                     cached_emb = self._load_from_cache(path)
                     if cached_emb is not None:
-                        # CACHE HIT - use cached embedding
                         origin_id = batch_origins[i]
                         patch_features_dict[origin_id].append(cached_emb)
                     else:
-                        # CACHE MISS - need to load and extract
                         try:
                             img = Image.open(path).convert('RGB')
                             img_tensor = self.transform(img)
@@ -300,12 +289,11 @@ class FeatureExtractor:
                     embeddings = self.extract_batch(image_tensors)
                     
                     for j, emb in enumerate(embeddings):
-                        patch_path, _, _, origin_id = batch_images[j][1], batch_images[j][2], batch_images[j][3], batch_images[j][3]
                         self._save_to_cache(batch_images[j][1], emb)
                         patch_features_dict[batch_images[j][3]].append(emb)
                     
                     del image_tensors, embeddings, batch_images
-                    gc.collect()  # force garbage collection
+                    gc.collect()
                 
                 pbar.update(end_idx - idx)
                 idx = end_idx

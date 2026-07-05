@@ -46,7 +46,6 @@ class MetadataTracker:
             metadata_dir: Directory to save metadata. Defaults to results/phase1_metadata/
         """
         if metadata_dir is None:
-            # goes from scripts/src/phase1/metadata_tracker.py to project root then to results/phase1_metadata
             metadata_dir = pl.Path(__file__).parent.parent.parent.parent / "results" / "phase1_metadata"
         
         self.metadata_dir = pl.Path(metadata_dir)

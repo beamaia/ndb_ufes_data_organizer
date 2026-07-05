@@ -21,29 +21,21 @@ from src.phase1.extraction_func import (
 from src.models.model_loader import ModelLoader
 from src.phase1.metadata_tracker import MetadataTracker, ModelRunMetadata
 
-# ---------------------------------------
-# CONFIGURATION
-# ---------------------------------------
-
-# models
 REGISTRY_PATH = str(PROJECT_ROOT / 'scripts/src/phase1/config.yaml')
-MODELS_TO_EXTRACT = ModelLoader(registry_path=REGISTRY_PATH).list_available_models() # extract all models in yaml file
+MODELS_TO_EXTRACT = ModelLoader(registry_path=REGISTRY_PATH).list_available_models()
 
-# data paths
 SOURCE_CSV_PATH = str(PROJECT_ROOT / 'data/ndb_ufes/patch/parcial_pndb_ufes.csv')
 PATCH_IMAGE_DIR = str(PROJECT_ROOT / 'data/ndb_ufes/patch_level/images')
 OUTPUT_MAPPING_CSV = str(PROJECT_ROOT / 'data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv')
 
-# output
 EMBEDDINGS_OUTPUT_DIR = str(PROJECT_ROOT / 'data/embeddings/')
 CACHE_DIR = str(PROJECT_ROOT / 'results/phase1_feature_cache')
 
-# other
 BATCH_SIZE = 32
-DEVICE = 'mps'  # Apple M4
+DEVICE = 'mps'
 LOG_SEPARATOR = "-" * 80
 
-# ---------------------------------------
+
 def log_phase_start(run_timestamp: str):
     logger.info(LOG_SEPARATOR)
     logger.info("PHASE 1: FEATURE EXTRACTION PIPELINE")
@@ -106,6 +98,7 @@ def cleanup_cache():
         logger.info("Cleaning up temporary cache...")
         shutil.rmtree(cache_path)
         logger.info("Cache cleaned\n")
+
 
 def run(device: str = DEVICE, batch_size: int = BATCH_SIZE):
     """
