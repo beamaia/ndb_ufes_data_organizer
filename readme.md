@@ -13,7 +13,11 @@ This repository is a data organizer. It is not a downstream model-training repos
 
 ## Public Documentation
 
-The canonical documentation lives in `docs/` and is wired through `mkdocs.yml`.
+The published documentation site is available at:
+
+https://beamaia.github.io/ndb_ufes_data_organizer/
+
+The documentation source lives in `docs/` and is wired through `mkdocs.yml`.
 
 - `docs/factsheet.md`: required public dataset factsheet.
 - `docs/data-dictionary.md`: current CSV schemas, counts, labels, and field notes.
