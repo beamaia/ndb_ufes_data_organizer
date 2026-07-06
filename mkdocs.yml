@@ -7,24 +7,44 @@ repo_name: GitHub
 theme:
   name: material
   locale: en
+  logo: assets/branding/labcin-mark.png
+  favicon: assets/branding/labcin-mark.png
   features:
     - navigation.sections
     - navigation.top
+    - navigation.footer
+    - navigation.tracking
     - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
     - search.suggest
+    - search.highlight
   palette:
     - scheme: default
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
-      accent: blue
+      primary: custom
+      accent: custom
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
+
+extra_css:
+  - styles/labcin.css
+
+extra_javascript:
+  - javascripts/plotly-loader.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling
+      name: Labcin on ResearchGate
 
 nav:
   - Home: index.md
@@ -39,12 +59,18 @@ nav:
     - Phase 1:
       - Code: phase1-code.md
       - Results: phase1-results.md
-    - Phase 2: phase2-code.md
-    - Phase 3: phase3-code.md
+    - Phase 2:
+      - Code: phase2-code.md
+      - Results: phase2-results.md
+      - Tuning Diagnostics: phase2-tuning-diagnostics.md
+    - Phase 3:
+      - Code: phase3-code.md
+      - Results: phase3-results.md
     - Fold Structure: fold-structure-explained.md
   - Reference:
     - Data Dictionary: data-dictionary.md
     - Exploratory Analysis: exploratory-analysis.md
+    - Dataset Figure Gallery: dataset-figure-gallery.md
     - Contamination Checks: contamination-analysis.md
     - Audit Guide: audit-guide.md
     - Visualizations: visualizations/README.md
@@ -57,7 +83,10 @@ markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
   - pymdownx.superfences
+  - pymdownx.details
   - pymdownx.tabbed
+  - attr_list
+  - md_in_html
   - tables
   - codehilite
   - meta

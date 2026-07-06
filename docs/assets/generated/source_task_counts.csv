@@ -1,0 +1,8 @@
+task,class,origin_count
+Task II,Leukoplakia,146
+Task II,OSCC,91
+Task III,Presence,180
+Task III,Absence,57
+Task IV,OSCC,91
+Task IV,Leukoplakia with dysplasia,89
+Task IV,Leukoplakia without dysplasia,57

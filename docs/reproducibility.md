@@ -6,10 +6,11 @@ Last verified: 29 June 2026.
 
 ```bash
 uv sync
-uv run dvc pull
 ```
 
-The external SSD must be mounted at the project path used by DVC. Hugging Face credentials may be provided through `.env`; Phase 1 accepts `HUGGINGFACE_TOKEN` and configures external model caches under the repository `.cache/` directory on the SSD.
+Public users should download the source dataset from Mendeley Data and place it under the expected `data/ndb_ufes/` paths. Maintainer-only data synchronization may use DVC when the private remote credentials are available.
+
+Hugging Face credentials may be provided through `.env`. Phase 1 accepts `HUGGINGFACE_TOKEN` and configures external model caches under the repository `.cache/` directory on the SSD.
 
 ## Phase 1
 
@@ -70,6 +71,7 @@ Current fold patch counts are 520, 510, 511, 511, 524, and 510.
 
 ```bash
 uv run python -m unittest discover -s tests -v
+uv run python scripts/generate_wiki_figures.py
 uv run --extra docs mkdocs build --strict
 ```
 

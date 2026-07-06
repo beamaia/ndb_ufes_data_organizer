@@ -4,13 +4,15 @@ Last verified: 29 June 2026.
 
 ## Phase 0: Data Checks
 
-Contamination figures and representative cases exist, but manual case disposition remains ongoing. This work does not block the current fold-generation pipeline.
+The current documentation includes Origin 0011 as a demonstration example for patch-overlap and leakage-risk review. It is not a complete contamination case set. Full image-level disposition work is paused pending human-in-the-loop validation.
 
-Status: **in progress**.
+All origin-patch pairs currently accepted into the matched fold-design set were checked visually by a human. Not all possible patches have been matched or dispositioned, so the contamination page should be read as conservative quality-control documentation rather than final exclusion criteria.
+
+Status: **paused pending human validation**.
 
 ## Phase 1: Feature Extraction
 
-The current Phase 1 run completed successfully for all 11 configured pretrained backbones. It generated a 203-origin mapping and timestamped embedding dictionaries under `data/embeddings/`. Model-specific preprocessing is used; there is no universal ImageNet-normalization fallback.
+The current Phase 1 run completed successfully for all 11 configured pretrained backbones. It generated a 203-origin mapping and timestamped embedding dictionaries under `data/embeddings/`. Model-specific preprocessing is used. There is no universal ImageNet-normalization fallback.
 
 Evidence:
 
@@ -19,7 +21,7 @@ Evidence:
 - run metadata: `results/phase1_metadata/master_runs.json`
 - mapping: `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv`
 
-Status: **complete for the current inputs and registry**.
+Status: **complete for the current inputs and registry**. Run completed on 28 June 2026 and documentation was last verified on 29 June 2026.
 
 ## Phase 2: Morphology Tuning
 
@@ -38,7 +40,7 @@ Accepted selection:
 
 Swin's former PCA=2/K=2 result produced a 202/1 split. It is now rejected by the eligibility gate and is superseded.
 
-Status: **complete and accepted**.
+Status: **complete and accepted**. Last verified on 29 June 2026.
 
 ## Phase 3: Fold Creation
 
@@ -56,7 +58,7 @@ Phase 3 was regenerated from the accepted Virchow parameters. Origin ID `0` is r
 
 The earlier 202-origin/3,066-patch files omitted valid origin `0` and are superseded.
 
-Status: **complete and validated**.
+Status: **complete and validated**. Last verified on 29 June 2026.
 
 ## Phase 4: Reporting
 

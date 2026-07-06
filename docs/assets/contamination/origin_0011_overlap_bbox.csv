@@ -1,0 +1,2 @@
+origin_id,patch_a,patch_b,algorithm,translation_dx,translation_dy,patch_a_rect_x0,patch_a_rect_y0,patch_a_rect_x1,patch_a_rect_y1,patch_b_rect_x0,patch_b_rect_y0,patch_b_rect_x1,patch_b_rect_y1,overlap_width_px,overlap_height_px,normalized_cross_correlation
+0011,p0020,p0021,translation-only image registration with normalized cross-correlation over the overlap,246,255,246,255,512,512,0,0,266,257,266,257,1.0

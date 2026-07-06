@@ -1,20 +1,24 @@
 # Dataset Factsheet
 
-This factsheet summarizes the organized NDB-UFES data package produced by this repository. It is intended for public dataset users who need to understand provenance, labels, folds, demographics/risk factors, limitations, and leakage-safe usage.
+This factsheet summarizes the organized NDB-UFES fold files and documentation produced by this repository. It is intended for public dataset users who need to understand provenance, labels, folds, demographics/risk factors, limitations, and leakage-safe usage.
 
 ## Dataset Identity
 
-Name: NDB-UFES Data Organizer fold package
+Name: NDB-UFES Data Organizer fold files
 
 Source dataset:
 
-Falcao Ribeiro de Assis, Maria Clara; Lima, Leandro Muniz de; de Barros, Liliana Aparecida Pimenta; Velloso, Tania Regina; Krohling, Renato; Camisasca, Danielle (2023), "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data", Mendeley Data, V4, doi: 10.17632/bbmmm4wgr8.4.
+Falcao Ribeiro de Assis, Maria Clara. Lima, Leandro Muniz de. de Barros, Liliana Aparecida Pimenta. Velloso, Tania Regina. Krohling, Renato. Camisasca, Danielle. 2023. "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data." Mendeley Data, V4. doi: 10.17632/bbmmm4wgr8.4.
 
 Public source page:
 
 ```text
 https://data.mendeley.com/datasets/bbmmm4wgr8/4
 ```
+
+Lab attribution:
+
+[Nature-inspired Computing Lab, Labcin](https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling)
 
 ## Purpose of This Repository
 
@@ -79,7 +83,17 @@ Observed task label values in the current patch metadata:
 | `TaskIII` | `Presence`, `Absence` |
 | `TaskIV` | `OSCC`, `Leukoplakia with dysplasia`, `Leukoplakia without dysplasia` |
 
-The source paper reports the full origin-level NDB-UFES task counts as: Task II: 146 leukoplakia and 91 OSCC; Task III: 180 presence and 57 absence; Task IV: 91 OSCC, 89 leukoplakia with dysplasia, and 57 leukoplakia without dysplasia.
+Source-paper full origin-level NDB-UFES task counts:
+
+| Task | Class | Origin count |
+| --- | --- | ---: |
+| Task II | Leukoplakia | 146 |
+| Task II | OSCC | 91 |
+| Task III | Presence | 180 |
+| Task III | Absence | 57 |
+| Task IV | OSCC | 91 |
+| Task IV | Leukoplakia with dysplasia | 89 |
+| Task IV | Leukoplakia without dysplasia | 57 |
 
 ## Demographics and Risk Factors
 
@@ -94,152 +108,75 @@ The organized patch metadata includes:
 - `localization`
 - `larger_size`
 - `dysplasia_severity`
-- ROI coordinates: `top_left_x`, `top_left_y`, `bottom_right_x`, `bottom_right_y` (deferred; these need to be rerun because some previous patch-origin associations were incorrect)
+- ROI coordinates: `top_left_x`, `top_left_y`, `bottom_right_x`, `bottom_right_y`. These are deferred because patch-origin-coordinate associations need to be rerun before ROI coverage figures are published.
 
 Observed missingness is substantial for some fields. For example, patch-level `Not informed` values appear in skin color, tobacco use, alcohol consumption, and sun exposure. These fields are useful for documentation and subgroup reporting, but should not be treated as complete clinical covariates without checking missingness.
 
+## Exploratory Findings Used In This Factsheet
+
+The exploratory figures are not separate from this factsheet. They are the evidence used to decide what should be summarized, what should be treated cautiously, and what should remain descriptive.
+
+| Finding | Evidence | Interpretation |
+| --- | --- | --- |
+| Matched subset. | 203 matched origins from 237 source metadata rows. | The fold files describe the current matched fold-design subset, not every row in the source metadata copy. |
+| Patch counts and origin counts differ. | 81 OSCC origins produce 1,517 OSCC patch rows. 72 leukoplakia-with-dysplasia origins produce 930 patch rows. 50 leukoplakia-without-dysplasia origins produce 639 patch rows. | Patch-level class balance should not be read as origin-level prevalence. |
+| Risk-factor metadata has high `Not informed` rates. | At origin level, `Not informed` is 50.25% for sun exposure, 48.28% for alcohol consumption, 48.28% for tobacco use, and 47.29% for skin color. | These fields are useful for context and audit, but they should not silently control fold construction. |
+| Patch-level risk-factor metadata shows the same limitation. | At patch level, `Not informed` is 47.47% for sun exposure, 46.18% for alcohol consumption, 46.18% for tobacco use, and 45.14% for skin color. | Patch-row metadata inherits the same caution. |
+| Dysplasia severity is incomplete. | Missingness is 64.53% at origin level and 69.86% at patch level. | Dysplasia severity should be interpreted with diagnosis context and should not be treated as a complete covariate. |
+| Fold stratification uses supported variables. | Phase 3 used diagnosis, Virchow morphology cluster, gender, and age group. | These variables passed the required missingness and six-fold support checks for the current run. |
+
+See [Exploratory Analysis](exploratory-analysis.md) for the full preview-first Plotly figure set and [Understanding Fold Structure](fold-structure-explained.md) for fold-level stratification views.
+
 ## Generated Dataset Figures
 
-These figures are generated by `notebooks/dataset_statistics_factsheet.ipynb` and saved under `results/dataset_statistics/`. The accepted fold and cluster facts are reported below; exploratory figures remain separate from acceptance criteria.
+These figures summarize the current matched subset and source-paper task counts. Interactive Plotly versions are embedded below. Static documentation copies are saved under `docs/assets/generated/`, and thesis-ready exports are saved under `results/thesis_figures/`.
 
-### Diagnosis and Source Tasks
+How to read these figures:
 
-![Origin diagnosis: source data versus matched subset](assets/dataset_statistics/01a_origin_diagnosis_actual_vs_matched_stacked.png)
+- Count bars show how many rows belong to each label.
+- Percent labels show the share inside the plotted level, usually origin-level or patch-level.
+- Origin-level plots count parent images. Patch-level plots count patch rows.
+- Association matrices are descriptive. They do not prove causality or validate downstream model performance.
 
-![Origin diagnosis in matched subset](assets/dataset_statistics/01b_origin_diagnosis_matched_count_percent.png)
+The larger exploratory figure set is documented on [Exploratory Analysis](exploratory-analysis.md), and the full converted Plotly gallery is available on [Dataset Figure Gallery](dataset-figure-gallery.md).
 
-![Patch diagnosis in matched subset](assets/dataset_statistics/01c_patch_diagnosis_matched_count_percent.png)
+<iframe class="plotly-embed" src="../visualizations/generated/dataset_diagnosis_summary.html" title="Matched subset diagnosis counts" loading="lazy"></iframe>
 
-![Patch Task II distribution](assets/dataset_statistics/02a_patch_taskii_count_percent.png)
+<p class="figure-caption">How to read this figure: origin counts show parent images. Patch counts show patch rows. The two views differ because origins contribute different numbers of patches.</p>
 
-![Origin Task II distribution](assets/dataset_statistics/02a_taskii_origin_count_percent.png)
+<iframe class="plotly-embed" src="../visualizations/generated/source_task_counts.html" title="Source task counts" loading="lazy"></iframe>
 
-![Patch Task II distribution](assets/dataset_statistics/02a_taskii_patch_count_percent.png)
+<p class="figure-caption">How to read this figure: each panel is one source-paper task. Bars are origin counts for the classes defined by that task.</p>
 
-![Patch Task III distribution](assets/dataset_statistics/02b_patch_taskiii_count_percent.png)
+<iframe class="plotly-embed" src="../visualizations/generated/top_cramers_v.html" title="Top categorical associations by Cramer's V" loading="lazy"></iframe>
 
-![Origin Task III distribution](assets/dataset_statistics/02b_taskiii_origin_count_percent.png)
-
-![Patch Task III distribution](assets/dataset_statistics/02b_taskiii_patch_count_percent.png)
-
-![Patch Task IV distribution](assets/dataset_statistics/02c_patch_taskiv_count_percent.png)
-
-![Origin Task IV distribution](assets/dataset_statistics/02c_taskiv_origin_count_percent.png)
-
-![Patch Task IV distribution](assets/dataset_statistics/02c_taskiv_patch_count_percent.png)
-
-### Demographic, Clinical, and Missingness Summaries
-
-
-![Origin age group distribution](assets/dataset_statistics/03_origin_age_group_label_count_percent.png)
-
-![Origin alcohol consumption distribution](assets/dataset_statistics/03_origin_alcohol_consumption_count_percent.png)
-
-![Origin dysplasia severity distribution](assets/dataset_statistics/03_origin_dysplasia_severity_count_percent.png)
-
-![Origin gender distribution](assets/dataset_statistics/03_origin_gender_count_percent.png)
-
-![Origin localization distribution](assets/dataset_statistics/03_origin_localization_count_percent.png)
-
-![Origin skin color distribution](assets/dataset_statistics/03_origin_skin_color_count_percent.png)
-
-![Origin sun exposure distribution](assets/dataset_statistics/03_origin_sun_exposure_count_percent.png)
-
-![Origin tobacco use distribution](assets/dataset_statistics/03_origin_tobacco_use_count_percent.png)
-
-![Patch age group distribution](assets/dataset_statistics/03_patch_age_group_label_count_percent.png)
-
-![Patch alcohol consumption distribution](assets/dataset_statistics/03_patch_alcohol_consumption_count_percent.png)
-
-![Patch dysplasia severity distribution](assets/dataset_statistics/03_patch_dysplasia_severity_count_percent.png)
-
-![Patch gender distribution](assets/dataset_statistics/03_patch_gender_count_percent.png)
-
-![Patch localization distribution](assets/dataset_statistics/03_patch_localization_count_percent.png)
-
-![Patch skin color distribution](assets/dataset_statistics/03_patch_skin_color_count_percent.png)
-
-![Patch sun exposure distribution](assets/dataset_statistics/03_patch_sun_exposure_count_percent.png)
-
-![Patch tobacco use distribution](assets/dataset_statistics/03_patch_tobacco_use_count_percent.png)
-
-![Origin missing and Not informed rates](assets/dataset_statistics/04a_origin_missing_not_informed_rates.png)
-
-![Patch missing and Not informed rates](assets/dataset_statistics/04b_patch_missing_not_informed_rates.png)
-
-### Age, Diagnosis, and Variable Associations
-
-![Origin age group distribution](assets/dataset_statistics/05a_origin_age_group_count_percent.png)
-
-![Patch age group distribution](assets/dataset_statistics/05a_patch_age_group_count_percent.png)
-
-![Origin age group distribution](assets/dataset_statistics/05b_origin_age_group_count_percent.png)
-
-![Patch age group distribution](assets/dataset_statistics/05b_patch_age_group_count_percent.png)
-
-![Diagnosis by age group: row percentages](assets/dataset_statistics/06_diagnosis_by_age_group_row_percent.png)
-
-![Diagnosis by age group: row percentages](assets/dataset_statistics/06a_diagnosis_by_age_group_row_percent.png)
-
-![Diagnosis by age group: column percentages](assets/dataset_statistics/06b_diagnosis_by_age_group_column_percent.png)
-
-![Origin diagnosis by alcohol consumption](assets/dataset_statistics/07_origin_diagnosis_by_alcohol_consumption_row_percent.png)
-
-![Origin diagnosis by gender](assets/dataset_statistics/07_origin_diagnosis_by_gender_row_percent.png)
-
-![Origin diagnosis by localization](assets/dataset_statistics/07_origin_diagnosis_by_localization_row_percent.png)
-
-![Origin diagnosis by skin color](assets/dataset_statistics/07_origin_diagnosis_by_skin_color_row_percent.png)
-
-![Origin diagnosis by sun exposure](assets/dataset_statistics/07_origin_diagnosis_by_sun_exposure_row_percent.png)
-
-![Origin diagnosis by tobacco use](assets/dataset_statistics/07_origin_diagnosis_by_tobacco_use_row_percent.png)
-
-![Patch diagnosis by alcohol consumption](assets/dataset_statistics/07_patch_diagnosis_by_alcohol_consumption_row_percent.png)
-
-![Patch diagnosis by gender](assets/dataset_statistics/07_patch_diagnosis_by_gender_row_percent.png)
-
-![Patch diagnosis by localization](assets/dataset_statistics/07_patch_diagnosis_by_localization_row_percent.png)
-
-![Patch diagnosis by skin color](assets/dataset_statistics/07_patch_diagnosis_by_skin_color_row_percent.png)
-
-![Patch diagnosis by sun exposure](assets/dataset_statistics/07_patch_diagnosis_by_sun_exposure_row_percent.png)
-
-![Patch diagnosis by tobacco use](assets/dataset_statistics/07_patch_diagnosis_by_tobacco_use_row_percent.png)
-
-![Categorical variable association by Cramer's V](assets/dataset_statistics/08_categorical_association_cramers_v.png)
-
-### Lesion Size
-
-![Lesion size distribution](assets/dataset_statistics/09_larger_size_histogram_count_percent.png)
-
-![Lesion size by diagnosis](assets/dataset_statistics/10_lesion_size_by_diagnosis.png)
+<p class="figure-caption">How to read this figure: each bar is Cramer's V for one pair of categorical variables. Values closer to 0 indicate weak association. Values closer to 1 indicate stronger association. This is a descriptive truth-table-style summary, not a causal test.</p>
 
 ## Fold Construction Status
 
 The current fold construction completed and passed its strict validation report:
 
-- all patches from the same origin stay in the same fold;
-- folds are balanced by patch count;
-- folds preserve diagnostic class distribution;
+- all patches from the same origin stay in the same fold.
+- folds are balanced by patch count.
+- folds preserve diagnostic class distribution.
 - morphology-aware clustering can be used as an additional stratification signal.
 
-Phase 2 selected frozen Virchow embeddings with PCA=2 and K=3 after applying minimum cluster-size and maximum imbalance constraints. Phase 3 assigned all 203 origins and 3,086 patches. Fold patch counts are 520, 510, 511, 511, 524, and 510; no origin spans folds. Earlier Swin and 202-origin artifacts are superseded.
+Phase 2 selected frozen Virchow embeddings with PCA=2 and K=3 after applying minimum cluster-size and maximum imbalance constraints. Phase 3 assigned all 203 origins and 3,086 patches. Fold patch counts are 520, 510, 511, 511, 524, and 510. No origin spans folds. Earlier Swin and 202-origin artifacts are superseded.
 
 ## Leakage-Safe Usage
 
 Required:
 
-- split by `fold`, not by random patch rows;
-- keep all rows with the same `origin_id` in the same train/validation/test partition;
-- once finalized, use the provided fold assignments when comparing models;
+- split by `fold`, not by random patch rows.
+- keep all rows with the same `origin_id` in the same train/validation/test partition.
+- once finalized, use the provided fold assignments when comparing models.
 - document which fold(s) were used for train, validation, and test.
 
 Avoid:
 
-- random patch-level splits;
-- selecting folds after seeing downstream model performance;
-- fine-tuning an embedding model on all labels before using its features to construct folds;
+- random patch-level splits.
+- selecting folds after seeing downstream model performance.
+- fine-tuning an embedding model on all labels before using its features to construct folds.
 - treating patches from the same origin as independent observations in evaluation.
 
 Frozen external pretrained embeddings used only for unsupervised morphology-aware stratification are acceptable as a data organization step, provided downstream model performance did not influence the stratification choice.
@@ -248,14 +185,14 @@ Frozen external pretrained embeddings used only for unsupervised morphology-awar
 
 - Some generated root Markdown files are historical notes rather than canonical documentation.
 - `scripts/phase4.py` and its older analysis modules have not been accepted as part of the current release path.
-- Current canonical folds are under `results/phase3_fold_creation/`; similarly named files under data directories may be historical and should not replace them.
+- Current canonical folds are under `results/phase3_fold_creation/`. Similarly named files under data directories may be historical and should not replace them.
 - `fold_assignments_patch_level.csv` under the canonical results directory contains exactly 3,086 patch rows.
-- Coordinate-derived ROI coverage plots are a later to-do. Patch-origin-coordinate associations need to be regenerated before showing patch coverage areas on origin images.
+- Coordinate-derived ROI coverage plots are deferred. Patch-origin-coordinate associations need to be regenerated before patch coverage areas are shown on origin images.
 - Chi-square tests in validation scripts should not be interpreted as proof that folds are identical.
 
 ## Recommended Citation Language
 
-If using this organizer package, cite the original dataset and describe this repository as a fold/data-organization layer. Example:
+This project is not packaged as a reusable Python package yet. If using the current fold assignment files or documentation from this repository, cite the original dataset and describe this repository as a fold/data-organization layer. Example:
 
 ```text
 We used the public NDB-UFES dataset (Mendeley Data V4, doi: 10.17632/bbmmm4wgr8.4) with origin-level cross-validation folds generated by the NDB-UFES Data Organizer. Folds were constructed so that patches from the same origin image did not appear in multiple folds.

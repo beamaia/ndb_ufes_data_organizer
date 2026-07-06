@@ -17,6 +17,10 @@ The published documentation site is available at:
 
 https://beamaia.github.io/ndb_ufes_data_organizer/
 
+This work is attributed to the Nature-inspired Computing Lab, Labcin:
+
+https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling
+
 The documentation source lives in `docs/` and is wired through `mkdocs.yml`.
 
 - `docs/factsheet.md`: required public dataset factsheet.
@@ -39,33 +43,43 @@ Install dependencies:
 uv sync
 ```
 
-Retrieve DVC-tracked data if the remote is configured:
+Download the public source dataset from Mendeley Data:
 
-```bash
-uv run dvc pull
+```text
+https://data.mendeley.com/datasets/bbmmm4wgr8/4
 ```
+
+DVC/AWS S3 synchronization is maintainer-only and is not the public download path.
 
 Run implemented phases:
 
 ```bash
 uv run python scripts/phase1.py
 uv run python scripts/phase2.py
+uv run python scripts/phase3.py
 ```
 
-Important: `scripts/phase3.py` is now the active Phase 3 runner. Phase 3 implementation is at `scripts/src/phase3/phase3_fold_creation.py` and the helper visualization module is `scripts/src/phase3/phase3_visualize_clusters.py`. `scripts/phase4.py` remains an empty top-level entrypoint and Phase 4 still needs wiring.
+Regenerate documentation figures and wiki Plotly previews:
+
+```bash
+uv run --extra docs python scripts/generate_wiki_figures.py
+```
+
+Generate full Plotly PNG, SVG, and PDF thesis copies only when needed:
+
+```bash
+uv run --extra docs python scripts/generate_wiki_figures.py --export-plotly-thesis
+```
 
 ## Current Key Artifacts
 
-Scripts are being re-executed so the results weren't commited yet. 
+Current canonical generated artifacts:
 
-Provisional fold artifacts observed in this working tree:
-
-- `data/ndb_ufes/origin_level/csvs/fold_assignments_origin.csv`
-- `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level.csv`
-- `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv`
-- `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_with_images.csv`
-
-Phase 2 is expected to be rerun before final fold creation, so intermediate tuning outputs are not listed as fixed artifacts here.
+- `results/phase2_tuning/phase2_model_selection.csv`
+- `clustering_params.json`
+- `results/phase3_fold_creation/fold_assignments_origin.csv`
+- `results/phase3_fold_creation/fold_assignments_patch_level.csv`
+- `results/phase3_fold_creation/fold_validation.json`
 
 ## Dataset Snapshot
 
@@ -92,13 +106,13 @@ Once folds are finalized, use the provided fold assignments instead of random pa
 
 Frozen external pretrained embeddings may be used for unsupervised morphology-aware stratification, but fold construction must not be chosen using downstream validation/test performance.
 
-## WIP
+## Development Notes
 
-This repository is mid-reorganization. Before final cleanup or commit:
+Before publishing a new documentation release:
 
-- verify all fold invariants;
-- decide which root Markdown files should be promoted, archived, or deleted;
-- resolve or document empty top-level Phase 3/4 scripts;
+- verify all fold invariants.
+- decide which root Markdown files should be promoted, archived, or deleted.
+- keep Phase 4 out of the accepted release path until it has an independent audit.
 
 ## Implementation Support
 
@@ -106,4 +120,4 @@ This project uses AI-assisted tools, including GitHub Copilot, Claude, and OpenA
 
 ## Citation
 
-Falcao Ribeiro de Assis, Maria Clara; Lima, Leandro Muniz de; de Barros, Liliana Aparecida Pimenta; Velloso, Tania Regina; Krohling, Renato; Camisasca, Danielle (2023), "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data", Mendeley Data, V4, doi: 10.17632/bbmmm4wgr8.4.
+Falcao Ribeiro de Assis, Maria Clara. Lima, Leandro Muniz de. de Barros, Liliana Aparecida Pimenta. Velloso, Tania Regina. Krohling, Renato. Camisasca, Danielle. 2023. "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data." Mendeley Data, V4. doi: 10.17632/bbmmm4wgr8.4.

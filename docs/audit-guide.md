@@ -16,10 +16,10 @@ Do not confuse local generated results or scratch Markdown files with canonical 
 
 Inspect `scripts/phase1.py`, the model registry, wrappers, and latest metadata. Confirm:
 
-- 203 mapping rows and 3,086 total patches;
-- 11 successful current embedding files;
-- exact origin-key agreement for every embedding dictionary;
-- model-specific preprocessing with no generic normalization fallback;
+- 203 mapping rows and 3,086 total patches.
+- 11 successful current embedding files.
+- exact origin-key agreement for every embedding dictionary.
+- model-specific preprocessing with no generic normalization fallback.
 - cache and output paths are on the SSD.
 
 ## Phase 2
@@ -28,10 +28,10 @@ Inspect `scripts/phase2.py`, `phase2_tune_clustering.py`, `phase2_save_params.py
 
 Confirm:
 
-- 11 model rows appear in the summary;
-- accepted configurations have minimum cluster size at least 11 and ratio at most 5;
-- Swin is explicitly rejected rather than selected or treated as a pipeline crash;
-- Virchow/PCA=2/K=3 is derived as the highest-silhouette eligible result;
+- 11 model rows appear in the summary.
+- accepted configurations have minimum cluster size at least 11 and ratio at most 5.
+- Swin is explicitly rejected rather than selected or treated as a pipeline crash.
+- Virchow/PCA=2/K=3 is derived as the highest-silhouette eligible result.
 - selection did not use downstream model performance.
 
 ## Phase 3
@@ -61,14 +61,14 @@ High-missingness clinical fields must not silently enter `stratification_key`.
 
 Acceptable:
 
-- frozen external embeddings used before downstream training;
+- frozen external embeddings used before downstream training.
 - deterministic fold creation based on metadata and unsupervised morphology.
 
 Reject:
 
-- patch-level random splits;
-- one origin in multiple folds;
-- feature extractors fine-tuned on all labels before fold creation;
+- patch-level random splits.
+- one origin in multiple folds.
+- feature extractors fine-tuned on all labels before fold creation.
 - fold or clustering selection from validation/test performance.
 
 ## Documentation Acceptance

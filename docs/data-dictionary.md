@@ -6,8 +6,8 @@ This page documents the current organized data files used by this repository. It
 
 | Level | Meaning | Current key files |
 | --- | --- | --- |
-| Origin / WSI | Original whole-slide or origin-level image/metadata row. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `data/ndb_ufes/origin_level/csvs/fold_assignments_origin.csv` |
-| Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv` |
+| Origin / WSI | Original whole-slide or origin-level image/metadata row. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `results/phase3_fold_creation/fold_assignments_origin.csv` |
+| Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `results/phase3_fold_creation/fold_assignments_patch_level.csv` |
 | Link | Relationship images/files between original NDB-UFES and patch data. | `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` |
 
 ## Current Counts
@@ -50,10 +50,12 @@ The fundamental invariant is: **one origin → one fold**. All patches from an o
 
 Example:
 
-- Origin 5 has 20 patches
-- Origin 5 is assigned to fold 2
-- All patches 5_0, 5_1, ..., 5_19 are assigned to fold 2
-- No patch from Origin 5 appears in folds 0, 1, 3, 4, or 5
+| Topic | Meaning |
+| --- | --- |
+| Origin | Origin 5 has 20 patches. |
+| Assigned fold | Origin 5 is assigned to fold 2. |
+| Patch inheritance | All patches from Origin 5 are assigned to fold 2. |
+| Leakage rule | No patch from Origin 5 appears in folds 0, 1, 3, 4, or 5. |
 
 ### Fold Stratification
 
@@ -63,20 +65,24 @@ The stratification process:
 
 1. Group origins by a stratification key (concatenation of diagnosis, morphology cluster, gender, age group)
 2. Within each group, sort origins by patch count (largest first)
-3. Assign each origin to the fold with the current smallest total patch count (greedy Longest Processing Time algorithm)
+3. Process each group in blocks of six origins
+4. Assign each origin in a block to a distinct currently least-loaded fold
+5. Break ties by fold origin count and then fold ID
 
-Result: folds have balanced patch counts and balanced representation of key variables.
+Result: folds have balanced patch counts and each supported combined stratum differs by at most one origin across folds.
 
 See [Fold Structure Explained](fold-structure-explained.md) for algorithm details, balance metrics, and leakage safety guarantees.
 
 ## Required Fold Assignment Files
+
+The canonical current fold files are under `results/phase3_fold_creation/`. Older similarly named CSVs under `data/ndb_ufes/` may remain from previous runs, but they should not replace the canonical Phase 3 outputs unless they are regenerated and audited.
 
 ### Origin-Level Folds
 
 Path:
 
 ```text
-data/ndb_ufes/origin_level/csvs/fold_assignments_origin.csv
+results/phase3_fold_creation/fold_assignments_origin.csv
 ```
 
 Rows: 203
@@ -86,44 +92,24 @@ Columns:
 | Column | Meaning |
 | --- | --- |
 | `origin_id` | Origin/WSI identifier used by the matched fold-design subset. |
-| `true_class` | Origin-level diagnostic class. |
-| `morph_cluster` | Morphology cluster assigned during stratification. Existing artifacts use four clusters, but this should be audited against Phase 2. |
+| `origin_diagnosis` | Origin-level diagnostic class. |
+| `patch_diagnoses` | Pipe-separated patch-level diagnoses observed for the origin. |
+| `gender`, `skin_color`, `age_group` | Demographic fields copied from the organized metadata. |
+| `tobacco_use`, `alcohol_consumption`, `sun_exposure` | Risk-factor fields copied from the organized metadata. |
+| `localization`, `larger_size` | Lesion metadata fields copied from the organized metadata. |
+| `morph_cluster` | Accepted Phase 2 morphology cluster, from Virchow with PCA=2 and K=3. |
 | `patch_count` | Number of patches from this origin in the matched subset. |
+| `stratification_key` | Combined stratum used by Phase 3 for round-robin LPT assignment. |
 | `fold` | Fold assignment, integer `0` through `5`. |
 
 Audit invariant: each `origin_id` must appear exactly once and have exactly one `fold`.
 
-### Patch-Level Fold Summary
+### Patch-Level Folds
 
 Path:
 
 ```text
-data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level.csv
-```
-
-Rows: 203
-
-This file is origin-level in practice, despite the filename. It contains one row per origin with comma-separated patch IDs and pipe-separated image paths.
-
-Columns:
-
-| Column | Meaning |
-| --- | --- |
-| `origin_id` | Origin identifier. |
-| `class` | Diagnostic class. |
-| `patch_count` | Number of patches for the origin. |
-| `patch_ids` | Comma-separated patch IDs. |
-| `image_paths` | Pipe-separated image paths. |
-| `fold` | Fold assignment. |
-
-Audit note: because this file is not one row per patch, downstream users who need patch-level rows should use the detailed or image-expanded files below.
-
-### Patch-Level Detailed Folds
-
-Path:
-
-```text
-data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv
+results/phase3_fold_creation/fold_assignments_patch_level.csv
 ```
 
 Rows: 3,086
@@ -132,37 +118,19 @@ Columns:
 
 | Column | Meaning |
 | --- | --- |
-| `patch_id` | Synthetic patch identifier in the current fold artifact, e.g. `0_0`. |
 | `origin_id` | Parent origin. |
-| `class` | Patch/origin diagnostic class used for fold balancing. |
-| `morph_cluster` | Morphology cluster inherited from the origin. |
+| `patch` | Source patch image ID, e.g. `p0020`. |
+| `diagnosis` | Patch diagnostic class used for reporting and validation. |
+| `gender`, `skin_color`, `age_group` | Demographic fields inherited from the parent origin metadata. |
+| `tobacco_use`, `alcohol_consumption`, `sun_exposure` | Risk-factor fields inherited from the parent origin metadata. |
+| `localization`, `larger_size` | Lesion metadata fields inherited from the parent origin metadata. |
 | `fold` | Fold assignment inherited from the origin. |
 
 Audit invariant: every patch row must have a fold and all rows with the same `origin_id` must share the same fold.
 
-### Patch-Level Folds With Image Paths
+### Legacy Data-Directory Fold Files
 
-Path:
-
-```text
-data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_with_images.csv
-```
-
-Rows: 3,086
-
-Columns:
-
-| Column | Meaning |
-| --- | --- |
-| `patch_id` | Synthetic patch identifier in the current fold artifact. |
-| `origin_id` | Parent origin. |
-| `image_name` | Patch image name, e.g. `p0321`. |
-| `image_path` | Path to patch image. |
-| `class` | Diagnostic class. |
-| `morph_cluster` | Morphology cluster inherited from the origin. |
-| `fold` | Fold assignment inherited from the origin. |
-
-This is the most convenient public file for users who need one row per patch plus an image reference.
+The repository may also contain fold CSVs under `data/ndb_ufes/origin_level/csvs/` and `data/ndb_ufes/patch_level/csvs/`. Treat those as local or historical copies unless they are explicitly synchronized with `results/phase3_fold_creation/` after a validated Phase 3 run.
 
 ## Source Metadata Files
 
@@ -195,7 +163,7 @@ Important columns:
 | `diagnosis` | Diagnostic class. |
 | `dysplasia_severity` | Dysplasia severity metadata where applicable. |
 | `TaskII`, `TaskIII`, `TaskIV` | Source task labels. |
-| `top_left_x`, `top_left_y`, `bottom_right_x`, `bottom_right_y` | ROI/patch coordinate fields. Deferred for analysis until patch-origin-coordinate associations are rerun; some prior image-origin associations were incorrect. |
+| `top_left_x`, `top_left_y`, `bottom_right_x`, `bottom_right_y` | ROI/patch coordinate fields. Deferred for analysis until patch-origin-coordinate associations are rerun. Some prior image-origin associations were incorrect. |
 
 ### Origin Metadata
 
@@ -225,10 +193,20 @@ Observed task label values in the current patch metadata:
 | Field | Observed values | Interpretation for users |
 | --- | --- | --- |
 | `TaskII` | `OSCC`, `Leukoplakia` | Binary OSCC vs leukoplakia grouping. |
-| `TaskIII` | `Presence`, `Absence` | Dysplasia presence grouping; OSCC is included in `Presence`. |
+| `TaskIII` | `Presence`, `Absence` | Dysplasia presence grouping. OSCC is included in `Presence`. |
 | `TaskIV` | `OSCC`, `Leukoplakia with dysplasia`, `Leukoplakia without dysplasia` | Three-class diagnostic task. |
 
-The source paper reports the full origin-level NDB-UFES task counts as: Task II: 146 leukoplakia and 91 OSCC; Task III: 180 presence and 57 absence; Task IV: 91 OSCC, 89 leukoplakia with dysplasia, and 57 leukoplakia without dysplasia.
+Source-paper full origin-level NDB-UFES task counts:
+
+| Task | Class | Origin count |
+| --- | --- | ---: |
+| Task II | Leukoplakia | 146 |
+| Task II | OSCC | 91 |
+| Task III | Presence | 180 |
+| Task III | Absence | 57 |
+| Task IV | OSCC | 91 |
+| Task IV | Leukoplakia with dysplasia | 89 |
+| Task IV | Leukoplakia without dysplasia | 57 |
 
 ## Demographics and Risk Factors
 
@@ -236,12 +214,12 @@ Patch-level observed distributions:
 
 | Field | Values |
 | --- | --- |
-| `gender` | `M`: 1,850; `F`: 1,236 |
-| `skin_color` | `Not informed`: 1,393; `White`: 1,184; `Black`: 335; `Brown`: 174 |
-| `tobacco_use` | `Not informed`: 1,425; `Yes`: 920; `No`: 496; `Former`: 245 |
-| `alcohol_consumption` | `Not informed`: 1,425; `No`: 743; `Former`: 500; `Yes`: 418 |
-| `sun_exposure` | `Not informed`: 1,465; `No`: 1,123; `Yes`: 498 |
-| `age_group` | `2` (> 60 years): 1,496; `1` (40-60 years): 1,392; `0` (< 40 years): 198 |
+| `gender` | `M`: 1,850. `F`: 1,236. |
+| `skin_color` | `Not informed`: 1,393. `White`: 1,184. `Black`: 335. `Brown`: 174. |
+| `tobacco_use` | `Not informed`: 1,425. `Yes`: 920. `No`: 496. `Former`: 245. |
+| `alcohol_consumption` | `Not informed`: 1,425. `No`: 743. `Former`: 500. `Yes`: 418. |
+| `sun_exposure` | `Not informed`: 1,465. `No`: 1,123. `Yes`: 498. |
+| `age_group` | `2` (> 60 years): 1,496. `1` (40-60 years): 1,392. `0` (< 40 years): 198. |
 
 These fields are useful for factsheets, subgroup summaries, and fairness-aware reporting. They should not be treated as causal adjustment variables without a separate causal design.
 
@@ -286,6 +264,6 @@ Cluster labels are nominal K-Means identifiers, not diagnoses or severity levels
 
 ## File Status Notes
 
-- `data/` is ignored by Git in the current `.gitignore`; data files are expected to be handled by DVC or local regeneration.
-- `results/` is currently untracked and includes generated artifacts.
+- `data/` is ignored by Git in the current `.gitignore`. Public users should retrieve source data from Mendeley. Maintainer-only data synchronization may use DVC.
+- `results/` contains generated artifacts. Public documentation should point to validated Phase 3 outputs and committed thesis/static figure exports, not arbitrary intermediate files.
 - Several root Markdown files are untracked audit/deliverable notes and should be promoted, archived, or deleted after manual review.

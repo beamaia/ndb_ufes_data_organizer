@@ -1,64 +1,84 @@
 # NDB-UFES Data Organizer
 
-This repository organizes the public NDB-UFES / P-NDB-UFES oral histopathology data into leakage-safe cross-validation folds and supporting documentation.
+<div class="ndb-hero" markdown>
+This repository organizes the public NDB-UFES oral histopathology dataset into leakage-safe fold assignments, documentation, and reproducibility material. It does not train a downstream diagnostic model.
+</div>
 
-The final product of this repo is not a trained model. It is a public data organization package: fold assignment files, data dictionary, factsheet, reproducibility notes, and audit guidance.
+## AI-Assisted Documentation Note
 
-## Repository Purpose
+This wiki was prepared with assistance from Codex (GPT-5), following instructions and guidelines written by a human. Published pages are reviewed and validated by a human before release.
 
-- Create 6-fold assignments where all patches from the same origin image stay in the same fold.
-- Document the dataset so external users can understand labels, demographics, risk factors, task fields, known limitations, and correct usage.
-- Use frozen pretrained embeddings only as an optional morphology-aware stratification signal.
-- Avoid downstream model-training claims or fold choices based on validation/test performance.
+## Current Release State
 
-## Required Public Deliverables
+<div class="ndb-card-grid" markdown>
 
-| Deliverable | Purpose |
-| --- | --- |
-| `fold_assignments_origin.csv` | One row per origin/WSI with fold, diagnosis, patch count, and morphology cluster where available. |
-| `fold_assignments_patch_level*.csv` | Patch-level fold assignments with origin ID, diagnosis/class, fold, and image reference where available. |
-| [Data Dictionary](data-dictionary.md) | File relationships, columns, counts, labels, task fields, and missingness notes. |
-| [Factsheet](factsheet.md) | Dataset provenance, citation, task labels, demographics/risk factors, limitations, and leakage-safe use guidance. |
-| [Exploratory Analysis](exploratory-analysis.md) | Descriptive figures for diagnosis distributions, metadata, missingness, and association checks. |
-| [Contamination Checks](contamination-analysis.md) | Image-level checks for suspicious patch similarity and origin-patch matching behavior. |
-| [Reproducibility](reproducibility.md) | Commands, expected outputs, and audit checkpoints for regenerating artifacts. |
-| [Pipeline](pipeline.md) | Concise explanation of why each phase exists and how outputs flow. |
-| [Implementation Status](status.md) | Verified status, accepted Phase 2 selection, and Phase 3 validation. |
+<div class="ndb-card" markdown>
+<span class="ndb-stat">203</span>
+**Matched origins.** Origin-level parent images currently available for fold design.
+</div>
 
-## Dataset at a Glance
+<div class="ndb-card" markdown>
+<span class="ndb-stat">3,086</span>
+**Patch rows.** Patch-level rows assigned to leakage-safe folds.
+</div>
 
-Current matched patch subset for fold design:
+<div class="ndb-card" markdown>
+<span class="ndb-stat">6</span>
+**Folds.** Deterministic cross-validation folds with one origin in one fold.
+</div>
 
-| Metric | Count |
-| --- | ---: |
-| Patch rows available for fold design | 3,086 |
-| Matched origins available for fold design | 203 |
-| Diagnostic classes | 3 |
-| OSCC patches | 1,517 |
-| Leukoplakia with dysplasia patches | 930 |
-| Leukoplakia without dysplasia patches | 639 |
+<div class="ndb-card" markdown>
+<span class="ndb-stat">1.027</span>
+**Patch ratio.** Maximum/minimum patch-count ratio after Phase 3 validation.
+</div>
 
-Original origin-level metadata currently contains 237 rows. The matched fold-design subset contains 203 origins and 3,086 patches.
+</div>
 
 ## Start Here
 
-1. Read the [Factsheet](factsheet.md) for public dataset context and correct usage.
-2. Read the [Data Dictionary](data-dictionary.md) before using any CSV.
-3. Read the [Pipeline](pipeline.md) to understand how folds are intended to be produced.
-4. Check [Implementation Status](status.md) before trusting, deleting, or committing generated artifacts.
+| Page | Use It For |
+| --- | --- |
+| [Factsheet](factsheet.md) | Public dataset context, task labels, fold status, caveats, and citation language. |
+| [Data Dictionary](data-dictionary.md) | File relationships, columns, counts, labels, and field-level cautions. |
+| [Pipeline](pipeline.md) | Short explanation of Phase 1, Phase 2, Phase 3, and leakage boundaries. |
+| [Phase 1 Results](phase1-results.md) | Feature extraction outputs and exploratory embedding visualizations. |
+| [Phase 2 Results](phase2-results.md) | Virchow selection, eligibility constraints, and model comparison. |
+| [Phase 3 Results](phase3-results.md) | Fold assignment results, validation metrics, and generated fold figures. |
+
+## What The Repository Publishes
+
+- Origin-level fold assignments.
+- Patch-level fold assignments.
+- A data dictionary and public factsheet.
+- Reproducibility and audit guidance.
+- Exploratory quality-control notes.
+- Thesis-ready static figures generated from current outputs.
+
+The published documentation site is:
+
+```text
+https://beamaia.github.io/ndb_ufes_data_organizer/
+```
+
+## Lab Attribution
+
+This work is attributed to the [Nature-inspired Computing Lab, Labcin](https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling), and is documented here as part of the lab's reproducible research material.
 
 ## Implementation Status
 
-Phases 1 through 3 are implemented and the current outputs are validated:
+Phases 1 through 3 are implemented and validated for the current matched subset.
 
-- **Phase 1** (Feature Extraction): Extracts embeddings from patch images using pretrained models. Executable via `scripts/phase1.py`.
-- **Phase 2** (Morphology Tuning): Selected Virchow/PCA=2/K=3 after rejecting configurations that fail cluster-support constraints. Parameters are saved to `clustering_params.json`.
-- **Phase 3** (Fold Creation): Assigned all 203 origins and 3,086 patches with no origin leakage and a 1.02745 patch-count ratio.
+| Phase | Current Status |
+| --- | --- |
+| Phase 1 | Complete. All 11 configured pretrained backbones were extracted with model-specific preprocessing. |
+| Phase 2 | Complete. Virchow with PCA=2 and K=3 is the accepted eligible morphology signal. |
+| Phase 3 | Complete. All 203 origins and 3,086 patches were assigned with no origin leakage. |
+| Contamination checks | Paused. Human-in-the-loop validation is needed before stronger contamination claims are made. |
 
-**Phase 4** (Validation and Reporting) remains in planning.
-
-See [Implementation Status](status.md) for detailed phase-by-phase progress and [Phase 2 Code](phase2-code.md) and [Phase 3 Code](phase3-code.md) for implementation details.
+<div class="ndb-next" markdown>
+<strong>Next read:</strong> [Factsheet](factsheet.md)
+</div>
 
 ## Citation
 
-Falcao Ribeiro de Assis, Maria Clara; Lima, Leandro Muniz de; de Barros, Liliana Aparecida Pimenta; Velloso, Tania Regina; Krohling, Renato; Camisasca, Danielle (2023), "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data", Mendeley Data, V4, doi: 10.17632/bbmmm4wgr8.4.
+Falcao Ribeiro de Assis, Maria Clara. Lima, Leandro Muniz de. de Barros, Liliana Aparecida Pimenta. Velloso, Tania Regina. Krohling, Renato. Camisasca, Danielle. 2023. "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data." Mendeley Data, V4. doi: 10.17632/bbmmm4wgr8.4.

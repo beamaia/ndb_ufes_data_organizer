@@ -30,10 +30,12 @@ dependencies = [
     "tqdm>=4.65.0",
     "python-dotenv>=1.0.0",
     "psutil>=5.9.0",
+    "pathspec<1",
 ]
 
 [project.optional-dependencies]
 docs = [
+    "kaleido>=1.3.0",
     "mkdocs>=1.6.0",
     "mkdocs-material>=9.5.0",
     "pygments>=2.18.0",

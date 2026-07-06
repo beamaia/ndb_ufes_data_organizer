@@ -1,322 +1,179 @@
-# Setup & Installation
+# Setup And Installation
 
-Complete step-by-step guide to setting up the NDB-UFES Data Organizer on your local machine.
-
----
+This page describes how to run the organizer locally and how public users should retrieve the source dataset.
 
 ## System Requirements
 
-- **Python**: 3.10-3.12 (3.12 recommended)
-- **OS**: macOS (M1/M2/M3/M4), Linux, or Windows
-- **Storage**: ~20 GB for full dataset (DVC S3 remote)
-- **GPU/Accelerator**: 
-  - Optional: NVIDIA CUDA 11.8+ (Linux) 
-  - Optional: Apple Metal Performance (macOS M-series)
-  - CPU mode supported but slower
+| Requirement | Recommendation |
+| --- | --- |
+| Python | 3.10 through 3.12 |
+| Environment manager | `uv` |
+| Storage | About 20 GB for the full public dataset and generated artifacts |
+| Accelerator | Optional CUDA, Apple Metal/MPS, or CPU |
 
----
-
-## Step 1: Clone Repository
+## Clone The Repository
 
 ```bash
-git clone https://github.com/yourusername/ndb_ufes_data_organizer.git
+git clone https://github.com/beamaia/ndb_ufes_data_organizer.git
 cd ndb_ufes_data_organizer
 ```
 
----
+## Install Dependencies
 
-## Step 2: Install uv
-
-Install uv if it is not already available:
+Install `uv` if it is not already available:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 uv --version
 ```
 
-uv creates and manages the project virtual environment in `.venv/`.
-
----
-
-## Step 3: Install Dependencies
+Create the project environment:
 
 ```bash
 uv sync
 ```
 
-**Key packages** (see `pyproject.toml` for full list):
-
-- `torch>=2.0.0` — Deep learning framework
-- `torchvision>=0.15.0` — Vision utilities
-- `transformers>=4.30.0` — HuggingFace model hub
-- `scikit-learn>=1.6.1` — Clustering + preprocessing
-- `pandas>=2.2.3` — Data manipulation
-- `numpy>=2.2.1` — Numerical computing
-- `plotly>=5.13.0` — Interactive 3D visualizations
-- `dvc>=3.58.0` — Data version control
-- `dvc-s3>=3.2.0` — AWS S3 remote for DVC
-- `timm==1.0.26` — PyTorch Image Models
-
-**Installation time**: 5-10 minutes (depending on internet speed)
-
-### Verify Installation
-
-```bash
-uv run python -c "import torch; print(f'PyTorch version: {torch.__version__}')"
-uv run python -c "import transformers; print(f'Transformers version: {transformers.__version__}')"
-```
-
----
-
-## Step 4: Data Setup with DVC
-
-### Download Data
-
-The dataset is version-controlled with **DVC** (Data Version Control) on AWS S3.
-
-```bash
-# Initialize DVC (if not already done)
-uv run dvc remote list  # Should show 's3://dvc-ndb-ufes/data' as default
-
-# Download all data (images, CSVs, metadata)
-uv run dvc pull
-```
-
-**Expected download**:
-
-- `data/ndb_ufes/origin_level/` — 238 WSI images (~5 GB)
-- `data/ndb_ufes/patch_level/images/` — 3,768 patch images (~2 GB)
-- `data/ndb_ufes/patch_level/csvs/` — Metadata CSVs (~1 MB)
-- `data/ndb_ufes/link_level/` — 3,055 link images (~2 GB)
-
-**Download time**: 10-20 minutes (depending on network)
-
-### DVC Configuration
-
-DVC remote is pre-configured in `data.dvc`:
-```yaml
-remote:
-  s3:
-    url: s3://dvc-ndb-ufes/data
-```
-
-To use custom AWS credentials, set environment variables:
-```bash
-export AWS_ACCESS_KEY_ID=your_key
-export AWS_SECRET_ACCESS_KEY=your_secret
-```
-
----
-
-## Step 5: Setup API Credentials (Optional but Recommended)
-
-### HuggingFace Hub
-
-Several models require authentication for optimal performance:
-
-```bash
-# Interactive login
-uv run huggingface-cli login
-
-# Or via environment variable
-export HUGGINGFACE_TOKEN=your_token_here
-```
-
-Get your token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
-
----
-
-## Step 6: Verify Setup
-
-### Quick Verification Script
-
-```bash
-uv run python -c "
-import torch
-import pandas as pd
-from pathlib import Path
-from src.models.model_loader import ModelLoader
-
-# Check torch + device
-print('PyTorch version:', torch.__version__)
-print('Device available:', 'MPS' if torch.backends.mps.is_available() else 'CUDA' if torch.cuda.is_available() else 'CPU')
-
-# Check data files
-patch_csv = Path('data/ndb_ufes/patch_level/csvs/parcial_pndb_ufes.csv')
-print(f'Parcial CSV exists: {patch_csv.exists()}')
-
-# Check model registry
-loader = ModelLoader(registry_path='scripts/src/phase1/config.yaml')
-models = loader.list_available_models()
-print(f'Model registry loaded: {len(models)} models available')
-print(f'Models: {models[:3]}...')
-"
-```
-
-**Expected output**:
-```
-PyTorch version: 2.x.x
-Device available: MPS
-Parcial CSV exists: True
-Model registry loaded: 12 models available
-Models: ['uni', 'virchow', 'ctranspath']...
-```
-
-### Directory Structure Check
-
-```bash
-# Verify key directories exist
-ls -la data/ndb_ufes/patch_level/images/ | head -5
-ls -la data/ndb_ufes/patch_level/csvs/
-ls -la scripts/src/phase1/
-```
-
-**Expected**:
-
-- `data/ndb_ufes/patch_level/images/` contains ~3,768 PNG files (p0001.png, p0002.png, ...)
-- `data/ndb_ufes/patch_level/csvs/` contains `parcial_pndb_ufes.csv`
-- `scripts/src/phase1/` contains `extraction_func.py`, `feature_extractor.py`, `metadata_tracker.py`, and `config.yaml`
-
----
-
-## Step 7: Run Phase 1 (Optional - Full Test)
-
-Test the entire pipeline with a small subset:
-
-```bash
-# Run Phase 1 (extracts embeddings + creates visualizations)
-uv run python scripts/phase1.py
-```
-
-**Expected**:
-
-- Creates `data/embeddings/embeddings_wsi_level_uni_*.pkl` (embeddings file)
-- Creates `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv` (mapping file)
-- Writes run metadata under `results/phase1_metadata/`
-- **Total runtime**: 2-5 minutes (M4 Mac with MPS)
-
-**Output sample**:
-```
-------------------------------------------------------------------------
-PHASE 1: FEATURE EXTRACTION AND VISUALIZATION PIPELINE
-------------------------------------------------------------------------
-
-FeatureExtractor Initialized
-  Model: uni
-  Description: UNI - Pathology Foundation Model (1024D, ...)
-  Input size: 224x224
-  Output dim: 768
-  Extract method: cls_token
-  Device: mps
-  Batch size: 32
-
-Extracting embeddings: 100%|████| 3086/3086 [00:42<00:00, 73.14it/s]
-
-Extraction Complete:
-  Model: uni
-  Origins: 203
-  Total patches: 3086
-  Avg patches/origin: 15.2
-  Feature shape per origin: (n_patches, 768)
-```
-
----
-
-## Step 8: View Documentation Locally (GitHub Pages)
-
-To view this documentation site locally with embedded visualizations:
+For documentation work:
 
 ```bash
 uv sync --extra docs
 ```
 
-### Refresh Visualization Files
+## Download The Dataset
 
-```bash
-uv run python scripts/copy_visualizations.py
+Public users should download NDB-UFES from Mendeley Data:
+
+```text
+https://data.mendeley.com/datasets/bbmmm4wgr8/4
 ```
 
-Existing HTML visualizations are served from `docs/visualizations/`. If new visualization files are regenerated, this script copies them into the docs folder and normalizes filenames for embedding.
+After downloading, place the dataset files under the expected local `data/ndb_ufes/` structure before running the pipeline. The current organizer expects patch metadata, patch images, origin metadata, and relationship files to be available locally.
 
-### Serve Locally
+Expected key locations:
+
+| Item | Expected Path |
+| --- | --- |
+| Patch metadata | `data/ndb_ufes/patch/parcial_pndb_ufes.csv` |
+| Patch images | `data/ndb_ufes/patch_level/images/` |
+| Origin metadata | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv` |
+| Origin-patch mapping output | `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv` |
+
+!!! note "Maintainer-only data sync"
+    This repository also has a DVC/AWS S3 workflow for the maintainer's local data management. That remote is not the public distribution path. Public users should use the Mendeley Data link above.
+
+## Optional Credentials
+
+Some pretrained feature extractors are hosted on Hugging Face and may require accepted model terms plus an access token.
 
 ```bash
+uv run huggingface-cli login
+```
+
+Or set a token in the shell:
+
+```bash
+export HUGGINGFACE_TOKEN=your_token_here
+```
+
+Phase 1 also reads compatible Hugging Face token variables from `.env`.
+
+## Verify The Environment
+
+```bash
+uv run python -c "import torch; print(torch.__version__)"
+uv run python -c "import pandas as pd; print(pd.__version__)"
+```
+
+Check for the expected source data:
+
+```bash
+uv run python - <<'PY'
+from pathlib import Path
+
+required = [
+    Path("data/ndb_ufes/patch/parcial_pndb_ufes.csv"),
+    Path("data/ndb_ufes/patch_level/images"),
+    Path("data/ndb_ufes/origin_level/csvs/ndb-ufes.csv"),
+]
+
+for path in required:
+    print(f"{path}: {path.exists()}")
+PY
+```
+
+## Run The Pipeline
+
+Phase 1 extracts frozen embeddings:
+
+```bash
+uv run python scripts/phase1.py
+```
+
+Phase 2 selects the best fold-ready morphology signal:
+
+```bash
+uv run python scripts/phase2.py
+```
+
+Phase 3 creates leakage-safe fold assignments:
+
+```bash
+uv run python scripts/phase3.py
+```
+
+Regenerate documentation and thesis figures:
+
+```bash
+uv run python scripts/generate_wiki_figures.py
+```
+
+## View Documentation Locally
+
+```bash
+uv sync --extra docs
+uv run python scripts/copy_visualizations.py
+uv run python scripts/generate_wiki_figures.py
 uv run mkdocs serve
 ```
 
-Then open **http://localhost:8000** in your browser.
+Then open:
 
-**Features**:
+```text
+http://127.0.0.1:8000/ndb_ufes_data_organizer/
+```
 
-- Navigate all documentation pages
-- View embedded 3D cluster visualizations
-- Full-text search (Ctrl+K / Cmd+K)
-- Mobile-responsive design
-- Dark mode toggle
+## Maintainer DVC Workflow
 
----
+The DVC workflow is for the repository maintainer. Use it only if you have the configured remote credentials.
+
+```bash
+uv run dvc status
+uv run dvc pull
+```
+
+Troubleshooting for maintainer DVC access:
+
+```bash
+uv run dvc remote list
+uv run dvc pull -vv
+```
 
 ## Troubleshooting
 
-### Issue: `torch` import fails
+### Hugging Face Model Download Fails
 
-**Solution**: Reinstall PyTorch for your device:
+Confirm that model terms are accepted on Hugging Face and that `HUGGINGFACE_TOKEN` is available.
+
+### Out Of Memory During Phase 1
+
+Lower the Phase 1 batch size in `scripts/phase1.py`, or run on CPU with a smaller batch size.
+
+### Documentation Build Fails
+
+Run:
+
 ```bash
-# For Apple Silicon (M-series)
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/nightly/cpu
-
-# For NVIDIA CUDA 11.8
-uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+uv run mkdocs build --strict
 ```
 
-### Issue: DVC pull fails with S3 error
-
-**Solution**: Check AWS credentials and DVC config:
-```bash
-aws sts get-caller-identity  # Verify AWS credentials
-uv run dvc remote list  # Check remote configuration
-uv run dvc pull -vv  # Verbose output for debugging
-```
-
-### Issue: HuggingFace model download is slow/fails
-
-**Solution**: Set HF cache directory and retry:
-```bash
-export HF_HOME=/path/to/cache  # Use faster disk if available
-uv run python scripts/phase1.py  # Retry with cache
-```
-
-### Issue: Out of memory (OOM) during extraction
-
-**Solution**: Reduce batch size in `scripts/phase1.py`:
-```python
-BATCH_SIZE = 32  # Change to 16 or 8
-```
-
-### Issue: GPU/MPS not detected
-
-**Solution**: Check device setup:
-```python
-# For MPS (Apple Metal)
-import torch
-print(torch.backends.mps.is_available())  # Should be True
-print(torch.backends.mps.is_built())       # Should be True
-
-# For CUDA
-torch.cuda.is_available()  # Should be True
-torch.cuda.get_device_name(0)  # Should show GPU name
-```
-
----
-
-## Next Steps
-
-1. **Verify setup** with the verification script above
-2. **Read [Pipeline Overview](pipeline.md)** to understand what each phase does
-3. **Run Phase 1** to extract embeddings and see results
-4. **Check [Phase 1: Results & Visualizations](phase1-results.md)** to interpret outputs
-5. **Explore data structure** with [Data Organization & Dictionary](data-dictionary.md)
-
----
-
-**Last updated**: June 2026
+Fix missing links, missing images, or navigation entries before publishing.

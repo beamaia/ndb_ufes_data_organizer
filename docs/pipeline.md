@@ -16,6 +16,8 @@ Patch metadata and images
 
 Current output: 11 timestamped embedding dictionaries, each covering the same 203 origins and 3,086 patches.
 
+Result page: [Phase 1 Results](phase1-results.md).
+
 ## Phase 2
 
 `scripts/phase2.py` is the only executable entrypoint. Helpers live under `scripts/src/phase2/`, including `phase2_tune_clustering.py`.
@@ -29,6 +31,8 @@ For each model, Phase 2:
 5. Ranks eligible configurations by mean silhouette.
 
 The accepted result is Virchow with PCA=2 and K=3. The three clusters contain 101, 67, and 35 origins. Selection is based only on frozen unsupervised features and fold-readiness constraints, never downstream performance.
+
+Result page: [Phase 2 Results](phase2-results.md).
 
 ## Phase 3
 
@@ -45,16 +49,18 @@ Assignment uses deterministic stratum round-robin LPT:
 
 This preserves per-stratum spread while balancing patch totals. The final run assigned all 203 origins and 3,086 patches with a patch-count ratio of 1.02745.
 
+Result page: [Phase 3 Results](phase3-results.md).
+
 ## Leakage Policy
 
 Allowed:
 
-- frozen external pretrained embeddings for unsupervised stratification;
+- frozen external pretrained embeddings for unsupervised stratification.
 - choosing morphology parameters before downstream training.
 
 Not allowed:
 
-- random patch-level splitting;
-- fine-tuning the feature extractor on all dataset labels before fold creation;
-- choosing folds or morphology parameters from validation/test performance;
+- random patch-level splitting.
+- fine-tuning the feature extractor on all dataset labels before fold creation.
+- choosing folds or morphology parameters from validation/test performance.
 - placing patches from one origin in multiple folds.

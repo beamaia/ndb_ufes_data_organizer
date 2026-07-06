@@ -1,56 +1,187 @@
-# Phase 1: Feature Extraction
+# Phase 1 Code
 
 Phase 1 creates the origin-patch mapping and extracts frozen embeddings from every configured pretrained backbone. It is an execution pipeline, not a model-training phase.
 
-## Architecture
+## Entrypoint
 
-`scripts/phase1.py` is the executable entrypoint. It configures model cache locations, authenticates with HuggingFace when credentials are available, creates the mapping, iterates over the model registry, and records run metadata.
+```text
+scripts/phase1.py
+```
 
-Core helpers:
+`run(device: str = DEVICE, batch_size: int = BATCH_SIZE) -> None`
 
-- `scripts/src/phase1/extraction_func.py`: creates the mapping and saves embedding dictionaries.
-- `scripts/src/phase1/feature_extractor.py`: loads one model, applies model-specific preprocessing, extracts embeddings, and caches patch features.
-- `scripts/src/phase1/metadata_tracker.py`: records per-model extraction metadata.
-- `scripts/src/phase1/config.yaml`: declares model IDs, preprocessing, extraction method, output dimension, and registry metadata.
+Purpose:
 
-Model loading is shared through `scripts/src/models/`. External model cache configuration and HuggingFace authentication live under `scripts/src/utils/` because they are not Phase-1-specific behavior.
+- Configure model cache directories on the project SSD.
+- Authenticate with Hugging Face when credentials are available.
+- Create the origin-patch mapping.
+- Iterate through the model registry.
+- Extract and save embeddings.
+- Record metadata for every model run.
 
-## Inputs
+Side effects:
 
-| Input | Path |
+- Writes `origin_patch_mapping.csv`.
+- Writes embedding pickle files under `data/embeddings/`.
+- Writes metadata under `results/phase1_metadata/`.
+- Uses `results/phase1_feature_cache/` for patch-level feature reuse.
+
+## Public Helper Functions
+
+### `load_patch_dataframe(fold_csv_path)`
+
+Location:
+
+```text
+scripts/src/phase1/extraction_func.py
+```
+
+Inputs:
+
+| Parameter | Type | Meaning |
+| --- | --- | --- |
+| `fold_csv_path` | path-like | CSV containing patch metadata. |
+
+Returns:
+
+- `pandas.DataFrame` loaded from the CSV.
+
+Side effects:
+
+- Logs row count and column names.
+
+### `create_origin_patch_mapping(source_csv_path, patch_image_dir, output_csv_path)`
+
+Location:
+
+```text
+scripts/src/phase1/extraction_func.py
+```
+
+Inputs:
+
+| Parameter | Type | Meaning |
+| --- | --- | --- |
+| `source_csv_path` | path-like | Patch metadata with `origin`, `patch`, and `diagnosis`. |
+| `patch_image_dir` | path-like | Directory containing patch PNG files. |
+| `output_csv_path` | path-like | Destination for the generated mapping CSV. |
+
+Returns:
+
+- `pandas.DataFrame` with `origin_id`, `class`, `patch_count`, `patch_ids`, and `image_paths`.
+
+Validation behavior:
+
+- Only existing patch image paths are included.
+- Origins with no existing patch image paths are skipped.
+
+Side effects:
+
+- Writes the mapping CSV.
+- Logs class distribution and per-origin patch-count summary.
+
+### `extract_wsi_level_features(model_name, origin_patch_mapping, batch_size=32, device="mps", output_dir=DEFAULT_EMBEDDINGS_DIR)`
+
+Location:
+
+```text
+scripts/src/phase1/extraction_func.py
+```
+
+Inputs:
+
+| Parameter | Type | Meaning |
+| --- | --- | --- |
+| `model_name` | string | Model key from `scripts/src/phase1/config.yaml`. |
+| `origin_patch_mapping` | `pandas.DataFrame` | Output from `create_origin_patch_mapping()`. |
+| `batch_size` | integer | Patch batch size for extraction. |
+| `device` | string | `mps`, `cuda`, or `cpu`. |
+| `output_dir` | path-like | Destination directory for embedding pickle files. |
+
+Returns:
+
+- String path to the saved embedding pickle file.
+
+Output format:
+
+```python
+{
+    origin_id: np.ndarray,  # shape: (patch_count_for_origin, model_output_dim)
+}
+```
+
+Side effects:
+
+- Loads one configured model through `FeatureExtractor`.
+- Writes `embeddings_wsi_level_{model}_{timestamp}.pkl`.
+
+## Feature Extraction Class
+
+### `FeatureExtractor`
+
+Location:
+
+```text
+scripts/src/phase1/feature_extractor.py
+```
+
+Responsibility:
+
+- Load one configured model.
+- Build model-specific preprocessing.
+- Extract patch embeddings.
+- Cache patch features using a preprocessing-aware fingerprint.
+
+Important behavior:
+
+- Preprocessing comes from the model registry.
+- There is no universal ImageNet-normalization fallback.
+- Cache keys include model identity, preprocessing settings, output dimension, extraction method, and normalization statistics.
+
+## Shared Model Environment Functions
+
+### `configure_external_model_caches(cache_root: Path) -> None`
+
+Location:
+
+```text
+scripts/src/utils/model_environment.py
+```
+
+Purpose:
+
+- Point Hugging Face, Transformers, and Torch model caches to a project-controlled cache root before model-loading imports happen.
+
+### `authenticate_huggingface(env_path: Path | None = None) -> None`
+
+Location:
+
+```text
+scripts/src/utils/model_environment.py
+```
+
+Purpose:
+
+- Load Hugging Face credentials from `.env` or environment variables when available.
+- Authenticate optional gated models without making Phase 1 code own token logic.
+
+## Configuration Contract
+
+Model behavior is declared in:
+
+```text
+scripts/src/phase1/config.yaml
+```
+
+Important fields:
+
+| Field | Meaning |
 | --- | --- |
-| Patch metadata | `data/ndb_ufes/patch/parcial_pndb_ufes.csv` |
-| Patch images | `data/ndb_ufes/patch_level/images/` |
-| Model registry | `scripts/src/phase1/config.yaml` |
-| Optional environment credentials | `.env` with `HUGGINGFACE_TOKEN` or compatible HuggingFace token variables |
-
-Expected current data cardinality is 203 matched origins and 3,086 patch rows.
-
-## Outputs
-
-| Output | Path |
-| --- | --- |
-| Origin-patch mapping | `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv` |
-| Embedding dictionaries | `data/embeddings/embeddings_wsi_level_{model}_{timestamp}.pkl` |
-| Temporary feature cache | `results/phase1_feature_cache/` |
-| Run metadata | `results/phase1_metadata/master_runs.json` |
-| Human summary | `results/phase1_metadata/runs_summary.txt` |
-
-Each embedding dictionary is keyed by `origin_id`; each value is a NumPy array with shape `(patch_count_for_origin, model_output_dim)`.
-
-## Preprocessing Contract
-
-Every backbone uses the preprocessing declared in `config.yaml`: resize size, optional crop size, interpolation, normalization mean, and normalization standard deviation. The pipeline does not apply one universal ImageNet normalization to every model.
-
-Extraction methods are registry-driven:
-
-| Method | Behavior |
-| --- | --- |
-| `cls_token` | Use the transformer CLS token. |
-| `cls_mean_concat` | Concatenate CLS token and mean patch-token embedding; used by Virchow. |
-| `global_avg_pool` | Average CNN feature maps or transformer token features. |
-
-The cache fingerprint includes model ID, preprocessing, output dimension, extraction method, and normalization settings so stale features from another preprocessing contract are not reused.
+| `model_id` | Source model identifier. |
+| `source` | Model provider or loader family. |
+| `output_dim` | Expected feature dimension. |
+| `extract_method` | Feature pooling method. |
+| `preprocessing` | Resize, crop, interpolation, mean, and standard deviation. |
 
 ## Run
 
@@ -58,29 +189,7 @@ The cache fingerprint includes model ID, preprocessing, output dimension, extrac
 uv run python scripts/phase1.py
 ```
 
-The current completed run extracted all configured models and created embeddings for all 203 origins and 3,086 patches. See [Phase 1 Results](phase1-results.md) for the current artifact summary.
-
-## Manual Use
-
-```python
-from src.phase1.extraction_func import (
-    create_origin_patch_mapping,
-    extract_wsi_level_features,
-)
-
-mapping = create_origin_patch_mapping(
-    source_csv_path="data/ndb_ufes/patch/parcial_pndb_ufes.csv",
-    patch_image_dir="data/ndb_ufes/patch_level/images",
-    output_csv_path="data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv",
-)
-
-embedding_path = extract_wsi_level_features(
-    model_name="virchow",
-    origin_patch_mapping=mapping,
-    batch_size=32,
-    device="mps",
-)
-```
+See [Phase 1 Results](phase1-results.md) for the current artifact summary.
 
 ## Audit Checklist
 
@@ -88,15 +197,7 @@ embedding_path = extract_wsi_level_features(
 - Saved embeddings contain the same 203 origin keys.
 - Total embedded patch arrays sum to 3,086 patches.
 - The metadata tracker records each configured model run.
-- HuggingFace-gated models use accepted model terms and a valid token.
-- Feature cache lives under `results/phase1_feature_cache/`, not an unrelated local disk cache.
-
-## Troubleshooting
-
-If model downloads fail, confirm HuggingFace terms are accepted for gated models and that `.env` or the shell contains a valid token.
-
-If extraction runs out of memory, reduce `BATCH_SIZE` in `scripts/phase1.py` or pass a smaller batch size to `run()`.
-
-If embeddings look incompatible with a model, clear `results/phase1_feature_cache/` and rerun; cache keys should normally prevent this, but clearing the cache is the quickest sanity reset.
+- Hugging Face gated models use accepted model terms and a valid token.
+- Feature cache lives under `results/phase1_feature_cache/`.
 
 **Last verified**: 29 June 2026.
