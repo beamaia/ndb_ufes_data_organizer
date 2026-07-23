@@ -1,0 +1,238 @@
+origin_id,origin_number,origin_image_path,has_accepted_patches,accepted_patch_count,patchless_priority,diagnosis,TaskII,TaskIII,TaskIV,dysplasia_severity,patient_id,lesion_id
+0016,16,data/ndb_ufes/origin_level/images/0016.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,129
+0017,17,data/ndb_ufes/origin_level/images/0017.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,129
+0027,27,data/ndb_ufes/origin_level/images/0027.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,63,68
+0040,40,data/ndb_ufes/origin_level/images/0040.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,84
+0044,44,data/ndb_ufes/origin_level/images/0044.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106
+0045,45,data/ndb_ufes/origin_level/images/0045.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106
+0118,118,data/ndb_ufes/origin_level/images/0118.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,56,59
+0124,124,data/ndb_ufes/origin_level/images/0124.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0125,125,data/ndb_ufes/origin_level/images/0125.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0127,127,data/ndb_ufes/origin_level/images/0127.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0145,145,data/ndb_ufes/origin_level/images/0145.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0146,146,data/ndb_ufes/origin_level/images/0146.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0167,167,data/ndb_ufes/origin_level/images/0167.png,False,0,0,OSCC,OSCC,Presence,OSCC,,11,12
+0193,193,data/ndb_ufes/origin_level/images/0193.png,False,0,0,OSCC,OSCC,Presence,OSCC,,36,38
+0217,217,data/ndb_ufes/origin_level/images/0217.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,123
+0218,218,data/ndb_ufes/origin_level/images/0218.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,123
+0219,219,data/ndb_ufes/origin_level/images/0219.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,124
+0220,220,data/ndb_ufes/origin_level/images/0220.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,124
+0221,221,data/ndb_ufes/origin_level/images/0221.png,False,0,0,OSCC,OSCC,Presence,OSCC,,160,190
+0222,222,data/ndb_ufes/origin_level/images/0222.png,False,0,0,OSCC,OSCC,Presence,OSCC,,160,190
+0223,223,data/ndb_ufes/origin_level/images/0223.png,False,0,0,OSCC,OSCC,Presence,OSCC,,161,191
+0224,224,data/ndb_ufes/origin_level/images/0224.png,False,0,0,OSCC,OSCC,Presence,OSCC,,161,191
+0225,225,data/ndb_ufes/origin_level/images/0225.png,False,0,0,OSCC,OSCC,Presence,OSCC,,162,192
+0226,226,data/ndb_ufes/origin_level/images/0226.png,False,0,0,OSCC,OSCC,Presence,OSCC,,162,192
+0227,227,data/ndb_ufes/origin_level/images/0227.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,163,193
+0228,228,data/ndb_ufes/origin_level/images/0228.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,163,193
+0229,229,data/ndb_ufes/origin_level/images/0229.png,False,0,0,OSCC,OSCC,Presence,OSCC,,164,194
+0230,230,data/ndb_ufes/origin_level/images/0230.png,False,0,0,OSCC,OSCC,Presence,OSCC,,164,194
+0231,231,data/ndb_ufes/origin_level/images/0231.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,165,195
+0232,232,data/ndb_ufes/origin_level/images/0232.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,165,195
+0233,233,data/ndb_ufes/origin_level/images/0233.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,215
+0234,234,data/ndb_ufes/origin_level/images/0234.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,215
+0235,235,data/ndb_ufes/origin_level/images/0235.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,216
+0236,236,data/ndb_ufes/origin_level/images/0236.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,216
+0000,0,data/ndb_ufes/origin_level/images/0000.png,True,20,1,OSCC,OSCC,Presence,OSCC,,48,50
+0001,1,data/ndb_ufes/origin_level/images/0001.png,True,20,1,OSCC,OSCC,Presence,OSCC,,48,50
+0002,2,data/ndb_ufes/origin_level/images/0002.png,True,15,1,OSCC,OSCC,Presence,OSCC,,39,41
+0003,3,data/ndb_ufes/origin_level/images/0003.png,True,20,1,OSCC,OSCC,Presence,OSCC,,39,41
+0004,4,data/ndb_ufes/origin_level/images/0004.png,True,17,1,OSCC,OSCC,Presence,OSCC,,81,87
+0005,5,data/ndb_ufes/origin_level/images/0005.png,True,20,1,OSCC,OSCC,Presence,OSCC,,81,87
+0006,6,data/ndb_ufes/origin_level/images/0006.png,True,11,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,103
+0007,7,data/ndb_ufes/origin_level/images/0007.png,True,14,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,103
+0008,8,data/ndb_ufes/origin_level/images/0008.png,True,19,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,103
+0009,9,data/ndb_ufes/origin_level/images/0009.png,True,16,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,103
+0010,10,data/ndb_ufes/origin_level/images/0010.png,True,45,1,OSCC,OSCC,Presence,OSCC,,14,101
+0011,11,data/ndb_ufes/origin_level/images/0011.png,True,64,1,OSCC,OSCC,Presence,OSCC,,14,101
+0012,12,data/ndb_ufes/origin_level/images/0012.png,True,16,1,OSCC,OSCC,Presence,OSCC,,14,101
+0013,13,data/ndb_ufes/origin_level/images/0013.png,True,10,1,OSCC,OSCC,Presence,OSCC,,14,101
+0014,14,data/ndb_ufes/origin_level/images/0014.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,52,54
+0015,15,data/ndb_ufes/origin_level/images/0015.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,52,54
+0018,18,data/ndb_ufes/origin_level/images/0018.png,True,10,1,OSCC,OSCC,Presence,OSCC,,10,11
+0019,19,data/ndb_ufes/origin_level/images/0019.png,True,20,1,OSCC,OSCC,Presence,OSCC,,10,11
+0020,20,data/ndb_ufes/origin_level/images/0020.png,True,20,1,OSCC,OSCC,Presence,OSCC,,10,11
+0021,21,data/ndb_ufes/origin_level/images/0021.png,True,20,1,OSCC,OSCC,Presence,OSCC,,10,11
+0022,22,data/ndb_ufes/origin_level/images/0022.png,True,5,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,20,22
+0023,23,data/ndb_ufes/origin_level/images/0023.png,True,14,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,20,22
+0024,24,data/ndb_ufes/origin_level/images/0024.png,True,4,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,63,68
+0025,25,data/ndb_ufes/origin_level/images/0025.png,True,17,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,63,68
+0026,26,data/ndb_ufes/origin_level/images/0026.png,True,8,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,63,68
+0028,28,data/ndb_ufes/origin_level/images/0028.png,True,11,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,55,58
+0029,29,data/ndb_ufes/origin_level/images/0029.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,55,58
+0030,30,data/ndb_ufes/origin_level/images/0030.png,True,15,1,OSCC,OSCC,Presence,OSCC,,71,77
+0031,31,data/ndb_ufes/origin_level/images/0031.png,True,14,1,OSCC,OSCC,Presence,OSCC,,71,77
+0032,32,data/ndb_ufes/origin_level/images/0032.png,True,2,1,OSCC,OSCC,Presence,OSCC,,31,102
+0033,33,data/ndb_ufes/origin_level/images/0033.png,True,17,1,OSCC,OSCC,Presence,OSCC,,31,102
+0034,34,data/ndb_ufes/origin_level/images/0034.png,True,12,1,OSCC,OSCC,Presence,OSCC,,31,33
+0035,35,data/ndb_ufes/origin_level/images/0035.png,True,20,1,OSCC,OSCC,Presence,OSCC,,31,33
+0036,36,data/ndb_ufes/origin_level/images/0036.png,True,2,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,90,96
+0037,37,data/ndb_ufes/origin_level/images/0037.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,90,96
+0038,38,data/ndb_ufes/origin_level/images/0038.png,True,13,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,90,96
+0039,39,data/ndb_ufes/origin_level/images/0039.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,90,96
+0041,41,data/ndb_ufes/origin_level/images/0041.png,True,37,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,84
+0042,42,data/ndb_ufes/origin_level/images/0042.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106
+0043,43,data/ndb_ufes/origin_level/images/0043.png,True,19,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106
+0046,46,data/ndb_ufes/origin_level/images/0046.png,True,18,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,51,53
+0047,47,data/ndb_ufes/origin_level/images/0047.png,True,3,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,51,53
+0048,48,data/ndb_ufes/origin_level/images/0048.png,True,12,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,88
+0049,49,data/ndb_ufes/origin_level/images/0049.png,True,4,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,88
+0050,50,data/ndb_ufes/origin_level/images/0050.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,130
+0051,51,data/ndb_ufes/origin_level/images/0051.png,True,14,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,130
+0052,52,data/ndb_ufes/origin_level/images/0052.png,True,15,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,130
+0053,53,data/ndb_ufes/origin_level/images/0053.png,True,13,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,82,130
+0054,54,data/ndb_ufes/origin_level/images/0054.png,True,6,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,13,15
+0055,55,data/ndb_ufes/origin_level/images/0055.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,13,15
+0056,56,data/ndb_ufes/origin_level/images/0056.png,True,5,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,13,15
+0057,57,data/ndb_ufes/origin_level/images/0057.png,True,9,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,13,15
+0058,58,data/ndb_ufes/origin_level/images/0058.png,True,15,1,OSCC,OSCC,Presence,OSCC,,60,64
+0059,59,data/ndb_ufes/origin_level/images/0059.png,True,8,1,OSCC,OSCC,Presence,OSCC,,60,64
+0060,60,data/ndb_ufes/origin_level/images/0060.png,True,8,1,OSCC,OSCC,Presence,OSCC,,60,104
+0061,61,data/ndb_ufes/origin_level/images/0061.png,True,20,1,OSCC,OSCC,Presence,OSCC,,60,104
+0062,62,data/ndb_ufes/origin_level/images/0062.png,True,17,1,OSCC,OSCC,Presence,OSCC,,60,104
+0063,63,data/ndb_ufes/origin_level/images/0063.png,True,20,1,OSCC,OSCC,Presence,OSCC,,60,104
+0064,64,data/ndb_ufes/origin_level/images/0064.png,True,20,1,OSCC,OSCC,Presence,OSCC,,60,104
+0065,65,data/ndb_ufes/origin_level/images/0065.png,True,20,1,OSCC,OSCC,Presence,OSCC,,60,104
+0066,66,data/ndb_ufes/origin_level/images/0066.png,True,20,1,OSCC,OSCC,Presence,OSCC,,22,24
+0067,67,data/ndb_ufes/origin_level/images/0067.png,True,20,1,OSCC,OSCC,Presence,OSCC,,22,24
+0068,68,data/ndb_ufes/origin_level/images/0068.png,True,14,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,67,73
+0069,69,data/ndb_ufes/origin_level/images/0069.png,True,16,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,67,73
+0070,70,data/ndb_ufes/origin_level/images/0070.png,True,13,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,67,73
+0071,71,data/ndb_ufes/origin_level/images/0071.png,True,20,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,67,73
+0072,72,data/ndb_ufes/origin_level/images/0072.png,True,17,1,OSCC,OSCC,Presence,OSCC,,28,31
+0073,73,data/ndb_ufes/origin_level/images/0073.png,True,18,1,OSCC,OSCC,Presence,OSCC,,28,31
+0074,74,data/ndb_ufes/origin_level/images/0074.png,True,15,1,OSCC,OSCC,Presence,OSCC,,28,31
+0075,75,data/ndb_ufes/origin_level/images/0075.png,True,20,1,OSCC,OSCC,Presence,OSCC,,28,31
+0076,76,data/ndb_ufes/origin_level/images/0076.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,27,30
+0077,77,data/ndb_ufes/origin_level/images/0077.png,True,19,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,27,30
+0078,78,data/ndb_ufes/origin_level/images/0078.png,True,13,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,40,42
+0079,79,data/ndb_ufes/origin_level/images/0079.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,40,42
+0080,80,data/ndb_ufes/origin_level/images/0080.png,True,10,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,6,6
+0081,81,data/ndb_ufes/origin_level/images/0081.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,6,6
+0082,82,data/ndb_ufes/origin_level/images/0082.png,True,11,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,25,27
+0083,83,data/ndb_ufes/origin_level/images/0083.png,True,11,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,25,27
+0084,84,data/ndb_ufes/origin_level/images/0084.png,True,12,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,25,27
+0085,85,data/ndb_ufes/origin_level/images/0085.png,True,12,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,25,27
+0086,86,data/ndb_ufes/origin_level/images/0086.png,True,3,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,25,27
+0087,87,data/ndb_ufes/origin_level/images/0087.png,True,2,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0088,88,data/ndb_ufes/origin_level/images/0088.png,True,16,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0089,89,data/ndb_ufes/origin_level/images/0089.png,True,7,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0090,90,data/ndb_ufes/origin_level/images/0090.png,True,14,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0091,91,data/ndb_ufes/origin_level/images/0091.png,True,15,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0092,92,data/ndb_ufes/origin_level/images/0092.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0093,93,data/ndb_ufes/origin_level/images/0093.png,True,10,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0094,94,data/ndb_ufes/origin_level/images/0094.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,72,78
+0095,95,data/ndb_ufes/origin_level/images/0095.png,True,11,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,16,18
+0096,96,data/ndb_ufes/origin_level/images/0096.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,16,18
+0097,97,data/ndb_ufes/origin_level/images/0097.png,True,20,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,16,18
+0098,98,data/ndb_ufes/origin_level/images/0098.png,True,16,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,16,18
+0099,99,data/ndb_ufes/origin_level/images/0099.png,True,18,1,OSCC,OSCC,Presence,OSCC,,77,83
+0100,100,data/ndb_ufes/origin_level/images/0100.png,True,7,1,OSCC,OSCC,Presence,OSCC,,77,83
+0101,101,data/ndb_ufes/origin_level/images/0101.png,True,13,1,OSCC,OSCC,Presence,OSCC,,77,83
+0102,102,data/ndb_ufes/origin_level/images/0102.png,True,18,1,OSCC,OSCC,Presence,OSCC,,77,83
+0103,103,data/ndb_ufes/origin_level/images/0103.png,True,20,1,OSCC,OSCC,Presence,OSCC,,68,74
+0104,104,data/ndb_ufes/origin_level/images/0104.png,True,20,1,OSCC,OSCC,Presence,OSCC,,68,74
+0105,105,data/ndb_ufes/origin_level/images/0105.png,True,4,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,89,95
+0106,106,data/ndb_ufes/origin_level/images/0106.png,True,4,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,89,95
+0107,107,data/ndb_ufes/origin_level/images/0107.png,True,16,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,89,95
+0108,108,data/ndb_ufes/origin_level/images/0108.png,True,15,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,89,95
+0109,109,data/ndb_ufes/origin_level/images/0109.png,True,15,1,OSCC,OSCC,Presence,OSCC,,58,62
+0110,110,data/ndb_ufes/origin_level/images/0110.png,True,20,1,OSCC,OSCC,Presence,OSCC,,58,62
+0111,111,data/ndb_ufes/origin_level/images/0111.png,True,20,1,OSCC,OSCC,Presence,OSCC,,58,62
+0112,112,data/ndb_ufes/origin_level/images/0112.png,True,20,1,OSCC,OSCC,Presence,OSCC,,58,62
+0113,113,data/ndb_ufes/origin_level/images/0113.png,True,20,1,OSCC,OSCC,Presence,OSCC,,53,56
+0114,114,data/ndb_ufes/origin_level/images/0114.png,True,20,1,OSCC,OSCC,Presence,OSCC,,53,56
+0115,115,data/ndb_ufes/origin_level/images/0115.png,True,20,1,OSCC,OSCC,Presence,OSCC,,53,56
+0116,116,data/ndb_ufes/origin_level/images/0116.png,True,20,1,OSCC,OSCC,Presence,OSCC,,53,56
+0117,117,data/ndb_ufes/origin_level/images/0117.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,56,59
+0119,119,data/ndb_ufes/origin_level/images/0119.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,56,59
+0120,120,data/ndb_ufes/origin_level/images/0120.png,True,13,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,1,1
+0121,121,data/ndb_ufes/origin_level/images/0121.png,True,5,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,1,1
+0122,122,data/ndb_ufes/origin_level/images/0122.png,True,16,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,1,1
+0123,123,data/ndb_ufes/origin_level/images/0123.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,1,1
+0126,126,data/ndb_ufes/origin_level/images/0126.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0128,128,data/ndb_ufes/origin_level/images/0128.png,True,7,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0129,129,data/ndb_ufes/origin_level/images/0129.png,True,2,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0130,130,data/ndb_ufes/origin_level/images/0130.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0131,131,data/ndb_ufes/origin_level/images/0131.png,True,13,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47
+0132,132,data/ndb_ufes/origin_level/images/0132.png,True,20,1,OSCC,OSCC,Presence,OSCC,,43,45
+0133,133,data/ndb_ufes/origin_level/images/0133.png,True,20,1,OSCC,OSCC,Presence,OSCC,,43,45
+0134,134,data/ndb_ufes/origin_level/images/0134.png,True,20,1,OSCC,OSCC,Presence,OSCC,,43,45
+0135,135,data/ndb_ufes/origin_level/images/0135.png,True,20,1,OSCC,OSCC,Presence,OSCC,,43,45
+0136,136,data/ndb_ufes/origin_level/images/0136.png,True,15,1,OSCC,OSCC,Presence,OSCC,,79,85
+0137,137,data/ndb_ufes/origin_level/images/0137.png,True,17,1,OSCC,OSCC,Presence,OSCC,,79,85
+0138,138,data/ndb_ufes/origin_level/images/0138.png,True,20,1,OSCC,OSCC,Presence,OSCC,,79,85
+0139,139,data/ndb_ufes/origin_level/images/0139.png,True,19,1,OSCC,OSCC,Presence,OSCC,,79,85
+0140,140,data/ndb_ufes/origin_level/images/0140.png,True,6,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,62,67
+0141,141,data/ndb_ufes/origin_level/images/0141.png,True,12,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,62,67
+0142,142,data/ndb_ufes/origin_level/images/0142.png,True,4,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0143,143,data/ndb_ufes/origin_level/images/0143.png,True,16,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0144,144,data/ndb_ufes/origin_level/images/0144.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0147,147,data/ndb_ufes/origin_level/images/0147.png,True,6,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23
+0148,148,data/ndb_ufes/origin_level/images/0148.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,29,107
+0149,149,data/ndb_ufes/origin_level/images/0149.png,True,14,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,29,107
+0150,150,data/ndb_ufes/origin_level/images/0150.png,True,14,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,74,80
+0151,151,data/ndb_ufes/origin_level/images/0151.png,True,10,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,74,80
+0152,152,data/ndb_ufes/origin_level/images/0152.png,True,13,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,74,80
+0153,153,data/ndb_ufes/origin_level/images/0153.png,True,7,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,74,80
+0154,154,data/ndb_ufes/origin_level/images/0154.png,True,7,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,88,94
+0155,155,data/ndb_ufes/origin_level/images/0155.png,True,2,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,88,94
+0156,156,data/ndb_ufes/origin_level/images/0156.png,True,18,1,OSCC,OSCC,Presence,OSCC,,84,90
+0157,157,data/ndb_ufes/origin_level/images/0157.png,True,20,1,OSCC,OSCC,Presence,OSCC,,84,90
+0158,158,data/ndb_ufes/origin_level/images/0158.png,True,12,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,0,0
+0159,159,data/ndb_ufes/origin_level/images/0159.png,True,17,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,0,0
+0160,160,data/ndb_ufes/origin_level/images/0160.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,30,32
+0161,161,data/ndb_ufes/origin_level/images/0161.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,30,32
+0162,162,data/ndb_ufes/origin_level/images/0162.png,True,9,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,30,32
+0163,163,data/ndb_ufes/origin_level/images/0163.png,True,20,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,30,32
+0164,164,data/ndb_ufes/origin_level/images/0164.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,49,51
+0165,165,data/ndb_ufes/origin_level/images/0165.png,True,15,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,49,51
+0166,166,data/ndb_ufes/origin_level/images/0166.png,True,20,1,OSCC,OSCC,Presence,OSCC,,11,12
+0168,168,data/ndb_ufes/origin_level/images/0168.png,True,20,1,OSCC,OSCC,Presence,OSCC,,34,36
+0169,169,data/ndb_ufes/origin_level/images/0169.png,True,20,1,OSCC,OSCC,Presence,OSCC,,34,36
+0170,170,data/ndb_ufes/origin_level/images/0170.png,True,20,1,OSCC,OSCC,Presence,OSCC,,34,36
+0171,171,data/ndb_ufes/origin_level/images/0171.png,True,11,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,80,86
+0172,172,data/ndb_ufes/origin_level/images/0172.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,80,86
+0173,173,data/ndb_ufes/origin_level/images/0173.png,True,4,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,66,72
+0174,174,data/ndb_ufes/origin_level/images/0174.png,True,17,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,66,72
+0175,175,data/ndb_ufes/origin_level/images/0175.png,True,19,1,OSCC,OSCC,Presence,OSCC,,83,89
+0176,176,data/ndb_ufes/origin_level/images/0176.png,True,18,1,OSCC,OSCC,Presence,OSCC,,83,89
+0177,177,data/ndb_ufes/origin_level/images/0177.png,True,20,1,OSCC,OSCC,Presence,OSCC,,83,89
+0178,178,data/ndb_ufes/origin_level/images/0178.png,True,20,1,OSCC,OSCC,Presence,OSCC,,83,89
+0179,179,data/ndb_ufes/origin_level/images/0179.png,True,19,1,OSCC,OSCC,Presence,OSCC,,83,89
+0180,180,data/ndb_ufes/origin_level/images/0180.png,True,20,1,OSCC,OSCC,Presence,OSCC,,83,89
+0181,181,data/ndb_ufes/origin_level/images/0181.png,True,1,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,26
+0182,182,data/ndb_ufes/origin_level/images/0182.png,True,16,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,26
+0183,183,data/ndb_ufes/origin_level/images/0183.png,True,17,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,85,91
+0184,184,data/ndb_ufes/origin_level/images/0184.png,True,12,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,85,91
+0185,185,data/ndb_ufes/origin_level/images/0185.png,True,1,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0186,186,data/ndb_ufes/origin_level/images/0186.png,True,16,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0187,187,data/ndb_ufes/origin_level/images/0187.png,True,18,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0188,188,data/ndb_ufes/origin_level/images/0188.png,True,18,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0189,189,data/ndb_ufes/origin_level/images/0189.png,True,4,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0190,190,data/ndb_ufes/origin_level/images/0190.png,True,7,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,54,57
+0191,191,data/ndb_ufes/origin_level/images/0191.png,True,16,1,OSCC,OSCC,Presence,OSCC,,36,38
+0192,192,data/ndb_ufes/origin_level/images/0192.png,True,20,1,OSCC,OSCC,Presence,OSCC,,36,38
+0194,194,data/ndb_ufes/origin_level/images/0194.png,True,20,1,OSCC,OSCC,Presence,OSCC,,36,38
+0195,195,data/ndb_ufes/origin_level/images/0195.png,True,7,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,65,70
+0196,196,data/ndb_ufes/origin_level/images/0196.png,True,11,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,65,70
+0197,197,data/ndb_ufes/origin_level/images/0197.png,True,19,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,65,70
+0198,198,data/ndb_ufes/origin_level/images/0198.png,True,10,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,65,70
+0199,199,data/ndb_ufes/origin_level/images/0199.png,True,15,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,69,75
+0200,200,data/ndb_ufes/origin_level/images/0200.png,True,18,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,69,75
+0201,201,data/ndb_ufes/origin_level/images/0201.png,True,16,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,12,131
+0202,202,data/ndb_ufes/origin_level/images/0202.png,True,11,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,12,131
+0203,203,data/ndb_ufes/origin_level/images/0203.png,True,19,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,50,52
+0204,204,data/ndb_ufes/origin_level/images/0204.png,True,17,1,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,50,52
+0205,205,data/ndb_ufes/origin_level/images/0205.png,True,19,1,OSCC,OSCC,Presence,OSCC,,18,20
+0206,206,data/ndb_ufes/origin_level/images/0206.png,True,20,1,OSCC,OSCC,Presence,OSCC,,18,20
+0207,207,data/ndb_ufes/origin_level/images/0207.png,True,20,1,OSCC,OSCC,Presence,OSCC,,18,20
+0208,208,data/ndb_ufes/origin_level/images/0208.png,True,20,1,OSCC,OSCC,Presence,OSCC,,18,20
+0209,209,data/ndb_ufes/origin_level/images/0209.png,True,20,1,OSCC,OSCC,Presence,OSCC,,18,20
+0210,210,data/ndb_ufes/origin_level/images/0210.png,True,20,1,OSCC,OSCC,Presence,OSCC,,18,20
+0211,211,data/ndb_ufes/origin_level/images/0211.png,True,20,1,OSCC,OSCC,Presence,OSCC,,92,98
+0212,212,data/ndb_ufes/origin_level/images/0212.png,True,18,1,OSCC,OSCC,Presence,OSCC,,92,98
+0213,213,data/ndb_ufes/origin_level/images/0213.png,True,17,1,OSCC,OSCC,Presence,OSCC,,92,98
+0214,214,data/ndb_ufes/origin_level/images/0214.png,True,16,1,OSCC,OSCC,Presence,OSCC,,92,98
+0215,215,data/ndb_ufes/origin_level/images/0215.png,True,9,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,35,37
+0216,216,data/ndb_ufes/origin_level/images/0216.png,True,15,1,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,35,37

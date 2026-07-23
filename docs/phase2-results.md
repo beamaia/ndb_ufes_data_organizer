@@ -50,13 +50,13 @@ These plots are explained for readers without a clustering background on [Phase 
 
 | Artifact | Purpose |
 | --- | --- |
-| `results/phase2_tuning/phase2_model_selection.csv` | One-row-per-model selection summary. |
-| `results/phase2_tuning/clustering_params_{model}.json` | Accepted parameters or rejection diagnostics for each model. |
+| `results/phase2/tuning/phase2_model_selection.csv` | One-row-per-model selection summary. |
+| `results/phase2/tuning/clustering_params_{model}.json` | Accepted parameters or rejection diagnostics for each model. |
 | `clustering_params.json` | Global accepted selection consumed by Phase 3. |
 | `docs/phase2-tuning-diagnostics.md` | Website page with the full Phase 2 tuning diagnostic figures. |
 | `docs/assets/generated/phase2_model_selection.png` | Static documentation figure. |
-| `results/thesis_figures/phase2_model_selection.svg` | Thesis-ready vector export. |
-| `results/thesis_figures/phase2_model_selection.pdf` | Thesis-ready PDF export. |
+| `results/phase4/thesis_figures/phase2_model_selection.svg` | Thesis-ready vector export. |
+| `results/phase4/thesis_figures/phase2_model_selection.pdf` | Thesis-ready PDF export. |
 
 ## Interpretation
 

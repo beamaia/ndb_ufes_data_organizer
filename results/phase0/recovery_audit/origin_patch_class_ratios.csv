@@ -1,0 +1,204 @@
+origin_id,Leukoplakia with dysplasia,Leukoplakia without dysplasia,OSCC,total_patches,ratio_Leukoplakia with dysplasia,ratio_Leukoplakia without dysplasia,ratio_OSCC,n_patch_classes,has_multiple_patch_classes,dominant_class,dominant_class_ratio
+0011,0,0,64,64,0.0,0.0,1.0,1,False,OSCC,1.0
+0010,0,0,45,45,0.0,0.0,1.0,1,False,OSCC,1.0
+0041,37,0,0,37,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0000,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0001,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0003,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0005,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0014,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0015,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0019,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0020,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0021,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0035,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0037,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0039,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0055,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0061,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0063,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0064,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0065,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0066,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0067,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0071,0,20,0,20,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0075,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0079,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0097,0,20,0,20,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0103,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0104,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0110,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0111,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0112,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0113,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0114,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0115,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0116,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0126,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0130,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0132,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0133,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0134,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0135,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0138,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0157,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0161,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0163,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0166,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0168,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0169,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0170,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0177,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0178,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0180,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0192,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0194,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0206,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0207,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0208,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0209,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0210,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0211,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0008,19,0,0,19,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0043,19,0,0,19,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0077,19,0,0,19,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0081,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0092,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0094,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0096,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0139,0,0,19,19,0.0,0.0,1.0,1,False,OSCC,1.0
+0144,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0175,0,0,19,19,0.0,0.0,1.0,1,False,OSCC,1.0
+0179,0,0,19,19,0.0,0.0,1.0,1,False,OSCC,1.0
+0197,19,0,0,19,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0203,0,19,0,19,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0205,0,0,19,19,0.0,0.0,1.0,1,False,OSCC,1.0
+0046,0,18,0,18,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0073,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0099,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0102,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0156,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0176,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0187,18,0,0,18,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0188,18,0,0,18,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0200,0,18,0,18,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0212,0,0,18,18,0.0,0.0,1.0,1,False,OSCC,1.0
+0004,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0025,0,17,0,17,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0029,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0033,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0042,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0050,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0062,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0072,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0123,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0137,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0159,0,17,0,17,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0160,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0172,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0174,17,0,0,17,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0183,0,17,0,17,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0204,0,17,0,17,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0213,0,0,17,17,0.0,0.0,1.0,1,False,OSCC,1.0
+0009,16,0,0,16,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0012,0,0,16,16,0.0,0.0,1.0,1,False,OSCC,1.0
+0069,0,16,0,16,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0088,0,16,0,16,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0098,0,16,0,16,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0107,16,0,0,16,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0122,16,0,0,16,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0143,0,16,0,16,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0182,16,0,0,16,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0186,16,0,0,16,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0191,0,0,16,16,0.0,0.0,1.0,1,False,OSCC,1.0
+0201,0,16,0,16,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0214,0,0,16,16,0.0,0.0,1.0,1,False,OSCC,1.0
+0002,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0030,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0052,15,0,0,15,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0058,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0074,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0091,0,15,0,15,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0108,15,0,0,15,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0109,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0136,0,0,15,15,0.0,0.0,1.0,1,False,OSCC,1.0
+0165,15,0,0,15,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0199,0,15,0,15,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0216,15,0,0,15,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0007,14,0,0,14,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0023,0,14,0,14,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0031,0,0,14,14,0.0,0.0,1.0,1,False,OSCC,1.0
+0051,14,0,0,14,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0068,0,14,0,14,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0090,0,14,0,14,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0149,14,0,0,14,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0150,0,14,0,14,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0038,13,0,0,13,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0053,13,0,0,13,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0070,0,13,0,13,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0078,13,0,0,13,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0101,0,0,13,13,0.0,0.0,1.0,1,False,OSCC,1.0
+0120,13,0,0,13,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0131,13,0,0,13,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0152,0,13,0,13,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0034,0,0,12,12,0.0,0.0,1.0,1,False,OSCC,1.0
+0048,12,0,0,12,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0084,0,12,0,12,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0085,0,12,0,12,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0141,0,12,0,12,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0158,0,12,0,12,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0184,0,12,0,12,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0006,11,0,0,11,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0028,11,0,0,11,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0082,0,11,0,11,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0083,0,11,0,11,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0095,0,11,0,11,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0171,11,0,0,11,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0196,11,0,0,11,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0202,0,11,0,11,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0013,0,0,10,10,0.0,0.0,1.0,1,False,OSCC,1.0
+0018,0,0,10,10,0.0,0.0,1.0,1,False,OSCC,1.0
+0076,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0080,0,10,0,10,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0093,0,10,0,10,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0117,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0119,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0148,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0151,0,10,0,10,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0164,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0198,10,0,0,10,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0057,9,0,0,9,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0162,9,0,0,9,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0215,9,0,0,9,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0026,0,8,0,8,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0059,0,0,8,8,0.0,0.0,1.0,1,False,OSCC,1.0
+0060,0,0,8,8,0.0,0.0,1.0,1,False,OSCC,1.0
+0089,0,7,0,7,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0100,0,0,7,7,0.0,0.0,1.0,1,False,OSCC,1.0
+0128,7,0,0,7,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0153,0,7,0,7,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0154,7,0,0,7,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0190,7,0,0,7,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0195,7,0,0,7,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0054,6,0,0,6,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0140,0,6,0,6,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0147,0,6,0,6,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0022,0,5,0,5,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0056,5,0,0,5,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0121,5,0,0,5,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0024,0,4,0,4,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0049,4,0,0,4,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0105,4,0,0,4,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0106,4,0,0,4,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0142,0,4,0,4,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0173,4,0,0,4,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0189,4,0,0,4,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0047,0,3,0,3,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0086,0,3,0,3,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0032,0,0,2,2,0.0,0.0,1.0,1,False,OSCC,1.0
+0036,2,0,0,2,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0087,0,2,0,2,0.0,1.0,0.0,1,False,Leukoplakia without dysplasia,1.0
+0129,2,0,0,2,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0155,2,0,0,2,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0181,1,0,0,1,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0185,1,0,0,1,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0

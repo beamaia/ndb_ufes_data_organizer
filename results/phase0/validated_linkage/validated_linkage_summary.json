@@ -1,0 +1,22 @@
+{
+  "evidence_level_counts": {
+    "validated_exact_public_wsi": 1736,
+    "validated_exact_sab_only": 538,
+    "validated_exact_with_metadata_conflict": 1489
+  },
+  "label_agreement_counts": {
+    "agrees": 3763
+  },
+  "patches": 3763,
+  "patches_missing_from_current_reconstructed_metadata": 677,
+  "patches_requiring_manual_review": 0,
+  "patches_where_current_metadata_label_differs_from_complete_patch_label": 1328,
+  "patches_with_coordinates": 3763,
+  "patches_with_final_wsi_id": 3763,
+  "patches_with_metadata_conflict": 1489,
+  "patches_with_unavailable_patch_label": 0,
+  "same_wsi_patch_pairs": 29350,
+  "validated_wsi_count": 251,
+  "validated_wsi_sab_only": 48,
+  "validated_wsi_with_public_ndb_match": 203
+}

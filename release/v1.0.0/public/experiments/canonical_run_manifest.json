@@ -1,0 +1,631 @@
+{
+  "schema_version": 1,
+  "release": "v1.0.0",
+  "privacy_mode": "public_sanitized",
+  "generation_mode": "verified_from_stored_records_without_retraining",
+  "experiment_contract": {
+    "canonical_experiments": [
+      "Experiment 1",
+      "Experiment 2"
+    ],
+    "canonical_models": [
+      "MobileNetV2",
+      "DenseNet-121",
+      "ResNet-50"
+    ],
+    "exploratory_archive": "Batch 3 (Virchow-pruned)",
+    "metric_note": "Balanced accuracy equals macro recall for this multiclass definition; five checkpoints are evaluated on held-out fold 5."
+  },
+  "hyperparameters": {
+    "seed": 42,
+    "initialization": "ImageNet pretrained",
+    "training_mode": "full fine-tuning",
+    "loss": "weighted cross-entropy",
+    "optimizer": "SGD",
+    "learning_rate": 0.001,
+    "momentum": 0.9,
+    "batch_size": 30,
+    "epoch_ceiling": 150,
+    "scheduler": "ReduceLROnPlateau on validation loss",
+    "scheduler_factor": 0.1,
+    "scheduler_patience": 10,
+    "scheduler_min_lr": 1e-06,
+    "early_stopping_patience": 15,
+    "early_stopping_min_delta": 0.001
+  },
+  "provenance_limitation": "The completed historical runs were frozen without retraining. Four parents recorded base commit 648b708 with a dirty worktree; two parents recorded Git provenance as unavailable. The six parents therefore cannot all be attributed to one clean commit.",
+  "experiments": [
+    {
+      "id": "Experiment 1",
+      "batch": "batch1",
+      "split": "Original-comparable patch split",
+      "dataset_rows": 3763,
+      "dataset_sha256": "8c5df2eb6123ccea59a2f06932ea88abaa156b47de230d708c37b18aa19be567",
+      "cv_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "heldout_test_fold": 5,
+      "models": [
+        {
+          "model": "MobileNetV2",
+          "parent_run_id": "06429825d70c4664bd63c4b53e996a94",
+          "parent_run_name": "batch1_mobilenetv2_full_20260719_195146",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": "648b70866634abb3e0c7316016f07b6e3527883e",
+            "git_worktree_state": "dirty"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.905745702850042,
+            "balanced_accuracy_std": 0.005154697463220803,
+            "recall_mean": 0.905745702850042,
+            "recall_std": 0.005154697463220803,
+            "precision_mean": 0.8845737773057083,
+            "precision_std": 0.01095660769055894,
+            "macro_f1_mean": 0.893690170627751,
+            "macro_f1_std": 0.008074743168300405
+          },
+          "parent_duration_seconds": 10670.539,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "e1863162df3d4520a0e33dc09f59905d",
+              "status": "FINISHED",
+              "duration_seconds": 1955.335,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9066020459232128,
+                "macro_recall": 0.9066020459232128,
+                "macro_precision": 0.8772118346586432,
+                "macro_f1": 0.8891806093280675
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "f381cdb819b34dc184175d66044a3026",
+              "status": "FINISHED",
+              "duration_seconds": 1693.631,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9011168076797276,
+                "macro_recall": 0.9011168076797276,
+                "macro_precision": 0.8712802529974611,
+                "macro_f1": 0.883785874506653
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "07ad6b8be33e466297b0686d5cdd5b1a",
+              "status": "FINISHED",
+              "duration_seconds": 1456.764,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.8986889322621258,
+                "macro_recall": 0.8986889322621258,
+                "macro_precision": 0.8826616938305055,
+                "macro_f1": 0.8899817444951016
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "edd2b21655184885a694e40c5ec379be",
+              "status": "FINISHED",
+              "duration_seconds": 2596.657,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9100974884493893,
+                "macro_recall": 0.9100974884493893,
+                "macro_precision": 0.9033079566347834,
+                "macro_f1": 0.9065993740219094
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "f721c351477842a398073382f912924b",
+              "status": "FINISHED",
+              "duration_seconds": 2964.423,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9122232399357545,
+                "macro_recall": 0.9122232399357545,
+                "macro_precision": 0.8884071484071483,
+                "macro_f1": 0.8989032507870238
+              }
+            }
+          ]
+        },
+        {
+          "model": "DenseNet-121",
+          "parent_run_id": "871b5389e4214e01a6f7d6d61ed82e21",
+          "parent_run_name": "batch1_densenet121_full_20260720_031259",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": "648b70866634abb3e0c7316016f07b6e3527883e",
+            "git_worktree_state": "dirty"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.9171535834806891,
+            "balanced_accuracy_std": 0.004967458360282309,
+            "recall_mean": 0.9171535834806891,
+            "recall_std": 0.004967458360282309,
+            "precision_mean": 0.9015747262245469,
+            "precision_std": 0.004348785603539643,
+            "macro_f1_mean": 0.9086863580061484,
+            "macro_f1_std": 0.003952151397154929
+          },
+          "parent_duration_seconds": 22182.84,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "2f1251e8a4d54d5180d9f7afabb6490b",
+              "status": "FINISHED",
+              "duration_seconds": 4001.644,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9217187511435202,
+                "macro_recall": 0.9217187511435202,
+                "macro_precision": 0.8999881351200448,
+                "macro_f1": 0.9096852981424872
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "47db5182870b4db0abcf69245cc07886",
+              "status": "FINISHED",
+              "duration_seconds": 3713.799,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9148622267959908,
+                "macro_recall": 0.9148622267959908,
+                "macro_precision": 0.9007728758991901,
+                "macro_f1": 0.9073689519462342
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "918b2b689d0a4f1280aa0a6836a35504",
+              "status": "FINISHED",
+              "duration_seconds": 5094.896,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9127989642966451,
+                "macro_recall": 0.9127989642966451,
+                "macro_precision": 0.8948028315384876,
+                "macro_f1": 0.903046986219108
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "dd48ea5b9e3449fd92e017d815acf983",
+              "status": "FINISHED",
+              "duration_seconds": 4809.668,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.924364868879152,
+                "macro_recall": 0.924364868879152,
+                "macro_precision": 0.9074937388091838,
+                "macro_f1": 0.9152578827375576
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "f31947fd2105418bad063d142d3c7e15",
+              "status": "FINISHED",
+              "duration_seconds": 4558.64,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9120231062881373,
+                "macro_recall": 0.9120231062881373,
+                "macro_precision": 0.9048160497558285,
+                "macro_f1": 0.9080726709853547
+              }
+            }
+          ]
+        },
+        {
+          "model": "ResNet-50",
+          "parent_run_id": "42bffdc2d37d43818707164934fef82e",
+          "parent_run_name": "batch1_resnet50_full_20260720_031259",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": "648b70866634abb3e0c7316016f07b6e3527883e",
+            "git_worktree_state": "dirty"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.898599890146988,
+            "balanced_accuracy_std": 0.011211570220386264,
+            "recall_mean": 0.898599890146988,
+            "recall_std": 0.011211570220386264,
+            "precision_mean": 0.8831941700507924,
+            "precision_std": 0.009809857089774623,
+            "macro_f1_mean": 0.8897567635829489,
+            "macro_f1_std": 0.009516517139984635
+          },
+          "parent_duration_seconds": 18670.293,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "c7eb66bbeaa745039edbac8ec35b4434",
+              "status": "FINISHED",
+              "duration_seconds": 3371.301,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9070472564989016,
+                "macro_recall": 0.9070472564989016,
+                "macro_precision": 0.8808358085511268,
+                "macro_f1": 0.8920217414780369
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "c55bab1cedd846628ee682aa305e9ac3",
+              "status": "FINISHED",
+              "duration_seconds": 4592.102,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9025632494573498,
+                "macro_recall": 0.9025632494573498,
+                "macro_precision": 0.8825062011336521,
+                "macro_f1": 0.8914339793106564
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "ae69c68eeff24d5f95f5db864f1ea508",
+              "status": "FINISHED",
+              "duration_seconds": 3037.259,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.8765424036567128,
+                "macro_recall": 0.8765424036567128,
+                "macro_precision": 0.8717320244390611,
+                "macro_f1": 0.8736040399914268
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "be7de0fc6f914bf38f2ecd57f57bf8f5",
+              "status": "FINISHED",
+              "duration_seconds": 4210.537,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9054687058718444,
+                "macro_recall": 0.9054687058718444,
+                "macro_precision": 0.9013686321940589,
+                "macro_f1": 0.903258592446334
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "96340eeb9f264a078b727158469f564d",
+              "status": "FINISHED",
+              "duration_seconds": 3454.621,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.9013778352501314,
+                "macro_recall": 0.9013778352501314,
+                "macro_precision": 0.8795281839360628,
+                "macro_f1": 0.8884654646882907
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Experiment 2",
+      "batch": "batch2",
+      "split": "Patient-first grouped, lower-contamination-risk split",
+      "dataset_rows": 3763,
+      "dataset_sha256": "c7586918c67b92d832fa22c749eab6e792fff0d9879a7497a557bee8e33e3d83",
+      "cv_folds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "heldout_test_fold": 5,
+      "models": [
+        {
+          "model": "MobileNetV2",
+          "parent_run_id": "bff3f566eaaa44349f79b52413acb3ce",
+          "parent_run_name": "batch2_mobilenetv2_full_20260719_195146",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": "648b70866634abb3e0c7316016f07b6e3527883e",
+            "git_worktree_state": "dirty"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.5707181017480395,
+            "balanced_accuracy_std": 0.01565495451436428,
+            "recall_mean": 0.5707181017480395,
+            "recall_std": 0.01565495451436428,
+            "precision_mean": 0.555623098678275,
+            "precision_std": 0.03656257180030278,
+            "macro_f1_mean": 0.5498880514665999,
+            "macro_f1_std": 0.03490439239384713
+          },
+          "parent_duration_seconds": 8468.53,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "0c4deed5069b4ac28bfc88ecf1d8cd2f",
+              "status": "FINISHED",
+              "duration_seconds": 512.314,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5637071144508539,
+                "macro_recall": 0.5637071144508539,
+                "macro_precision": 0.5047386506065048,
+                "macro_f1": 0.4956103207315341
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "0d35fe80a1784d92950a43e30f84b3d2",
+              "status": "FINISHED",
+              "duration_seconds": 1072.332,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.6008162653333055,
+                "macro_recall": 0.6008162653333055,
+                "macro_precision": 0.6152618513381968,
+                "macro_f1": 0.6047072744833939
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "5d831fe1b300498a996d35720eb9f1a8",
+              "status": "FINISHED",
+              "duration_seconds": 2465.545,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5668162513860123,
+                "macro_recall": 0.5668162513860123,
+                "macro_precision": 0.5366775866775867,
+                "macro_f1": 0.5421582226809982
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "84237c60af774b798e05bfd38921f1c2",
+              "status": "FINISHED",
+              "duration_seconds": 2261.1,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5670866386833248,
+                "macro_recall": 0.5670866386833248,
+                "macro_precision": 0.5527425620387817,
+                "macro_f1": 0.558715642695126
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "4905766b588b4b8bb6b72efa90957f34",
+              "status": "FINISHED",
+              "duration_seconds": 2152.117,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5551642388867016,
+                "macro_recall": 0.5551642388867016,
+                "macro_precision": 0.5686948427303052,
+                "macro_f1": 0.5482487967419475
+              }
+            }
+          ]
+        },
+        {
+          "model": "DenseNet-121",
+          "parent_run_id": "828be67ffd494debbf0a355630b8b3f0",
+          "parent_run_name": "batch2_densenet121_full_20260721_batch2_cnn",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": null,
+            "git_worktree_state": "unavailable"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.5940549028856316,
+            "balanced_accuracy_std": 0.03177338395581062,
+            "recall_mean": 0.5940549028856316,
+            "recall_std": 0.03177338395581062,
+            "precision_mean": 0.5911573466808825,
+            "precision_std": 0.04302870732869781,
+            "macro_f1_mean": 0.5763735941711239,
+            "macro_f1_std": 0.028169238567361022
+          },
+          "parent_duration_seconds": 19807.828,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "708eb1b5477a41c9ba01386db9f742cc",
+              "status": "FINISHED",
+              "duration_seconds": 2793.802,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5775051081961268,
+                "macro_recall": 0.5775051081961268,
+                "macro_precision": 0.5411322772551767,
+                "macro_f1": 0.5493685295626721
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "13115793178d4ed6b65fc1766612c8e7",
+              "status": "FINISHED",
+              "duration_seconds": 5077.388,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.6317431200221635,
+                "macro_recall": 0.6317431200221635,
+                "macro_precision": 0.6452001732782418,
+                "macro_f1": 0.6245850085045684
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "78b534d657f94865b07aafc15628ec28",
+              "status": "FINISHED",
+              "duration_seconds": 4144.056,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.6290812474205433,
+                "macro_recall": 0.6290812474205433,
+                "macro_precision": 0.5694833488951135,
+                "macro_f1": 0.580523513288218
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "4f216e3249cd4496a5baf5d9e1d91428",
+              "status": "FINISHED",
+              "duration_seconds": 3864.276,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5825459452365873,
+                "macro_recall": 0.5825459452365873,
+                "macro_precision": 0.6400390560773431,
+                "macro_f1": 0.5806545871939122
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "d3baf45d8bc54bb5bdfb557b89138080",
+              "status": "FINISHED",
+              "duration_seconds": 3920.324,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5493990935527369,
+                "macro_recall": 0.5493990935527369,
+                "macro_precision": 0.5599318778985377,
+                "macro_f1": 0.5467363323062485
+              }
+            }
+          ]
+        },
+        {
+          "model": "ResNet-50",
+          "parent_run_id": "188fc9fab12c4675a89381101c9beb01",
+          "parent_run_name": "batch2_resnet50_full_20260721_batch2_cnn",
+          "status": "FINISHED",
+          "git_provenance": {
+            "git_base_commit": null,
+            "git_worktree_state": "unavailable"
+          },
+          "aggregate_metrics": {
+            "balanced_accuracy_mean": 0.5926701585617045,
+            "balanced_accuracy_std": 0.03176455339348272,
+            "recall_mean": 0.5926701585617045,
+            "recall_std": 0.03176455339348272,
+            "precision_mean": 0.5826465735061508,
+            "precision_std": 0.05206344767093801,
+            "macro_f1_mean": 0.5736107492069006,
+            "macro_f1_std": 0.04330013880241226
+          },
+          "parent_duration_seconds": 9883.366,
+          "children": [
+            {
+              "fold": 0,
+              "run_id": "b1ae7b4f5c06466db349f0f93d076664",
+              "status": "FINISHED",
+              "duration_seconds": 1888.262,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5995102915174465,
+                "macro_recall": 0.5995102915174465,
+                "macro_precision": 0.5552347800273473,
+                "macro_f1": 0.5628246062154109
+              }
+            },
+            {
+              "fold": 1,
+              "run_id": "ae4e58ce030e4f6ba4a9bea19aa3f584",
+              "status": "FINISHED",
+              "duration_seconds": 2310.445,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.6378699440269767,
+                "macro_recall": 0.6378699440269767,
+                "macro_precision": 0.6590571557460272,
+                "macro_f1": 0.643087827056442
+              }
+            },
+            {
+              "fold": 2,
+              "run_id": "7b9d98bf27514fbd88ec84d3b90932b7",
+              "status": "FINISHED",
+              "duration_seconds": 1926.426,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.6072538920872568,
+                "macro_recall": 0.6072538920872568,
+                "macro_precision": 0.5635452588948765,
+                "macro_f1": 0.5735888688142025
+              }
+            },
+            {
+              "fold": 3,
+              "run_id": "5a68aac2b8544ebba9de85cb5d88bbfd",
+              "status": "FINISHED",
+              "duration_seconds": 1935.345,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5755306152594799,
+                "macro_recall": 0.5755306152594799,
+                "macro_precision": 0.6231561077566957,
+                "macro_f1": 0.5810870588277639
+              }
+            },
+            {
+              "fold": 4,
+              "run_id": "0d5232949e414bf8985b8ad9049df5c3",
+              "status": "FINISHED",
+              "duration_seconds": 1814.549,
+              "heldout_metrics": {
+                "balanced_accuracy": 0.5431860499173623,
+                "macro_recall": 0.5431860499173623,
+                "macro_precision": 0.5122395651058071,
+                "macro_f1": 0.5074653851206841
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "scope": "Exploratory only: five training subsets overlap and each experiment reuses one held-out test fold.",
+    "within_experiment": [
+      {
+        "experiment": "Experiment 1",
+        "test": "Friedman",
+        "statistic": "5.200000000000003",
+        "raw_p_value": "0.07427357821433378",
+        "significant_0_05": "False"
+      },
+      {
+        "experiment": "Experiment 2",
+        "test": "Friedman",
+        "statistic": "2.8000000000000043",
+        "raw_p_value": "0.24659696394160596",
+        "significant_0_05": "False"
+      }
+    ],
+    "between_experiments": [
+      {
+        "model": "MobileNetV2",
+        "test": "Mann-Whitney U",
+        "statistic": "25.0",
+        "raw_p_value": "0.007936507936507936",
+        "median_experiment_1": "0.9066020459232128",
+        "median_experiment_2": "0.5668162513860123",
+        "median_difference_experiment_1_minus_2": "0.3397857945372005",
+        "rank_biserial_correlation": "1.0",
+        "direction": "Experiment 1 higher",
+        "holm_adjusted_p_value": "0.023809523809523808",
+        "significant_0_05": "True"
+      },
+      {
+        "model": "DenseNet-121",
+        "test": "Mann-Whitney U",
+        "statistic": "25.0",
+        "raw_p_value": "0.007936507936507936",
+        "median_experiment_1": "0.9148622267959908",
+        "median_experiment_2": "0.5825459452365873",
+        "median_difference_experiment_1_minus_2": "0.3323162815594035",
+        "rank_biserial_correlation": "1.0",
+        "direction": "Experiment 1 higher",
+        "holm_adjusted_p_value": "0.023809523809523808",
+        "significant_0_05": "True"
+      },
+      {
+        "model": "ResNet-50",
+        "test": "Mann-Whitney U",
+        "statistic": "25.0",
+        "raw_p_value": "0.007936507936507936",
+        "median_experiment_1": "0.9025632494573498",
+        "median_experiment_2": "0.5995102915174465",
+        "median_difference_experiment_1_minus_2": "0.3030529579399033",
+        "rank_biserial_correlation": "1.0",
+        "direction": "Experiment 1 higher",
+        "holm_adjusted_p_value": "0.023809523809523808",
+        "significant_0_05": "True"
+      }
+    ]
+  }
+}

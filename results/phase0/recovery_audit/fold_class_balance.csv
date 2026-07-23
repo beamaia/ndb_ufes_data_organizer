@@ -1,0 +1,19 @@
+fold,diagnosis,patch_count,fold_patch_count,fold_class_share
+0,Leukoplakia with dysplasia,129,520,0.24807692307692308
+0,Leukoplakia without dysplasia,96,520,0.18461538461538463
+0,OSCC,295,520,0.5673076923076923
+1,Leukoplakia with dysplasia,152,510,0.2980392156862745
+1,Leukoplakia without dysplasia,130,510,0.2549019607843137
+1,OSCC,228,510,0.4470588235294118
+2,Leukoplakia with dysplasia,161,511,0.3150684931506849
+2,Leukoplakia without dysplasia,79,511,0.15459882583170254
+2,OSCC,271,511,0.5303326810176126
+3,Leukoplakia with dysplasia,164,511,0.32093933463796476
+3,Leukoplakia without dysplasia,107,511,0.20939334637964774
+3,OSCC,240,511,0.46966731898238745
+4,Leukoplakia with dysplasia,178,524,0.33969465648854963
+4,Leukoplakia without dysplasia,112,524,0.21374045801526717
+4,OSCC,234,524,0.44656488549618323
+5,Leukoplakia with dysplasia,146,510,0.28627450980392155
+5,Leukoplakia without dysplasia,115,510,0.22549019607843138
+5,OSCC,249,510,0.48823529411764705

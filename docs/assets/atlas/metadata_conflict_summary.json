@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "report_type": "metadata_conflict_review",
+  "privacy_mode": "public_aggregate",
+  "description": "Aggregate review counts for the atlas metadata-conflict cohort. This report preserves the complete patch labels and reconstructed metadata as separate layers; it does not select a canonical label.",
+  "source_artifact": "results/phase0/validated_linkage/validated_patch_wsi_linkage.csv",
+  "scope": {
+    "patch_rows": 3763,
+    "complete_patch_label_agreement_rows": 3763,
+    "metadata_status_counts": {
+      "agrees": 1758,
+      "current_metadata_missing_patch": 677,
+      "disagrees": 1328
+    },
+    "complete_patch_label_counts": {
+      "oscc": 1126,
+      "with_dysplasia": 1930,
+      "without_dysplasia": 707
+    },
+    "reconstructed_metadata_label_counts": {
+      "oscc": 1517,
+      "unknown": 677,
+      "with_dysplasia": 930,
+      "without_dysplasia": 639
+    },
+    "evidence_level_counts": {
+      "validated_exact_public_wsi": 1736,
+      "validated_exact_sab_only": 538,
+      "validated_exact_with_metadata_conflict": 1489
+    },
+    "metadata_conflict_rows": 1489
+  },
+  "conflict_rows": {
+    "by_metadata_status": {
+      "agrees": 59,
+      "current_metadata_missing_patch": 102,
+      "disagrees": 1328
+    },
+    "by_wsi_source_role": {
+      "public_ndb_wsi": 1375,
+      "sab_only_wsi": 114
+    },
+    "by_dataset_use_status": {
+      "biologically_implausible_or_high_conflict": 102,
+      "source_disagreement": 1387
+    },
+    "by_reconstructed_metadata_label": {
+      "oscc": 585,
+      "unknown": 102,
+      "with_dysplasia": 408,
+      "without_dysplasia": 394
+    }
+  },
+  "complete_label_to_reconstructed_label_mismatch_pairs": [
+    {
+      "complete_patch_label": "oscc",
+      "reconstructed_metadata_label": "with_dysplasia",
+      "rows": 66
+    },
+    {
+      "complete_patch_label": "with_dysplasia",
+      "reconstructed_metadata_label": "oscc",
+      "rows": 521
+    },
+    {
+      "complete_patch_label": "with_dysplasia",
+      "reconstructed_metadata_label": "without_dysplasia",
+      "rows": 394
+    },
+    {
+      "complete_patch_label": "without_dysplasia",
+      "reconstructed_metadata_label": "oscc",
+      "rows": 64
+    },
+    {
+      "complete_patch_label": "without_dysplasia",
+      "reconstructed_metadata_label": "with_dysplasia",
+      "rows": 283
+    }
+  ],
+  "reading_notes": [
+    "The complete NDB-UFES and SAB patch-label sources agree for every atlas patch.",
+    "The reconstructed metadata layer is a separate provenance layer and is missing for 677 rows.",
+    "The 1,489-row metadata-conflict cohort includes 59 rows whose reconstructed patch label agrees; another metadata field is what triggers the conflict flag.",
+    "No canonical training label is chosen by this report."
+  ]
+}

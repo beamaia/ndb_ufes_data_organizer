@@ -1,0 +1,252 @@
+final_validated_wsi_id,public_wsi_pseudonym,n_patches,wsi_source,wsi_label_from_ndb_ufes,wsi_label_from_sab,previous_reconstructed_ndb_origin_ids,previous_public_ndb_wsi_matches,n_ndb_patch_oscc,n_ndb_patch_with_dysplasia,n_ndb_patch_without_dysplasia,n_ndb_patch_label_unavailable,n_sab_patch_oscc,n_sab_patch_with_dysplasia,n_sab_patch_without_dysplasia,linkage_evidence_counts,requires_manual_review_count,metadata_conflict_count
+public_ndb_wsi_0014,public_ndb_wsi_0014,20,both,with_dysplasia,oscc,14,14,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0015,public_ndb_wsi_0015,20,both,with_dysplasia,oscc,15,15,9,11,0,0,9,11,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0037,public_ndb_wsi_0037,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,37,37,0,0,20,0,0,0,20,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0061,public_ndb_wsi_0061,20,both,oscc,broad_leukoplakia_unknown_dysplasia,61,61,0,3,17,0,0,3,17,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0063,public_ndb_wsi_0063,20,both,oscc,broad_leukoplakia_unknown_dysplasia,63,63,0,12,8,0,0,12,8,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0064,public_ndb_wsi_0064,20,both,oscc,broad_leukoplakia_unknown_dysplasia,64,64,0,17,3,0,0,17,3,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0065,public_ndb_wsi_0065,20,both,oscc,broad_leukoplakia_unknown_dysplasia,65,65,0,0,20,0,0,0,20,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0067,public_ndb_wsi_0067,20,both,oscc,oscc,67,67,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0071,public_ndb_wsi_0071,20,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,71,71,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0079,public_ndb_wsi_0079,20,both,with_dysplasia,oscc,79,79,9,11,0,0,9,11,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0097,public_ndb_wsi_0097,20,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,97,97,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0110,public_ndb_wsi_0110,20,both,oscc,oscc,110,110,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0126,public_ndb_wsi_0126,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,126,126,0,0,20,0,0,0,20,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0161,public_ndb_wsi_0161,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,161,161,0,0,20,0,0,0,20,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0166,public_ndb_wsi_0166,20,both,oscc,oscc,166,166,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0168,public_ndb_wsi_0168,20,both,oscc,oscc,168,168,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0169,public_ndb_wsi_0169,20,both,oscc,oscc,169,169,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0170,public_ndb_wsi_0170,20,both,oscc,oscc,170,170,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0192,public_ndb_wsi_0192,20,both,oscc,oscc,192,192,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0194,public_ndb_wsi_0194,20,both,oscc,oscc,194,194,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0208,public_ndb_wsi_0208,20,both,oscc,oscc,208,208,0,20,0,0,0,20,0,"{""validated_exact_with_metadata_conflict"": 20}",0,20
+public_ndb_wsi_0177,public_ndb_wsi_0177,20,both,oscc,oscc,177,177,1,19,0,0,1,19,0,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 19}",0,19
+public_ndb_wsi_0043,public_ndb_wsi_0043,19,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,43,43,0,0,19,0,0,0,19,"{""validated_exact_with_metadata_conflict"": 19}",0,19
+public_ndb_wsi_0092,public_ndb_wsi_0092,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,92,92,0,19,0,0,0,19,0,"{""validated_exact_with_metadata_conflict"": 19}",0,19
+public_ndb_wsi_0094,public_ndb_wsi_0094,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,94,94,0,19,0,0,0,19,0,"{""validated_exact_with_metadata_conflict"": 19}",0,19
+public_ndb_wsi_0139,public_ndb_wsi_0139,19,both,oscc,oscc,139,139,0,19,0,0,0,19,0,"{""validated_exact_with_metadata_conflict"": 19}",0,19
+public_ndb_wsi_0066,public_ndb_wsi_0066,20,both,oscc,oscc,66,66,2,18,0,0,2,18,0,"{""validated_exact_public_wsi"": 2, ""validated_exact_with_metadata_conflict"": 18}",0,18
+public_ndb_wsi_0102,public_ndb_wsi_0102,18,both,oscc,oscc,102,102,0,17,1,0,0,17,1,"{""validated_exact_with_metadata_conflict"": 18}",0,18
+public_ndb_wsi_0200,public_ndb_wsi_0200,18,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,200,200,0,18,0,0,0,18,0,"{""validated_exact_with_metadata_conflict"": 18}",0,18
+public_ndb_wsi_0178,public_ndb_wsi_0178,20,both,oscc,oscc,178,178,3,17,0,0,3,17,0,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 17}",0,17
+sab_only_wsi_0028,sab_only_wsi_0028,20,SAB-only recovered WSI,,without_dysplasia,,,17,3,0,0,17,3,0,"{""validated_exact_sab_only"": 3, ""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0025,public_ndb_wsi_0025,17,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,25,25,0,17,0,0,0,17,0,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0033,public_ndb_wsi_0033,17,both,oscc,broad_leukoplakia_unknown_dysplasia,33,33,0,17,0,0,0,17,0,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0050,public_ndb_wsi_0050,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,50,50,0,0,17,0,0,0,17,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0062,public_ndb_wsi_0062,17,both,oscc,broad_leukoplakia_unknown_dysplasia,62,62,0,17,0,0,0,17,0,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0137,public_ndb_wsi_0137,17,both,oscc,oscc,137,137,0,16,1,0,0,16,1,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0204,public_ndb_wsi_0204,17,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,204,204,0,17,0,0,0,17,0,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0213,public_ndb_wsi_0213,17,both,oscc,oscc,213,213,0,17,0,0,0,17,0,"{""validated_exact_with_metadata_conflict"": 17}",0,17
+public_ndb_wsi_0088,public_ndb_wsi_0088,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,88,88,0,16,0,0,0,16,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
+public_ndb_wsi_0098,public_ndb_wsi_0098,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,98,98,0,16,0,0,0,16,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
+public_ndb_wsi_0143,public_ndb_wsi_0143,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,143,143,0,16,0,0,0,16,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
+public_ndb_wsi_0191,public_ndb_wsi_0191,16,both,oscc,oscc,191,191,0,16,0,0,0,16,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
+public_ndb_wsi_0214,public_ndb_wsi_0214,16,both,oscc,oscc,214,214,0,16,0,0,0,16,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
+public_ndb_wsi_0058,public_ndb_wsi_0058,15,both,oscc,broad_leukoplakia_unknown_dysplasia,58,58,0,10,5,0,0,10,5,"{""validated_exact_with_metadata_conflict"": 15}",0,15
+public_ndb_wsi_0216,public_ndb_wsi_0216,15,both,with_dysplasia,oscc,216,216,15,0,0,0,15,0,0,"{""validated_exact_with_metadata_conflict"": 15}",0,15
+sab_only_wsi_0009,sab_only_wsi_0009,20,SAB-only recovered WSI,,without_dysplasia,41,,14,6,0,0,14,6,0,"{""validated_exact_sab_only"": 6, ""validated_exact_with_metadata_conflict"": 14}",0,14
+public_ndb_wsi_0174,public_ndb_wsi_0174,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,174,174,0,3,14,0,0,3,14,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 14}",0,14
+public_ndb_wsi_0090,public_ndb_wsi_0090,14,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,90,90,0,14,0,0,0,14,0,"{""validated_exact_with_metadata_conflict"": 14}",0,14
+public_ndb_wsi_0081,public_ndb_wsi_0081,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,81,81,0,13,6,0,0,13,6,"{""validated_exact_public_wsi"": 6, ""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0023,public_ndb_wsi_0023,14,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,23,23,0,13,1,0,0,13,1,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0101,public_ndb_wsi_0101,14,both,oscc,oscc,101,101,0,10,4,0,0,10,4,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0070,public_ndb_wsi_0070,13,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,70,70,0,13,0,0,0,13,0,"{""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0078,public_ndb_wsi_0078,13,both,with_dysplasia,oscc,78,78,2,11,0,0,2,11,0,"{""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0120,public_ndb_wsi_0120,13,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,120,120,0,0,13,0,0,0,13,"{""validated_exact_with_metadata_conflict"": 13}",0,13
+public_ndb_wsi_0001,public_ndb_wsi_0001,20,both,oscc,oscc,1,1,8,12,0,0,8,12,0,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0055,public_ndb_wsi_0055,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,55,55,0,8,12,0,0,8,12,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0131,sab_only_wsi_0131,20,SAB-only recovered WSI,,without_dysplasia,,,12,8,0,0,12,8,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0247,sab_only_wsi_0247,20,SAB-only recovered WSI,,without_dysplasia,,,12,8,0,0,12,8,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0197,public_ndb_wsi_0197,19,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,197,197,0,7,12,0,0,7,12,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0194,sab_only_wsi_0194,19,SAB-only recovered WSI,,without_dysplasia,,,12,7,0,0,12,7,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0048,public_ndb_wsi_0048,12,both,with_dysplasia,oscc,48,48,7,5,0,0,7,5,0,"{""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0084,public_ndb_wsi_0084,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,84,84,0,12,0,0,0,12,0,"{""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0184,public_ndb_wsi_0184,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,184,184,0,12,0,0,0,12,0,"{""validated_exact_with_metadata_conflict"": 12}",0,12
+public_ndb_wsi_0099,public_ndb_wsi_0099,18,both,oscc,oscc,99,99,7,11,0,0,7,11,0,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 11}",0,11
+public_ndb_wsi_0069,public_ndb_wsi_0069,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,69,69,0,11,5,0,0,11,5,"{""validated_exact_public_wsi"": 5, ""validated_exact_with_metadata_conflict"": 11}",0,11
+public_ndb_wsi_0201,public_ndb_wsi_0201,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,201,201,0,11,5,0,0,11,5,"{""validated_exact_public_wsi"": 5, ""validated_exact_with_metadata_conflict"": 11}",0,11
+public_ndb_wsi_0085,public_ndb_wsi_0085,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,85,85,0,11,1,0,0,11,1,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 11}",0,11
+public_ndb_wsi_0196,public_ndb_wsi_0196,11,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,196,196,0,0,11,0,0,0,11,"{""validated_exact_with_metadata_conflict"": 11}",0,11
+public_ndb_wsi_0202,public_ndb_wsi_0202,11,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,202,202,0,11,0,0,0,11,0,"{""validated_exact_with_metadata_conflict"": 11}",0,11
+sab_only_wsi_0067,sab_only_wsi_0067,19,SAB-only recovered WSI,,without_dysplasia,,,10,9,0,0,10,9,0,"{""validated_exact_sab_only"": 9, ""validated_exact_with_metadata_conflict"": 10}",0,10
+public_ndb_wsi_0046,public_ndb_wsi_0046,18,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,46,46,0,10,8,0,0,10,8,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 10}",0,10
+public_ndb_wsi_0141,public_ndb_wsi_0141,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,141,141,0,10,2,0,0,10,2,"{""validated_exact_public_wsi"": 2, ""validated_exact_with_metadata_conflict"": 10}",0,10
+public_ndb_wsi_0148,public_ndb_wsi_0148,10,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,148,148,0,0,10,0,0,0,10,"{""validated_exact_with_metadata_conflict"": 10}",0,10
+public_ndb_wsi_0000,public_ndb_wsi_0000,20,both,oscc,oscc,0,0,11,9,0,0,11,9,0,"{""validated_exact_public_wsi"": 11, ""validated_exact_with_metadata_conflict"": 9}",0,9
+sab_only_wsi_0242,sab_only_wsi_0242,20,SAB-only recovered WSI,,without_dysplasia,,,9,11,0,0,9,11,0,"{""validated_exact_sab_only"": 11, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0187,public_ndb_wsi_0187,18,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,187,187,0,9,9,0,0,9,9,"{""validated_exact_public_wsi"": 9, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0186,public_ndb_wsi_0186,16,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,186,186,0,7,9,0,0,7,9,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 9}",0,9
+sab_only_wsi_0023,sab_only_wsi_0023,16,SAB-only recovered WSI,,without_dysplasia,,,9,7,0,0,9,7,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0108,public_ndb_wsi_0108,15,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,108,108,0,6,9,0,0,6,9,"{""validated_exact_public_wsi"": 6, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0083,public_ndb_wsi_0083,13,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,83,83,0,10,3,0,0,10,3,"{""validated_exact_public_wsi"": 4, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0158,public_ndb_wsi_0158,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,158,158,0,9,3,0,0,9,3,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0215,public_ndb_wsi_0215,9,both,with_dysplasia,oscc,215,215,8,1,0,0,8,1,0,"{""validated_exact_with_metadata_conflict"": 9}",0,9
+public_ndb_wsi_0159,public_ndb_wsi_0159,17,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,159,159,0,8,9,0,0,8,9,"{""validated_exact_public_wsi"": 9, ""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0160,public_ndb_wsi_0160,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,160,160,0,9,8,0,0,9,8,"{""validated_exact_public_wsi"": 9, ""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0182,public_ndb_wsi_0182,16,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,182,182,0,8,8,0,0,8,8,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0199,public_ndb_wsi_0199,15,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,199,199,0,8,7,0,0,8,7,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0059,public_ndb_wsi_0059,9,both,oscc,broad_leukoplakia_unknown_dysplasia,59,59,0,8,1,0,0,8,1,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0026,public_ndb_wsi_0026,8,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,26,26,0,8,0,0,0,8,0,"{""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0060,public_ndb_wsi_0060,8,both,oscc,broad_leukoplakia_unknown_dysplasia,60,60,0,3,5,0,0,3,5,"{""validated_exact_with_metadata_conflict"": 8}",0,8
+public_ndb_wsi_0111,public_ndb_wsi_0111,20,both,oscc,oscc,111,111,13,7,0,0,13,7,0,"{""validated_exact_public_wsi"": 13, ""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0175,public_ndb_wsi_0175,19,both,oscc,oscc,175,175,12,7,0,0,12,7,0,"{""validated_exact_public_wsi"": 12, ""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0203,public_ndb_wsi_0203,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,203,203,0,7,12,0,0,7,12,"{""validated_exact_public_wsi"": 12, ""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0042,public_ndb_wsi_0042,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,42,42,0,10,7,0,0,10,7,"{""validated_exact_public_wsi"": 10, ""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0162,public_ndb_wsi_0162,9,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,162,162,0,2,7,0,0,2,7,"{""validated_exact_public_wsi"": 2, ""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0100,public_ndb_wsi_0100,7,both,oscc,oscc,100,100,0,7,0,0,0,7,0,"{""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0195,public_ndb_wsi_0195,7,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,195,195,0,0,7,0,0,0,7,"{""validated_exact_with_metadata_conflict"": 7}",0,7
+public_ndb_wsi_0123,public_ndb_wsi_0123,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,123,123,0,11,6,0,0,11,6,"{""validated_exact_public_wsi"": 11, ""validated_exact_with_metadata_conflict"": 6}",0,6
+public_ndb_wsi_0091,public_ndb_wsi_0091,15,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,91,91,0,6,9,0,0,6,9,"{""validated_exact_public_wsi"": 9, ""validated_exact_with_metadata_conflict"": 6}",0,6
+sab_only_wsi_0013,sab_only_wsi_0013,13,SAB-only recovered WSI,,without_dysplasia,,,6,7,0,0,6,7,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 6}",0,6
+public_ndb_wsi_0153,public_ndb_wsi_0153,9,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,153,153,0,6,3,0,0,6,3,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 6}",0,6
+public_ndb_wsi_0205,public_ndb_wsi_0205,19,both,oscc,oscc,205,205,14,5,0,0,14,5,0,"{""validated_exact_public_wsi"": 14, ""validated_exact_with_metadata_conflict"": 5}",0,5
+public_ndb_wsi_0212,public_ndb_wsi_0212,18,both,oscc,oscc,212,212,13,5,0,0,13,5,0,"{""validated_exact_public_wsi"": 13, ""validated_exact_with_metadata_conflict"": 5}",0,5
+public_ndb_wsi_0034,public_ndb_wsi_0034,12,both,oscc,oscc,34,34,7,5,0,0,7,5,0,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 5}",0,5
+public_ndb_wsi_0076,public_ndb_wsi_0076,11,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,76,76,0,5,6,0,0,5,6,"{""validated_exact_public_wsi"": 6, ""validated_exact_with_metadata_conflict"": 5}",0,5
+public_ndb_wsi_0121,public_ndb_wsi_0121,5,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,121,121,0,0,5,0,0,0,5,"{""validated_exact_with_metadata_conflict"": 5}",0,5
+sab_only_wsi_0010,sab_only_wsi_0010,5,SAB-only recovered WSI,,without_dysplasia,,,5,0,0,0,5,0,0,"{""validated_exact_with_metadata_conflict"": 5}",0,5
+public_ndb_wsi_0013,public_ndb_wsi_0013,25,both,oscc,oscc,10|13,13,21,4,0,0,21,4,0,"{""validated_exact_public_wsi"": 21, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0172,public_ndb_wsi_0172,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,172,172,0,13,4,0,0,13,4,"{""validated_exact_public_wsi"": 13, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0136,public_ndb_wsi_0136,15,both,oscc,oscc,136,136,11,4,0,0,11,4,0,"{""validated_exact_public_wsi"": 11, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0089,public_ndb_wsi_0089,11,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,89,89,0,4,7,0,0,4,7,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0080,public_ndb_wsi_0080,10,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,80,80,0,4,6,0,0,4,6,"{""validated_exact_public_wsi"": 6, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0142,public_ndb_wsi_0142,8,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,142,142,0,4,4,0,0,4,4,"{""validated_exact_public_wsi"": 4, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0106,public_ndb_wsi_0106,5,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,106,106,0,0,5,0,0,0,5,"{""validated_exact_public_wsi"": 1, ""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0049,public_ndb_wsi_0049,4,both,with_dysplasia,oscc,49,49,4,0,0,0,4,0,0,"{""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0173,public_ndb_wsi_0173,4,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,173,173,0,0,4,0,0,0,4,"{""validated_exact_with_metadata_conflict"": 4}",0,4
+public_ndb_wsi_0104,public_ndb_wsi_0104,20,both,oscc,oscc,104,104,17,3,0,0,17,3,0,"{""validated_exact_public_wsi"": 17, ""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0004,public_ndb_wsi_0004,17,both,oscc,oscc,4,4,14,3,0,0,14,3,0,"{""validated_exact_public_wsi"": 14, ""validated_exact_with_metadata_conflict"": 3}",0,3
+sab_only_wsi_0159,sab_only_wsi_0159,17,SAB-only recovered WSI,,without_dysplasia,,,3,13,1,0,3,13,1,"{""validated_exact_sab_only"": 14, ""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0030,public_ndb_wsi_0030,15,both,oscc,oscc,30,30,12,3,0,0,12,3,0,"{""validated_exact_public_wsi"": 12, ""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0131,public_ndb_wsi_0131,13,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,131,131,0,10,3,0,0,10,3,"{""validated_exact_public_wsi"": 10, ""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0006,public_ndb_wsi_0006,11,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,6,6,0,8,3,0,0,8,3,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0164,public_ndb_wsi_0164,10,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,164,164,0,7,3,0,0,7,3,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 3}",0,3
+sab_only_wsi_0016,sab_only_wsi_0016,3,SAB-only recovered WSI,,without_dysplasia,,,3,0,0,0,3,0,0,"{""validated_exact_with_metadata_conflict"": 3}",0,3
+public_ndb_wsi_0130,public_ndb_wsi_0130,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,130,130,0,18,2,0,0,18,2,"{""validated_exact_public_wsi"": 18, ""validated_exact_with_metadata_conflict"": 2}",0,2
+sab_only_wsi_0161,sab_only_wsi_0161,19,SAB-only recovered WSI,,without_dysplasia,,,2,17,0,0,2,17,0,"{""validated_exact_sab_only"": 17, ""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0176,public_ndb_wsi_0176,18,both,oscc,oscc,176,176,16,2,0,0,16,2,0,"{""validated_exact_public_wsi"": 16, ""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0190,public_ndb_wsi_0190,9,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,190,190,0,7,2,0,0,7,2,"{""validated_exact_public_wsi"": 7, ""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0128,public_ndb_wsi_0128,7,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,128,128,0,5,2,0,0,5,2,"{""validated_exact_public_wsi"": 5, ""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0129,public_ndb_wsi_0129,5,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,129,129,0,0,5,0,0,0,5,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0032,public_ndb_wsi_0032,2,both,oscc,broad_leukoplakia_unknown_dysplasia,32,32,0,2,0,0,0,2,0,"{""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0036,public_ndb_wsi_0036,2,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,36,36,0,0,2,0,0,0,2,"{""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0155,public_ndb_wsi_0155,2,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,155,155,0,0,2,0,0,0,2,"{""validated_exact_with_metadata_conflict"": 2}",0,2
+public_ndb_wsi_0211,public_ndb_wsi_0211,20,both,oscc,oscc,211,211,19,1,0,0,19,1,0,"{""validated_exact_public_wsi"": 19, ""validated_exact_with_metadata_conflict"": 1}",0,1
+public_ndb_wsi_0054,public_ndb_wsi_0054,9,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,54,54,0,6,3,0,0,6,3,"{""validated_exact_public_wsi"": 8, ""validated_exact_with_metadata_conflict"": 1}",0,1
+public_ndb_wsi_0024,public_ndb_wsi_0024,4,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,24,24,0,1,3,0,0,1,3,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 1}",0,1
+public_ndb_wsi_0047,public_ndb_wsi_0047,4,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,47,47,0,1,3,0,0,1,3,"{""validated_exact_public_wsi"": 3, ""validated_exact_with_metadata_conflict"": 1}",0,1
+public_ndb_wsi_0185,public_ndb_wsi_0185,3,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,185,185,0,0,3,0,0,0,3,"{""validated_exact_public_wsi"": 2, ""validated_exact_with_metadata_conflict"": 1}",0,1
+public_ndb_wsi_0011,public_ndb_wsi_0011,40,both,oscc,oscc,11|12,11,40,0,0,0,40,0,0,"{""validated_exact_public_wsi"": 40}",0,0
+public_ndb_wsi_0012,public_ndb_wsi_0012,40,both,oscc,oscc,11|12,12,40,0,0,0,40,0,0,"{""validated_exact_public_wsi"": 40}",0,0
+public_ndb_wsi_0010,public_ndb_wsi_0010,30,both,oscc,oscc,10,10,30,0,0,0,30,0,0,"{""validated_exact_public_wsi"": 30}",0,0
+public_ndb_wsi_0003,public_ndb_wsi_0003,20,both,oscc,oscc,3,3,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0005,public_ndb_wsi_0005,20,both,oscc,oscc,5,5,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0019,public_ndb_wsi_0019,20,both,oscc,oscc,19,19,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0020,public_ndb_wsi_0020,20,both,oscc,oscc,20,20,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0021,public_ndb_wsi_0021,20,both,oscc,oscc,21,21,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0035,public_ndb_wsi_0035,20,both,oscc,oscc,35,35,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0039,public_ndb_wsi_0039,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,39,39,0,20,0,0,0,20,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0041,public_ndb_wsi_0041,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,41,41,0,20,0,0,0,20,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0075,public_ndb_wsi_0075,20,both,oscc,oscc,75,75,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0103,public_ndb_wsi_0103,20,both,oscc,oscc,103,103,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0112,public_ndb_wsi_0112,20,both,oscc,oscc,112,112,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0113,public_ndb_wsi_0113,20,both,oscc,oscc,113,113,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0114,public_ndb_wsi_0114,20,both,oscc,oscc,114,114,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0115,public_ndb_wsi_0115,20,both,oscc,oscc,115,115,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0116,public_ndb_wsi_0116,20,both,oscc,oscc,116,116,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0132,public_ndb_wsi_0132,20,both,oscc,oscc,132,132,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0133,public_ndb_wsi_0133,20,both,oscc,oscc,133,133,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0134,public_ndb_wsi_0134,20,both,oscc,oscc,134,134,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0135,public_ndb_wsi_0135,20,both,oscc,oscc,135,135,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0138,public_ndb_wsi_0138,20,both,oscc,oscc,138,138,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0157,public_ndb_wsi_0157,20,both,oscc,oscc,157,157,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0163,public_ndb_wsi_0163,20,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,163,163,0,20,0,0,0,20,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0180,public_ndb_wsi_0180,20,both,oscc,oscc,180,180,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0206,public_ndb_wsi_0206,20,both,oscc,oscc,206,206,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0207,public_ndb_wsi_0207,20,both,oscc,oscc,207,207,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0209,public_ndb_wsi_0209,20,both,oscc,oscc,209,209,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+public_ndb_wsi_0210,public_ndb_wsi_0210,20,both,oscc,oscc,210,210,20,0,0,0,20,0,0,"{""validated_exact_public_wsi"": 20}",0,0
+sab_only_wsi_0027,sab_only_wsi_0027,20,SAB-only recovered WSI,,without_dysplasia,,,0,11,9,0,0,11,9,"{""validated_exact_sab_only"": 20}",0,0
+sab_only_wsi_0202,sab_only_wsi_0202,20,SAB-only recovered WSI,,oscc,,,0,20,0,0,0,20,0,"{""validated_exact_sab_only"": 20}",0,0
+public_ndb_wsi_0008,public_ndb_wsi_0008,19,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,8,8,0,19,0,0,0,19,0,"{""validated_exact_public_wsi"": 19}",0,0
+public_ndb_wsi_0077,public_ndb_wsi_0077,19,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,77,77,0,19,0,0,0,19,0,"{""validated_exact_public_wsi"": 19}",0,0
+public_ndb_wsi_0096,public_ndb_wsi_0096,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,96,96,0,0,19,0,0,0,19,"{""validated_exact_public_wsi"": 19}",0,0
+public_ndb_wsi_0144,public_ndb_wsi_0144,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,144,144,0,0,19,0,0,0,19,"{""validated_exact_public_wsi"": 19}",0,0
+public_ndb_wsi_0179,public_ndb_wsi_0179,19,both,oscc,oscc,179,179,19,0,0,0,19,0,0,"{""validated_exact_public_wsi"": 19}",0,0
+public_ndb_wsi_0183,public_ndb_wsi_0183,19,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,183,183,0,0,19,0,0,0,19,"{""validated_exact_public_wsi"": 19}",0,0
+sab_only_wsi_0045,sab_only_wsi_0045,19,SAB-only recovered WSI,,without_dysplasia,,,0,6,13,0,0,6,13,"{""validated_exact_sab_only"": 19}",0,0
+sab_only_wsi_0087,sab_only_wsi_0087,19,SAB-only recovered WSI,,without_dysplasia,,,0,15,4,0,0,15,4,"{""validated_exact_sab_only"": 19}",0,0
+public_ndb_wsi_0073,public_ndb_wsi_0073,18,both,oscc,oscc,73,73,18,0,0,0,18,0,0,"{""validated_exact_public_wsi"": 18}",0,0
+public_ndb_wsi_0156,public_ndb_wsi_0156,18,both,oscc,oscc,156,156,18,0,0,0,18,0,0,"{""validated_exact_public_wsi"": 18}",0,0
+public_ndb_wsi_0188,public_ndb_wsi_0188,18,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,188,188,0,18,0,0,0,18,0,"{""validated_exact_public_wsi"": 18}",0,0
+sab_only_wsi_0200,sab_only_wsi_0200,18,SAB-only recovered WSI,,without_dysplasia,,,0,12,6,0,0,12,6,"{""validated_exact_sab_only"": 18}",0,0
+sab_only_wsi_0241,sab_only_wsi_0241,18,SAB-only recovered WSI,,without_dysplasia,,,0,16,2,0,0,16,2,"{""validated_exact_sab_only"": 18}",0,0
+public_ndb_wsi_0029,public_ndb_wsi_0029,17,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,29,29,0,17,0,0,0,17,0,"{""validated_exact_public_wsi"": 17}",0,0
+public_ndb_wsi_0072,public_ndb_wsi_0072,17,both,oscc,oscc,72,72,17,0,0,0,17,0,0,"{""validated_exact_public_wsi"": 17}",0,0
+sab_only_wsi_0051,sab_only_wsi_0051,17,SAB-only recovered WSI,,without_dysplasia,,,0,17,0,0,0,17,0,"{""validated_exact_sab_only"": 17}",0,0
+sab_only_wsi_0128,sab_only_wsi_0128,17,SAB-only recovered WSI,,without_dysplasia,,,0,17,0,0,0,17,0,"{""validated_exact_sab_only"": 17}",0,0
+public_ndb_wsi_0009,public_ndb_wsi_0009,16,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,9,9,0,16,0,0,0,16,0,"{""validated_exact_public_wsi"": 16}",0,0
+public_ndb_wsi_0107,public_ndb_wsi_0107,16,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,107,107,0,16,0,0,0,16,0,"{""validated_exact_public_wsi"": 16}",0,0
+public_ndb_wsi_0122,public_ndb_wsi_0122,16,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,122,122,0,16,0,0,0,16,0,"{""validated_exact_public_wsi"": 16}",0,0
+public_ndb_wsi_0150,public_ndb_wsi_0150,16,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,150,150,0,0,16,0,0,0,16,"{""validated_exact_public_wsi"": 16}",0,0
+sab_only_wsi_0070,sab_only_wsi_0070,16,SAB-only recovered WSI,,without_dysplasia,,,0,16,0,0,0,16,0,"{""validated_exact_sab_only"": 16}",0,0
+public_ndb_wsi_0002,public_ndb_wsi_0002,15,both,oscc,oscc,2,2,15,0,0,0,15,0,0,"{""validated_exact_public_wsi"": 15}",0,0
+public_ndb_wsi_0052,public_ndb_wsi_0052,15,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,52,52,0,15,0,0,0,15,0,"{""validated_exact_public_wsi"": 15}",0,0
+public_ndb_wsi_0074,public_ndb_wsi_0074,15,both,oscc,oscc,74,74,15,0,0,0,15,0,0,"{""validated_exact_public_wsi"": 15}",0,0
+public_ndb_wsi_0109,public_ndb_wsi_0109,15,both,oscc,oscc,109,109,15,0,0,0,15,0,0,"{""validated_exact_public_wsi"": 15}",0,0
+public_ndb_wsi_0165,public_ndb_wsi_0165,15,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,165,165,0,15,0,0,0,15,0,"{""validated_exact_public_wsi"": 15}",0,0
+sab_only_wsi_0001,sab_only_wsi_0001,15,SAB-only recovered WSI,,without_dysplasia,,,0,15,0,0,0,15,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0066,sab_only_wsi_0066,15,SAB-only recovered WSI,,without_dysplasia,,,0,15,0,0,0,15,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0193,sab_only_wsi_0193,15,SAB-only recovered WSI,,without_dysplasia,,,0,14,1,0,0,14,1,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0201,sab_only_wsi_0201,15,SAB-only recovered WSI,,without_dysplasia,,,0,15,0,0,0,15,0,"{""validated_exact_sab_only"": 15}",0,0
+public_ndb_wsi_0007,public_ndb_wsi_0007,14,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,7,7,0,14,0,0,0,14,0,"{""validated_exact_public_wsi"": 14}",0,0
+public_ndb_wsi_0031,public_ndb_wsi_0031,14,both,oscc,oscc,31,31,14,0,0,0,14,0,0,"{""validated_exact_public_wsi"": 14}",0,0
+public_ndb_wsi_0051,public_ndb_wsi_0051,14,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,51,51,0,14,0,0,0,14,0,"{""validated_exact_public_wsi"": 14}",0,0
+public_ndb_wsi_0068,public_ndb_wsi_0068,14,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,68,68,0,0,14,0,0,0,14,"{""validated_exact_public_wsi"": 14}",0,0
+public_ndb_wsi_0149,public_ndb_wsi_0149,14,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,149,149,0,14,0,0,0,14,0,"{""validated_exact_public_wsi"": 14}",0,0
+sab_only_wsi_0015,sab_only_wsi_0015,14,SAB-only recovered WSI,,without_dysplasia,,,0,10,4,0,0,10,4,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0021,sab_only_wsi_0021,14,SAB-only recovered WSI,,without_dysplasia,,,0,5,9,0,0,5,9,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0071,sab_only_wsi_0071,14,SAB-only recovered WSI,,without_dysplasia,,,0,14,0,0,0,14,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0084,sab_only_wsi_0084,14,SAB-only recovered WSI,,without_dysplasia,,,0,12,2,0,0,12,2,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0127,sab_only_wsi_0127,14,SAB-only recovered WSI,,without_dysplasia,,,0,14,0,0,0,14,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0133,sab_only_wsi_0133,14,SAB-only recovered WSI,,without_dysplasia,,,0,14,0,0,0,14,0,"{""validated_exact_sab_only"": 14}",0,0
+public_ndb_wsi_0038,public_ndb_wsi_0038,13,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,38,38,0,13,0,0,0,13,0,"{""validated_exact_public_wsi"": 13}",0,0
+public_ndb_wsi_0053,public_ndb_wsi_0053,13,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,53,53,0,13,0,0,0,13,0,"{""validated_exact_public_wsi"": 13}",0,0
+public_ndb_wsi_0152,public_ndb_wsi_0152,13,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,152,152,0,0,13,0,0,0,13,"{""validated_exact_public_wsi"": 13}",0,0
+public_ndb_wsi_0171,public_ndb_wsi_0171,13,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,171,171,0,13,0,0,0,13,0,"{""validated_exact_public_wsi"": 13}",0,0
+sab_only_wsi_0095,sab_only_wsi_0095,13,SAB-only recovered WSI,,without_dysplasia,,,0,11,2,0,0,11,2,"{""validated_exact_sab_only"": 13}",0,0
+sab_only_wsi_0167,sab_only_wsi_0167,13,SAB-only recovered WSI,,without_dysplasia,,,0,13,0,0,0,13,0,"{""validated_exact_sab_only"": 13}",0,0
+public_ndb_wsi_0028,public_ndb_wsi_0028,12,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,28,28,0,12,0,0,0,12,0,"{""validated_exact_public_wsi"": 12}",0,0
+public_ndb_wsi_0082,public_ndb_wsi_0082,12,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,82,82,0,0,12,0,0,0,12,"{""validated_exact_public_wsi"": 12}",0,0
+sab_only_wsi_0096,sab_only_wsi_0096,12,SAB-only recovered WSI,,without_dysplasia,,,0,12,0,0,0,12,0,"{""validated_exact_sab_only"": 12}",0,0
+sab_only_wsi_0196,sab_only_wsi_0196,12,SAB-only recovered WSI,,oscc,,,12,0,0,0,12,0,0,"{""validated_exact_sab_only"": 12}",0,0
+public_ndb_wsi_0095,public_ndb_wsi_0095,11,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,95,95,0,0,11,0,0,0,11,"{""validated_exact_public_wsi"": 11}",0,0
+sab_only_wsi_0204,sab_only_wsi_0204,11,SAB-only recovered WSI,,oscc,,,11,0,0,0,11,0,0,"{""validated_exact_sab_only"": 11}",0,0
+public_ndb_wsi_0018,public_ndb_wsi_0018,10,both,oscc,oscc,18,18,10,0,0,0,10,0,0,"{""validated_exact_public_wsi"": 10}",0,0
+public_ndb_wsi_0093,public_ndb_wsi_0093,10,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,93,93,0,0,10,0,0,0,10,"{""validated_exact_public_wsi"": 10}",0,0
+public_ndb_wsi_0117,public_ndb_wsi_0117,10,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,117,117,0,10,0,0,0,10,0,"{""validated_exact_public_wsi"": 10}",0,0
+public_ndb_wsi_0119,public_ndb_wsi_0119,10,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,119,119,0,10,0,0,0,10,0,"{""validated_exact_public_wsi"": 10}",0,0
+public_ndb_wsi_0151,public_ndb_wsi_0151,10,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,151,151,0,0,10,0,0,0,10,"{""validated_exact_public_wsi"": 10}",0,0
+public_ndb_wsi_0198,public_ndb_wsi_0198,10,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,198,198,0,10,0,0,0,10,0,"{""validated_exact_public_wsi"": 10}",0,0
+sab_only_wsi_0203,sab_only_wsi_0203,10,SAB-only recovered WSI,,without_dysplasia,,,0,10,0,0,0,10,0,"{""validated_exact_sab_only"": 10}",0,0
+sab_only_wsi_0205,sab_only_wsi_0205,10,SAB-only recovered WSI,,without_dysplasia,,,0,10,0,0,0,10,0,"{""validated_exact_sab_only"": 10}",0,0
+public_ndb_wsi_0057,public_ndb_wsi_0057,9,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,57,57,0,9,0,0,0,9,0,"{""validated_exact_public_wsi"": 9}",0,0
+sab_only_wsi_0110,sab_only_wsi_0110,9,SAB-only recovered WSI,,without_dysplasia,,,0,9,0,0,0,9,0,"{""validated_exact_sab_only"": 9}",0,0
+sab_only_wsi_0209,sab_only_wsi_0209,9,SAB-only recovered WSI,,without_dysplasia,,,0,0,9,0,0,0,9,"{""validated_exact_sab_only"": 9}",0,0
+public_ndb_wsi_0056,public_ndb_wsi_0056,8,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,56,56,0,5,3,0,0,5,3,"{""validated_exact_public_wsi"": 8}",0,0
+sab_only_wsi_0207,sab_only_wsi_0207,8,SAB-only recovered WSI,,oscc,,,0,0,8,0,0,0,8,"{""validated_exact_sab_only"": 8}",0,0
+public_ndb_wsi_0154,public_ndb_wsi_0154,7,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,154,154,0,7,0,0,0,7,0,"{""validated_exact_public_wsi"": 7}",0,0
+sab_only_wsi_0049,sab_only_wsi_0049,7,SAB-only recovered WSI,,without_dysplasia,,,0,7,0,0,0,7,0,"{""validated_exact_sab_only"": 7}",0,0
+public_ndb_wsi_0140,public_ndb_wsi_0140,6,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,140,140,0,0,6,0,0,0,6,"{""validated_exact_public_wsi"": 6}",0,0
+public_ndb_wsi_0147,public_ndb_wsi_0147,6,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,147,147,0,0,6,0,0,0,6,"{""validated_exact_public_wsi"": 6}",0,0
+public_ndb_wsi_0189,public_ndb_wsi_0189,6,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,189,189,0,4,2,0,0,4,2,"{""validated_exact_public_wsi"": 6}",0,0
+sab_only_wsi_0042,sab_only_wsi_0042,6,SAB-only recovered WSI,,without_dysplasia,,,0,2,4,0,0,2,4,"{""validated_exact_sab_only"": 6}",0,0
+sab_only_wsi_0208,sab_only_wsi_0208,6,SAB-only recovered WSI,,without_dysplasia,,,0,1,5,0,0,1,5,"{""validated_exact_sab_only"": 6}",0,0
+public_ndb_wsi_0022,public_ndb_wsi_0022,5,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,22,22,0,0,5,0,0,0,5,"{""validated_exact_public_wsi"": 5}",0,0
+sab_only_wsi_0206,sab_only_wsi_0206,5,SAB-only recovered WSI,,oscc,,,3,0,2,0,3,0,2,"{""validated_exact_sab_only"": 5}",0,0
+public_ndb_wsi_0105,public_ndb_wsi_0105,4,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,105,105,0,4,0,0,0,4,0,"{""validated_exact_public_wsi"": 4}",0,0
+public_ndb_wsi_0086,public_ndb_wsi_0086,3,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,86,86,0,0,3,0,0,0,3,"{""validated_exact_public_wsi"": 3}",0,0
+public_ndb_wsi_0087,public_ndb_wsi_0087,3,both,without_dysplasia,broad_leukoplakia_unknown_dysplasia,87,87,0,0,3,0,0,0,3,"{""validated_exact_public_wsi"": 3}",0,0
+public_ndb_wsi_0181,public_ndb_wsi_0181,2,both,with_dysplasia,broad_leukoplakia_unknown_dysplasia,181,181,0,1,1,0,0,1,1,"{""validated_exact_public_wsi"": 2}",0,0
+sab_only_wsi_0041,sab_only_wsi_0041,1,SAB-only recovered WSI,,broad_leukoplakia_unknown_dysplasia,,,0,1,0,0,0,1,0,"{""validated_exact_sab_only"": 1}",0,0
+sab_only_wsi_0170,sab_only_wsi_0170,1,SAB-only recovered WSI,,without_dysplasia,,,0,1,0,0,0,1,0,"{""validated_exact_sab_only"": 1}",0,0

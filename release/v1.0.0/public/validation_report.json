@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "profile": "public",
+  "status": "passed",
+  "table_rows": {
+    "experiment1_patch_assignments.csv": 3763,
+    "experiment2_patch_assignments.csv": 3763
+  },
+  "public_columns": [
+    "patch_id",
+    "diagnosis",
+    "fold",
+    "role",
+    "public_origin_id",
+    "public_group_id",
+    "public_wsi_id",
+    "image_path",
+    "metadata_status",
+    "metadata_conflict_status",
+    "provenance_status",
+    "localization",
+    "lesion_size",
+    "tobacco_use",
+    "alcohol_consumption",
+    "sun_exposure",
+    "gender",
+    "skin_color",
+    "age_group",
+    "dysplasia_severity"
+  ],
+  "scanned_text_files": 14,
+  "scan_hits": {
+    "absolute_paths": [],
+    "raw_case_prefixes": [],
+    "emails": [],
+    "secret_assignments": []
+  },
+  "failures": []
+}

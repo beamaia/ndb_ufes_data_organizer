@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this organizer or its derived release tables, please cite the software and the source dataset."
+title: "NDB-UFES Data Organizer"
+type: software
+version: 1.0.0
+authors:
+  - family-names: Maia
+    given-names: Beatriz Matias Santana
+repository-code: "https://github.com/beamaia/ndb_ufes_data_organizer"
+url: "https://beamaia.github.io/ndb_ufes_data_organizer/"
+license: GPL-3.0-only

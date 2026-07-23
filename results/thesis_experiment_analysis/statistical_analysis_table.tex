@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\caption{Exploratory statistical analysis of fold-level balanced accuracy. Between-experiment $p$-values use Holm correction across the three architecture comparisons.}
+\label{tab:bcc-statistical-analysis}
+\centering
+\small
+\begin{tabularx}{\textwidth}{@{}XlrrrrX@{}}
+\toprule
+Comparison & Test & Statistic & Raw $p$ & Adjusted $p$ & Median difference & Direction \\
+\midrule
+Experiment 1: three CNNs & Friedman & 5.200 & 0.0743 & -- & -- & No difference detected \\
+Experiment 2: three CNNs & Friedman & 2.800 & 0.2466 & -- & -- & No difference detected \\
+\midrule
+MobileNetV2: Experiment 1 vs. 2 & Mann--Whitney $U$ & 25.0 & 0.0079 & 0.0238 & 33.98 pp & Experiment 1 higher \\
+DenseNet-121: Experiment 1 vs. 2 & Mann--Whitney $U$ & 25.0 & 0.0079 & 0.0238 & 33.23 pp & Experiment 1 higher \\
+ResNet-50: Experiment 1 vs. 2 & Mann--Whitney $U$ & 25.0 & 0.0079 & 0.0238 & 30.31 pp & Experiment 1 higher \\
+\bottomrule
+\end{tabularx}
+\end{table*}

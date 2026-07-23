@@ -10,6 +10,15 @@ Human-in-the-loop validation is paused. All origin-patch pairs currently accepte
 
 The current fold-generation pipeline remains usable because Phase 3 locks every patch from the same origin into the same fold. That prevents a known class of leakage even when patches from one origin look similar to each other.
 
+## Same-patient WSI Image Relationship Review
+
+The same-patient image review compared 397 distinct public-image pairs within explicit patient/case groups. Seventy-two pairs passed the current geometric screening rule and are included in a visual review document. The review shows the original images, projected regions, perspective-rectified crops, overlays, scales, and projected coordinates.
+
+This is an exploratory screening artifact. The candidate label does not prove that two images are duplicates, that one image was produced from the other, or that an experiment was contaminated. It is intended to support the next human validation step.
+
+- [Visual review PDF](assets/contamination/same_patient_wsi_image_relationships.pdf)
+- [Reproducible review notebook](https://github.com/beamaia/ndb_ufes_data_organizer/blob/main/notebooks/same_patient_wsi_image_relationships_review.ipynb)
+
 ## Example: Origin 0011
 
 Origin 0011 contains 64 accepted patch rows in the current matched subset. In the current Phase 3 output, Origin 0011 is assigned to fold 0, and all 64 of its patch rows inherit fold 0.
@@ -86,5 +95,5 @@ The patch grid is retained as review material, but it should not be read as fina
 - Avoid publishing broad contamination claims until manual disposition is complete.
 
 <div class="ndb-next" markdown>
-<strong>Related read:</strong> [Audit Guide](audit-guide.md)
+<strong>Related read:</strong> [Validation Guide](validation-guide.md)
 </div>

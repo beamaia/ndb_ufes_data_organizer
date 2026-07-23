@@ -29,7 +29,7 @@ PATCH_IMAGE_DIR = str(PROJECT_ROOT / 'data/ndb_ufes/patch_level/images')
 OUTPUT_MAPPING_CSV = str(PROJECT_ROOT / 'data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv')
 
 EMBEDDINGS_OUTPUT_DIR = str(PROJECT_ROOT / 'data/embeddings/')
-CACHE_DIR = str(PROJECT_ROOT / 'results/phase1_feature_cache')
+CACHE_DIR = str(PROJECT_ROOT / 'results/phase1/feature_cache')
 
 BATCH_SIZE = 32
 DEVICE = 'mps'

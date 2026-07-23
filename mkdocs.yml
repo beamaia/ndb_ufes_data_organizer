@@ -1,5 +1,5 @@
 site_name: NDB-UFES Data Organizer
-site_description: Stratified folding pipeline for oral cancer histopathology dataset
+site_description: Patient-first atlas, leakage-aware folds, and reproducibility notes for the NDB-UFES oral histopathology dataset
 site_url: https://beamaia.github.io/ndb_ufes_data_organizer/
 repo_url: https://github.com/beamaia/ndb_ufes_data_organizer
 repo_name: GitHub
@@ -40,6 +40,17 @@ extra_css:
 extra_javascript:
   - javascripts/plotly-loader.js
 
+# Keep this unreferenced, high-resolution review composite in the repository for
+# local review without copying 29 MB into every public Pages artifact.
+exclude_docs: |
+  assets/contamination/contaminated_patches_comparison.png
+  assets/thesis_section3/README.md
+  assets/thesis_section3/asset_manifest.csv
+  assets/thesis_section3/fig_02_collapsed_wsi_groups_0010_0013.png
+  assets/thesis_section3/fig_02_related_shifted_wsi_groups_0010_0013.png
+  assets/thesis_section3/fig_07_metadata_missingness_combined.pdf
+  assets/thesis_section3/fig_07_metadata_missingness_combined.png
+
 extra:
   social:
     - icon: fontawesome/brands/researchgate
@@ -51,6 +62,14 @@ nav:
   - Start Here:
     - Factsheet: factsheet.md
     - Setup & Installation: setup.md
+    - Atlas Guide: atlas-guide.md
+    - Atlas Methods: atlas-methods.md
+    - Atlas Index: atlas-index.md
+    - Current Release Facts: release-facts.md
+    - Atlas Gap Map: atlas-gap-map.md
+    - Metadata Conflict Review: metadata-conflict-review.md
+    - Thesis Experiment Design: thesis-experiment-batches.md
+    - Canonical Experiment Results: experiment-results.md
   - Pipeline:
     - Overview: pipeline.md
     - Implementation Status: status.md
@@ -72,7 +91,7 @@ nav:
     - Exploratory Analysis: exploratory-analysis.md
     - Dataset Figure Gallery: dataset-figure-gallery.md
     - Contamination Checks: contamination-analysis.md
-    - Audit Guide: audit-guide.md
+    - Validation Guide: validation-guide.md
     - Visualizations: visualizations/README.md
 
 plugins:
@@ -94,4 +113,4 @@ markdown_extensions:
   - toc:
       permalink: true
 
-copyright: Copyright © 2026 NDB-UFES Data Organizer Team
+copyright: Copyright © 2026 Beatriz Matias Santana Maia · Code GPL-3.0 · Documentation CC BY 4.0

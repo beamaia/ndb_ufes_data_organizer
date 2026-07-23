@@ -1,6 +1,6 @@
 # NDB-UFES Data Organizer
 
-Repository for organizing the public NDB-UFES oral histopathology dataset into leakage-safe cross-validation folds, with a data dictionary, factsheet, reproducibility notes, and audit guidance for public reuse.
+Repository for organizing the public NDB-UFES oral histopathology dataset into leakage-safe cross-validation folds, with a patient-first WSI atlas, data dictionary, factsheet, reproducibility notes, and validation guidance for public reuse.
 
 This repository is a data organizer. It is not a downstream model-training repository.
 
@@ -27,13 +27,31 @@ The documentation source lives in `docs/` and is wired through `mkdocs.yml`.
 - `docs/data-dictionary.md`: current CSV schemas, counts, labels, and field notes.
 - `docs/pipeline.md`: phase overview and leakage framing.
 - `docs/reproducibility.md`: commands and expected outputs.
+- `docs/atlas-guide.md`: how to read the patient-first atlas and its two linkage layers.
+- `docs/atlas-index.md`: lightweight public-pseudonymous WSI index and manifest.
+- `docs/release-facts.md`: readable scope snapshot backed by the public release-facts JSON.
+- `docs/thesis-experiment-batches.md`: frozen Experiment 1/2 design and Batch 3 archive boundary.
+- `docs/experiment-results.md`: metrics, fold distributions, execution times, confusion matrices, loss figures, and exploratory statistics.
+- [`NDB_UFES_SAB_atlas_public.pdf`](NDB_UFES_SAB_atlas_public.pdf): the
+  sanitized, root-level 251-WSI atlas release artifact.
 
 Serve locally with:
 
 ```bash
 uv sync --extra docs
-uv run mkdocs serve
+uv run python scripts/src/release/validate_public_atlas_pdf.py
+uv run python scripts/src/release/validate_atlas_public_index.py
+uv run python scripts/src/release/build_canonical_experiment_release.py
+uv run python scripts/src/release/generate_research_ready_tables.py --profile public
+uv run python -m mkdocs serve
 ```
+
+The root-level public PDF is a repository release artifact and is deliberately
+not copied into the MkDocs payload, which remains below its 55 MB gate. The
+editable DOCX source and the identifier-bearing LAB PDF are local-only,
+ignored artifacts. The public-pseudonymous atlas index, manifest, schema,
+methods contract, and aggregate conflict report provide the searchable web
+surface.
 
 ## Quick Start
 
@@ -62,35 +80,52 @@ uv run python scripts/phase3.py
 Regenerate documentation figures and wiki Plotly previews:
 
 ```bash
-uv run --extra docs python scripts/generate_wiki_figures.py
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py
+```
+
+Build the documentation exactly as the deployment workflow does:
+
+```bash
+uv run --extra docs python -m mkdocs build --strict
 ```
 
 Generate full Plotly PNG, SVG, and PDF thesis copies only when needed:
 
 ```bash
-uv run --extra docs python scripts/generate_wiki_figures.py --export-plotly-thesis
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py --export-plotly-thesis
 ```
 
 ## Current Key Artifacts
 
 Current canonical generated artifacts:
 
-- `results/phase2_tuning/phase2_model_selection.csv`
+- `docs/assets/experiments/canonical_run_manifest.json`
+- `docs/assets/experiments/canonical_results.csv`
+- `release/v1.0.0/public/`
+- `results/phase2/tuning/phase2_model_selection.csv`
 - `clustering_params.json`
-- `results/phase3_fold_creation/fold_assignments_origin.csv`
-- `results/phase3_fold_creation/fold_assignments_patch_level.csv`
-- `results/phase3_fold_creation/fold_validation.json`
+- `results/phase3/fold_creation/fold_assignments_origin.csv`
+- `results/phase3/fold_creation/fold_assignments_patch_level.csv`
+- `results/phase3/fold_creation/fold_validation.json`
 
-## Dataset Snapshot
+## Current Scope Snapshot
 
-Matched subset available for fold design:
+The repository currently tracks three related scopes:
 
 | Item | Count |
 | --- | ---: |
-| Patch rows | 3,086 |
-| Matched origins | 203 |
-| Planned folds | 6 |
-| Diagnostic classes | 3 |
+| Full P-NDB-UFES patch rows used to start the thesis batches | 3,763 |
+| SAB-linked patch rows with recovered metadata/embedding linkage | 3,086 |
+| Thesis rows retained with missing metadata linkage | 677 |
+| Validated WSI groups in the atlas | 251 |
+| Public NDB-UFES + SAB / SAB-only WSI groups | 203 / 48 |
+| Matched origins available for the older fold-design run | 203 |
+| Planned folds for that run | 6 |
+
+The 3,763, 3,086/677, and 251 counts describe different layers. See
+[Thesis Experiment Design](docs/thesis-experiment-batches.md),
+[Canonical Experiment Results](docs/experiment-results.md), and
+[Atlas Guide](docs/atlas-guide.md) before comparing them.
 
 Patch-level diagnosis counts:
 
@@ -106,13 +141,23 @@ Once folds are finalized, use the provided fold assignments instead of random pa
 
 Frozen external pretrained embeddings may be used for unsupervised morphology-aware stratification, but fold construction must not be chosen using downstream validation/test performance.
 
-## Development Notes
+## Release validation
 
 Before publishing a new documentation release:
 
-- verify all fold invariants.
-- decide which root Markdown files should be promoted, archived, or deleted.
-- keep Phase 4 out of the accepted release path until it has an independent audit.
+- verify all fold and public-export invariants.
+- reproduce the six published aggregates from the 30 stored child-fold records.
+- run the forbidden-field, identifier, email, secret, and absolute-path scans.
+- build MkDocs in strict mode and keep the site payload below 55 MB.
+
+Experiment 1 and Experiment 2 are the final thesis comparisons. Batch 3 is an
+exploratory archive and is not part of the default release matrix.
+
+## Licensing
+
+Repository code is licensed under GPL-3.0. Documentation and derived public
+artifacts are provided under CC BY 4.0; see `LICENSE-DOCS.md` and `NOTICE`.
+Software citation metadata is in `CITATION.cff`.
 
 ## Implementation Support
 

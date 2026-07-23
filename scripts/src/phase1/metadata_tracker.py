@@ -43,7 +43,7 @@ class MetadataTracker:
     def __init__(self, metadata_dir: Optional[str] = None):
         """ 
         Args:
-            metadata_dir: Directory to save metadata. Defaults to results/phase1_metadata/
+            metadata_dir: Directory to save metadata. Defaults to results/phase1/metadata/
         """
         if metadata_dir is None:
             metadata_dir = pl.Path(__file__).parent.parent.parent.parent / "results" / "phase1_metadata"

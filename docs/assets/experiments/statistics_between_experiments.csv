@@ -1,0 +1,4 @@
+model,test,statistic,raw_p_value,median_experiment_1,median_experiment_2,median_difference_experiment_1_minus_2,rank_biserial_correlation,direction,holm_adjusted_p_value,significant_0_05
+MobileNetV2,Mann-Whitney U,25.0,0.007936507936507936,0.9066020459232128,0.5668162513860123,0.3397857945372005,1.0,Experiment 1 higher,0.023809523809523808,True
+DenseNet-121,Mann-Whitney U,25.0,0.007936507936507936,0.9148622267959908,0.5825459452365873,0.3323162815594035,1.0,Experiment 1 higher,0.023809523809523808,True
+ResNet-50,Mann-Whitney U,25.0,0.007936507936507936,0.9025632494573498,0.5995102915174465,0.3030529579399033,1.0,Experiment 1 higher,0.023809523809523808,True

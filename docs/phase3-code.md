@@ -16,7 +16,7 @@ Purpose:
 - Reload the exact selected embedding file.
 - Validate mapping, patch metadata, and embedding origin sets.
 - Reproduce the selected PCA/K-Means clustering.
-- Audit stratification variables.
+- Validate stratification variables.
 - Assign folds with stratum round-robin LPT.
 - Save origin-level and patch-level outputs.
 - Save a machine-readable validation report.
@@ -124,7 +124,7 @@ Reports missing count, missing rate, number of categories, and minimum category 
 
 ### `evaluate_stratification_variables(...) -> pd.DataFrame`
 
-Audits required, optional, and descriptive variables.
+Validates required, optional, and descriptive variables.
 
 Current required variables:
 
@@ -139,15 +139,15 @@ Gate:
 - Every category must have at least six origins.
 - Required-variable failure blocks fold creation.
 
-### `build_stratification_key(origin_df, audit_df) -> tuple[pd.Series, list[str]]`
+### `build_stratification_key(origin_df, validation_df) -> tuple[pd.Series, list[str]]`
 
 Builds the combined stratum key from included required and optional variables.
 
-Raises `ValueError` if any required variable failed the audit.
+Raises `ValueError` if any required variable failed validation.
 
 ### `create_stratification_keys(origin_df, clusters) -> tuple[pd.DataFrame, pd.DataFrame, list[str]]`
 
-Adds morphology clusters, audits variables, and creates the combined stratification key.
+Adds morphology clusters, validates variables, and creates the combined stratification key.
 
 ## Assignment Functions
 
@@ -198,13 +198,13 @@ Returns:
 - maximum stratum fold-count range.
 - maximum folds per origin.
 
-### `save_outputs(origin_df, patch_df, audit_df, validation, output_dir) -> None`
+### `save_outputs(origin_df, patch_df, validation_df, validation, output_dir) -> None`
 
 Writes:
 
 - `fold_assignments_origin.csv`
 - `fold_assignments_patch_level.csv`
-- `stratification_variables_audit.csv`
+- `stratification_variables_validation.csv`
 - `fold_validation.json`
 
 ## Run

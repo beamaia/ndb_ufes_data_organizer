@@ -1,0 +1,11 @@
+field,field_level,groups_evaluated,same,changed,missing_only,mixed_missing_non_missing,changed_with_missing
+gender,patient,60,60,0,0,0,0
+age_group,patient,60,60,0,0,0,0
+skin_color,patient,60,30,0,30,0,0
+tobacco_use,patient,60,29,0,31,0,0
+alcohol_consumption,patient,60,29,0,31,0,0
+sun_exposure,patient,60,28,0,32,0,0
+diagnosis,lesion_sample,60,60,0,0,0,0
+localization,lesion_sample,60,60,0,0,0,0
+larger_size,lesion_sample,60,58,2,0,0,0
+dysplasia_severity,lesion_sample,60,22,0,38,0,0

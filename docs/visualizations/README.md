@@ -21,7 +21,7 @@ These views are exploratory. Phase 2 selection is made by eligibility rules and 
 The generated result and dataset-statistics figures are created by:
 
 ```bash
-uv run --extra docs python scripts/generate_wiki_figures.py
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py
 ```
 
 The complete dataset-statistics Plotly set is available on [Exploratory Analysis](../exploratory-analysis.md) with fast static previews and in-place interactive loading. [Dataset Figure Gallery](../dataset-figure-gallery.md) keeps the same generated set as a neutral figure index.
@@ -58,13 +58,13 @@ docs/assets/generated/plotly_previews/
 Curated thesis-ready PNG, SVG, and PDF copies are saved under:
 
 ```text
-results/thesis_figures/
+results/phase4/thesis_figures/
 ```
 
 To generate full Plotly PNG, SVG, and PDF copies for thesis reuse, run:
 
 ```bash
-uv run --extra docs python scripts/generate_wiki_figures.py --export-plotly-thesis
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py --export-plotly-thesis
 ```
 
 ## Refresh Phase 1 Visualization Files
@@ -72,7 +72,7 @@ uv run --extra docs python scripts/generate_wiki_figures.py --export-plotly-thes
 To copy regenerated Phase 1 visualization HTML files:
 
 ```bash
-uv run python scripts/copy_visualizations.py
+uv run python scripts/src/docs/copy_visualizations.py
 ```
 
 This script copies regenerated HTML visualization files into `docs/visualizations/` and normalizes their filenames for cleaner URLs.
@@ -83,6 +83,6 @@ The visualization HTML files use the shared local `plotly-3.5.0.min.js` asset in
 
 Once files are in place:
 
-1. Run `uv run --extra docs mkdocs serve -a 127.0.0.1:8000` from the project root.
+1. Run `uv run --extra docs python -m mkdocs serve -a 127.0.0.1:8000` from the project root.
 2. Open `http://127.0.0.1:8000/ndb_ufes_data_organizer/visualizations/`.
 3. Open the linked HTML files for interactive Plotly views.

@@ -14,13 +14,13 @@ logger = logging.getLogger(__name__)
 
 # PIN: this module is currently not called by the active pipeline. If moved to
 # Phase 3, reassess whether these post-clustering pca plots still answer a real
-# audit/reporting question before wiring them into an entrypoint.
+# validation/reporting question before wiring them into an entrypoint.
 
 # ---------------------------------------------------------------------------
 # CONSTANTS
 # ---------------------------------------------------------------------------
 
-WSI_CLUSTERS_CSV = 'results/phase3_fold_creation/fold_assignments_origin.csv'
+WSI_CLUSTERS_CSV = 'results/phase3/fold_creation/fold_assignments_origin.csv'
 PATCH_CLUSTERS_CSV = 'data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_detailed.csv'
 METADATA_CSV = 'data/ndb_ufes/origin_level/csvs/ndb-ufes.csv'
 
@@ -375,7 +375,7 @@ def create_patch_3d_plot(wsi_ids_patch, patch_features_3d, patch_df, model_name,
     logger.info(f"Saved: {output_path}")
 
 
-def visualize_embeddings(model_name, embeddings_file, timestamp=None, output_dir='results/phase1_visualizations'):
+def visualize_embeddings(model_name, embeddings_file, timestamp=None, output_dir='results/phase1/visualizations'):
     """
     Main visualization pipeline.
     

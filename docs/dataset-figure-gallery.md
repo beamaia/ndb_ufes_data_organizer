@@ -4,12 +4,12 @@ This page lists Plotly counterparts for the dataset-statistics figures that were
 
 Each figure starts as a fast static preview. Use **Load Interactive Figure** to open the Plotly version in place. This keeps the page usable while still keeping every converted graph available in the wiki.
 
-Interactive Plotly files are saved under `docs/visualizations/generated/`. Fast Plotly PNG previews are saved under `docs/assets/generated/plotly_previews/`. Curated thesis exports are saved under `results/thesis_figures/`. Full Plotly PNG/SVG/PDF thesis copies can be generated with `--export-plotly-thesis` when needed.
+Interactive Plotly files are saved under `docs/visualizations/generated/`. Fast Plotly PNG previews are saved under `docs/assets/generated/plotly_previews/`. Curated thesis exports are saved under `results/phase4/thesis_figures/`. Full Plotly PNG/SVG/PDF thesis copies can be generated with `--export-plotly-thesis` when needed.
 
 Regenerate this page with:
 
 ```bash
-uv run python scripts/generate_wiki_figures.py
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py
 ```
 
 ## Diagnosis And Source Tasks

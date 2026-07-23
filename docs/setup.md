@@ -1,6 +1,6 @@
-# Setup And Installation
+# Setup and installation
 
-This page describes how to run the organizer locally and how public users should retrieve the source dataset.
+This is the shortest path from a clean checkout to either the pipeline or the documentation site. The public source data comes from Mendeley; the private DVC remote is only for maintainer-side synchronization.
 
 ## System Requirements
 
@@ -11,14 +11,33 @@ This page describes how to run the organizer locally and how public users should
 | Storage | About 20 GB for the full public dataset and generated artifacts |
 | Accelerator | Optional CUDA, Apple Metal/MPS, or CPU |
 
-## Clone The Repository
+## Clone the repository
 
 ```bash
 git clone https://github.com/beamaia/ndb_ufes_data_organizer.git
 cd ndb_ufes_data_organizer
 ```
 
-## Install Dependencies
+## Documentation-only quickstart
+
+After `uv` is available, you can read, validate, and build the wiki without
+downloading private DVC data or the LAB atlas. The root-level public PDF is a
+repository artifact, while the committed lightweight atlas assets are the
+documentation payload:
+
+```bash
+uv sync --extra docs
+uv run python scripts/src/release/validate_public_atlas_pdf.py
+uv run python scripts/src/release/validate_atlas_public_index.py
+uv run python -m mkdocs build --strict
+uv run python scripts/src/release/validate_static_site.py site
+uv run python scripts/src/release/validate_public_payload.py site --max-mib 55
+uv run python -m mkdocs serve
+```
+
+Open `http://127.0.0.1:8000/ndb_ufes_data_organizer/`. The same strict build is used by the deployment workflow. The full pipeline setup below is only needed when you want to regenerate research artifacts, figures, or the public atlas export from local inputs.
+
+## Install dependencies
 
 Install `uv` if it is not already available:
 
@@ -39,15 +58,15 @@ For documentation work:
 uv sync --extra docs
 ```
 
-## Download The Dataset
+## Download the dataset
 
-Public users should download NDB-UFES from Mendeley Data:
+Download NDB-UFES from Mendeley Data:
 
 ```text
 https://data.mendeley.com/datasets/bbmmm4wgr8/4
 ```
 
-After downloading, place the dataset files under the expected local `data/ndb_ufes/` structure before running the pipeline. The current organizer expects patch metadata, patch images, origin metadata, and relationship files to be available locally.
+After downloading, place the dataset files under the expected local `data/ndb_ufes/` structure. The organizer expects patch metadata, patch images, origin metadata, and relationship files to be available locally.
 
 Expected key locations:
 
@@ -61,7 +80,7 @@ Expected key locations:
 !!! note "Maintainer-only data sync"
     This repository also has a DVC/AWS S3 workflow for the maintainer's local data management. That remote is not the public distribution path. Public users should use the Mendeley Data link above.
 
-## Optional Credentials
+## Optional credentials
 
 Some pretrained feature extractors are hosted on Hugging Face and may require accepted model terms plus an access token.
 
@@ -77,7 +96,7 @@ export HUGGINGFACE_TOKEN=your_token_here
 
 Phase 1 also reads compatible Hugging Face token variables from `.env`.
 
-## Verify The Environment
+## Verify the environment
 
 ```bash
 uv run python -c "import torch; print(torch.__version__)"
@@ -101,7 +120,7 @@ for path in required:
 PY
 ```
 
-## Run The Pipeline
+## Run the pipeline
 
 Phase 1 extracts frozen embeddings:
 
@@ -124,16 +143,24 @@ uv run python scripts/phase3.py
 Regenerate documentation and thesis figures:
 
 ```bash
-uv run python scripts/generate_wiki_figures.py
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py
 ```
 
-## View Documentation Locally
+Verify the canonical stored-run evidence and generate the public release
+bundle without retraining:
+
+```bash
+uv run python scripts/src/release/build_canonical_experiment_release.py
+uv run python scripts/src/release/generate_research_ready_tables.py --profile public
+```
+
+## View the documentation locally
 
 ```bash
 uv sync --extra docs
-uv run python scripts/copy_visualizations.py
-uv run python scripts/generate_wiki_figures.py
-uv run mkdocs serve
+uv run python scripts/src/docs/copy_visualizations.py
+uv run --extra docs python scripts/src/docs/generate_wiki_figures.py
+uv run python -m mkdocs serve
 ```
 
 Then open:
@@ -173,7 +200,7 @@ Lower the Phase 1 batch size in `scripts/phase1.py`, or run on CPU with a smalle
 Run:
 
 ```bash
-uv run mkdocs build --strict
+uv run python -m mkdocs build --strict
 ```
 
 Fix missing links, missing images, or navigation entries before publishing.
