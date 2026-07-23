@@ -199,7 +199,7 @@ NDB_UFES_SAB_atlas.pdf
 NDB_UFES_SAB_atlas_public.docx
 ~$*.docx
 
-# Internal validation code is not part of the public release
+# Internal test files are not part of the public repository
 tests/
 
 # Local plotting/runtime caches

@@ -152,9 +152,9 @@ uv run python scripts/src/release/validate_static_site.py site
 uv run python scripts/src/release/validate_public_payload.py site --max-mib 55
 ```
 
-The public v1.0.0 repository does not ship the internal unit-test files. These
-release validators check the published atlas, experiment evidence, wiki, and
-public payload directly.
+The public repository does not ship internal test files. The commands above
+validate the published atlas, experiment evidence, wiki, and public payload
+directly.
 
 ## Reproducibility Boundary
 
