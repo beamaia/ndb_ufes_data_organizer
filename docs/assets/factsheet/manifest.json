@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "outputs": [
+    "clinical_distributions.svg",
+    "demographic_distributions.svg",
+    "diagnosis_distribution.svg",
+    "exposure_distributions.svg",
+    "source_image_linkage.svg",
+    "fold_class_distribution.svg"
+  ],
+  "scope": {
+    "distribution_patch_rows": 3111,
+    "patches": 3763,
+    "source_image_groups": 251
+  },
+  "sources": {
+    "release/v1.0.0/public/tables/experiment1_patch_assignments.csv": {
+      "rows": 3763,
+      "sha256": "18ea24577e0cef344adcd9c96fc9c1635a17df1dd4b7a137aa1775ef331a49d7"
+    },
+    "release/v1.0.0/public/tables/experiment2_patch_assignments.csv": {
+      "rows": 3763,
+      "sha256": "4d4fe2d01c5b22d0d7f01bca6c32e2afda37171f8bd9baeb6943bf2fe556596e"
+    },
+    "release/v1.0.0/public/tables/validated_wsi_index.csv": {
+      "rows": 251,
+      "sha256": "19b7f6452084726882e62dfe226d4f8fae0482048f7f1927e806f169ee2eb5df"
+    }
+  }
+}

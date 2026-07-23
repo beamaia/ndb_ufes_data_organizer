@@ -13,7 +13,6 @@
       "DenseNet-121",
       "ResNet-50"
     ],
-    "exploratory_archive": "Batch 3 (Virchow-pruned)",
     "metric_note": "Balanced accuracy equals macro recall for this multiclass definition; five checkpoints are evaluated on held-out fold 5."
   },
   "hyperparameters": {
@@ -33,12 +32,12 @@
     "early_stopping_patience": 15,
     "early_stopping_min_delta": 0.001
   },
-  "provenance_limitation": "The completed historical runs were frozen without retraining. Four parents recorded base commit 648b708 with a dirty worktree; two parents recorded Git provenance as unavailable. The six parents therefore cannot all be attributed to one clean commit.",
+  "provenance_limitation": "The completed canonical runs were frozen without retraining. Four parents recorded base commit 648b708 with a dirty worktree; two parents recorded Git provenance as unavailable. The six parents therefore cannot all be attributed to one clean commit.",
   "experiments": [
     {
       "id": "Experiment 1",
       "batch": "batch1",
-      "split": "Original-comparable patch split",
+      "split": "Released patch-level reference split",
       "dataset_rows": 3763,
       "dataset_sha256": "8c5df2eb6123ccea59a2f06932ea88abaa156b47de230d708c37b18aa19be567",
       "cv_folds": [

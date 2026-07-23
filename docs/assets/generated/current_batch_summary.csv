@@ -1,4 +1,0 @@
-batch,patch_rows,fold_counts,origin_leaks,patient_case_leaks
-Batch 1,3763,628/627/627/627/627/627,201,61
-Batch 2,3763,627/631/627/626/626/626,0,0
-Batch 3,3351,566/552/544/553/556/580,0,0

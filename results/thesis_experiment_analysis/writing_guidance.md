@@ -13,7 +13,7 @@
 ## Methodology points to include
 
 - State that MobileNetV2, DenseNet-121, and ResNet-50 were trained under the same relevant hyperparameters in both experiments.
-- Explain that Experiment 1 reproduces the original-comparable patch division, while Experiment 2 changes the fold assignment so linked patient/case groups remain together.
+- Explain that Experiment 1 uses the released patch-level reference split, while Experiment 2 uses patient-first grouping so linked patient/case and source-image groups remain together.
 - State that fold 5 was never used for training or validation. Five models were trained per architecture by rotating validation folds 0--4, and every model was evaluated on fold 5.
 - Explain that reported test metrics are the mean and standard deviation of the five model evaluations on the held-out fold.
 - Explain that the confusion matrix uses one checkpoint so each held-out patch appears once. DenseNet-121 was identified as the best-performing architecture from the completed test-result comparison. Within that architecture, fold 3 was selected only because it had the highest validation BCC; test fold 5 results were not used to select the representative fold checkpoint.
@@ -21,7 +21,7 @@
 
 ## Results points to include
 
-- Compare Experiment 1 with the historical CNN results without claiming exact identity between implementations.
+- Report Experiment 1 directly from the canonical stored-run evidence without claiming equivalence to a separate implementation.
 - Report the numerical decrease in Experiment 2 separately for each CNN, not only MobileNetV2.
 - Use “lower contamination-risk split” rather than “contamination-free split.” Patient grouping reduces known overlap but cannot prove that every relationship was recovered.
 - Describe whether the training loss continues decreasing while validation loss plateaus or increases before calling a curve overfitted.
@@ -30,7 +30,9 @@
 ## Discussion points to include
 
 - The split definition is the main experimental change, which supports an association between grouping and the performance decrease. Avoid saying that the experiment proves every part of the decrease was caused only by leakage.
-- Explain that related WSI, shifted or zoomed tissue views, and patches from linked patients can reduce effective visual diversity when separated across folds.
+- Explain that related histopathology source images, shifted or zoomed tissue
+  views, and patches from linked patients can reduce effective visual diversity
+  when separated across folds.
 - Connect the class-specific confusion to the known subjectivity of epithelial dysplasia assessment.
 - State that the statistical analysis is exploratory because only five folds are available and their training subsets overlap.
 - The within-experiment Friedman tests evaluate whether the three CNNs have different fold-level BCC distributions. The between-experiment tests compare the same architecture across the two split strategies; they do not compare every model against every other model.

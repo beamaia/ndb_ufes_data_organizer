@@ -1,115 +1,55 @@
 # NDB-UFES Data Organizer
 
 <div class="ndb-hero" markdown>
-This repository organizes the public NDB-UFES oral histopathology dataset,
-keeps related patches together, and documents the decisions behind the current
-thesis batches. The wiki also records how the public NDB-UFES-matched subset
-relates to the full P-NDB-UFES scope and to the patch-to-source-image atlas.
+This repository organizes the public NDB-UFES oral histopathology dataset, keeps related patches together, and publishes the final thesis experiment assignments, results, and source-image linkage.
 </div>
 
 ## AI-Assisted Documentation Note
 
 This wiki was prepared with assistance from Codex (GPT-5), following instructions and guidelines written by a human. Published pages are reviewed and validated by a human before release.
 
-## Scope
+## Final Dataset Scope
 
-Both final experiments use all 3,763 P-NDB-UFES patches. SAB provides
-patch-to-source-image linkage for all 3,763. The current relationship table
-matches 3,086 patches to 203 public NDB-UFES origins and leaves 677 without a
-public match. The atlas independently places 3,111 patches in 203 both-source
-groups and 652 in 48 SAB-only groups. The two public-match classifications
-differ for 59 patch rows. [Current Release Facts](release-facts.md) provides
-the complete reconciliation.
+Both experiments use all **3,763 P-NDB-UFES patches**. The validated linkage assigns every patch to one of **251 source-image groups**:
 
-The root-level public atlas provides a visual view of 251 source-image groups,
-organized under 64 public-pseudonymous case groups. Start with the
-[Atlas Guide](atlas-guide.md), use the [Atlas Index](atlas-index.md) for
-lookup, and check the [Atlas Gap Map](atlas-gap-map.md) before treating any
-atlas value as a new thesis-release count.
+| Source-image role | Groups | Patches |
+| --- | ---: | ---: |
+| Public NDB-UFES + SAB evidence | 203 | 3,111 |
+| SAB-only evidence | 48 | 652 |
+| **Total** | **251** | **3,763** |
 
-!!! info "Full public atlas"
-    [Download the 587-page public atlas PDF](https://github.com/beamaia/ndb_ufes_data_organizer/raw/refs/heads/main/NDB_UFES_SAB_atlas_public.pdf).
+The 3,111 patches in both-source groups are the public NDB-UFES-linked set used throughout this wiki. The 652 SAB-only patches remain in both final experiments and are grouped by their validated SAB source-image relationships.
 
-## Choose a reading path
+## Download the Fold Assignments
+
+Most users should download **Experiment 2**, the patient-first grouped split. Use Experiment 1 only when the patch-level reference comparison is required.
+
+- [Download Experiment 2 fold assignments — patient-first grouped CSV](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment2_patch_assignments.csv)
+- [Download Experiment 1 fold assignments — reference CSV](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment1_patch_assignments.csv)
+
+Each CSV contains all 3,763 patches. Use the provided `fold` and `role` columns rather than creating a new random split.
+
+## Choose a Reading Path
 
 | If you want to... | Start here |
 | --- | --- |
-| understand the final experiment design | [Thesis Experiment Design](thesis-experiment-batches.md) |
+| understand the released dataset and linkage | [Factsheet](factsheet.md) |
+| understand the two final experiment splits | [Thesis Experiment Design](thesis-experiment-batches.md) |
 | inspect the completed model comparison | [Canonical Experiment Results](experiment-results.md) |
-| inspect the atlas without the private LAB crosswalk | [Atlas Guide](atlas-guide.md), then [Atlas Index](atlas-index.md) |
-| reproduce or deploy the documentation | [Setup & Installation](setup.md), then [Reproducibility](reproducibility.md) |
-| review what is still unresolved | [Atlas Gap Map](atlas-gap-map.md) and [Metadata Conflict Review](metadata-conflict-review.md) |
-| understand the older leakage-safe fold pipeline | [Pipeline](pipeline.md) and [Implementation Status](status.md) |
+| inspect files, columns, and counts | [Data Dictionary](data-dictionary.md) |
+| reproduce the final public outputs | [Reproducibility](reproducibility.md) |
+| preview or build the wiki | [Setup & Installation](setup.md) |
+| understand the contamination-risk example | [Contamination Checks](contamination-analysis.md) |
 
-The dataset contains **3,763 SAB-linked patches**, all of which are used by
-both final experiments. Of these, **3,086 patches** match the 203 public
-NDB-UFES origin images and were used by the earlier embedding and fold-design
-pipeline; the remaining 677 do not have a public NDB-UFES origin match. The
-atlas separately organizes all 3,763 patches into **251 source-image groups**.
-Its source roles contain 3,111 patches in both-source groups and 652 in
-SAB-only groups; this is not the same row partition as 3,086/677.
+## Final Outputs
 
-## NDB-UFES-Matched Subset Release State
+- Two 3,763-row experiment assignment tables.
+- A 251-row public source-image index.
+- Canonical results from six parent runs and 30 child-fold evaluations.
+- Public figures, machine-readable metrics, and provenance.
+- A data dictionary, factsheet, reproducibility guide, and validation report.
 
-<div class="ndb-card-grid" markdown>
-
-<div class="ndb-card" markdown>
-<span class="ndb-stat">203</span>
-**Matched origins.** Origin-level parent images currently available for fold design.
-</div>
-
-<div class="ndb-card" markdown>
-<span class="ndb-stat">3,086</span>
-**Patch rows.** Patch-level rows assigned to leakage-safe folds.
-</div>
-
-<div class="ndb-card" markdown>
-<span class="ndb-stat">6</span>
-**Folds.** Deterministic cross-validation folds with one origin in one fold.
-</div>
-
-<div class="ndb-card" markdown>
-<span class="ndb-stat">1.027</span>
-**Patch ratio.** Maximum/minimum patch-count ratio after Phase 3 validation.
-</div>
-
-<div class="ndb-card" markdown>
-<span class="ndb-stat">251</span>
-**Source-image groups.** Atlas groups with 3,763 patches assigned by recovered
-source-image evidence.
-</div>
-
-</div>
-
-## Start Here
-
-| Page | Use It For |
-| --- | --- |
-| [Thesis Experiment Design](thesis-experiment-batches.md) | Final two-experiment design and its relationship to the 3,086-patch public NDB-UFES-matched subset. |
-| [Canonical Experiment Results](experiment-results.md) | Validated results, figures, statistics, and stored-run provenance. |
-| [Atlas Index](atlas-index.md) | Lightweight public-pseudonymous lookup for the 251 source-image groups. |
-| [Current Release Facts](release-facts.md) | One readable snapshot of the atlas, relationship, and batch scopes. |
-| [Factsheet](factsheet.md) | Public dataset context, task labels, fold status, caveats, and citation language. |
-| [Data Dictionary](data-dictionary.md) | File relationships, columns, counts, labels, and field-level cautions. |
-| [Pipeline](pipeline.md) | Short explanation of Phase 1, Phase 2, Phase 3, and leakage boundaries. |
-| [Phase 1 Results](phase1-results.md) | Feature extraction outputs and exploratory embedding visualizations. |
-| [Phase 2 Results](phase2-results.md) | Virchow selection, eligibility constraints, and model comparison. |
-| [Phase 3 Results](phase3-results.md) | Fold assignment results, validation metrics, and generated fold figures. |
-
-## Public outputs
-
-- Origin-level fold assignments.
-- Patch-level fold assignments.
-- A data dictionary and public factsheet.
-- Reproducibility and validation guidance.
-- Exploratory quality-control notes.
-- Thesis-ready static figures generated from current outputs.
-
-The public site does not load the 587-page root PDF. It loads the text-first
-guide, the public-pseudonymous source-image index, and small JSON/CSV provenance files
-instead. The repository release still provides
-`NDB_UFES_SAB_atlas_public.pdf`; the LAB PDF, editable DOCX, and raw SAB
-crosswalk remain excluded.
+The public site loads text-first documentation and sanitized research artifacts. Private source identifiers, private crosswalks, local paths, checkpoints, and raw MLflow storage are excluded.
 
 The published documentation site is:
 
@@ -120,21 +60,6 @@ https://beamaia.github.io/ndb_ufes_data_organizer/
 ## Lab Attribution
 
 This work is attributed to the [Nature-inspired Computing Lab, Labcin](https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling), and is documented here as part of the lab's reproducible research material.
-
-## Implementation Status
-
-Phases 1 through 3 are implemented and validated for the current matched subset.
-
-| Phase | Current Status |
-| --- | --- |
-| Phase 1 | Complete. All 11 configured pretrained backbones were extracted with model-specific preprocessing. |
-| Phase 2 | Complete. Virchow with PCA=2 and K=3 is the accepted eligible morphology signal. |
-| Phase 3 | Complete. All 203 origins and 3,086 patches were assigned with no origin leakage. |
-| Contamination checks | Paused. Human-in-the-loop validation is needed before stronger contamination claims are made. |
-
-<div class="ndb-next" markdown>
-<strong>Next read:</strong> [Factsheet](factsheet.md)
-</div>
 
 ## Citation
 

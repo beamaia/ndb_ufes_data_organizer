@@ -1,7 +1,0 @@
-diagnosis,metadata_status,patch_count,diagnosis_percent
-Leukoplakia with dysplasia,linked_metadata,1496,77.51
-Leukoplakia with dysplasia,missing_linkage_metadata,434,22.49
-Leukoplakia without dysplasia,linked_metadata,592,83.73
-Leukoplakia without dysplasia,missing_linkage_metadata,115,16.27
-OSCC,linked_metadata,998,88.63
-OSCC,missing_linkage_metadata,128,11.37

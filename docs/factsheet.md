@@ -1,12 +1,10 @@
 # Dataset Factsheet
 
-This factsheet summarizes the organized NDB-UFES fold files, the atlas-backed
-linkage view, and the limits relevant to reuse. It brings provenance, labels,
-folds, demographics/risk factors, and leakage rules together in one place.
+This factsheet summarizes the final organized NDB-UFES experiment assignments, validated source-image linkage, labels, grouping rules, and reuse limits.
 
 ## Dataset Identity
 
-Name: NDB-UFES Data Organizer fold files
+Name: NDB-UFES Data Organizer final public outputs
 
 Source dataset:
 
@@ -22,217 +20,132 @@ Lab attribution:
 
 [Nature-inspired Computing Lab, Labcin](https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling)
 
-## Purpose of This Repository
+## Purpose
 
-The repository organizes the public dataset into grouped folds and records the
-decisions needed to reuse them. Model training remains in the separate training
-repository; this repository publishes the validated, sanitized thesis result
-summary and provenance.
+The repository publishes two final experiment assignments over the complete 3,763-patch P-NDB-UFES scope. It also provides a public-pseudonymous source-image index, canonical stored-run results, figures, provenance, and documentation for leakage-aware reuse.
 
-Main outputs:
+Model training remains in a separate training repository. This repository contains the sanitized final outputs and the evidence needed to interpret them.
 
-- origin-level fold assignments,
-- patch-level fold assignments,
-- data dictionary,
-- reproducibility notes,
-- validation guide,
-- public factsheet.
+## Final Source-Image Linkage
 
-## Thesis Experiment Update
+SAB, coordinate, and pixel-containment evidence assign all 3,763 patches to 251 source-image groups.
 
-The completed thesis/article comparison uses the full 3,763-patch P-NDB-UFES
-scope in two experiments: the original-comparable Batch 1 split and the
-patient-first grouped, lower-contamination-risk Batch 2 split. MobileNetV2,
-DenseNet-121, and ResNet-50 were evaluated. Batch 3 is retained only as an
-exploratory Virchow-pruned archive. See [Thesis Experiment Design](thesis-experiment-batches.md)
-and [Canonical Experiment Results](experiment-results.md).
+| Source-image role | Groups | Patches | Interpretation |
+| --- | ---: | ---: | --- |
+| Public NDB-UFES + SAB evidence | 203 | 3,111 | The source image is supported by both public NDB-UFES and SAB evidence. |
+| SAB-only evidence | 48 | 652 | The source image is recovered from SAB evidence without a public NDB-UFES source-image counterpart. |
+| **Total** | **251** | **3,763** | Every patch has a validated source-image group. |
 
-The matched-subset fold files below remain useful because they document the
-3,086 patches matched to public NDB-UFES origin images and used by the earlier
-embedding and fold-design pipeline. They are not the complete SAB-linked
-scope: SAB source-image linkage is available for all 3,763 patches.
+The 3,111 patches in both-source groups are the public NDB-UFES-linked set. The 652 SAB-only patches are retained in the final experiment scope and grouped by their validated source image.
 
-## Source-Image Atlas View
+The public source-image index contains one searchable row per group and excludes raw SAB case prefixes, original image names, and local filesystem paths.
 
-The atlas provides a second, complementary view of the full 3,763-patch scope.
-Through SAB, coordinate, and pixel-containment evidence, all 3,763 patches are
-assigned to 251 source-image groups: 203 with public NDB-UFES + SAB evidence
-and 48 recovered from SAB only. Those group roles contain 3,111 and 652
-patches, respectively. The separate relationship table reports 3,086 rows
-matched to public NDB-UFES origin images and 677 rows without that public
-match. Their public-match classifications differ for 59 patch rows. These are
-different matching layers, not competing dataset totals.
+<figure class="figure-panel" markdown>
+![Final source-image linkage](assets/factsheet/source_image_linkage.svg)
+<figcaption>Final source-image groups and patches by evidence role, generated from the public source-image index.</figcaption>
+</figure>
 
-The public-safe [Atlas Index](atlas-index.md) provides one searchable row per
-source-image group. It excludes raw SAB case prefixes, image names, and local
-filesystem paths. The [Atlas Guide](atlas-guide.md) defines the evidence and
-interpretation limits.
+## Final Experiments
 
-## Matched Subset
+Both experiments contain the same 3,763 patches and the same diagnostic totals:
 
-Current matched subset available for fold design:
-
-| Item | Count |
+| Diagnosis | Patches |
 | --- | ---: |
-| Patch rows | 3,086 |
-| Matched origins currently available for fold design | 203 |
-| Planned folds | 6 |
-| Diagnostic classes | 3 |
+| OSCC | 1,126 |
+| Leukoplakia with dysplasia | 1,930 |
+| Leukoplakia without dysplasia | 707 |
 
-Original origin-level metadata currently contains 237 rows. The matched subset contains the origins/patches currently available for fold design.
+<figure class="figure-panel" markdown>
+![Final three-class patch distribution](assets/factsheet/diagnosis_distribution.svg)
+<figcaption>The same final diagnosis totals apply to both experiment assignments.</figcaption>
+</figure>
+
+Experiment 1 uses the released patch-level reference split. Experiment 2 uses patient-first grouping so linked patient/case and source-image groups remain within one fold. Experiment 2 is described as lower contamination risk because grouping known relationships cannot prove that every relationship in the source data has been recovered.
+
+| Experiment | Fold counts, 0–5 | Source-image groups crossing folds | Patient/case groups crossing folds |
+| --- | --- | ---: | ---: |
+| Experiment 1 | 628/627/627/627/627/627 | 201 | 61 |
+| Experiment 2 | 627/631/627/626/626/626 | 0 | 0 |
+
+Folds 0–4 rotate as cross-validation folds. Fold 5 is the held-out test fold and is not used for training or validation.
+
+<figure class="figure-panel" markdown>
+![Class distribution across the six folds](assets/factsheet/fold_class_distribution.svg)
+<figcaption>Fold-level diagnosis shares generated directly from the two final public assignment CSVs.</figcaption>
+</figure>
+
+## Download the Fold CSVs
+
+For leakage-aware reuse, download [Experiment 2: patient-first grouped fold assignments](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment2_patch_assignments.csv). For the released patch-level reference comparison, download [Experiment 1: reference fold assignments](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment1_patch_assignments.csv).
+
+Both files contain 3,763 patch rows and the columns needed to select cross-validation folds 0–4 and held-out test fold 5.
 
 ## Diagnostic Labels
 
-Patch-level class distribution:
+The final three-class task uses:
 
-| Diagnosis | Patch count |
-| --- | ---: |
-| OSCC | 1,517 |
-| Leukoplakia with dysplasia | 930 |
-| Leukoplakia without dysplasia | 639 |
+- oral squamous cell carcinoma (OSCC),
+- leukoplakia with dysplasia,
+- leukoplakia without dysplasia.
 
-Origin-level fold distribution:
+The source study also defines broader Task II and Task III labels. The final experiment tables use the Task IV three-class diagnosis for model evaluation.
 
-| Diagnosis | Origin count |
-| --- | ---: |
-| OSCC | 81 |
-| Leukoplakia with dysplasia | 72 |
-| Leukoplakia without dysplasia | 50 |
+## Patch-Row Distributions
 
-## Task Labels
+These figures summarize the approved deidentified fields for the 3,111 public NDB-UFES-linked patch rows in both-source groups. They count patch rows rather than unique patients or source images, so source images that contribute more patches receive more weight. The 652 SAB-only rows are not included in these field-distribution charts. “Not informed” values remain visible and should not be interpreted as negative responses.
 
-The source study defined four classification tasks across RMDS and NDB-UFES. This organizer focuses on the NDB-UFES tasks:
+<figure class="figure-panel" markdown>
+![Public-linked demographic field distributions](assets/factsheet/demographic_distributions.svg)
+<figcaption>Gender, released age-group codes, and skin-color values across the 3,111 public NDB-UFES-linked patch rows.</figcaption>
+</figure>
 
-| Task | Dataset | Labels | Definition |
-| --- | --- | --- | --- |
-| Task I | RMDS | Normal / OSCC | Classification using histopathological images only. No demographic or clinical data are available. This task is outside this NDB-UFES organizer. |
-| Task II | NDB-UFES | Leukoplakia / OSCC | Classification differentiating samples diagnosed as leukoplakia or OSCC. The source study used histopathological images plus demographic/clinical data. |
-| Task III | NDB-UFES | Absence / Presence of dysplasia | Classification differentiating samples with or without dysplasia. OSCC lesions are labeled as presence of dysplasia. |
-| Task IV | NDB-UFES | OSCC / Leukoplakia with dysplasia / Leukoplakia without dysplasia | Three-class classification differentiating OSCC, leukoplakia with dysplasia, and leukoplakia without dysplasia. |
+<figure class="figure-panel" markdown>
+![Public-linked exposure field distributions](assets/factsheet/exposure_distributions.svg)
+<figcaption>Tobacco-use, alcohol-consumption, and sun-exposure values across the 3,111 public NDB-UFES-linked patch rows.</figcaption>
+</figure>
 
-Observed task label values in the current patch metadata:
+<figure class="figure-panel" markdown>
+![Public-linked clinical field distributions](assets/factsheet/clinical_distributions.svg)
+<figcaption>Lesion localization, dysplasia severity, and grouped recorded lesion-size values across the 3,111 public NDB-UFES-linked patch rows. Lesion-size bins preserve the released numeric values without inferring a unit.</figcaption>
+</figure>
 
-| Field | Values |
-| --- | --- |
-| `TaskII` | `OSCC`, `Leukoplakia` |
-| `TaskIII` | `Presence`, `Absence` |
-| `TaskIV` | `OSCC`, `Leukoplakia with dysplasia`, `Leukoplakia without dysplasia` |
+## Public Assignment Fields
 
-Source-paper full origin-level NDB-UFES task counts:
+Each final experiment table includes:
 
-| Task | Class | Origin count |
-| --- | --- | ---: |
-| Task II | Leukoplakia | 146 |
-| Task II | OSCC | 91 |
-| Task III | Presence | 180 |
-| Task III | Absence | 57 |
-| Task IV | OSCC | 91 |
-| Task IV | Leukoplakia with dysplasia | 89 |
-| Task IV | Leukoplakia without dysplasia | 57 |
+- public patch, origin, group, and source-image identifiers,
+- diagnosis, fold, and fold role,
+- repository-relative image path,
+- source and metadata provenance,
+- approved deidentified demographic and clinical fields.
 
-## Demographics and Risk Factors
+Direct patient or lesion identifiers, private crosswalks, raw SAB identifiers, local absolute paths, and secrets are excluded.
 
-The organized patch metadata includes:
-
-- `gender`
-- `skin_color`
-- `age_group` (`0`: younger than 40 years, `1`: 40-60 years, `2`: older than 60 years)
-- `tobacco_use`
-- `alcohol_consumption`
-- `sun_exposure`
-- `localization`
-- `larger_size`
-- `dysplasia_severity`
-- ROI coordinates: `top_left_x`, `top_left_y`, `bottom_right_x`, `bottom_right_y`. These are deferred because patch-origin-coordinate associations need to be rerun before ROI coverage figures are published.
-
-Observed missingness is substantial for some fields. For example, patch-level `Not informed` values appear in skin color, tobacco use, alcohol consumption, and sun exposure. These fields are useful for documentation and subgroup reporting, but should not be treated as complete clinical covariates without checking missingness.
-
-## Exploratory Findings Used In This Factsheet
-
-The exploratory figures are not separate from this factsheet. They are the evidence used to decide what should be summarized, what should be treated cautiously, and what should remain descriptive.
-
-| Finding | Evidence | Interpretation |
-| --- | --- | --- |
-| Matched subset. | 203 matched origins from 237 source metadata rows. | The fold files describe the current matched fold-design subset, not every row in the source metadata copy. |
-| Patch counts and origin counts differ. | 81 OSCC origins produce 1,517 OSCC patch rows. 72 leukoplakia-with-dysplasia origins produce 930 patch rows. 50 leukoplakia-without-dysplasia origins produce 639 patch rows. | Patch-level class balance should not be read as origin-level prevalence. |
-| Risk-factor metadata has high `Not informed` rates. | At origin level, `Not informed` is 50.25% for sun exposure, 48.28% for alcohol consumption, 48.28% for tobacco use, and 47.29% for skin color. | These fields are useful for context and review, but they should not silently control fold construction. |
-| Patch-level risk-factor metadata shows the same limitation. | At patch level, `Not informed` is 47.47% for sun exposure, 46.18% for alcohol consumption, 46.18% for tobacco use, and 45.14% for skin color. | Patch-row metadata inherits the same caution. |
-| Dysplasia severity is incomplete. | Missingness is 64.53% at origin level and 69.86% at patch level. | Dysplasia severity should be interpreted with diagnosis context and should not be treated as a complete covariate. |
-| Fold stratification uses supported variables. | Phase 3 used diagnosis, Virchow morphology cluster, gender, and age group. | These variables passed the required missingness and six-fold support checks for the current run. |
-
-See [Exploratory Analysis](exploratory-analysis.md) for the full preview-first Plotly figure set and [Understanding Fold Structure](fold-structure-explained.md) for fold-level stratification views.
-
-## Generated Dataset Figures
-
-These figures summarize the current matched subset and source-paper task counts. Interactive Plotly versions are embedded below. Static documentation copies are saved under `docs/assets/generated/`, and thesis-ready exports are saved under `results/phase4/thesis_figures/`.
-
-How to read these figures:
-
-- Count bars show how many rows belong to each label.
-- Percent labels show the share inside the plotted level, usually origin-level or patch-level.
-- Origin-level plots count parent images. Patch-level plots count patch rows.
-- Association matrices are descriptive. They do not prove causality or validate downstream model performance.
-
-The larger exploratory figure set is documented on [Exploratory Analysis](exploratory-analysis.md), and the full converted Plotly gallery is available on [Dataset Figure Gallery](dataset-figure-gallery.md).
-
-<iframe class="plotly-embed" src="../visualizations/generated/dataset_diagnosis_summary.html" title="Matched subset diagnosis counts" loading="lazy"></iframe>
-
-<p class="figure-caption">How to read this figure: origin counts show parent images. Patch counts show patch rows. The two views differ because origins contribute different numbers of patches.</p>
-
-<iframe class="plotly-embed" src="../visualizations/generated/source_task_counts.html" title="Source task counts" loading="lazy"></iframe>
-
-<p class="figure-caption">How to read this figure: each panel is one source-paper task. Bars are origin counts for the classes defined by that task.</p>
-
-<iframe class="plotly-embed" src="../visualizations/generated/top_cramers_v.html" title="Top categorical associations by Cramer's V" loading="lazy"></iframe>
-
-<p class="figure-caption">How to read this figure: each bar is Cramer's V for one pair of categorical variables. Values closer to 0 indicate weak association. Values closer to 1 indicate stronger association. This is a descriptive truth-table-style summary, not a causal test.</p>
-
-## Fold Construction Status
-
-Current thesis note: use the two-experiment design in
-[Thesis Experiment Design](thesis-experiment-batches.md). The paragraph below
-describes the older public NDB-UFES-matched Phase 3 organizer run.
-
-The current fold construction completed and passed its strict validation report:
-
-- all patches from the same origin stay in the same fold.
-- folds are balanced by patch count.
-- folds preserve diagnostic class distribution.
-- morphology-aware clustering can be used as an additional stratification signal.
-
-Phase 2 selected frozen Virchow embeddings with PCA=2 and K=3 after applying minimum cluster-size and maximum imbalance constraints. Phase 3 assigned all 203 origins and 3,086 patches. Fold patch counts are 520, 510, 511, 511, 524, and 510. No origin spans folds. Earlier Swin and 202-origin artifacts are superseded.
-
-## Leakage-Safe Usage
+## Leakage-Aware Usage
 
 Required:
 
-- split by `fold`, not by random patch rows.
-- keep all rows with the same `origin_id` in the same train/validation/test partition.
-- once finalized, use the provided fold assignments when comparing models.
-- document which fold(s) were used for train, validation, and test.
+- use the released `fold` and `role` values,
+- keep all rows sharing a final grouping identifier in the same partition,
+- keep fold 5 held out during training and validation,
+- report which experiment and folds were used.
 
 Avoid:
 
-- random patch-level splits.
-- selecting folds after seeing downstream model performance.
-- fine-tuning an embedding model on all labels before using its features to construct folds.
-- treating patches from the same origin as independent observations in evaluation.
+- randomly resplitting patch rows,
+- selecting a split after reviewing test performance,
+- treating patches from the same source image or patient/case group as independent evaluation samples,
+- describing Experiment 2 as contamination-free.
 
-Frozen external pretrained embeddings used only for unsupervised morphology-aware stratification are acceptable as a data organization step, provided downstream model performance did not influence the stratification choice.
+## Known Limits
 
-## Known Caveats
-
-- Some generated root Markdown files are historical notes rather than canonical documentation.
-- `scripts/phase4.py` and its older analysis modules have not been accepted as part of the current release path.
-- Current canonical folds are under `results/phase3/fold_creation/`. Similarly named files under data directories may be historical and should not replace them.
-- `fold_assignments_patch_level.csv` under the canonical results directory contains exactly 3,086 patch rows.
-- Coordinate-derived ROI coverage plots are deferred. Patch-origin-coordinate associations need to be regenerated before patch coverage areas are shown on origin images.
-- Chi-square tests in validation scripts should not be interpreted as proof that folds are identical.
+- The 652 SAB-only patches do not have a public NDB-UFES source-image counterpart, although their SAB source-image grouping is validated.
+- Some deidentified demographic and clinical fields contain substantial missingness and should not be treated as complete covariates.
+- Grouping prevents known relationships from crossing folds but cannot establish that all possible relationships have been discovered.
+- Contamination review remains conservative and should not be interpreted as a complete biological or forensic disposition.
 
 ## Recommended Citation Language
 
-This project is not packaged as a reusable Python package yet. If using the current fold assignment files or documentation from this repository, cite the original dataset and describe this repository as a fold/data-organization layer. Example:
-
 ```text
-The study used the public NDB-UFES dataset (Mendeley Data V4, doi: 10.17632/bbmmm4wgr8.4) with origin-level cross-validation folds generated by the NDB-UFES Data Organizer. Folds were constructed so that patches from the same origin image did not appear in multiple folds.
+The study used the public NDB-UFES dataset (Mendeley Data V4, doi: 10.17632/bbmmm4wgr8.4) with experiment assignments and validated source-image grouping published by the NDB-UFES Data Organizer. The patient-first experiment kept linked source-image and patient/case groups within one fold.
 ```

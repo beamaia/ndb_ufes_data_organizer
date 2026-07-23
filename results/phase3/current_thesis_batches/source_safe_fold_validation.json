@@ -1,0 +1,16 @@
+{
+  "rows": 3763,
+  "fold_counts": {
+    "0": 627,
+    "1": 628,
+    "2": 628,
+    "3": 626,
+    "4": 626,
+    "5": 628
+  },
+  "source_image_groups": 251,
+  "fold_groups": 108,
+  "source_image_groups_crossing_folds": 0,
+  "patient_case_groups_crossing_folds": 0,
+  "fold_groups_crossing_folds": 0
+}

@@ -1,4 +1,0 @@
-diagnosis,patch_count_with_embeddings,mean_pairwise_cosine,median_pairwise_cosine,p05_pairwise_cosine,p95_pairwise_cosine,mean_centroid_cosine
-Leukoplakia with dysplasia,930,0.460978,0.448144,0.164183,0.807928,0.679380
-Leukoplakia without dysplasia,639,0.470520,0.454227,0.167964,0.826378,0.686548
-OSCC,1517,0.394767,0.348326,0.174343,0.723934,0.628622

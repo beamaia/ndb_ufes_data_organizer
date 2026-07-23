@@ -2,16 +2,11 @@
 
 Last verified: 23 July 2026.
 
-The final comparison evaluates the same three CNNs under two split strategies.
-The six canonical MLflow parent runs contain 30 finished child-fold runs. No
-models were retrained for this release: the public tables were verified from
-the stored child records.
+The final comparison evaluates the same three CNNs under two split strategies. The six canonical MLflow parent runs contain 30 finished child-fold runs. No models were retrained for this release: the public tables were verified from the stored child records.
 
 ## Held-Out Results
 
-Values are mean ± population standard deviation across five checkpoints. Each
-checkpoint was trained with a different validation fold from folds 0–4 and
-then evaluated on the experiment's held-out fold 5.
+Values are mean ± population standard deviation across five checkpoints. Each checkpoint was trained with a different validation fold from folds 0–4 and then evaluated on the experiment's held-out fold 5.
 
 | Experiment | Model | Balanced accuracy (%) | Macro precision (%) | Macro F1 (%) |
 | --- | --- | ---: | ---: | ---: |
@@ -22,38 +17,27 @@ then evaluated on the experiment's held-out fold 5.
 | Experiment 2 | **DenseNet-121** | **59.41 ± 3.18** | **59.12 ± 4.30** | **57.64 ± 2.82** |
 | Experiment 2 | ResNet-50 | 59.27 ± 3.18 | 58.26 ± 5.21 | 57.36 ± 4.33 |
 
-Balanced accuracy is the mean per-class recall, so it is mathematically equal
-to macro recall in this three-class implementation. The redundant recall
-column is omitted here; the machine-readable result table retains it for
-comparison with the earlier article.
+Balanced accuracy is the mean per-class recall, so it is mathematically equal to macro recall in this three-class implementation. The redundant recall column is omitted here; the machine-readable result table retains it as a consistency field.
 
-The mean balanced-accuracy decrease from Experiment 1 to Experiment 2 is 33.50
-percentage points for MobileNetV2, 32.31 for DenseNet-121, and 30.59 for
-ResNet-50. These mean differences are distinct from the median differences in
-the exploratory statistical table.
+The mean balanced-accuracy decrease from Experiment 1 to Experiment 2 is 33.50 percentage points for MobileNetV2, 32.31 for DenseNet-121, and 30.59 for ResNet-50. These mean differences are distinct from the median differences in the exploratory statistical table.
 
 ## Fold Distribution
 
 ![Class distribution across the six folds by experiment](assets/experiments/fold_class_distribution.svg)
 
-Grouping changes the fold-level class proportions because source images
-contribute different numbers of patches. Both experiments nevertheless retain
-all 3,763 patches and the same overall class totals.
+Grouping changes the fold-level class proportions because source images contribute different numbers of patches. Both experiments nevertheless retain all 3,763 patches and the same overall class totals.
 
 ## Representative Confusion Matrices
 
 ![Representative DenseNet-121 held-out confusion matrices](assets/experiments/fig_confusion_matrices.png)
 
-DenseNet-121 was the highest-mean architecture in each experiment. Within that
-architecture, fold 3 was selected using validation balanced accuracy only; the
-held-out test result was not used to choose the representative checkpoint.
+DenseNet-121 was the highest-mean architecture in each experiment. Within that architecture, fold 3 was selected using validation balanced accuracy only; the held-out test result was not used to choose the representative checkpoint.
 
 ## Training And Validation Loss
 
 ![DenseNet-121 training and validation loss](assets/experiments/fig_train_validation_loss.png)
 
-Lighter curves show all five training rotations. Early stopping monitors
-validation loss, so folds can finish after different numbers of epochs.
+Lighter curves show all five training rotations. Early stopping monitors validation loss, so folds can finish after different numbers of epochs.
 
 ## Exploratory Statistical Analysis
 
@@ -65,32 +49,16 @@ validation loss, so folds can finish after different numbers of epochs.
 | DenseNet-121, Experiment 1 vs. 2 | Mann–Whitney U | 25.0 | 0.0079 | 0.0238 | 33.23 pp | Experiment 1 higher |
 | ResNet-50, Experiment 1 vs. 2 | Mann–Whitney U | 25.0 | 0.0079 | 0.0238 | 30.31 pp | Experiment 1 higher |
 
-These tests are exploratory. Only five checkpoint evaluations are available,
-their training subsets overlap, and each experiment reuses one held-out test
-fold. The split definition is the main experimental change, which supports an
-association between grouping and the performance decrease; the comparison
-does not prove that leakage alone caused every part of the decrease.
+These tests are exploratory. Only five checkpoint evaluations are available, their training subsets overlap, and each experiment reuses one held-out test fold. The split definition is the main experimental change, which supports an association between grouping and the performance decrease; the comparison does not prove that leakage alone caused every part of the decrease.
 
 ## Execution Time
 
-Wall-clock totals include five cross-validation rotations and held-out
-evaluation:
+Wall-clock totals include five cross-validation rotations and held-out evaluation:
 
 | Experiment | MobileNetV2 | DenseNet-121 | ResNet-50 |
 | --- | ---: | ---: | ---: |
 | Experiment 1 | 177.9 min | 369.7 min | 311.2 min |
 | Experiment 2 | 141.2 min | 330.1 min | 164.7 min |
 
-## Provenance
 
-The [canonical run manifest](assets/experiments/canonical_run_manifest.json)
-records parent and child run IDs, dataset SHA-256 values, parameters, durations,
-and metrics. Four parent runs recorded training base commit
-`648b70866634abb3e0c7316016f07b6e3527883e` with a dirty worktree. Two recorded
-Git provenance as unavailable. The historical campaign therefore cannot be
-attributed to one clean commit; v1.0.0 freezes and documents it without
-retraining.
-
-The public research bundle contains only sanitized tables, figures, and
-provenance. It does not contain checkpoints, raw MLflow storage, private
-crosswalks, or LAB artifacts.
+The public research bundle contains only sanitized tables, figures, and provenance. It does not contain checkpoints, raw MLflow storage, private crosswalks, or LAB artifacts.

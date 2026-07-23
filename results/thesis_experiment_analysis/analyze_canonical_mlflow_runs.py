@@ -660,7 +660,7 @@ def create_latex(
         lines.append(f"{model} & " + " & ".join(cells) + r" \\")
 
     for experiment, heading in [
-        ("Experiment 1", "Experiment 1: Original-comparable split"),
+        ("Experiment 1", "Experiment 1: Reference split"),
         ("Experiment 2", "Experiment 2: Patient-first grouped split"),
     ]:
         lines.extend(
@@ -700,7 +700,7 @@ def create_latex(
         r"\midrule",
     ]
     for experiment, heading in [
-        ("Experiment 1", "Experiment 1: Original-comparable split"),
+        ("Experiment 1", "Experiment 1: Reference split"),
         ("Experiment 2", "Experiment 2: Patient-first grouped split"),
     ]:
         time_lines.extend(
@@ -828,7 +828,7 @@ def write_guidance(
 ## Methodology points to include
 
 - State that MobileNetV2, DenseNet-121, and ResNet-50 were trained under the same relevant hyperparameters in both experiments.
-- Explain that Experiment 1 reproduces the original-comparable patch division, while Experiment 2 changes the fold assignment so linked patient/case groups remain together.
+- Explain that Experiment 1 uses the released patch-level reference split, while Experiment 2 uses patient-first grouping so linked patient/case and source-image groups remain together.
 - State that fold 5 was never used for training or validation. Five models were trained per architecture by rotating validation folds 0--4, and every model was evaluated on fold 5.
 - Explain that reported test metrics are the mean and standard deviation of the five model evaluations on the held-out fold.
 - Explain that the confusion matrix uses one checkpoint so each held-out patch appears once. DenseNet-121 was identified as the best-performing architecture from the completed test-result comparison. Within that architecture, fold 3 was selected only because it had the highest validation BCC; test fold 5 results were not used to select the representative fold checkpoint.
@@ -836,7 +836,7 @@ def write_guidance(
 
 ## Results points to include
 
-- Compare Experiment 1 with the historical CNN results without claiming exact identity between implementations.
+- Report Experiment 1 directly from the canonical stored-run evidence without claiming equivalence to a separate implementation.
 - Report the numerical decrease in Experiment 2 separately for each CNN, not only MobileNetV2.
 - Use “lower contamination-risk split” rather than “contamination-free split.” Patient grouping reduces known overlap but cannot prove that every relationship was recovered.
 - Describe whether the training loss continues decreasing while validation loss plateaus or increases before calling a curve overfitted.

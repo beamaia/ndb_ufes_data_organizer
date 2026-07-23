@@ -32,7 +32,7 @@ DATASET_HASHES = {
 SPLITS = {
     "Experiment 1": {
         "batch": "batch1",
-        "name": "Original-comparable patch split",
+        "name": "Released patch-level reference split",
         "csv": ROOT / "results/phase3/current_thesis_batches/batch1_recovered_reference_patch_level.csv",
     },
     "Experiment 2": {
@@ -340,7 +340,6 @@ def build_manifest(
         "experiment_contract": {
             "canonical_experiments": ["Experiment 1", "Experiment 2"],
             "canonical_models": list(CANONICAL_MODELS),
-            "exploratory_archive": "Batch 3 (Virchow-pruned)",
             "metric_note": (
                 "Balanced accuracy equals macro recall for this multiclass "
                 "definition; five checkpoints are evaluated on held-out fold 5."
@@ -364,7 +363,7 @@ def build_manifest(
             "early_stopping_min_delta": 0.001,
         },
         "provenance_limitation": (
-            "The completed historical runs were frozen without retraining. "
+            "The completed canonical runs were frozen without retraining. "
             "Four parents recorded base commit 648b708 with a dirty worktree; "
             "two parents recorded Git provenance as unavailable. The six "
             "parents therefore cannot all be attributed to one clean commit."

@@ -1,62 +1,109 @@
-patient_case_group,group_source,origin_count,origins,patch_count,dominant_diagnosis,diagnosis_counts,gender_values,age_group_values,fold,cv_role
-patient_0,patient_id,2,0158|0159,29,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 29}",F,1,0,cross_validation
-patient_1,patient_id,4,0120|0121|0122|0123,51,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 51}",F,1,5,held_out_test
-patient_10,patient_id,4,0018|0019|0020|0021,70,OSCC,"{""OSCC"": 70}",M,2,3,cross_validation
-patient_11,patient_id,1,0166,20,OSCC,"{""OSCC"": 20}",M,1,5,held_out_test
-patient_12,patient_id,2,0201|0202,27,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 27}",M,2,3,cross_validation
-patient_13,patient_id,4,0054|0055|0056|0057,40,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 40}",F,1,3,cross_validation
-patient_14,patient_id,4,0010|0011|0012|0013,135,OSCC,"{""OSCC"": 135}",M,1,1,cross_validation
-patient_16,patient_id,4,0095|0096|0097|0098,66,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 66}",F,1,4,cross_validation
-patient_18,patient_id,6,0205|0206|0207|0208|0209|0210,119,OSCC,"{""OSCC"": 119}",M,2,3,cross_validation
-patient_20,patient_id,2,0022|0023,19,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 19}",F,2,2,cross_validation
-patient_21,patient_id,4,0142|0143|0144|0147,45,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 45}",F,2,3,cross_validation
-patient_22,patient_id,2,0066|0067,40,OSCC,"{""OSCC"": 40}",M,2,3,cross_validation
-patient_24,patient_id,2,0181|0182,17,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17}",F,2,4,cross_validation
-patient_25,patient_id,5,0082|0083|0084|0085|0086,49,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 49}",F,2,0,cross_validation
-patient_27,patient_id,2,0076|0077,29,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 29}",M,1,2,cross_validation
-patient_28,patient_id,4,0072|0073|0074|0075,70,OSCC,"{""OSCC"": 70}",M,2,5,held_out_test
-patient_29,patient_id,2,0148|0149,24,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 24}",M,1,0,cross_validation
-patient_30,patient_id,4,0160|0161|0162|0163,66,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 66}",F,1,2,cross_validation
-patient_31,patient_id,4,0032|0033|0034|0035,51,OSCC,"{""OSCC"": 51}",F,2,0,cross_validation
-patient_34,patient_id,3,0168|0169|0170,60,OSCC,"{""OSCC"": 60}",F,0,1,cross_validation
-patient_35,patient_id,2,0215|0216,24,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 24}",M,1,5,held_out_test
-patient_36,patient_id,3,0191|0192|0194,56,OSCC,"{""OSCC"": 56}",M,2,4,cross_validation
-patient_39,patient_id,2,0002|0003,35,OSCC,"{""OSCC"": 35}",M,1,3,cross_validation
-patient_40,patient_id,2,0078|0079,33,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 33}",M,1,3,cross_validation
-patient_43,patient_id,4,0132|0133|0134|0135,80,OSCC,"{""OSCC"": 80}",M,1,2,cross_validation
-patient_45,patient_id,5,0126|0128|0129|0130|0131,62,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 62}",M,1,4,cross_validation
-patient_48,patient_id,2,0000|0001,40,OSCC,"{""OSCC"": 40}",M,2,1,cross_validation
-patient_49,patient_id,2,0164|0165,25,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 25}",M,1,1,cross_validation
-patient_50,patient_id,2,0203|0204,36,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 36}",F,0,5,held_out_test
-patient_51,patient_id,2,0046|0047,21,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 21}",F,2,5,held_out_test
-patient_52,patient_id,2,0014|0015,40,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 40}",M,2,2,cross_validation
-patient_53,patient_id,4,0113|0114|0115|0116,80,OSCC,"{""OSCC"": 80}",M,2,4,cross_validation
-patient_54,patient_id,6,0185|0186|0187|0188|0189|0190,64,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 64}",M,1,3,cross_validation
-patient_55,patient_id,2,0028|0029,28,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 28}",F,1,5,held_out_test
-patient_56,patient_id,2,0117|0119,20,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 20}",F,1,3,cross_validation
-patient_58,patient_id,4,0109|0110|0111|0112,75,OSCC,"{""OSCC"": 75}",F,2,2,cross_validation
-patient_6,patient_id,2,0080|0081,29,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 29}",F,2,2,cross_validation
-patient_60,patient_id,8,0058|0059|0060|0061|0062|0063|0064|0065,128,OSCC,"{""OSCC"": 128}",F,1,5,held_out_test
-patient_62,patient_id,2,0140|0141,18,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 18}",F,2,4,cross_validation
-patient_63,patient_id,3,0024|0025|0026,29,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 29}",F,2,4,cross_validation
-patient_65,patient_id,4,0195|0196|0197|0198,47,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 47}",M,2,4,cross_validation
-patient_66,patient_id,2,0173|0174,21,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 21}",F,2,2,cross_validation
-patient_67,patient_id,4,0068|0069|0070|0071,63,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 63}",M,0,2,cross_validation
-patient_68,patient_id,2,0103|0104,40,OSCC,"{""OSCC"": 40}",M,2,5,held_out_test
-patient_69,patient_id,2,0199|0200,33,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 33}",F,1,3,cross_validation
-patient_71,patient_id,2,0030|0031,29,OSCC,"{""OSCC"": 29}",M,2,1,cross_validation
-patient_72,patient_id,8,0087|0088|0089|0090|0091|0092|0093|0094,102,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 102}",M,1,1,cross_validation
-patient_74,patient_id,4,0150|0151|0152|0153,44,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 44}",M,2,5,held_out_test
-patient_77,patient_id,4,0099|0100|0101|0102,56,OSCC,"{""OSCC"": 56}",M,1,2,cross_validation
-patient_78,patient_id,7,0006|0007|0008|0009|0041|0042|0043,133,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 133}",F,1,0,cross_validation
-patient_79,patient_id,4,0136|0137|0138|0139,71,OSCC,"{""OSCC"": 71}",F,1,4,cross_validation
-patient_80,patient_id,2,0171|0172,28,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 28}",M,2,4,cross_validation
-patient_81,patient_id,2,0004|0005,37,OSCC,"{""OSCC"": 37}",F,2,2,cross_validation
-patient_82,patient_id,6,0048|0049|0050|0051|0052|0053,75,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 75}",M,2,1,cross_validation
-patient_83,patient_id,6,0175|0176|0177|0178|0179|0180,116,OSCC,"{""OSCC"": 116}",M,2,0,cross_validation
-patient_84,patient_id,2,0156|0157,38,OSCC,"{""OSCC"": 38}",M,2,4,cross_validation
-patient_85,patient_id,2,0183|0184,29,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 29}",M,1,0,cross_validation
-patient_88,patient_id,2,0154|0155,9,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 9}",F,1,1,cross_validation
-patient_89,patient_id,4,0105|0106|0107|0108,39,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 39}",M,0,1,cross_validation
-patient_90,patient_id,4,0036|0037|0038|0039,55,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 55}",F,2,5,held_out_test
-patient_92,patient_id,4,0211|0212|0213|0214,71,OSCC,"{""OSCC"": 71}",M,2,0,cross_validation
+fold_group_id,group_source,patch_count,source_image_group_count,source_image_record_count,patient_case_group_count,dominant_diagnosis,diagnosis_counts,fold,cv_role
+source_safe_group_0001,patient_case_and_source_image_closure,136,8,8,4,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 93, ""Leukoplakia without dysplasia"": 29, ""OSCC"": 14}",4,cross_validation
+source_safe_group_0002,patient_case_and_source_image_closure,5,1,1,5,OSCC,"{""OSCC"": 5}",5,held_out_test
+source_safe_group_0003,patient_case_and_source_image_closure,135,4,8,1,OSCC,"{""Leukoplakia with dysplasia"": 4, ""OSCC"": 131}",0,cross_validation
+source_safe_group_0004,patient_case_and_source_image_closure,13,1,1,13,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 7, ""OSCC"": 6}",4,cross_validation
+source_safe_group_0005,patient_case_and_source_image_closure,3,1,1,3,OSCC,"{""OSCC"": 3}",0,cross_validation
+source_safe_group_0006,patient_case_and_source_image_closure,16,1,1,16,OSCC,"{""Leukoplakia with dysplasia"": 7, ""OSCC"": 9}",0,cross_validation
+source_safe_group_0007,patient_case_and_source_image_closure,40,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 31, ""OSCC"": 9}",0,cross_validation
+source_safe_group_0008,patient_case_and_source_image_closure,37,2,2,1,OSCC,"{""Leukoplakia with dysplasia"": 3, ""OSCC"": 34}",4,cross_validation
+source_safe_group_0009,patient_case_and_source_image_closure,20,1,1,20,OSCC,"{""Leukoplakia with dysplasia"": 3, ""OSCC"": 17}",2,cross_validation
+source_safe_group_0010,patient_case_and_source_image_closure,70,4,4,1,OSCC,"{""OSCC"": 70}",3,cross_validation
+source_safe_group_0011,patient_case_and_source_image_closure,29,2,2,1,OSCC,"{""Leukoplakia with dysplasia"": 3, ""OSCC"": 26}",2,cross_validation
+source_safe_group_0012,patient_case_and_source_image_closure,51,4,4,1,OSCC,"{""Leukoplakia with dysplasia"": 24, ""OSCC"": 27}",2,cross_validation
+source_safe_group_0013,patient_case_and_source_image_closure,38,2,2,1,OSCC,"{""OSCC"": 38}",1,cross_validation
+source_safe_group_0014,patient_case_and_source_image_closure,75,6,6,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 47, ""Leukoplakia without dysplasia"": 17, ""OSCC"": 11}",5,held_out_test
+source_safe_group_0015,patient_case_and_source_image_closure,19,1,1,19,OSCC,"{""Leukoplakia with dysplasia"": 9, ""OSCC"": 10}",5,held_out_test
+source_safe_group_0016,patient_case_and_source_image_closure,40,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 21, ""OSCC"": 19}",1,cross_validation
+source_safe_group_0017,patient_case_and_source_image_closure,40,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 38, ""OSCC"": 2}",3,cross_validation
+source_safe_group_0018,patient_case_and_source_image_closure,70,4,4,1,OSCC,"{""OSCC"": 70}",3,cross_validation
+source_safe_group_0019,patient_case_and_source_image_closure,35,2,2,1,OSCC,"{""OSCC"": 35}",1,cross_validation
+source_safe_group_0020,patient_case_and_source_image_closure,57,4,4,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 45, ""Leukoplakia without dysplasia"": 5, ""OSCC"": 7}",4,cross_validation
+source_safe_group_0021,patient_case_and_source_image_closure,40,2,2,1,OSCC,"{""Leukoplakia with dysplasia"": 3, ""OSCC"": 37}",2,cross_validation
+source_safe_group_0022,patient_case_and_source_image_closure,20,1,1,20,OSCC,"{""Leukoplakia with dysplasia"": 8, ""OSCC"": 12}",0,cross_validation
+source_safe_group_0023,patient_case_and_source_image_closure,75,4,4,1,OSCC,"{""Leukoplakia with dysplasia"": 27, ""OSCC"": 48}",4,cross_validation
+source_safe_group_0024,patient_case_and_source_image_closure,80,4,4,1,OSCC,"{""OSCC"": 80}",4,cross_validation
+source_safe_group_0025,patient_case_and_source_image_closure,33,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 22, ""OSCC"": 11}",1,cross_validation
+source_safe_group_0026,patient_case_and_source_image_closure,17,1,1,17,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 13, ""Leukoplakia without dysplasia"": 1, ""OSCC"": 3}",1,cross_validation
+source_safe_group_0027,patient_case_and_source_image_closure,80,4,4,1,OSCC,"{""OSCC"": 80}",2,cross_validation
+source_safe_group_0028,patient_case_and_source_image_closure,19,1,1,19,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17, ""OSCC"": 2}",3,cross_validation
+source_safe_group_0029,patient_case_and_source_image_closure,71,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 39, ""Leukoplakia without dysplasia"": 1, ""OSCC"": 31}",3,cross_validation
+source_safe_group_0030,patient_case_and_source_image_closure,19,1,1,19,OSCC,"{""Leukoplakia with dysplasia"": 7, ""OSCC"": 12}",5,held_out_test
+source_safe_group_0031,patient_case_and_source_image_closure,12,1,1,12,OSCC,"{""OSCC"": 12}",1,cross_validation
+source_safe_group_0032,patient_case_and_source_image_closure,11,1,1,11,OSCC,"{""OSCC"": 11}",0,cross_validation
+source_safe_group_0033,patient_case_and_source_image_closure,5,1,1,5,OSCC,"{""Leukoplakia without dysplasia"": 2, ""OSCC"": 3}",3,cross_validation
+source_safe_group_0034,patient_case_and_source_image_closure,116,6,6,1,OSCC,"{""Leukoplakia with dysplasia"": 45, ""OSCC"": 71}",1,cross_validation
+source_safe_group_0035,patient_case_and_source_image_closure,20,1,1,20,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 11, ""OSCC"": 9}",3,cross_validation
+source_safe_group_0036,patient_case_and_source_image_closure,119,6,6,1,OSCC,"{""Leukoplakia with dysplasia"": 25, ""OSCC"": 94}",5,held_out_test
+source_safe_group_0037,patient_case_and_source_image_closure,20,1,1,20,OSCC,"{""Leukoplakia with dysplasia"": 8, ""OSCC"": 12}",0,cross_validation
+source_safe_group_0038,patient_case_and_source_image_closure,71,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 39, ""OSCC"": 32}",5,held_out_test
+source_safe_group_0039,patient_case_and_source_image_closure,24,2,2,1,OSCC,"{""Leukoplakia with dysplasia"": 1, ""OSCC"": 23}",5,held_out_test
+source_safe_group_0040,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 10, ""Leukoplakia without dysplasia"": 4}",3,cross_validation
+source_safe_group_0041,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 5, ""Leukoplakia without dysplasia"": 9}",5,held_out_test
+source_safe_group_0042,patient_case_and_source_image_closure,20,1,1,20,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 11, ""Leukoplakia without dysplasia"": 9}",4,cross_validation
+source_safe_group_0043,patient_case_and_source_image_closure,19,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 13, ""Leukoplakia without dysplasia"": 6}",1,cross_validation
+source_safe_group_0044,patient_case_and_source_image_closure,29,3,3,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 26, ""Leukoplakia without dysplasia"": 3}",0,cross_validation
+source_safe_group_0045,patient_case_and_source_image_closure,6,1,1,6,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 2, ""Leukoplakia without dysplasia"": 4}",5,held_out_test
+source_safe_group_0046,patient_case_and_source_image_closure,19,1,1,19,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 6, ""Leukoplakia without dysplasia"": 13}",0,cross_validation
+source_safe_group_0047,patient_case_and_source_image_closure,55,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 33, ""Leukoplakia without dysplasia"": 22}",2,cross_validation
+source_safe_group_0048,patient_case_and_source_image_closure,22,2,2,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 11, ""Leukoplakia without dysplasia"": 11}",5,held_out_test
+source_safe_group_0049,patient_case_and_source_image_closure,46,4,4,7,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 28, ""Leukoplakia without dysplasia"": 18}",1,cross_validation
+source_safe_group_0050,patient_case_and_source_image_closure,129,8,8,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 70, ""Leukoplakia without dysplasia"": 59}",0,cross_validation
+source_safe_group_0051,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 12, ""Leukoplakia without dysplasia"": 2}",4,cross_validation
+source_safe_group_0052,patient_case_and_source_image_closure,19,1,1,19,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 15, ""Leukoplakia without dysplasia"": 4}",0,cross_validation
+source_safe_group_0053,patient_case_and_source_image_closure,63,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 44, ""Leukoplakia without dysplasia"": 19}",5,held_out_test
+source_safe_group_0054,patient_case_and_source_image_closure,13,1,1,13,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 11, ""Leukoplakia without dysplasia"": 2}",4,cross_validation
+source_safe_group_0055,patient_case_and_source_image_closure,30,2,2,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 24, ""Leukoplakia without dysplasia"": 6}",4,cross_validation
+source_safe_group_0056,patient_case_and_source_image_closure,29,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17, ""Leukoplakia without dysplasia"": 12}",1,cross_validation
+source_safe_group_0057,patient_case_and_source_image_closure,52,5,5,4,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 33, ""Leukoplakia without dysplasia"": 19}",2,cross_validation
+source_safe_group_0058,patient_case_and_source_image_closure,18,2,2,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 9, ""Leukoplakia without dysplasia"": 9}",4,cross_validation
+source_safe_group_0059,patient_case_and_source_image_closure,107,8,8,6,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 78, ""Leukoplakia without dysplasia"": 29}",3,cross_validation
+source_safe_group_0060,patient_case_and_source_image_closure,66,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 36, ""Leukoplakia without dysplasia"": 30}",1,cross_validation
+source_safe_group_0061,patient_case_and_source_image_closure,40,4,4,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 26, ""Leukoplakia without dysplasia"": 14}",5,held_out_test
+source_safe_group_0062,patient_case_and_source_image_closure,51,4,4,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 27, ""Leukoplakia without dysplasia"": 24}",2,cross_validation
+source_safe_group_0063,patient_case_and_source_image_closure,65,5,5,4,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 33, ""Leukoplakia without dysplasia"": 32}",3,cross_validation
+source_safe_group_0064,patient_case_and_source_image_closure,18,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 10, ""Leukoplakia without dysplasia"": 8}",1,cross_validation
+source_safe_group_0065,patient_case_and_source_image_closure,49,4,4,5,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 20, ""Leukoplakia without dysplasia"": 29}",4,cross_validation
+source_safe_group_0066,patient_case_and_source_image_closure,24,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 14, ""Leukoplakia without dysplasia"": 10}",2,cross_validation
+source_safe_group_0067,patient_case_and_source_image_closure,48,4,4,5,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 6, ""Leukoplakia without dysplasia"": 42}",2,cross_validation
+source_safe_group_0068,patient_case_and_source_image_closure,9,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 7, ""Leukoplakia without dysplasia"": 2}",1,cross_validation
+source_safe_group_0069,patient_case_and_source_image_closure,29,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17, ""Leukoplakia without dysplasia"": 12}",1,cross_validation
+source_safe_group_0070,patient_case_and_source_image_closure,66,4,4,1,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 31, ""Leukoplakia without dysplasia"": 35}",3,cross_validation
+source_safe_group_0071,patient_case_and_source_image_closure,25,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 22, ""Leukoplakia without dysplasia"": 3}",4,cross_validation
+source_safe_group_0072,patient_case_and_source_image_closure,15,1,1,15,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 14, ""Leukoplakia without dysplasia"": 1}",3,cross_validation
+source_safe_group_0073,patient_case_and_source_image_closure,18,1,1,18,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 12, ""Leukoplakia without dysplasia"": 6}",3,cross_validation
+source_safe_group_0074,patient_case_and_source_image_closure,8,1,1,8,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 8}",5,held_out_test
+source_safe_group_0075,patient_case_and_source_image_closure,6,1,1,6,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 1, ""Leukoplakia without dysplasia"": 5}",0,cross_validation
+source_safe_group_0076,patient_case_and_source_image_closure,9,1,1,9,Leukoplakia without dysplasia,"{""Leukoplakia without dysplasia"": 9}",1,cross_validation
+source_safe_group_0077,patient_case_and_source_image_closure,27,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 22, ""Leukoplakia without dysplasia"": 5}",4,cross_validation
+source_safe_group_0078,patient_case_and_source_image_closure,21,2,2,1,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 3, ""Leukoplakia without dysplasia"": 18}",4,cross_validation
+source_safe_group_0079,patient_case_and_source_image_closure,30,2,2,3,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 26, ""Leukoplakia without dysplasia"": 4}",0,cross_validation
+source_safe_group_0080,patient_case_and_source_image_closure,31,2,2,3,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 12, ""Leukoplakia without dysplasia"": 19}",1,cross_validation
+source_safe_group_0081,patient_case_and_source_image_closure,70,6,6,7,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 45, ""Leukoplakia without dysplasia"": 25}",5,held_out_test
+source_safe_group_0082,patient_case_and_source_image_closure,47,4,4,1,Leukoplakia without dysplasia,"{""Leukoplakia with dysplasia"": 17, ""Leukoplakia without dysplasia"": 30}",0,cross_validation
+source_safe_group_0083,patient_case_and_source_image_closure,33,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 26, ""Leukoplakia without dysplasia"": 7}",3,cross_validation
+source_safe_group_0084,patient_case_and_source_image_closure,36,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 24, ""Leukoplakia without dysplasia"": 12}",5,held_out_test
+source_safe_group_0085,patient_case_and_source_image_closure,18,1,1,18,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 16, ""Leukoplakia without dysplasia"": 2}",2,cross_validation
+source_safe_group_0086,patient_case_and_source_image_closure,15,1,1,15,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 15}",2,cross_validation
+source_safe_group_0087,patient_case_and_source_image_closure,29,2,2,2,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 29}",0,cross_validation
+source_safe_group_0088,patient_case_and_source_image_closure,1,1,1,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 1}",4,cross_validation
+source_safe_group_0089,patient_case_and_source_image_closure,7,1,1,7,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 7}",1,cross_validation
+source_safe_group_0090,patient_case_and_source_image_closure,17,1,1,17,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17}",2,cross_validation
+source_safe_group_0091,patient_case_and_source_image_closure,15,1,1,15,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 15}",2,cross_validation
+source_safe_group_0092,patient_case_and_source_image_closure,16,1,1,16,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 16}",2,cross_validation
+source_safe_group_0093,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 14}",1,cross_validation
+source_safe_group_0094,patient_case_and_source_image_closure,12,1,1,12,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 12}",3,cross_validation
+source_safe_group_0095,patient_case_and_source_image_closure,9,1,1,9,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 9}",2,cross_validation
+source_safe_group_0096,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 14}",5,held_out_test
+source_safe_group_0097,patient_case_and_source_image_closure,17,1,1,17,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 17}",2,cross_validation
+source_safe_group_0098,patient_case_and_source_image_closure,14,1,1,14,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 14}",0,cross_validation
+source_safe_group_0099,patient_case_and_source_image_closure,20,2,2,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 20}",0,cross_validation
+source_safe_group_0100,patient_case_and_source_image_closure,13,1,1,13,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 13}",5,held_out_test
+source_safe_group_0101,patient_case_and_source_image_closure,1,1,1,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 1}",3,cross_validation
+source_safe_group_0102,patient_case_and_source_image_closure,20,1,1,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 20}",0,cross_validation
+source_safe_group_0103,patient_case_and_source_image_closure,60,3,3,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 60}",1,cross_validation
+source_safe_group_0104,patient_case_and_source_image_closure,15,1,1,15,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 15}",2,cross_validation
+source_safe_group_0105,patient_case_and_source_image_closure,20,1,1,20,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 20}",0,cross_validation
+source_safe_group_0106,patient_case_and_source_image_closure,10,1,1,10,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 10}",4,cross_validation
+source_safe_group_0107,patient_case_and_source_image_closure,10,1,1,10,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 10}",5,held_out_test
+source_safe_group_0108,patient_case_and_source_image_closure,56,3,3,1,Leukoplakia with dysplasia,"{""Leukoplakia with dysplasia"": 56}",2,cross_validation

@@ -1,103 +1,59 @@
 # Contamination Checks
 
-<span class="status-pill">Paused</span>
+<span class="status-pill">Conservative review</span>
 
-This page records exploratory image-level checks for possible duplicate-like patches and origin-patch matching issues. The current documented example is Origin 0011. It is not a complete contamination disposition for the full dataset.
+This page documents image-level checks for duplicate-like patches and explains why the patient-first grouped experiment has lower contamination risk.
 
-## Current Status
+## Same-Case Source-Image Review
 
-Human-in-the-loop validation is paused. All origin-patch pairs currently accepted into the matched fold-design set were visually checked by a human, but not all possible patches have been matched or dispositioned.
+The same-case review compared 397 distinct public-image pairs within explicit source case groups. Seventy-two pairs passed the geometric screening rule and were included in a visual review document with original images, projected regions, perspective-rectified crops, overlays, scales, and coordinates.
 
-The current fold-generation pipeline remains usable because Phase 3 locks every patch from the same origin into the same fold. That prevents a known class of leakage even when patches from one origin look similar to each other.
-
-## Same-case Source-Image Relationship Review
-
-The same-case image review compared 397 distinct public-image pairs within
-explicit source case groups. Seventy-two pairs passed the current geometric
-screening rule and are included in a visual review document. The review shows
-the original images, projected regions, perspective-rectified crops, overlays,
-scales, and projected coordinates.
-
-This is an exploratory screening artifact. The candidate label does not prove that two images are duplicates, that one image was produced from the other, or that an experiment was contaminated. It is intended to support the next human validation step.
+The candidate label does not prove that two images are duplicates, that one was produced from the other, or that an experiment was contaminated. It identifies relationships that merit human review.
 
 - [Visual review PDF](assets/contamination/same_patient_wsi_image_relationships.pdf)
 - [Reproducible review notebook](https://github.com/beamaia/ndb_ufes_data_organizer/blob/main/notebooks/same_patient_wsi_image_relationships_review.ipynb)
 
-## Example: Origin 0011
+The artifact filenames are technical identifiers. The review concerns related histopathology source images and does not assert complete digitized-slide status.
 
-Origin 0011 contains 64 accepted patch rows in the current matched subset. In the current Phase 3 output, Origin 0011 is assigned to fold 0, and all 64 of its patch rows inherit fold 0.
+## Patch-Overlap Example
 
-| Field | Value |
-| --- | --- |
-| Origin | 0011 |
-| Diagnosis | OSCC |
-| Fold | 0 |
-| Patch count | 64 |
-| Example patches | `p0020`, `p0021` |
-
-## Overlap Method
-
-The current figure below estimates the shared rectangle by registering one patch against the other with translation-only image alignment, then scoring the overlapping region with normalized cross-correlation.
-
-| Step | Method |
-| --- | --- |
-| Registration | Translation-only image alignment |
-| Initial shift estimate | Phase correlation |
-| Local refinement | Integer-shift normalized cross-correlation search |
-| Highlighted region | Overlapping rectangle with the highest normalized cross-correlation |
-| Score | Normalized cross-correlation of the highlighted overlap |
-
-For `p0020` and `p0021`, the current generated overlap reports:
+Patches `p0020` and `p0021` contain an effectively identical tissue region.
 
 | Metric | Value |
 | --- | ---: |
 | Translation | `(246, 255)` pixels |
-| Shared rectangle | 266 x 257 pixels |
+| Shared rectangle | 266 × 257 pixels |
 | Normalized cross-correlation | 1.000 |
 
-This figure is useful because it shows where the shared patch region sits, instead of only reporting an image-level similarity score. It is still exploratory quality-control evidence, not a final biological or diagnostic conclusion.
-
-## Example Overlap In Origin 0011
-
 <figure class="figure-panel contamination-snippet" markdown>
-![Origin 0011 overlap bounding boxes](assets/contamination/origin_0011_overlap_bbox.png)
-<figcaption>The full patches are shown in grayscale. The green boxes mark the rectangular region estimated to be the same tissue region in both patches.</figcaption>
+![Patch-overlap bounding boxes](assets/contamination/origin_0011_overlap_bbox.png)
+<figcaption>The full patches are shown in grayscale. The green boxes mark the estimated shared tissue region.</figcaption>
 </figure>
 
-This example demonstrates why patch-level fold assignment must be checked carefully. Two patches from the same origin can contain highly similar or effectively identical tissue regions. If their folds were unknown or assigned independently, a training/evaluation split could accidentally place near-duplicate content on both sides of the split.
+The overlap was estimated with translation-only registration, initialized by phase correlation and refined with an integer-shift normalized cross-correlation search. This is technical quality-control evidence, not a biological conclusion.
 
-The generated diagnostics are saved at:
+## Final Experiment Interpretation
 
-```text
-docs/assets/contamination/origin_0011_overlap_bbox.csv
-```
+The example shows the practical difference between the two released assignments:
 
-## Leakage Interpretation
+| Experiment | `p0020` fold | `p0021` fold | Interpretation |
+| --- | ---: | ---: | --- |
+| Experiment 1 | 4 | 2 | The patch-level reference split can place related tissue content in different folds. |
+| Experiment 2 | 3 | 3 | Patient-first and source-image grouping keeps the related patches together. |
 
-The leakage concern is not that similar patches exist inside one origin. That is expected. The concern is what would happen if patch rows were randomly split:
+Experiment 2 has no validated source-image or patient/case group crossing folds. It is therefore the lower-contamination-risk split. It is not described as contamination-free because undocumented relationships may still exist.
 
-| Unsafe Split | Leakage Risk |
-| --- | --- |
-| `p0020` in a training fold and `p0021` in a validation fold | The model could see highly related tissue content during training and evaluation. |
-| Multiple patches from Origin 0011 spread across folds | Evaluation would no longer represent an unseen origin. |
-| Origin-locked Phase 3 folds | All Origin 0011 patches stay in fold 0, preventing this cross-fold leakage path. |
+## Review Limits
 
-## Additional Review Figure
+- Human review is not a complete disposition of every possible relationship.
+- A high similarity or overlap score is a screening signal, not proof of duplication.
+- Similar patches within one source-image group are expected.
+- Broad contamination claims require case-by-case human disposition.
 
-The patch grid is retained as review material, but it should not be read as final exclusion evidence by itself.
+## Reuse Rule
 
-<figure class="figure-panel" markdown>
-![Origin 0011 patch grid](assets/contamination/origin_0011_patch_grid.png)
-<figcaption>Patch grid for Origin 0011. Use this as a qualitative overview of the accepted patch group.</figcaption>
-</figure>
-
-## What Remains
-
-- Resume human validation for unmatched or uncertain patch-origin relationships.
-- Record each suspicious case as accepted, excluded, or documented.
-- Regenerate contamination figures with the documented overlap-rectangle method, or with a newer method that is explicitly named.
-- Avoid publishing broad contamination claims until manual disposition is complete.
+Use the released fold assignments for reduced contamination. Do not randomly resplit patches, source-image groups, or patient/case groups across training and evaluation partitions in experiments.
 
 <div class="ndb-next" markdown>
-<strong>Related read:</strong> [Validation Guide](validation-guide.md)
+<strong>Related read:</strong> [Thesis Experiment Design](thesis-experiment-batches.md)
 </div>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="figure-title figure-description" fill="#17315f">
+<title id="figure-title">Public-linked clinical distributions</title>
+<desc id="figure-description">Patch-row distributions for released lesion localization, dysplasia severity, and grouped recorded lesion-size values in the 3,111 public NDB-UFES-linked rows, with not-informed values retained.</desc>
+<rect width="100%" height="100%" rx="14" fill="#ffffff"/>
+<style>text { font-family: Inter, Arial, sans-serif; }</style>
+<text x="600" y="43" text-anchor="middle" font-size="25" font-weight="700">Public-linked clinical distributions</text>
+<text x="600" y="72" text-anchor="middle" font-size="14" fill="#51617e">3,111 public NDB-UFES-linked patch rows; “Not informed” is retained</text>
+<text x="205.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Lesion localization</text>
+<line x1="165.0" y1="140" x2="165.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="165.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="216.2" y1="140" x2="216.2" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="216.2" y="502" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="267.5" y1="140" x2="267.5" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="267.5" y="502" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="318.8" y1="140" x2="318.8" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="318.8" y="502" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="370.0" y1="140" x2="370.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="370.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="155" y="169" text-anchor="end" font-size="12">Tongue</text>
+<rect x="165" y="150" width="73.4" height="27" rx="4" fill="#365cc1"/>
+<text x="245.4" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">1,114 (35.8%)</text>
+<text x="155" y="217" text-anchor="end" font-size="12">Gingiva</text>
+<rect x="165" y="198" width="46.1" height="27" rx="4" fill="#365cc1"/>
+<text x="218.1" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">699 (22.5%)</text>
+<text x="155" y="265" text-anchor="end" font-size="12">Floor of mouth</text>
+<rect x="165" y="246" width="36.1" height="27" rx="4" fill="#365cc1"/>
+<text x="208.1" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">548 (17.6%)</text>
+<text x="155" y="313" text-anchor="end" font-size="12">Buccal mucosa</text>
+<rect x="165" y="294" width="23.0" height="27" rx="4" fill="#365cc1"/>
+<text x="195.0" y="313" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">349 (11.2%)</text>
+<text x="155" y="361" text-anchor="end" font-size="12">Lip</text>
+<rect x="165" y="342" width="16.1" height="27" rx="4" fill="#365cc1"/>
+<text x="188.1" y="361" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">244 (7.8%)</text>
+<text x="155" y="409" text-anchor="end" font-size="12">Palate</text>
+<rect x="165" y="390" width="7.6" height="27" rx="4" fill="#365cc1"/>
+<text x="179.6" y="409" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">115 (3.7%)</text>
+<text x="155" y="457" text-anchor="end" font-size="12">Not informed</text>
+<rect x="165" y="438" width="2.8" height="27" rx="4" fill="#aab3c2"/>
+<text x="174.8" y="457" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">42 (1.4%)</text>
+<text x="600.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Dysplasia severity</text>
+<line x1="560.0" y1="140" x2="560.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="560.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="611.2" y1="140" x2="611.2" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="611.2" y="502" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="662.5" y1="140" x2="662.5" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="662.5" y="502" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="713.8" y1="140" x2="713.8" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="713.8" y="502" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="765.0" y1="140" x2="765.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="765.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="550" y="169" text-anchor="end" font-size="12">Mild</text>
+<rect x="560" y="150" width="38.0" height="27" rx="4" fill="#60aa26"/>
+<text x="605.0" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">576 (18.5%)</text>
+<text x="550" y="217" text-anchor="end" font-size="12">Moderate</text>
+<rect x="560" y="198" width="10.9" height="27" rx="4" fill="#60aa26"/>
+<text x="577.9" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">165 (5.3%)</text>
+<text x="550" y="265" text-anchor="end" font-size="12">Severe</text>
+<rect x="560" y="246" width="11.3" height="27" rx="4" fill="#60aa26"/>
+<text x="578.3" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">172 (5.5%)</text>
+<text x="550" y="313" text-anchor="end" font-size="12">Not informed</text>
+<rect x="560" y="294" width="144.8" height="27" rx="4" fill="#aab3c2"/>
+<text x="697.8" y="313" text-anchor="end" font-size="11" font-weight="700" fill="#17315f">2,198 (70.7%)</text>
+<text x="995.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Recorded lesion size</text>
+<line x1="955.0" y1="140" x2="955.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="955.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="1006.2" y1="140" x2="1006.2" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1006.2" y="502" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="1057.5" y1="140" x2="1057.5" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1057.5" y="502" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="1108.8" y1="140" x2="1108.8" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1108.8" y="502" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="1160.0" y1="140" x2="1160.0" y2="475" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1160.0" y="502" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="945" y="169" text-anchor="end" font-size="12">0</text>
+<rect x="955" y="150" width="23.6" height="27" rx="4" fill="#f5b700"/>
+<text x="985.6" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">358 (11.5%)</text>
+<text x="945" y="217" text-anchor="end" font-size="12">&gt;0–1</text>
+<rect x="955" y="198" width="61.9" height="27" rx="4" fill="#f5b700"/>
+<text x="1023.9" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">940 (30.2%)</text>
+<text x="945" y="265" text-anchor="end" font-size="12">&gt;1–2</text>
+<rect x="955" y="246" width="52.5" height="27" rx="4" fill="#f5b700"/>
+<text x="1014.5" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">796 (25.6%)</text>
+<text x="945" y="313" text-anchor="end" font-size="12">&gt;2–3</text>
+<rect x="955" y="294" width="39.5" height="27" rx="4" fill="#f5b700"/>
+<text x="1001.5" y="313" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">599 (19.3%)</text>
+<text x="945" y="361" text-anchor="end" font-size="12">&gt;3</text>
+<rect x="955" y="342" width="24.8" height="27" rx="4" fill="#f5b700"/>
+<text x="986.8" y="361" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">376 (12.1%)</text>
+<text x="945" y="409" text-anchor="end" font-size="12">Not informed</text>
+<rect x="955" y="390" width="2.8" height="27" rx="4" fill="#aab3c2"/>
+<text x="964.8" y="409" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">42 (1.4%)</text>
+<text x="600" y="562" text-anchor="middle" font-size="12" fill="#51617e">Percentages describe assignment rows, not unique patients or source images.</text>
+</svg>
