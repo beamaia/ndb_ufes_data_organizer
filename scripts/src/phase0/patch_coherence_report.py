@@ -11,7 +11,7 @@ import pandas as pd
 from matplotlib.backends.backend_pdf import PdfPages
 
 from src.phase0.patch_similarity import off_diagonal_values, similarity_stats
-from src.phase0.recovery_audit import DEFAULT_ACCEPTED_METADATA, DEFAULT_RAW_PATCH_DIR, accepted_patch_table, patch_number
+from src.phase0.recovery_validation import DEFAULT_ACCEPTED_METADATA, DEFAULT_RAW_PATCH_DIR, accepted_patch_table, patch_number
 
 
 DEFAULT_OUTPUT_DIR = Path("results/phase0/patch_coherence_report")

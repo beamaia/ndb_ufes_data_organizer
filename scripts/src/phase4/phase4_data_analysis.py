@@ -397,7 +397,7 @@ def generate_phase4_report(origin_df, patch_df, stats_df, validation_results):
         f.write("-"*80 + "\n")
         f.write("Default fold-construction variables:\n")
         f.write("  - Origin diagnosis\n")
-        f.write("  - Morphological cluster selected after Phase 2 audit\n\n")
+        f.write("  - Morphological cluster selected after Phase 2 validation\n\n")
         f.write("Descriptive balance checks only:\n")
         f.write("  - Gender\n")
         f.write("  - Skin color\n")
@@ -409,7 +409,7 @@ def generate_phase4_report(origin_df, patch_df, stats_df, validation_results):
         )
         f.write("Origin integrity maintained (no data leakage)\n")
         f.write("Fold balance and class coverage must be recomputed after final Phase 2 selection.\n")
-        f.write("Ready for external model training only after final audit acceptance.\n\n")
+        f.write("Ready for external model training only after final validation acceptance.\n\n")
         
         f.write("FOLD FILES FOR EXTERNAL USE\n")
         f.write("-"*80 + "\n")

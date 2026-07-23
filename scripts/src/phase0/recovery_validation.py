@@ -17,7 +17,7 @@ DEFAULT_FOLD_ASSIGNMENTS = Path("results/phase3/fold_creation/fold_assignments_p
 DEFAULT_ORIGIN_METADATA = Path("data/ndb_ufes/origin_level/csvs/ndb-ufes.csv")
 DEFAULT_PARSED_FOLDERS = Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv")
 DEFAULT_PARSED_TEST = Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv")
-DEFAULT_OUTPUT_DIR = Path("results/phase0/recovery_audit")
+DEFAULT_OUTPUT_DIR = Path("results/phase0/recovery_validation")
 
 
 def patch_number(patch_id: str) -> int | None:
@@ -289,7 +289,7 @@ def write_json(payload: dict, path: Path) -> None:
     path.write_text(json.dumps(payload, indent=2, default=str))
 
 
-def run_recovery_audit(args: argparse.Namespace) -> dict:
+def run_recovery_validation(args: argparse.Namespace) -> dict:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -332,7 +332,7 @@ def run_recovery_audit(args: argparse.Namespace) -> dict:
     return summary
 
 
-def run_balance_audit(args: argparse.Namespace) -> dict:
+def run_balance_validation(args: argparse.Namespace) -> dict:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     accepted = accepted_patch_table(args.accepted_metadata)
@@ -378,7 +378,7 @@ def add_common_paths(parser: argparse.ArgumentParser) -> None:
 
 
 def recovery_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Audit raw patch images that are absent from accepted metadata.")
+    parser = argparse.ArgumentParser(description="Validation raw patch images that are absent from accepted metadata.")
     add_common_paths(parser)
     return parser
 

@@ -144,7 +144,7 @@ def children_for_parent(client: MlflowClient, experiment_id: str, parent_id: str
 
 
 def collect_evidence(client: MlflowClient, experiment_id: str):
-    audits = []
+    validations = []
     fold_rows = []
     duration_rows = []
     child_runs: dict[tuple[str, str, int], str] = {}
@@ -220,7 +220,7 @@ def collect_evidence(client: MlflowClient, experiment_id: str):
                 np.std(values, ddof=0), parent.data.metrics.get(std_key, np.nan), atol=1e-12
             )
 
-        audits.append(
+        validations.append(
             {
                 "experiment": spec["experiment"],
                 "model": spec["model"],
@@ -255,7 +255,7 @@ def collect_evidence(client: MlflowClient, experiment_id: str):
         duration_row["std_fold_seconds"] = durations.std(ddof=0)
         duration_rows.append(duration_row)
 
-    audit_df = pd.DataFrame(audits)
+    validation_df = pd.DataFrame(validations)
     fold_df = pd.DataFrame(fold_rows).sort_values(
         ["experiment", "model", "fold"]
     )
@@ -263,7 +263,7 @@ def collect_evidence(client: MlflowClient, experiment_id: str):
         ["experiment", "model"]
     )
 
-    if not audit_df["parent_status"].eq("FINISHED").all():
+    if not validation_df["parent_status"].eq("FINISHED").all():
         raise RuntimeError("At least one selected parent run is not FINISHED.")
     boolean_checks = [
         "all_children_finished",
@@ -271,9 +271,9 @@ def collect_evidence(client: MlflowClient, experiment_id: str):
         "batch_model_match",
         "parent_aggregate_matches_children",
     ]
-    if not audit_df[boolean_checks].all(axis=None):
-        raise RuntimeError("Canonical MLflow validation failed; inspect canonical_run_audit.csv.")
-    if not audit_df["dataset_rows"].eq(3763).all():
+    if not validation_df[boolean_checks].all(axis=None):
+        raise RuntimeError("Canonical MLflow validation failed; inspect canonical_run_validation.csv.")
+    if not validation_df["dataset_rows"].eq(3763).all():
         raise RuntimeError("A canonical run does not use all 3,763 patch rows.")
 
     shared_configs = []
@@ -286,7 +286,7 @@ def collect_evidence(client: MlflowClient, experiment_id: str):
     if any(config != reference for config in shared_configs[1:]):
         raise RuntimeError("Relevant hyperparameters differ among canonical runs.")
 
-    return audit_df, fold_df, duration_df, child_runs, parent_runs, reference
+    return validation_df, fold_df, duration_df, child_runs, parent_runs, reference
 
 
 def summarize_results(fold_df: pd.DataFrame) -> pd.DataFrame:
@@ -803,16 +803,16 @@ def create_latex(
 
 
 def write_guidance(
-    audit: pd.DataFrame,
+    validation: pd.DataFrame,
     shared_config: dict,
     within: pd.DataFrame,
     between: pd.DataFrame,
 ):
     duplicate_notes = []
-    for _, row in audit[audit["same_name_runs_in_mlflow"] > 1].iterrows():
+    for _, row in validation[validation["same_name_runs_in_mlflow"] > 1].iterrows():
         duplicate_notes.append(
             f"- `{row['run_name']}` had {row['same_name_runs_in_mlflow']} same-name "
-            "attempts in MLflow; only the exact completed run ID in the audit table was used."
+            "attempts in MLflow; only the exact completed run ID in the validation table was used."
         )
     text = f"""# Canonical experiment analysis
 
@@ -878,7 +878,7 @@ def main():
     if experiment is None:
         raise RuntimeError(f"MLflow experiment {EXPERIMENT_NAME!r} was not found.")
 
-    audit, folds, durations, child_runs, parent_runs, shared_config = collect_evidence(
+    validation, folds, durations, child_runs, parent_runs, shared_config = collect_evidence(
         client, experiment.experiment_id
     )
     summary = summarize_results(folds)
@@ -886,7 +886,7 @@ def main():
     between = between_experiment_statistics(folds)
     selected = validation_selected_folds(client, parent_runs)
 
-    audit.to_csv(OUTPUT_DIR / "canonical_run_audit.csv", index=False)
+    validation.to_csv(OUTPUT_DIR / "canonical_run_validation.csv", index=False)
     folds.to_csv(OUTPUT_DIR / "fold_test_metrics.csv", index=False)
     durations.to_csv(OUTPUT_DIR / "execution_times.csv", index=False)
     summary.to_csv(OUTPUT_DIR / "results_summary.csv", index=False)
@@ -900,7 +900,7 @@ def main():
     plot_loss_curves(client, child_runs, selected)
     plot_confusion_matrices(child_runs, selected)
     create_latex(summary, durations, within, between, selected)
-    write_guidance(audit, shared_config, within, between)
+    write_guidance(validation, shared_config, within, between)
     print(f"Analysis written to {OUTPUT_DIR}")
 
 

@@ -201,7 +201,7 @@ for col in summary.columns:
 log_section("VALIDATION COMPLETE")
 
 report.write(f"\n✅ All checks passed!\n")
-report.write(f"\nDataset can be audited for:\n")
+report.write(f"\nDataset can be validated for:\n")
 report.write(f"  1. Origin-level leakage-safe cross-validation structure (use 'fold' column)\n")
 report.write(f"  2. Descriptive subgroup reporting by demographic and risk-factor fields\n")
 report.write(f"  3. Missingness-aware factsheet documentation\n")

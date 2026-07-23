@@ -6,7 +6,7 @@ from pathlib import Path
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-from src.phase0.recovery_audit import (
+from src.phase0.recovery_validation import (
     DEFAULT_OUTPUT_DIR,
     DEFAULT_ORIGIN_IMAGE_DIR,
     DEFAULT_RAW_PATCH_DIR,

@@ -3,7 +3,7 @@
 Results are grouped by phase.
 
 ## Phase 0
-Audit and linkage evidence: recovery audit, SAB consistency audit, SAB coordinate recovery, validated linkage, and related review outputs.
+Validation and linkage evidence: recovery validation, SAB consistency validation, SAB coordinate recovery, validated linkage, and related review outputs.
 
 ## Phase 1
 Feature extraction metadata, feature cache, and generated feature visualizations.

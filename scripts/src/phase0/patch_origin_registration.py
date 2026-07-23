@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
-from src.phase0.recovery_audit import DEFAULT_ORIGIN_IMAGE_DIR, DEFAULT_RAW_PATCH_DIR
+from src.phase0.recovery_validation import DEFAULT_ORIGIN_IMAGE_DIR, DEFAULT_RAW_PATCH_DIR
 from src.phase0.review_packets import DEFAULT_REVIEW_OUTPUT_DIR, candidate_origin_items, load_font, wrap_label
 
 
@@ -247,7 +247,7 @@ def candidate_origin_ids(row, origin_image_dir: Path) -> list[str]:
     return ids
 
 
-def run_registration_audit(args: argparse.Namespace) -> dict:
+def run_registration_validation(args: argparse.Namespace) -> dict:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     queue = pd.read_csv(args.review_queue).sort_values("patch_number").reset_index(drop=True)

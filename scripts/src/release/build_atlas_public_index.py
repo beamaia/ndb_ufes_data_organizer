@@ -36,7 +36,7 @@ METHODS_PATH = OUTPUT_DIR / "atlas_methods.json"
 RELEASE_FACTS_PATH = OUTPUT_DIR / "release_facts.json"
 
 PUBLIC_INDEX_SCHEMA = {
-    "schema_version": 1,
+    "schema_version": 2,
     "name": "NDB-UFES/SAB public validated-WSI index",
     "format": "csv",
     "privacy_mode": "public_pseudonymous",

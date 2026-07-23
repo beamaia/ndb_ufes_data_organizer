@@ -7,8 +7,8 @@
 - Every selected run uses 3,763 rows and keeps fold 5 held out.
 - The parent aggregate metrics exactly match the mean and population standard deviation recalculated from the five child folds.
 - Shared configuration: SGD, learning rate 0.001, momentum 0.9, batch size 30, maximum 150 epochs, scheduler patience 10, and early-stopping patience 15.
-- `batch2_densenet121_full_20260721_batch2_cnn` had 3 same-name attempts in MLflow; only the exact completed run ID in the audit table was used.
-- `batch2_resnet50_full_20260721_batch2_cnn` had 2 same-name attempts in MLflow; only the exact completed run ID in the audit table was used.
+- `batch2_densenet121_full_20260721_batch2_cnn` had 3 same-name attempts in MLflow; only the exact completed run ID in the validation table was used.
+- `batch2_resnet50_full_20260721_batch2_cnn` had 2 same-name attempts in MLflow; only the exact completed run ID in the validation table was used.
 
 ## Methodology points to include
 

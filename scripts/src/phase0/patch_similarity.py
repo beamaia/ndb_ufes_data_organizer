@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 from skimage.metrics import structural_similarity
 
-from src.phase0.recovery_audit import (
+from src.phase0.recovery_validation import (
     DEFAULT_ACCEPTED_METADATA,
     DEFAULT_OUTPUT_DIR,
     DEFAULT_RAW_PATCH_DIR,

@@ -21,8 +21,8 @@ COORDS = OUT / "patch_coordinate_status.csv"
 ORIGINS = OUT / "origin_patch_composition.csv"
 PAIRS = OUT / "patch_spatial_feature_similarity.csv"
 SUMMARY = OUT / "dataset_alignment_report_summary.json"
-PRIVATE_CROSSWALK = OUT / "private_lab_crosswalks/origin_audit_private_crosswalk.csv"
-ORIGIN_INVENTORY = ROOT / "results/phase0/recovery_audit/origin_image_inventory.csv"
+PRIVATE_CROSSWALK = OUT / "private_lab_crosswalks/origin_validation_private_crosswalk.csv"
+ORIGIN_INVENTORY = ROOT / "results/phase0/recovery_validation/origin_image_inventory.csv"
 LOGO = ROOT / "docs/assets/branding/labcin-logo.png"
 RAW_PATCH_DIR = ROOT / "data/ndb_ufes/patch_level/images"
 OUTPUT_PDF = OUT / "ndb_ufes_sab_dataset_factsheet_full.pdf"
@@ -227,7 +227,7 @@ def draw_cover(c, summary, origins):
     c.drawCentredString(PAGE_W / 2, 9 * mm, "Patch provenance, label convergence, and recovered WSI coordinates")
     c.setFillColor(MUTED)
     c.setFont("Helvetica", 9)
-    c.drawString(MARGIN_X, 29 * mm, f"{summary.get('source_alignment_rows', 3763):,} patches | {origins['origin_audit_id'].nunique()} SAB origin groups | Public-private source alignment")
+    c.drawString(MARGIN_X, 29 * mm, f"{summary.get('source_alignment_rows', 3763):,} patches | {origins['origin_validation_id'].nunique()} SAB origin groups | Public-private source alignment")
     c.showPage()
 
 
@@ -236,17 +236,17 @@ def draw_intro(c, summary, origins):
     y = TOP
     y = draw_paragraph(c, "Introduction", MARGIN_X, y, PAGE_W - 2 * MARGIN_X, "h1")
     for text in [
-        "This factsheet compares the public NDB-UFES dataset distributed through Mendeley with the private SAB laboratory dataset stored in laboratory computers and university cloud folders. The SAB files are treated as trusted provenance evidence for this audit because they were used in previous training pipelines and contain the origin-image hash names from which the patch files were generated.",
+        "This factsheet compares the public NDB-UFES dataset distributed through Mendeley with the private SAB laboratory dataset stored in laboratory computers and university cloud folders. The SAB files are treated as trusted provenance evidence for this validation because they were used in previous training pipelines and contain the origin-image hash names from which the patch files were generated.",
         "The goal is to validate whether patch images, labels, and origin-image relationships align across dataset versions, and to identify patches or origin images that require manual review before leakage-safe experiments.",
-        "For privacy, real SAB origin filenames are not printed in the public-facing tables. This PDF uses origin_audit_id pseudonyms. The private crosswalk remains available for lab-only review.",
+        "For privacy, real SAB origin filenames are not printed in the public-facing tables. This PDF uses origin_validation_id pseudonyms. The private crosswalk remains available for lab-only review.",
     ]:
         y = draw_paragraph(c, text, MARGIN_X, y, PAGE_W - 2 * MARGIN_X)
     y -= 6
     rows = [
-        ["Audit item", "Result"],
-        ["NDB-UFES public WSI images audited", "242"],
-        ["NDB-UFES patch images audited", "3,763"],
-        ["SAB WSI groups represented by the patch split", f"{origins['origin_audit_id'].nunique():,}"],
+        ["Validation item", "Result"],
+        ["NDB-UFES public WSI images validated", "242"],
+        ["NDB-UFES patch images validated", "3,763"],
+        ["SAB WSI groups represented by the patch split", f"{origins['origin_validation_id'].nunique():,}"],
         ["Patch images exact-matched between NDB-UFES and SAB", "3,763 / 3,763"],
         ["NDB-UFES WSI images exact-matched to SAB WSI images", "222 / 242"],
     ]
@@ -254,13 +254,13 @@ def draw_intro(c, summary, origins):
 
 
 def draw_source_definitions(c):
-    y = new_page(c, "Dataset sources", "Definitions used throughout this audit.", "Data factsheet: NDB-UFES/SAB alignment Page 3")
+    y = new_page(c, "Dataset sources", "Definitions used throughout this validation.", "Data factsheet: NDB-UFES/SAB alignment Page 3")
     rows = [
-        ["Term", "Meaning", "Role in this audit"],
+        ["Term", "Meaning", "Role in this validation"],
         ["NDB-UFES", "Public dataset distributed through Mendeley.", "Public WSI images, patch images, accepted metadata, patient/lesion fields, and task labels used in the current organized dataset."],
         ["SAB", "Private laboratory dataset stored in laboratory computers and university cloud folders.", "WSI folders named benigno, leucoplasia, and carcinoma; patch train/test folders; origin hash names that link images to the local SAB system."],
         ["Accepted NDB-UFES metadata", "The current CSV treated as the organized public metadata table.", "Used when available, but not assumed to contain every patch-origin relationship found in SAB."],
-        ["Origin audit ID", "Privacy-preserving pseudonym generated for each SAB origin image.", "Used in this PDF instead of the SAB hash filename; private crosswalk links it back to SAB for lab-only review."],
+        ["Origin validation ID", "Privacy-preserving pseudonym generated for each SAB origin image.", "Used in this PDF instead of the SAB hash filename; private crosswalk links it back to SAB for lab-only review."],
     ]
     y = draw_table(c, rows, MARGIN_X, y, [37 * mm, 49 * mm, 68 * mm], font_size=7.2)
     y -= 8
@@ -268,13 +268,13 @@ def draw_source_definitions(c):
 
 
 def draw_key_findings(c, master, origins, pairs, origin_inventory):
-    y = new_page(c, "Key audit findings", "Counts are audit evidence, not clinical truth claims.", "Data factsheet: NDB-UFES/SAB alignment Page 4")
+    y = new_page(c, "Key validation findings", "Counts are validation evidence, not clinical truth claims.", "Data factsheet: NDB-UFES/SAB alignment Page 4")
     patchless = int((origin_inventory["accepted_patch_count"] == 0).sum()) if origin_inventory is not None else 34
     rows = [
         ["Question", "Result", "Interpretation"],
         ["Patch identity", "3,763 / 3,763 NDB-UFES patch files exact-match SAB split patch files.", "The patch image set is shared between the sources."],
         ["WSI identity", "222 / 242 NDB-UFES WSI images exact-match a SAB WSI image.", "The WSI/origin set diverges across sources."],
-        ["SAB WSI groups with patches", f"{origins['origin_audit_id'].nunique()} origin_audit_id groups.", "The SAB split links patches to more origin groups than the public WSI set exact-matches."],
+        ["SAB WSI groups with patches", f"{origins['origin_validation_id'].nunique()} origin_validation_id groups.", "The SAB split links patches to more origin groups than the public WSI set exact-matches."],
         ["NDB-UFES public WSI without accepted patches", str(patchless), "These public origin images currently do not contribute accepted patch rows."],
         ["Origins with >1 best available patch label", str(int(origins["has_multiple_best_available_patch_labels"].sum())), "Uses accepted NDB-UFES labels when present, otherwise SAB split labels."],
         ["Patch pairs spatially compared", f"{len(pairs):,}", "Comparisons are within the same SAB origin only."],
@@ -283,7 +283,7 @@ def draw_key_findings(c, master, origins, pairs, origin_inventory):
 
 
 def draw_flags(c):
-    y = new_page(c, "How to read the audit flags", "The audit separates source convergence from biological or logical plausibility.", "Data factsheet: NDB-UFES/SAB alignment Page 5")
+    y = new_page(c, "How to read the validation flags", "The validation separates source convergence from biological or logical plausibility.", "Data factsheet: NDB-UFES/SAB alignment Page 5")
     rows = [
         ["Reader-facing flag", "Meaning", "Suggested action"],
         ["Sources converge", "Available labels from NDB-UFES and SAB do not show a relevant disagreement.", "Usually low priority."],
@@ -353,10 +353,10 @@ def draw_spatial(c, pairs):
 
 
 def draw_limitations(c):
-    y = new_page(c, "Use and limitations", "This audit prepares evidence for manual review and leakage-safe experiments.", "Data factsheet: NDB-UFES/SAB alignment Page 9")
+    y = new_page(c, "Use and limitations", "This validation prepares evidence for manual review and leakage-safe experiments.", "Data factsheet: NDB-UFES/SAB alignment Page 9")
     rows = [
         ["Rule", "Meaning"],
-        ["Do not publish private linkage keys", "Use origin_audit_id publicly. Keep the private crosswalk inside the lab."],
+        ["Do not publish private linkage keys", "Use origin_validation_id publicly. Keep the private crosswalk inside the lab."],
         ["Do not treat flags as final clinical judgment", "Flags identify source inconsistencies and plausibility concerns; they do not replace blind pathology review."],
         ["Recovered coordinates are evidence", "Coordinates were recovered by exact pixel matching between patches and SAB WSI images."],
         ["Suspicious patches are candidates for exclusion or adjudication", "Experiments can compare all linked data versus stricter reviewed subsets."],
@@ -368,7 +368,7 @@ def draw_limitations(c):
 def draw_atlas_intro(c, start_page):
     y = new_page(c, "Origin atlas", "The following pages show one SAB origin per page. Each page includes the SAB WSI with recovered patch boxes and the linked patch thumbnails.", f"Data factsheet: NDB-UFES/SAB alignment Page {start_page}")
     for text in [
-        "Every page is fixed A4 portrait so the PDF has consistent page boundaries. Origin identifiers are pseudonymous origin_audit_id values.",
+        "Every page is fixed A4 portrait so the PDF has consistent page boundaries. Origin identifiers are pseudonymous origin_validation_id values.",
         "Patch box color follows the best available patch label: red = OSCC, gold = with dysplasia, blue = without dysplasia, gray = unknown or missing.",
         "The atlas is part of the final PDF product because it documents where patches exist in the WSI context and which patch labels are attached to each WSI group.",
     ]:
@@ -490,7 +490,7 @@ def build():
     summary = json.loads(SUMMARY.read_text())
     crosswalk = pd.read_csv(PRIVATE_CROSSWALK)
     origin_inventory = pd.read_csv(ORIGIN_INVENTORY) if ORIGIN_INVENTORY.exists() else None
-    full = coords.merge(crosswalk, on="origin_audit_id", how="left", suffixes=("", "_private"))
+    full = coords.merge(crosswalk, on="origin_validation_id", how="left", suffixes=("", "_private"))
     c = canvas.Canvas(str(OUTPUT_PDF), pagesize=A4)
     draw_cover(c, summary, origins)
     draw_intro(c, summary, origins)
@@ -504,8 +504,8 @@ def build():
     draw_atlas_intro(c, 10)
     c.showPage()
     page_number = 11
-    for origin_id in full["origin_audit_id"].dropna().astype(str).drop_duplicates().sort_values():
-        group = full[full["origin_audit_id"].astype(str) == origin_id].sort_values("patch_number")
+    for origin_id in full["origin_validation_id"].dropna().astype(str).drop_duplicates().sort_values():
+        group = full[full["origin_validation_id"].astype(str) == origin_id].sort_values("patch_number")
         draw_origin_page(c, origin_id, group, page_number)
         c.showPage()
         page_number += 1

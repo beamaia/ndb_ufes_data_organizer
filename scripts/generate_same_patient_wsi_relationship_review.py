@@ -27,19 +27,19 @@ from matplotlib.patches import Polygon
 from IPython.display import display
 
 REPO = Path("/Users/beamaia/thesis_organization/ndb_ufes_data_organizer")
-AUDIT_PATH = REPO / "results/phase0/validated_linkage/same_patient_wsi_image_relationships.csv"
+VALIDATION_PATH = REPO / "results/phase0/validated_linkage/same_patient_wsi_image_relationships.csv"
 PDF_PATH = REPO / "docs/assets/contamination/same_patient_wsi_image_relationships.pdf"
 IMAGE_ROOT = REPO
 
-audit = pd.read_csv(AUDIT_PATH)
-audit["candidate"] = audit["candidate"].astype(str).str.lower().eq("true")
+validation = pd.read_csv(VALIDATION_PATH)
+validation["candidate"] = validation["candidate"].astype(str).str.lower().eq("true")
 candidates = (
-    audit.loc[audit["candidate"]]
+    validation.loc[validation["candidate"]]
     .sort_values(["patient_id", "origin_a", "origin_b"])
     .reset_index(drop=True)
 )
 
-print(f"Compared image pairs in audit: {len(audit):,}")
+print(f"Compared image pairs in validation: {len(validation):,}")
 print(f"Candidate pairs included in this PDF: {len(candidates):,}")
 print(f"Patient/case groups represented: {candidates['patient_id'].nunique():,}")
 display(candidates[[
@@ -248,12 +248,12 @@ def write_review_pdf(frame: pd.DataFrame, output_path: Path):
     pdf.setFont("Helvetica", 11)
     pdf.drawString(48, page_height - 82, "Exploratory visual review for the NDB-UFES data organizer wiki")
     draw_text_block(pdf, [
-        f"Image pairs compared in the audit: {len(audit):,}",
+        f"Image pairs compared in the validation: {len(validation):,}",
         f"Pairs included in this review: {len(frame):,}",
         f"Patient/case groups represented: {frame['patient_id'].nunique():,}",
         "",
-        "Selection rule: only rows marked candidate=True by the same-patient image audit are included.",
-        "The audit used feature matches, homography registration, scale estimates, and reprojection error.",
+        "Selection rule: only rows marked candidate=True by the same-patient image validation are included.",
+        "The validation used feature matches, homography registration, scale estimates, and reprojection error.",
         "",
         "The yellow quadrilateral marks the region projected from the original view into the compared image.",
         "The rectified crop and overlay make a possible scaled/cropped relationship easier to inspect.",
@@ -261,7 +261,7 @@ def write_review_pdf(frame: pd.DataFrame, output_path: Path):
         "These pages are image-evidence screening only; they do not prove identity, duplication, or contamination.",
     ], 48, page_height - 130, size=11, leading=19)
     draw_text_block(pdf, [
-        "Source audit: results/phase0/validated_linkage/same_patient_wsi_image_relationships.csv",
+        "Source validation: results/phase0/validated_linkage/same_patient_wsi_image_relationships.csv",
         "Generated from: notebooks/same_patient_wsi_image_relationships_review.ipynb",
     ], 48, 74, font="Courier", size=7, leading=10)
     pdf.showPage()
@@ -320,10 +320,10 @@ def build_notebook() -> dict:
     cells = [
         markdown_cell(
             "# Same-patient WSI image relationship review\n\n"
-            "This notebook reviews the candidate image pairs produced by the explicit same-patient/case audit. "
+            "This notebook reviews the candidate image pairs produced by the explicit same-patient/case validation. "
             "It is intended to generate the PDF linked from the wiki. The review is exploratory visual evidence: "
             "it does not prove patient identity, image duplication, or experimental contamination.\n\n"
-            "The notebook includes only candidate pairs from the audit. It does not search every image in the represented groups beyond the pairs already compared by the audit."
+            "The notebook includes only candidate pairs from the validation. It does not search every image in the represented groups beyond the pairs already compared by the validation."
         ),
         markdown_cell(
             "## Scope and interpretation\n\n"

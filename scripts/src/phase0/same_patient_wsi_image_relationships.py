@@ -1,6 +1,6 @@
 """Search for scaled or cropped source-image relationships within patients.
 
-This audit uses explicit patient linkage from the SAB convergence table. It
+This validation uses explicit patient linkage from the SAB convergence table. It
 does not infer patient identity from demographic metadata and never compares
 images belonging to different patient IDs.
 """
@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 
-DEFAULT_CONVERGENCE = Path("results/phase0/sab_consistency_audit/origin_source_convergence.csv")
+DEFAULT_CONVERGENCE = Path("results/phase0/sab_consistency_validation/origin_source_convergence.csv")
 DEFAULT_OUTPUT = Path("results/phase0/validated_linkage/same_patient_wsi_image_relationships.csv")
 
 
@@ -27,7 +27,7 @@ def parser() -> argparse.ArgumentParser:
     )
     argument_parser.add_argument("--convergence", type=Path, default=DEFAULT_CONVERGENCE)
     argument_parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    argument_parser.add_argument("--patient-id", action="append", help="Restrict the audit to one or more patient IDs.")
+    argument_parser.add_argument("--patient-id", action="append", help="Restrict the validation to one or more patient IDs.")
     argument_parser.add_argument("--ratio-test", type=float, default=0.70)
     argument_parser.add_argument("--min-inliers", type=int, default=30)
     argument_parser.add_argument("--min-inlier-fraction", type=float, default=0.50)

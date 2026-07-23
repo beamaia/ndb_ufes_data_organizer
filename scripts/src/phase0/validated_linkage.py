@@ -9,7 +9,7 @@ import pandas as pd
 DEFAULT_ALIGNMENT_DIR = Path("results/phase0/dataset_alignment_report")
 DEFAULT_OUTPUT_DIR = Path("results/phase0/validated_linkage")
 DEFAULT_COORDINATES = DEFAULT_ALIGNMENT_DIR / "patch_coordinate_status.csv"
-DEFAULT_PRIVATE_CROSSWALK = DEFAULT_ALIGNMENT_DIR / "private_lab_crosswalks/origin_audit_private_crosswalk.csv"
+DEFAULT_PRIVATE_CROSSWALK = DEFAULT_ALIGNMENT_DIR / "private_lab_crosswalks/origin_validation_private_crosswalk.csv"
 DEFAULT_PAIR_SIMILARITY = DEFAULT_ALIGNMENT_DIR / "patch_spatial_feature_similarity.csv"
 DEFAULT_COMPLETE_NDB_LABELS = Path("data/ndb_ufes/patch_level/csvs/fold_assignments_patch_level_with_images.csv")
 DEFAULT_SAB_PARSED_FOLDERS = Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv")
@@ -45,8 +45,8 @@ def boolish(value) -> bool:
     return str(value).strip().lower() in {"true", "1", "yes", "y"}
 
 
-def public_wsi_id(origin_audit_id: str) -> str:
-    suffix = str(origin_audit_id).replace("origin_audit_", "")
+def public_wsi_id(origin_validation_id: str) -> str:
+    suffix = str(origin_validation_id).replace("origin_validation_", "")
     return f"validated_wsi_{suffix}"
 
 
@@ -54,8 +54,8 @@ def public_ndb_wsi_id(value) -> str:
     return f"public_ndb_wsi_{format_id(value).zfill(4)}"
 
 
-def sab_only_wsi_id(origin_audit_id: str) -> str:
-    suffix = str(origin_audit_id).replace("origin_audit_", "")
+def sab_only_wsi_id(origin_validation_id: str) -> str:
+    suffix = str(origin_validation_id).replace("origin_validation_", "")
     return f"sab_only_wsi_{suffix}"
 
 
@@ -192,7 +192,7 @@ def build_validated_patch_linkage(
     table["validated_wsi_id"] = np.where(
         has_public_wsi_match,
         table["ndb_origin_id_from_sab_origin_exact_match"].map(public_ndb_wsi_id),
-        table["origin_audit_id"].map(sab_only_wsi_id),
+        table["origin_validation_id"].map(sab_only_wsi_id),
     )
     table["public_wsi_pseudonym"] = table["validated_wsi_id"]
     table["final_validated_wsi_id"] = table["validated_wsi_id"]
@@ -207,7 +207,7 @@ def build_validated_patch_linkage(
     table["reviewer_status"] = table["linkage_evidence_level"].map(reviewer_status)
     table["notes"] = table.apply(linkage_notes, axis=1)
 
-    private = table.merge(private_crosswalk, on="origin_audit_id", how="left", suffixes=("", "_private"))
+    private = table.merge(private_crosswalk, on="origin_validation_id", how="left", suffixes=("", "_private"))
     columns = [
         "ndb_patch",
         "ndb_ufes_patch_label",
@@ -229,7 +229,7 @@ def build_validated_patch_linkage(
         "linkage_evidence_level",
         "reviewer_status",
         "notes",
-        "origin_audit_id",
+        "origin_validation_id",
         "sab_origin_folder",
         "sab_origin_folder_label_normalized",
         "current_origin_label_from_patch_csv",
@@ -283,7 +283,7 @@ def build_wsi_inventory(validated_private: pd.DataFrame) -> tuple[pd.DataFrame, 
     inventory = pd.DataFrame(rows).sort_values(["requires_manual_review_count", "metadata_conflict_count", "n_patches"], ascending=[False, False, False])
     crosswalk = validated_private[[
         "public_wsi_pseudonym",
-        "origin_audit_id",
+        "origin_validation_id",
         "sab_origin_image_id",
         "sab_case_prefix",
         "sab_origin_folder",

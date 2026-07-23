@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
-from src.phase0.recovery_audit import (
+from src.phase0.recovery_validation import (
     DEFAULT_ACCEPTED_METADATA,
     DEFAULT_ORIGIN_IMAGE_DIR,
     DEFAULT_ORIGIN_METADATA,
@@ -18,7 +18,7 @@ from src.phase0.recovery_audit import (
 
 
 DEFAULT_SAB_ROOT = Path("/Volumes/ssd/SAB")
-DEFAULT_OUTPUT_DIR = Path("results/phase0/sab_consistency_audit")
+DEFAULT_OUTPUT_DIR = Path("results/phase0/sab_consistency_validation")
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".tif", ".tiff"}
 
 NORMALIZED_LABELS = {
@@ -483,7 +483,7 @@ def build_case_prefix_summary(patch_origin: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def audit_summary(
+def validation_summary(
     origin_source: pd.DataFrame,
     patch_source: pd.DataFrame,
     patch_origin: pd.DataFrame,
@@ -504,7 +504,7 @@ def audit_summary(
     }
 
 
-def run_sab_consistency_audit(args: argparse.Namespace) -> dict:
+def run_sab_consistency_validation(args: argparse.Namespace) -> dict:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -517,18 +517,18 @@ def run_sab_consistency_audit(args: argparse.Namespace) -> dict:
     patch_source = build_patch_source_convergence(current_patches, sab_patches, origin_source, current_origins)
     patch_origin = build_patch_origin_plausibility(patch_source)
     case_summary = build_case_prefix_summary(patch_origin)
-    summary = audit_summary(origin_source, patch_source, patch_origin, case_summary)
+    summary = validation_summary(origin_source, patch_source, patch_origin, case_summary)
 
     origin_source.to_csv(output_dir / "origin_source_convergence.csv", index=False)
     patch_source.to_csv(output_dir / "patch_source_convergence.csv", index=False)
-    patch_origin.to_csv(output_dir / "patch_origin_plausibility_audit.csv", index=False)
+    patch_origin.to_csv(output_dir / "patch_origin_plausibility_validation.csv", index=False)
     case_summary.to_csv(output_dir / "case_prefix_plausibility_summary.csv", index=False)
-    (output_dir / "audit_summary.json").write_text(json.dumps(summary, indent=2, default=str))
+    (output_dir / "validation_summary.json").write_text(json.dumps(summary, indent=2, default=str))
     return summary
 
 
 def sab_consistency_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Audit SAB/current NDB source convergence and patch-origin plausibility.")
+    parser = argparse.ArgumentParser(description="Validation SAB/current NDB source convergence and patch-origin plausibility.")
     parser.add_argument("--sab-root", type=Path, default=DEFAULT_SAB_ROOT)
     parser.add_argument("--raw-patch-dir", type=Path, default=DEFAULT_RAW_PATCH_DIR)
     parser.add_argument("--origin-image-dir", type=Path, default=DEFAULT_ORIGIN_IMAGE_DIR)

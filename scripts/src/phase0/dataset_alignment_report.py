@@ -14,7 +14,7 @@ from matplotlib.lines import Line2D
 
 from src.phase0.patch_similarity import cosine_similarity_matrix
 from src.release.atlas_methods import bbox_iou, pair_relation
-from src.phase0.recovery_audit import (
+from src.phase0.recovery_validation import (
     DEFAULT_ACCEPTED_METADATA,
     DEFAULT_ORIGIN_IMAGE_DIR,
     DEFAULT_RAW_PATCH_DIR,
@@ -23,12 +23,12 @@ from src.phase0.recovery_audit import (
 )
 
 
-DEFAULT_SAB_AUDIT_DIR = Path("results/phase0/sab_consistency_audit")
+DEFAULT_SAB_VALIDATION_DIR = Path("results/phase0/sab_consistency_validation")
 DEFAULT_OUTPUT_DIR = Path("results/phase0/dataset_alignment_report")
 DEFAULT_EMBEDDINGS_PATH = Path("data/embeddings/embeddings_wsi_level_virchow_20260628_223154.pkl")
 DEFAULT_RECOVERED_COORDINATES = Path("results/phase0/sab_coordinate_recovery/sab_patch_recovered_coordinates.csv")
 DEFAULT_LOGO_PATH = Path("docs/assets/branding/labcin-logo.png")
-DEFAULT_ORIGIN_INVENTORY = Path("results/phase0/recovery_audit/origin_image_inventory.csv")
+DEFAULT_ORIGIN_INVENTORY = Path("results/phase0/recovery_validation/origin_image_inventory.csv")
 PRIVATE_OUTPUT_DIRNAME = "private_lab_crosswalks"
 PUBLIC_PRIVATE_COLUMNS = {
     "sab_origin_image_id",
@@ -85,8 +85,8 @@ def classify_review_status(row: pd.Series) -> str:
     return "source_convergent"
 
 
-def build_source_alignment_master(audit_dir: Path) -> pd.DataFrame:
-    table = pd.read_csv(Path(audit_dir) / "patch_origin_plausibility_audit.csv")
+def build_source_alignment_master(validation_dir: Path) -> pd.DataFrame:
+    table = pd.read_csv(Path(validation_dir) / "patch_origin_plausibility_validation.csv")
     table["dataset_use_status"] = table.apply(classify_review_status, axis=1)
     accepted_label = table["current_patch_label_normalized"].fillna("unknown").astype(str)
     sab_label = table["sab_split_label_normalized"].fillna("unknown").astype(str)
@@ -140,10 +140,10 @@ def build_source_alignment_master(audit_dir: Path) -> pd.DataFrame:
 def attach_public_origin_ids(master: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     master = master.copy()
     real_ids = sorted(master["sab_origin_image_id"].dropna().astype(str).unique())
-    mapping = {real_id: f"origin_audit_{index:04d}" for index, real_id in enumerate(real_ids, start=1)}
-    master["origin_audit_id"] = master["sab_origin_image_id"].astype(str).map(mapping)
+    mapping = {real_id: f"origin_validation_{index:04d}" for index, real_id in enumerate(real_ids, start=1)}
+    master["origin_validation_id"] = master["sab_origin_image_id"].astype(str).map(mapping)
     crosswalk_columns = [
-        "origin_audit_id",
+        "origin_validation_id",
         "sab_origin_image_id",
         "sab_case_prefix",
         "sab_origin_folder",
@@ -156,7 +156,7 @@ def attach_public_origin_ids(master: pd.DataFrame) -> tuple[pd.DataFrame, pd.Dat
         "sab_origin_exact_current_ndb_match_found",
     ]
     crosswalk = master[[column for column in crosswalk_columns if column in master.columns]].drop_duplicates()
-    return master, crosswalk.sort_values("origin_audit_id")
+    return master, crosswalk.sort_values("origin_validation_id")
 
 
 def public_release_table(table: pd.DataFrame) -> pd.DataFrame:
@@ -166,14 +166,14 @@ def public_release_table(table: pd.DataFrame) -> pd.DataFrame:
 
 def build_origin_patch_composition(master: pd.DataFrame) -> pd.DataFrame:
     rows = []
-    for origin_key, group in master.groupby("origin_audit_id", dropna=False):
+    for origin_key, group in master.groupby("origin_validation_id", dropna=False):
         accepted_labels = group["ndb_ufes_accepted_patch_label"].fillna("missing_from_accepted_metadata").astype(str)
         accepted_present = accepted_labels[accepted_labels != "missing_from_accepted_metadata"]
         best_labels = group["best_available_patch_label"].fillna("unknown").astype(str)
         sab_split_labels = group["sab_patch_split_label"].fillna("unknown").astype(str)
         statuses = group["dataset_use_status"].fillna("unknown").astype(str)
         rows.append({
-            "origin_audit_id": origin_key,
+            "origin_validation_id": origin_key,
             "sab_origin_folder": safe_value(group["sab_origin_folder"].iloc[0]),
             "sab_origin_folder_label_normalized": safe_value(group["sab_origin_folder_label_normalized"].iloc[0]),
             "current_ndb_origin_id_exact_match": safe_value(group["ndb_origin_id_from_sab_origin_exact_match"].iloc[0]),
@@ -292,7 +292,7 @@ def build_patch_pair_similarity(
     metadata["visual_fingerprint"] = metadata["ndb_patch_path"].map(visual_fingerprint)
     metadata["lab_mean"] = metadata["ndb_patch_path"].map(lab_mean_vector)
     rows = []
-    for origin_id, group in metadata.groupby("origin_audit_id", dropna=False):
+    for origin_id, group in metadata.groupby("origin_validation_id", dropna=False):
         ordered = group.sort_values("patch_number").reset_index(drop=True)
         for index_a in range(len(ordered)):
             for index_b in range(index_a + 1, len(ordered)):
@@ -319,7 +319,7 @@ def build_patch_pair_similarity(
                     feature_relation = "feature_not_similar"
                 relation = pair_relation(coordinate_relation, feature_relation, iou)
                 rows.append({
-                    "origin_audit_id": origin_id,
+                    "origin_validation_id": origin_id,
                     "sab_origin_folder": a.get("sab_origin_folder", ""),
                     "patch_a": a["ndb_patch"],
                     "patch_b": b["ndb_patch"],
@@ -475,16 +475,16 @@ def count_rows(series: pd.Series, display_func=lambda x: x) -> list[list[str]]:
     return [[display_func(index), f"{int(value)}", f"{value / total * 100:.1f}%"] for index, value in counts.items()]
 
 
-def add_cover_page(pdf: PdfPages, logo_path: Path, audit_summary: dict, origins: pd.DataFrame) -> None:
+def add_cover_page(pdf: PdfPages, logo_path: Path, validation_summary: dict, origins: pd.DataFrame) -> None:
     fig = plt.figure(figsize=PAGE_A4_PORTRAIT)
     add_logo(fig, logo_path, x=0.58, y=0.86, w=0.28, h=0.09)
-    fig.text(0.08, 0.78, "NDB-UFES and SAB Dataset Alignment Audit", fontsize=24, fontweight="bold", va="top")
+    fig.text(0.08, 0.78, "NDB-UFES and SAB Dataset Alignment Validation", fontsize=24, fontweight="bold", va="top")
     fig.text(0.08, 0.71, "Patch provenance, label convergence, and recovered WSI coordinates", fontsize=12, va="top", color="#444444")
     y = 0.62
     paragraphs = [
-        "This document compares the public NDB-UFES dataset distributed through Mendeley with the private SAB laboratory dataset stored in laboratory computers and university cloud folders. The SAB files are treated as a trusted provenance source for this audit because they were used in earlier training pipelines and contain the origin-image hash names from which the patch files were generated.",
+        "This document compares the public NDB-UFES dataset distributed through Mendeley with the private SAB laboratory dataset stored in laboratory computers and university cloud folders. The SAB files are treated as a trusted provenance source for this validation because they were used in earlier training pipelines and contain the origin-image hash names from which the patch files were generated.",
         "The goal is to validate whether the 3,763 patch images, their labels, and their origin-image relationships align across sources, and to identify patches or origin images that require manual review before being used in leakage-safe experiments.",
-        "Public tables use pseudonymous origin_audit_id values. The real SAB origin filenames and paths are stored only in the private lab crosswalk.",
+        "Public tables use pseudonymous origin_validation_id values. The real SAB origin filenames and paths are stored only in the private lab crosswalk.",
     ]
     for paragraph in paragraphs:
         y = add_wrapped_text(fig, paragraph, 0.08, y, width=92, size=10.5, line_height=0.028)
@@ -495,7 +495,7 @@ def add_cover_page(pdf: PdfPages, logo_path: Path, audit_summary: dict, origins:
 
 def add_dataset_definitions_page(pdf: PdfPages, logo_path: Path) -> None:
     fig = plt.figure(figsize=PAGE_A4_PORTRAIT)
-    add_section_title(fig, "Dataset Sources", "Definitions used throughout this audit.", logo_path)
+    add_section_title(fig, "Dataset Sources", "Definitions used throughout this validation.", logo_path)
     rows = [
         [
             "NDB-UFES",
@@ -513,7 +513,7 @@ def add_dataset_definitions_page(pdf: PdfPages, logo_path: Path) -> None:
             "Used when available, but not assumed to contain every patch-origin relationship found in SAB.",
         ],
         [
-            "Origin audit ID",
+            "Origin validation ID",
             "Privacy-preserving pseudonym generated for each SAB origin image.",
             "Used in public reports instead of the SAB hash filename. The private crosswalk links it back to SAB for lab-only review.",
         ],
@@ -522,7 +522,7 @@ def add_dataset_definitions_page(pdf: PdfPages, logo_path: Path) -> None:
     add_table(
         ax,
         rows,
-        ["Term", "Meaning", "Role in this audit"],
+        ["Term", "Meaning", "Role in this validation"],
         font_size=6.4,
         scale_y=3.2,
         col_widths=[0.22, 0.30, 0.48],
@@ -535,16 +535,16 @@ def add_dataset_definitions_page(pdf: PdfPages, logo_path: Path) -> None:
     plt.close(fig)
 
 
-def add_key_findings_page(pdf: PdfPages, master: pd.DataFrame, origins: pd.DataFrame, pairs: pd.DataFrame, audit_summary: dict, origin_inventory: pd.DataFrame | None, logo_path: Path) -> None:
+def add_key_findings_page(pdf: PdfPages, master: pd.DataFrame, origins: pd.DataFrame, pairs: pd.DataFrame, validation_summary: dict, origin_inventory: pd.DataFrame | None, logo_path: Path) -> None:
     fig = plt.figure(figsize=PAGE_A4_PORTRAIT)
-    add_section_title(fig, "Key Audit Findings", "Counts are reported as audit evidence, not as clinical truth claims.", logo_path)
+    add_section_title(fig, "Key Validation Findings", "Counts are reported as validation evidence, not as clinical truth claims.", logo_path)
     current_multi = int(origins["n_ndb_ufes_accepted_patch_labels_present"].gt(1).sum())
     best_multi = int(origins["has_multiple_best_available_patch_labels"].sum())
     patchless = int((origin_inventory["accepted_patch_count"] == 0).sum()) if origin_inventory is not None and "accepted_patch_count" in origin_inventory else "not computed"
     rows = [
         ["Patch identity", "3,763 / 3,763 NDB-UFES patch files exact-match SAB split patch files.", "The patch image set is shared between the sources."],
         ["WSI identity", "222 / 242 NDB-UFES WSI images exact-match a SAB WSI image.", "The WSI/origin set diverges across sources."],
-        ["SAB WSI groups with patches", f"{origins['origin_audit_id'].nunique()} origin_audit_id groups.", "The SAB split links patches to more origin groups than the public WSI set exact-matches."],
+        ["SAB WSI groups with patches", f"{origins['origin_validation_id'].nunique()} origin_validation_id groups.", "The SAB split links patches to more origin groups than the public WSI set exact-matches."],
         ["NDB-UFES public WSI without accepted patches", str(patchless), "These are public origin images that currently do not contribute accepted patch rows."],
         ["Origins with >1 accepted NDB-UFES patch label", str(current_multi), "This excludes patches missing from the accepted metadata table."],
         ["Origins with >1 best available patch label", str(best_multi), "This uses accepted NDB-UFES labels when present, otherwise SAB split labels."],
@@ -566,7 +566,7 @@ def add_key_findings_page(pdf: PdfPages, master: pd.DataFrame, origins: pd.DataF
 
 def add_status_dictionary_page(pdf: PdfPages, logo_path: Path) -> None:
     fig = plt.figure(figsize=PAGE_A4_PORTRAIT)
-    add_section_title(fig, "How to Read the Audit Flags", "The report separates source convergence from biological or logical plausibility.", logo_path)
+    add_section_title(fig, "How to Read the Validation Flags", "The report separates source convergence from biological or logical plausibility.", logo_path)
     rows = [
         ["Sources converge", "Available labels from NDB-UFES and SAB do not show a relevant disagreement.", "Usually low priority."],
         ["Source labels differ", "The accepted NDB-UFES label and the SAB split/folder label differ at patch or origin level.", "Review before using for model training."],
@@ -606,7 +606,7 @@ def add_counts_page(pdf: PdfPages, master: pd.DataFrame, logo_path: Path) -> Non
         "missing_current_patch_metadata": "missing from accepted NDB-UFES metadata",
     }.get(str(value), str(value)))
     ax1 = fig.add_axes([0.06, 0.55, 0.88, 0.31])
-    add_table(ax1, rows1, ["Audit interpretation", "Patches", "Percent"], font_size=7.8, scale_y=1.95, col_widths=[0.62, 0.19, 0.19], wrap_widths=[58, 12, 12])
+    add_table(ax1, rows1, ["Validation interpretation", "Patches", "Percent"], font_size=7.8, scale_y=1.95, col_widths=[0.62, 0.19, 0.19], wrap_widths=[58, 12, 12])
     ax2 = fig.add_axes([0.06, 0.18, 0.88, 0.26])
     add_table(ax2, rows2, ["Patch label comparison", "Patches", "Percent"], font_size=7.8, scale_y=1.95, col_widths=[0.62, 0.19, 0.19], wrap_widths=[58, 12, 12])
     pdf.savefig(fig, bbox_inches="tight")
@@ -661,9 +661,9 @@ def add_spatial_similarity_page(pdf: PdfPages, pairs: pd.DataFrame, logo_path: P
 
 def add_limitations_page(pdf: PdfPages, logo_path: Path) -> None:
     fig = plt.figure(figsize=PAGE_A4_PORTRAIT)
-    add_section_title(fig, "Use and Limitations", "This audit prepares evidence for manual review and leakage-safe experiments.", logo_path)
+    add_section_title(fig, "Use and Limitations", "This validation prepares evidence for manual review and leakage-safe experiments.", logo_path)
     rows = [
-        ["Do not publish private linkage keys", "Use origin_audit_id publicly. Keep the private crosswalk inside the lab."],
+        ["Do not publish private linkage keys", "Use origin_validation_id publicly. Keep the private crosswalk inside the lab."],
         ["Do not treat flags as final clinical judgment", "Flags identify source inconsistencies and plausibility concerns; they do not replace blind pathology review."],
         ["Recovered coordinates are evidence", "Coordinates were recovered by exact pixel matching between patches and SAB WSI images."],
         ["Suspicious patches are candidates for exclusion or adjudication", "Experiments can compare all linked data versus stricter reviewed subsets."],
@@ -686,20 +686,20 @@ def add_text_page(pdf: PdfPages, title: str, lines: list[str]) -> None:
     plt.close(fig)
 
 
-def add_summary_pages(pdf: PdfPages, master: pd.DataFrame, origins: pd.DataFrame, metadata: pd.DataFrame, pairs: pd.DataFrame, audit_summary: dict) -> None:
+def add_summary_pages(pdf: PdfPages, master: pd.DataFrame, origins: pd.DataFrame, metadata: pd.DataFrame, pairs: pd.DataFrame, validation_summary: dict) -> None:
     lines = [
         "Purpose: document what exists in NDB and SAB, where it can be found, and how source labels align.",
         "",
-        f"NDB patch images audited: {audit_summary.get('current_patch_images', len(master))}",
-        f"NDB patches exact-matched to SAB split patches: {audit_summary.get('current_patch_images_exact_matched_to_sab', int(master['patch_exact_match_found'].sum()))}",
-        f"Current NDB origin images audited: {audit_summary.get('current_origin_images', 'unknown')}",
-        f"Current NDB origin images exact-matched to SAB origins: {audit_summary.get('current_origin_images_exact_matched_to_sab', 'unknown')}",
-        f"SAB origin groups represented by patches: {origins['origin_audit_id'].nunique()}",
+        f"NDB patch images validated: {validation_summary.get('current_patch_images', len(master))}",
+        f"NDB patches exact-matched to SAB split patches: {validation_summary.get('current_patch_images_exact_matched_to_sab', int(master['patch_exact_match_found'].sum()))}",
+        f"Current NDB origin images validated: {validation_summary.get('current_origin_images', 'unknown')}",
+        f"Current NDB origin images exact-matched to SAB origins: {validation_summary.get('current_origin_images_exact_matched_to_sab', 'unknown')}",
+        f"SAB origin groups represented by patches: {origins['origin_validation_id'].nunique()}",
         f"SAB origins with multiple current patch labels: {int(origins['has_multiple_current_patch_labels'].sum())}",
         "",
-        "Public files use origin_audit_id pseudonyms. Real SAB origin filenames/paths are written only to the private lab crosswalk.",
+        "Public files use origin_validation_id pseudonyms. Real SAB origin filenames/paths are written only to the private lab crosswalk.",
         "",
-        "Dataset-use status is an audit category, not a clinical truth score.",
+        "Dataset-use status is an validation category, not a clinical truth score.",
         "source_convergent: available source labels agree or no relevant disagreement was detected.",
         "source_disagreement: SAB/current labels diverge at patch and/or origin level.",
         "requires_manual_review: broad/ambiguous source folders or ambiguous plausibility need review.",
@@ -746,7 +746,7 @@ def add_source_case_page(pdf: PdfPages, row: pd.Series, title: str) -> None:
         f"NDB patch: {row.get('ndb_patch', '')}",
         f"Current patch label: {row.get('current_patch_label_normalized', '')}",
         f"SAB split label: {row.get('sab_split_label_normalized', '')} ({row.get('sab_split_class', '')})",
-        f"SAB origin audit ID: {row.get('origin_audit_id', '')}",
+        f"SAB origin validation ID: {row.get('origin_validation_id', '')}",
         f"SAB origin folder label: {row.get('sab_origin_folder_label_normalized', '')} ({row.get('sab_origin_folder', '')})",
         f"Current NDB origin from patch CSV: {row.get('ndb_origin_id_from_patch_csv', '')} / {row.get('current_origin_label_from_patch_csv', '')}",
         f"Exact NDB origin match from SAB origin: {row.get('ndb_origin_id_from_sab_origin_exact_match', '')}",
@@ -771,7 +771,7 @@ def add_source_case_page(pdf: PdfPages, row: pd.Series, title: str) -> None:
 
 
 def add_origin_bbox_page(pdf: PdfPages, origin_id: str, metadata: pd.DataFrame, raw_patch_dir: Path, origin_image_dir: Path, pair_rows: pd.DataFrame) -> None:
-    group = metadata[metadata["origin_audit_id"].astype(str) == str(origin_id)].sort_values("patch_number")
+    group = metadata[metadata["origin_validation_id"].astype(str) == str(origin_id)].sort_values("patch_number")
     if group.empty:
         return
     fig = plt.figure(figsize=(11, 8.5))
@@ -800,7 +800,7 @@ def add_origin_bbox_page(pdf: PdfPages, origin_id: str, metadata: pd.DataFrame, 
     ax_origin.set_title("SAB origin image with recovered patch boxes")
     ax_origin.axis("off")
 
-    example_pairs = pair_rows[pair_rows["origin_audit_id"].astype(str) == str(origin_id)].copy()
+    example_pairs = pair_rows[pair_rows["origin_validation_id"].astype(str) == str(origin_id)].copy()
     example_pairs = example_pairs.sort_values(["visual_fingerprint_similarity", "iou"], ascending=[False, False]).head(2)
     for pair_index, pair in enumerate(example_pairs.itertuples(index=False)):
         y = 0.53 - pair_index * 0.28
@@ -814,7 +814,7 @@ def add_origin_bbox_page(pdf: PdfPages, origin_id: str, metadata: pd.DataFrame, 
 
 
 def add_private_origin_atlas_page(pdf: PdfPages, origin_id: str, metadata: pd.DataFrame, raw_patch_dir: Path) -> None:
-    group = metadata[metadata["origin_audit_id"].astype(str) == str(origin_id)].sort_values("patch_number")
+    group = metadata[metadata["origin_validation_id"].astype(str) == str(origin_id)].sort_values("patch_number")
     if group.empty:
         return
     fig = plt.figure(figsize=PAGE_A4_LANDSCAPE)
@@ -826,7 +826,7 @@ def add_private_origin_atlas_page(pdf: PdfPages, origin_id: str, metadata: pd.Da
     fig.text(0.03, 0.96, f"{origin_id}", fontsize=15, fontweight="bold", va="top")
     fig.text(0.03, 0.925, f"SAB WSI folder: {folder} ({folder_label}) | NDB-UFES exact WSI match: {accepted_match} | patches: {len(group)}", fontsize=8.5, va="top")
     fig.text(0.03, 0.900, f"Best available patch labels: {json.dumps({display_label(k): int(v) for k, v in best_counts.items()}, sort_keys=True)}", fontsize=8.0, va="top")
-    fig.text(0.03, 0.878, f"Audit interpretation counts: {json.dumps({display_status(k): int(v) for k, v in status_counts.items()}, sort_keys=True)}", fontsize=8.0, va="top")
+    fig.text(0.03, 0.878, f"Validation interpretation counts: {json.dumps({display_status(k): int(v) for k, v in status_counts.items()}, sort_keys=True)}", fontsize=8.0, va="top")
 
     ax_origin = fig.add_axes([0.03, 0.08, 0.47, 0.75])
     origin_path = group["sab_origin_path"].dropna().astype(str).iloc[0] if group["sab_origin_path"].notna().any() else ""
@@ -917,11 +917,11 @@ def write_private_origin_atlas(
         fig = plt.figure(figsize=PAGE_A4_LANDSCAPE)
         fig.text(0.05, 0.72, "Private Origin Atlas", fontsize=24, fontweight="bold", va="top")
         fig.text(0.05, 0.64, "Lab-only document. Contains SAB WSI images and visual patch-origin relationships.", fontsize=12, va="top")
-        fig.text(0.05, 0.56, "Each origin_audit_id page shows the SAB WSI, recovered patch coordinates, and all linked patch thumbnails.", fontsize=10, va="top")
+        fig.text(0.05, 0.56, "Each origin_validation_id page shows the SAB WSI, recovered patch coordinates, and all linked patch thumbnails.", fontsize=10, va="top")
         pdf.savefig(fig, bbox_inches="tight")
         plt.close(fig)
         pages += 1
-        for origin_id in metadata["origin_audit_id"].dropna().astype(str).drop_duplicates().sort_values():
+        for origin_id in metadata["origin_validation_id"].dropna().astype(str).drop_duplicates().sort_values():
             add_private_origin_atlas_page(pdf, origin_id, metadata, raw_patch_dir)
             pages += 1
         pages += add_patchless_ndb_contact_pages(pdf, origin_inventory)
@@ -936,16 +936,16 @@ def write_pdf_report(
     pairs: pd.DataFrame,
     raw_patch_dir: Path,
     origin_image_dir: Path,
-    audit_summary: dict,
+    validation_summary: dict,
     max_examples_per_status: int,
     logo_path: Path,
     origin_inventory: pd.DataFrame | None,
 ) -> int:
     pages = 0
     with PdfPages(output_pdf) as pdf:
-        add_cover_page(pdf, logo_path, audit_summary, origins)
+        add_cover_page(pdf, logo_path, validation_summary, origins)
         add_dataset_definitions_page(pdf, logo_path)
-        add_key_findings_page(pdf, master, origins, pairs, audit_summary, origin_inventory, logo_path)
+        add_key_findings_page(pdf, master, origins, pairs, validation_summary, origin_inventory, logo_path)
         add_status_dictionary_page(pdf, logo_path)
         add_counts_page(pdf, master, logo_path)
         add_label_crosstab_page(pdf, master, logo_path)
@@ -958,11 +958,11 @@ def write_pdf_report(
 def run_dataset_alignment_report(args: argparse.Namespace) -> dict:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    audit_dir = Path(args.sab_audit_dir)
-    audit_summary_path = audit_dir / "audit_summary.json"
-    audit_summary = json.loads(audit_summary_path.read_text()) if audit_summary_path.exists() else {}
+    validation_dir = Path(args.sab_validation_dir)
+    validation_summary_path = validation_dir / "validation_summary.json"
+    validation_summary = json.loads(validation_summary_path.read_text()) if validation_summary_path.exists() else {}
 
-    master = build_source_alignment_master(audit_dir)
+    master = build_source_alignment_master(validation_dir)
     master, private_crosswalk = attach_public_origin_ids(master)
     origins = build_origin_patch_composition(master)
     recovered_coordinates = pd.read_csv(args.recovered_coordinates)
@@ -976,7 +976,7 @@ def run_dataset_alignment_report(args: argparse.Namespace) -> dict:
 
     private_dir = output_dir / PRIVATE_OUTPUT_DIRNAME
     private_dir.mkdir(parents=True, exist_ok=True)
-    private_crosswalk.to_csv(private_dir / "origin_audit_private_crosswalk.csv", index=False)
+    private_crosswalk.to_csv(private_dir / "origin_validation_private_crosswalk.csv", index=False)
 
     public_release_table(master).to_csv(output_dir / "source_alignment_master.csv", index=False)
     public_release_table(origins).to_csv(output_dir / "origin_patch_composition.csv", index=False)
@@ -995,7 +995,7 @@ def run_dataset_alignment_report(args: argparse.Namespace) -> dict:
         pairs,
         args.raw_patch_dir,
         args.origin_image_dir,
-        audit_summary,
+        validation_summary,
         args.max_examples_per_status,
         args.logo,
         origin_inventory,
@@ -1012,12 +1012,12 @@ def run_dataset_alignment_report(args: argparse.Namespace) -> dict:
         )
     summary = {
         "source_alignment_rows": int(len(master)),
-        "sab_origins_with_patches": int(origins["origin_audit_id"].nunique()),
+        "sab_origins_with_patches": int(origins["origin_validation_id"].nunique()),
         "patches_with_recovered_coordinate_status": int(len(accepted_with_coords)),
         "patch_pairs": int(len(pairs)),
         "review_needed_cases": int(len(review)),
         "output_pdf": str(output_pdf),
-        "private_origin_crosswalk": str(private_dir / "origin_audit_private_crosswalk.csv"),
+        "private_origin_crosswalk": str(private_dir / "origin_validation_private_crosswalk.csv"),
         "private_origin_atlas": str(private_atlas),
         "pdf_pages": int(pages),
         "private_origin_atlas_pages": int(atlas_pages) if atlas_pages is not None else "not rebuilt",
@@ -1028,7 +1028,7 @@ def run_dataset_alignment_report(args: argparse.Namespace) -> dict:
 
 def dataset_alignment_report_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Build a dataset source-alignment and patch-structure report.")
-    parser.add_argument("--sab-audit-dir", type=Path, default=DEFAULT_SAB_AUDIT_DIR)
+    parser.add_argument("--sab-validation-dir", type=Path, default=DEFAULT_SAB_VALIDATION_DIR)
     parser.add_argument("--accepted-metadata", type=Path, default=DEFAULT_ACCEPTED_METADATA)
     parser.add_argument("--raw-patch-dir", type=Path, default=DEFAULT_RAW_PATCH_DIR)
     parser.add_argument("--origin-image-dir", type=Path, default=DEFAULT_ORIGIN_IMAGE_DIR)

@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 
-DEFAULT_PATCH_SOURCE_CONVERGENCE = Path("results/phase0/sab_consistency_audit/patch_source_convergence.csv")
+DEFAULT_PATCH_SOURCE_CONVERGENCE = Path("results/phase0/sab_consistency_validation/patch_source_convergence.csv")
 DEFAULT_OUTPUT_DIR = Path("results/phase0/sab_coordinate_recovery")
 
 
