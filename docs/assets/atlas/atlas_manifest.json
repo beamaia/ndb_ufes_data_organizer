@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "privacy_mode": "public_pseudonymous",
   "generated_on": "2026-07-23",
   "generated_by": "scripts/src/release/build_atlas_public_index.py",
@@ -31,10 +31,10 @@
     "wsi_rows_with_coordinate_metrics": 251,
     "patches_with_metadata_conflict": 1489
   },
-  "thesis_relationship_scope": {
-    "patch_rows": 3763,
-    "linked_patch_rows": 3086,
-    "missing_linkage_patch_rows": 677
+  "public_ndb_ufes_match_scope": {
+    "sab_linked_patch_rows": 3763,
+    "matched_patch_rows": 3086,
+    "without_public_match_patch_rows": 677
   },
   "excluded_private_fields": [
     "sab_case_prefix",

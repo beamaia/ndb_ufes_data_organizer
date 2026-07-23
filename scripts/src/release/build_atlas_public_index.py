@@ -310,12 +310,14 @@ def _build_release_facts(
             "origins_crossing_folds": int(batch["origins_crossing_folds"]),
             "patient_case_groups_crossing_folds": int(batch["patient_case_groups_crossing_folds"]),
             "missing_images": int(batch["missing_images"]),
-            "missing_linkage_metadata_rows": int(batch["missing_linkage_metadata_rows"]),
+            "without_public_ndb_ufes_match_rows": int(
+                batch["missing_linkage_metadata_rows"]
+            ),
         }
 
     pruning = artifact_manifest["batch3_virchow_pruning"]
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "report_type": "public_release_facts",
         "privacy_mode": "public_aggregate",
         "generated_by": "scripts/src/release/build_atlas_public_index.py",
@@ -335,13 +337,15 @@ def _build_release_facts(
             "all_coordinate_patch_pairs": int(all_coordinate_patch_pairs),
             "patches_with_metadata_conflict": int(summary["patches_with_metadata_conflict"]),
         },
-        "thesis_relationship_scope": {
-            "patch_rows": int(relationship_summary["patch_rows"]),
-            "linked_patch_rows": int(relationship_summary["linked_patch_rows"]),
-            "missing_linkage_patch_rows": int(relationship_summary["missing_linkage_patch_rows"]),
-            "pndb_origins": int(relationship_summary["pndb_origins"]),
-            "linked_pndb_origins": int(relationship_summary["linked_pndb_origins"]),
-            "missing_linkage_pndb_origins": int(
+        "public_ndb_ufes_match_scope": {
+            "sab_linked_patch_rows": int(relationship_summary["patch_rows"]),
+            "matched_patch_rows": int(relationship_summary["linked_patch_rows"]),
+            "without_public_match_patch_rows": int(
+                relationship_summary["missing_linkage_patch_rows"]
+            ),
+            "public_origin_or_fallback_groups": int(relationship_summary["pndb_origins"]),
+            "matched_public_origins": int(relationship_summary["linked_pndb_origins"]),
+            "without_public_match_fallback_groups": int(
                 relationship_summary["missing_linkage_pndb_origins"]
             ),
         },
@@ -434,7 +438,7 @@ def main() -> None:
     )
 
     manifest = {
-        "schema_version": 1,
+        "schema_version": 2,
         "privacy_mode": "public_pseudonymous",
         "generated_on": date.today().isoformat(),
         "generated_by": "scripts/src/release/build_atlas_public_index.py",
@@ -466,10 +470,12 @@ def main() -> None:
             "wsi_rows_with_coordinate_metrics": int(len(coordinate_metrics)),
             "patches_with_metadata_conflict": int(summary["patches_with_metadata_conflict"]),
         },
-        "thesis_relationship_scope": {
-            "patch_rows": int(relationship_summary["patch_rows"]),
-            "linked_patch_rows": int(relationship_summary["linked_patch_rows"]),
-            "missing_linkage_patch_rows": int(relationship_summary["missing_linkage_patch_rows"]),
+        "public_ndb_ufes_match_scope": {
+            "sab_linked_patch_rows": int(relationship_summary["patch_rows"]),
+            "matched_patch_rows": int(relationship_summary["linked_patch_rows"]),
+            "without_public_match_patch_rows": int(
+                relationship_summary["missing_linkage_patch_rows"]
+            ),
         },
         "excluded_private_fields": [
             "sab_case_prefix",

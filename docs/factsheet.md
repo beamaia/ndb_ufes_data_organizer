@@ -45,11 +45,20 @@ DenseNet-121, and ResNet-50 were evaluated. Batch 3 is retained only as an
 exploratory Virchow-pruned archive. See [Thesis Experiment Design](thesis-experiment-batches.md)
 and [Canonical Experiment Results](experiment-results.md).
 
-The matched-subset fold files below remain useful because they document the SAB-linked subset where source/WSI linkage and embeddings were available at that stage. Their 3,086-patch count should be described as the SAB-linked subset count, not as the full P-NDB-UFES patch count.
+The matched-subset fold files below remain useful because they document the
+3,086 patches matched to public NDB-UFES origin images and used by the earlier
+embedding and fold-design pipeline. They are not the complete SAB-linked
+scope: SAB/WSI linkage is available for all 3,763 patches.
 
 ## Validated WSI Atlas View
 
-The atlas provides a second, complementary view of the full 3,763-patch scope. Through recovered coordinate and pixel-containment evidence, all 3,763 patches are assigned to 251 validated WSI IDs: 203 with public NDB-UFES + SAB evidence and 48 SAB-only recovered WSI groups. The separate thesis relationship table still reports 3,086 rows with recovered metadata linkage and 677 rows with missing metadata linkage. These are different linkage layers, not competing dataset totals.
+The atlas provides a second, complementary view of the full 3,763-patch scope.
+Through SAB, coordinate, and pixel-containment evidence, all 3,763 patches are
+assigned to 251 validated WSI IDs: 203 with public NDB-UFES + SAB evidence and
+48 SAB-only recovered WSI groups. The separate relationship table reports
+3,086 rows matched to public NDB-UFES origin images and 677 rows without that
+public match. These are different matching layers, not competing dataset
+totals.
 
 The public-safe [Atlas Index](atlas-index.md) provides one searchable row per validated WSI. It excludes raw SAB case prefixes, image names, and local filesystem paths. Use the [Atlas Guide](atlas-guide.md) for the evidence definitions and interpretation cautions.
 
@@ -176,7 +185,7 @@ The larger exploratory figure set is documented on [Exploratory Analysis](explor
 
 Current thesis note: use the two-experiment design in
 [Thesis Experiment Design](thesis-experiment-batches.md). The paragraph below
-describes the older SAB-linked matched-subset Phase 3 organizer run.
+describes the older public NDB-UFES-matched Phase 3 organizer run.
 
 The current fold construction completed and passed its strict validation report:
 

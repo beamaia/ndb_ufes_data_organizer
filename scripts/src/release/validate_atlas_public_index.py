@@ -76,7 +76,7 @@ def main() -> None:
     conflict_report = json.loads(CONFLICT_REPORT_PATH.read_text())
     methods = json.loads(METHODS_PATH.read_text())
     release_facts = json.loads(RELEASE_FACTS_PATH.read_text())
-    if manifest.get("schema_version") != 1:
+    if manifest.get("schema_version") != 2:
         raise SystemExit("unsupported atlas manifest schema_version")
     if manifest.get("privacy_mode") != "public_pseudonymous":
         raise SystemExit("atlas manifest must declare public_pseudonymous privacy_mode")
@@ -99,7 +99,7 @@ def main() -> None:
         raise SystemExit("atlas methods file has the wrong report_type")
     if methods.get("privacy_mode") != "public_methods":
         raise SystemExit("atlas methods file must be public_methods")
-    if release_facts.get("schema_version") != 1:
+    if release_facts.get("schema_version") != 2:
         raise SystemExit("unsupported public release facts schema_version")
     if release_facts.get("report_type") != "public_release_facts":
         raise SystemExit("public release facts have the wrong report_type")
@@ -223,17 +223,17 @@ def main() -> None:
         ):
             raise SystemExit(f"public release facts atlas scope mismatch for {key}")
 
-    facts_relationship_scope = release_facts.get("thesis_relationship_scope", {})
-    manifest_relationship_scope = manifest.get("thesis_relationship_scope", {})
+    facts_match_scope = release_facts.get("public_ndb_ufes_match_scope", {})
+    manifest_match_scope = manifest.get("public_ndb_ufes_match_scope", {})
     for key in (
-        "patch_rows",
-        "linked_patch_rows",
-        "missing_linkage_patch_rows",
+        "sab_linked_patch_rows",
+        "matched_patch_rows",
+        "without_public_match_patch_rows",
     ):
-        if int(facts_relationship_scope.get(key, -1)) != int(
-            manifest_relationship_scope.get(key, -2)
+        if int(facts_match_scope.get(key, -1)) != int(
+            manifest_match_scope.get(key, -2)
         ):
-            raise SystemExit(f"public release facts relationship scope mismatch for {key}")
+            raise SystemExit(f"public release facts NDB-UFES match scope mismatch for {key}")
 
     batches = release_facts.get("thesis_batches", {})
     if release_facts.get("canonical_experiment_batches") != ["batch1", "batch2"]:
@@ -254,10 +254,12 @@ def main() -> None:
             raise SystemExit(f"public release facts class counts do not cover {batch_name}")
         if int(batch.get("missing_images", -1)) != 0:
             raise SystemExit(f"public release facts report missing images for {batch_name}")
-        if int(batch.get("missing_linkage_metadata_rows", -1)) != int(
-            facts_relationship_scope.get("missing_linkage_patch_rows", -2)
+        if int(batch.get("without_public_ndb_ufes_match_rows", -1)) != int(
+            facts_match_scope.get("without_public_match_patch_rows", -2)
         ):
-            raise SystemExit(f"public release facts missing-linkage count mismatch for {batch_name}")
+            raise SystemExit(
+                f"public release facts public NDB-UFES match count mismatch for {batch_name}"
+            )
 
     pruning = release_facts.get("batch3_virchow_pruning", {})
     if int(pruning.get("before_patch_rows", -1)) != int(batches["batch1"]["patch_rows"]):

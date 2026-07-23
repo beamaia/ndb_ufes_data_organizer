@@ -69,12 +69,12 @@ The atlas and relationship metadata answer different questions:
 
 | Layer | Scope | Meaning |
 | --- | --- | --- |
-| Atlas validated-WSI linkage | 3,763 patches, 251 WSI groups | Coordinate/pixel evidence places every patch in a validated WSI context. |
-| Thesis relationship metadata | 3,086 linked rows + 677 missing-linkage rows | Records whether reconstructed NDB/SAB metadata is available for the batch row. |
+| SAB/atlas validated-WSI linkage | 3,763 patches, 251 WSI groups | SAB and coordinate/pixel evidence place every patch in a validated WSI context. |
+| Public NDB-UFES origin matching | 3,086 matched rows + 677 rows without a public match | Records whether each SAB-linked patch can also join to a public NDB-UFES origin image and its metadata. |
 
-Rows with missing reconstructed metadata are retained. They receive unique
-fallback grouping where stronger linkage is unavailable; unrelated unknown
-samples are not merged into one artificial patient.
+Rows without a public NDB-UFES origin match are retained. They receive unique
+fallback grouping where a stronger public match is unavailable; unrelated
+unknown samples are not merged into one artificial patient.
 
 ## Frozen Hyperparameters
 

@@ -36,7 +36,7 @@ The atlas is organized in this order:
 | Patient/case groups | 64 | The atlas keeps related WSI entries together for review. |
 | Patch-label agreement | 3,763 / 3,763 | The atlas reports agreement for the labels carried by its patch records. |
 
-These are atlas-level values. They should not be substituted automatically for the current thesis-batch or SAB-linked-subset counts elsewhere in this wiki. The reconciliation is tracked in [Atlas Gap Map](atlas-gap-map.md).
+These are atlas-level values. They should not be substituted automatically for the current thesis-batch or public NDB-UFES-matched-subset counts elsewhere in this wiki. The reconciliation is tracked in [Atlas Gap Map](atlas-gap-map.md).
 
 ## Two linkage layers
 
@@ -44,8 +44,8 @@ The 3,763 and 3,086/677 numbers describe different questions, so I keep both ins
 
 | Linkage layer | Current result | What it means |
 | --- | ---: | --- |
-| Atlas validated WSI linkage | 3,763 patches assigned to 251 validated WSI IDs; all 3,763 have recovered coordinates. | Pixel-containment evidence places every patch in a validated WSI context. This is the layer used by the atlas. |
-| Thesis relationship metadata linkage | 3,086 rows with recovered public metadata linkage; 677 rows without it. | The current relationship table records whether the thesis batch has public NDB/SAB metadata linkage for each patch. Missing metadata rows remain in the full thesis scope. |
+| SAB/atlas validated WSI linkage | 3,763 patches assigned to 251 validated WSI IDs; all 3,763 have recovered coordinates. | SAB and pixel-containment evidence place every patch in a validated WSI context. This is the layer used by the atlas. |
+| Public NDB-UFES origin matching | 3,086 rows match one of 203 public NDB-UFES origin images; 677 rows do not. | The current relationship table records whether each SAB-linked patch also has a public NDB-UFES origin match. All rows remain in the full thesis scope. |
 | Patch-label agreement | 3,763 / 3,763 | The complete patch-label sources agree between NDB-UFES and SAB in the validated-linkage output. This is separate from the 677 rows whose reconstructed thesis metadata is missing and the 1,328 rows where reconstructed metadata differs from the complete patch-label source. |
 
 The authoritative atlas summary is `results/phase0/validated_linkage/validated_linkage_summary.json`. The authoritative thesis relationship summary is `results/phase3/current_thesis_batches/relationship_update_summary.json`. The [Atlas Index](atlas-index.md) packages the public atlas layer without the LAB crosswalk.
@@ -101,7 +101,8 @@ also ignored: v1.0.0 publishes the PDF only.
 - Use [Data Dictionary](data-dictionary.md) for canonical file names and row-level fields.
 - Use [Atlas Index](atlas-index.md) for the lightweight validated-WSI download and manifest.
 - Use [Thesis Experiment Design](thesis-experiment-batches.md) for the two
-  final 3,763-row experiments and the separate 3,086-row SAB-linked subset.
+  final 3,763-row experiments and the separate 3,086-row public
+  NDB-UFES-matched subset.
 - Use [Atlas Gap Map](atlas-gap-map.md) before treating atlas values as release-ready data facts.
 - Use [Validation Guide](validation-guide.md) for the checks required before accepting generated artifacts.
 

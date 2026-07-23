@@ -10,7 +10,7 @@ I use the following map when a count or label looks inconsistent. The files are 
 | --- | --- | ---: | --- |
 | What is in the final thesis comparison? | [Thesis Experiment Design](thesis-experiment-batches.md) and the current relationship files | Two 3,763-row experiments; Batch 3 archived as exploratory | The older 3,086-row fold-design run |
 | Which patches belong in the older leakage-safe fold files? | `results/phase3/fold_creation/` and the Phase 1--3 pages | 3,086 patches, 203 origins, 6 folds | The full-scope thesis batch CSVs |
-| Which WSI context contains each atlas patch? | `results/phase0/validated_linkage/` or the public [Atlas Index](atlas-index.md) | 3,763 patches, 251 validated WSIs, coordinates for all represented patches | The 3,086 metadata-linked rows |
+| Which WSI context contains each atlas patch? | `results/phase0/validated_linkage/` or the public [Atlas Index](atlas-index.md) | 3,763 SAB-linked patches, 251 validated WSIs, coordinates for all represented patches | The 3,086 public NDB-UFES-matched rows |
 | What can be loaded by the public website? | `docs/assets/atlas/` plus the Markdown pages | 251 public-pseudonymous WSI rows and small JSON contracts | The root public PDF remains a repository download; the LAB PDF, editable DOCX, and raw SAB crosswalk are excluded |
 | Where are label and metadata disagreements summarized? | [Metadata Conflict Review](metadata-conflict-review.md) and `metadata_conflict_summary.json` | 1,489 atlas conflict-flagged rows | A silent relabeling or automatic exclusion rule |
 
@@ -24,15 +24,17 @@ When I update one layer, I should update its source artifact, its public summary
 | Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `results/phase3/fold_creation/fold_assignments_patch_level.csv` |
 | Link | Relationship images/files between original NDB-UFES and patch data. | `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` |
 
-## Current Thesis Linkage Counts
+## Current NDB-UFES Match Counts
 
-The current thesis/article reassessment uses the full P-NDB-UFES patch scope where possible, while keeping explicit information about which rows have recovered NDB/SAB linkage.
+The current thesis/article reassessment uses all 3,763 SAB-linked P-NDB-UFES
+patches. It also records which rows can be matched to a public NDB-UFES origin
+image and its metadata.
 
 | Item | Count |
 | --- | ---: |
 | Full P-NDB-UFES patch rows | 3,763 |
-| Patch rows with recovered NDB/SAB linkage | 3,086 |
-| Patch rows retained with missing linkage metadata | 677 |
+| Patch rows matched to public NDB-UFES origins | 3,086 |
+| SAB-linked patch rows without a public NDB-UFES origin match | 677 |
 | P-NDB origin or fallback groups | 880 |
 | Linked P-NDB origins | 203 |
 | Missing-linkage fallback groups | 677 |
@@ -41,11 +43,12 @@ Updated relationship files:
 
 | File | Level | Rows | Meaning |
 | --- | --- | ---: | --- |
-| `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` | Patch | 3,763 | Current patch-level P-NDB-UFES to NDB/SAB relationship table. |
+| `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` | Patch | 3,763 | Current patch-level table recording SAB linkage and the optional public NDB-UFES origin match. |
 | `data/ndb_ufes/link_level/csvs/pndb_ndb_origin_relationships.csv` | Origin/group | 880 | Current origin/fallback-group relationship summary. |
 | `results/phase3/current_thesis_batches/linkage_scope_summary.csv` | Summary | 6 | Counts for thesis figures and tables. |
 
-The counts below describe the SAB-linked matched-subset organizer files and should not be used alone as the full P-NDB-UFES experiment scope.
+The counts below describe the public NDB-UFES-matched organizer files and
+should not be used alone as the full 3,763-patch experiment scope.
 
 ## Validated WSI Atlas Index
 

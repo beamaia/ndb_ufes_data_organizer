@@ -37,7 +37,12 @@ The field names, types, nullability, source-role values, and CSV encodings are r
 | All coordinate-derived same-WSI patch pairs | 30,531 |
 | Same-WSI similarity rows available | 29,350 |
 
-The current relationship table has a different field of view: 3,086 rows have recovered public metadata linkage and 677 rows are retained with missing metadata linkage. That does not reduce the atlas WSI count; it describes the metadata status used by the thesis batch grouping. See [Atlas Guide](atlas-guide.md#two-linkage-layers) for the distinction.
+The current relationship table has a different field of view: 3,086 rows match
+public NDB-UFES origin images and 677 do not. All 3,763 rows still have SAB/WSI
+linkage. That does not reduce the atlas WSI count; it describes which rows can
+join to the public NDB-UFES origin metadata used by the earlier fold-design
+pipeline. See [Atlas Guide](atlas-guide.md#two-linkage-layers) for the
+distinction.
 
 The coverage fields in each WSI row are calculated from the recovered coordinate boxes and displayed WSI dimensions. `patch_pair_count` is the theoretical `n × (n - 1) / 2` coordinate-pair count; `similarity_pair_count` records how many rows are present in the validated similarity artifact. See [Atlas Methods](atlas-methods.md#atlas-panel-area-measures) for the denominators and [Metadata Conflict Review](metadata-conflict-review.md) for the separate label-status problem.
 

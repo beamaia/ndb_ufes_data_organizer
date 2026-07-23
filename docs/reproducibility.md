@@ -4,7 +4,9 @@ Documentation/index verified: 19 July 2026. Pipeline artifacts referenced below 
 
 ## Current Thesis Relationship Artifacts
 
-The current thesis/article artifacts include updated relationship CSVs that connect the full P-NDB-UFES patch scope to recovered NDB/SAB linkage where available.
+The current thesis/article artifacts include updated relationship CSVs that
+retain all 3,763 SAB-linked P-NDB-UFES patches and record whether each patch
+also matches a public NDB-UFES origin image.
 
 Current expected outputs:
 
@@ -17,11 +19,12 @@ Current expected outputs:
 | `results/phase3/current_thesis_batches/batch3_virchow_pruned_patch_level.csv` | 3,351 exploratory archive rows |
 | `results/phase3/current_thesis_batches/linkage_scope_summary.csv` | 6 summary rows |
 
-The Phase 1--3 commands below reproduce the SAB-linked matched-subset organizer
-pipeline. The final thesis comparison uses Batch 1 and Batch 2 only; Batch 3 is
-retained for explicitly labelled exploratory compatibility. Check the frozen
-batch files against `results/phase3/current_thesis_batches/artifact_manifest.json`
-and the relationship files above.
+The Phase 1--3 commands below reproduce the 3,086-patch public
+NDB-UFES-matched organizer pipeline. The final thesis comparison uses Batch 1
+and Batch 2 only; Batch 3 is retained for explicitly labelled exploratory
+compatibility. Check the frozen batch files against
+`results/phase3/current_thesis_batches/artifact_manifest.json` and the
+relationship files above.
 
 ## Atlas public index
 
@@ -48,7 +51,9 @@ Before committing or deploying the public export, run the data-free release chec
 uv run python scripts/src/release/validate_atlas_public_index.py
 ```
 
-The atlas layer assigns 3,763 patches to 251 validated WSI IDs. The thesis relationship layer remains separately described as 3,086 metadata-linked rows plus 677 rows with missing metadata linkage.
+The SAB/atlas layer assigns all 3,763 patches to 251 validated WSI IDs. The
+public NDB-UFES matching layer remains separately described as 3,086 matched
+rows plus 677 rows without a public origin match.
 
 ## Canonical experiment release
 

@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "name": "NDB-UFES/SAB public validated-WSI index",
   "format": "csv",
   "privacy_mode": "public_pseudonymous",

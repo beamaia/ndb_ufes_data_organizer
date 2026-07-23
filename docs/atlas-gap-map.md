@@ -10,7 +10,7 @@ PDF.
 
 | Priority | Gap | Evidence | What I need to do next | Status |
 | --- | --- | --- | --- | --- |
-| P1 | **Keep the two linkage layers explicit.** The atlas reports 3,763/3,763 patches assigned to validated WSI IDs; the thesis relationship table reports 3,086 rows with recovered metadata linkage plus 677 missing metadata rows. | `results/phase0/validated_linkage/validated_linkage_summary.json`; `results/phase3/current_thesis_batches/relationship_update_summary.json` | Use “atlas validated WSI linkage” for the pixel-containment/coordinate layer and “thesis relationship metadata linkage” for the batch metadata layer. Do not collapse them into one count. | **Documented — no longer an unexplained contradiction** |
+| P1 | **Keep the two matching layers explicit.** The atlas reports 3,763/3,763 SAB-linked patches assigned to validated WSI IDs; the relationship table reports 3,086 rows matched to public NDB-UFES origin images plus 677 rows without a public NDB-UFES match. | `results/phase0/validated_linkage/validated_linkage_summary.json`; `results/phase3/current_thesis_batches/relationship_update_summary.json` | Use “SAB/atlas validated WSI linkage” for all 3,763 patches and “public NDB-UFES origin matching” for the 3,086/677 split. Do not collapse them into one count. | **Documented — no longer an unexplained contradiction** |
 | P1 | **Set the public/private boundary.** The LAB atlas keeps raw SAB image names and case prefixes. | Comparison of the LAB PDF with the sanitized public PDF | Publish `NDB_UFES_SAB_atlas_public.pdf` at repository root; keep the LAB PDF and editable DOCX ignored; keep the large PDF outside the MkDocs payload. | **Implemented and validated for v1.0.0** |
 | P1 | **Keep atlas provenance machine-readable.** | The phase-0 summary, thesis relationship summary, batch artifact manifest, generator script, public manifest, public schema, methods contract, conflict report, and release facts now exist as separate artifacts. | Regenerate the public assets after each validated phase-0 release and keep the source artifact paths/version recorded. | **Implemented — release maintenance remains** |
 | P1 | **Keep metadata-conflict limits explicit.** The atlas summary flags 1,489 patch rows with metadata conflicts, even though complete NDB-UFES/SAB patch labels agree. | `results/phase0/validated_linkage/validated_linkage_summary.json`; [Metadata Conflict Review](metadata-conflict-review.md); [Atlas Index](atlas-index.md) | Preserve source labels side by side for future derived uses. Do not reinterpret the frozen Experiment 1/2 labels in v1.0.0. | **Release policy frozen; future interpretation remains open** |
@@ -50,7 +50,8 @@ PDF.
 
 - I am not copying the 84.5 MB public PDF into the MkDocs payload.
 - I am not publishing the LAB PDF or editable DOCX source.
-- I am not calling the atlas's 3,763/3,763 linkage the canonical thesis metadata count; it is canonical for the atlas WSI-evidence layer.
+- I am not calling the atlas's 3,763/3,763 SAB linkage the public NDB-UFES
+  origin-match count; it is canonical for the atlas WSI-evidence layer.
 - I am not generating 251 standalone WSI pages when one lightweight index is enough for lookup.
 - I am not treating visual fingerprint similarity or overlap as evidence of diagnostic equivalence.
 

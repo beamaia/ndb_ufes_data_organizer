@@ -115,8 +115,8 @@ The repository currently tracks three related scopes:
 | Item | Count |
 | --- | ---: |
 | Full P-NDB-UFES patch rows used to start the thesis batches | 3,763 |
-| SAB-linked patch rows with recovered metadata/embedding linkage | 3,086 |
-| Thesis rows retained with missing metadata linkage | 677 |
+| Patches matched to public NDB-UFES origins and used in the earlier metadata/embedding analyses | 3,086 |
+| SAB-linked patches without a public NDB-UFES origin match | 677 |
 | Validated WSI groups in the atlas | 251 |
 | Public NDB-UFES + SAB / SAB-only WSI groups | 203 / 48 |
 | Matched origins available for the older fold-design run | 203 |

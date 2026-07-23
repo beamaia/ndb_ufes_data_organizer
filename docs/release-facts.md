@@ -9,12 +9,15 @@ The machine-readable source is the [public release facts JSON](assets/atlas/rele
 | Layer | Current value | What it answers | Authoritative source |
 | --- | ---: | --- | --- |
 | Full P-NDB-UFES thesis starting scope | 3,763 patch rows | Which rows the final experiments start from | [Thesis Experiment Design](thesis-experiment-batches.md) |
-| SAB-linked relationship scope | 3,086 linked + 677 missing-linkage rows | Which rows have recovered metadata linkage for the thesis relationship layer | [Data Dictionary](data-dictionary.md#current-thesis-linkage-counts) |
+| Public NDB-UFES origin matching | 3,086 matched + 677 without a public match | Which SAB-linked rows can also join to a public NDB-UFES origin image | [Data Dictionary](data-dictionary.md#current-ndb-ufes-match-counts) |
 | Atlas validated-WSI scope | 251 validated WSIs covering 3,763 patches | Where the atlas places patches using recovered WSI evidence | [Atlas Index](atlas-index.md) |
 | Atlas source roles | 203 public NDB-UFES + SAB / 48 SAB-only | What kind of source evidence supports each validated WSI | [Atlas Guide](atlas-guide.md#atlas-snapshot) |
 | Atlas metadata-conflict cohort | 1,489 patch rows | Which atlas rows require metadata caution | [Metadata Conflict Review](metadata-conflict-review.md) |
 
-The practical rule is simple: **3,763** is the full thesis starting scope, **3,086/677** describes thesis metadata linkage, and **251** describes the atlas WSI layer. I do not use one of these numbers as a substitute for another.
+The practical rule is simple: **3,763** is the complete SAB-linked thesis
+starting scope, **3,086/677** describes the presence or absence of a public
+NDB-UFES origin match, and **251** describes the atlas WSI layer. I do not use
+one of these numbers as a substitute for another.
 
 ## Current thesis batches
 
@@ -60,7 +63,3 @@ uv run python scripts/src/release/build_canonical_experiment_release.py
 uv run python scripts/src/release/generate_research_ready_tables.py --profile public
 uv run --extra docs python -m mkdocs build --strict
 ```
-
-The public site only needs the committed files under `docs/assets/atlas/`; it
-does not load the root-level public PDF. The LAB PDF, editable DOCX, and
-private SAB crosswalk are not public release inputs.

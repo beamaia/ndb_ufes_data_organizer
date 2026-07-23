@@ -6,11 +6,14 @@ Documentation/index verified: 23 July 2026. Pipeline artifacts referenced below 
 
 The phase-0 validated-linkage output assigns all 3,763 patch rows to 251 validated WSI IDs and recovers coordinates for all 3,763 rows. The inventory contains 203 public NDB-UFES + SAB WSI groups and 48 SAB-only recovered WSI groups. Patch labels agree across the complete NDB-UFES and SAB patch sources for all 3,763 rows; 1,489 rows still carry a metadata-conflict flag and should be interpreted with the [Metadata Conflict Review](metadata-conflict-review.md) and [Atlas Guide](atlas-guide.md).
 
-The public-pseudonymous [Atlas Index](atlas-index.md) and [Atlas Manifest](assets/atlas/atlas_manifest.json) are generated from the phase-0 inventory. This atlas linkage layer is distinct from the thesis relationship metadata layer below, which contains 3,086 metadata-linked rows and 677 rows without recovered metadata linkage.
+The public-pseudonymous [Atlas Index](atlas-index.md) and [Atlas Manifest](assets/atlas/atlas_manifest.json) are generated from the phase-0 inventory. This atlas linkage layer covers all 3,763 SAB-linked patches. The separate public NDB-UFES matching layer contains 3,086 rows matched to public origin images and 677 rows without a public NDB-UFES origin match.
 
 ## Current Thesis Linkage And Experiment Status
 
-The current thesis/article artifacts update the relationship between P-NDB-UFES patches and NDB/SAB images. The patch-level relationship file now contains all 3,763 P-NDB-UFES patch rows. Of these, 3,086 rows have recovered NDB/SAB linkage and 677 rows are retained with missing linkage metadata.
+The current thesis/article artifacts update the relationship between
+P-NDB-UFES patches, SAB images, and public NDB-UFES origins. The patch-level
+relationship file contains all 3,763 SAB-linked P-NDB-UFES patch rows. Of
+these, 3,086 match public NDB-UFES origin images; the remaining 677 do not.
 
 Current files:
 
@@ -31,7 +34,10 @@ The six canonical parent runs and 30 child folds have been validated. See
 [Canonical Experiment Results](experiment-results.md) and the
 [machine-readable manifest](assets/experiments/canonical_run_manifest.json).
 
-The Phase 1--3 sections below describe the 3,086-patch SAB-linked organizer run used for linkage and embedding work. They are still part of the project history, but should be read together with the current full-scope relationship files above.
+The Phase 1--3 sections below describe the 3,086-patch public
+NDB-UFES-matched organizer run used for the earlier embedding and fold-design
+work. They are still part of the project history, but should be read together
+with the current full-scope relationship files above.
 
 ## Phase 0: Data Checks
 
