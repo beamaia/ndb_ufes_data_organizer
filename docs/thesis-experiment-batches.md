@@ -9,7 +9,7 @@ P-NDB-UFES patches:
    It is the historical reference and retains known origin and patient/case
    overlap across folds.
 2. **Experiment 2 / Batch 2** uses a patient-first grouped,
-   lower-contamination-risk split. Linked WSI, patient/case groups, and their
+   lower-contamination-risk split. Linked source-image and patient/case groups, and their
    patches remain in one fold.
 
 The completed comparison uses MobileNetV2, DenseNet-121, and ResNet-50. See
@@ -69,7 +69,7 @@ The atlas and relationship metadata answer different questions:
 
 | Layer | Scope | Meaning |
 | --- | --- | --- |
-| SAB/atlas validated-WSI linkage | 3,763 patches, 251 WSI groups | SAB and coordinate/pixel evidence place every patch in a validated WSI context. |
+| SAB/atlas source-image linkage | 3,763 patches, 251 source-image groups | SAB and coordinate/pixel evidence place every patch on a linked source image. |
 | Public NDB-UFES origin matching | 3,086 matched rows + 677 rows without a public match | Records whether each SAB-linked patch can also join to a public NDB-UFES origin image and its metadata. |
 
 Rows without a public NDB-UFES origin match are retained. They receive unique
@@ -106,7 +106,7 @@ claims.
 ## Public Reuse
 
 The v1.0.0 public bundle contains two deidentified assignment tables with
-public patch IDs, public origin/group/WSI pseudonyms, repository-relative image
+public patch IDs, public origin/group/source-image pseudonyms, repository-relative image
 paths, fold roles, metadata status/provenance, and approved deidentified
 clinical fields. It excludes direct patient/lesion identifiers, SAB case
 prefixes, private crosswalks, local paths, checkpoints, and raw MLflow storage.

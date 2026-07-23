@@ -202,51 +202,51 @@ public_ndb_wsi_0213,both,17,136,136,17,47,68.3913548787435,61.45822778220382,42.
 public_ndb_wsi_0214,both,16,120,120,16,43,62.61603037516276,68.34429084189205,42.7944819132487,oscc,oscc,214,214.0,0,16,0,0,"{""validated_exact_with_metadata_conflict"": 16}",0,16
 public_ndb_wsi_0215,both,9,36,36,9,20,38.0531628926595,52.48615553749262,19.972642262776695,with_dysplasia,oscc,215,215.0,8,1,0,0,"{""validated_exact_with_metadata_conflict"": 9}",0,9
 public_ndb_wsi_0216,both,15,105,105,15,35,62.171173095703125,54.79788683135147,34.06848907470703,with_dysplasia,oscc,216,216.0,15,0,0,0,"{""validated_exact_with_metadata_conflict"": 15}",0,15
-sab_only_wsi_0001,SAB-only recovered WSI,15,105,105,15,38,63.62457275390625,59.779530501794696,38.03447087605794,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
-sab_only_wsi_0009,SAB-only recovered WSI,20,190,190,20,97,50.75162251790365,74.15960333427705,37.637201944986984,,without_dysplasia,41,,14,6,0,0,"{""validated_exact_sab_only"": 6, ""validated_exact_with_metadata_conflict"": 14}",0,14
-sab_only_wsi_0010,SAB-only recovered WSI,5,10,10,5,5,27.634112040201824,43.6105621343297,12.0513916015625,,without_dysplasia,,,5,0,0,0,"{""validated_exact_with_metadata_conflict"": 5}",0,5
-sab_only_wsi_0013,SAB-only recovered WSI,13,78,78,13,27,64.0008290608724,56.8841976226002,36.40635808308919,,without_dysplasia,,,6,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 6}",0,6
-sab_only_wsi_0015,SAB-only recovered WSI,14,91,91,14,62,44.54660415649414,72.46093847564609,32.27888743082683,,without_dysplasia,,,0,10,4,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0016,SAB-only recovered WSI,3,3,3,3,3,19.218762715657554,29.359213986800537,5.642477671305338,,without_dysplasia,,,3,0,0,0,"{""validated_exact_with_metadata_conflict"": 3}",0,3
-sab_only_wsi_0021,SAB-only recovered WSI,14,91,91,14,59,49.73700841267903,56.94810976159265,28.324286142985027,,without_dysplasia,,,0,5,9,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0023,SAB-only recovered WSI,16,120,120,16,59,61.68661117553711,58.47081128352434,36.068662007649735,,without_dysplasia,,,9,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 9}",0,9
-sab_only_wsi_0027,SAB-only recovered WSI,20,190,190,20,69,67.41425196329752,71.87439435385721,48.45358530680339,,without_dysplasia,,,0,11,9,0,"{""validated_exact_sab_only"": 20}",0,0
-sab_only_wsi_0028,SAB-only recovered WSI,20,190,190,20,73,79.2759895324707,61.20373388959129,48.519865671793625,,without_dysplasia,,,17,3,0,0,"{""validated_exact_sab_only"": 3, ""validated_exact_with_metadata_conflict"": 17}",0,17
-sab_only_wsi_0041,SAB-only recovered WSI,1,0,0,0,0,8.333333333333332,0.0,0.0,,broad_leukoplakia_unknown_dysplasia,,,0,1,0,0,"{""validated_exact_sab_only"": 1}",0,0
-sab_only_wsi_0042,SAB-only recovered WSI,6,15,15,6,15,21.68382008870443,68.23771393051601,14.79654312133789,,without_dysplasia,,,0,2,4,0,"{""validated_exact_sab_only"": 6}",0,0
-sab_only_wsi_0045,SAB-only recovered WSI,19,171,171,19,75,56.68493906656901,78.09690021164745,44.26918029785156,,without_dysplasia,,,0,6,13,0,"{""validated_exact_sab_only"": 19}",0,0
-sab_only_wsi_0049,SAB-only recovered WSI,7,21,21,7,11,37.65554428100586,42.36552386114115,15.95296859741211,,without_dysplasia,,,0,7,0,0,"{""validated_exact_sab_only"": 7}",0,0
-sab_only_wsi_0051,SAB-only recovered WSI,17,136,136,17,65,58.83404413859049,69.53930792718015,40.91278711954753,,without_dysplasia,,,0,17,0,0,"{""validated_exact_sab_only"": 17}",0,0
-sab_only_wsi_0066,SAB-only recovered WSI,15,105,105,15,67,49.89846547444661,64.18157956767983,32.0256233215332,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
-sab_only_wsi_0067,SAB-only recovered WSI,19,171,171,19,71,63.47376505533854,67.31536646246428,42.727597554524735,,without_dysplasia,,,10,9,0,0,"{""validated_exact_sab_only"": 9, ""validated_exact_with_metadata_conflict"": 10}",0,10
-sab_only_wsi_0070,SAB-only recovered WSI,16,120,120,16,60,50.109004974365234,73.49610763988674,36.82816823323567,,without_dysplasia,,,0,16,0,0,"{""validated_exact_sab_only"": 16}",0,0
-sab_only_wsi_0071,SAB-only recovered WSI,14,91,91,14,35,53.114732106526695,61.9827093476654,32.92195002237956,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0084,SAB-only recovered WSI,14,91,91,14,43,51.49259567260742,70.16292581198988,36.12871170043945,,without_dysplasia,,,0,12,2,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0087,SAB-only recovered WSI,19,171,171,19,88,60.161844889322914,68.50746726072217,41.215356190999344,,without_dysplasia,,,0,15,4,0,"{""validated_exact_sab_only"": 19}",0,0
-sab_only_wsi_0095,SAB-only recovered WSI,13,78,78,13,35,51.29896799723307,66.33263639552192,34.027957916259766,,without_dysplasia,,,0,11,2,0,"{""validated_exact_sab_only"": 13}",0,0
-sab_only_wsi_0096,SAB-only recovered WSI,12,66,66,12,40,39.12391662597656,67.43279609208179,26.38235092163086,,without_dysplasia,,,0,12,0,0,"{""validated_exact_sab_only"": 12}",0,0
-sab_only_wsi_0110,SAB-only recovered WSI,9,36,36,9,26,36.899471282958984,48.94805717303449,18.06157430013021,,without_dysplasia,,,0,9,0,0,"{""validated_exact_sab_only"": 9}",0,0
-sab_only_wsi_0127,SAB-only recovered WSI,14,91,91,14,43,54.17366027832031,67.27617659416157,36.44596735636394,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0128,SAB-only recovered WSI,17,136,136,17,61,67.48199462890625,57.800122479743735,39.004675547281906,,without_dysplasia,,,0,17,0,0,"{""validated_exact_sab_only"": 17}",0,0
-sab_only_wsi_0131,SAB-only recovered WSI,20,190,190,20,63,66.98919932047525,81.25186850649506,54.42997614542643,,without_dysplasia,,,12,8,0,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
-sab_only_wsi_0133,SAB-only recovered WSI,14,91,91,14,56,45.72941462198894,64.94293104802634,29.698022206624348,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
-sab_only_wsi_0159,SAB-only recovered WSI,17,136,136,17,57,62.75812784830729,56.104903251950155,35.210386912028,,without_dysplasia,,,3,13,1,0,"{""validated_exact_sab_only"": 14, ""validated_exact_with_metadata_conflict"": 3}",0,3
-sab_only_wsi_0161,SAB-only recovered WSI,19,171,171,19,92,55.80094655354818,68.61479161373313,38.28770319620769,,without_dysplasia,,,2,17,0,0,"{""validated_exact_sab_only"": 17, ""validated_exact_with_metadata_conflict"": 2}",0,2
-sab_only_wsi_0167,SAB-only recovered WSI,13,78,78,13,41,47.11170196533203,61.08423312726129,28.777821858723957,,without_dysplasia,,,0,13,0,0,"{""validated_exact_sab_only"": 13}",0,0
-sab_only_wsi_0170,SAB-only recovered WSI,1,0,0,0,0,8.333333333333332,0.0,0.0,,without_dysplasia,,,0,1,0,0,"{""validated_exact_sab_only"": 1}",0,0
-sab_only_wsi_0193,SAB-only recovered WSI,15,105,105,15,59,48.93563588460286,68.66002070960944,33.59921773274739,,without_dysplasia,,,0,14,1,0,"{""validated_exact_sab_only"": 15}",0,0
-sab_only_wsi_0194,SAB-only recovered WSI,19,171,171,19,66,67.34491984049478,64.3768102533505,43.35451126098633,,without_dysplasia,,,12,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 12}",0,12
-sab_only_wsi_0196,SAB-only recovered WSI,12,66,66,12,49,40.424378712972,65.31536809524071,26.403331756591797,,oscc,,,12,0,0,0,"{""validated_exact_sab_only"": 12}",0,0
-sab_only_wsi_0200,SAB-only recovered WSI,18,153,153,18,61,62.656943003336586,63.79478208457867,39.971860249837235,,without_dysplasia,,,0,12,6,0,"{""validated_exact_sab_only"": 18}",0,0
-sab_only_wsi_0201,SAB-only recovered WSI,15,105,105,15,58,47.821299235026046,69.06638711770306,33.02844365437825,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
-sab_only_wsi_0202,SAB-only recovered WSI,20,190,190,20,66,71.71363830566406,64.44455378657716,46.21553421020508,,oscc,,,0,20,0,0,"{""validated_exact_sab_only"": 20}",0,0
-sab_only_wsi_0203,SAB-only recovered WSI,10,45,45,10,25,42.42652257283528,47.50180388019688,20.15336354573568,,without_dysplasia,,,0,10,0,0,"{""validated_exact_sab_only"": 10}",0,0
-sab_only_wsi_0204,SAB-only recovered WSI,11,55,55,11,25,49.59077835083008,57.95027022591797,28.73799006144206,,oscc,,,11,0,0,0,"{""validated_exact_sab_only"": 11}",0,0
-sab_only_wsi_0205,SAB-only recovered WSI,10,45,45,10,23,41.155211130778,64.60342754035706,26.587677001953125,,without_dysplasia,,,0,10,0,0,"{""validated_exact_sab_only"": 10}",0,0
-sab_only_wsi_0206,SAB-only recovered WSI,5,10,10,5,4,35.418446858723954,17.64114568000517,6.248219807942709,,oscc,,,3,0,2,0,"{""validated_exact_sab_only"": 5}",0,0
-sab_only_wsi_0207,SAB-only recovered WSI,8,28,28,6,12,41.709963480631515,38.91631773014186,16.231981913248696,,oscc,,,0,0,8,0,"{""validated_exact_sab_only"": 8}",0,0
-sab_only_wsi_0208,SAB-only recovered WSI,6,15,15,6,10,29.018529256184895,43.80211733877859,12.7107302347819,,without_dysplasia,,,0,1,5,0,"{""validated_exact_sab_only"": 6}",0,0
-sab_only_wsi_0209,SAB-only recovered WSI,9,36,36,9,34,32.2567621866862,64.67266509643149,20.861307779947914,,without_dysplasia,,,0,0,9,0,"{""validated_exact_sab_only"": 9}",0,0
-sab_only_wsi_0241,SAB-only recovered WSI,18,153,153,18,49,69.0510114034017,63.66961504163834,43.96451314290364,,without_dysplasia,,,0,16,2,0,"{""validated_exact_sab_only"": 18}",0,0
-sab_only_wsi_0242,SAB-only recovered WSI,20,190,190,20,78,63.81451288859049,65.00034123215194,41.479651133219406,,without_dysplasia,,,9,11,0,0,"{""validated_exact_sab_only"": 11, ""validated_exact_with_metadata_conflict"": 9}",0,9
-sab_only_wsi_0247,SAB-only recovered WSI,20,190,190,20,81,64.2435391743978,74.10638781113815,47.60856628417969,,without_dysplasia,,,12,8,0,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0001,SAB-only recovered source image,15,105,105,15,38,63.62457275390625,59.779530501794696,38.03447087605794,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0009,SAB-only recovered source image,20,190,190,20,97,50.75162251790365,74.15960333427705,37.637201944986984,,without_dysplasia,41,,14,6,0,0,"{""validated_exact_sab_only"": 6, ""validated_exact_with_metadata_conflict"": 14}",0,14
+sab_only_wsi_0010,SAB-only recovered source image,5,10,10,5,5,27.634112040201824,43.6105621343297,12.0513916015625,,without_dysplasia,,,5,0,0,0,"{""validated_exact_with_metadata_conflict"": 5}",0,5
+sab_only_wsi_0013,SAB-only recovered source image,13,78,78,13,27,64.0008290608724,56.8841976226002,36.40635808308919,,without_dysplasia,,,6,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 6}",0,6
+sab_only_wsi_0015,SAB-only recovered source image,14,91,91,14,62,44.54660415649414,72.46093847564609,32.27888743082683,,without_dysplasia,,,0,10,4,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0016,SAB-only recovered source image,3,3,3,3,3,19.218762715657554,29.359213986800537,5.642477671305338,,without_dysplasia,,,3,0,0,0,"{""validated_exact_with_metadata_conflict"": 3}",0,3
+sab_only_wsi_0021,SAB-only recovered source image,14,91,91,14,59,49.73700841267903,56.94810976159265,28.324286142985027,,without_dysplasia,,,0,5,9,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0023,SAB-only recovered source image,16,120,120,16,59,61.68661117553711,58.47081128352434,36.068662007649735,,without_dysplasia,,,9,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 9}",0,9
+sab_only_wsi_0027,SAB-only recovered source image,20,190,190,20,69,67.41425196329752,71.87439435385721,48.45358530680339,,without_dysplasia,,,0,11,9,0,"{""validated_exact_sab_only"": 20}",0,0
+sab_only_wsi_0028,SAB-only recovered source image,20,190,190,20,73,79.2759895324707,61.20373388959129,48.519865671793625,,without_dysplasia,,,17,3,0,0,"{""validated_exact_sab_only"": 3, ""validated_exact_with_metadata_conflict"": 17}",0,17
+sab_only_wsi_0041,SAB-only recovered source image,1,0,0,0,0,8.333333333333332,0.0,0.0,,broad_leukoplakia_unknown_dysplasia,,,0,1,0,0,"{""validated_exact_sab_only"": 1}",0,0
+sab_only_wsi_0042,SAB-only recovered source image,6,15,15,6,15,21.68382008870443,68.23771393051601,14.79654312133789,,without_dysplasia,,,0,2,4,0,"{""validated_exact_sab_only"": 6}",0,0
+sab_only_wsi_0045,SAB-only recovered source image,19,171,171,19,75,56.68493906656901,78.09690021164745,44.26918029785156,,without_dysplasia,,,0,6,13,0,"{""validated_exact_sab_only"": 19}",0,0
+sab_only_wsi_0049,SAB-only recovered source image,7,21,21,7,11,37.65554428100586,42.36552386114115,15.95296859741211,,without_dysplasia,,,0,7,0,0,"{""validated_exact_sab_only"": 7}",0,0
+sab_only_wsi_0051,SAB-only recovered source image,17,136,136,17,65,58.83404413859049,69.53930792718015,40.91278711954753,,without_dysplasia,,,0,17,0,0,"{""validated_exact_sab_only"": 17}",0,0
+sab_only_wsi_0066,SAB-only recovered source image,15,105,105,15,67,49.89846547444661,64.18157956767983,32.0256233215332,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0067,SAB-only recovered source image,19,171,171,19,71,63.47376505533854,67.31536646246428,42.727597554524735,,without_dysplasia,,,10,9,0,0,"{""validated_exact_sab_only"": 9, ""validated_exact_with_metadata_conflict"": 10}",0,10
+sab_only_wsi_0070,SAB-only recovered source image,16,120,120,16,60,50.109004974365234,73.49610763988674,36.82816823323567,,without_dysplasia,,,0,16,0,0,"{""validated_exact_sab_only"": 16}",0,0
+sab_only_wsi_0071,SAB-only recovered source image,14,91,91,14,35,53.114732106526695,61.9827093476654,32.92195002237956,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0084,SAB-only recovered source image,14,91,91,14,43,51.49259567260742,70.16292581198988,36.12871170043945,,without_dysplasia,,,0,12,2,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0087,SAB-only recovered source image,19,171,171,19,88,60.161844889322914,68.50746726072217,41.215356190999344,,without_dysplasia,,,0,15,4,0,"{""validated_exact_sab_only"": 19}",0,0
+sab_only_wsi_0095,SAB-only recovered source image,13,78,78,13,35,51.29896799723307,66.33263639552192,34.027957916259766,,without_dysplasia,,,0,11,2,0,"{""validated_exact_sab_only"": 13}",0,0
+sab_only_wsi_0096,SAB-only recovered source image,12,66,66,12,40,39.12391662597656,67.43279609208179,26.38235092163086,,without_dysplasia,,,0,12,0,0,"{""validated_exact_sab_only"": 12}",0,0
+sab_only_wsi_0110,SAB-only recovered source image,9,36,36,9,26,36.899471282958984,48.94805717303449,18.06157430013021,,without_dysplasia,,,0,9,0,0,"{""validated_exact_sab_only"": 9}",0,0
+sab_only_wsi_0127,SAB-only recovered source image,14,91,91,14,43,54.17366027832031,67.27617659416157,36.44596735636394,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0128,SAB-only recovered source image,17,136,136,17,61,67.48199462890625,57.800122479743735,39.004675547281906,,without_dysplasia,,,0,17,0,0,"{""validated_exact_sab_only"": 17}",0,0
+sab_only_wsi_0131,SAB-only recovered source image,20,190,190,20,63,66.98919932047525,81.25186850649506,54.42997614542643,,without_dysplasia,,,12,8,0,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0133,SAB-only recovered source image,14,91,91,14,56,45.72941462198894,64.94293104802634,29.698022206624348,,without_dysplasia,,,0,14,0,0,"{""validated_exact_sab_only"": 14}",0,0
+sab_only_wsi_0159,SAB-only recovered source image,17,136,136,17,57,62.75812784830729,56.104903251950155,35.210386912028,,without_dysplasia,,,3,13,1,0,"{""validated_exact_sab_only"": 14, ""validated_exact_with_metadata_conflict"": 3}",0,3
+sab_only_wsi_0161,SAB-only recovered source image,19,171,171,19,92,55.80094655354818,68.61479161373313,38.28770319620769,,without_dysplasia,,,2,17,0,0,"{""validated_exact_sab_only"": 17, ""validated_exact_with_metadata_conflict"": 2}",0,2
+sab_only_wsi_0167,SAB-only recovered source image,13,78,78,13,41,47.11170196533203,61.08423312726129,28.777821858723957,,without_dysplasia,,,0,13,0,0,"{""validated_exact_sab_only"": 13}",0,0
+sab_only_wsi_0170,SAB-only recovered source image,1,0,0,0,0,8.333333333333332,0.0,0.0,,without_dysplasia,,,0,1,0,0,"{""validated_exact_sab_only"": 1}",0,0
+sab_only_wsi_0193,SAB-only recovered source image,15,105,105,15,59,48.93563588460286,68.66002070960944,33.59921773274739,,without_dysplasia,,,0,14,1,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0194,SAB-only recovered source image,19,171,171,19,66,67.34491984049478,64.3768102533505,43.35451126098633,,without_dysplasia,,,12,7,0,0,"{""validated_exact_sab_only"": 7, ""validated_exact_with_metadata_conflict"": 12}",0,12
+sab_only_wsi_0196,SAB-only recovered source image,12,66,66,12,49,40.424378712972,65.31536809524071,26.403331756591797,,oscc,,,12,0,0,0,"{""validated_exact_sab_only"": 12}",0,0
+sab_only_wsi_0200,SAB-only recovered source image,18,153,153,18,61,62.656943003336586,63.79478208457867,39.971860249837235,,without_dysplasia,,,0,12,6,0,"{""validated_exact_sab_only"": 18}",0,0
+sab_only_wsi_0201,SAB-only recovered source image,15,105,105,15,58,47.821299235026046,69.06638711770306,33.02844365437825,,without_dysplasia,,,0,15,0,0,"{""validated_exact_sab_only"": 15}",0,0
+sab_only_wsi_0202,SAB-only recovered source image,20,190,190,20,66,71.71363830566406,64.44455378657716,46.21553421020508,,oscc,,,0,20,0,0,"{""validated_exact_sab_only"": 20}",0,0
+sab_only_wsi_0203,SAB-only recovered source image,10,45,45,10,25,42.42652257283528,47.50180388019688,20.15336354573568,,without_dysplasia,,,0,10,0,0,"{""validated_exact_sab_only"": 10}",0,0
+sab_only_wsi_0204,SAB-only recovered source image,11,55,55,11,25,49.59077835083008,57.95027022591797,28.73799006144206,,oscc,,,11,0,0,0,"{""validated_exact_sab_only"": 11}",0,0
+sab_only_wsi_0205,SAB-only recovered source image,10,45,45,10,23,41.155211130778,64.60342754035706,26.587677001953125,,without_dysplasia,,,0,10,0,0,"{""validated_exact_sab_only"": 10}",0,0
+sab_only_wsi_0206,SAB-only recovered source image,5,10,10,5,4,35.418446858723954,17.64114568000517,6.248219807942709,,oscc,,,3,0,2,0,"{""validated_exact_sab_only"": 5}",0,0
+sab_only_wsi_0207,SAB-only recovered source image,8,28,28,6,12,41.709963480631515,38.91631773014186,16.231981913248696,,oscc,,,0,0,8,0,"{""validated_exact_sab_only"": 8}",0,0
+sab_only_wsi_0208,SAB-only recovered source image,6,15,15,6,10,29.018529256184895,43.80211733877859,12.7107302347819,,without_dysplasia,,,0,1,5,0,"{""validated_exact_sab_only"": 6}",0,0
+sab_only_wsi_0209,SAB-only recovered source image,9,36,36,9,34,32.2567621866862,64.67266509643149,20.861307779947914,,without_dysplasia,,,0,0,9,0,"{""validated_exact_sab_only"": 9}",0,0
+sab_only_wsi_0241,SAB-only recovered source image,18,153,153,18,49,69.0510114034017,63.66961504163834,43.96451314290364,,without_dysplasia,,,0,16,2,0,"{""validated_exact_sab_only"": 18}",0,0
+sab_only_wsi_0242,SAB-only recovered source image,20,190,190,20,78,63.81451288859049,65.00034123215194,41.479651133219406,,without_dysplasia,,,9,11,0,0,"{""validated_exact_sab_only"": 11, ""validated_exact_with_metadata_conflict"": 9}",0,9
+sab_only_wsi_0247,SAB-only recovered source image,20,190,190,20,81,64.2435391743978,74.10638781113815,47.60856628417969,,without_dysplasia,,,12,8,0,0,"{""validated_exact_sab_only"": 8, ""validated_exact_with_metadata_conflict"": 12}",0,12

@@ -32,7 +32,7 @@ The atlas-facing public index is derived from the phase-0 validated-linkage inve
 
 | File | Expected rows | Role |
 | --- | ---: | --- |
-| `docs/assets/atlas/validated_wsi_index.csv` | 251 | Public-pseudonymous WSI lookup table. |
+| `docs/assets/atlas/validated_wsi_index.csv` | 251 | Public-pseudonymous source-image lookup table. |
 | `docs/assets/atlas/atlas_manifest.json` | 1 | Scope, source, privacy, and excluded-field manifest. |
 | `docs/assets/atlas/atlas_schema.json` | 1 | Versioned public-index field contract. |
 | `docs/assets/atlas/metadata_conflict_summary.json` | 1 | Aggregate metadata-conflict review report. |
@@ -51,7 +51,7 @@ Before committing or deploying the public export, run the data-free release chec
 uv run python scripts/src/release/validate_atlas_public_index.py
 ```
 
-The SAB/atlas layer assigns all 3,763 patches to 251 validated WSI IDs. The
+The SAB/atlas layer assigns all 3,763 patches to 251 source-image groups. The
 public NDB-UFES matching layer remains separately described as 3,086 matched
 rows plus 677 rows without a public origin match.
 

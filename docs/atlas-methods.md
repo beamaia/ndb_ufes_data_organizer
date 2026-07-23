@@ -1,10 +1,13 @@
 # Atlas Methods
 
-This is the implementation-level companion to the [Atlas Guide](atlas-guide.md). I keep it separate because the atlas is easier to read when its purpose and its formulas are not mixed together. The page records what the current code actually computes, which thresholds are exploratory review thresholds, and what still needs to be frozen before I call the atlas method contract complete.
+This implementation-level companion to the [Atlas Guide](atlas-guide.md)
+records the calculations used by the atlas, the exploratory review thresholds,
+and the remaining method-contract limitations.
 
 ## Scope and source code
 
-The methods apply to recovered patch coordinates and same-validated-WSI patch pairs. The current implementation is split across:
+The methods apply to recovered patch coordinates and patch pairs assigned to
+the same source image. The current implementation is split across:
 
 ```text
 scripts/src/phase0/sab_patch_coordinate_recovery.py
@@ -12,11 +15,17 @@ scripts/src/phase0/dataset_alignment_report.py
 scripts/src/phase0/validated_linkage.py
 ```
 
-The compact [methods contract (JSON)](assets/atlas/atlas_methods.json) is generated beside the public WSI index, manifest, schema, and conflict report. The public WSI index now carries the coordinate-derived area and overlap fields for each validated WSI, while keeping theoretical coordinate-pair counts separate from available similarity rows.
+The compact [methods contract (JSON)](assets/atlas/atlas_methods.json) is
+generated beside the public source-image index, manifest, schema, and conflict
+report. The index carries coordinate-derived area and overlap fields for each
+source-image group while keeping theoretical coordinate-pair counts separate
+from available similarity rows.
 
 ## Coordinate recovery
 
-I recover a patch location by searching for the patch inside its candidate SAB WSI image with OpenCV `TM_SQDIFF_NORMED` after grayscale conversion. When the images have the same dimensions, the candidate location is `(0, 0)`.
+A patch location is recovered by searching for the patch inside its candidate
+SAB source image with OpenCV `TM_SQDIFF_NORMED` after grayscale conversion.
+When the images have the same dimensions, the candidate location is `(0, 0)`.
 
 | Result | Implemented rule | Meaning |
 | --- | --- | --- |
@@ -26,9 +35,10 @@ I recover a patch location by searching for the patch inside its candidate SAB W
 
 The current atlas summary reports exact recovered coordinates for all 3,763 represented patches. A coordinate match supports placement evidence; it does not establish a diagnosis or clinical representativeness.
 
-## Same-WSI pair measurements
+## Same-source-image pair measurements
 
-For a validated WSI with `n` patches, I compare each unordered pair once: `n × (n − 1) / 2` pairs.
+For a source image with `n` patches, each unordered pair is compared once:
+`n × (n − 1) / 2` pairs.
 
 | Measure | Implemented calculation | Reading rule |
 | --- | --- | --- |
@@ -47,7 +57,9 @@ The readable `pair_relation` field is derived in this order:
 3. If coordinates are spatially distinct and the feature rule passes, use `feature_similar_without_spatial_overlap`.
 4. Otherwise retain `spatially_overlapping` when IoU is positive, or `spatially_distinct` when IoU is zero.
 
-This is a review vocabulary. It helps me describe repeated or similar image content; it does not prove that two patches are duplicates, that they came from the same tissue event, or that they are diagnostically equivalent.
+This review vocabulary describes repeated or similar image content. It does not
+prove that two patches are duplicates, that they came from the same tissue
+event, or that they are diagnostically equivalent.
 
 ## Atlas-panel area measures
 
@@ -55,13 +67,17 @@ The atlas definitions and a coordinate fixture cross-check establish these denom
 
 | Measure | Formula |
 | --- | --- |
-| Mapped image area | `area(union of all clipped patch boxes) / area(displayed WSI image)` |
+| Mapped image area | `area(union of all clipped patch boxes) / area(displayed source image)` |
 | Repeated sampled area | `area(pixels covered by at least two patch boxes) / area(union of all clipped patch boxes)` |
-| Repeated full WSI image area | `area(pixels covered by at least two patch boxes) / area(displayed WSI image)` |
+| Repeated full-image area | `area(pixels covered by at least two patch boxes) / area(displayed source image)` |
 
-The reusable helper in `scripts/src/release/atlas_methods.py` and its fixture test cover these denominators. As a sanity check, the 15-patch atlas panel for the corresponding WSI reproduces approximately 63.6% mapped area, 59.8% repeated sampled area, and 38.0% repeated full-WSI area from the recovered coordinates.
+The reusable helper in `scripts/src/release/atlas_methods.py` and its fixture
+cross-check cover these denominators. The 15-patch atlas panel for the
+corresponding source image reproduces approximately 63.6% mapped area, 59.8%
+repeated sampled area, and 38.0% repeated full-image area from the recovered
+coordinates.
 
-## Still missing before I freeze the atlas methods
+## Remaining method-contract work
 
 The formulas are now explicit, but the original atlas panel
 renderer/configuration is not yet connected to this helper. The next methods
@@ -73,30 +89,29 @@ update should therefore add:
 
 ## Renderer provenance review
 
-I checked the ignored editable source used to export
-`NDB_UFES_SAB_atlas_public.pdf`. Its package metadata says `python-docx`
+The ignored editable source used to export
+`NDB_UFES_SAB_atlas_public.pdf` was inspected. Its package metadata says `python-docx`
 generated the document and Microsoft Word last handled it, but it contains no
 custom properties, external relationships, generator reference, or
 source-script path. The available repository builder at
-`scripts/src/reports/build_validated_linkage_factsheet_docx.py` renders WSI
+`scripts/src/reports/build_validated_linkage_factsheet_docx.py` renders source-image
 context images and patch thumbnails, but it does not calculate the three area
 measures.
 
-That means I can verify the denominators and cross-check values against
-recovered coordinates, but I cannot yet claim that the root-level 587-page
-public PDF can be regenerated byte-for-byte from this repository. Its privacy
-and release scope are independently checked by
+The denominators and values can be checked against recovered coordinates, but
+the root-level 587-page public PDF cannot be regenerated byte-for-byte from
+this repository. Its privacy and release scope are independently checked by
 `scripts/src/release/validate_public_atlas_pdf.py`.
 
-## Reproducibility boundary I can defend today
+## Current reproducibility boundary
 
 The current release has a reproducible machine-readable atlas layer:
 
 - the public CSV, manifest, schema, conflict summary, and methods contract are generated and validated together;
-- the area denominators are implemented in a reusable helper and covered by fixture tests;
+- the area denominators are implemented in a reusable helper and checked with a fixture;
 - the 15-patch coordinate cross-check reproduces the atlas values to the documented rounding;
-- the root-level public PDF is checked for its 251 WSI pseudonyms, 64
-  patient/case groups, size limit, and forbidden private content.
+- the root-level public PDF is checked for its 251 retained source-image
+  pseudonyms, 64 case groups, size limit, and forbidden private content.
 
 The public PDF remains a reviewed evidence snapshot, not a byte-for-byte
 reproducible build product. Until the original renderer is recovered or

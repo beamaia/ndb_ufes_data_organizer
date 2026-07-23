@@ -1,12 +1,15 @@
 # NDB-UFES Data Organizer
 
-Repository for organizing the public NDB-UFES oral histopathology dataset into leakage-safe cross-validation folds, with a patient-first WSI atlas, data dictionary, factsheet, reproducibility notes, and validation guidance for public reuse.
+Repository for organizing the public NDB-UFES oral histopathology dataset into
+leakage-safe cross-validation folds, with a patch-to-source-image atlas, data
+dictionary, factsheet, reproducibility notes, and validation guidance for
+public reuse.
 
 This repository is a data organizer. It is not a downstream model-training repository.
 
 ## Purpose
 
-- Create cross-validation folds where patches from the same origin/WSI never cross folds.
+- Create cross-validation folds where patches from the same source image never cross folds.
 - Publish fold assignment files that external users can reuse consistently.
 - Document labels, task fields, demographics/risk factors, missingness, limitations, and leakage-safe usage.
 - Use frozen pretrained embeddings only as an optional morphology-aware fold stratification signal.
@@ -27,13 +30,13 @@ The documentation source lives in `docs/` and is wired through `mkdocs.yml`.
 - `docs/data-dictionary.md`: current CSV schemas, counts, labels, and field notes.
 - `docs/pipeline.md`: phase overview and leakage framing.
 - `docs/reproducibility.md`: commands and expected outputs.
-- `docs/atlas-guide.md`: how to read the patient-first atlas and its two linkage layers.
-- `docs/atlas-index.md`: lightweight public-pseudonymous WSI index and manifest.
+- `docs/atlas-guide.md`: how to read the patch-to-source-image atlas and its two linkage layers.
+- `docs/atlas-index.md`: lightweight public-pseudonymous source-image index and manifest.
 - `docs/release-facts.md`: readable scope snapshot backed by the public release-facts JSON.
 - `docs/thesis-experiment-batches.md`: frozen Experiment 1/2 design and Batch 3 archive boundary.
 - `docs/experiment-results.md`: metrics, fold distributions, execution times, confusion matrices, loss figures, and exploratory statistics.
 - [`NDB_UFES_SAB_atlas_public.pdf`](NDB_UFES_SAB_atlas_public.pdf): the
-  sanitized, root-level 251-WSI atlas release artifact.
+  sanitized, root-level 251-source-image atlas release artifact.
 
 Serve locally with:
 
@@ -117,8 +120,8 @@ The repository currently tracks three related scopes:
 | Full P-NDB-UFES patch rows used to start the thesis batches | 3,763 |
 | Patches matched to public NDB-UFES origins and used in the earlier metadata/embedding analyses | 3,086 |
 | SAB-linked patches without a public NDB-UFES origin match | 677 |
-| Validated WSI groups in the atlas | 251 |
-| Public NDB-UFES + SAB / SAB-only WSI groups | 203 / 48 |
+| Source-image groups in the atlas | 251 |
+| Public NDB-UFES + SAB / SAB-only source-image groups | 203 / 48 |
 | Matched origins available for the older fold-design run | 203 |
 | Planned folds for that run | 6 |
 

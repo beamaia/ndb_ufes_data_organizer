@@ -2,23 +2,23 @@
   "schema_version": 1,
   "report_type": "atlas_method_contract",
   "privacy_mode": "public_methods",
-  "scope": "validated WSI linkage and same-WSI patch-pair evidence",
+  "scope": "validated source-image linkage and same-source-image patch-pair evidence",
   "source_code": [
     {
       "path": "scripts/src/phase0/sab_patch_coordinate_recovery.py",
-      "role": "recover patch coordinates inside candidate SAB WSI images"
+      "role": "recover patch coordinates inside candidate SAB source images"
     },
     {
       "path": "scripts/src/phase0/dataset_alignment_report.py",
-      "role": "compute same-WSI boxes, fingerprints, color distances, and pair relations"
+      "role": "compute same-source-image boxes, fingerprints, color distances, and pair relations"
     },
     {
       "path": "scripts/src/phase0/validated_linkage.py",
-      "role": "assign validated WSI IDs and carry pair evidence into atlas outputs"
+      "role": "assign retained source-image group IDs and carry pair evidence into atlas outputs"
     },
     {
       "path": "scripts/src/release/atlas_methods.py",
-      "role": "reusable coverage, IoU, and pair-relation helpers with fixture tests"
+      "role": "reusable coverage, IoU, and pair-relation helpers with a fixture cross-check"
     }
   ],
   "coordinate_recovery": {
@@ -37,7 +37,7 @@
     "atlas_caution": "A recovered coordinate is placement evidence, not a diagnosis or a claim that the patch is clinically representative."
   },
   "same_wsi_pair_metrics": {
-    "pair_count": "n * (n - 1) / 2 for n patches assigned to one validated WSI",
+    "pair_count": "n * (n - 1) / 2 for n patches assigned to one source image",
     "iou": {
       "formula": "intersection_area / union_area",
       "overlap_rule": "spatially_overlapping when IoU > 0; spatially_distinct when IoU == 0"
@@ -67,7 +67,7 @@
   },
   "atlas_panel_area_measures": {
     "mapped_image_area": {
-      "formula": "area(union of all clipped patch boxes) / area(displayed WSI image)",
+      "formula": "area(union of all clipped patch boxes) / area(displayed source image)",
       "reported_as": "percentage",
       "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
     },
@@ -77,7 +77,7 @@
       "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
     },
     "repeated_full_wsi_image_area": {
-      "formula": "area(coordinate pixels covered by at least two patch boxes) / area(displayed WSI image)",
+      "formula": "area(coordinate pixels covered by at least two patch boxes) / area(displayed source image)",
       "reported_as": "percentage",
       "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
     }
@@ -85,7 +85,7 @@
   "area_measure_boundary": "The current reusable helper freezes the formulas, but the atlas panel renderer/configuration that originally wrote every DOCX value still needs to be connected to this helper before a future regenerated atlas is declared byte-for-byte method-equivalent.",
   "interpretation_limits": [
     "Thresholds classify review evidence; they do not establish diagnostic equivalence or biological identity.",
-    "Same-WSI pair metrics are descriptive and should not be used as model-performance measurements.",
-    "The three atlas-panel area denominators are now explicit and fixture-tested; the original DOCX renderer still needs to be connected to the helper for full regeneration provenance."
+    "Same-source-image pair metrics are descriptive and should not be used as model-performance measurements.",
+    "The three atlas-panel area denominators are now explicit and fixture-checked; the original DOCX renderer still needs to be connected to the helper for full regeneration provenance."
   ]
 }

@@ -4,23 +4,26 @@ This page documents the current organized data files used by this repository. It
 
 ## Which source answers which question?
 
-I use the following map when a count or label looks inconsistent. The files are related, but each one is authoritative for a different question.
+The following map identifies the authoritative source for each question. The
+files are related, but they do not describe identical scopes.
 
 | Question | Use this source | Current scope | Do not substitute it with |
 | --- | --- | ---: | --- |
 | What is in the final thesis comparison? | [Thesis Experiment Design](thesis-experiment-batches.md) and the current relationship files | Two 3,763-row experiments; Batch 3 archived as exploratory | The older 3,086-row fold-design run |
 | Which patches belong in the older leakage-safe fold files? | `results/phase3/fold_creation/` and the Phase 1--3 pages | 3,086 patches, 203 origins, 6 folds | The full-scope thesis batch CSVs |
-| Which WSI context contains each atlas patch? | `results/phase0/validated_linkage/` or the public [Atlas Index](atlas-index.md) | 3,763 SAB-linked patches, 251 validated WSIs, coordinates for all represented patches | The 3,086 public NDB-UFES-matched rows |
-| What can be loaded by the public website? | `docs/assets/atlas/` plus the Markdown pages | 251 public-pseudonymous WSI rows and small JSON contracts | The root public PDF remains a repository download; the LAB PDF, editable DOCX, and raw SAB crosswalk are excluded |
+| Which source image contains each atlas patch? | `results/phase0/validated_linkage/` or the public [Atlas Index](atlas-index.md) | 3,763 SAB-linked patches, 251 source-image groups, coordinates for all represented patches | The 3,086 public NDB-UFES-matched rows |
+| What can be loaded by the public website? | `docs/assets/atlas/` plus the Markdown pages | 251 public-pseudonymous source-image rows and small JSON contracts | The root public PDF remains a repository download; the LAB PDF, editable DOCX, and raw SAB crosswalk are excluded |
 | Where are label and metadata disagreements summarized? | [Metadata Conflict Review](metadata-conflict-review.md) and `metadata_conflict_summary.json` | 1,489 atlas conflict-flagged rows | A silent relabeling or automatic exclusion rule |
 
-When I update one layer, I should update its source artifact, its public summary, and the relevant row in the [Atlas Gap Map](atlas-gap-map.md). That is the maintenance rule that prevents the same number from acquiring different meanings on different pages.
+When one layer changes, its source artifact, public summary, and corresponding
+[Atlas Gap Map](atlas-gap-map.md) entry must be updated together. This prevents
+one number from acquiring different meanings on different pages.
 
 ## Dataset Levels
 
 | Level | Meaning | Current key files |
 | --- | --- | --- |
-| Origin / WSI | Original whole-slide or origin-level image/metadata row. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `results/phase3/fold_creation/fold_assignments_origin.csv` |
+| Origin / source image | Original source-image or origin-level metadata row. These images are not established as whole-slide images. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `results/phase3/fold_creation/fold_assignments_origin.csv` |
 | Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `results/phase3/fold_creation/fold_assignments_patch_level.csv` |
 | Link | Relationship images/files between original NDB-UFES and patch data. | `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` |
 
@@ -50,38 +53,45 @@ Updated relationship files:
 The counts below describe the public NDB-UFES-matched organizer files and
 should not be used alone as the full 3,763-patch experiment scope.
 
-## Validated WSI Atlas Index
+## Source-Image Atlas Index
 
-The atlas linkage output is a separate, public-pseudonymous view of the same 3,763 patch rows. It assigns all rows to a validated WSI ID using recovered coordinate/pixel-containment evidence, including rows whose thesis metadata linkage is missing.
+The atlas linkage output is a separate, public-pseudonymous view of the same
+3,763 patch rows. It assigns all rows to a source-image group using recovered
+coordinate/pixel-containment evidence, including rows whose thesis metadata
+linkage is missing.
+
+The existing `*_wsi_*` field names and pseudonyms are retained for
+compatibility with generated artifacts. They identify source-image groups and
+do not establish that the underlying images are whole-slide images.
 
 | File | Level | Rows | Meaning |
 | --- | --- | ---: | --- |
-| `docs/assets/atlas/validated_wsi_index.csv` | WSI | 251 | One public-safe row per validated WSI. |
+| `docs/assets/atlas/validated_wsi_index.csv` | Source image | 251 | One public-safe row per source-image group. |
 | `docs/assets/atlas/atlas_manifest.json` | Manifest | 1 | Counts, source artifacts, privacy mode, and excluded private fields. |
 | `docs/assets/atlas/atlas_schema.json` | Schema | 1 | Versioned public-index field contract: types, nullability, allowed source roles, and CSV encodings. |
 | `docs/assets/atlas/metadata_conflict_summary.json` | Aggregate review | 1 | Public-safe counts describing complete-label agreement, reconstructed-metadata disagreement, missing metadata, and mismatch pairs. |
 | `docs/assets/atlas/atlas_methods.json` | Methods | 1 | Implemented coordinate, pair-metric, threshold, pair-relation, and area-denominator contract; original DOCX renderer provenance remains pending. |
 | `docs/assets/atlas/release_facts.json` | Release facts | 1 | Public aggregate atlas scope, canonical Batch 1/2 status, and exploratory Batch 3 review totals. |
-| `results/phase0/validated_linkage/validated_patch_wsi_linkage.csv` | Patch | 3,763 | Atlas-level patch-to-WSI evidence and recovered coordinates. |
-| `results/phase0/validated_linkage/validated_wsi_inventory.csv` | WSI | 251 | Source inventory used to build the public index. |
+| `results/phase0/validated_linkage/validated_patch_wsi_linkage.csv` | Patch | 3,763 | Atlas-level patch-to-source-image evidence and recovered coordinates. |
+| `results/phase0/validated_linkage/validated_wsi_inventory.csv` | Source image | 251 | Source inventory used to build the public index. |
 
 The public index includes these fields:
 
 | Field | Meaning |
 | --- | --- |
-| `validated_wsi_id` | Pseudonymous WSI identity used by the atlas. |
-| `source` | `both` for public NDB-UFES + SAB evidence, or `SAB-only recovered WSI`. |
-| `patch_count` | Number of atlas patches assigned to the WSI. |
-| `patch_pair_count` | Number of unordered same-WSI patch pairs, `n × (n - 1) / 2`. |
-| `similarity_pair_count` | Number of same-WSI pair rows present in the validated similarity artifact; it can be lower than `patch_pair_count`. |
+| `validated_wsi_id` | Retained compatibility name for the pseudonymous source-image group. |
+| `source` | `both` for public NDB-UFES + SAB evidence, or `SAB-only recovered source image`. |
+| `patch_count` | Number of atlas patches assigned to the source image. |
+| `patch_pair_count` | Number of unordered same-source-image patch pairs, `n × (n - 1) / 2`. |
+| `similarity_pair_count` | Number of same-source-image pair rows present in the validated similarity artifact; it can be lower than `patch_pair_count`. |
 | `patches_with_overlap` | Number of patches that overlap at least one other patch by recovered coordinates. |
-| `overlapping_pair_count` | Number of same-WSI patch pairs with positive coordinate overlap. |
-| `mapped_image_area_percent` | Union of clipped patch boxes divided by displayed WSI image area. |
+| `overlapping_pair_count` | Number of same-source-image patch pairs with positive coordinate overlap. |
+| `mapped_image_area_percent` | Union of clipped patch boxes divided by displayed source-image area. |
 | `repeated_sampled_area_percent` | Multiply-covered coordinate area divided by mapped patch union area. |
-| `repeated_full_wsi_image_area_percent` | Multiply-covered coordinate area divided by displayed WSI image area. |
-| `ndb_wsi_label`, `sab_wsi_label` | Source-level WSI labels; these may differ and should not be silently merged. |
+| `repeated_full_wsi_image_area_percent` | Retained field name for multiply-covered coordinate area divided by displayed source-image area. |
+| `ndb_wsi_label`, `sab_wsi_label` | Retained field names for source-level labels; these may differ and should not be silently merged. |
 | `patches_oscc`, `patches_with_dysplasia`, `patches_without_dysplasia` | Counts of complete patch labels carried by the validated linkage output. |
-| `evidence_summary` | JSON-like count of atlas linkage-evidence categories for the WSI. |
+| `evidence_summary` | JSON-like count of atlas linkage-evidence categories for the source-image group. |
 | `metadata_conflict_patch_count` | Patches where the atlas records a metadata conflict requiring caution. |
 
 Raw SAB case prefixes, image names, and local paths are intentionally excluded. See [Atlas Index](atlas-index.md) for the downloadable files and [Atlas Guide](atlas-guide.md) for the two linkage layers.
@@ -167,7 +177,7 @@ Columns:
 
 | Column | Meaning |
 | --- | --- |
-| `origin_id` | Origin/WSI identifier used by the matched fold-design subset. |
+| `origin_id` | Source-image/origin identifier used by the matched fold-design subset. |
 | `origin_diagnosis` | Origin-level diagnostic class. |
 | `patch_diagnoses` | Pipe-separated patch-level diagnoses observed for the origin. |
 | `gender`, `skin_color`, `age_group` | Demographic fields copied from the organized metadata. |
@@ -225,7 +235,7 @@ Important columns:
 | Column | Meaning |
 | --- | --- |
 | `patch` | Patch image ID, e.g. `p0000`. |
-| `origin` | Origin/WSI ID. |
+| `origin` | Source-image/origin ID. |
 | `public_id`, `lesion_id`, `patient_id` | Identifiers from the source dataset. |
 | `path` | Origin image path/name from source metadata. |
 | `localization` | Lesion/localization field. |

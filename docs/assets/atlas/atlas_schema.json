@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "name": "NDB-UFES/SAB public validated-WSI index",
+  "name": "NDB-UFES/SAB public source-image index",
   "format": "csv",
   "privacy_mode": "public_pseudonymous",
   "identifier": "validated_wsi_id",
-  "description": "One public-safe row per validated WSI. Counts are atlas-level evidence summaries and are not a replacement for thesis relationship metadata.",
+  "description": "One public-safe row per source-image group. Counts are atlas-level evidence summaries and are not a replacement for thesis relationship metadata.",
   "columns": [
     {
       "name": "validated_wsi_id",
       "type": "string",
       "required": true,
       "nullable": false,
-      "description": "Pseudonymous WSI identity used by the atlas."
+      "description": "Retained compatibility name for the pseudonymous source-image group."
     },
     {
       "name": "source",
@@ -20,9 +20,9 @@
       "nullable": false,
       "allowed_values": [
         "both",
-        "SAB-only recovered WSI"
+        "SAB-only recovered source image"
       ],
-      "description": "Evidence source role for the validated WSI."
+      "description": "Evidence source role for the source-image group."
     },
     {
       "name": "patch_count",
@@ -30,7 +30,7 @@
       "required": true,
       "nullable": false,
       "minimum": 0,
-      "description": "Number of atlas patches assigned to the WSI."
+      "description": "Number of atlas patches assigned to the source image."
     },
     {
       "name": "patch_pair_count",
@@ -38,7 +38,7 @@
       "required": true,
       "nullable": false,
       "minimum": 0,
-      "description": "Number of unordered same-WSI patch pairs, n \u00d7 (n - 1) / 2."
+      "description": "Number of unordered same-source-image patch pairs, n \u00d7 (n - 1) / 2."
     },
     {
       "name": "similarity_pair_count",
@@ -46,7 +46,7 @@
       "required": true,
       "nullable": false,
       "minimum": 0,
-      "description": "Number of same-WSI pair rows present in the validated similarity artifact; this can be lower than the theoretical pair count."
+      "description": "Number of same-source-image pair rows present in the validated similarity artifact; this can be lower than the theoretical pair count."
     },
     {
       "name": "patches_with_overlap",
@@ -62,7 +62,7 @@
       "required": true,
       "nullable": false,
       "minimum": 0,
-      "description": "Number of same-WSI patch pairs with positive coordinate overlap."
+      "description": "Number of same-source-image patch pairs with positive coordinate overlap."
     },
     {
       "name": "mapped_image_area_percent",
@@ -71,7 +71,7 @@
       "nullable": false,
       "minimum": 0,
       "maximum": 100,
-      "description": "Union of clipped patch boxes divided by displayed WSI image area, as a percentage."
+      "description": "Union of clipped patch boxes divided by displayed source-image area, as a percentage."
     },
     {
       "name": "repeated_sampled_area_percent",
@@ -89,21 +89,21 @@
       "nullable": false,
       "minimum": 0,
       "maximum": 100,
-      "description": "Multiply-covered coordinate area divided by displayed WSI image area, as a percentage."
+      "description": "Retained field name for multiply-covered coordinate area divided by displayed source-image area, as a percentage."
     },
     {
       "name": "ndb_wsi_label",
       "type": "string",
       "required": true,
       "nullable": true,
-      "description": "WSI-level label carried by the public NDB-UFES source, when available."
+      "description": "Retained field name for the source-level label carried by public NDB-UFES, when available."
     },
     {
       "name": "sab_wsi_label",
       "type": "string",
       "required": true,
       "nullable": true,
-      "description": "WSI-level label carried by the SAB source, when available."
+      "description": "Retained field name for the source-level label carried by SAB, when available."
     },
     {
       "name": "public_ndb_origin_ids",
@@ -111,14 +111,14 @@
       "required": true,
       "nullable": true,
       "encoding": "pipe-delimited public origin IDs",
-      "description": "Public NDB origin identifiers supporting the WSI match."
+      "description": "Public NDB origin identifiers supporting the source-image match."
     },
     {
       "name": "public_ndb_wsi_matches",
       "type": "number",
       "required": true,
       "nullable": true,
-      "description": "Number of public NDB-UFES WSI matches recorded for the WSI."
+      "description": "Retained field name for the number of public NDB-UFES source-image matches recorded for the group."
     },
     {
       "name": "patches_oscc",

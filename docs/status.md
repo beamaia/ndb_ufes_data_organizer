@@ -4,7 +4,14 @@ Documentation/index verified: 23 July 2026. Pipeline artifacts referenced below 
 
 ## Atlas Linkage Status
 
-The phase-0 validated-linkage output assigns all 3,763 patch rows to 251 validated WSI IDs and recovers coordinates for all 3,763 rows. The inventory contains 203 public NDB-UFES + SAB WSI groups and 48 SAB-only recovered WSI groups. Patch labels agree across the complete NDB-UFES and SAB patch sources for all 3,763 rows; 1,489 rows still carry a metadata-conflict flag and should be interpreted with the [Metadata Conflict Review](metadata-conflict-review.md) and [Atlas Guide](atlas-guide.md).
+The phase-0 validated-linkage output assigns all 3,763 patch rows to 251
+source-image groups and recovers coordinates for all 3,763 rows. The inventory
+contains 203 public NDB-UFES + SAB source-image groups and 48 groups recovered
+from SAB only. Patch labels agree across the complete NDB-UFES and SAB patch
+sources for all 3,763 rows; 1,489 rows still carry a metadata-conflict flag and
+should be interpreted with the
+[Metadata Conflict Review](metadata-conflict-review.md) and
+[Atlas Guide](atlas-guide.md).
 
 The public-pseudonymous [Atlas Index](atlas-index.md) and [Atlas Manifest](assets/atlas/atlas_manifest.json) are generated from the phase-0 inventory. This atlas linkage layer covers all 3,763 SAB-linked patches. The separate public NDB-UFES matching layer contains 3,086 rows matched to public origin images and 677 rows without a public NDB-UFES origin match.
 

@@ -1,24 +1,27 @@
 # NDB-UFES Data Organizer
 
 <div class="ndb-hero" markdown>
-I use this repository to organize the public NDB-UFES oral histopathology dataset, keep patches from the same specimen together, and make the decisions behind the current thesis batches inspectable. The wiki also records how the public NDB-UFES-matched subset relates to the full P-NDB-UFES scope and to the patient-first WSI atlas.
+This repository organizes the public NDB-UFES oral histopathology dataset,
+keeps related patches together, and documents the decisions behind the current
+thesis batches. The wiki also records how the public NDB-UFES-matched subset
+relates to the full P-NDB-UFES scope and to the patch-to-source-image atlas.
 </div>
 
 ## AI-Assisted Documentation Note
 
 This wiki was prepared with assistance from Codex (GPT-5), following instructions and guidelines written by a human. Published pages are reviewed and validated by a human before release.
 
-## What I am tracking
+## Scope
 
 Both final experiments use all 3,763 P-NDB-UFES patches. SAB provides
-patch-to-WSI linkage for all 3,763. Of these, 3,086 patches also match the 203
+patch-to-source-image linkage for all 3,763. Of these, 3,086 patches also match the 203
 public NDB-UFES origin images and form the earlier embedding and fold-design
 subset. The remaining 677 patches are SAB-linked but do not have a public
 NDB-UFES origin match. [Thesis Experiment Design](thesis-experiment-batches.md)
 explains why both counts appear.
 
-The root-level public atlas adds a patient/case-first view of 251 validated WSI
-groups across 64 public-pseudonymous patient/case groups. Start with the
+The root-level public atlas provides a visual view of 251 source-image groups,
+organized under 64 public-pseudonymous case groups. Start with the
 [Atlas Guide](atlas-guide.md), use the [Atlas Index](atlas-index.md) for
 lookup, and check the [Atlas Gap Map](atlas-gap-map.md) before treating any
 atlas value as a new thesis-release count.
@@ -41,7 +44,7 @@ The dataset contains **3,763 SAB-linked patches**, all of which are used by
 both final experiments. Of these, **3,086 patches** match the 203 public
 NDB-UFES origin images and were used by the earlier embedding and fold-design
 pipeline; the remaining 677 do not have a public NDB-UFES origin match. The
-atlas organizes all 3,763 patches into **251 validated WSI groups**.
+atlas organizes all 3,763 patches into **251 source-image groups**.
 
 ## NDB-UFES-Matched Subset Release State
 
@@ -69,7 +72,8 @@ atlas organizes all 3,763 patches into **251 validated WSI groups**.
 
 <div class="ndb-card" markdown>
 <span class="ndb-stat">251</span>
-**Validated WSIs.** Atlas groups with 3,763 patches assigned by recovered WSI evidence.
+**Source-image groups.** Atlas groups with 3,763 patches assigned by recovered
+source-image evidence.
 </div>
 
 </div>
@@ -80,7 +84,7 @@ atlas organizes all 3,763 patches into **251 validated WSI groups**.
 | --- | --- |
 | [Thesis Experiment Design](thesis-experiment-batches.md) | Final two-experiment design and its relationship to the 3,086-patch public NDB-UFES-matched subset. |
 | [Canonical Experiment Results](experiment-results.md) | Validated results, figures, statistics, and stored-run provenance. |
-| [Atlas Index](atlas-index.md) | Lightweight public-pseudonymous lookup for the 251 validated WSI groups. |
+| [Atlas Index](atlas-index.md) | Lightweight public-pseudonymous lookup for the 251 source-image groups. |
 | [Current Release Facts](release-facts.md) | One readable snapshot of the atlas, relationship, and batch scopes. |
 | [Factsheet](factsheet.md) | Public dataset context, task labels, fold status, caveats, and citation language. |
 | [Data Dictionary](data-dictionary.md) | File relationships, columns, counts, labels, and field-level cautions. |
@@ -89,7 +93,7 @@ atlas organizes all 3,763 patches into **251 validated WSI groups**.
 | [Phase 2 Results](phase2-results.md) | Virchow selection, eligibility constraints, and model comparison. |
 | [Phase 3 Results](phase3-results.md) | Fold assignment results, validation metrics, and generated fold figures. |
 
-## What I publish
+## Public outputs
 
 - Origin-level fold assignments.
 - Patch-level fold assignments.
@@ -99,7 +103,7 @@ atlas organizes all 3,763 patches into **251 validated WSI groups**.
 - Thesis-ready static figures generated from current outputs.
 
 The public site does not load the 587-page root PDF. It loads the text-first
-guide, the public-pseudonymous WSI index, and small JSON/CSV provenance files
+guide, the public-pseudonymous source-image index, and small JSON/CSV provenance files
 instead. The repository release still provides
 `NDB_UFES_SAB_atlas_public.pdf`; the LAB PDF, editable DOCX, and raw SAB
 crosswalk remain excluded.

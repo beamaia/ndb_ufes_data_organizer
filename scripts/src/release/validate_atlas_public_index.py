@@ -145,7 +145,7 @@ def main() -> None:
     atlas_scope = manifest["atlas_scope"]
     expected_rows = int(atlas_scope["validated_wsi_count"])
     if len(rows) != expected_rows:
-        raise SystemExit(f"expected {expected_rows} WSI rows, found {len(rows)}")
+        raise SystemExit(f"expected {expected_rows} source-image rows, found {len(rows)}")
 
     numeric_columns = [
         "patch_count",
@@ -195,7 +195,7 @@ def main() -> None:
         "all coordinate patch pairs": (sum(int(row["patch_pair_count"]) for row in rows), int(atlas_scope["all_coordinate_patch_pairs"])),
         "available similarity pairs": (sum(int(row["similarity_pair_count"]) for row in rows), int(atlas_scope["same_wsi_patch_pairs"])),
         "public NDB-UFES + SAB groups": (source_counts.get("both", 0), int(atlas_scope["validated_wsi_with_public_ndb_match"])),
-        "SAB-only groups": (source_counts.get("SAB-only recovered WSI", 0), int(atlas_scope["validated_wsi_sab_only"])),
+        "SAB-only groups": (source_counts.get("SAB-only recovered source image", 0), int(atlas_scope["validated_wsi_sab_only"])),
         "metadata-conflict patches": (
             sum(int(row["metadata_conflict_patch_count"]) for row in rows),
             int(atlas_scope["patches_with_metadata_conflict"]),
@@ -307,7 +307,7 @@ def main() -> None:
     if expected_release_facts_path != str(RELEASE_FACTS_PATH.relative_to(ROOT)):
         raise SystemExit("atlas manifest does not point to public release facts")
 
-    print(f"validated public atlas index: {len(rows)} WSI rows, {checks['patch rows'][0]} patches")
+    print(f"validated public atlas index: {len(rows)} source-image rows, {checks['patch rows'][0]} patches")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-"""Build the small, public WSI index used by the documentation site.
+"""Build the small, public source-image index used by the documentation site.
 
 The source inventory contains the atlas-level linkage result. This export keeps
 only pseudonymous IDs, aggregate counts, labels, and evidence summaries. It
@@ -37,29 +37,29 @@ RELEASE_FACTS_PATH = OUTPUT_DIR / "release_facts.json"
 
 PUBLIC_INDEX_SCHEMA = {
     "schema_version": 2,
-    "name": "NDB-UFES/SAB public validated-WSI index",
+    "name": "NDB-UFES/SAB public source-image index",
     "format": "csv",
     "privacy_mode": "public_pseudonymous",
     "identifier": "validated_wsi_id",
     "description": (
-        "One public-safe row per validated WSI. Counts are atlas-level evidence "
+        "One public-safe row per source-image group. Counts are atlas-level evidence "
         "summaries and are not a replacement for thesis relationship metadata."
     ),
     "columns": [
-        {"name": "validated_wsi_id", "type": "string", "required": True, "nullable": False, "description": "Pseudonymous WSI identity used by the atlas."},
-        {"name": "source", "type": "string", "required": True, "nullable": False, "allowed_values": ["both", "SAB-only recovered WSI"], "description": "Evidence source role for the validated WSI."},
-        {"name": "patch_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of atlas patches assigned to the WSI."},
-        {"name": "patch_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of unordered same-WSI patch pairs, n × (n - 1) / 2."},
-        {"name": "similarity_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of same-WSI pair rows present in the validated similarity artifact; this can be lower than the theoretical pair count."},
+        {"name": "validated_wsi_id", "type": "string", "required": True, "nullable": False, "description": "Retained compatibility name for the pseudonymous source-image group."},
+        {"name": "source", "type": "string", "required": True, "nullable": False, "allowed_values": ["both", "SAB-only recovered source image"], "description": "Evidence source role for the source-image group."},
+        {"name": "patch_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of atlas patches assigned to the source image."},
+        {"name": "patch_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of unordered same-source-image patch pairs, n × (n - 1) / 2."},
+        {"name": "similarity_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of same-source-image pair rows present in the validated similarity artifact; this can be lower than the theoretical pair count."},
         {"name": "patches_with_overlap", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of patches that overlap at least one other patch by recovered coordinates."},
-        {"name": "overlapping_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of same-WSI patch pairs with positive coordinate overlap."},
-        {"name": "mapped_image_area_percent", "type": "number", "required": True, "nullable": False, "minimum": 0, "maximum": 100, "description": "Union of clipped patch boxes divided by displayed WSI image area, as a percentage."},
+        {"name": "overlapping_pair_count", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Number of same-source-image patch pairs with positive coordinate overlap."},
+        {"name": "mapped_image_area_percent", "type": "number", "required": True, "nullable": False, "minimum": 0, "maximum": 100, "description": "Union of clipped patch boxes divided by displayed source-image area, as a percentage."},
         {"name": "repeated_sampled_area_percent", "type": "number", "required": True, "nullable": False, "minimum": 0, "maximum": 100, "description": "Multiply-covered coordinate area divided by mapped patch union area, as a percentage."},
-        {"name": "repeated_full_wsi_image_area_percent", "type": "number", "required": True, "nullable": False, "minimum": 0, "maximum": 100, "description": "Multiply-covered coordinate area divided by displayed WSI image area, as a percentage."},
-        {"name": "ndb_wsi_label", "type": "string", "required": True, "nullable": True, "description": "WSI-level label carried by the public NDB-UFES source, when available."},
-        {"name": "sab_wsi_label", "type": "string", "required": True, "nullable": True, "description": "WSI-level label carried by the SAB source, when available."},
-        {"name": "public_ndb_origin_ids", "type": "string", "required": True, "nullable": True, "encoding": "pipe-delimited public origin IDs", "description": "Public NDB origin identifiers supporting the WSI match."},
-        {"name": "public_ndb_wsi_matches", "type": "number", "required": True, "nullable": True, "description": "Number of public NDB-UFES WSI matches recorded for the WSI."},
+        {"name": "repeated_full_wsi_image_area_percent", "type": "number", "required": True, "nullable": False, "minimum": 0, "maximum": 100, "description": "Retained field name for multiply-covered coordinate area divided by displayed source-image area, as a percentage."},
+        {"name": "ndb_wsi_label", "type": "string", "required": True, "nullable": True, "description": "Retained field name for the source-level label carried by public NDB-UFES, when available."},
+        {"name": "sab_wsi_label", "type": "string", "required": True, "nullable": True, "description": "Retained field name for the source-level label carried by SAB, when available."},
+        {"name": "public_ndb_origin_ids", "type": "string", "required": True, "nullable": True, "encoding": "pipe-delimited public origin IDs", "description": "Public NDB origin identifiers supporting the source-image match."},
+        {"name": "public_ndb_wsi_matches", "type": "number", "required": True, "nullable": True, "description": "Retained field name for the number of public NDB-UFES source-image matches recorded for the group."},
         {"name": "patches_oscc", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Atlas patches carrying the complete OSCC label."},
         {"name": "patches_with_dysplasia", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Atlas patches carrying the complete dysplasia label."},
         {"name": "patches_without_dysplasia", "type": "integer", "required": True, "nullable": False, "minimum": 0, "description": "Atlas patches carrying the complete without-dysplasia label."},
@@ -124,23 +124,23 @@ ATLAS_METHODS = {
     "schema_version": 1,
     "report_type": "atlas_method_contract",
     "privacy_mode": "public_methods",
-    "scope": "validated WSI linkage and same-WSI patch-pair evidence",
+    "scope": "validated source-image linkage and same-source-image patch-pair evidence",
     "source_code": [
         {
             "path": "scripts/src/phase0/sab_patch_coordinate_recovery.py",
-            "role": "recover patch coordinates inside candidate SAB WSI images",
+            "role": "recover patch coordinates inside candidate SAB source images",
         },
         {
             "path": "scripts/src/phase0/dataset_alignment_report.py",
-            "role": "compute same-WSI boxes, fingerprints, color distances, and pair relations",
+            "role": "compute same-source-image boxes, fingerprints, color distances, and pair relations",
         },
         {
             "path": "scripts/src/phase0/validated_linkage.py",
-            "role": "assign validated WSI IDs and carry pair evidence into atlas outputs",
+            "role": "assign retained source-image group IDs and carry pair evidence into atlas outputs",
         },
         {
             "path": "scripts/src/release/atlas_methods.py",
-            "role": "reusable coverage, IoU, and pair-relation helpers with fixture tests",
+            "role": "reusable coverage, IoU, and pair-relation helpers with a fixture cross-check",
         },
     ],
     "coordinate_recovery": {
@@ -159,7 +159,7 @@ ATLAS_METHODS = {
         "atlas_caution": "A recovered coordinate is placement evidence, not a diagnosis or a claim that the patch is clinically representative.",
     },
     "same_wsi_pair_metrics": {
-        "pair_count": "n * (n - 1) / 2 for n patches assigned to one validated WSI",
+        "pair_count": "n * (n - 1) / 2 for n patches assigned to one source image",
         "iou": {
             "formula": "intersection_area / union_area",
             "overlap_rule": "spatially_overlapping when IoU > 0; spatially_distinct when IoU == 0",
@@ -189,7 +189,7 @@ ATLAS_METHODS = {
     },
     "atlas_panel_area_measures": {
         "mapped_image_area": {
-            "formula": "area(union of all clipped patch boxes) / area(displayed WSI image)",
+            "formula": "area(union of all clipped patch boxes) / area(displayed source image)",
             "reported_as": "percentage",
             "evidence_basis": "Atlas panel definition and coordinate fixture cross-check",
         },
@@ -199,7 +199,7 @@ ATLAS_METHODS = {
             "evidence_basis": "Atlas panel definition and coordinate fixture cross-check",
         },
         "repeated_full_wsi_image_area": {
-            "formula": "area(coordinate pixels covered by at least two patch boxes) / area(displayed WSI image)",
+            "formula": "area(coordinate pixels covered by at least two patch boxes) / area(displayed source image)",
             "reported_as": "percentage",
             "evidence_basis": "Atlas panel definition and coordinate fixture cross-check",
         },
@@ -207,8 +207,8 @@ ATLAS_METHODS = {
     "area_measure_boundary": "The current reusable helper freezes the formulas, but the atlas panel renderer/configuration that originally wrote every DOCX value still needs to be connected to this helper before a future regenerated atlas is declared byte-for-byte method-equivalent.",
     "interpretation_limits": [
         "Thresholds classify review evidence; they do not establish diagnostic equivalence or biological identity.",
-        "Same-WSI pair metrics are descriptive and should not be used as model-performance measurements.",
-        "The three atlas-panel area denominators are now explicit and fixture-tested; the original DOCX renderer still needs to be connected to the helper for full regeneration provenance.",
+        "Same-source-image pair metrics are descriptive and should not be used as model-performance measurements.",
+        "The three atlas-panel area denominators are now explicit and fixture-checked; the original DOCX renderer still needs to be connected to the helper for full regeneration provenance.",
     ],
 }
 
@@ -411,6 +411,9 @@ def main() -> None:
         }
     )
     public = public.merge(coordinate_metrics, on="validated_wsi_id", how="left", validate="one_to_one")
+    public["source"] = public["source"].replace(
+        {"SAB-only recovered WSI": "SAB-only recovered source image"}
+    )
     public_columns = [column["name"] for column in PUBLIC_INDEX_SCHEMA["columns"]]
     public = public[public_columns]
     public = public.sort_values("validated_wsi_id", kind="stable")

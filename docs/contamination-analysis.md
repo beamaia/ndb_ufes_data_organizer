@@ -10,9 +10,13 @@ Human-in-the-loop validation is paused. All origin-patch pairs currently accepte
 
 The current fold-generation pipeline remains usable because Phase 3 locks every patch from the same origin into the same fold. That prevents a known class of leakage even when patches from one origin look similar to each other.
 
-## Same-patient WSI Image Relationship Review
+## Same-case Source-Image Relationship Review
 
-The same-patient image review compared 397 distinct public-image pairs within explicit patient/case groups. Seventy-two pairs passed the current geometric screening rule and are included in a visual review document. The review shows the original images, projected regions, perspective-rectified crops, overlays, scales, and projected coordinates.
+The same-case image review compared 397 distinct public-image pairs within
+explicit source case groups. Seventy-two pairs passed the current geometric
+screening rule and are included in a visual review document. The review shows
+the original images, projected regions, perspective-rectified crops, overlays,
+scales, and projected coordinates.
 
 This is an exploratory screening artifact. The candidate label does not prove that two images are duplicates, that one image was produced from the other, or that an experiment was contaminated. It is intended to support the next human validation step.
 

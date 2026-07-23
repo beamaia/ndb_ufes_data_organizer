@@ -1,6 +1,8 @@
 # Current Release Facts
 
-I use this page as the quick scope check for the current wiki release. It brings the atlas, thesis relationship layer, and experiment batches together without pretending that they are one dataset table.
+This page provides a quick scope check for the current wiki release. It keeps
+the atlas, thesis relationship layer, and experiment batches distinct because
+they are not one dataset table.
 
 The machine-readable source is the [public release facts JSON](assets/atlas/release_facts.json). The JSON is generated from the validated atlas summary, the current relationship summary, and the thesis batch artifact manifest, then checked by the public atlas validator.
 
@@ -10,14 +12,14 @@ The machine-readable source is the [public release facts JSON](assets/atlas/rele
 | --- | ---: | --- | --- |
 | Full P-NDB-UFES thesis starting scope | 3,763 patch rows | Which rows the final experiments start from | [Thesis Experiment Design](thesis-experiment-batches.md) |
 | Public NDB-UFES origin matching | 3,086 matched + 677 without a public match | Which SAB-linked rows can also join to a public NDB-UFES origin image | [Data Dictionary](data-dictionary.md#current-ndb-ufes-match-counts) |
-| Atlas validated-WSI scope | 251 validated WSIs covering 3,763 patches | Where the atlas places patches using recovered WSI evidence | [Atlas Index](atlas-index.md) |
-| Atlas source roles | 203 public NDB-UFES + SAB / 48 SAB-only | What kind of source evidence supports each validated WSI | [Atlas Guide](atlas-guide.md#atlas-snapshot) |
+| Atlas source-image scope | 251 source-image groups covering 3,763 patches | Which source image contains each patch according to recovered coordinate evidence | [Atlas Index](atlas-index.md) |
+| Atlas source roles | 203 public NDB-UFES + SAB / 48 SAB-only | What kind of source evidence supports each source-image group | [Atlas Guide](atlas-guide.md#atlas-snapshot) |
 | Atlas metadata-conflict cohort | 1,489 patch rows | Which atlas rows require metadata caution | [Metadata Conflict Review](metadata-conflict-review.md) |
 
 The practical rule is simple: **3,763** is the complete SAB-linked thesis
 starting scope, **3,086/677** describes the presence or absence of a public
-NDB-UFES origin match, and **251** describes the atlas WSI layer. I do not use
-one of these numbers as a substitute for another.
+NDB-UFES origin match, and **251** describes the atlas source-image layer.
+These numbers are not substitutes for one another.
 
 ## Current thesis batches
 
@@ -33,9 +35,9 @@ and metadata caveats are on [Thesis Experiment Design](thesis-experiment-batches
 
 ## Atlas evidence snapshot
 
-- All 3,763 represented patches have recovered coordinates and a validated WSI ID.
+- All 3,763 represented patches have recovered coordinates and a source-image group ID.
 - The atlas reports complete NDB-UFES/SAB patch-label agreement for all 3,763 rows.
-- The public index contains 30,531 theoretical coordinate-derived same-WSI patch pairs and 29,350 available similarity rows.
+- The public index contains 30,531 theoretical coordinate-derived same-source-image patch pairs and 29,350 available similarity rows.
 - The public export keeps raw SAB case prefixes, image names, and local paths out of the web payload.
 
 These are placement and provenance facts. They do not make visual similarity a diagnosis, and they do not resolve the separate reconstructed-metadata disagreements.
@@ -48,7 +50,7 @@ are frozen for v1.0.0. The metadata-conflict policy in
 future derived uses, but it does not reopen the recorded experiment results.
 The original atlas DOCX renderer is still needed before claiming byte-for-byte
 DOCX regeneration; that separate boundary is documented in
-[Atlas Methods](atlas-methods.md#reproducibility-boundary-i-can-defend-today).
+[Atlas Methods](atlas-methods.md#current-reproducibility-boundary).
 
 The full update order is maintained in the [Atlas Gap Map](atlas-gap-map.md).
 

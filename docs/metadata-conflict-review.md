@@ -1,16 +1,19 @@
 # Metadata Conflict Review
 
-This is the page I use before making a label claim from the atlas. I am keeping the complete patch-label layer and the reconstructed metadata layer separate because they answer different questions. The report linked below is aggregate and public-safe; it does not expose patch IDs, SAB filenames, or a private crosswalk.
+This page separates the complete patch-label layer from the reconstructed
+metadata layer because they answer different questions. The linked report is
+aggregate and public-safe; it does not expose patch IDs, SAB filenames, or a
+private crosswalk.
 
 ## The short version
 
 The complete NDB-UFES and SAB patch-label sources agree for all 3,763 atlas patches. The conflict is between those complete patch labels and the reconstructed metadata used by the thesis relationship/batch artifacts.
 
-| Layer or status | Rows | What I can say now |
+| Layer or status | Rows | Current interpretation |
 | --- | ---: | --- |
 | Complete patch-label sources agree | 3,763 | The NDB-UFES and SAB patch-label fields agree in the validated-linkage output. |
 | Reconstructed metadata agrees with the complete patch label | 1,758 | No label disagreement is recorded at this comparison point. |
-| Reconstructed metadata disagrees | 1,328 | A downstream label policy is needed before I call one source canonical. |
+| Reconstructed metadata disagrees | 1,328 | A downstream label policy is needed before one source can be treated as canonical. |
 | Reconstructed metadata is missing | 677 | These rows remain in the full thesis scope but cannot be treated as metadata-labeled by this layer. |
 | Atlas metadata-conflict evidence cohort | 1,489 | This broader flag also includes conflicts in other metadata fields, not only patch-label disagreement. |
 
@@ -18,18 +21,21 @@ The last number is intentionally not the sum of only the direct label disagreeme
 
 ## Interim use policy
 
-I can make the following policy explicit now, even before the final thesis label decision:
+The following interim policy preserves the current evidence before the final
+thesis label decision:
 
-- I use the atlas patch-label layer to describe what the validated-linkage artifact contains. I keep the NDB-UFES and SAB source labels side by side and do not synthesize a new canonical label silently.
-- I treat Batch 1 and Batch 2 as the frozen final experiment artifacts. Batch
+- Use the atlas patch-label layer only to describe what the validated-linkage artifact contains. Keep the NDB-UFES and SAB source labels side by side; do not synthesize a new canonical label silently.
+- Treat Batch 1 and Batch 2 as the frozen final experiment artifacts. Batch
   3 is an exploratory archive. Anyone reproducing one of these artifacts
   should use its stored labels and grouping fields rather than rewriting them
   from the atlas index.
-- I retain the 677 missing-metadata rows in the full thesis scope. An analysis that requires recovered metadata must state its restricted denominator instead of quietly dropping those rows.
-- I keep the 1,489 conflict flags as review evidence, not as an automatic exclusion rule. A conflict flag alone does not prove that a patch is unusable.
-- For public WSI summaries, I show source-level labels and patch-label counts separately. I do not collapse mixed labels into one WSI diagnosis until the thesis policy is approved.
+- Retain the 677 missing-metadata rows in the full thesis scope. An analysis that requires recovered metadata must state its restricted denominator instead of quietly dropping those rows.
+- Keep the 1,489 conflict flags as review evidence, not as an automatic exclusion rule. A conflict flag alone does not prove that a patch is unusable.
+- For public source-image summaries, show source-level labels and patch-label counts separately. Do not collapse mixed labels into one source-image diagnosis until the thesis policy is approved.
 
-This is a reproducibility policy, not a final clinical-label policy. It tells me how to avoid changing the current evidence while the scientific decision is still open.
+This is a reproducibility policy, not a final clinical-label policy. Its
+purpose is to prevent the evidence from changing while the scientific decision
+remains open.
 
 ## What the direct label mismatches look like
 
@@ -43,28 +49,34 @@ These are the 1,328 rows where the complete patch label and reconstructed metada
 | Leukoplakia without dysplasia | OSCC | 64 |
 | Leukoplakia without dysplasia | Leukoplakia with dysplasia | 283 |
 
-This pattern tells me that the disagreement is not just a missing-value problem. It is a label-source and label-granularity problem that needs to be resolved at the experiment level.
+This pattern shows that the disagreement is not only a missing-value problem.
+It is a label-source and label-granularity problem that must be resolved at the
+experiment level.
 
 ## Decisions still needed before the next thesis release
 
-I am not treating the complete patch label as automatically canonical for every use, and I am not treating the reconstructed metadata as automatically authoritative. Before the next thesis release, I need to record a policy for each use:
+Neither the complete patch label nor the reconstructed metadata is treated as
+automatically authoritative for every use. A policy for each use must be
+recorded before the next thesis release:
 
 | Decision | Recommended next comparison | Result that must be documented |
 | --- | --- | --- |
 | Training target | Run a sensitivity comparison using complete patch labels versus reconstructed metadata on the rows where both exist. | Which field enters each experiment and why. |
 | Conflict handling | Start with keep-and-flag, then compare the effect of excluding a predeclared review subset. | Row counts before and after the rule. |
 | Provenance | Preserve both source fields and add a derived field only after its rule is frozen. | Which source fields remain traceable. |
-| WSI/patient summaries | Publish source-level labels and atlas patch-label counts side by side. | How mixed-label WSIs are represented. |
+| Source-image/case summaries | Publish source-level labels and atlas patch-label counts side by side. | How mixed-label source images are represented. |
 | Missing metadata | Keep missing rows in the full scope; restrict only analyses that explicitly require metadata. | Whether the restriction changes the thesis scope. |
 
-Until those decisions are written down, the safe statement is: **the atlas validates patch-to-WSI placement for all 3,763 patches, while the metadata layers require explicit interpretation.**
+Until those decisions are written down, the supported statement is: **the
+atlas places all 3,763 patches on linked source images, while the metadata
+layers require explicit interpretation.**
 
 ## Machine-readable report
 
 - [Metadata-conflict summary (JSON)](assets/atlas/metadata_conflict_summary.json)
 - [Atlas Guide](atlas-guide.md#two-linkage-layers)
 - [Atlas Gap Map](atlas-gap-map.md)
-- [Data Dictionary](data-dictionary.md#validated-wsi-atlas-index)
+- [Data Dictionary](data-dictionary.md#source-image-atlas-index)
 
 The report is generated with the public atlas export command:
 

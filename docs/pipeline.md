@@ -1,6 +1,9 @@
 # Pipeline Overview
 
-I organize the current matched subset into leakage-safe six-fold assignments. The pipeline does not train or select a downstream diagnostic model; it prepares data and records the decisions that a later model-training project can reuse.
+The pipeline organizes the current matched subset into leakage-safe six-fold
+assignments. It does not train or select a downstream diagnostic model; it
+prepares data and records decisions that a later model-training project can
+reuse.
 
 ```text
 Patch metadata and images
