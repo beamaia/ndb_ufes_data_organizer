@@ -37,11 +37,11 @@ atlas value as a new thesis-release count.
 | review what is still unresolved | [Atlas Gap Map](atlas-gap-map.md) and [Metadata Conflict Review](metadata-conflict-review.md) |
 | understand the older leakage-safe fold pipeline | [Pipeline](pipeline.md) and [Implementation Status](status.md) |
 
-The short version of the scope is: **3,763 patches** have SAB linkage and form
-the full thesis batch starting point, **3,086 patches** also match public
-NDB-UFES origin images and form the earlier metadata/embedding subset, and
-**251 validated WSI groups** is the atlas linkage view. I keep these numbers
-together here because they are related, but they are not interchangeable.
+The dataset contains **3,763 SAB-linked patches**, all of which are used by
+both final experiments. Of these, **3,086 patches** match the 203 public
+NDB-UFES origin images and were used by the earlier embedding and fold-design
+pipeline; the remaining 677 do not have a public NDB-UFES origin match. The
+atlas organizes all 3,763 patches into **251 validated WSI groups**.
 
 ## NDB-UFES-Matched Subset Release State
 
