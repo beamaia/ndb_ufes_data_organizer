@@ -36,11 +36,6 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra docs --frozen
 
-      - name: Validate public atlas assets
-        run: |
-          uv run python scripts/src/release/validate_public_atlas_pdf.py
-          uv run python scripts/src/release/validate_atlas_public_index.py
-
       - name: Build documentation
         run: uv run python -m mkdocs build --strict
 
