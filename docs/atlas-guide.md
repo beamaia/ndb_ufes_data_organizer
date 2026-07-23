@@ -37,6 +37,7 @@ The atlas is organized in this order:
 | Patch rows | 3,763 / 3,763 | Every represented patch is assigned to a source-image group. |
 | Recovered coordinates | 3,763 / 3,763 | Every represented patch has coordinates used to place it on the source-image figure. |
 | Source-image groups | 251 | 203 groups have public NDB-UFES + SAB evidence; 48 are recovered from SAB only. |
+| Patches by atlas source role | 3,111 both-source / 652 SAB-only | These are atlas classifications, not the current relationship-table partition. |
 | Public-pseudonymous case groups | 64 | Related source-image entries are kept together for navigation. |
 | Patch-label agreement | 3,763 / 3,763 | The atlas reports agreement for the labels carried by its patch records. |
 
@@ -49,9 +50,27 @@ reported separately.
 
 | Linkage layer | Current result | What it means |
 | --- | ---: | --- |
-| SAB/atlas source-image linkage | 3,763 patches assigned to 251 source-image groups; all 3,763 have recovered coordinates. | SAB and pixel-containment evidence place every patch on a source image. This is the layer displayed by the atlas. |
+| SAB/atlas source-image linkage | 3,763 patches assigned to 251 source-image groups; all 3,763 have recovered coordinates. The atlas source roles contain 3,111 patches in both-source groups and 652 in SAB-only groups. | SAB and pixel-containment evidence place every patch on a source image. This is the layer displayed by the atlas. |
 | Public NDB-UFES origin matching | 3,086 rows match one of 203 public NDB-UFES origin images; 677 rows do not. | The current relationship table records whether each SAB-linked patch also has a public NDB-UFES origin match. All rows remain in the full thesis scope. |
 | Patch-label agreement | 3,763 / 3,763 | The complete patch-label sources agree between NDB-UFES and SAB in the validated-linkage output. This is separate from the 677 rows whose reconstructed thesis metadata is missing and the 1,328 rows where reconstructed metadata differs from the complete patch-label source. |
+
+The two public-origin layers contain the same set of 203 public origin IDs,
+but they do not assign the same patch rows to the public-match category:
+
+| Current relationship status | Atlas both-source | Atlas SAB-only | Row total |
+| --- | ---: | ---: | ---: |
+| Public NDB-UFES match | 3,069 | 17 | 3,086 |
+| No public NDB-UFES match | 42 | 635 | 677 |
+| Column total | 3,111 | 652 | 3,763 |
+
+The off-diagonal cells contain 59 patches. This explains why the relationship
+split is 3,086/677 while the atlas source-role split is 3,111/652. Neither
+partition should be used as a substitute for the other.
+
+This 59-row cross-layer difference is unrelated to the 59 metadata-conflict
+rows whose reconstructed patch label agrees while another field triggers the
+conflict flag. The two sets have zero overlap. The 677 current no-match rows,
+by contrast, are the same 677 rows whose reconstructed metadata is missing.
 
 The authoritative atlas summary is `results/phase0/validated_linkage/validated_linkage_summary.json`. The authoritative thesis relationship summary is `results/phase3/current_thesis_batches/relationship_update_summary.json`. The [Atlas Index](atlas-index.md) packages the public atlas layer without the LAB crosswalk.
 

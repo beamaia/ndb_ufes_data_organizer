@@ -28,6 +28,14 @@ INVENTORY_CSV = VALIDATED_DIR / "validated_wsi_inventory.csv"
 PATCH_LINKAGE_CSV = VALIDATED_DIR / "validated_patch_wsi_linkage.csv"
 SIMILARITY_CSV = VALIDATED_DIR / "validated_wsi_patch_similarity.csv"
 SUMMARY_JSON = VALIDATED_DIR / "validated_linkage_summary.json"
+SAB_COORDINATE_SUMMARY_JSON = (
+    ROOT
+    / "results/phase0/sab_coordinate_recovery/sab_patch_coordinate_recovery_summary.json"
+)
+SAB_CONSISTENCY_SUMMARY_JSON = (
+    ROOT / "results/phase0/sab_consistency_validation/validation_summary.json"
+)
+RELATIONSHIP_CSV = ROOT / "data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv"
 RELATIONSHIP_SUMMARY_JSON = ROOT / "results/phase3/current_thesis_batches/relationship_update_summary.json"
 ARTIFACT_MANIFEST_JSON = ROOT / "results/phase3/current_thesis_batches/artifact_manifest.json"
 SCHEMA_PATH = OUTPUT_DIR / "atlas_schema.json"
@@ -217,6 +225,192 @@ def _counts(series: pd.Series) -> dict[str, int]:
     return {str(key): int(value) for key, value in series.value_counts(dropna=False).sort_index().items()}
 
 
+def _boolish_series(series: pd.Series) -> pd.Series:
+    return series.astype(str).str.strip().str.lower().isin({"true", "1", "yes", "y"})
+
+
+def _normalized_public_origin_ids(series: pd.Series) -> set[str]:
+    normalized: set[str] = set()
+    for value in series.dropna():
+        try:
+            numeric = float(value)
+            if numeric.is_integer():
+                normalized.add(str(int(numeric)))
+                continue
+        except (TypeError, ValueError):
+            pass
+        text = str(value).strip()
+        if text:
+            normalized.add(text)
+    return normalized
+
+
+def _build_linkage_layer_reconciliation(
+    linkage: pd.DataFrame,
+    relationship: pd.DataFrame,
+) -> dict:
+    """Compare the two public-origin classifications without exporting row IDs."""
+
+    relationship_rows = relationship[
+        ["patch_id", "found", "linked_ndb_origin_id"]
+    ].copy()
+    atlas_rows = linkage[
+        [
+            "ndb_patch",
+            "final_validated_wsi_id",
+            "previous_public_ndb_wsi_match",
+            "origin_validation_id",
+            "linkage_evidence_level",
+            "current_metadata_vs_complete_patch_label_status",
+        ]
+    ].copy()
+    comparison = relationship_rows.merge(
+        atlas_rows,
+        left_on="patch_id",
+        right_on="ndb_patch",
+        how="inner",
+        validate="one_to_one",
+    )
+    if len(comparison) != len(relationship_rows) or len(comparison) != len(atlas_rows):
+        raise ValueError(
+            "relationship and atlas linkage tables do not cover the same patch IDs"
+        )
+
+    comparison["current_public_match"] = _boolish_series(comparison["found"])
+    comparison["atlas_both_source"] = comparison[
+        "final_validated_wsi_id"
+    ].astype(str).str.startswith("public_ndb_wsi_")
+    comparison["metadata_missing"] = comparison[
+        "current_metadata_vs_complete_patch_label_status"
+    ].eq("current_metadata_missing_patch")
+    comparison["metadata_conflict_with_agreeing_patch_label"] = (
+        comparison["linkage_evidence_level"].eq(
+            "validated_exact_with_metadata_conflict"
+        )
+        & comparison["current_metadata_vs_complete_patch_label_status"].eq(
+            "agrees"
+        )
+    )
+
+    current_match_atlas_both = int(
+        (
+            comparison["current_public_match"]
+            & comparison["atlas_both_source"]
+        ).sum()
+    )
+    current_match_atlas_sab_only = int(
+        (
+            comparison["current_public_match"]
+            & ~comparison["atlas_both_source"]
+        ).sum()
+    )
+    current_no_match_atlas_both = int(
+        (
+            ~comparison["current_public_match"]
+            & comparison["atlas_both_source"]
+        ).sum()
+    )
+    current_no_match_atlas_sab_only = int(
+        (
+            ~comparison["current_public_match"]
+            & ~comparison["atlas_both_source"]
+        ).sum()
+    )
+    different_public_match_status = comparison[
+        "current_public_match"
+    ].ne(comparison["atlas_both_source"])
+
+    current_public_origins = _normalized_public_origin_ids(
+        relationship_rows.loc[
+            _boolish_series(relationship_rows["found"]),
+            "linked_ndb_origin_id",
+        ]
+    )
+    atlas_public_origins = _normalized_public_origin_ids(
+        linkage["previous_public_ndb_wsi_match"]
+    )
+
+    atlas_both_rows = comparison["atlas_both_source"]
+    atlas_preconsolidation_source_ids = int(
+        comparison["origin_validation_id"].nunique()
+    )
+    atlas_both_preconsolidation_source_ids = int(
+        comparison.loc[atlas_both_rows, "origin_validation_id"].nunique()
+    )
+    atlas_sab_only_preconsolidation_source_ids = int(
+        comparison.loc[~atlas_both_rows, "origin_validation_id"].nunique()
+    )
+    atlas_final_source_groups = int(
+        comparison["final_validated_wsi_id"].nunique()
+    )
+
+    return {
+        "patch_rows": int(len(comparison)),
+        "current_relationship_patch_roles": {
+            "with_public_ndb_ufes_origin_match": int(
+                comparison["current_public_match"].sum()
+            ),
+            "without_public_ndb_ufes_origin_match": int(
+                (~comparison["current_public_match"]).sum()
+            ),
+        },
+        "atlas_source_roles": {
+            "public_ndb_ufes_and_sab_patch_rows": int(atlas_both_rows.sum()),
+            "sab_only_patch_rows": int((~atlas_both_rows).sum()),
+        },
+        "row_status_comparison": {
+            "current_match_and_atlas_both_source": current_match_atlas_both,
+            "current_match_and_atlas_sab_only": current_match_atlas_sab_only,
+            "current_no_match_and_atlas_both_source": current_no_match_atlas_both,
+            "current_no_match_and_atlas_sab_only": current_no_match_atlas_sab_only,
+            "different_public_match_status_rows": (
+                current_match_atlas_sab_only + current_no_match_atlas_both
+            ),
+            "metadata_conflict_with_agreeing_patch_label_rows": int(
+                comparison["metadata_conflict_with_agreeing_patch_label"].sum()
+            ),
+            "overlap_with_metadata_conflict_agreeing_patch_label_rows": int(
+                (
+                    different_public_match_status
+                    & comparison["metadata_conflict_with_agreeing_patch_label"]
+                ).sum()
+            ),
+            "current_no_match_rows_with_missing_reconstructed_metadata": int(
+                (
+                    ~comparison["current_public_match"]
+                    & comparison["metadata_missing"]
+                ).sum()
+            ),
+            "current_no_match_status_equals_missing_metadata_status": bool(
+                (~comparison["current_public_match"]).equals(
+                    comparison["metadata_missing"]
+                )
+            ),
+        },
+        "public_origin_sets": {
+            "current_relationship_public_origins": int(
+                len(current_public_origins)
+            ),
+            "atlas_public_origins": int(len(atlas_public_origins)),
+            "same_public_origin_id_set": current_public_origins
+            == atlas_public_origins,
+        },
+        "atlas_group_consolidation": {
+            "sab_source_ids_before_final_grouping": atlas_preconsolidation_source_ids,
+            "sab_source_ids_mapped_to_public_atlas_groups": (
+                atlas_both_preconsolidation_source_ids
+            ),
+            "sab_source_ids_retained_as_sab_only_groups": (
+                atlas_sab_only_preconsolidation_source_ids
+            ),
+            "final_atlas_source_image_groups": atlas_final_source_groups,
+            "source_ids_consolidated_by_public_origin_grouping": (
+                atlas_preconsolidation_source_ids - atlas_final_source_groups
+            ),
+        },
+    }
+
+
 def _build_conflict_report(linkage: pd.DataFrame) -> dict:
     conflict = linkage[linkage["linkage_evidence_level"].eq("validated_exact_with_metadata_conflict")]
     disagreements = linkage[linkage["current_metadata_vs_complete_patch_label_status"].eq("disagrees")]
@@ -288,6 +482,9 @@ def _build_release_facts(
     summary: dict,
     relationship_summary: dict,
     artifact_manifest: dict,
+    linkage_layer_reconciliation: dict,
+    sab_coordinate_summary: dict,
+    sab_consistency_summary: dict,
     all_coordinate_patch_pairs: int,
 ) -> dict:
     """Build the small public fact contract used by reader-facing pages."""
@@ -317,7 +514,7 @@ def _build_release_facts(
 
     pruning = artifact_manifest["batch3_virchow_pruning"]
     return {
-        "schema_version": 2,
+        "schema_version": 3,
         "report_type": "public_release_facts",
         "privacy_mode": "public_aggregate",
         "generated_by": "scripts/src/release/build_atlas_public_index.py",
@@ -349,6 +546,26 @@ def _build_release_facts(
                 relationship_summary["missing_linkage_pndb_origins"]
             ),
         },
+        "linkage_layer_reconciliation": linkage_layer_reconciliation,
+        "source_image_inventory_scope": {
+            "public_ndb_ufes_source_image_files": int(
+                sab_consistency_summary["current_origin_images"]
+            ),
+            "public_source_image_files_exact_matched_to_sab": int(
+                sab_consistency_summary[
+                    "current_origin_images_exact_matched_to_sab"
+                ]
+            ),
+            "public_source_image_files_without_sab_match": int(
+                sab_consistency_summary["current_origin_images_unmatched_to_sab"]
+            ),
+            "sab_source_ids_with_patch_coordinates_before_final_grouping": int(
+                sab_coordinate_summary["unique_sab_origins"]
+            ),
+            "final_patch_carrying_atlas_source_image_groups": int(
+                summary["validated_wsi_count"]
+            ),
+        },
         "thesis_batches": batches,
         "canonical_experiment_batches": ["batch1", "batch2"],
         "batch3_virchow_pruning": {
@@ -372,8 +589,15 @@ def main() -> None:
     )
     coordinate_metrics["similarity_pair_count"] = coordinate_metrics["similarity_pair_count"].fillna(0).astype(int)
     summary = json.loads(SUMMARY_JSON.read_text())
+    sab_coordinate_summary = json.loads(SAB_COORDINATE_SUMMARY_JSON.read_text())
+    sab_consistency_summary = json.loads(SAB_CONSISTENCY_SUMMARY_JSON.read_text())
+    relationship = pd.read_csv(RELATIONSHIP_CSV)
     relationship_summary = json.loads(RELATIONSHIP_SUMMARY_JSON.read_text())
     artifact_manifest = json.loads(ARTIFACT_MANIFEST_JSON.read_text())
+    linkage_layer_reconciliation = _build_linkage_layer_reconciliation(
+        linkage,
+        relationship,
+    )
 
     public = inventory[
         [
@@ -433,6 +657,9 @@ def main() -> None:
                 summary,
                 relationship_summary,
                 artifact_manifest,
+                linkage_layer_reconciliation,
+                sab_coordinate_summary,
+                sab_consistency_summary,
                 int(coordinate_metrics["patch_pair_count"].sum()),
             ),
             indent=2,

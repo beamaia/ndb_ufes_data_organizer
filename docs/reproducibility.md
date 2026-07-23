@@ -52,8 +52,11 @@ uv run python scripts/src/release/validate_atlas_public_index.py
 ```
 
 The SAB/atlas layer assigns all 3,763 patches to 251 source-image groups. The
-public NDB-UFES matching layer remains separately described as 3,086 matched
-rows plus 677 rows without a public origin match.
+atlas roles contain 3,111 patches in both-source groups and 652 in SAB-only
+groups. The public NDB-UFES matching layer remains separately described as
+3,086 matched rows plus 677 rows without a public origin match. The two
+classifications differ for 59 patch rows; the generated
+`release_facts.json` stores the aggregate cross-tabulation.
 
 ## Canonical experiment release
 

@@ -60,6 +60,28 @@ The atlas linkage output is a separate, public-pseudonymous view of the same
 coordinate/pixel-containment evidence, including rows whose thesis metadata
 linkage is missing.
 
+Its source roles place 3,111 patches in 203 both-source groups and 652 patches
+in 48 SAB-only groups. The current relationship classification instead marks
+3,086 patches with a public origin match and 677 without one:
+
+| Current relationship status | Atlas both-source | Atlas SAB-only | Row total |
+| --- | ---: | ---: | ---: |
+| Public NDB-UFES match | 3,069 | 17 | 3,086 |
+| No public NDB-UFES match | 42 | 635 | 677 |
+| Column total | 3,111 | 652 | 3,763 |
+
+The 59 off-diagonal rows show why those two partitions are not interchangeable.
+Both layers contain the same set of 203 public origin IDs.
+
+The source-image artifacts also have distinct processing stages:
+
+| Stage | Count | Meaning |
+| --- | ---: | --- |
+| Public NDB-UFES source-image files scanned | 242 | Source-image file inventory before restricting to patch-carrying atlas groups. |
+| Exact public-image matches to SAB | 222 | File-level exact image matches; 20 files have no exact SAB match. |
+| SAB source identifiers with patch coordinates | 255 | Pre-consolidation SAB sources represented by the 3,763 patches. |
+| Final atlas source-image groups | 251 | Four SAB source IDs consolidate under public-origin groups already represented in the atlas. |
+
 The existing `*_wsi_*` field names and pseudonyms are retained for
 compatibility with generated artifacts. They identify source-image groups and
 do not establish that the underlying images are whole-slide images.

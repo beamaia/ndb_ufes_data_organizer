@@ -122,15 +122,19 @@ The repository currently tracks three related scopes:
 | SAB-linked patches without a public NDB-UFES origin match | 677 |
 | Source-image groups in the atlas | 251 |
 | Public NDB-UFES + SAB / SAB-only source-image groups | 203 / 48 |
+| Patches in atlas both-source / SAB-only groups | 3,111 / 652 |
+| Patches with different public-match status across the relationship and atlas layers | 59 |
 | Matched origins available for the older fold-design run | 203 |
 | Planned folds for that run | 6 |
 
-The 3,763, 3,086/677, and 251 counts describe different layers. See
+SAB provides source-image placement for all 3,763 patches. The current
+relationship table and the atlas use different public-origin classifications:
+their 3,086/677 and 3,111/652 patch partitions differ for 59 rows. See
 [Thesis Experiment Design](docs/thesis-experiment-batches.md),
 [Canonical Experiment Results](docs/experiment-results.md), and
-[Atlas Guide](docs/atlas-guide.md) before comparing them.
+[Current Release Facts](docs/release-facts.md) before comparing them.
 
-Patch-level diagnosis counts:
+Earlier 3,086-row matched-subset diagnosis counts:
 
 | Diagnosis | Patch count |
 | --- | ---: |

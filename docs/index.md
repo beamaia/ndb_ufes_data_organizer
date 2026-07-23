@@ -14,11 +14,12 @@ This wiki was prepared with assistance from Codex (GPT-5), following instruction
 ## Scope
 
 Both final experiments use all 3,763 P-NDB-UFES patches. SAB provides
-patch-to-source-image linkage for all 3,763. Of these, 3,086 patches also match the 203
-public NDB-UFES origin images and form the earlier embedding and fold-design
-subset. The remaining 677 patches are SAB-linked but do not have a public
-NDB-UFES origin match. [Thesis Experiment Design](thesis-experiment-batches.md)
-explains why both counts appear.
+patch-to-source-image linkage for all 3,763. The current relationship table
+matches 3,086 patches to 203 public NDB-UFES origins and leaves 677 without a
+public match. The atlas independently places 3,111 patches in 203 both-source
+groups and 652 in 48 SAB-only groups. The two public-match classifications
+differ for 59 patch rows. [Current Release Facts](release-facts.md) provides
+the complete reconciliation.
 
 The root-level public atlas provides a visual view of 251 source-image groups,
 organized under 64 public-pseudonymous case groups. Start with the
@@ -44,7 +45,9 @@ The dataset contains **3,763 SAB-linked patches**, all of which are used by
 both final experiments. Of these, **3,086 patches** match the 203 public
 NDB-UFES origin images and were used by the earlier embedding and fold-design
 pipeline; the remaining 677 do not have a public NDB-UFES origin match. The
-atlas organizes all 3,763 patches into **251 source-image groups**.
+atlas separately organizes all 3,763 patches into **251 source-image groups**.
+Its source roles contain 3,111 patches in both-source groups and 652 in
+SAB-only groups; this is not the same row partition as 3,086/677.
 
 ## NDB-UFES-Matched Subset Release State
 

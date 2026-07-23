@@ -19,6 +19,11 @@ The complete NDB-UFES and SAB patch-label sources agree for all 3,763 atlas patc
 
 The last number is intentionally not the sum of only the direct label disagreements. It includes 59 rows whose reconstructed patch label agrees but whose other metadata still triggers the atlas conflict flag.
 
+This 59-row metadata cohort is not the separate 59-row public-match
+classification difference documented in
+[Current Release Facts](release-facts.md#linkage-layer-reconciliation).
+The two sets have zero patch rows in common.
+
 ## Interim use policy
 
 The following interim policy preserves the current evidence before the final

@@ -32,17 +32,21 @@ The field names, types, nullability, source-role values, and CSV encodings are r
 | Source-image groups | 251 |
 | Public NDB-UFES + SAB source-image groups | 203 |
 | SAB-only recovered source-image groups | 48 |
+| Patches in public NDB-UFES + SAB groups | 3,111 |
+| Patches in SAB-only groups | 652 |
 | Source-image rows with coordinate-derived area metrics | 251 |
 | Patch-label agreement rows | 3,763 |
 | All coordinate-derived same-source-image patch pairs | 30,531 |
 | Same-source-image similarity rows available | 29,350 |
 
-The current relationship table has a different field of view: 3,086 rows match
-public NDB-UFES origin images and 677 do not. All 3,763 rows still have SAB
-source-image linkage. That does not reduce the atlas source-image count; it describes which rows can
-join to the public NDB-UFES origin metadata used by the earlier fold-design
-pipeline. See [Atlas Guide](atlas-guide.md#two-linkage-layers) for the
-distinction.
+The current relationship table has a different field of view: 3,086 rows
+match public NDB-UFES origin images and 677 do not. All 3,763 rows still have
+SAB source-image linkage. A row-level comparison finds 3,069 patches with a
+public match in both layers, 17 matched only by the current relationship
+classification, 42 assigned only to an atlas both-source group, and 635
+without a public match in either layer. The public-match status therefore
+differs for 59 patches. See [Atlas Guide](atlas-guide.md#two-linkage-layers)
+for the reconciliation.
 
 The coverage fields in each source-image row are calculated from the recovered
 coordinate boxes and displayed source-image dimensions. `patch_pair_count` is

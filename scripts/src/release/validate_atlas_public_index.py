@@ -99,7 +99,7 @@ def main() -> None:
         raise SystemExit("atlas methods file has the wrong report_type")
     if methods.get("privacy_mode") != "public_methods":
         raise SystemExit("atlas methods file must be public_methods")
-    if release_facts.get("schema_version") != 2:
+    if release_facts.get("schema_version") != 3:
         raise SystemExit("unsupported public release facts schema_version")
     if release_facts.get("report_type") != "public_release_facts":
         raise SystemExit("public release facts have the wrong report_type")
@@ -234,6 +234,162 @@ def main() -> None:
             manifest_match_scope.get(key, -2)
         ):
             raise SystemExit(f"public release facts NDB-UFES match scope mismatch for {key}")
+
+    reconciliation = release_facts.get("linkage_layer_reconciliation", {})
+    if int(reconciliation.get("patch_rows", -1)) != int(atlas_scope["patch_rows"]):
+        raise SystemExit("linkage-layer reconciliation does not cover the atlas patch scope")
+
+    current_roles = reconciliation.get("current_relationship_patch_roles", {})
+    atlas_roles = reconciliation.get("atlas_source_roles", {})
+    comparison = reconciliation.get("row_status_comparison", {})
+    origin_sets = reconciliation.get("public_origin_sets", {})
+    consolidation = reconciliation.get("atlas_group_consolidation", {})
+
+    comparison_cells = {
+        "both": int(comparison.get("current_match_and_atlas_both_source", -1)),
+        "current_only": int(
+            comparison.get("current_match_and_atlas_sab_only", -1)
+        ),
+        "atlas_only": int(
+            comparison.get("current_no_match_and_atlas_both_source", -1)
+        ),
+        "neither": int(
+            comparison.get("current_no_match_and_atlas_sab_only", -1)
+        ),
+    }
+    if any(value < 0 for value in comparison_cells.values()):
+        raise SystemExit("linkage-layer reconciliation has a missing comparison cell")
+    if sum(comparison_cells.values()) != int(reconciliation["patch_rows"]):
+        raise SystemExit("linkage-layer comparison cells do not cover all patches")
+    if (
+        comparison_cells["both"] + comparison_cells["current_only"]
+        != int(current_roles.get("with_public_ndb_ufes_origin_match", -1))
+    ):
+        raise SystemExit("current relationship match margin is inconsistent")
+    if (
+        comparison_cells["atlas_only"] + comparison_cells["neither"]
+        != int(current_roles.get("without_public_ndb_ufes_origin_match", -1))
+    ):
+        raise SystemExit("current relationship no-match margin is inconsistent")
+    if (
+        comparison_cells["both"] + comparison_cells["atlas_only"]
+        != int(atlas_roles.get("public_ndb_ufes_and_sab_patch_rows", -1))
+    ):
+        raise SystemExit("atlas both-source patch margin is inconsistent")
+    if (
+        comparison_cells["current_only"] + comparison_cells["neither"]
+        != int(atlas_roles.get("sab_only_patch_rows", -1))
+    ):
+        raise SystemExit("atlas SAB-only patch margin is inconsistent")
+    if (
+        comparison_cells["current_only"] + comparison_cells["atlas_only"]
+        != int(comparison.get("different_public_match_status_rows", -1))
+    ):
+        raise SystemExit("cross-layer status-difference count is inconsistent")
+    metadata_conflict_agreeing_rows = int(
+        comparison.get("metadata_conflict_with_agreeing_patch_label_rows", -1)
+    )
+    if metadata_conflict_agreeing_rows != int(
+        conflict_report.get("conflict_rows", {})
+        .get("by_metadata_status", {})
+        .get("agrees", -2)
+    ):
+        raise SystemExit(
+            "cross-layer reconciliation does not match the metadata-conflict summary"
+        )
+    overlap_with_metadata_conflict = int(
+        comparison.get(
+            "overlap_with_metadata_conflict_agreeing_patch_label_rows", -1
+        )
+    )
+    if not 0 <= overlap_with_metadata_conflict <= min(
+        int(comparison["different_public_match_status_rows"]),
+        metadata_conflict_agreeing_rows,
+    ):
+        raise SystemExit("invalid overlap between the two 59-row classifications")
+    if comparison.get(
+        "current_no_match_status_equals_missing_metadata_status"
+    ) is not True:
+        raise SystemExit(
+            "current no-match rows and missing reconstructed metadata rows diverge"
+        )
+    if int(
+        comparison.get(
+            "current_no_match_rows_with_missing_reconstructed_metadata", -1
+        )
+    ) != int(current_roles.get("without_public_ndb_ufes_origin_match", -2)):
+        raise SystemExit(
+            "current no-match and missing reconstructed metadata counts diverge"
+        )
+
+    source_patch_counts = {
+        source: sum(
+            int(row["patch_count"]) for row in rows if row["source"] == source
+        )
+        for source in source_counts
+    }
+    if int(atlas_roles.get("public_ndb_ufes_and_sab_patch_rows", -1)) != int(
+        source_patch_counts.get("both", -2)
+    ):
+        raise SystemExit("atlas both-source patch rows do not match the public index")
+    if int(atlas_roles.get("sab_only_patch_rows", -1)) != int(
+        source_patch_counts.get("SAB-only recovered source image", -2)
+    ):
+        raise SystemExit("atlas SAB-only patch rows do not match the public index")
+    if int(current_roles.get("with_public_ndb_ufes_origin_match", -1)) != int(
+        facts_match_scope.get("matched_patch_rows", -2)
+    ):
+        raise SystemExit("reconciled current-match rows do not match release facts")
+    if int(
+        current_roles.get("without_public_ndb_ufes_origin_match", -1)
+    ) != int(facts_match_scope.get("without_public_match_patch_rows", -2)):
+        raise SystemExit("reconciled current no-match rows do not match release facts")
+    if origin_sets.get("same_public_origin_id_set") is not True:
+        raise SystemExit("the two linkage layers do not contain the same public-origin set")
+    for key in (
+        "current_relationship_public_origins",
+        "atlas_public_origins",
+    ):
+        if int(origin_sets.get(key, -1)) != int(
+            facts_match_scope.get("matched_public_origins", -2)
+        ):
+            raise SystemExit(f"public-origin reconciliation mismatch for {key}")
+
+    preconsolidation_source_ids = int(
+        consolidation.get("sab_source_ids_before_final_grouping", -1)
+    )
+    if preconsolidation_source_ids != int(
+        consolidation.get("sab_source_ids_mapped_to_public_atlas_groups", -2)
+    ) + int(consolidation.get("sab_source_ids_retained_as_sab_only_groups", -2)):
+        raise SystemExit("pre-consolidation SAB source-ID margins are inconsistent")
+    if int(consolidation.get("final_atlas_source_image_groups", -1)) != int(
+        atlas_scope["validated_wsi_count"]
+    ):
+        raise SystemExit("final atlas source-image group count is inconsistent")
+    if int(
+        consolidation.get("source_ids_consolidated_by_public_origin_grouping", -1)
+    ) != preconsolidation_source_ids - int(
+        consolidation["final_atlas_source_image_groups"]
+    ):
+        raise SystemExit("atlas source-group consolidation difference is inconsistent")
+
+    inventory_scope = release_facts.get("source_image_inventory_scope", {})
+    if int(inventory_scope.get("public_ndb_ufes_source_image_files", -1)) != int(
+        inventory_scope.get("public_source_image_files_exact_matched_to_sab", -2)
+    ) + int(inventory_scope.get("public_source_image_files_without_sab_match", -2)):
+        raise SystemExit("public source-image inventory margins are inconsistent")
+    if int(
+        inventory_scope.get(
+            "sab_source_ids_with_patch_coordinates_before_final_grouping", -1
+        )
+    ) != preconsolidation_source_ids:
+        raise SystemExit("SAB coordinate-source count does not match reconciliation")
+    if int(
+        inventory_scope.get(
+            "final_patch_carrying_atlas_source_image_groups", -1
+        )
+    ) != int(atlas_scope["validated_wsi_count"]):
+        raise SystemExit("source-image inventory final group count is inconsistent")
 
     batches = release_facts.get("thesis_batches", {})
     if release_facts.get("canonical_experiment_batches") != ["batch1", "batch2"]:

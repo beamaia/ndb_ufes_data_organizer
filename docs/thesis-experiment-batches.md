@@ -69,8 +69,11 @@ The atlas and relationship metadata answer different questions:
 
 | Layer | Scope | Meaning |
 | --- | --- | --- |
-| SAB/atlas source-image linkage | 3,763 patches, 251 source-image groups | SAB and coordinate/pixel evidence place every patch on a linked source image. |
+| SAB/atlas source-image linkage | 3,763 patches, 251 source-image groups; 3,111 patches in both-source groups and 652 in SAB-only groups | SAB and coordinate/pixel evidence place every patch on a linked source image. |
 | Public NDB-UFES origin matching | 3,086 matched rows + 677 rows without a public match | Records whether each SAB-linked patch can also join to a public NDB-UFES origin image and its metadata. |
+
+The two public-match classifications differ for 59 patch rows. The complete
+cross-tabulation is in [Current Release Facts](release-facts.md#linkage-layer-reconciliation).
 
 Rows without a public NDB-UFES origin match are retained. They receive unique
 fallback grouping where a stronger public match is unavailable; unrelated

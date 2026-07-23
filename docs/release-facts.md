@@ -4,7 +4,7 @@ This page provides a quick scope check for the current wiki release. It keeps
 the atlas, thesis relationship layer, and experiment batches distinct because
 they are not one dataset table.
 
-The machine-readable source is the [public release facts JSON](assets/atlas/release_facts.json). The JSON is generated from the validated atlas summary, the current relationship summary, and the thesis batch artifact manifest, then checked by the public atlas validator.
+The machine-readable source is the [public release facts JSON](assets/atlas/release_facts.json). The JSON is generated from the atlas patch linkage and summaries, the current relationship table and summary, the SAB source-image summaries, and the thesis batch artifact manifest, then checked by the public atlas validator.
 
 ## Scope at a glance
 
@@ -13,13 +13,37 @@ The machine-readable source is the [public release facts JSON](assets/atlas/rele
 | Full P-NDB-UFES thesis starting scope | 3,763 patch rows | Which rows the final experiments start from | [Thesis Experiment Design](thesis-experiment-batches.md) |
 | Public NDB-UFES origin matching | 3,086 matched + 677 without a public match | Which SAB-linked rows can also join to a public NDB-UFES origin image | [Data Dictionary](data-dictionary.md#current-ndb-ufes-match-counts) |
 | Atlas source-image scope | 251 source-image groups covering 3,763 patches | Which source image contains each patch according to recovered coordinate evidence | [Atlas Index](atlas-index.md) |
-| Atlas source roles | 203 public NDB-UFES + SAB / 48 SAB-only | What kind of source evidence supports each source-image group | [Atlas Guide](atlas-guide.md#atlas-snapshot) |
+| Atlas source roles | 203 groups / 3,111 patches with public NDB-UFES + SAB evidence; 48 groups / 652 patches with SAB-only evidence | What kind of source evidence supports each source-image group | [Atlas Guide](atlas-guide.md#atlas-snapshot) |
 | Atlas metadata-conflict cohort | 1,489 patch rows | Which atlas rows require metadata caution | [Metadata Conflict Review](metadata-conflict-review.md) |
 
-The practical rule is simple: **3,763** is the complete SAB-linked thesis
-starting scope, **3,086/677** describes the presence or absence of a public
-NDB-UFES origin match, and **251** describes the atlas source-image layer.
-These numbers are not substitutes for one another.
+SAB provides source-image placement for all **3,763** patches. The current
+relationship split of **3,086/677** and the atlas source-role split of
+**3,111/652** are separate classifications. They contain the same 203 public
+origin IDs but differ in public-match status for 59 patch rows.
+
+## Linkage-layer reconciliation
+
+| Current relationship status | Atlas both-source | Atlas SAB-only | Row total |
+| --- | ---: | ---: | ---: |
+| Public NDB-UFES match | 3,069 | 17 | 3,086 |
+| No public NDB-UFES match | 42 | 635 | 677 |
+| Column total | 3,111 | 652 | 3,763 |
+
+The 677 current no-match rows are the same 677 rows whose reconstructed
+metadata is missing. The 59 off-diagonal rows are not the separate 59
+metadata-conflict rows whose reconstructed patch label agrees while another
+metadata field triggers the conflict flag. Those two 59-row sets have zero
+overlap.
+
+The SAB coordinate artifact begins with 255 source identifiers. Of these, 207
+map to public-origin atlas groups and 48 remain SAB-only. Four of the 207 are
+consolidated under an already represented public origin, producing 203
+both-source groups and 251 final source-image groups overall.
+
+The separate public source-image inventory contains 242 image files: 222 exact
+image matches to SAB and 20 without an exact SAB match. This inventory count
+answers a different question from the 203 patch-carrying both-source atlas
+groups.
 
 ## Current thesis batches
 

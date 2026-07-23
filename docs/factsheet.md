@@ -57,10 +57,11 @@ scope: SAB source-image linkage is available for all 3,763 patches.
 The atlas provides a second, complementary view of the full 3,763-patch scope.
 Through SAB, coordinate, and pixel-containment evidence, all 3,763 patches are
 assigned to 251 source-image groups: 203 with public NDB-UFES + SAB evidence
-and 48 recovered from SAB only. The separate relationship table reports
-3,086 rows matched to public NDB-UFES origin images and 677 rows without that
-public match. These are different matching layers, not competing dataset
-totals.
+and 48 recovered from SAB only. Those group roles contain 3,111 and 652
+patches, respectively. The separate relationship table reports 3,086 rows
+matched to public NDB-UFES origin images and 677 rows without that public
+match. Their public-match classifications differ for 59 patch rows. These are
+different matching layers, not competing dataset totals.
 
 The public-safe [Atlas Index](atlas-index.md) provides one searchable row per
 source-image group. It excludes raw SAB case prefixes, image names, and local
