@@ -1,0 +1,12 @@
+{
+  "raw_patch_images": 3763,
+  "accepted_patch_rows": 3086,
+  "raw_absent_from_accepted": 677,
+  "listed_all_missing": 674,
+  "listed_wrong_ids": 150,
+  "proposed_correct_origin_candidates": 35,
+  "numeric_origin_images": 237,
+  "origins_with_accepted_patches": 203,
+  "patchless_origin_images": 34,
+  "candidate_policy": "manual_verified_only"
+}

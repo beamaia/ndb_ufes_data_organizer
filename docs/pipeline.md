@@ -1,6 +1,6 @@
 # Pipeline Overview
 
-This repository organizes NDB-UFES into leakage-safe six-fold assignments. It does not train or select a downstream diagnostic model.
+I organize the current matched subset into leakage-safe six-fold assignments. The pipeline does not train or select a downstream diagnostic model; it prepares data and records the decisions that a later model-training project can reuse.
 
 ```text
 Patch metadata and images

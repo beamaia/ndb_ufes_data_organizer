@@ -1,0 +1,31 @@
+{
+  "current_origin_images": 242,
+  "current_origin_images_exact_matched_to_sab": 222,
+  "current_origin_images_unmatched_to_sab": 20,
+  "origin_folder_vs_current_metadata_status_counts": {
+    "broad_folder_only": 137,
+    "agrees": 77,
+    "no_current_origin_match": 20,
+    "disagrees": 8
+  },
+  "current_patch_images": 3763,
+  "current_patch_images_exact_matched_to_sab": 3763,
+  "current_patch_images_unmatched_to_sab": 0,
+  "patch_csv_vs_sab_split_status_counts": {
+    "agrees": 1758,
+    "disagrees": 1328,
+    "missing_current_patch_metadata": 677
+  },
+  "patch_vs_origin_plausibility_status_counts": {
+    "plausible": 3240,
+    "plausible_but_origin_patch_disagreement": 421,
+    "impossible_or_high_conflict": 102
+  },
+  "review_priority_counts": {
+    "low": 1853,
+    "high": 1387,
+    "medium": 421,
+    "critical": 102
+  },
+  "case_prefixes": 64
+}

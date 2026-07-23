@@ -1,6 +1,6 @@
 # Dataset Factsheet
 
-This factsheet summarizes the organized NDB-UFES fold files and documentation produced by this repository. It is intended for public dataset users who need to understand provenance, labels, folds, demographics/risk factors, limitations, and leakage-safe usage.
+I use this factsheet to explain the organized NDB-UFES fold files, the atlas-backed linkage view, and the limits that matter for reuse. It is written for anyone who needs the provenance, labels, folds, demographics/risk factors, and leakage rules in one place.
 
 ## Dataset Identity
 
@@ -22,7 +22,10 @@ Lab attribution:
 
 ## Purpose of This Repository
 
-This repository organizes the public dataset into leakage-safe folds and publishes documentation for reuse. It does not train or evaluate downstream classifiers.
+I organize the public dataset into grouped folds and publish the decisions
+needed to reuse them. Model training remains in the separate training
+repository; this repository publishes the validated, sanitized thesis result
+summary and provenance.
 
 Main outputs:
 
@@ -30,8 +33,25 @@ Main outputs:
 - patch-level fold assignments,
 - data dictionary,
 - reproducibility notes,
-- audit guide,
+- validation guide,
 - public factsheet.
+
+## Thesis Experiment Update
+
+The completed thesis/article comparison uses the full 3,763-patch P-NDB-UFES
+scope in two experiments: the original-comparable Batch 1 split and the
+patient-first grouped, lower-contamination-risk Batch 2 split. MobileNetV2,
+DenseNet-121, and ResNet-50 were evaluated. Batch 3 is retained only as an
+exploratory Virchow-pruned archive. See [Thesis Experiment Design](thesis-experiment-batches.md)
+and [Canonical Experiment Results](experiment-results.md).
+
+The matched-subset fold files below remain useful because they document the SAB-linked subset where source/WSI linkage and embeddings were available at that stage. Their 3,086-patch count should be described as the SAB-linked subset count, not as the full P-NDB-UFES patch count.
+
+## Validated WSI Atlas View
+
+The atlas provides a second, complementary view of the full 3,763-patch scope. Through recovered coordinate and pixel-containment evidence, all 3,763 patches are assigned to 251 validated WSI IDs: 203 with public NDB-UFES + SAB evidence and 48 SAB-only recovered WSI groups. The separate thesis relationship table still reports 3,086 rows with recovered metadata linkage and 677 rows with missing metadata linkage. These are different linkage layers, not competing dataset totals.
+
+The public-safe [Atlas Index](atlas-index.md) provides one searchable row per validated WSI. It excludes raw SAB case prefixes, image names, and local filesystem paths. Use the [Atlas Guide](atlas-guide.md) for the evidence definitions and interpretation cautions.
 
 ## Matched Subset
 
@@ -120,7 +140,7 @@ The exploratory figures are not separate from this factsheet. They are the evide
 | --- | --- | --- |
 | Matched subset. | 203 matched origins from 237 source metadata rows. | The fold files describe the current matched fold-design subset, not every row in the source metadata copy. |
 | Patch counts and origin counts differ. | 81 OSCC origins produce 1,517 OSCC patch rows. 72 leukoplakia-with-dysplasia origins produce 930 patch rows. 50 leukoplakia-without-dysplasia origins produce 639 patch rows. | Patch-level class balance should not be read as origin-level prevalence. |
-| Risk-factor metadata has high `Not informed` rates. | At origin level, `Not informed` is 50.25% for sun exposure, 48.28% for alcohol consumption, 48.28% for tobacco use, and 47.29% for skin color. | These fields are useful for context and audit, but they should not silently control fold construction. |
+| Risk-factor metadata has high `Not informed` rates. | At origin level, `Not informed` is 50.25% for sun exposure, 48.28% for alcohol consumption, 48.28% for tobacco use, and 47.29% for skin color. | These fields are useful for context and review, but they should not silently control fold construction. |
 | Patch-level risk-factor metadata shows the same limitation. | At patch level, `Not informed` is 47.47% for sun exposure, 46.18% for alcohol consumption, 46.18% for tobacco use, and 45.14% for skin color. | Patch-row metadata inherits the same caution. |
 | Dysplasia severity is incomplete. | Missingness is 64.53% at origin level and 69.86% at patch level. | Dysplasia severity should be interpreted with diagnosis context and should not be treated as a complete covariate. |
 | Fold stratification uses supported variables. | Phase 3 used diagnosis, Virchow morphology cluster, gender, and age group. | These variables passed the required missingness and six-fold support checks for the current run. |
@@ -129,7 +149,7 @@ See [Exploratory Analysis](exploratory-analysis.md) for the full preview-first P
 
 ## Generated Dataset Figures
 
-These figures summarize the current matched subset and source-paper task counts. Interactive Plotly versions are embedded below. Static documentation copies are saved under `docs/assets/generated/`, and thesis-ready exports are saved under `results/thesis_figures/`.
+These figures summarize the current matched subset and source-paper task counts. Interactive Plotly versions are embedded below. Static documentation copies are saved under `docs/assets/generated/`, and thesis-ready exports are saved under `results/phase4/thesis_figures/`.
 
 How to read these figures:
 
@@ -153,6 +173,10 @@ The larger exploratory figure set is documented on [Exploratory Analysis](explor
 <p class="figure-caption">How to read this figure: each bar is Cramer's V for one pair of categorical variables. Values closer to 0 indicate weak association. Values closer to 1 indicate stronger association. This is a descriptive truth-table-style summary, not a causal test.</p>
 
 ## Fold Construction Status
+
+Current thesis note: use the two-experiment design in
+[Thesis Experiment Design](thesis-experiment-batches.md). The paragraph below
+describes the older SAB-linked matched-subset Phase 3 organizer run.
 
 The current fold construction completed and passed its strict validation report:
 
@@ -185,7 +209,7 @@ Frozen external pretrained embeddings used only for unsupervised morphology-awar
 
 - Some generated root Markdown files are historical notes rather than canonical documentation.
 - `scripts/phase4.py` and its older analysis modules have not been accepted as part of the current release path.
-- Current canonical folds are under `results/phase3_fold_creation/`. Similarly named files under data directories may be historical and should not replace them.
+- Current canonical folds are under `results/phase3/fold_creation/`. Similarly named files under data directories may be historical and should not replace them.
 - `fold_assignments_patch_level.csv` under the canonical results directory contains exactly 3,086 patch rows.
 - Coordinate-derived ROI coverage plots are deferred. Patch-origin-coordinate associations need to be regenerated before patch coverage areas are shown on origin images.
 - Chi-square tests in validation scripts should not be interpreted as proof that folds are identical.

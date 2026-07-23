@@ -210,7 +210,9 @@ report.write(f"\nImportant cautions:\n")
 report.write(f"  - Demographic/risk-factor fields with high Not informed/missingness should remain descriptive.\n")
 report.write(f"  - Do not treat these metadata fields as causal adjustment variables without a separate causal design.\n")
 report.write(f"  - Coordinate/ROI analyses should wait until patch-origin-coordinate associations are rerun.\n")
-report.write(f"  - Check stratification_variables_audit.csv before treating folds as final.\n")
+report.write(
+    "  - Check stratification_variables_validation.csv before treating folds as final.\n"
+)
 report.write(f"\nFiles generated:\n")
 report.write(f"  - fold_assignments_patch_level_extended.csv\n")
 report.write(f"  - fold_assignments_origin_extended.csv\n")

@@ -2,15 +2,88 @@
 
 This page documents the current organized data files used by this repository. It focuses on public reuse: what each file contains, how files relate to each other, and which fields require caution.
 
+## Which source answers which question?
+
+I use the following map when a count or label looks inconsistent. The files are related, but each one is authoritative for a different question.
+
+| Question | Use this source | Current scope | Do not substitute it with |
+| --- | --- | ---: | --- |
+| What is in the final thesis comparison? | [Thesis Experiment Design](thesis-experiment-batches.md) and the current relationship files | Two 3,763-row experiments; Batch 3 archived as exploratory | The older 3,086-row fold-design run |
+| Which patches belong in the older leakage-safe fold files? | `results/phase3/fold_creation/` and the Phase 1--3 pages | 3,086 patches, 203 origins, 6 folds | The full-scope thesis batch CSVs |
+| Which WSI context contains each atlas patch? | `results/phase0/validated_linkage/` or the public [Atlas Index](atlas-index.md) | 3,763 patches, 251 validated WSIs, coordinates for all represented patches | The 3,086 metadata-linked rows |
+| What can be loaded by the public website? | `docs/assets/atlas/` plus the Markdown pages | 251 public-pseudonymous WSI rows and small JSON contracts | The root public PDF remains a repository download; the LAB PDF, editable DOCX, and raw SAB crosswalk are excluded |
+| Where are label and metadata disagreements summarized? | [Metadata Conflict Review](metadata-conflict-review.md) and `metadata_conflict_summary.json` | 1,489 atlas conflict-flagged rows | A silent relabeling or automatic exclusion rule |
+
+When I update one layer, I should update its source artifact, its public summary, and the relevant row in the [Atlas Gap Map](atlas-gap-map.md). That is the maintenance rule that prevents the same number from acquiring different meanings on different pages.
+
 ## Dataset Levels
 
 | Level | Meaning | Current key files |
 | --- | --- | --- |
-| Origin / WSI | Original whole-slide or origin-level image/metadata row. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `results/phase3_fold_creation/fold_assignments_origin.csv` |
-| Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `results/phase3_fold_creation/fold_assignments_patch_level.csv` |
+| Origin / WSI | Original whole-slide or origin-level image/metadata row. | `data/ndb_ufes/origin_level/csvs/ndb-ufes.csv`, `results/phase3/fold_creation/fold_assignments_origin.csv` |
+| Patch | Patch-level rows linked back to an origin. | `data/ndb_ufes/patch/parcial_pndb_ufes.csv`, `results/phase3/fold_creation/fold_assignments_patch_level.csv` |
 | Link | Relationship images/files between original NDB-UFES and patch data. | `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` |
 
-## Current Counts
+## Current Thesis Linkage Counts
+
+The current thesis/article reassessment uses the full P-NDB-UFES patch scope where possible, while keeping explicit information about which rows have recovered NDB/SAB linkage.
+
+| Item | Count |
+| --- | ---: |
+| Full P-NDB-UFES patch rows | 3,763 |
+| Patch rows with recovered NDB/SAB linkage | 3,086 |
+| Patch rows retained with missing linkage metadata | 677 |
+| P-NDB origin or fallback groups | 880 |
+| Linked P-NDB origins | 203 |
+| Missing-linkage fallback groups | 677 |
+
+Updated relationship files:
+
+| File | Level | Rows | Meaning |
+| --- | --- | ---: | --- |
+| `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` | Patch | 3,763 | Current patch-level P-NDB-UFES to NDB/SAB relationship table. |
+| `data/ndb_ufes/link_level/csvs/pndb_ndb_origin_relationships.csv` | Origin/group | 880 | Current origin/fallback-group relationship summary. |
+| `results/phase3/current_thesis_batches/linkage_scope_summary.csv` | Summary | 6 | Counts for thesis figures and tables. |
+
+The counts below describe the SAB-linked matched-subset organizer files and should not be used alone as the full P-NDB-UFES experiment scope.
+
+## Validated WSI Atlas Index
+
+The atlas linkage output is a separate, public-pseudonymous view of the same 3,763 patch rows. It assigns all rows to a validated WSI ID using recovered coordinate/pixel-containment evidence, including rows whose thesis metadata linkage is missing.
+
+| File | Level | Rows | Meaning |
+| --- | --- | ---: | --- |
+| `docs/assets/atlas/validated_wsi_index.csv` | WSI | 251 | One public-safe row per validated WSI. |
+| `docs/assets/atlas/atlas_manifest.json` | Manifest | 1 | Counts, source artifacts, privacy mode, and excluded private fields. |
+| `docs/assets/atlas/atlas_schema.json` | Schema | 1 | Versioned public-index field contract: types, nullability, allowed source roles, and CSV encodings. |
+| `docs/assets/atlas/metadata_conflict_summary.json` | Aggregate review | 1 | Public-safe counts describing complete-label agreement, reconstructed-metadata disagreement, missing metadata, and mismatch pairs. |
+| `docs/assets/atlas/atlas_methods.json` | Methods | 1 | Implemented coordinate, pair-metric, threshold, pair-relation, and area-denominator contract; original DOCX renderer provenance remains pending. |
+| `docs/assets/atlas/release_facts.json` | Release facts | 1 | Public aggregate atlas scope, canonical Batch 1/2 status, and exploratory Batch 3 review totals. |
+| `results/phase0/validated_linkage/validated_patch_wsi_linkage.csv` | Patch | 3,763 | Atlas-level patch-to-WSI evidence and recovered coordinates. |
+| `results/phase0/validated_linkage/validated_wsi_inventory.csv` | WSI | 251 | Source inventory used to build the public index. |
+
+The public index includes these fields:
+
+| Field | Meaning |
+| --- | --- |
+| `validated_wsi_id` | Pseudonymous WSI identity used by the atlas. |
+| `source` | `both` for public NDB-UFES + SAB evidence, or `SAB-only recovered WSI`. |
+| `patch_count` | Number of atlas patches assigned to the WSI. |
+| `patch_pair_count` | Number of unordered same-WSI patch pairs, `n × (n - 1) / 2`. |
+| `similarity_pair_count` | Number of same-WSI pair rows present in the validated similarity artifact; it can be lower than `patch_pair_count`. |
+| `patches_with_overlap` | Number of patches that overlap at least one other patch by recovered coordinates. |
+| `overlapping_pair_count` | Number of same-WSI patch pairs with positive coordinate overlap. |
+| `mapped_image_area_percent` | Union of clipped patch boxes divided by displayed WSI image area. |
+| `repeated_sampled_area_percent` | Multiply-covered coordinate area divided by mapped patch union area. |
+| `repeated_full_wsi_image_area_percent` | Multiply-covered coordinate area divided by displayed WSI image area. |
+| `ndb_wsi_label`, `sab_wsi_label` | Source-level WSI labels; these may differ and should not be silently merged. |
+| `patches_oscc`, `patches_with_dysplasia`, `patches_without_dysplasia` | Counts of complete patch labels carried by the validated linkage output. |
+| `evidence_summary` | JSON-like count of atlas linkage-evidence categories for the WSI. |
+| `metadata_conflict_patch_count` | Patches where the atlas records a metadata conflict requiring caution. |
+
+Raw SAB case prefixes, image names, and local paths are intentionally excluded. See [Atlas Index](atlas-index.md) for the downloadable files and [Atlas Guide](atlas-guide.md) for the two linkage layers.
+
+## Matched-Subset Counts
 
 | Item | Count |
 | --- | ---: |
@@ -75,14 +148,14 @@ See [Fold Structure Explained](fold-structure-explained.md) for algorithm detail
 
 ## Required Fold Assignment Files
 
-The canonical current fold files are under `results/phase3_fold_creation/`. Older similarly named CSVs under `data/ndb_ufes/` may remain from previous runs, but they should not replace the canonical Phase 3 outputs unless they are regenerated and audited.
+The canonical current fold files are under `results/phase3/fold_creation/`. Older similarly named CSVs under `data/ndb_ufes/` may remain from previous runs, but they should not replace the canonical Phase 3 outputs unless they are regenerated and validated.
 
 ### Origin-Level Folds
 
 Path:
 
 ```text
-results/phase3_fold_creation/fold_assignments_origin.csv
+results/phase3/fold_creation/fold_assignments_origin.csv
 ```
 
 Rows: 203
@@ -102,14 +175,14 @@ Columns:
 | `stratification_key` | Combined stratum used by Phase 3 for round-robin LPT assignment. |
 | `fold` | Fold assignment, integer `0` through `5`. |
 
-Audit invariant: each `origin_id` must appear exactly once and have exactly one `fold`.
+Validation invariant: each `origin_id` must appear exactly once and have exactly one `fold`.
 
 ### Patch-Level Folds
 
 Path:
 
 ```text
-results/phase3_fold_creation/fold_assignments_patch_level.csv
+results/phase3/fold_creation/fold_assignments_patch_level.csv
 ```
 
 Rows: 3,086
@@ -126,11 +199,11 @@ Columns:
 | `localization`, `larger_size` | Lesion metadata fields inherited from the parent origin metadata. |
 | `fold` | Fold assignment inherited from the origin. |
 
-Audit invariant: every patch row must have a fold and all rows with the same `origin_id` must share the same fold.
+Validation invariant: every patch row must have a fold and all rows with the same `origin_id` must share the same fold.
 
 ### Legacy Data-Directory Fold Files
 
-The repository may also contain fold CSVs under `data/ndb_ufes/origin_level/csvs/` and `data/ndb_ufes/patch_level/csvs/`. Treat those as local or historical copies unless they are explicitly synchronized with `results/phase3_fold_creation/` after a validated Phase 3 run.
+The repository may also contain fold CSVs under `data/ndb_ufes/origin_level/csvs/` and `data/ndb_ufes/patch_level/csvs/`. Treat those as local or historical copies unless they are explicitly synchronized with `results/phase3/fold_creation/` after a validated Phase 3 run.
 
 ## Source Metadata Files
 
@@ -225,14 +298,14 @@ These fields are useful for factsheets, subgroup summaries, and fairness-aware r
 
 ## Validated Fold Artifacts
 
-The canonical current files are under `results/phase3_fold_creation/`. They contain 203 origin rows and 3,086 patch rows and were regenerated from the accepted Virchow/PCA=2/K=3 selection. Earlier Swin-based and 202-origin files are superseded.
+The canonical current files are under `results/phase3/fold_creation/`. They contain 203 origin rows and 3,086 patch rows and were regenerated from the accepted Virchow/PCA=2/K=3 selection. Earlier Swin-based and 202-origin files are superseded.
 
-### Stratification Variable Audit
+### Stratification Variable Validation
 
 Path:
 
 ```text
-results/phase3_fold_creation/stratification_variables_audit.csv
+results/phase3/fold_creation/stratification_variables_validation.csv
 ```
 
 Columns:
@@ -248,7 +321,7 @@ Columns:
 | `min_category_count` | Smallest non-missing category count. |
 | `reason` | Human-readable explanation for the decision. |
 
-By default, fold construction should use `origin_diagnosis`, `morph_cluster`, `gender`, and `age_group`. Other demographic and clinical variables are descriptive factsheet fields unless they are explicitly promoted and pass the audit gate. Variables with high `Not informed` or missingness should not silently affect fold assignment.
+By default, fold construction should use `origin_diagnosis`, `morph_cluster`, `gender`, and `age_group`. Other demographic and clinical variables are descriptive factsheet fields unless they are explicitly promoted and pass the validation gate. Variables with high `Not informed` or missingness should not silently affect fold assignment.
 
 ## Morphology Clusters
 
@@ -266,4 +339,4 @@ Cluster labels are nominal K-Means identifiers, not diagnoses or severity levels
 
 - `data/` is ignored by Git in the current `.gitignore`. Public users should retrieve source data from Mendeley. Maintainer-only data synchronization may use DVC.
 - `results/` contains generated artifacts. Public documentation should point to validated Phase 3 outputs and committed thesis/static figure exports, not arbitrary intermediate files.
-- Several root Markdown files are untracked audit/deliverable notes and should be promoted, archived, or deleted after manual review.
+- Several root Markdown files are untracked review/deliverable notes and should be promoted, archived, or deleted after manual review.

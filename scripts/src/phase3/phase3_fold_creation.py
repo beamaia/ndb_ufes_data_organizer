@@ -262,20 +262,20 @@ def evaluate_stratification_variables(
 
 def build_stratification_key(
     origin_df: pd.DataFrame,
-    audit_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
 ) -> tuple[pd.Series, list[str]]:
-    blocked = audit_df[
-        (audit_df["role"] == "required")
-        & (audit_df["status"] != "included_required")
+    blocked = validation_df[
+        (validation_df["role"] == "required")
+        & (validation_df["status"] != "included_required")
     ]
     if not blocked.empty:
         details = "; ".join(
             f"{row.column}: {row.reason}" for row in blocked.itertuples()
         )
-        raise ValueError(f"Required stratification audit failed: {details}")
+        raise ValueError(f"Required stratification validation failed: {details}")
 
-    included = audit_df.loc[
-        audit_df["status"].isin(["included_required", "included_optional"]),
+    included = validation_df.loc[
+        validation_df["status"].isin(["included_required", "included_optional"]),
         "column",
     ].tolist()
     parts = []
@@ -295,9 +295,12 @@ def create_stratification_keys(
         raise ValueError("Cluster assignments do not align with origin rows")
     result = origin_df.copy()
     result["morph_cluster"] = clusters.astype(int)
-    audit = evaluate_stratification_variables(result)
-    result["stratification_key"], included = build_stratification_key(result, audit)
-    return result, audit, included
+    validation_table = evaluate_stratification_variables(result)
+    result["stratification_key"], included = build_stratification_key(
+        result,
+        validation_table,
+    )
+    return result, validation_table, included
 
 
 def stratum_round_robin_lpt_assignment(
@@ -407,7 +410,7 @@ def validate_folds(
 def save_outputs(
     origin_df: pd.DataFrame,
     patch_df: pd.DataFrame,
-    audit_df: pd.DataFrame,
+    validation_df: pd.DataFrame,
     validation: dict,
     output_dir: Path,
 ) -> None:
@@ -438,6 +441,9 @@ def save_outputs(
         output_dir / "fold_assignments_patch_level.csv",
         index=False,
     )
-    audit_df.to_csv(output_dir / "stratification_variables_audit.csv", index=False)
+    validation_df.to_csv(
+        output_dir / "stratification_variables_validation.csv",
+        index=False,
+    )
     with (output_dir / "fold_validation.json").open("w") as validation_file:
         json.dump(validation, validation_file, indent=2)

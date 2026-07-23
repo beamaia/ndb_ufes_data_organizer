@@ -26,7 +26,7 @@ PATCH_DATA_FILE = PROJECT_ROOT / "data/ndb_ufes/patch/parcial_pndb_ufes.csv"
 ORIGIN_MAPPING_FILE = (
     PROJECT_ROOT / "data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv"
 )
-OUTPUT_DIR = PROJECT_ROOT / "results/phase3_fold_creation"
+OUTPUT_DIR = PROJECT_ROOT / "results/phase3/fold_creation"
 LOG_SEPARATOR = "=" * 80
 
 
@@ -53,7 +53,7 @@ def run() -> dict:
         f"PCA={params['pca_components']} and K={params['kmeans_clusters']}"
     )
     labels, clustering_diagnostics = apply_pca_kmeans(wsi_features, params)
-    origin_df, audit_df, included_columns = create_stratification_keys(
+    origin_df, validation_df, included_columns = create_stratification_keys(
         origin_df,
         labels,
     )
@@ -70,7 +70,7 @@ def run() -> dict:
         "clustering": clustering_diagnostics,
         "stratification_columns": included_columns,
     })
-    save_outputs(origin_df, patch_output, audit_df, validation, OUTPUT_DIR)
+    save_outputs(origin_df, patch_output, validation_df, validation, OUTPUT_DIR)
 
     logger.info(f"Assigned {validation['origin_count']} origins and {validation['patch_count']} patches")
     logger.info(f"Patch counts by fold: {validation['fold_patch_counts']}")

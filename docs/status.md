@@ -1,6 +1,37 @@
 # Implementation Status
 
-Last verified: 29 June 2026.
+Documentation/index verified: 23 July 2026. Pipeline artifacts referenced below come from the validated runs noted in each section.
+
+## Atlas Linkage Status
+
+The phase-0 validated-linkage output assigns all 3,763 patch rows to 251 validated WSI IDs and recovers coordinates for all 3,763 rows. The inventory contains 203 public NDB-UFES + SAB WSI groups and 48 SAB-only recovered WSI groups. Patch labels agree across the complete NDB-UFES and SAB patch sources for all 3,763 rows; 1,489 rows still carry a metadata-conflict flag and should be interpreted with the [Metadata Conflict Review](metadata-conflict-review.md) and [Atlas Guide](atlas-guide.md).
+
+The public-pseudonymous [Atlas Index](atlas-index.md) and [Atlas Manifest](assets/atlas/atlas_manifest.json) are generated from the phase-0 inventory. This atlas linkage layer is distinct from the thesis relationship metadata layer below, which contains 3,086 metadata-linked rows and 677 rows without recovered metadata linkage.
+
+## Current Thesis Linkage And Experiment Status
+
+The current thesis/article artifacts update the relationship between P-NDB-UFES patches and NDB/SAB images. The patch-level relationship file now contains all 3,763 P-NDB-UFES patch rows. Of these, 3,086 rows have recovered NDB/SAB linkage and 677 rows are retained with missing linkage metadata.
+
+Current files:
+
+| File | Purpose |
+| --- | --- |
+| `data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv` | Current patch-level P-NDB-UFES to NDB/SAB relationship table. |
+| `data/ndb_ufes/link_level/csvs/pndb_ndb_origin_relationships.csv` | Current origin/fallback-group relationship summary. |
+| `results/phase3/current_thesis_batches/` | Current batch CSVs, linkage summary, metadata consistency summary, and feature-diversity summary. |
+
+The final comparison is complete. Experiment 1 uses the 3,763-row
+original-comparable Batch 1 split; Experiment 2 uses the 3,763-row
+patient-first grouped Batch 2 split. Experiment 2 has no recovered origin or
+patient/case group crossing folds. Batch 3 contains 3,351 rows after Virchow
+cosine pruning, but is archived as exploratory and is not part of the final
+model comparison.
+
+The six canonical parent runs and 30 child folds have been validated. See
+[Canonical Experiment Results](experiment-results.md) and the
+[machine-readable manifest](assets/experiments/canonical_run_manifest.json).
+
+The Phase 1--3 sections below describe the 3,086-patch SAB-linked organizer run used for linkage and embedding work. They are still part of the project history, but should be read together with the current full-scope relationship files above.
 
 ## Phase 0: Data Checks
 
@@ -18,7 +49,7 @@ Evidence:
 
 - entrypoint: `scripts/phase1.py`
 - registry: `scripts/src/phase1/config.yaml`
-- run metadata: `results/phase1_metadata/master_runs.json`
+- run metadata: `results/phase1/metadata/master_runs.json`
 - mapping: `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv`
 
 Status: **complete for the current inputs and registry**. Run completed on 28 June 2026 and documentation was last verified on 29 June 2026.
@@ -60,8 +91,11 @@ The earlier 202-origin/3,066-patch files omitted valid origin `0` and are supers
 
 Status: **complete and validated**. Last verified on 29 June 2026.
 
-## Phase 4: Reporting
+## Phase 4: Reporting And Experiment Release
 
-The documentation and Phase 3 validation report now cover the core public fold checks. The separate Phase 4 analysis entrypoint is not yet an active release requirement and its older analysis modules still need an independent audit.
+The v1.0.0 reporting path verifies the six canonical parents and 30 stored
+child-fold records without retraining. It publishes sanitized result tables,
+figures, exploratory statistics, and provenance. Legacy Phase 4 analysis
+modules remain historical and are not required by the release builder.
 
-Status: **not yet accepted**.
+Status: **accepted for the v1.0.0 public release path**.

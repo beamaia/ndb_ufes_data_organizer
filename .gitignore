@@ -189,3 +189,19 @@ data
 
 
 .vscode*
+
+# Private/LAB, editable atlas source, and local training artifacts
+results/training_runs/
+results/phase0/validated_linkage/private_lab_crosswalks/
+research_ready_tables/
+release/*/lab/
+NDB_UFES_SAB_atlas.pdf
+NDB_UFES_SAB_atlas_public.docx
+~$*.docx
+
+# Internal test files are not part of the public repository
+tests/
+
+# Local plotting/runtime caches
+.cache/
+.uv-cache/

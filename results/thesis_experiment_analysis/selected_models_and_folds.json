@@ -1,0 +1,16 @@
+{
+  "Experiment 1": {
+    "model": "DenseNet-121",
+    "parent_run_id": "871b5389e4214e01a6f7d6d61ed82e21",
+    "fold": 3,
+    "validation_balanced_accuracy": 0.9237587711223233,
+    "mean_heldout_balanced_accuracy": 0.9171535834806891
+  },
+  "Experiment 2": {
+    "model": "DenseNet-121",
+    "parent_run_id": "828be67ffd494debbf0a355630b8b3f0",
+    "fold": 3,
+    "validation_balanced_accuracy": 0.715991333436062,
+    "mean_heldout_balanced_accuracy": 0.5940549028856316
+  }
+}

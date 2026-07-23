@@ -1,0 +1,10 @@
+{
+  "patch_rows": 3763,
+  "linked_patch_rows": 3086,
+  "missing_linkage_patch_rows": 677,
+  "pndb_origins": 880,
+  "linked_pndb_origins": 203,
+  "missing_linkage_pndb_origins": 677,
+  "relationship_csv": "data/ndb_ufes/link_level/csvs/ndb_pndb_relation.csv",
+  "origin_relationship_csv": "data/ndb_ufes/link_level/csvs/pndb_ndb_origin_relationships.csv"
+}

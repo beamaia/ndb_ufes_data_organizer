@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "name": "NDB-UFES/SAB public validated-WSI index",
+  "format": "csv",
+  "privacy_mode": "public_pseudonymous",
+  "identifier": "validated_wsi_id",
+  "description": "One public-safe row per validated WSI. Counts are atlas-level evidence summaries and are not a replacement for thesis relationship metadata.",
+  "columns": [
+    {
+      "name": "validated_wsi_id",
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "description": "Pseudonymous WSI identity used by the atlas."
+    },
+    {
+      "name": "source",
+      "type": "string",
+      "required": true,
+      "nullable": false,
+      "allowed_values": [
+        "both",
+        "SAB-only recovered WSI"
+      ],
+      "description": "Evidence source role for the validated WSI."
+    },
+    {
+      "name": "patch_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Number of atlas patches assigned to the WSI."
+    },
+    {
+      "name": "patch_pair_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Number of unordered same-WSI patch pairs, n \u00d7 (n - 1) / 2."
+    },
+    {
+      "name": "similarity_pair_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Number of same-WSI pair rows present in the validated similarity artifact; this can be lower than the theoretical pair count."
+    },
+    {
+      "name": "patches_with_overlap",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Number of patches that overlap at least one other patch by recovered coordinates."
+    },
+    {
+      "name": "overlapping_pair_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Number of same-WSI patch pairs with positive coordinate overlap."
+    },
+    {
+      "name": "mapped_image_area_percent",
+      "type": "number",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Union of clipped patch boxes divided by displayed WSI image area, as a percentage."
+    },
+    {
+      "name": "repeated_sampled_area_percent",
+      "type": "number",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Multiply-covered coordinate area divided by mapped patch union area, as a percentage."
+    },
+    {
+      "name": "repeated_full_wsi_image_area_percent",
+      "type": "number",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Multiply-covered coordinate area divided by displayed WSI image area, as a percentage."
+    },
+    {
+      "name": "ndb_wsi_label",
+      "type": "string",
+      "required": true,
+      "nullable": true,
+      "description": "WSI-level label carried by the public NDB-UFES source, when available."
+    },
+    {
+      "name": "sab_wsi_label",
+      "type": "string",
+      "required": true,
+      "nullable": true,
+      "description": "WSI-level label carried by the SAB source, when available."
+    },
+    {
+      "name": "public_ndb_origin_ids",
+      "type": "string",
+      "required": true,
+      "nullable": true,
+      "encoding": "pipe-delimited public origin IDs",
+      "description": "Public NDB origin identifiers supporting the WSI match."
+    },
+    {
+      "name": "public_ndb_wsi_matches",
+      "type": "number",
+      "required": true,
+      "nullable": true,
+      "description": "Number of public NDB-UFES WSI matches recorded for the WSI."
+    },
+    {
+      "name": "patches_oscc",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas patches carrying the complete OSCC label."
+    },
+    {
+      "name": "patches_with_dysplasia",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas patches carrying the complete dysplasia label."
+    },
+    {
+      "name": "patches_without_dysplasia",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas patches carrying the complete without-dysplasia label."
+    },
+    {
+      "name": "patch_labels_unavailable",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas patches without an available complete patch label."
+    },
+    {
+      "name": "evidence_summary",
+      "type": "json_string",
+      "required": true,
+      "nullable": false,
+      "description": "JSON object encoded as CSV text with atlas linkage-evidence counts."
+    },
+    {
+      "name": "manual_review_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas rows requiring manual review in the validated-linkage output."
+    },
+    {
+      "name": "metadata_conflict_patch_count",
+      "type": "integer",
+      "required": true,
+      "nullable": false,
+      "minimum": 0,
+      "description": "Atlas patches flagged with metadata conflict; this is not a final label decision."
+    }
+  ],
+  "excluded_private_fields": [
+    "sab_case_prefix",
+    "sab_origin_image_id",
+    "sab_origin_path"
+  ]
+}

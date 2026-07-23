@@ -1,0 +1,881 @@
+pndb_origin_id,patch_count,linked_patch_count,metadata_status,linked_ndb_origin_ids,ndb_public_ids,patient_case_groups,group_sources,diagnoses,folds,cv_roles
+0,20,20,linked_metadata,0,0,patient_48,patient_id,Leukoplakia with dysplasia|OSCC,3,cross_validation
+1,20,20,linked_metadata,1,1,patient_48,patient_id,Leukoplakia with dysplasia|OSCC,3,cross_validation
+2,15,15,linked_metadata,2,2,patient_39,patient_id,OSCC,3,cross_validation
+3,20,20,linked_metadata,3,3,patient_39,patient_id,OSCC,3,cross_validation
+4,17,17,linked_metadata,4,4,patient_81,patient_id,Leukoplakia with dysplasia|OSCC,2,cross_validation
+5,20,20,linked_metadata,5,5,patient_81,patient_id,OSCC,2,cross_validation
+6,11,11,linked_metadata,6,6,patient_78,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,0,cross_validation
+7,14,14,linked_metadata,7,7,patient_78,patient_id,Leukoplakia with dysplasia,0,cross_validation
+8,19,19,linked_metadata,8,8,patient_78,patient_id,Leukoplakia with dysplasia,0,cross_validation
+9,16,16,linked_metadata,9,9,patient_78,patient_id,Leukoplakia with dysplasia,0,cross_validation
+10,45,45,linked_metadata,10,10,patient_14,patient_id,OSCC,3,cross_validation
+11,64,64,linked_metadata,11,11,patient_14,patient_id,OSCC,3,cross_validation
+12,16,16,linked_metadata,12,12,patient_14,patient_id,OSCC,3,cross_validation
+13,10,10,linked_metadata,13,13,patient_14,patient_id,Leukoplakia with dysplasia|OSCC,3,cross_validation
+14,20,20,linked_metadata,14,14,patient_52,patient_id,Leukoplakia with dysplasia,5,held_out_test
+15,20,20,linked_metadata,15,15,patient_52,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+18,10,10,linked_metadata,18,18,patient_10,patient_id,OSCC,1,cross_validation
+19,20,20,linked_metadata,19,19,patient_10,patient_id,OSCC,1,cross_validation
+20,20,20,linked_metadata,20,20,patient_10,patient_id,OSCC,1,cross_validation
+21,20,20,linked_metadata,21,21,patient_10,patient_id,OSCC,1,cross_validation
+22,5,5,linked_metadata,22,22,patient_20,patient_id,Leukoplakia without dysplasia,3,cross_validation
+23,14,14,linked_metadata,23,23,patient_20,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,3,cross_validation
+24,4,4,linked_metadata,24,24,patient_63,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+25,17,17,linked_metadata,25,25,patient_63,patient_id,Leukoplakia with dysplasia,2,cross_validation
+26,8,8,linked_metadata,26,26,patient_63,patient_id,Leukoplakia with dysplasia,2,cross_validation
+28,11,11,linked_metadata,28,28,patient_55,patient_id,Leukoplakia with dysplasia,3,cross_validation
+29,17,17,linked_metadata,29,29,patient_55,patient_id,Leukoplakia with dysplasia,3,cross_validation
+30,15,15,linked_metadata,30,30,patient_71,patient_id,Leukoplakia with dysplasia|OSCC,1,cross_validation
+31,14,14,linked_metadata,31,31,patient_71,patient_id,OSCC,1,cross_validation
+32,2,2,linked_metadata,32,32,patient_31,patient_id,Leukoplakia with dysplasia,2,cross_validation
+33,17,17,linked_metadata,33,33,patient_31,patient_id,Leukoplakia with dysplasia,2,cross_validation
+34,12,12,linked_metadata,34,34,patient_31,patient_id,Leukoplakia with dysplasia|OSCC,2,cross_validation
+35,20,20,linked_metadata,35,35,patient_31,patient_id,OSCC,2,cross_validation
+36,2,2,linked_metadata,36,36,patient_90,patient_id,Leukoplakia without dysplasia,4,cross_validation
+37,20,20,linked_metadata,37,37,patient_90,patient_id,Leukoplakia without dysplasia,4,cross_validation
+38,13,13,linked_metadata,38,38,patient_90,patient_id,Leukoplakia with dysplasia,4,cross_validation
+39,20,20,linked_metadata,39,39,patient_90,patient_id,Leukoplakia with dysplasia,4,cross_validation
+41,37,37,linked_metadata,41,41,patient_78,patient_id,Leukoplakia with dysplasia|OSCC,0,cross_validation
+42,17,17,linked_metadata,42,42,patient_78,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,0,cross_validation
+43,19,19,linked_metadata,43,43,patient_78,patient_id,Leukoplakia without dysplasia,0,cross_validation
+46,18,18,linked_metadata,46,46,patient_51,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+47,3,3,linked_metadata,47,47,patient_51,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+48,12,12,linked_metadata,48,48,patient_82,patient_id,Leukoplakia with dysplasia|OSCC,3,cross_validation
+49,4,4,linked_metadata,49,49,patient_82,patient_id,OSCC,3,cross_validation
+50,17,17,linked_metadata,50,50,patient_82,patient_id,Leukoplakia without dysplasia,3,cross_validation
+51,14,14,linked_metadata,51,51,patient_82,patient_id,Leukoplakia with dysplasia,3,cross_validation
+52,15,15,linked_metadata,52,52,patient_82,patient_id,Leukoplakia with dysplasia,3,cross_validation
+53,13,13,linked_metadata,53,53,patient_82,patient_id,Leukoplakia with dysplasia,3,cross_validation
+54,6,6,linked_metadata,54,54,patient_13,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+55,20,20,linked_metadata,55,55,patient_13,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+56,5,5,linked_metadata,56,56,patient_13,patient_id,Leukoplakia with dysplasia,1,cross_validation
+57,9,9,linked_metadata,57,57,patient_13,patient_id,Leukoplakia with dysplasia,1,cross_validation
+58,15,15,linked_metadata,58,58,patient_60,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+59,8,8,linked_metadata,59,59,patient_60,patient_id,Leukoplakia with dysplasia,1,cross_validation
+60,8,8,linked_metadata,60,60,patient_60,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+61,20,20,linked_metadata,61,61,patient_60,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+62,17,17,linked_metadata,62,62,patient_60,patient_id,Leukoplakia with dysplasia,1,cross_validation
+63,20,20,linked_metadata,63,63,patient_60,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+64,20,20,linked_metadata,64,64,patient_60,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+65,20,20,linked_metadata,65,65,patient_60,patient_id,Leukoplakia without dysplasia,1,cross_validation
+66,20,20,linked_metadata,66,66,patient_22,patient_id,Leukoplakia with dysplasia|OSCC,0,cross_validation
+67,20,20,linked_metadata,67,67,patient_22,patient_id,Leukoplakia with dysplasia,0,cross_validation
+68,14,14,linked_metadata,68,68,patient_67,patient_id,Leukoplakia without dysplasia,3,cross_validation
+69,16,16,linked_metadata,69,69,patient_67,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,3,cross_validation
+70,13,13,linked_metadata,70,70,patient_67,patient_id,Leukoplakia with dysplasia,3,cross_validation
+71,20,20,linked_metadata,71,71,patient_67,patient_id,Leukoplakia with dysplasia,3,cross_validation
+72,17,17,linked_metadata,72,72,patient_28,patient_id,OSCC,0,cross_validation
+73,18,18,linked_metadata,73,73,patient_28,patient_id,OSCC,0,cross_validation
+74,15,15,linked_metadata,74,74,patient_28,patient_id,OSCC,0,cross_validation
+75,20,20,linked_metadata,75,75,patient_28,patient_id,OSCC,0,cross_validation
+76,10,10,linked_metadata,76,76,patient_27,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+77,19,19,linked_metadata,77,77,patient_27,patient_id,Leukoplakia with dysplasia,4,cross_validation
+78,13,13,linked_metadata,78,78,patient_40,patient_id,Leukoplakia with dysplasia|OSCC,1,cross_validation
+79,20,20,linked_metadata,79,79,patient_40,patient_id,Leukoplakia with dysplasia|OSCC,1,cross_validation
+80,10,10,linked_metadata,80,80,patient_6,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+81,19,19,linked_metadata,81,81,patient_6,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+82,11,11,linked_metadata,82,82,patient_25,patient_id,Leukoplakia without dysplasia,2,cross_validation
+83,11,11,linked_metadata,83,83,patient_25,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+84,12,12,linked_metadata,84,84,patient_25,patient_id,Leukoplakia with dysplasia,2,cross_validation
+85,12,12,linked_metadata,85,85,patient_25,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+86,3,3,linked_metadata,86,86,patient_25,patient_id,Leukoplakia without dysplasia,2,cross_validation
+87,2,2,linked_metadata,87,87,patient_72,patient_id,Leukoplakia without dysplasia,2,cross_validation
+88,16,16,linked_metadata,88,88,patient_72,patient_id,Leukoplakia with dysplasia,2,cross_validation
+89,7,7,linked_metadata,89,89,patient_72,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+90,14,14,linked_metadata,90,90,patient_72,patient_id,Leukoplakia with dysplasia,2,cross_validation
+91,15,15,linked_metadata,91,91,patient_72,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+92,19,19,linked_metadata,92,92,patient_72,patient_id,Leukoplakia with dysplasia,2,cross_validation
+93,10,10,linked_metadata,93,93,patient_72,patient_id,Leukoplakia without dysplasia,2,cross_validation
+94,19,19,linked_metadata,94,94,patient_72,patient_id,Leukoplakia with dysplasia,2,cross_validation
+95,11,11,linked_metadata,95,95,patient_16,patient_id,Leukoplakia without dysplasia,4,cross_validation
+96,19,19,linked_metadata,96,96,patient_16,patient_id,Leukoplakia without dysplasia,4,cross_validation
+97,20,20,linked_metadata,97,97,patient_16,patient_id,Leukoplakia with dysplasia,4,cross_validation
+98,16,16,linked_metadata,98,98,patient_16,patient_id,Leukoplakia with dysplasia,4,cross_validation
+99,18,18,linked_metadata,99,99,patient_77,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+100,7,7,linked_metadata,100,100,patient_77,patient_id,Leukoplakia with dysplasia,5,held_out_test
+101,13,13,linked_metadata,101,101,patient_77,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+102,18,18,linked_metadata,102,102,patient_77,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+103,20,20,linked_metadata,103,103,patient_68,patient_id,OSCC,5,held_out_test
+104,20,20,linked_metadata,104,104,patient_68,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+105,4,4,linked_metadata,105,105,patient_89,patient_id,Leukoplakia with dysplasia,4,cross_validation
+106,4,4,linked_metadata,106,106,patient_89,patient_id,Leukoplakia without dysplasia,4,cross_validation
+107,16,16,linked_metadata,107,107,patient_89,patient_id,Leukoplakia with dysplasia,4,cross_validation
+108,15,15,linked_metadata,108,108,patient_89,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+109,15,15,linked_metadata,109,109,patient_58,patient_id,OSCC,1,cross_validation
+110,20,20,linked_metadata,110,110,patient_58,patient_id,Leukoplakia with dysplasia,1,cross_validation
+111,20,20,linked_metadata,111,111,patient_58,patient_id,Leukoplakia with dysplasia|OSCC,1,cross_validation
+112,20,20,linked_metadata,112,112,patient_58,patient_id,OSCC,1,cross_validation
+113,20,20,linked_metadata,113,113,patient_53,patient_id,OSCC,2,cross_validation
+114,20,20,linked_metadata,114,114,patient_53,patient_id,OSCC,2,cross_validation
+115,20,20,linked_metadata,115,115,patient_53,patient_id,OSCC,2,cross_validation
+116,20,20,linked_metadata,116,116,patient_53,patient_id,OSCC,2,cross_validation
+117,10,10,linked_metadata,117,117,patient_56,patient_id,Leukoplakia with dysplasia,1,cross_validation
+119,10,10,linked_metadata,119,119,patient_56,patient_id,Leukoplakia with dysplasia,1,cross_validation
+120,13,13,linked_metadata,120,120,patient_1,patient_id,Leukoplakia without dysplasia,3,cross_validation
+121,5,5,linked_metadata,121,121,patient_1,patient_id,Leukoplakia without dysplasia,3,cross_validation
+122,16,16,linked_metadata,122,122,patient_1,patient_id,Leukoplakia with dysplasia,3,cross_validation
+123,17,17,linked_metadata,123,123,patient_1,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,3,cross_validation
+126,20,20,linked_metadata,126,126,patient_45,patient_id,Leukoplakia without dysplasia,2,cross_validation
+128,7,7,linked_metadata,128,128,patient_45,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+129,2,2,linked_metadata,129,129,patient_45,patient_id,Leukoplakia without dysplasia,2,cross_validation
+130,20,20,linked_metadata,130,130,patient_45,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+131,13,13,linked_metadata,131,131,patient_45,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+132,20,20,linked_metadata,132,132,patient_43,patient_id,OSCC,0,cross_validation
+133,20,20,linked_metadata,133,133,patient_43,patient_id,OSCC,0,cross_validation
+134,20,20,linked_metadata,134,134,patient_43,patient_id,OSCC,0,cross_validation
+135,20,20,linked_metadata,135,135,patient_43,patient_id,OSCC,0,cross_validation
+136,15,15,linked_metadata,136,136,patient_79,patient_id,Leukoplakia with dysplasia|OSCC,4,cross_validation
+137,17,17,linked_metadata,137,137,patient_79,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+138,20,20,linked_metadata,138,138,patient_79,patient_id,OSCC,4,cross_validation
+139,19,19,linked_metadata,139,139,patient_79,patient_id,Leukoplakia with dysplasia,4,cross_validation
+140,6,6,linked_metadata,140,140,patient_62,patient_id,Leukoplakia without dysplasia,5,held_out_test
+141,12,12,linked_metadata,141,141,patient_62,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+142,4,4,linked_metadata,142,142,patient_21,patient_id,Leukoplakia with dysplasia,3,cross_validation
+143,16,16,linked_metadata,143,143,patient_21,patient_id,Leukoplakia with dysplasia,3,cross_validation
+144,19,19,linked_metadata,144,144,patient_21,patient_id,Leukoplakia without dysplasia,3,cross_validation
+147,6,6,linked_metadata,147,147,patient_21,patient_id,Leukoplakia without dysplasia,3,cross_validation
+148,10,10,linked_metadata,148,148,patient_29,patient_id,Leukoplakia without dysplasia,0,cross_validation
+149,14,14,linked_metadata,149,149,patient_29,patient_id,Leukoplakia with dysplasia,0,cross_validation
+150,14,14,linked_metadata,150,150,patient_74,patient_id,Leukoplakia without dysplasia,4,cross_validation
+151,10,10,linked_metadata,151,151,patient_74,patient_id,Leukoplakia without dysplasia,4,cross_validation
+152,13,13,linked_metadata,152,152,patient_74,patient_id,Leukoplakia without dysplasia,4,cross_validation
+153,7,7,linked_metadata,153,153,patient_74,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+154,7,7,linked_metadata,154,154,patient_88,patient_id,Leukoplakia with dysplasia,2,cross_validation
+155,2,2,linked_metadata,155,155,patient_88,patient_id,Leukoplakia without dysplasia,2,cross_validation
+156,18,18,linked_metadata,156,156,patient_84,patient_id,OSCC,4,cross_validation
+157,20,20,linked_metadata,157,157,patient_84,patient_id,OSCC,4,cross_validation
+158,12,12,linked_metadata,158,158,patient_0,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,3,cross_validation
+159,17,17,linked_metadata,159,159,patient_0,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,3,cross_validation
+160,17,17,linked_metadata,160,160,patient_30,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+161,20,20,linked_metadata,161,161,patient_30,patient_id,Leukoplakia without dysplasia,1,cross_validation
+162,9,9,linked_metadata,162,162,patient_30,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+163,20,20,linked_metadata,163,163,patient_30,patient_id,Leukoplakia with dysplasia,1,cross_validation
+164,10,10,linked_metadata,164,164,patient_49,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,1,cross_validation
+165,15,15,linked_metadata,165,165,patient_49,patient_id,Leukoplakia with dysplasia,1,cross_validation
+166,20,20,linked_metadata,166,166,patient_11,patient_id,Leukoplakia with dysplasia,0,cross_validation
+168,20,20,linked_metadata,168,168,patient_34,patient_id,Leukoplakia with dysplasia,1,cross_validation
+169,20,20,linked_metadata,169,169,patient_34,patient_id,Leukoplakia with dysplasia,1,cross_validation
+170,20,20,linked_metadata,170,170,patient_34,patient_id,Leukoplakia with dysplasia,1,cross_validation
+171,11,11,linked_metadata,171,171,patient_80,patient_id,Leukoplakia with dysplasia,4,cross_validation
+172,17,17,linked_metadata,172,172,patient_80,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+173,4,4,linked_metadata,173,173,patient_66,patient_id,Leukoplakia without dysplasia,0,cross_validation
+174,17,17,linked_metadata,174,174,patient_66,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,0,cross_validation
+175,19,19,linked_metadata,175,175,patient_83,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+176,18,18,linked_metadata,176,176,patient_83,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+177,20,20,linked_metadata,177,177,patient_83,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+178,20,20,linked_metadata,178,178,patient_83,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+179,19,19,linked_metadata,179,179,patient_83,patient_id,OSCC,5,held_out_test
+180,20,20,linked_metadata,180,180,patient_83,patient_id,OSCC,5,held_out_test
+181,1,1,linked_metadata,181,181,patient_24,patient_id,Leukoplakia with dysplasia,4,cross_validation
+182,16,16,linked_metadata,182,182,patient_24,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,4,cross_validation
+183,17,17,linked_metadata,183,183,patient_85,patient_id,Leukoplakia without dysplasia,5,held_out_test
+184,12,12,linked_metadata,184,184,patient_85,patient_id,Leukoplakia with dysplasia,5,held_out_test
+185,1,1,linked_metadata,185,185,patient_54,patient_id,Leukoplakia without dysplasia,5,held_out_test
+186,16,16,linked_metadata,186,186,patient_54,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+187,18,18,linked_metadata,187,187,patient_54,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+188,18,18,linked_metadata,188,188,patient_54,patient_id,Leukoplakia with dysplasia,5,held_out_test
+189,4,4,linked_metadata,189,189,patient_54,patient_id,Leukoplakia with dysplasia,5,held_out_test
+190,7,7,linked_metadata,190,190,patient_54,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+191,16,16,linked_metadata,191,191,patient_36,patient_id,Leukoplakia with dysplasia,0,cross_validation
+192,20,20,linked_metadata,192,192,patient_36,patient_id,Leukoplakia with dysplasia,0,cross_validation
+194,20,20,linked_metadata,194,194,patient_36,patient_id,Leukoplakia with dysplasia,0,cross_validation
+195,7,7,linked_metadata,195,195,patient_65,patient_id,Leukoplakia without dysplasia,2,cross_validation
+196,11,11,linked_metadata,196,196,patient_65,patient_id,Leukoplakia without dysplasia,2,cross_validation
+197,19,19,linked_metadata,197,197,patient_65,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+198,10,10,linked_metadata,198,198,patient_65,patient_id,Leukoplakia with dysplasia,2,cross_validation
+199,15,15,linked_metadata,199,199,patient_69,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,0,cross_validation
+200,18,18,linked_metadata,200,200,patient_69,patient_id,Leukoplakia with dysplasia,0,cross_validation
+201,16,16,linked_metadata,201,201,patient_12,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,5,held_out_test
+202,11,11,linked_metadata,202,202,patient_12,patient_id,Leukoplakia with dysplasia,5,held_out_test
+203,19,19,linked_metadata,203,203,patient_50,patient_id,Leukoplakia with dysplasia|Leukoplakia without dysplasia,2,cross_validation
+204,17,17,linked_metadata,204,204,patient_50,patient_id,Leukoplakia with dysplasia,2,cross_validation
+205,19,19,linked_metadata,205,205,patient_18,patient_id,Leukoplakia with dysplasia|OSCC,4,cross_validation
+206,20,20,linked_metadata,206,206,patient_18,patient_id,OSCC,4,cross_validation
+207,20,20,linked_metadata,207,207,patient_18,patient_id,OSCC,4,cross_validation
+208,20,20,linked_metadata,208,208,patient_18,patient_id,Leukoplakia with dysplasia,4,cross_validation
+209,20,20,linked_metadata,209,209,patient_18,patient_id,OSCC,4,cross_validation
+210,20,20,linked_metadata,210,210,patient_18,patient_id,OSCC,4,cross_validation
+211,20,20,linked_metadata,211,211,patient_92,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+212,18,18,linked_metadata,212,212,patient_92,patient_id,Leukoplakia with dysplasia|OSCC,5,held_out_test
+213,17,17,linked_metadata,213,213,patient_92,patient_id,Leukoplakia with dysplasia,5,held_out_test
+214,16,16,linked_metadata,214,214,patient_92,patient_id,Leukoplakia with dysplasia,5,held_out_test
+215,9,9,linked_metadata,215,215,patient_35,patient_id,Leukoplakia with dysplasia|OSCC,0,cross_validation
+216,15,15,linked_metadata,216,216,patient_35,patient_id,OSCC,0,cross_validation
+unlinked_p0010,1,0,missing_linkage_metadata,,,unlinked_patch_p0010,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0011,1,0,missing_linkage_metadata,,,unlinked_patch_p0011,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0012,1,0,missing_linkage_metadata,,,unlinked_patch_p0012,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0038,1,0,missing_linkage_metadata,,,unlinked_patch_p0038,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0039,1,0,missing_linkage_metadata,,,unlinked_patch_p0039,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0040,1,0,missing_linkage_metadata,,,unlinked_patch_p0040,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0041,1,0,missing_linkage_metadata,,,unlinked_patch_p0041,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0057,1,0,missing_linkage_metadata,,,unlinked_patch_p0057,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0126,1,0,missing_linkage_metadata,,,unlinked_patch_p0126,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0127,1,0,missing_linkage_metadata,,,unlinked_patch_p0127,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0128,1,0,missing_linkage_metadata,,,unlinked_patch_p0128,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0129,1,0,missing_linkage_metadata,,,unlinked_patch_p0129,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0130,1,0,missing_linkage_metadata,,,unlinked_patch_p0130,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0131,1,0,missing_linkage_metadata,,,unlinked_patch_p0131,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0132,1,0,missing_linkage_metadata,,,unlinked_patch_p0132,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0133,1,0,missing_linkage_metadata,,,unlinked_patch_p0133,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0158,1,0,missing_linkage_metadata,,,unlinked_patch_p0158,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0159,1,0,missing_linkage_metadata,,,unlinked_patch_p0159,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0160,1,0,missing_linkage_metadata,,,unlinked_patch_p0160,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0161,1,0,missing_linkage_metadata,,,unlinked_patch_p0161,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0162,1,0,missing_linkage_metadata,,,unlinked_patch_p0162,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0163,1,0,missing_linkage_metadata,,,unlinked_patch_p0163,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0164,1,0,missing_linkage_metadata,,,unlinked_patch_p0164,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0313,1,0,missing_linkage_metadata,,,unlinked_patch_p0313,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0314,1,0,missing_linkage_metadata,,,unlinked_patch_p0314,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0315,1,0,missing_linkage_metadata,,,unlinked_patch_p0315,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0316,1,0,missing_linkage_metadata,,,unlinked_patch_p0316,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0317,1,0,missing_linkage_metadata,,,unlinked_patch_p0317,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0318,1,0,missing_linkage_metadata,,,unlinked_patch_p0318,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0319,1,0,missing_linkage_metadata,,,unlinked_patch_p0319,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0320,1,0,missing_linkage_metadata,,,unlinked_patch_p0320,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0432,1,0,missing_linkage_metadata,,,unlinked_patch_p0432,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0433,1,0,missing_linkage_metadata,,,unlinked_patch_p0433,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0434,1,0,missing_linkage_metadata,,,unlinked_patch_p0434,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0435,1,0,missing_linkage_metadata,,,unlinked_patch_p0435,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0436,1,0,missing_linkage_metadata,,,unlinked_patch_p0436,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0437,1,0,missing_linkage_metadata,,,unlinked_patch_p0437,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0438,1,0,missing_linkage_metadata,,,unlinked_patch_p0438,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0439,1,0,missing_linkage_metadata,,,unlinked_patch_p0439,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0554,1,0,missing_linkage_metadata,,,unlinked_patch_p0554,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0571,1,0,missing_linkage_metadata,,,unlinked_patch_p0571,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0638,1,0,missing_linkage_metadata,,,unlinked_patch_p0638,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0639,1,0,missing_linkage_metadata,,,unlinked_patch_p0639,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0640,1,0,missing_linkage_metadata,,,unlinked_patch_p0640,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0641,1,0,missing_linkage_metadata,,,unlinked_patch_p0641,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0642,1,0,missing_linkage_metadata,,,unlinked_patch_p0642,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0643,1,0,missing_linkage_metadata,,,unlinked_patch_p0643,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0644,1,0,missing_linkage_metadata,,,unlinked_patch_p0644,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0645,1,0,missing_linkage_metadata,,,unlinked_patch_p0645,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0646,1,0,missing_linkage_metadata,,,unlinked_patch_p0646,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0647,1,0,missing_linkage_metadata,,,unlinked_patch_p0647,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0648,1,0,missing_linkage_metadata,,,unlinked_patch_p0648,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0649,1,0,missing_linkage_metadata,,,unlinked_patch_p0649,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0650,1,0,missing_linkage_metadata,,,unlinked_patch_p0650,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0651,1,0,missing_linkage_metadata,,,unlinked_patch_p0651,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0652,1,0,missing_linkage_metadata,,,unlinked_patch_p0652,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0653,1,0,missing_linkage_metadata,,,unlinked_patch_p0653,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0654,1,0,missing_linkage_metadata,,,unlinked_patch_p0654,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0655,1,0,missing_linkage_metadata,,,unlinked_patch_p0655,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0656,1,0,missing_linkage_metadata,,,unlinked_patch_p0656,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0657,1,0,missing_linkage_metadata,,,unlinked_patch_p0657,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0658,1,0,missing_linkage_metadata,,,unlinked_patch_p0658,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0659,1,0,missing_linkage_metadata,,,unlinked_patch_p0659,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0660,1,0,missing_linkage_metadata,,,unlinked_patch_p0660,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0661,1,0,missing_linkage_metadata,,,unlinked_patch_p0661,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0662,1,0,missing_linkage_metadata,,,unlinked_patch_p0662,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0663,1,0,missing_linkage_metadata,,,unlinked_patch_p0663,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0664,1,0,missing_linkage_metadata,,,unlinked_patch_p0664,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0665,1,0,missing_linkage_metadata,,,unlinked_patch_p0665,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0666,1,0,missing_linkage_metadata,,,unlinked_patch_p0666,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0667,1,0,missing_linkage_metadata,,,unlinked_patch_p0667,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0668,1,0,missing_linkage_metadata,,,unlinked_patch_p0668,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0713,1,0,missing_linkage_metadata,,,unlinked_patch_p0713,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0714,1,0,missing_linkage_metadata,,,unlinked_patch_p0714,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0715,1,0,missing_linkage_metadata,,,unlinked_patch_p0715,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0716,1,0,missing_linkage_metadata,,,unlinked_patch_p0716,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0717,1,0,missing_linkage_metadata,,,unlinked_patch_p0717,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0718,1,0,missing_linkage_metadata,,,unlinked_patch_p0718,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0719,1,0,missing_linkage_metadata,,,unlinked_patch_p0719,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0785,1,0,missing_linkage_metadata,,,unlinked_patch_p0785,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0786,1,0,missing_linkage_metadata,,,unlinked_patch_p0786,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0787,1,0,missing_linkage_metadata,,,unlinked_patch_p0787,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0788,1,0,missing_linkage_metadata,,,unlinked_patch_p0788,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0789,1,0,missing_linkage_metadata,,,unlinked_patch_p0789,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p0790,1,0,missing_linkage_metadata,,,unlinked_patch_p0790,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p0791,1,0,missing_linkage_metadata,,,unlinked_patch_p0791,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p0792,1,0,missing_linkage_metadata,,,unlinked_patch_p0792,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p0793,1,0,missing_linkage_metadata,,,unlinked_patch_p0793,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p0794,1,0,missing_linkage_metadata,,,unlinked_patch_p0794,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p0870,1,0,missing_linkage_metadata,,,unlinked_patch_p0870,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0871,1,0,missing_linkage_metadata,,,unlinked_patch_p0871,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0872,1,0,missing_linkage_metadata,,,unlinked_patch_p0872,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0873,1,0,missing_linkage_metadata,,,unlinked_patch_p0873,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0874,1,0,missing_linkage_metadata,,,unlinked_patch_p0874,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0875,1,0,missing_linkage_metadata,,,unlinked_patch_p0875,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0876,1,0,missing_linkage_metadata,,,unlinked_patch_p0876,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0877,1,0,missing_linkage_metadata,,,unlinked_patch_p0877,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0878,1,0,missing_linkage_metadata,,,unlinked_patch_p0878,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0879,1,0,missing_linkage_metadata,,,unlinked_patch_p0879,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0880,1,0,missing_linkage_metadata,,,unlinked_patch_p0880,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0881,1,0,missing_linkage_metadata,,,unlinked_patch_p0881,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0882,1,0,missing_linkage_metadata,,,unlinked_patch_p0882,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0883,1,0,missing_linkage_metadata,,,unlinked_patch_p0883,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0884,1,0,missing_linkage_metadata,,,unlinked_patch_p0884,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0885,1,0,missing_linkage_metadata,,,unlinked_patch_p0885,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0892,1,0,missing_linkage_metadata,,,unlinked_patch_p0892,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0893,1,0,missing_linkage_metadata,,,unlinked_patch_p0893,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0894,1,0,missing_linkage_metadata,,,unlinked_patch_p0894,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0895,1,0,missing_linkage_metadata,,,unlinked_patch_p0895,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0896,1,0,missing_linkage_metadata,,,unlinked_patch_p0896,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0897,1,0,missing_linkage_metadata,,,unlinked_patch_p0897,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0898,1,0,missing_linkage_metadata,,,unlinked_patch_p0898,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0899,1,0,missing_linkage_metadata,,,unlinked_patch_p0899,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0900,1,0,missing_linkage_metadata,,,unlinked_patch_p0900,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0901,1,0,missing_linkage_metadata,,,unlinked_patch_p0901,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0902,1,0,missing_linkage_metadata,,,unlinked_patch_p0902,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0903,1,0,missing_linkage_metadata,,,unlinked_patch_p0903,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0904,1,0,missing_linkage_metadata,,,unlinked_patch_p0904,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0905,1,0,missing_linkage_metadata,,,unlinked_patch_p0905,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0906,1,0,missing_linkage_metadata,,,unlinked_patch_p0906,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0946,1,0,missing_linkage_metadata,,,unlinked_patch_p0946,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0947,1,0,missing_linkage_metadata,,,unlinked_patch_p0947,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0948,1,0,missing_linkage_metadata,,,unlinked_patch_p0948,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0966,1,0,missing_linkage_metadata,,,unlinked_patch_p0966,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0997,1,0,missing_linkage_metadata,,,unlinked_patch_p0997,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p0998,1,0,missing_linkage_metadata,,,unlinked_patch_p0998,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p0999,1,0,missing_linkage_metadata,,,unlinked_patch_p0999,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1000,1,0,missing_linkage_metadata,,,unlinked_patch_p1000,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1001,1,0,missing_linkage_metadata,,,unlinked_patch_p1001,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1002,1,0,missing_linkage_metadata,,,unlinked_patch_p1002,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1017,1,0,missing_linkage_metadata,,,unlinked_patch_p1017,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1018,1,0,missing_linkage_metadata,,,unlinked_patch_p1018,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1064,1,0,missing_linkage_metadata,,,unlinked_patch_p1064,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1065,1,0,missing_linkage_metadata,,,unlinked_patch_p1065,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1066,1,0,missing_linkage_metadata,,,unlinked_patch_p1066,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1078,1,0,missing_linkage_metadata,,,unlinked_patch_p1078,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1137,1,0,missing_linkage_metadata,,,unlinked_patch_p1137,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1138,1,0,missing_linkage_metadata,,,unlinked_patch_p1138,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1139,1,0,missing_linkage_metadata,,,unlinked_patch_p1139,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1162,1,0,missing_linkage_metadata,,,unlinked_patch_p1162,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1172,1,0,missing_linkage_metadata,,,unlinked_patch_p1172,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1173,1,0,missing_linkage_metadata,,,unlinked_patch_p1173,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1174,1,0,missing_linkage_metadata,,,unlinked_patch_p1174,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1175,1,0,missing_linkage_metadata,,,unlinked_patch_p1175,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1192,1,0,missing_linkage_metadata,,,unlinked_patch_p1192,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1193,1,0,missing_linkage_metadata,,,unlinked_patch_p1193,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1265,1,0,missing_linkage_metadata,,,unlinked_patch_p1265,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1266,1,0,missing_linkage_metadata,,,unlinked_patch_p1266,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1267,1,0,missing_linkage_metadata,,,unlinked_patch_p1267,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1268,1,0,missing_linkage_metadata,,,unlinked_patch_p1268,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1269,1,0,missing_linkage_metadata,,,unlinked_patch_p1269,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1270,1,0,missing_linkage_metadata,,,unlinked_patch_p1270,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1271,1,0,missing_linkage_metadata,,,unlinked_patch_p1271,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1272,1,0,missing_linkage_metadata,,,unlinked_patch_p1272,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1273,1,0,missing_linkage_metadata,,,unlinked_patch_p1273,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1274,1,0,missing_linkage_metadata,,,unlinked_patch_p1274,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1275,1,0,missing_linkage_metadata,,,unlinked_patch_p1275,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1276,1,0,missing_linkage_metadata,,,unlinked_patch_p1276,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1277,1,0,missing_linkage_metadata,,,unlinked_patch_p1277,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1278,1,0,missing_linkage_metadata,,,unlinked_patch_p1278,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1279,1,0,missing_linkage_metadata,,,unlinked_patch_p1279,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1280,1,0,missing_linkage_metadata,,,unlinked_patch_p1280,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1281,1,0,missing_linkage_metadata,,,unlinked_patch_p1281,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1282,1,0,missing_linkage_metadata,,,unlinked_patch_p1282,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1283,1,0,missing_linkage_metadata,,,unlinked_patch_p1283,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1284,1,0,missing_linkage_metadata,,,unlinked_patch_p1284,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1285,1,0,missing_linkage_metadata,,,unlinked_patch_p1285,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1286,1,0,missing_linkage_metadata,,,unlinked_patch_p1286,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1287,1,0,missing_linkage_metadata,,,unlinked_patch_p1287,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p1324,1,0,missing_linkage_metadata,,,unlinked_patch_p1324,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p1325,1,0,missing_linkage_metadata,,,unlinked_patch_p1325,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p1326,1,0,missing_linkage_metadata,,,unlinked_patch_p1326,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p1378,1,0,missing_linkage_metadata,,,unlinked_patch_p1378,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p1379,1,0,missing_linkage_metadata,,,unlinked_patch_p1379,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1380,1,0,missing_linkage_metadata,,,unlinked_patch_p1380,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1381,1,0,missing_linkage_metadata,,,unlinked_patch_p1381,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1382,1,0,missing_linkage_metadata,,,unlinked_patch_p1382,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1383,1,0,missing_linkage_metadata,,,unlinked_patch_p1383,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1384,1,0,missing_linkage_metadata,,,unlinked_patch_p1384,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1385,1,0,missing_linkage_metadata,,,unlinked_patch_p1385,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1386,1,0,missing_linkage_metadata,,,unlinked_patch_p1386,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1387,1,0,missing_linkage_metadata,,,unlinked_patch_p1387,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1388,1,0,missing_linkage_metadata,,,unlinked_patch_p1388,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1453,1,0,missing_linkage_metadata,,,unlinked_patch_p1453,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1456,1,0,missing_linkage_metadata,,,unlinked_patch_p1456,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1457,1,0,missing_linkage_metadata,,,unlinked_patch_p1457,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1458,1,0,missing_linkage_metadata,,,unlinked_patch_p1458,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1459,1,0,missing_linkage_metadata,,,unlinked_patch_p1459,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1460,1,0,missing_linkage_metadata,,,unlinked_patch_p1460,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1461,1,0,missing_linkage_metadata,,,unlinked_patch_p1461,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1462,1,0,missing_linkage_metadata,,,unlinked_patch_p1462,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1463,1,0,missing_linkage_metadata,,,unlinked_patch_p1463,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1464,1,0,missing_linkage_metadata,,,unlinked_patch_p1464,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1465,1,0,missing_linkage_metadata,,,unlinked_patch_p1465,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1466,1,0,missing_linkage_metadata,,,unlinked_patch_p1466,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1469,1,0,missing_linkage_metadata,,,unlinked_patch_p1469,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1470,1,0,missing_linkage_metadata,,,unlinked_patch_p1470,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1471,1,0,missing_linkage_metadata,,,unlinked_patch_p1471,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1472,1,0,missing_linkage_metadata,,,unlinked_patch_p1472,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1473,1,0,missing_linkage_metadata,,,unlinked_patch_p1473,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1474,1,0,missing_linkage_metadata,,,unlinked_patch_p1474,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1475,1,0,missing_linkage_metadata,,,unlinked_patch_p1475,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1476,1,0,missing_linkage_metadata,,,unlinked_patch_p1476,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1477,1,0,missing_linkage_metadata,,,unlinked_patch_p1477,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1478,1,0,missing_linkage_metadata,,,unlinked_patch_p1478,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1502,1,0,missing_linkage_metadata,,,unlinked_patch_p1502,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1503,1,0,missing_linkage_metadata,,,unlinked_patch_p1503,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1504,1,0,missing_linkage_metadata,,,unlinked_patch_p1504,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1505,1,0,missing_linkage_metadata,,,unlinked_patch_p1505,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1506,1,0,missing_linkage_metadata,,,unlinked_patch_p1506,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1507,1,0,missing_linkage_metadata,,,unlinked_patch_p1507,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1508,1,0,missing_linkage_metadata,,,unlinked_patch_p1508,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1509,1,0,missing_linkage_metadata,,,unlinked_patch_p1509,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1510,1,0,missing_linkage_metadata,,,unlinked_patch_p1510,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1511,1,0,missing_linkage_metadata,,,unlinked_patch_p1511,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1512,1,0,missing_linkage_metadata,,,unlinked_patch_p1512,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1513,1,0,missing_linkage_metadata,,,unlinked_patch_p1513,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1562,1,0,missing_linkage_metadata,,,unlinked_patch_p1562,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1569,1,0,missing_linkage_metadata,,,unlinked_patch_p1569,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1570,1,0,missing_linkage_metadata,,,unlinked_patch_p1570,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1574,1,0,missing_linkage_metadata,,,unlinked_patch_p1574,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1575,1,0,missing_linkage_metadata,,,unlinked_patch_p1575,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1576,1,0,missing_linkage_metadata,,,unlinked_patch_p1576,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1577,1,0,missing_linkage_metadata,,,unlinked_patch_p1577,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1578,1,0,missing_linkage_metadata,,,unlinked_patch_p1578,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1597,1,0,missing_linkage_metadata,,,unlinked_patch_p1597,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1598,1,0,missing_linkage_metadata,,,unlinked_patch_p1598,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1599,1,0,missing_linkage_metadata,,,unlinked_patch_p1599,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1600,1,0,missing_linkage_metadata,,,unlinked_patch_p1600,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1601,1,0,missing_linkage_metadata,,,unlinked_patch_p1601,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1602,1,0,missing_linkage_metadata,,,unlinked_patch_p1602,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1603,1,0,missing_linkage_metadata,,,unlinked_patch_p1603,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1604,1,0,missing_linkage_metadata,,,unlinked_patch_p1604,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1605,1,0,missing_linkage_metadata,,,unlinked_patch_p1605,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1606,1,0,missing_linkage_metadata,,,unlinked_patch_p1606,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1607,1,0,missing_linkage_metadata,,,unlinked_patch_p1607,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1608,1,0,missing_linkage_metadata,,,unlinked_patch_p1608,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1609,1,0,missing_linkage_metadata,,,unlinked_patch_p1609,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1610,1,0,missing_linkage_metadata,,,unlinked_patch_p1610,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1611,1,0,missing_linkage_metadata,,,unlinked_patch_p1611,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1612,1,0,missing_linkage_metadata,,,unlinked_patch_p1612,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1687,1,0,missing_linkage_metadata,,,unlinked_patch_p1687,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1688,1,0,missing_linkage_metadata,,,unlinked_patch_p1688,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1689,1,0,missing_linkage_metadata,,,unlinked_patch_p1689,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1690,1,0,missing_linkage_metadata,,,unlinked_patch_p1690,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1691,1,0,missing_linkage_metadata,,,unlinked_patch_p1691,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1692,1,0,missing_linkage_metadata,,,unlinked_patch_p1692,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1693,1,0,missing_linkage_metadata,,,unlinked_patch_p1693,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1694,1,0,missing_linkage_metadata,,,unlinked_patch_p1694,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1695,1,0,missing_linkage_metadata,,,unlinked_patch_p1695,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1696,1,0,missing_linkage_metadata,,,unlinked_patch_p1696,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1697,1,0,missing_linkage_metadata,,,unlinked_patch_p1697,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1698,1,0,missing_linkage_metadata,,,unlinked_patch_p1698,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1699,1,0,missing_linkage_metadata,,,unlinked_patch_p1699,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1700,1,0,missing_linkage_metadata,,,unlinked_patch_p1700,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1701,1,0,missing_linkage_metadata,,,unlinked_patch_p1701,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1702,1,0,missing_linkage_metadata,,,unlinked_patch_p1702,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1703,1,0,missing_linkage_metadata,,,unlinked_patch_p1703,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1704,1,0,missing_linkage_metadata,,,unlinked_patch_p1704,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1718,1,0,missing_linkage_metadata,,,unlinked_patch_p1718,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1719,1,0,missing_linkage_metadata,,,unlinked_patch_p1719,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1720,1,0,missing_linkage_metadata,,,unlinked_patch_p1720,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1721,1,0,missing_linkage_metadata,,,unlinked_patch_p1721,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1722,1,0,missing_linkage_metadata,,,unlinked_patch_p1722,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1723,1,0,missing_linkage_metadata,,,unlinked_patch_p1723,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1724,1,0,missing_linkage_metadata,,,unlinked_patch_p1724,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1725,1,0,missing_linkage_metadata,,,unlinked_patch_p1725,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1726,1,0,missing_linkage_metadata,,,unlinked_patch_p1726,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1727,1,0,missing_linkage_metadata,,,unlinked_patch_p1727,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1728,1,0,missing_linkage_metadata,,,unlinked_patch_p1728,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1729,1,0,missing_linkage_metadata,,,unlinked_patch_p1729,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1730,1,0,missing_linkage_metadata,,,unlinked_patch_p1730,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1731,1,0,missing_linkage_metadata,,,unlinked_patch_p1731,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1732,1,0,missing_linkage_metadata,,,unlinked_patch_p1732,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1733,1,0,missing_linkage_metadata,,,unlinked_patch_p1733,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1734,1,0,missing_linkage_metadata,,,unlinked_patch_p1734,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1735,1,0,missing_linkage_metadata,,,unlinked_patch_p1735,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1736,1,0,missing_linkage_metadata,,,unlinked_patch_p1736,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1737,1,0,missing_linkage_metadata,,,unlinked_patch_p1737,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1738,1,0,missing_linkage_metadata,,,unlinked_patch_p1738,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1739,1,0,missing_linkage_metadata,,,unlinked_patch_p1739,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1815,1,0,missing_linkage_metadata,,,unlinked_patch_p1815,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1816,1,0,missing_linkage_metadata,,,unlinked_patch_p1816,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1817,1,0,missing_linkage_metadata,,,unlinked_patch_p1817,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1818,1,0,missing_linkage_metadata,,,unlinked_patch_p1818,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1819,1,0,missing_linkage_metadata,,,unlinked_patch_p1819,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1820,1,0,missing_linkage_metadata,,,unlinked_patch_p1820,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1821,1,0,missing_linkage_metadata,,,unlinked_patch_p1821,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1822,1,0,missing_linkage_metadata,,,unlinked_patch_p1822,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1823,1,0,missing_linkage_metadata,,,unlinked_patch_p1823,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1854,1,0,missing_linkage_metadata,,,unlinked_patch_p1854,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1855,1,0,missing_linkage_metadata,,,unlinked_patch_p1855,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1856,1,0,missing_linkage_metadata,,,unlinked_patch_p1856,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1857,1,0,missing_linkage_metadata,,,unlinked_patch_p1857,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1858,1,0,missing_linkage_metadata,,,unlinked_patch_p1858,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1859,1,0,missing_linkage_metadata,,,unlinked_patch_p1859,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1860,1,0,missing_linkage_metadata,,,unlinked_patch_p1860,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1861,1,0,missing_linkage_metadata,,,unlinked_patch_p1861,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1862,1,0,missing_linkage_metadata,,,unlinked_patch_p1862,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1863,1,0,missing_linkage_metadata,,,unlinked_patch_p1863,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1864,1,0,missing_linkage_metadata,,,unlinked_patch_p1864,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1865,1,0,missing_linkage_metadata,,,unlinked_patch_p1865,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1898,1,0,missing_linkage_metadata,,,unlinked_patch_p1898,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1899,1,0,missing_linkage_metadata,,,unlinked_patch_p1899,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1900,1,0,missing_linkage_metadata,,,unlinked_patch_p1900,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1901,1,0,missing_linkage_metadata,,,unlinked_patch_p1901,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1902,1,0,missing_linkage_metadata,,,unlinked_patch_p1902,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1903,1,0,missing_linkage_metadata,,,unlinked_patch_p1903,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1904,1,0,missing_linkage_metadata,,,unlinked_patch_p1904,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1905,1,0,missing_linkage_metadata,,,unlinked_patch_p1905,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1906,1,0,missing_linkage_metadata,,,unlinked_patch_p1906,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1907,1,0,missing_linkage_metadata,,,unlinked_patch_p1907,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1908,1,0,missing_linkage_metadata,,,unlinked_patch_p1908,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1909,1,0,missing_linkage_metadata,,,unlinked_patch_p1909,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1910,1,0,missing_linkage_metadata,,,unlinked_patch_p1910,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1911,1,0,missing_linkage_metadata,,,unlinked_patch_p1911,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1912,1,0,missing_linkage_metadata,,,unlinked_patch_p1912,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1913,1,0,missing_linkage_metadata,,,unlinked_patch_p1913,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1914,1,0,missing_linkage_metadata,,,unlinked_patch_p1914,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1915,1,0,missing_linkage_metadata,,,unlinked_patch_p1915,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1916,1,0,missing_linkage_metadata,,,unlinked_patch_p1916,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1917,1,0,missing_linkage_metadata,,,unlinked_patch_p1917,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1958,1,0,missing_linkage_metadata,,,unlinked_patch_p1958,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p1975,1,0,missing_linkage_metadata,,,unlinked_patch_p1975,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p1976,1,0,missing_linkage_metadata,,,unlinked_patch_p1976,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p1977,1,0,missing_linkage_metadata,,,unlinked_patch_p1977,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p1978,1,0,missing_linkage_metadata,,,unlinked_patch_p1978,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p1979,1,0,missing_linkage_metadata,,,unlinked_patch_p1979,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p1980,1,0,missing_linkage_metadata,,,unlinked_patch_p1980,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2084,1,0,missing_linkage_metadata,,,unlinked_patch_p2084,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2093,1,0,missing_linkage_metadata,,,unlinked_patch_p2093,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2094,1,0,missing_linkage_metadata,,,unlinked_patch_p2094,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2095,1,0,missing_linkage_metadata,,,unlinked_patch_p2095,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2096,1,0,missing_linkage_metadata,,,unlinked_patch_p2096,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2097,1,0,missing_linkage_metadata,,,unlinked_patch_p2097,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2098,1,0,missing_linkage_metadata,,,unlinked_patch_p2098,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2099,1,0,missing_linkage_metadata,,,unlinked_patch_p2099,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2100,1,0,missing_linkage_metadata,,,unlinked_patch_p2100,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2101,1,0,missing_linkage_metadata,,,unlinked_patch_p2101,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2102,1,0,missing_linkage_metadata,,,unlinked_patch_p2102,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2103,1,0,missing_linkage_metadata,,,unlinked_patch_p2103,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2104,1,0,missing_linkage_metadata,,,unlinked_patch_p2104,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2105,1,0,missing_linkage_metadata,,,unlinked_patch_p2105,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2106,1,0,missing_linkage_metadata,,,unlinked_patch_p2106,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2107,1,0,missing_linkage_metadata,,,unlinked_patch_p2107,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2108,1,0,missing_linkage_metadata,,,unlinked_patch_p2108,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2109,1,0,missing_linkage_metadata,,,unlinked_patch_p2109,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2110,1,0,missing_linkage_metadata,,,unlinked_patch_p2110,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2111,1,0,missing_linkage_metadata,,,unlinked_patch_p2111,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2112,1,0,missing_linkage_metadata,,,unlinked_patch_p2112,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2113,1,0,missing_linkage_metadata,,,unlinked_patch_p2113,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2114,1,0,missing_linkage_metadata,,,unlinked_patch_p2114,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2115,1,0,missing_linkage_metadata,,,unlinked_patch_p2115,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2116,1,0,missing_linkage_metadata,,,unlinked_patch_p2116,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2117,1,0,missing_linkage_metadata,,,unlinked_patch_p2117,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2129,1,0,missing_linkage_metadata,,,unlinked_patch_p2129,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2130,1,0,missing_linkage_metadata,,,unlinked_patch_p2130,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2131,1,0,missing_linkage_metadata,,,unlinked_patch_p2131,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2132,1,0,missing_linkage_metadata,,,unlinked_patch_p2132,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2133,1,0,missing_linkage_metadata,,,unlinked_patch_p2133,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2134,1,0,missing_linkage_metadata,,,unlinked_patch_p2134,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2135,1,0,missing_linkage_metadata,,,unlinked_patch_p2135,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2136,1,0,missing_linkage_metadata,,,unlinked_patch_p2136,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2137,1,0,missing_linkage_metadata,,,unlinked_patch_p2137,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2138,1,0,missing_linkage_metadata,,,unlinked_patch_p2138,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2139,1,0,missing_linkage_metadata,,,unlinked_patch_p2139,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2140,1,0,missing_linkage_metadata,,,unlinked_patch_p2140,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2141,1,0,missing_linkage_metadata,,,unlinked_patch_p2141,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2142,1,0,missing_linkage_metadata,,,unlinked_patch_p2142,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2143,1,0,missing_linkage_metadata,,,unlinked_patch_p2143,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2144,1,0,missing_linkage_metadata,,,unlinked_patch_p2144,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2145,1,0,missing_linkage_metadata,,,unlinked_patch_p2145,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2269,1,0,missing_linkage_metadata,,,unlinked_patch_p2269,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2270,1,0,missing_linkage_metadata,,,unlinked_patch_p2270,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2271,1,0,missing_linkage_metadata,,,unlinked_patch_p2271,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2272,1,0,missing_linkage_metadata,,,unlinked_patch_p2272,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2273,1,0,missing_linkage_metadata,,,unlinked_patch_p2273,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2274,1,0,missing_linkage_metadata,,,unlinked_patch_p2274,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2275,1,0,missing_linkage_metadata,,,unlinked_patch_p2275,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2276,1,0,missing_linkage_metadata,,,unlinked_patch_p2276,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2277,1,0,missing_linkage_metadata,,,unlinked_patch_p2277,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2278,1,0,missing_linkage_metadata,,,unlinked_patch_p2278,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2279,1,0,missing_linkage_metadata,,,unlinked_patch_p2279,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2280,1,0,missing_linkage_metadata,,,unlinked_patch_p2280,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2281,1,0,missing_linkage_metadata,,,unlinked_patch_p2281,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2282,1,0,missing_linkage_metadata,,,unlinked_patch_p2282,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2283,1,0,missing_linkage_metadata,,,unlinked_patch_p2283,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2284,1,0,missing_linkage_metadata,,,unlinked_patch_p2284,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2285,1,0,missing_linkage_metadata,,,unlinked_patch_p2285,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2286,1,0,missing_linkage_metadata,,,unlinked_patch_p2286,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2287,1,0,missing_linkage_metadata,,,unlinked_patch_p2287,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2288,1,0,missing_linkage_metadata,,,unlinked_patch_p2288,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2289,1,0,missing_linkage_metadata,,,unlinked_patch_p2289,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2290,1,0,missing_linkage_metadata,,,unlinked_patch_p2290,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2291,1,0,missing_linkage_metadata,,,unlinked_patch_p2291,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2304,1,0,missing_linkage_metadata,,,unlinked_patch_p2304,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2305,1,0,missing_linkage_metadata,,,unlinked_patch_p2305,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2306,1,0,missing_linkage_metadata,,,unlinked_patch_p2306,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2307,1,0,missing_linkage_metadata,,,unlinked_patch_p2307,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2308,1,0,missing_linkage_metadata,,,unlinked_patch_p2308,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2309,1,0,missing_linkage_metadata,,,unlinked_patch_p2309,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2310,1,0,missing_linkage_metadata,,,unlinked_patch_p2310,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2311,1,0,missing_linkage_metadata,,,unlinked_patch_p2311,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2312,1,0,missing_linkage_metadata,,,unlinked_patch_p2312,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2313,1,0,missing_linkage_metadata,,,unlinked_patch_p2313,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2314,1,0,missing_linkage_metadata,,,unlinked_patch_p2314,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2331,1,0,missing_linkage_metadata,,,unlinked_patch_p2331,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2425,1,0,missing_linkage_metadata,,,unlinked_patch_p2425,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2426,1,0,missing_linkage_metadata,,,unlinked_patch_p2426,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2427,1,0,missing_linkage_metadata,,,unlinked_patch_p2427,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2428,1,0,missing_linkage_metadata,,,unlinked_patch_p2428,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2429,1,0,missing_linkage_metadata,,,unlinked_patch_p2429,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2430,1,0,missing_linkage_metadata,,,unlinked_patch_p2430,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2431,1,0,missing_linkage_metadata,,,unlinked_patch_p2431,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2432,1,0,missing_linkage_metadata,,,unlinked_patch_p2432,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2433,1,0,missing_linkage_metadata,,,unlinked_patch_p2433,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2434,1,0,missing_linkage_metadata,,,unlinked_patch_p2434,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2435,1,0,missing_linkage_metadata,,,unlinked_patch_p2435,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2436,1,0,missing_linkage_metadata,,,unlinked_patch_p2436,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2437,1,0,missing_linkage_metadata,,,unlinked_patch_p2437,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2438,1,0,missing_linkage_metadata,,,unlinked_patch_p2438,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2439,1,0,missing_linkage_metadata,,,unlinked_patch_p2439,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2440,1,0,missing_linkage_metadata,,,unlinked_patch_p2440,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2441,1,0,missing_linkage_metadata,,,unlinked_patch_p2441,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2442,1,0,missing_linkage_metadata,,,unlinked_patch_p2442,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2500,1,0,missing_linkage_metadata,,,unlinked_patch_p2500,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2501,1,0,missing_linkage_metadata,,,unlinked_patch_p2501,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2502,1,0,missing_linkage_metadata,,,unlinked_patch_p2502,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2503,1,0,missing_linkage_metadata,,,unlinked_patch_p2503,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2504,1,0,missing_linkage_metadata,,,unlinked_patch_p2504,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2505,1,0,missing_linkage_metadata,,,unlinked_patch_p2505,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2506,1,0,missing_linkage_metadata,,,unlinked_patch_p2506,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2507,1,0,missing_linkage_metadata,,,unlinked_patch_p2507,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2508,1,0,missing_linkage_metadata,,,unlinked_patch_p2508,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2509,1,0,missing_linkage_metadata,,,unlinked_patch_p2509,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2510,1,0,missing_linkage_metadata,,,unlinked_patch_p2510,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2511,1,0,missing_linkage_metadata,,,unlinked_patch_p2511,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2512,1,0,missing_linkage_metadata,,,unlinked_patch_p2512,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2513,1,0,missing_linkage_metadata,,,unlinked_patch_p2513,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2514,1,0,missing_linkage_metadata,,,unlinked_patch_p2514,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2515,1,0,missing_linkage_metadata,,,unlinked_patch_p2515,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2516,1,0,missing_linkage_metadata,,,unlinked_patch_p2516,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2517,1,0,missing_linkage_metadata,,,unlinked_patch_p2517,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2518,1,0,missing_linkage_metadata,,,unlinked_patch_p2518,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2519,1,0,missing_linkage_metadata,,,unlinked_patch_p2519,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2520,1,0,missing_linkage_metadata,,,unlinked_patch_p2520,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2521,1,0,missing_linkage_metadata,,,unlinked_patch_p2521,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2522,1,0,missing_linkage_metadata,,,unlinked_patch_p2522,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2523,1,0,missing_linkage_metadata,,,unlinked_patch_p2523,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2524,1,0,missing_linkage_metadata,,,unlinked_patch_p2524,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2525,1,0,missing_linkage_metadata,,,unlinked_patch_p2525,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2526,1,0,missing_linkage_metadata,,,unlinked_patch_p2526,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2527,1,0,missing_linkage_metadata,,,unlinked_patch_p2527,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2528,1,0,missing_linkage_metadata,,,unlinked_patch_p2528,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2529,1,0,missing_linkage_metadata,,,unlinked_patch_p2529,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2530,1,0,missing_linkage_metadata,,,unlinked_patch_p2530,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2531,1,0,missing_linkage_metadata,,,unlinked_patch_p2531,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2532,1,0,missing_linkage_metadata,,,unlinked_patch_p2532,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2533,1,0,missing_linkage_metadata,,,unlinked_patch_p2533,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2534,1,0,missing_linkage_metadata,,,unlinked_patch_p2534,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2535,1,0,missing_linkage_metadata,,,unlinked_patch_p2535,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2536,1,0,missing_linkage_metadata,,,unlinked_patch_p2536,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2537,1,0,missing_linkage_metadata,,,unlinked_patch_p2537,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2538,1,0,missing_linkage_metadata,,,unlinked_patch_p2538,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2539,1,0,missing_linkage_metadata,,,unlinked_patch_p2539,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2540,1,0,missing_linkage_metadata,,,unlinked_patch_p2540,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2541,1,0,missing_linkage_metadata,,,unlinked_patch_p2541,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2542,1,0,missing_linkage_metadata,,,unlinked_patch_p2542,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2543,1,0,missing_linkage_metadata,,,unlinked_patch_p2543,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2544,1,0,missing_linkage_metadata,,,unlinked_patch_p2544,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2545,1,0,missing_linkage_metadata,,,unlinked_patch_p2545,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2546,1,0,missing_linkage_metadata,,,unlinked_patch_p2546,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2547,1,0,missing_linkage_metadata,,,unlinked_patch_p2547,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2548,1,0,missing_linkage_metadata,,,unlinked_patch_p2548,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2549,1,0,missing_linkage_metadata,,,unlinked_patch_p2549,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2550,1,0,missing_linkage_metadata,,,unlinked_patch_p2550,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2551,1,0,missing_linkage_metadata,,,unlinked_patch_p2551,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2552,1,0,missing_linkage_metadata,,,unlinked_patch_p2552,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2553,1,0,missing_linkage_metadata,,,unlinked_patch_p2553,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2554,1,0,missing_linkage_metadata,,,unlinked_patch_p2554,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2555,1,0,missing_linkage_metadata,,,unlinked_patch_p2555,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2556,1,0,missing_linkage_metadata,,,unlinked_patch_p2556,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2557,1,0,missing_linkage_metadata,,,unlinked_patch_p2557,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2651,1,0,missing_linkage_metadata,,,unlinked_patch_p2651,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2762,1,0,missing_linkage_metadata,,,unlinked_patch_p2762,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2763,1,0,missing_linkage_metadata,,,unlinked_patch_p2763,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2764,1,0,missing_linkage_metadata,,,unlinked_patch_p2764,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2765,1,0,missing_linkage_metadata,,,unlinked_patch_p2765,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2766,1,0,missing_linkage_metadata,,,unlinked_patch_p2766,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2767,1,0,missing_linkage_metadata,,,unlinked_patch_p2767,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2768,1,0,missing_linkage_metadata,,,unlinked_patch_p2768,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2769,1,0,missing_linkage_metadata,,,unlinked_patch_p2769,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2770,1,0,missing_linkage_metadata,,,unlinked_patch_p2770,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2771,1,0,missing_linkage_metadata,,,unlinked_patch_p2771,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2772,1,0,missing_linkage_metadata,,,unlinked_patch_p2772,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2773,1,0,missing_linkage_metadata,,,unlinked_patch_p2773,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2774,1,0,missing_linkage_metadata,,,unlinked_patch_p2774,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2775,1,0,missing_linkage_metadata,,,unlinked_patch_p2775,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2776,1,0,missing_linkage_metadata,,,unlinked_patch_p2776,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2777,1,0,missing_linkage_metadata,,,unlinked_patch_p2777,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2778,1,0,missing_linkage_metadata,,,unlinked_patch_p2778,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2779,1,0,missing_linkage_metadata,,,unlinked_patch_p2779,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2780,1,0,missing_linkage_metadata,,,unlinked_patch_p2780,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2781,1,0,missing_linkage_metadata,,,unlinked_patch_p2781,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2782,1,0,missing_linkage_metadata,,,unlinked_patch_p2782,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2783,1,0,missing_linkage_metadata,,,unlinked_patch_p2783,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2784,1,0,missing_linkage_metadata,,,unlinked_patch_p2784,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p2832,1,0,missing_linkage_metadata,,,unlinked_patch_p2832,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p2840,1,0,missing_linkage_metadata,,,unlinked_patch_p2840,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p2842,1,0,missing_linkage_metadata,,,unlinked_patch_p2842,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p2843,1,0,missing_linkage_metadata,,,unlinked_patch_p2843,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p2844,1,0,missing_linkage_metadata,,,unlinked_patch_p2844,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p2845,1,0,missing_linkage_metadata,,,unlinked_patch_p2845,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p2846,1,0,missing_linkage_metadata,,,unlinked_patch_p2846,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p2847,1,0,missing_linkage_metadata,,,unlinked_patch_p2847,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p2848,1,0,missing_linkage_metadata,,,unlinked_patch_p2848,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p2849,1,0,missing_linkage_metadata,,,unlinked_patch_p2849,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p2871,1,0,missing_linkage_metadata,,,unlinked_patch_p2871,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p2872,1,0,missing_linkage_metadata,,,unlinked_patch_p2872,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p2888,1,0,missing_linkage_metadata,,,unlinked_patch_p2888,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p2891,1,0,missing_linkage_metadata,,,unlinked_patch_p2891,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p2899,1,0,missing_linkage_metadata,,,unlinked_patch_p2899,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p2900,1,0,missing_linkage_metadata,,,unlinked_patch_p2900,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p2901,1,0,missing_linkage_metadata,,,unlinked_patch_p2901,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p2908,1,0,missing_linkage_metadata,,,unlinked_patch_p2908,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p2916,1,0,missing_linkage_metadata,,,unlinked_patch_p2916,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p2924,1,0,missing_linkage_metadata,,,unlinked_patch_p2924,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p2928,1,0,missing_linkage_metadata,,,unlinked_patch_p2928,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p2941,1,0,missing_linkage_metadata,,,unlinked_patch_p2941,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p2942,1,0,missing_linkage_metadata,,,unlinked_patch_p2942,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p2965,1,0,missing_linkage_metadata,,,unlinked_patch_p2965,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p2966,1,0,missing_linkage_metadata,,,unlinked_patch_p2966,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p2979,1,0,missing_linkage_metadata,,,unlinked_patch_p2979,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p2980,1,0,missing_linkage_metadata,,,unlinked_patch_p2980,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p2981,1,0,missing_linkage_metadata,,,unlinked_patch_p2981,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p2994,1,0,missing_linkage_metadata,,,unlinked_patch_p2994,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p2995,1,0,missing_linkage_metadata,,,unlinked_patch_p2995,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p2998,1,0,missing_linkage_metadata,,,unlinked_patch_p2998,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p2999,1,0,missing_linkage_metadata,,,unlinked_patch_p2999,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3005,1,0,missing_linkage_metadata,,,unlinked_patch_p3005,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3010,1,0,missing_linkage_metadata,,,unlinked_patch_p3010,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3011,1,0,missing_linkage_metadata,,,unlinked_patch_p3011,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3012,1,0,missing_linkage_metadata,,,unlinked_patch_p3012,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3016,1,0,missing_linkage_metadata,,,unlinked_patch_p3016,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3019,1,0,missing_linkage_metadata,,,unlinked_patch_p3019,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3020,1,0,missing_linkage_metadata,,,unlinked_patch_p3020,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3021,1,0,missing_linkage_metadata,,,unlinked_patch_p3021,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3030,1,0,missing_linkage_metadata,,,unlinked_patch_p3030,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3033,1,0,missing_linkage_metadata,,,unlinked_patch_p3033,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3037,1,0,missing_linkage_metadata,,,unlinked_patch_p3037,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3038,1,0,missing_linkage_metadata,,,unlinked_patch_p3038,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3063,1,0,missing_linkage_metadata,,,unlinked_patch_p3063,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3064,1,0,missing_linkage_metadata,,,unlinked_patch_p3064,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3065,1,0,missing_linkage_metadata,,,unlinked_patch_p3065,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3077,1,0,missing_linkage_metadata,,,unlinked_patch_p3077,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3079,1,0,missing_linkage_metadata,,,unlinked_patch_p3079,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3095,1,0,missing_linkage_metadata,,,unlinked_patch_p3095,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3096,1,0,missing_linkage_metadata,,,unlinked_patch_p3096,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3103,1,0,missing_linkage_metadata,,,unlinked_patch_p3103,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3104,1,0,missing_linkage_metadata,,,unlinked_patch_p3104,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3124,1,0,missing_linkage_metadata,,,unlinked_patch_p3124,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3125,1,0,missing_linkage_metadata,,,unlinked_patch_p3125,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3126,1,0,missing_linkage_metadata,,,unlinked_patch_p3126,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3137,1,0,missing_linkage_metadata,,,unlinked_patch_p3137,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p3138,1,0,missing_linkage_metadata,,,unlinked_patch_p3138,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p3142,1,0,missing_linkage_metadata,,,unlinked_patch_p3142,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p3147,1,0,missing_linkage_metadata,,,unlinked_patch_p3147,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p3148,1,0,missing_linkage_metadata,,,unlinked_patch_p3148,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p3161,1,0,missing_linkage_metadata,,,unlinked_patch_p3161,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p3162,1,0,missing_linkage_metadata,,,unlinked_patch_p3162,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p3186,1,0,missing_linkage_metadata,,,unlinked_patch_p3186,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p3187,1,0,missing_linkage_metadata,,,unlinked_patch_p3187,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p3216,1,0,missing_linkage_metadata,,,unlinked_patch_p3216,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p3217,1,0,missing_linkage_metadata,,,unlinked_patch_p3217,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p3242,1,0,missing_linkage_metadata,,,unlinked_patch_p3242,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p3259,1,0,missing_linkage_metadata,,,unlinked_patch_p3259,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p3260,1,0,missing_linkage_metadata,,,unlinked_patch_p3260,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p3261,1,0,missing_linkage_metadata,,,unlinked_patch_p3261,patch_fallback_no_linkage,OSCC,1,cross_validation
+unlinked_p3262,1,0,missing_linkage_metadata,,,unlinked_patch_p3262,patch_fallback_no_linkage,OSCC,3,cross_validation
+unlinked_p3282,1,0,missing_linkage_metadata,,,unlinked_patch_p3282,patch_fallback_no_linkage,OSCC,4,cross_validation
+unlinked_p3289,1,0,missing_linkage_metadata,,,unlinked_patch_p3289,patch_fallback_no_linkage,OSCC,5,held_out_test
+unlinked_p3304,1,0,missing_linkage_metadata,,,unlinked_patch_p3304,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p3305,1,0,missing_linkage_metadata,,,unlinked_patch_p3305,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p3306,1,0,missing_linkage_metadata,,,unlinked_patch_p3306,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p3307,1,0,missing_linkage_metadata,,,unlinked_patch_p3307,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p3308,1,0,missing_linkage_metadata,,,unlinked_patch_p3308,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p3311,1,0,missing_linkage_metadata,,,unlinked_patch_p3311,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p3312,1,0,missing_linkage_metadata,,,unlinked_patch_p3312,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p3320,1,0,missing_linkage_metadata,,,unlinked_patch_p3320,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p3338,1,0,missing_linkage_metadata,,,unlinked_patch_p3338,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p3349,1,0,missing_linkage_metadata,,,unlinked_patch_p3349,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p3383,1,0,missing_linkage_metadata,,,unlinked_patch_p3383,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p3384,1,0,missing_linkage_metadata,,,unlinked_patch_p3384,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p3385,1,0,missing_linkage_metadata,,,unlinked_patch_p3385,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p3386,1,0,missing_linkage_metadata,,,unlinked_patch_p3386,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p3387,1,0,missing_linkage_metadata,,,unlinked_patch_p3387,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p3388,1,0,missing_linkage_metadata,,,unlinked_patch_p3388,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p3392,1,0,missing_linkage_metadata,,,unlinked_patch_p3392,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p3393,1,0,missing_linkage_metadata,,,unlinked_patch_p3393,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p3394,1,0,missing_linkage_metadata,,,unlinked_patch_p3394,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p3406,1,0,missing_linkage_metadata,,,unlinked_patch_p3406,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3407,1,0,missing_linkage_metadata,,,unlinked_patch_p3407,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3422,1,0,missing_linkage_metadata,,,unlinked_patch_p3422,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3423,1,0,missing_linkage_metadata,,,unlinked_patch_p3423,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3424,1,0,missing_linkage_metadata,,,unlinked_patch_p3424,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3425,1,0,missing_linkage_metadata,,,unlinked_patch_p3425,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3426,1,0,missing_linkage_metadata,,,unlinked_patch_p3426,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3427,1,0,missing_linkage_metadata,,,unlinked_patch_p3427,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3442,1,0,missing_linkage_metadata,,,unlinked_patch_p3442,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3445,1,0,missing_linkage_metadata,,,unlinked_patch_p3445,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3446,1,0,missing_linkage_metadata,,,unlinked_patch_p3446,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3447,1,0,missing_linkage_metadata,,,unlinked_patch_p3447,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3448,1,0,missing_linkage_metadata,,,unlinked_patch_p3448,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3449,1,0,missing_linkage_metadata,,,unlinked_patch_p3449,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3461,1,0,missing_linkage_metadata,,,unlinked_patch_p3461,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3462,1,0,missing_linkage_metadata,,,unlinked_patch_p3462,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3463,1,0,missing_linkage_metadata,,,unlinked_patch_p3463,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3464,1,0,missing_linkage_metadata,,,unlinked_patch_p3464,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3465,1,0,missing_linkage_metadata,,,unlinked_patch_p3465,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3472,1,0,missing_linkage_metadata,,,unlinked_patch_p3472,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3473,1,0,missing_linkage_metadata,,,unlinked_patch_p3473,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3474,1,0,missing_linkage_metadata,,,unlinked_patch_p3474,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3475,1,0,missing_linkage_metadata,,,unlinked_patch_p3475,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3476,1,0,missing_linkage_metadata,,,unlinked_patch_p3476,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3480,1,0,missing_linkage_metadata,,,unlinked_patch_p3480,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3490,1,0,missing_linkage_metadata,,,unlinked_patch_p3490,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3491,1,0,missing_linkage_metadata,,,unlinked_patch_p3491,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3497,1,0,missing_linkage_metadata,,,unlinked_patch_p3497,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3498,1,0,missing_linkage_metadata,,,unlinked_patch_p3498,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3507,1,0,missing_linkage_metadata,,,unlinked_patch_p3507,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3518,1,0,missing_linkage_metadata,,,unlinked_patch_p3518,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3519,1,0,missing_linkage_metadata,,,unlinked_patch_p3519,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3520,1,0,missing_linkage_metadata,,,unlinked_patch_p3520,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3545,1,0,missing_linkage_metadata,,,unlinked_patch_p3545,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3546,1,0,missing_linkage_metadata,,,unlinked_patch_p3546,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3547,1,0,missing_linkage_metadata,,,unlinked_patch_p3547,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3548,1,0,missing_linkage_metadata,,,unlinked_patch_p3548,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3552,1,0,missing_linkage_metadata,,,unlinked_patch_p3552,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3553,1,0,missing_linkage_metadata,,,unlinked_patch_p3553,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3554,1,0,missing_linkage_metadata,,,unlinked_patch_p3554,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3575,1,0,missing_linkage_metadata,,,unlinked_patch_p3575,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3576,1,0,missing_linkage_metadata,,,unlinked_patch_p3576,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3577,1,0,missing_linkage_metadata,,,unlinked_patch_p3577,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3578,1,0,missing_linkage_metadata,,,unlinked_patch_p3578,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3579,1,0,missing_linkage_metadata,,,unlinked_patch_p3579,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3580,1,0,missing_linkage_metadata,,,unlinked_patch_p3580,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3583,1,0,missing_linkage_metadata,,,unlinked_patch_p3583,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3606,1,0,missing_linkage_metadata,,,unlinked_patch_p3606,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3622,1,0,missing_linkage_metadata,,,unlinked_patch_p3622,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3623,1,0,missing_linkage_metadata,,,unlinked_patch_p3623,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3624,1,0,missing_linkage_metadata,,,unlinked_patch_p3624,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3625,1,0,missing_linkage_metadata,,,unlinked_patch_p3625,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3626,1,0,missing_linkage_metadata,,,unlinked_patch_p3626,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3627,1,0,missing_linkage_metadata,,,unlinked_patch_p3627,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3628,1,0,missing_linkage_metadata,,,unlinked_patch_p3628,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3629,1,0,missing_linkage_metadata,,,unlinked_patch_p3629,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3633,1,0,missing_linkage_metadata,,,unlinked_patch_p3633,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3634,1,0,missing_linkage_metadata,,,unlinked_patch_p3634,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3650,1,0,missing_linkage_metadata,,,unlinked_patch_p3650,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3674,1,0,missing_linkage_metadata,,,unlinked_patch_p3674,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3675,1,0,missing_linkage_metadata,,,unlinked_patch_p3675,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3676,1,0,missing_linkage_metadata,,,unlinked_patch_p3676,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3677,1,0,missing_linkage_metadata,,,unlinked_patch_p3677,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3678,1,0,missing_linkage_metadata,,,unlinked_patch_p3678,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation
+unlinked_p3679,1,0,missing_linkage_metadata,,,unlinked_patch_p3679,patch_fallback_no_linkage,Leukoplakia with dysplasia,1,cross_validation
+unlinked_p3680,1,0,missing_linkage_metadata,,,unlinked_patch_p3680,patch_fallback_no_linkage,Leukoplakia with dysplasia,2,cross_validation
+unlinked_p3681,1,0,missing_linkage_metadata,,,unlinked_patch_p3681,patch_fallback_no_linkage,Leukoplakia with dysplasia,3,cross_validation
+unlinked_p3691,1,0,missing_linkage_metadata,,,unlinked_patch_p3691,patch_fallback_no_linkage,OSCC,0,cross_validation
+unlinked_p3692,1,0,missing_linkage_metadata,,,unlinked_patch_p3692,patch_fallback_no_linkage,OSCC,2,cross_validation
+unlinked_p3715,1,0,missing_linkage_metadata,,,unlinked_patch_p3715,patch_fallback_no_linkage,Leukoplakia without dysplasia,3,cross_validation
+unlinked_p3720,1,0,missing_linkage_metadata,,,unlinked_patch_p3720,patch_fallback_no_linkage,Leukoplakia without dysplasia,4,cross_validation
+unlinked_p3721,1,0,missing_linkage_metadata,,,unlinked_patch_p3721,patch_fallback_no_linkage,Leukoplakia without dysplasia,5,held_out_test
+unlinked_p3723,1,0,missing_linkage_metadata,,,unlinked_patch_p3723,patch_fallback_no_linkage,Leukoplakia without dysplasia,0,cross_validation
+unlinked_p3724,1,0,missing_linkage_metadata,,,unlinked_patch_p3724,patch_fallback_no_linkage,Leukoplakia without dysplasia,2,cross_validation
+unlinked_p3726,1,0,missing_linkage_metadata,,,unlinked_patch_p3726,patch_fallback_no_linkage,Leukoplakia with dysplasia,4,cross_validation
+unlinked_p3743,1,0,missing_linkage_metadata,,,unlinked_patch_p3743,patch_fallback_no_linkage,Leukoplakia with dysplasia,5,held_out_test
+unlinked_p3761,1,0,missing_linkage_metadata,,,unlinked_patch_p3761,patch_fallback_no_linkage,Leukoplakia with dysplasia,0,cross_validation

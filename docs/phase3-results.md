@@ -40,13 +40,13 @@ For the fuller stratification view, see [Fold Structure](fold-structure-explaine
 
 | Artifact | Purpose |
 | --- | --- |
-| `results/phase3_fold_creation/fold_assignments_origin.csv` | One row per origin with fold and stratification metadata. |
-| `results/phase3_fold_creation/fold_assignments_patch_level.csv` | One row per patch with inherited fold assignment. |
-| `results/phase3_fold_creation/stratification_variables_audit.csv` | Required and descriptive variable audit. |
-| `results/phase3_fold_creation/fold_validation.json` | Machine-readable validation report. |
+| `results/phase3/fold_creation/fold_assignments_origin.csv` | One row per origin with fold and stratification metadata. |
+| `results/phase3/fold_creation/fold_assignments_patch_level.csv` | One row per patch with inherited fold assignment. |
+| `results/phase3/fold_creation/stratification_variables_validation.csv` | Required and descriptive variable validation. |
+| `results/phase3/fold_creation/fold_validation.json` | Machine-readable validation report. |
 | `docs/assets/generated/fold_balance_summary.csv` | Documentation fold percentage summary. |
-| `results/thesis_figures/fold_origin_patch_percent.svg` | Thesis-ready fold balance vector export. |
-| `results/thesis_figures/fold_diagnosis_percent.svg` | Thesis-ready diagnosis balance vector export. |
+| `results/phase4/thesis_figures/fold_origin_patch_percent.svg` | Thesis-ready fold balance vector export. |
+| `results/phase4/thesis_figures/fold_diagnosis_percent.svg` | Thesis-ready diagnosis balance vector export. |
 
 ## Interpretation
 

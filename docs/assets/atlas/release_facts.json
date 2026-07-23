@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "report_type": "public_release_facts",
+  "privacy_mode": "public_aggregate",
+  "generated_by": "scripts/src/release/build_atlas_public_index.py",
+  "description": "Aggregate atlas and thesis-batch facts for reader-facing documentation. This file contains no row-level private SAB identifiers.",
+  "atlas_scope": {
+    "patch_rows": 3763,
+    "patches_with_coordinates": 3763,
+    "patches_with_final_wsi_id": 3763,
+    "validated_wsi_count": 251,
+    "validated_wsi_with_public_ndb_match": 203,
+    "validated_wsi_sab_only": 48,
+    "patch_label_agreement_rows": 3763,
+    "same_wsi_patch_pairs": 29350,
+    "all_coordinate_patch_pairs": 30531,
+    "patches_with_metadata_conflict": 1489
+  },
+  "thesis_relationship_scope": {
+    "patch_rows": 3763,
+    "linked_patch_rows": 3086,
+    "missing_linkage_patch_rows": 677,
+    "pndb_origins": 880,
+    "linked_pndb_origins": 203,
+    "missing_linkage_pndb_origins": 677
+  },
+  "thesis_batches": {
+    "batch1": {
+      "release_status": "canonical",
+      "patch_rows": 3763,
+      "fold_counts": {
+        "0": 628,
+        "1": 627,
+        "2": 627,
+        "3": 627,
+        "4": 627,
+        "5": 627
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1930,
+        "Leukoplakia without dysplasia": 707,
+        "OSCC": 1126
+      },
+      "origin_groups": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 201,
+      "patient_case_groups_crossing_folds": 61,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    },
+    "batch2": {
+      "release_status": "canonical",
+      "patch_rows": 3763,
+      "fold_counts": {
+        "0": 627,
+        "1": 631,
+        "2": 627,
+        "3": 626,
+        "4": 626,
+        "5": 626
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1930,
+        "Leukoplakia without dysplasia": 707,
+        "OSCC": 1126
+      },
+      "origin_groups": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 0,
+      "patient_case_groups_crossing_folds": 0,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    },
+    "batch3": {
+      "release_status": "exploratory_archive",
+      "patch_rows": 3351,
+      "fold_counts": {
+        "0": 566,
+        "1": 552,
+        "2": 544,
+        "3": 553,
+        "4": 556,
+        "5": 580
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1696,
+        "Leukoplakia without dysplasia": 628,
+        "OSCC": 1027
+      },
+      "origin_groups": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 0,
+      "patient_case_groups_crossing_folds": 0,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    }
+  },
+  "canonical_experiment_batches": [
+    "batch1",
+    "batch2"
+  ],
+  "batch3_virchow_pruning": {
+    "threshold": 0.98,
+    "before_patch_rows": 3763,
+    "after_patch_rows": 3351,
+    "removed_patch_rows": 412,
+    "near_duplicate_pairs": 480,
+    "near_duplicate_groups": 260
+  }
+}

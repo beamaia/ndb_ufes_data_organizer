@@ -1,0 +1,3 @@
+Validation-selected confusion-matrix checkpoints:
+- Experiment 1: DenseNet-121, fold 3, validation BCC 92.38%
+- Experiment 2: DenseNet-121, fold 3, validation BCC 71.60%

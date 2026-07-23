@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\caption{MLflow wall-clock duration for each CNN run. Fold durations and parent-run totals are reported in seconds.}
+\label{tab:cnn-execution-time}
+\centering
+\scriptsize
+\begin{tabular}{@{}lrrrrrrr@{}}
+\toprule
+Model & Fold 0 & Fold 1 & Fold 2 & Fold 3 & Fold 4 & Mean $\pm$ SD & Total \\
+\midrule
+\multicolumn{8}{c}{\textbf{Experiment 1: Original-comparable split}} \\
+\midrule
+MobileNetV2 & 1955 & 1694 & 1457 & 2597 & 2964 & $2133 \pm 564$ & 10671 \\
+DenseNet-121 & 4002 & 3714 & 5095 & 4810 & 4559 & $4436 \pm 510$ & 22183 \\
+ResNet-50 & 3371 & 4592 & 3037 & 4211 & 3455 & $3733 \pm 576$ & 18670 \\
+\midrule
+\multicolumn{8}{c}{\textbf{Experiment 2: Patient-first grouped split}} \\
+\midrule
+MobileNetV2 & 512 & 1072 & 2466 & 2261 & 2152 & $1693 \pm 763$ & 8469 \\
+DenseNet-121 & 2794 & 5077 & 4144 & 3864 & 3920 & $3960 \pm 728$ & 19808 \\
+ResNet-50 & 1888 & 2310 & 1926 & 1935 & 1815 & $1975 \pm 173$ & 9883 \\
+\bottomrule
+\end{tabular}
+\end{table*}

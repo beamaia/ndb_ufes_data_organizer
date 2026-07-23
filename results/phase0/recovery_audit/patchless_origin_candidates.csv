@@ -1,0 +1,35 @@
+origin_id,origin_number,origin_image_path,has_accepted_patches,accepted_patch_count,patchless_priority,diagnosis,TaskII,TaskIII,TaskIV,dysplasia_severity,patient_id,lesion_id,patchless_origin_count_for_diagnosis
+0016,16,data/ndb_ufes/origin_level/images/0016.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,129,17
+0017,17,data/ndb_ufes/origin_level/images/0017.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,24,129,17
+0040,40,data/ndb_ufes/origin_level/images/0040.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,84,17
+0044,44,data/ndb_ufes/origin_level/images/0044.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106,17
+0045,45,data/ndb_ufes/origin_level/images/0045.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,78,106,17
+0118,118,data/ndb_ufes/origin_level/images/0118.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Moderate,56,59,17
+0124,124,data/ndb_ufes/origin_level/images/0124.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47,17
+0125,125,data/ndb_ufes/origin_level/images/0125.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47,17
+0127,127,data/ndb_ufes/origin_level/images/0127.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,45,47,17
+0217,217,data/ndb_ufes/origin_level/images/0217.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,123,17
+0218,218,data/ndb_ufes/origin_level/images/0218.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,123,17
+0219,219,data/ndb_ufes/origin_level/images/0219.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,124,17
+0220,220,data/ndb_ufes/origin_level/images/0220.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Severe,108,124,17
+0227,227,data/ndb_ufes/origin_level/images/0227.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,163,193,17
+0228,228,data/ndb_ufes/origin_level/images/0228.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,163,193,17
+0231,231,data/ndb_ufes/origin_level/images/0231.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,165,195,17
+0232,232,data/ndb_ufes/origin_level/images/0232.png,False,0,0,Leukoplakia with dysplasia,Leukoplakia,Presence,Leukoplakia with dysplasia,Mild,165,195,17
+0027,27,data/ndb_ufes/origin_level/images/0027.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,63,68,7
+0145,145,data/ndb_ufes/origin_level/images/0145.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23,7
+0146,146,data/ndb_ufes/origin_level/images/0146.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,21,23,7
+0233,233,data/ndb_ufes/origin_level/images/0233.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,215,7
+0234,234,data/ndb_ufes/origin_level/images/0234.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,215,7
+0235,235,data/ndb_ufes/origin_level/images/0235.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,216,7
+0236,236,data/ndb_ufes/origin_level/images/0236.png,False,0,0,Leukoplakia without dysplasia,Leukoplakia,Absence,Leukoplakia without dysplasia,,183,216,7
+0167,167,data/ndb_ufes/origin_level/images/0167.png,False,0,0,OSCC,OSCC,Presence,OSCC,,11,12,10
+0193,193,data/ndb_ufes/origin_level/images/0193.png,False,0,0,OSCC,OSCC,Presence,OSCC,,36,38,10
+0221,221,data/ndb_ufes/origin_level/images/0221.png,False,0,0,OSCC,OSCC,Presence,OSCC,,160,190,10
+0222,222,data/ndb_ufes/origin_level/images/0222.png,False,0,0,OSCC,OSCC,Presence,OSCC,,160,190,10
+0223,223,data/ndb_ufes/origin_level/images/0223.png,False,0,0,OSCC,OSCC,Presence,OSCC,,161,191,10
+0224,224,data/ndb_ufes/origin_level/images/0224.png,False,0,0,OSCC,OSCC,Presence,OSCC,,161,191,10
+0225,225,data/ndb_ufes/origin_level/images/0225.png,False,0,0,OSCC,OSCC,Presence,OSCC,,162,192,10
+0226,226,data/ndb_ufes/origin_level/images/0226.png,False,0,0,OSCC,OSCC,Presence,OSCC,,162,192,10
+0229,229,data/ndb_ufes/origin_level/images/0229.png,False,0,0,OSCC,OSCC,Presence,OSCC,,164,194,10
+0230,230,data/ndb_ufes/origin_level/images/0230.png,False,0,0,OSCC,OSCC,Presence,OSCC,,164,194,10

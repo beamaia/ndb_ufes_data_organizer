@@ -23,8 +23,8 @@ Side effects:
 
 - Writes `origin_patch_mapping.csv`.
 - Writes embedding pickle files under `data/embeddings/`.
-- Writes metadata under `results/phase1_metadata/`.
-- Uses `results/phase1_feature_cache/` for patch-level feature reuse.
+- Writes metadata under `results/phase1/metadata/`.
+- Uses `results/phase1/feature_cache/` for patch-level feature reuse.
 
 ## Public Helper Functions
 
@@ -191,13 +191,13 @@ uv run python scripts/phase1.py
 
 See [Phase 1 Results](phase1-results.md) for the current artifact summary.
 
-## Audit Checklist
+## Validation Checklist
 
 - Mapping has 203 unique origins.
 - Saved embeddings contain the same 203 origin keys.
 - Total embedded patch arrays sum to 3,086 patches.
 - The metadata tracker records each configured model run.
 - Hugging Face gated models use accepted model terms and a valid token.
-- Feature cache lives under `results/phase1_feature_cache/`.
+- Feature cache lives under `results/phase1/feature_cache/`.
 
 **Last verified**: 29 June 2026.

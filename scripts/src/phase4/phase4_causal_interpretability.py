@@ -20,8 +20,8 @@ from pathlib import Path
 # CONFIGURATION
 # ---------------------------------------------------------------------------=
 PATCH_DATA_FILE = "data/ndb_ufes/patch/parcial_pndb_ufes.csv"
-FOLD_PATCH_FILE = "results/phase3_fold_creation/fold_assignments_patch_level.csv"
-FOLD_ORIGIN_FILE = "results/phase3_fold_creation/fold_assignments_origin.csv"
+FOLD_PATCH_FILE = "results/phase3/fold_creation/fold_assignments_patch_level.csv"
+FOLD_ORIGIN_FILE = "results/phase3/fold_creation/fold_assignments_origin.csv"
 OUTPUT_DIR = Path("results/phase4_causal_interpretability")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

@@ -1,0 +1,10 @@
+batch,diagnosis,patch_count
+Batch 1,Leukoplakia with dysplasia,1930
+Batch 1,Leukoplakia without dysplasia,707
+Batch 1,OSCC,1126
+Batch 2,Leukoplakia with dysplasia,1930
+Batch 2,Leukoplakia without dysplasia,707
+Batch 2,OSCC,1126
+Batch 3,Leukoplakia with dysplasia,1696
+Batch 3,Leukoplakia without dysplasia,628
+Batch 3,OSCC,1027

@@ -1,0 +1,128 @@
+{
+  "canonical_scope": "all 3,763 P-NDB-UFES patch images",
+  "inputs": {
+    "sab_train": "work/input_cache/sabpatch_parsed_folders.csv",
+    "sab_test": "work/input_cache/sabpatch_parsed_test.csv",
+    "partial_linkage_metadata": "work/input_cache/parcial_pndb_ufes.csv",
+    "origin_patch_mapping": "work/input_cache/origin_patch_mapping.csv",
+    "virchow_embeddings": "work/input_cache/embeddings_wsi_level_virchow_20260628_223154.pkl"
+  },
+  "outputs": {
+    "batch1_recovered_reference_patch_level": "outputs/experiment_artifacts/batch1_recovered_reference_patch_level.csv",
+    "batch2_patient_first_patch_level": "outputs/experiment_artifacts/batch2_patient_first_patch_level.csv",
+    "batch3_virchow_pruned_patch_level": "outputs/experiment_artifacts/batch3_virchow_pruned_patch_level.csv",
+    "batch3_virchow_pruning_pairs": "outputs/experiment_artifacts/batch3_virchow_pruning_pairs.csv",
+    "batch3_virchow_pruning_groups": "outputs/experiment_artifacts/batch3_virchow_pruning_groups.csv",
+    "batch3_diversity_summary_by_class": "outputs/experiment_artifacts/batch3_diversity_summary_by_class.csv",
+    "pndb_ndb_patch_relationships": "outputs/experiment_artifacts/pndb_ndb_patch_relationships.csv",
+    "pndb_ndb_origin_relationships": "outputs/experiment_artifacts/pndb_ndb_origin_relationships.csv",
+    "relationship_update_summary": "outputs/experiment_artifacts/relationship_update_summary.json",
+    "training_status": "outputs/experiment_artifacts/training_status.md"
+  },
+  "validation": {
+    "batch1": {
+      "rows": 3763,
+      "fold_counts": {
+        "0": 628,
+        "1": 627,
+        "2": 627,
+        "3": 627,
+        "4": 627,
+        "5": 627
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1930,
+        "Leukoplakia without dysplasia": 707,
+        "OSCC": 1126
+      },
+      "origins": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 201,
+      "patient_case_groups_crossing_folds": 61,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    },
+    "batch2": {
+      "rows": 3763,
+      "fold_counts": {
+        "0": 627,
+        "1": 631,
+        "2": 627,
+        "3": 626,
+        "4": 626,
+        "5": 626
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1930,
+        "Leukoplakia without dysplasia": 707,
+        "OSCC": 1126
+      },
+      "origins": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 0,
+      "patient_case_groups_crossing_folds": 0,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    },
+    "batch3": {
+      "rows": 3351,
+      "fold_counts": {
+        "0": 566,
+        "1": 552,
+        "2": 544,
+        "3": 553,
+        "4": 556,
+        "5": 580
+      },
+      "class_counts": {
+        "Leukoplakia with dysplasia": 1696,
+        "Leukoplakia without dysplasia": 628,
+        "OSCC": 1027
+      },
+      "origins": 880,
+      "patient_case_groups": 738,
+      "origins_crossing_folds": 0,
+      "patient_case_groups_crossing_folds": 0,
+      "missing_images": 0,
+      "missing_linkage_metadata_rows": 677
+    }
+  },
+  "batch3_virchow_pruning": {
+    "threshold": 0.98,
+    "scope": "within patient_case_group and diagnosis when Virchow embeddings are available",
+    "before_patch_rows": 3763,
+    "after_patch_rows": 3351,
+    "removed_patch_rows": 412,
+    "near_duplicate_pairs": 480,
+    "near_duplicate_groups": 260,
+    "summary_by_class": [
+      {
+        "diagnosis": "Leukoplakia with dysplasia",
+        "before_patch_count": 1930,
+        "after_patch_count": 1696,
+        "removed_patch_count": 234,
+        "removed_percent": "12.12"
+      },
+      {
+        "diagnosis": "Leukoplakia without dysplasia",
+        "before_patch_count": 707,
+        "after_patch_count": 628,
+        "removed_patch_count": 79,
+        "removed_percent": "11.17"
+      },
+      {
+        "diagnosis": "OSCC",
+        "before_patch_count": 1126,
+        "after_patch_count": 1027,
+        "removed_patch_count": 99,
+        "removed_percent": "8.79"
+      }
+    ]
+  },
+  "notes": [
+    "Batch 1 uses all 3,763 SAB split rows and preserves the original folder/test structure by mapping folders 1--6 to folds 0--5.",
+    "Batch 2 starts from all 3,763 patches. Rows without recovered patient/origin linkage are retained with missing metadata and a unique patch-level fallback group.",
+    "Batch 3 starts from all 3,763 patches. Virchow pruning is applied only where recovered embeddings exist; unlinked patches without embeddings are retained unpruned.",
+    "Clinical metadata are not used to infer patient identity."
+  ]
+}

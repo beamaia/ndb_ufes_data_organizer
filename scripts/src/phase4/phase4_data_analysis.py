@@ -21,8 +21,8 @@ import logging
 # CONFIGURATION
 # ---------------------------------------------------------------------------=
 EMBEDDINGS_FILE = "data/embeddings_wsi_level.pkl"
-ORIGIN_FOLDS = "results/phase3_fold_creation/fold_assignments_origin.csv"
-PATCH_FOLDS = "results/phase3_fold_creation/fold_assignments_patch_level.csv"
+ORIGIN_FOLDS = "results/phase3/fold_creation/fold_assignments_origin.csv"
+PATCH_FOLDS = "results/phase3/fold_creation/fold_assignments_patch_level.csv"
 PARAMS_FILE = "clustering_params.json"
 OUTPUT_DIR = Path("results/phase4_data_analysis")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -403,7 +403,10 @@ def generate_phase4_report(origin_df, patch_df, stats_df, validation_results):
         f.write("  - Skin color\n")
         f.write("  - Age group and risk-factor fields\n\n")
         f.write("Variables with high Not informed/missingness must not silently enter stratification_key.\n")
-        f.write("Check stratification_variables_audit.csv before treating folds as final.\n\n")
+        f.write(
+            "Check stratification_variables_validation.csv before treating "
+            "folds as final.\n\n"
+        )
         f.write("Origin integrity maintained (no data leakage)\n")
         f.write("Fold balance and class coverage must be recomputed after final Phase 2 selection.\n")
         f.write("Ready for external model training only after final audit acceptance.\n\n")
@@ -415,7 +418,7 @@ def generate_phase4_report(origin_df, patch_df, stats_df, validation_results):
         f.write("            patch_count, stratification_key, fold, and descriptive metadata\n\n")
         f.write("2. fold_assignments_patch_level.csv\n")
         f.write("   Columns include: origin_id, patch, diagnosis, fold, and descriptive metadata\n\n")
-        f.write("3. stratification_variables_audit.csv\n")
+        f.write("3. stratification_variables_validation.csv\n")
         f.write("   Records which variables were included in or excluded from fold construction\n\n")
         
         f.write("-"*80 + "\n")

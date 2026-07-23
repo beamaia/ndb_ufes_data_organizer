@@ -1,0 +1,31 @@
+origin_id,Leukoplakia with dysplasia,Leukoplakia without dysplasia,OSCC,total_patches,ratio_Leukoplakia with dysplasia,ratio_Leukoplakia without dysplasia,ratio_OSCC,n_patch_classes,has_multiple_patch_classes,dominant_class,dominant_class_ratio
+0011,0,0,64,64,0.0,0.0,1.0,1,False,OSCC,1.0
+0010,0,0,45,45,0.0,0.0,1.0,1,False,OSCC,1.0
+0041,37,0,0,37,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0166,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0115,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0116,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0126,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0130,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0132,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0133,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0134,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0135,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0138,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0157,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0161,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0163,20,0,0,20,1.0,0.0,0.0,1,False,Leukoplakia with dysplasia,1.0
+0169,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0168,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0113,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0170,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0177,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0178,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0180,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0192,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0206,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0207,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0208,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0209,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0210,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0
+0211,0,0,20,20,0.0,0.0,1.0,1,False,OSCC,1.0

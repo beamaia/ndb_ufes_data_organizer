@@ -1,0 +1,8 @@
+{
+  "patches_processed": 3763,
+  "unique_sab_origins": 255,
+  "status_counts": {
+    "exact_pixel_match": 3763
+  },
+  "output_coordinates": "results/phase0/sab_coordinate_recovery/sab_patch_recovered_coordinates.csv"
+}

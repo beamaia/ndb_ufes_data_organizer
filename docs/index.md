@@ -1,14 +1,47 @@
 # NDB-UFES Data Organizer
 
 <div class="ndb-hero" markdown>
-This repository organizes the public NDB-UFES oral histopathology dataset into leakage-safe fold assignments, documentation, and reproducibility material. It does not train a downstream diagnostic model.
+I use this repository to organize the public NDB-UFES oral histopathology dataset, keep patches from the same specimen together, and make the decisions behind the current thesis batches inspectable. The wiki also records how the SAB-linked subset relates to the full P-NDB-UFES scope and to the patient-first WSI atlas.
 </div>
 
 ## AI-Assisted Documentation Note
 
 This wiki was prepared with assistance from Codex (GPT-5), following instructions and guidelines written by a human. Published pages are reviewed and validated by a human before release.
 
-## Current Release State
+## What I am tracking
+
+There are two valid thesis scopes. The full P-NDB-UFES patch dataset contains
+3,763 patches and is used by both final experiments. The SAB-linked subset
+contains 3,086 patches and documents the recovered WSI/source linkage and
+embedding analyses. [Thesis Experiment Design](thesis-experiment-batches.md)
+explains why both counts appear.
+
+The root-level public atlas adds a patient/case-first view of 251 validated WSI
+groups across 64 public-pseudonymous patient/case groups. Start with the
+[Atlas Guide](atlas-guide.md), use the [Atlas Index](atlas-index.md) for
+lookup, and check the [Atlas Gap Map](atlas-gap-map.md) before treating any
+atlas value as a new thesis-release count.
+
+!!! info "Full public atlas"
+    [Download the 587-page public atlas PDF](https://github.com/beamaia/ndb_ufes_data_organizer/raw/refs/heads/main/NDB_UFES_SAB_atlas_public.pdf).
+    This 84.5 MB file is the direct Word PDF export at repository root; it has
+    not been post-export compressed. The LAB PDF and editable DOCX are not
+    public release artifacts.
+
+## Choose a reading path
+
+| If you want to... | Start here |
+| --- | --- |
+| understand the final experiment design | [Thesis Experiment Design](thesis-experiment-batches.md) |
+| inspect the completed model comparison | [Canonical Experiment Results](experiment-results.md) |
+| inspect the atlas without the private LAB crosswalk | [Atlas Guide](atlas-guide.md), then [Atlas Index](atlas-index.md) |
+| reproduce or deploy the documentation | [Setup & Installation](setup.md), then [Reproducibility](reproducibility.md) |
+| review what is still unresolved | [Atlas Gap Map](atlas-gap-map.md) and [Metadata Conflict Review](metadata-conflict-review.md) |
+| understand the older leakage-safe fold pipeline | [Pipeline](pipeline.md) and [Implementation Status](status.md) |
+
+The short version of the scope is: **3,763 patches** is the full thesis batch starting point, **3,086 patches** is the SAB-linked metadata/embedding subset, and **251 validated WSI groups** is the atlas linkage view. I keep these numbers together here because they are related, but they are not interchangeable.
+
+## SAB-Linked Subset Release State
 
 <div class="ndb-card-grid" markdown>
 
@@ -32,12 +65,21 @@ This wiki was prepared with assistance from Codex (GPT-5), following instruction
 **Patch ratio.** Maximum/minimum patch-count ratio after Phase 3 validation.
 </div>
 
+<div class="ndb-card" markdown>
+<span class="ndb-stat">251</span>
+**Validated WSIs.** Atlas groups with 3,763 patches assigned by recovered WSI evidence.
+</div>
+
 </div>
 
 ## Start Here
 
 | Page | Use It For |
 | --- | --- |
+| [Thesis Experiment Design](thesis-experiment-batches.md) | Final two-experiment design and its relationship to the 3,086-patch SAB-linked subset. |
+| [Canonical Experiment Results](experiment-results.md) | Validated results, figures, statistics, and stored-run provenance. |
+| [Atlas Index](atlas-index.md) | Lightweight public-pseudonymous lookup for the 251 validated WSI groups. |
+| [Current Release Facts](release-facts.md) | One readable snapshot of the atlas, relationship, and batch scopes. |
 | [Factsheet](factsheet.md) | Public dataset context, task labels, fold status, caveats, and citation language. |
 | [Data Dictionary](data-dictionary.md) | File relationships, columns, counts, labels, and field-level cautions. |
 | [Pipeline](pipeline.md) | Short explanation of Phase 1, Phase 2, Phase 3, and leakage boundaries. |
@@ -45,14 +87,20 @@ This wiki was prepared with assistance from Codex (GPT-5), following instruction
 | [Phase 2 Results](phase2-results.md) | Virchow selection, eligibility constraints, and model comparison. |
 | [Phase 3 Results](phase3-results.md) | Fold assignment results, validation metrics, and generated fold figures. |
 
-## What The Repository Publishes
+## What I publish
 
 - Origin-level fold assignments.
 - Patch-level fold assignments.
 - A data dictionary and public factsheet.
-- Reproducibility and audit guidance.
+- Reproducibility and validation guidance.
 - Exploratory quality-control notes.
 - Thesis-ready static figures generated from current outputs.
+
+The public site does not load the 587-page root PDF. It loads the text-first
+guide, the public-pseudonymous WSI index, and small JSON/CSV provenance files
+instead. The repository release still provides
+`NDB_UFES_SAB_atlas_public.pdf`; the LAB PDF, editable DOCX, and raw SAB
+crosswalk remain excluded.
 
 The published documentation site is:
 

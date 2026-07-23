@@ -1,0 +1,7 @@
+experiment,model,run_name,run_id,parent_status,child_count,folds,all_children_finished,expected_folds,batch_model_match,dataset_rows,dataset_sha256,same_name_runs_in_mlflow,parent_aggregate_matches_children
+Experiment 1,MobileNetV2,batch1_mobilenetv2_full_20260719_195146,06429825d70c4664bd63c4b53e996a94,FINISHED,5,"0,1,2,3,4",True,True,True,3763,8c5df2eb6123ccea59a2f06932ea88abaa156b47de230d708c37b18aa19be567,1,True
+Experiment 2,MobileNetV2,batch2_mobilenetv2_full_20260719_195146,bff3f566eaaa44349f79b52413acb3ce,FINISHED,5,"0,1,2,3,4",True,True,True,3763,c7586918c67b92d832fa22c749eab6e792fff0d9879a7497a557bee8e33e3d83,1,True
+Experiment 1,DenseNet-121,batch1_densenet121_full_20260720_031259,871b5389e4214e01a6f7d6d61ed82e21,FINISHED,5,"0,1,2,3,4",True,True,True,3763,8c5df2eb6123ccea59a2f06932ea88abaa156b47de230d708c37b18aa19be567,1,True
+Experiment 1,ResNet-50,batch1_resnet50_full_20260720_031259,42bffdc2d37d43818707164934fef82e,FINISHED,5,"0,1,2,3,4",True,True,True,3763,8c5df2eb6123ccea59a2f06932ea88abaa156b47de230d708c37b18aa19be567,1,True
+Experiment 2,DenseNet-121,batch2_densenet121_full_20260721_batch2_cnn,828be67ffd494debbf0a355630b8b3f0,FINISHED,5,"0,1,2,3,4",True,True,True,3763,c7586918c67b92d832fa22c749eab6e792fff0d9879a7497a557bee8e33e3d83,3,True
+Experiment 2,ResNet-50,batch2_resnet50_full_20260721_batch2_cnn,188fc9fab12c4675a89381101c9beb01,FINISHED,5,"0,1,2,3,4",True,True,True,3763,c7586918c67b92d832fa22c749eab6e792fff0d9879a7497a557bee8e33e3d83,2,True

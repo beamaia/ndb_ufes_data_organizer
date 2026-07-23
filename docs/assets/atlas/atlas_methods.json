@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "report_type": "atlas_method_contract",
+  "privacy_mode": "public_methods",
+  "scope": "validated WSI linkage and same-WSI patch-pair evidence",
+  "source_code": [
+    {
+      "path": "scripts/src/phase0/sab_patch_coordinate_recovery.py",
+      "role": "recover patch coordinates inside candidate SAB WSI images"
+    },
+    {
+      "path": "scripts/src/phase0/dataset_alignment_report.py",
+      "role": "compute same-WSI boxes, fingerprints, color distances, and pair relations"
+    },
+    {
+      "path": "scripts/src/phase0/validated_linkage.py",
+      "role": "assign validated WSI IDs and carry pair evidence into atlas outputs"
+    },
+    {
+      "path": "scripts/src/release/atlas_methods.py",
+      "role": "reusable coverage, IoU, and pair-relation helpers with fixture tests"
+    }
+  ],
+  "coordinate_recovery": {
+    "patch_shape": "512x512 pixels when the source patch is standard-sized",
+    "exact_match": {
+      "mae_threshold": 0.0,
+      "max_abs_diff_required": 0,
+      "status": "exact_pixel_match"
+    },
+    "near_match": {
+      "mae_threshold": 1.0,
+      "max_abs_diff_threshold": 5,
+      "status": "near_pixel_match"
+    },
+    "search": "OpenCV TM_SQDIFF_NORMED template matching after grayscale conversion; equal-size images use origin position (0, 0).",
+    "atlas_caution": "A recovered coordinate is placement evidence, not a diagnosis or a claim that the patch is clinically representative."
+  },
+  "same_wsi_pair_metrics": {
+    "pair_count": "n * (n - 1) / 2 for n patches assigned to one validated WSI",
+    "iou": {
+      "formula": "intersection_area / union_area",
+      "overlap_rule": "spatially_overlapping when IoU > 0; spatially_distinct when IoU == 0"
+    },
+    "visual_fingerprint_similarity": {
+      "resize": "32x32 pixels",
+      "channels": "RGB scaled to [0, 1] concatenated with OpenCV LAB channels",
+      "normalization": "mean-center the concatenated vector, then L2-normalize",
+      "similarity": "cosine similarity, implemented as the dot product of normalized vectors",
+      "classification_thresholds": {
+        "similarity_at_least": 0.995,
+        "lab_mean_delta_at_most": 6.0
+      }
+    },
+    "lab_mean_delta": {
+      "formula": "Euclidean distance between the mean LAB vectors of the two full patch images",
+      "interpretation": "lower values indicate more similar average LAB color; this is not a stain-normalization score"
+    },
+    "pair_relation": {
+      "decision_order": [
+        "If coordinates require review: feature_similar_coordinate_requires_review when the feature rule passes; otherwise coordinate_unavailable_or_requires_review.",
+        "If coordinates overlap and the feature rule passes: feature_similar_and_spatially_overlapping.",
+        "If coordinates are distinct and the feature rule passes: feature_similar_without_spatial_overlap.",
+        "Otherwise retain spatially_overlapping when IoU > 0, or spatially_distinct when IoU == 0."
+      ]
+    }
+  },
+  "atlas_panel_area_measures": {
+    "mapped_image_area": {
+      "formula": "area(union of all clipped patch boxes) / area(displayed WSI image)",
+      "reported_as": "percentage",
+      "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
+    },
+    "repeated_sampled_area": {
+      "formula": "area(coordinate pixels covered by at least two patch boxes) / area(union of all clipped patch boxes)",
+      "reported_as": "percentage",
+      "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
+    },
+    "repeated_full_wsi_image_area": {
+      "formula": "area(coordinate pixels covered by at least two patch boxes) / area(displayed WSI image)",
+      "reported_as": "percentage",
+      "evidence_basis": "Atlas panel definition and coordinate fixture cross-check"
+    }
+  },
+  "area_measure_boundary": "The current reusable helper freezes the formulas, but the atlas panel renderer/configuration that originally wrote every DOCX value still needs to be connected to this helper before a future regenerated atlas is declared byte-for-byte method-equivalent.",
+  "interpretation_limits": [
+    "Thresholds classify review evidence; they do not establish diagnostic equivalence or biological identity.",
+    "Same-WSI pair metrics are descriptive and should not be used as model-performance measurements.",
+    "The three atlas-panel area denominators are now explicit and fixture-tested; the original DOCX renderer still needs to be connected to the helper for full regeneration provenance."
+  ]
+}

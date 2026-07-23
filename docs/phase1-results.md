@@ -8,8 +8,8 @@ Phase 1 creates the origin-patch mapping and extracts frozen patch embeddings fo
 | --- | --- | --- |
 | Origin-patch mapping | `data/ndb_ufes/patch_level/csvs/origin_patch_mapping.csv` | 203 origins and 3,086 patches |
 | Embeddings | `data/embeddings/embeddings_wsi_level_{model}_{timestamp}.pkl` | one dictionary per configured model |
-| Run metadata | `results/phase1_metadata/master_runs.json` | completed run record |
-| Run summary | `results/phase1_metadata/runs_summary.txt` | human-readable extraction summary |
+| Run metadata | `results/phase1/metadata/master_runs.json` | completed run record |
+| Run summary | `results/phase1/metadata/runs_summary.txt` | human-readable extraction summary |
 | Exploratory visualizations | `docs/visualizations/` | retained for visual review |
 
 The current completed run covers all 11 configured pretrained backbones. Every model uses registry-defined preprocessing, including resize, crop, interpolation, normalization mean, and normalization standard deviation. There is no shared ImageNet-normalization fallback.
@@ -62,7 +62,7 @@ Before using Phase 1 outputs downstream, confirm:
 - `origin_patch_mapping.csv` contains 203 origins.
 - Every selected embedding file has the same 203 origin keys.
 - Total embedded patch rows sum to 3,086.
-- `results/phase1_metadata/master_runs.json` records the completed model runs.
+- `results/phase1/metadata/master_runs.json` records the completed model runs.
 
 Run Phase 1 from the repository root:
 

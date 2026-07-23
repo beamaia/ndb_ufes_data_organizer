@@ -76,7 +76,7 @@ class FeatureExtractor:
         fingerprint = hashlib.sha256(
             json.dumps(cache_config, sort_keys=True).encode("utf-8")
         ).hexdigest()[:12]
-        cache_base = PROJECT_ROOT / 'results/phase1_feature_cache'
+        cache_base = PROJECT_ROOT / 'results/phase1/feature_cache'
         cache_path = cache_base / self.model_name / fingerprint
         cache_path.mkdir(parents=True, exist_ok=True)
         return cache_path
