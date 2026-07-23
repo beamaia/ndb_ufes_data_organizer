@@ -69,7 +69,7 @@ The machine-readable evidence is stored under `release/v1.0.0/public/experiments
 
 ## Build and Validate the Wiki
 
-Regenerate the factsheet figures from the final public assignment tables and source-image index:
+Regenerate the factsheet and thesis figure bundles from the final public assignment tables and source-image index:
 
 ```bash
 uv run python scripts/src/docs/generate_factsheet_figures.py

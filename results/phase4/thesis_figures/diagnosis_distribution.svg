@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="500" viewBox="0 0 960 500" role="img" aria-labelledby="figure-title figure-description" fill="#17315f">
+<title id="figure-title">Final three-class patch distribution</title>
+<desc id="figure-description">Bar chart showing 1,126 OSCC patches, 1,930 leukoplakia with dysplasia patches, and 707 leukoplakia without dysplasia patches.</desc>
+<rect width="100%" height="100%" rx="14" fill="#ffffff"/>
+<style>text { font-family: Inter, Arial, sans-serif; }</style>
+<text x="480" y="44" text-anchor="middle" font-size="25" font-weight="700">Final three-class patch distribution</text>
+<text x="480" y="72" text-anchor="middle" font-size="14" fill="#51617e">3,763 patches in each experiment</text>
+<line x1="325.0" y1="105" x2="325.0" y2="410" stroke="#e7ecf5" stroke-width="1"/>
+<text x="325.0" y="434" text-anchor="middle" font-size="12" fill="#51617e">0</text>
+<line x1="468.8" y1="105" x2="468.8" y2="410" stroke="#e7ecf5" stroke-width="1"/>
+<text x="468.8" y="434" text-anchor="middle" font-size="12" fill="#51617e">500</text>
+<line x1="612.5" y1="105" x2="612.5" y2="410" stroke="#e7ecf5" stroke-width="1"/>
+<text x="612.5" y="434" text-anchor="middle" font-size="12" fill="#51617e">1,000</text>
+<line x1="756.2" y1="105" x2="756.2" y2="410" stroke="#e7ecf5" stroke-width="1"/>
+<text x="756.2" y="434" text-anchor="middle" font-size="12" fill="#51617e">1,500</text>
+<line x1="900.0" y1="105" x2="900.0" y2="410" stroke="#e7ecf5" stroke-width="1"/>
+<text x="900.0" y="434" text-anchor="middle" font-size="12" fill="#51617e">2,000</text>
+<text x="307" y="160" text-anchor="end" font-size="14">OSCC</text>
+<rect x="325" y="135" width="323.7" height="40" rx="5" fill="#d95f02"/>
+<text x="660.7" y="161" font-size="14" font-weight="700">1,126</text>
+<text x="307" y="255" text-anchor="end" font-size="14">Leukoplakia with dysplasia</text>
+<rect x="325" y="230" width="554.9" height="40" rx="5" fill="#087fbd"/>
+<text x="891.9" y="256" font-size="14" font-weight="700">1,930</text>
+<text x="307" y="350" text-anchor="end" font-size="14">Leukoplakia without dysplasia</text>
+<rect x="325" y="325" width="203.3" height="40" rx="5" fill="#009b72"/>
+<text x="540.3" y="351" font-size="14" font-weight="700">707</text>
+<text x="612" y="472" text-anchor="middle" font-size="13" fill="#51617e">Patch count</text>
+</svg>

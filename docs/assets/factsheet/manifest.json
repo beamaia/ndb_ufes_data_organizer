@@ -5,8 +5,8 @@
     "demographic_distributions.svg",
     "diagnosis_distribution.svg",
     "exposure_distributions.svg",
-    "source_image_linkage.svg",
-    "fold_class_distribution.svg"
+    "fold_class_distribution.svg",
+    "source_image_linkage.svg"
   ],
   "scope": {
     "distribution_patch_rows": 3111,

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate final-only wiki figures from the public experiment CSVs."""
+"""Generate final-only wiki and thesis figures from the public experiment CSVs."""
 
 from __future__ import annotations
 
@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 TABLE_DIR = ROOT / "release/v1.0.0/public/tables"
 OUTPUT_DIR = ROOT / "docs/assets/factsheet"
+THESIS_OUTPUT_DIR = ROOT / "results/phase4/thesis_figures"
 
 EXPERIMENTS = {
     "Experiment 1": {
@@ -66,6 +67,31 @@ SOURCE_COLORS = {
 }
 DISTRIBUTION_COLORS = ("#365cc1", "#60aa26", "#f5b700")
 NOT_INFORMED_COLOR = "#aab3c2"
+FIGURE_TITLES = {
+    "clinical_distributions.svg": "Public-linked clinical distributions",
+    "demographic_distributions.svg": "Public-linked demographic distributions",
+    "diagnosis_distribution.svg": "Final three-class patch distribution",
+    "exposure_distributions.svg": "Public-linked exposure distributions",
+    "fold_class_distribution.svg": "Class distribution across the six folds",
+    "source_image_linkage.svg": "Final source-image linkage",
+}
+STATIC_THESIS_FIGURES = (
+    {
+        "stem": "phase2_model_selection",
+        "title": "Phase 2 model selection",
+        "scope": "model-selection analysis",
+        "source": "results/phase2/tuning/phase2_model_selection.csv",
+    },
+    {
+        "stem": "origin_0011_overlap_bbox",
+        "title": "Source-image 0011 overlap bounding boxes",
+        "scope": "contamination-review example",
+        "source": (
+            "data/ndb_ufes/patch_level/images/p0020.png; "
+            "data/ndb_ufes/patch_level/images/p0021.png"
+        ),
+    },
+)
 
 
 def read_csv(path: Path, required_columns: set[str]) -> list[dict[str, str]]:
@@ -260,7 +286,9 @@ def svg_document(
 
 def write_svg(name: str, content: str) -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    THESIS_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUTPUT_DIR / name).write_text(content, encoding="utf-8")
+    (THESIS_OUTPUT_DIR / name).write_text(content, encoding="utf-8")
 
 
 def generate_diagnosis_distribution(
@@ -843,19 +871,61 @@ def write_manifest(
             "source_image_groups": EXPECTED_SOURCE_IMAGES,
         },
         "sources": sources,
-        "outputs": [
-            "clinical_distributions.svg",
-            "demographic_distributions.svg",
-            "diagnosis_distribution.svg",
-            "exposure_distributions.svg",
-            "source_image_linkage.svg",
-            "fold_class_distribution.svg",
-        ],
+        "outputs": list(FIGURE_TITLES),
     }
     (OUTPUT_DIR / "manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+
+    distribution_files = {
+        "clinical_distributions.svg",
+        "demographic_distributions.svg",
+        "exposure_distributions.svg",
+    }
+    source_paths = "; ".join(sources)
+    with (THESIS_OUTPUT_DIR / "figure_manifest.csv").open(
+        "w",
+        newline="",
+        encoding="utf-8",
+    ) as handle:
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=("title", "kind", "path", "scope", "source"),
+            lineterminator="\n",
+        )
+        writer.writeheader()
+        for filename, title in FIGURE_TITLES.items():
+            if filename in distribution_files:
+                scope = "3,111 public NDB-UFES-linked patch rows"
+            elif filename == "source_image_linkage.svg":
+                scope = "3,763 patches; 251 source-image groups"
+            else:
+                scope = "3,763 final experiment patch rows"
+            writer.writerow(
+                {
+                    "title": title,
+                    "kind": "thesis_svg",
+                    "path": (
+                        THESIS_OUTPUT_DIR / filename
+                    ).relative_to(ROOT).as_posix(),
+                    "scope": scope,
+                    "source": source_paths,
+                }
+            )
+        for figure in STATIC_THESIS_FIGURES:
+            for suffix in ("pdf", "png", "svg"):
+                path = THESIS_OUTPUT_DIR / f"{figure['stem']}.{suffix}"
+                require(path.is_file(), f"Missing retained thesis figure: {path}")
+                writer.writerow(
+                    {
+                        "title": figure["title"],
+                        "kind": f"thesis_{suffix}",
+                        "path": path.relative_to(ROOT).as_posix(),
+                        "scope": figure["scope"],
+                        "source": figure["source"],
+                    }
+                )
 
 
 def main() -> None:
@@ -880,7 +950,8 @@ def main() -> None:
         f"{EXPECTED_PATCHES:,} patches and {EXPECTED_SOURCE_IMAGES:,} "
         f"source-image groups; distribution figures use the "
         f"{EXPECTED_SOURCE_SUMMARY['both']['patches']:,} public "
-        f"NDB-UFES-linked patches in {OUTPUT_DIR.relative_to(ROOT)}"
+        f"NDB-UFES-linked patches in {OUTPUT_DIR.relative_to(ROOT)} and "
+        f"{THESIS_OUTPUT_DIR.relative_to(ROOT)}"
     )
 
 

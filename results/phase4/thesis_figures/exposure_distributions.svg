@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="446" viewBox="0 0 1200 446" role="img" aria-labelledby="figure-title figure-description" fill="#17315f">
+<title id="figure-title">Public-linked exposure distributions</title>
+<desc id="figure-description">Patch-row distributions for released tobacco-use, alcohol-consumption, and sun-exposure fields in the 3,111 public NDB-UFES-linked rows, with not-informed values retained.</desc>
+<rect width="100%" height="100%" rx="14" fill="#ffffff"/>
+<style>text { font-family: Inter, Arial, sans-serif; }</style>
+<text x="600" y="43" text-anchor="middle" font-size="25" font-weight="700">Public-linked exposure distributions</text>
+<text x="600" y="72" text-anchor="middle" font-size="14" fill="#51617e">3,111 public NDB-UFES-linked patch rows; “Not informed” is retained</text>
+<text x="205.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Tobacco use</text>
+<line x1="165.0" y1="140" x2="165.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="165.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="216.2" y1="140" x2="216.2" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="216.2" y="358" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="267.5" y1="140" x2="267.5" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="267.5" y="358" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="318.8" y1="140" x2="318.8" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="318.8" y="358" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="370.0" y1="140" x2="370.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="370.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="155" y="169" text-anchor="end" font-size="12">Yes</text>
+<rect x="165" y="150" width="60.6" height="27" rx="4" fill="#365cc1"/>
+<text x="232.6" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">920 (29.6%)</text>
+<text x="155" y="217" text-anchor="end" font-size="12">Former</text>
+<rect x="165" y="198" width="16.1" height="27" rx="4" fill="#365cc1"/>
+<text x="188.1" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">245 (7.9%)</text>
+<text x="155" y="265" text-anchor="end" font-size="12">No</text>
+<rect x="165" y="246" width="31.6" height="27" rx="4" fill="#365cc1"/>
+<text x="203.6" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">479 (15.4%)</text>
+<text x="155" y="313" text-anchor="end" font-size="12">Not informed</text>
+<rect x="165" y="294" width="96.7" height="27" rx="4" fill="#aab3c2"/>
+<text x="268.7" y="313" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">1,467 (47.2%)</text>
+<text x="600.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Alcohol consumption</text>
+<line x1="560.0" y1="140" x2="560.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="560.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="611.2" y1="140" x2="611.2" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="611.2" y="358" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="662.5" y1="140" x2="662.5" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="662.5" y="358" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="713.8" y1="140" x2="713.8" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="713.8" y="358" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="765.0" y1="140" x2="765.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="765.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="550" y="169" text-anchor="end" font-size="12">Yes</text>
+<rect x="560" y="150" width="26.4" height="27" rx="4" fill="#60aa26"/>
+<text x="593.4" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">401 (12.9%)</text>
+<text x="550" y="217" text-anchor="end" font-size="12">Former</text>
+<rect x="560" y="198" width="32.9" height="27" rx="4" fill="#60aa26"/>
+<text x="599.9" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">500 (16.1%)</text>
+<text x="550" y="265" text-anchor="end" font-size="12">No</text>
+<rect x="560" y="246" width="49.0" height="27" rx="4" fill="#60aa26"/>
+<text x="616.0" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">743 (23.9%)</text>
+<text x="550" y="313" text-anchor="end" font-size="12">Not informed</text>
+<rect x="560" y="294" width="96.7" height="27" rx="4" fill="#aab3c2"/>
+<text x="663.7" y="313" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">1,467 (47.2%)</text>
+<text x="995.0" y="112" text-anchor="middle" font-size="17" font-weight="700">Sun exposure</text>
+<line x1="955.0" y1="140" x2="955.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="955.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">0%</text>
+<line x1="1006.2" y1="140" x2="1006.2" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1006.2" y="358" text-anchor="middle" font-size="11" fill="#51617e">25%</text>
+<line x1="1057.5" y1="140" x2="1057.5" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1057.5" y="358" text-anchor="middle" font-size="11" fill="#51617e">50%</text>
+<line x1="1108.8" y1="140" x2="1108.8" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1108.8" y="358" text-anchor="middle" font-size="11" fill="#51617e">75%</text>
+<line x1="1160.0" y1="140" x2="1160.0" y2="331" stroke="#e7ecf5" stroke-width="1"/>
+<text x="1160.0" y="358" text-anchor="middle" font-size="11" fill="#51617e">100%</text>
+<text x="945" y="169" text-anchor="end" font-size="12">Yes</text>
+<rect x="955" y="150" width="32.8" height="27" rx="4" fill="#f5b700"/>
+<text x="994.8" y="169" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">498 (16.0%)</text>
+<text x="945" y="217" text-anchor="end" font-size="12">No</text>
+<rect x="955" y="198" width="72.9" height="27" rx="4" fill="#f5b700"/>
+<text x="1034.9" y="217" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">1,106 (35.6%)</text>
+<text x="945" y="265" text-anchor="end" font-size="12">Not informed</text>
+<rect x="955" y="246" width="99.3" height="27" rx="4" fill="#aab3c2"/>
+<text x="1061.3" y="265" text-anchor="start" font-size="11" font-weight="700" fill="#17315f">1,507 (48.4%)</text>
+<text x="600" y="418" text-anchor="middle" font-size="12" fill="#51617e">Percentages describe assignment rows, not unique patients or source images.</text>
+</svg>

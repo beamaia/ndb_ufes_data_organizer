@@ -25,7 +25,7 @@ source-image relationship review.
 
 Research-facing copied tables live in `../research_ready_tables/`.
 
-Regenerate the final wiki factsheet figures from the public release CSVs:
+Regenerate the final wiki factsheet and thesis figure bundles from the public release CSVs:
 
 ```bash
 uv run python scripts/src/docs/generate_factsheet_figures.py
