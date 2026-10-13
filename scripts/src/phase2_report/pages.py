@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 
 from src.phase0_dataset_builder.sources import AGE_GROUP_YEARS, SHORT_LABEL
-from src.phase2_report.figures import CHOSEN_CLUSTERS, CHOSEN_PCA, share_gaps
+from src.phase2_report.figures import CHOSEN_CLUSTERS, CHOSEN_PCA
 from src.phase2_report.stats import NDB_LISTED_VALUES, RANDOM_DRAWS, original_folds
 from src.utils.logger import logger
 
@@ -172,13 +172,17 @@ The patch label is the label models train on. The NDB-UFES diagnosis belongs to 
 
 {count_table(ndb.value_counts(), total, "NDB-UFES diagnosis of the parent picture", [*LABELS, "not in NDB-UFES"])}
 
-A picture has many regions, so a patch can differ from its picture's label. No label was changed. The disagreement is recorded in `patch_vs_picture_diagnosis`:
+A picture has many regions, so a patch can differ from its picture's label. No label was changed. The disagreement is recorded in `patch_vs_picture_diagnosis`. The first percentage is of all {total:,} patches; the second leaves out the {int((patch["patch_vs_picture_diagnosis"] == "not_in_ndb").sum()):,} patches whose picture is not in NDB-UFES, which have no diagnosis to compare with.
 
-{count_table(patch["patch_vs_picture_diagnosis"].value_counts(), total, "Patch against its picture", ["match", "patch_less_severe", "patch_more_severe", "not_in_ndb"])}
+{markdown_table(["Patch against its picture", "Patches", "Percentage of all patches", "Percentage of patches whose picture is in NDB-UFES"], [[key, f"{n:,}", f"{n / total:.1%}", "" if key == "not_in_ndb" else f"{n / len(with_diagnosis):.1%}"] for key, n in ((key, int((patch["patch_vs_picture_diagnosis"] == key).sum())) for key in ["match", "patch_less_severe", "patch_more_severe", "not_in_ndb"])])}
 
 ## Where the labels differ
 
-Counting only the {len(with_diagnosis):,} patches whose picture is in NDB-UFES, the patch label equals the picture's diagnosis for {difference["match"] / len(with_diagnosis):.1%} of them, is less severe for {difference["patch_less_severe"] / len(with_diagnosis):.1%} and is more severe for {difference["patch_more_severe"] / len(with_diagnosis):.1%}. The chart shows, for the pictures of each diagnosis, how their patches are labeled; the hatched parts are patches more severe than their picture.
+Counting only the {len(with_diagnosis):,} patches whose picture is in NDB-UFES (the last column of the table above), the patch label equals the picture's diagnosis for {difference["match"] / len(with_diagnosis):.1%} of them, is less severe for {difference["patch_less_severe"] / len(with_diagnosis):.1%} and is more severe for {difference["patch_more_severe"] / len(with_diagnosis):.1%}. The first chart shows these shares for the pictures of each diagnosis and for all of them together.
+
+{figure("patch_vs_picture", "How the patch label compares with the diagnosis of its picture, for the pictures of each diagnosis and for all of them")}
+
+The second chart shows which labels the patches have, for the pictures of each diagnosis; the hatched parts are patches more severe than their picture.
 
 {figure("patch_labels", "For the pictures of each NDB-UFES diagnosis, the share of their patches by patch label")}
 
@@ -186,6 +190,9 @@ Counting only the {len(with_diagnosis):,} patches whose picture is in NDB-UFES, 
 - **More severe patches** ({difference["patch_more_severe"]:,}, {difference["patch_more_severe"] / total:.1%} of all patches) mean the picture's label is milder than part of its content.
     - Pictures labeled without dysplasia hold no OSCC patch. They do hold patches with dysplasia, {of_picture("Leukoplakia without dysplasia", "Leukoplakia with dysplasia")}: signs of dysplasia in pictures that were not labeled as having it.
     - Pictures labeled with dysplasia hold {of_picture("Leukoplakia with dysplasia", "OSCC")} OSCC patches. OSCC is the serious case, so these pictures need to be revalidated.
+
+!!! note "The hardest classes"
+    Leukoplakia with dysplasia and leukoplakia without dysplasia are the hardest classes to learn. The data shows why: {crossed.loc["Leukoplakia without dysplasia", "Leukoplakia with dysplasia"] / crossed.loc["Leukoplakia without dysplasia"].sum():.0%} of the patches of the pictures judged as without dysplasia are labeled with dysplasia.
 
 **Why they may differ.** The patches were labeled in a later step, not necessarily by the team that labeled NDB-UFES. The NDB-UFES diagnosis of the picture was accessible, but it was not used to label the patches, and the labeling was not blind. That may explain some of the patches with a more severe label.
 
@@ -195,9 +202,11 @@ Counting only the {len(with_diagnosis):,} patches whose picture is in NDB-UFES, 
 
 {figure("patches_per_picture", "How many patches were cut from each picture")}
 
+The patch extractor kept at most 20 patches from an image file. {int((patches_per_picture > 20).sum())} pictures have more, up to {patches_per_picture.max()}, because SAB holds two similar images of them, with identical pixels, and each gave its own patches.
+
 ## Related pictures
 
-Some pictures show the same tissue: a wide view and a close-up, or two shots of one region. {len(related):,} pairs of pictures are tied by matching SIFT features, in {int((groups > 1).sum()):,} groups of related pictures that hold {in_group:,} of the {len(picture):,} pictures ({in_group / len(picture):.0%}). In {int(related["zoomed"].sum()):,} of the {len(related):,} pairs ({related["zoomed"].mean():.0%}) the zoom differs, usually by about four times, so one picture is a close-up of a part of the other. [Matching and Atlases](matching-and-atlases.md) shows how they were found and has the atlas.
+Some pictures show the same tissue: a wide view and a close-up, or two shots of one region. {len(related):,} pairs of pictures are tied by matching SIFT features, in {int((groups > 1).sum()):,} groups of related pictures that hold {in_group:,} of the {len(picture):,} pictures ({in_group / len(picture):.0%}). In {int(related["zoomed"].sum()):,} of the {len(related):,} pairs ({related["zoomed"].mean():.0%}) the zoom differs, usually by about four times, so one picture is a close-up of a part of the other. This fits how the images were taken, with the 10x and 40x objectives: the two differ by a factor of four. [Matching and Atlases](matching-and-atlases.md) shows how they were found and has the atlas.
 
 {figure("related_zoom", "Zoom between related pictures")}
 
@@ -234,7 +243,7 @@ def fold_distance_text(d: Data) -> str:
     distances = d.stats["fold_distances"]
     mean = distances.groupby("fold_set")["distance"].mean()
     farthest = distances[distances["fold_set"] == "new folds"].sort_values("distance").iloc[-1]
-    return f"""The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of {RANDOM_DRAWS} divisions), which is the distance that chance alone gives. The number in each title is the mean distance.
+    return f"""The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of {RANDOM_DRAWS} divisions), which is the distance that chance alone gives. The number in each title is the mean distance. In each panel both axes are the folds: the square where a row and a column meet is the distance between those two folds, and the diagonal is empty because a fold has no distance to itself.
 
 {figure("fold_distances", "Distance between every two folds, for the original folds, the new folds and a random division")}
 
@@ -258,7 +267,7 @@ def ndb_ufes_factsheet(d: Data) -> str:
 
     return f"""# Factsheet: NDB-UFES
 
-NDB-UFES, the public dataset of whole histopathology images with patient data and a diagnosis for each image, counted from its metadata file. The patches cut from these images are described in the [P-NDB-UFES factsheet](factsheet-p-ndb-ufes.md). Every number on this page comes from the published tables.
+NDB-UFES, the public dataset of whole histopathology images with patient data and a diagnosis for each image, counted from its metadata file. How it was built is in [About the Data](about-the-data.md). The patches cut from these images are described in the [P-NDB-UFES factsheet](factsheet-p-ndb-ufes.md). Every number on this page comes from the published tables.
 
 ## At a glance
 
@@ -326,6 +335,8 @@ def old_folds_page(d: Data) -> str:
     contamination_rows = [[unit, f"{split_units('original folds', unit)[0]:,}", *[f"{split_units(name, unit)[1]:,} ({split_units(name, unit)[1] / split_units(name, unit)[0]:.0%})" for name in sets]] for unit in units]
     pairs = overlap.set_index(["fold_set", "shared_area_at_least"])
     overlap_rows = [[f"at least {share}", f"{pairs.loc[('original folds', share), 'pairs']:,}", *[f"{pairs.loc[(name, share), 'pairs_in_different_folds']:,} ({pairs.loc[(name, share), 'share_in_different_folds']:.0%})" for name in sets]] for share in dict.fromkeys(overlap["shared_area_at_least"])]
+    affected_rows = [[f"at least {share}", f"{pairs.loc[('original folds', share), 'patches_with_neighbour']:,} ({pairs.loc[('original folds', share), 'patches_with_neighbour'] / pairs.loc[('original folds', share), 'patches']:.0%})", *[f"{pairs.loc[(name, share), 'patches_in_different_folds']:,} ({pairs.loc[(name, share), 'patches_in_different_folds'] / pairs.loc[(name, share), 'patches']:.0%})" for name in sets]] for share in dict.fromkeys(overlap["shared_area_at_least"])]
+    quarter = pairs.loc[("original folds", "25%")]
     names = [f"age group {AGE_GROUP_YEARS[value]}" if variable == "age group" and value in AGE_GROUP_YEARS else f"{variable} {value}" if variable == "age group" else f"{variable}: {value}" for variable, value in zip(balance["variable"], balance["value"])]
     table = balance.assign(name=names).pivot_table(index=["variable", "value", "name"], columns="fold_set", values="spread_points", sort=False).reset_index()
     balance_rows = [[row["name"], f"{row['original folds']:.1f}", f"{row['new folds']:.1f}"] for _, row in table.iterrows()]
@@ -338,13 +349,14 @@ def old_folds_page(d: Data) -> str:
     new_fold = assignments.set_index("patch_id")["fold"]
     in_folders = patch.assign(folder=patch["patch_id"].map(folder)).groupby("case_pseudonym")["folder"].transform("nunique")
     patches_in_split_cases = int((in_folders > 1).sum())
+    largest = d.stats["fold_largest_groups"]
     by_cluster = pd.crosstab(patch["patch_id"].map(folder), patch["patch_id"].map(d.cluster.set_index("patch_id")["cluster_k3"]))
-    cluster_rows = [[f"folder {name}", *[f"{row[c]:,} ({row[c] / row.sum():.0%})" for c in by_cluster.columns]] for name, row in by_cluster.iterrows()]
-    cluster_rows.append(["all folders", *[f"{by_cluster[c].sum():,} ({by_cluster[c].sum() / by_cluster.to_numpy().sum():.0%})" for c in by_cluster.columns]])
+    cluster_rows = [[f"fold {name}", *[f"{row[c]:,} ({row[c] / row.sum():.0%})" for c in by_cluster.columns]] for name, row in by_cluster.iterrows()]
+    cluster_rows.append(["all folds", *[f"{by_cluster[c].sum():,} ({by_cluster[c].sum() / by_cluster.to_numpy().sum():.0%})" for c in by_cluster.columns]])
 
     return f"""# Old Folds and Contamination
 
-The folds published with P-NDB-UFES on Mendeley Data, measured against the links rebuilt here and set beside the [new folds](folds.md). They are six folds of about 627 patches each, in six folders. Every number on this page comes from the published tables.
+The folds published with P-NDB-UFES on Mendeley Data, measured against the links rebuilt here and set beside the [new folds](folds.md). They are six folds of about 627 patches each, numbered 0 to 5 here, like the new folds, although the published files count them from 1. Every number on this page comes from the published tables.
 
 ## Contamination
 
@@ -352,21 +364,25 @@ Folds are contaminated when the same patient, picture or case has patches in mor
 
 {markdown_table(["Unit", "Units", "Split in the original folds", "Split in the new folds"], contamination_rows)}
 
-{patches_in_split_cases:,} of the {len(patch):,} patches ({patches_in_split_cases / len(patch):.2%}) belong to a case that the original folds split. The chart shows, for cases and for pictures, in how many folds their patches are found. In the original folds nearly every case is spread over all six; in the new folds every case, and every picture, is in one.
+{patches_in_split_cases:,} of the {len(patch):,} patches ({patches_in_split_cases / len(patch):.2%}) belong to a case that the original folds split. The chart takes the {len(largest.case_group.unique())} largest case groups and shows, for each, how many of its patches are in each fold. In the original folds (left) every bar is split over all six folds, so each of these patients has patches on both sides of any evaluation. In the new folds (right) every bar is a single colour.
 
-{figure("fold_spread", "In how many folds the patches of each case and of each picture are found, original and new folds")}
+{figure("fold_largest_groups", "How the patches of the largest case groups are divided between the folds, original and new folds")}
 
 ## Neighbouring patches
 
-Patches of one picture can overlap, because they were cut next to each other. Two overlapping patches in different folds share tissue between a training fold and a test fold. The table counts the pairs of patches of one picture that share at least the given part of their area, and how many of them are in different folds.
+Patches of one picture can overlap, because they were cut next to each other. Two overlapping patches in different folds share tissue between a training fold and a test fold. The first table counts the pairs of patches of one picture that share at least the given part of their area, and how many of them are in different folds.
 
 {markdown_table(["Shared area", "Pairs", "In different folds, original folds", "In different folds, new folds"], overlap_rows)}
 
-An example from the data: `{first}` and `{second}` are cut from one picture, at ({a.x}, {a.y}) and ({b.x}, {b.y}), and share about {shared:.0%} of their area. In the original folds they are in folders {folder[first]} and {folder[second]}, so a model trained on one is tested on a neighbour that holds part of the same tissue. In the new folds they are in folds {new_fold[first]} and {new_fold[second]}.
+The second table counts patches instead of pairs: the patches that have a neighbour sharing at least that part of their area, and, among all patches, those whose neighbour is in a different fold. In the original folds, {int(quarter.patches_in_different_folds):,} of the {int(quarter.patches):,} patches ({quarter.patches_in_different_folds / quarter.patches:.0%}) have a neighbour sharing at least a quarter of their area in another fold, and in the new folds none do.
+
+{markdown_table(["Shared area", "Patches with such a neighbour", "With that neighbour in a different fold, original folds", "With that neighbour in a different fold, new folds"], affected_rows)}
+
+An example from the data: `{first}` and `{second}` are cut from one picture, at ({a.x}, {a.y}) and ({b.x}, {b.y}), and share about {shared:.0%} of their area. In the original folds they are in folds {folder[first]} and {folder[second]}, so a model trained on one is tested on a neighbour that holds part of the same tissue. In the new folds they are in folds {new_fold[first]} and {new_fold[second]}.
 
 ## Balance
 
-Contamination is one side. The other is whether the folds look alike. For each value, the table gives the spread: the percentage of the fold with the highest share of that value minus the percentage of the fold with the lowest, in percentage points. For example, if 30% of the patches of one fold are OSCC and 25% of another fold's, the spread is 5 points. Small numbers mean the folds look alike.
+Contamination is one side. The other is whether the folds look alike. In short, the new folds are less alike than the original ones: they give up some evenness to avoid the contamination. For each value, the table gives the spread: the percentage of the fold with the highest share of that value minus the percentage of the fold with the lowest, in percentage points. For example, if 30% of the patches of one fold are OSCC and 25% of another fold's, the spread is 5 points. Small numbers mean the folds look alike.
 
 {markdown_table(["Value", "Spread, original folds", "Spread, new folds"], balance_rows)}
 
@@ -376,9 +392,9 @@ The original folds are the more even: their widest spread is {widest["original f
 
 ## The original folds and the morphology clusters
 
-The original folds deal patches out one by one, so patches of one picture end up in different folders. How the folders divide the three morphology clusters (see [New Folds](folds.md#morphology-clusters) for what they are):
+The original folds deal patches out one by one, so patches of one picture end up in different folds. How the folds divide the three morphology clusters (see [New Folds](folds.md#morphology-clusters) for what they are):
 
-{markdown_table(["Folder", *[f"Cluster {c}" for c in by_cluster.columns]], cluster_rows)}
+{markdown_table(["Fold", *[f"Cluster {c}" for c in by_cluster.columns]], cluster_rows)}
 
 ## Distance between the folds
 
@@ -412,7 +428,7 @@ The datasets hold the same material in several forms, so two questions had to be
 ## What it found
 
 - {len(related):,} pairs of pictures are tied strongly, in {int((groups > 1).sum()):,} groups of related pictures that hold {in_group:,} of the {len(picture):,} pictures ({in_group / len(picture):.0%}).
-- In {int(related["zoomed"].sum()):,} of the {len(related):,} pairs ({related["zoomed"].mean():.0%}) one picture is a zoomed close-up of part of the other, usually about four times.
+- In {int(related["zoomed"].sum()):,} of the {len(related):,} pairs ({related["zoomed"].mean():.0%}) one picture is a zoomed close-up of part of the other, usually about four times. This fits the 10x and 40x objectives the images were taken with, which differ by a factor of four.
 - {projected:,} patches ({projected / len(patch):.0%}) also appear in a second picture. Their position there was found by carrying the patch through the geometry between the two pictures.
 - The file names of SAB point to the same pictures: all {int((patch["parent_image_check"] == "agrees").sum()):,} agree ({(patch["parent_image_check"] == "agrees").mean():.0%}). See [About the Data](about-the-data.md).
 
@@ -438,8 +454,6 @@ def new_folds_page(d: Data) -> str:
     cases_per_group = case.groupby("case_group").size()
     by_cluster = pd.crosstab(cluster["cluster_k3"], patch.set_index("patch_id").loc[cluster["patch_id"], "patch_diagnosis"].to_numpy()).reindex(columns=LABELS, fill_value=0)
 
-    gaps = share_gaps(summary).stack()
-    worst_fold, worst_value = gaps.abs().idxmax()
     choices = d.stats["cluster_choices"]
     choice = choices[(choices["pca_components"] == CHOSEN_PCA) & (choices["clusters"] == CHOSEN_CLUSTERS)].iloc[0]
     cluster_rows = [[f"cluster {name}", f"{row.sum():,}"] + [f"{row[label]:,} ({row[label] / row.sum():.0%})" for label in LABELS] for name, row in by_cluster.iterrows()]
@@ -513,12 +527,6 @@ Age group 0 is only 199 patches in a few case groups, so two folds hold none of 
 This count is reported but not balanced.
 
 {fold_table(summary, {"Patches from the benigno folder": "benigno"})}
-
-## How even they are
-
-The chart shows, for every value in every fold, how many percentage points its share is above (red) or below (blue) its share in all the folds. For example, +4.5 in the OSCC column means 4.5 points more of the fold's patches are OSCC than of all patches. The largest gap is {gaps[(worst_fold, worst_value)]:+.1f} points, for {worst_value} in fold {worst_fold}. [Old Folds and Contamination](old-folds.md) sets this against the original folds.
-
-{figure("fold_deviation", "How far the share of each value in each fold is from its share in all the folds")}
 
 ## Morphology clusters
 

@@ -136,6 +136,28 @@ def patch_labels(patch: pd.DataFrame, output_dir: Path) -> None:
     save(fig, output_dir, "patch_labels")
 
 
+def patch_vs_picture(patch: pd.DataFrame, output_dir: Path) -> None:
+    """How the patch label compares with the diagnosis of its picture (the same, less severe, more severe), for the pictures of each diagnosis and for all of them."""
+    with_diagnosis = patch[patch["ndb_diagnosis"] != ""]
+    kinds = [("match", "same label as the picture", "#8fbf9f", None), ("patch_less_severe", "less severe than the picture", "#f2c879", None), ("patch_more_severe", "more severe than the picture", "#d6604d", "///")]
+    rows = [(f"Picture labeled\n{label}", with_diagnosis[with_diagnosis["ndb_diagnosis"] == label]) for label in LABELS] + [("All pictures\nin NDB-UFES", with_diagnosis)]
+    fig, ax = plt.subplots(figsize=(9, 3.8))
+    for row, (name, part) in enumerate(rows):
+        counts, left = part["patch_vs_picture_diagnosis"].value_counts(), 0.0
+        for key, label, color, hatch in kinds:
+            share = counts.get(key, 0) / len(part) * 100
+            ax.barh(row, share, left=left, color=color, hatch=hatch, edgecolor="white", linewidth=0, label=label if row == 0 else None)
+            if share >= 4:
+                ax.text(left + share / 2, row, f"{counts.get(key, 0):,}\n{share:.0f}%", ha="center", va="center", fontsize=9, fontweight="bold", color="black")
+            left += share
+    ax.set_yticks(range(len(rows)), [f"{name}\n({len(part):,} patches)" for name, part in rows])
+    ax.invert_yaxis()
+    ax.set_xlim(0, 100)
+    ax.set_xlabel("% of the patches of those pictures")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.25), ncol=3)
+    save(fig, output_dir, "patch_vs_picture")
+
+
 def sab_folders(stats: Path, output_dir: Path) -> None:
     data = pd.read_csv(stats / "sab_folder_vs_diagnosis.csv").set_index("sab_folders")
     data.index = [name.split(" (")[0] for name in data.index]
@@ -169,48 +191,26 @@ def related_zoom(stats: Path, output_dir: Path) -> None:
     save(fig, output_dir, "related_zoom")
 
 
-def share_gaps(summary: pd.DataFrame) -> pd.DataFrame:
-    """For every value in every fold: its share of the fold's patches minus its share of all patches, in percentage points."""
-    folds = summary[summary["fold"].isin([str(i) for i in range(6)])].set_index("fold").astype(float)
-    total = summary.set_index("fold").loc["total"].astype(float)
-    columns = [column for column in folds.columns if column not in ("groups", "patches", "benigno")]
-    return folds[columns].div(folds["patches"], axis=0) * 100 - total[columns] / total["patches"] * 100
-
-
-def fold_deviation(summary: pd.DataFrame, output_dir: Path) -> None:
-    gap = share_gaps(summary)
-    limit = 10
-    fig, ax = plt.subplots(figsize=(12, 3.6))
-    image = ax.imshow(gap.to_numpy().clip(-limit, limit), cmap="RdBu_r", vmin=-limit, vmax=limit, aspect="auto")
-    for (i, j), value in np.ndenumerate(gap.to_numpy()):
-        ax.text(j, i, f"{value:+.1f}", ha="center", va="center", fontsize=8, color="white" if abs(value) > 7 else "black")
-    ax.set_xticks(range(len(gap.columns)), gap.columns, rotation=45, ha="right")
-    ax.set_yticks(range(6), [f"fold {i}" for i in range(6)])
-    ax.spines[:].set_visible(False)
-    fig.colorbar(image, ax=ax, label="percentage points above (+) or below (−) the share in all folds", pad=0.01)
-    save(fig, output_dir, "fold_deviation")
-
-
-def fold_spread(stats: Path, output_dir: Path) -> None:
-    """In how many folds the patches of one case, or of one picture, are found."""
-    data = pd.read_csv(stats / "fold_spread.csv")
-    fig, axes = plt.subplots(1, 2, figsize=(11, 3.8), sharey=True)
-    width = 0.38
-    for ax, unit in zip(axes, ("cases", "parent pictures")):
-        for k, (name, color) in enumerate(FOLD_SET_COLOR.items()):
-            part = data[(data["fold_set"] == name) & (data["unit"] == unit)].set_index("folds")["units"].reindex(range(1, 7), fill_value=0)
-            share = part / part.sum() * 100
-            positions = np.arange(1, 7) + (k - 0.5) * width
-            ax.bar(positions, share, width, color=color, label=name)
-            for position, value in zip(positions, share):
-                if value >= 1:
-                    ax.text(position, value + 1, f"{value:.0f}%", ha="center", fontsize=8)
-        ax.set_title(unit)
-        ax.set_xlabel("In how many folds its patches are found")
-        ax.set_ylim(0, 112)
-    axes[0].set_ylabel("% of the units")
-    axes[0].legend(loc="upper center", bbox_to_anchor=(1.1, -0.2), ncol=2)
-    save(fig, output_dir, "fold_spread")
+def fold_largest_groups(stats: Path, output_dir: Path) -> None:
+    """The largest case groups, one bar each, divided by the fold their patches are in: original folds on the left, new folds on the right."""
+    data = pd.read_csv(stats / "fold_largest_groups.csv", dtype={"fold": str})
+    order = data[data["fold_set"] == "new folds"].groupby("case_group")["patches"].sum().sort_values(ascending=False).index
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4.6), sharey=True)
+    for ax, name in zip(axes, ("original folds", "new folds")):
+        part = data[data["fold_set"] == name].pivot_table(index="case_group", columns="fold", values="patches", fill_value=0).reindex(order)
+        left = np.zeros(len(order))
+        for color, fold in zip(FOLD_COLOR, sorted(part.columns)):
+            ax.barh(range(len(order)), part[fold], left=left, color=color, label=f"fold {fold}")
+            for row, (value, offset) in enumerate(zip(part[fold], left)):
+                if value >= 6:
+                    ax.text(offset + value / 2, row, f"{value:.0f}", ha="center", va="center", color="white", fontsize=8)
+            left = left + part[fold].to_numpy()
+        ax.set_title(name.capitalize())
+        ax.set_xlabel("Patches of the case group, coloured by the fold they are in")
+        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=6, fontsize=8, columnspacing=1)
+    axes[0].set_yticks(range(len(order)), order)
+    axes[0].invert_yaxis()
+    save(fig, output_dir, "fold_largest_groups")
 
 
 def fold_balance(stats: Path, output_dir: Path) -> None:
@@ -265,10 +265,10 @@ def embedding_view(frame: pd.DataFrame, output_dir: Path) -> None:
 def fold_distance_view(stats: Path, output_dir: Path) -> None:
     """How far apart every two folds are, for the original folds, the new folds and a random division of the patches, on one colour scale."""
     data = pd.read_csv(stats / "fold_distances.csv", dtype={"fold_a": str, "fold_b": str})
-    sets = [("original folds", "folder"), ("new folds", "fold"), ("random division", "fold")]
+    sets = ["original folds", "new folds", "random division"]
     top = data["distance"].max()
-    fig, axes = plt.subplots(1, 3, figsize=(13, 4.4))
-    for ax, (name, word) in zip(axes, sets):
+    fig, axes = plt.subplots(1, 4, figsize=(14, 4.6), gridspec_kw={"width_ratios": [1, 1, 1, 0.05]})
+    for ax, name in zip(axes[:3], sets):
         part = data[data["fold_set"] == name]
         names = sorted(set(part["fold_a"]) | set(part["fold_b"]))
         matrix = np.zeros((len(names), len(names)))
@@ -281,9 +281,10 @@ def fold_distance_view(stats: Path, output_dir: Path) -> None:
         ax.set_xticks(range(len(names)), names)
         ax.set_yticks(range(len(names)), names)
         ax.set_title(f"{name} (mean {part['distance'].mean():.2f})", fontsize=10)
-        ax.set_xlabel(word)
+        ax.set_xlabel("fold")
+        ax.set_ylabel("fold")
         ax.spines[:].set_visible(False)
-    fig.colorbar(image, ax=axes, label="Distance between two folds", shrink=0.8, pad=0.02)
+    fig.colorbar(image, cax=axes[3], label="Distance between two folds")
     save(fig, output_dir, "fold_distances")
 
 
@@ -316,9 +317,9 @@ def run_figures(args: argparse.Namespace) -> dict:
     frame = embedding_frame(args.embeddings, args.tables, args.folds, args.clusters)
     charts = [
         lambda: ndb_distributions(args.stats, output_dir), lambda: heatmap(pd.read_csv(args.stats / "ndb_correlations.csv"), output_dir, "ndb_correlations"), lambda: ndb_images_with_patches(args.stats, output_dir),
-        lambda: patch_labels(patch, output_dir), lambda: heatmap(pd.read_csv(args.stats / "patch_correlations.csv"), output_dir, "patch_correlations"), lambda: sab_folders(args.stats, output_dir), lambda: patches_per_picture(patch, output_dir), lambda: related_zoom(args.stats, output_dir),
+        lambda: patch_labels(patch, output_dir), lambda: patch_vs_picture(patch, output_dir), lambda: heatmap(pd.read_csv(args.stats / "patch_correlations.csv"), output_dir, "patch_correlations"), lambda: sab_folders(args.stats, output_dir), lambda: patches_per_picture(patch, output_dir), lambda: related_zoom(args.stats, output_dir),
         lambda: embedding_view(frame, output_dir), lambda: fold_distance_view(args.stats, output_dir), lambda: cluster_choices(args.clusters, output_dir),
-        lambda: fold_deviation(summary, output_dir), lambda: fold_spread(args.stats, output_dir), lambda: fold_balance(args.stats, output_dir),
+         lambda: fold_largest_groups(args.stats, output_dir), lambda: fold_balance(args.stats, output_dir),
     ]
     for chart in charts:
         chart()

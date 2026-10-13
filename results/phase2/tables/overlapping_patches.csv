@@ -1,7 +1,7 @@
-fold_set,shared_area_at_least,pairs,pairs_in_different_folds,share_in_different_folds
-new folds,25%,7099,0,0.0
-new folds,50%,3140,0,0.0
-new folds,75%,759,0,0.0
-original folds,25%,7119,5963,0.8376
-original folds,50%,3149,2621,0.8323
-original folds,75%,762,641,0.8412
+fold_set,shared_area_at_least,pairs,pairs_in_different_folds,share_in_different_folds,patches,patches_with_neighbour,patches_in_different_folds
+new folds,25%,7099,0,0.0,3760,3634,0
+new folds,50%,3140,0,0.0,3760,3031,0
+new folds,75%,759,0,0.0,3760,1243,0
+original folds,25%,7119,5963,0.8376,3763,3637,3563
+original folds,50%,3149,2621,0.8323,3763,3034,2767
+original folds,75%,762,641,0.8412,3763,1249,1076

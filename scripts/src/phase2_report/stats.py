@@ -26,6 +26,7 @@ ORIGINAL_FOLD_FILES = [  # the six folds published with P-NDB-UFES: five folders
     Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv"),
 ]
 OUTPUT_DIR = Path("results/phase2/tables")
+LARGEST_GROUPS = 12  # the case groups shown patch by patch in the chart of how the folds divide a patient
 RANDOM_DRAWS = 20  # random divisions of the patches, averaged, as the level that no structure gives
 SEED = 42
 LABELS = [diagnosis.value for diagnosis, _ in sorted(SEVERITY.items(), key=lambda item: item[1])]  # from least to most severe
@@ -55,9 +56,9 @@ def correlation_matrix(frame: pd.DataFrame, columns: dict[str, str]) -> pd.DataF
 
 
 def original_folds(files: list[Path] = ORIGINAL_FOLD_FILES) -> pd.Series:
-    """patch id -> folder number (1 to 6) of the folds published with P-NDB-UFES."""
+    """patch id -> fold (0 to 5, like the new folds) of the folds published with P-NDB-UFES, whose files number them 1 to 6."""
     published = pd.concat([pd.read_csv(path, dtype=str) for path in files])
-    return published.assign(patch_id=published["path"].str.removesuffix(".png")).set_index("patch_id")["folder"]
+    return published.assign(patch_id=published["path"].str.removesuffix(".png"), fold=(published["folder"].astype(int) - 1).astype(str)).set_index("patch_id")["fold"]
 
 
 def fold_sets(assignments: pd.DataFrame) -> dict[str, pd.Series]:
@@ -88,6 +89,17 @@ def fold_spread(patch: pd.DataFrame, sets: dict[str, pd.Series]) -> pd.DataFrame
     return pd.DataFrame(rows)
 
 
+def largest_groups(patch: pd.DataFrame, sets: dict[str, pd.Series]) -> pd.DataFrame:
+    """For the largest case groups: how many of their patches are in each fold, for the new folds and the original folds."""
+    largest = patch["case_group"].value_counts().head(LARGEST_GROUPS).index
+    rows = []
+    for name, folds in sets.items():
+        frame = patch[patch["case_group"].isin(largest)].assign(fold=lambda f: f["patch_id"].map(folds))
+        counts = frame.dropna(subset=["fold"]).groupby(["case_group", "fold"]).size()
+        rows += [{"fold_set": name, "case_group": group, "fold": fold, "patches": int(n)} for (group, fold), n in counts.items()]
+    return pd.DataFrame(rows)
+
+
 def pair_distances(distance: np.ndarray, folds: np.ndarray) -> dict[tuple[int, int], float]:
     """The energy distance between every two folds, on the distances between all the patches: 0 when two folds cover the space in the same way, larger the more differently."""
     names = sorted(set(folds))
@@ -113,14 +125,15 @@ def fold_distances(embeddings: Path, sets: dict[str, pd.Series]) -> pd.DataFrame
     points, sizes = coordinates.loc[known].to_numpy(), sets["new folds"].loc[known].value_counts().sort_index().to_numpy()
     distance, rng = cdist(points, points), np.random.default_rng(SEED)
     draws = [pair_distances(distance, rng.permutation(np.repeat(np.arange(len(sizes)), sizes))) for _ in range(RANDOM_DRAWS)]
-    rows += [{"fold_set": "random division", "fold_a": str(a + 1), "fold_b": str(b + 1), "distance": float(np.mean([draw[(a, b)] for draw in draws]))} for (a, b) in draws[0]]
+    rows += [{"fold_set": "random division", "fold_a": str(a), "fold_b": str(b), "distance": float(np.mean([draw[(a, b)] for draw in draws]))} for (a, b) in draws[0]]
     table = pd.DataFrame(rows)
     table["distance"] = table["distance"].round(2)
     return table
 
 
 def overlapping_patches(patch: pd.DataFrame, sets: dict[str, pd.Series], shares=(0.25, 0.5, 0.75)) -> pd.DataFrame:
-    """Pairs of patches from one parent picture that share at least the given part of their area, and how many such pairs are in different folds."""
+    """Pairs of patches from one parent picture that share at least the given part of their area, how many such pairs are in different folds,
+    and the same counted in patches: those with such a neighbour, and those whose such neighbour is in another fold."""
     pairs = []
     for _, group in patch.groupby("histopath_id"):
         x, y = group["x"].astype(int).to_numpy(), group["y"].astype(int).to_numpy()
@@ -135,8 +148,10 @@ def overlapping_patches(patch: pd.DataFrame, sets: dict[str, pd.Series], shares=
         different = known["a"].map(folds).to_numpy() != known["b"].map(folds).to_numpy()
         for share in shares:
             chosen = known["shared"].to_numpy() >= share
+            near, far = known[chosen], known[chosen & different]
             rows.append({"fold_set": name, "shared_area_at_least": f"{share:.0%}", "pairs": int(chosen.sum()), "pairs_in_different_folds": int((chosen & different).sum()),
-                         "share_in_different_folds": round(float((chosen & different).sum() / max(chosen.sum(), 1)), 4)})
+                         "share_in_different_folds": round(float((chosen & different).sum() / max(chosen.sum(), 1)), 4),
+                         "patches": len(folds), "patches_with_neighbour": len(set(near["a"]) | set(near["b"])), "patches_in_different_folds": len(set(far["a"]) | set(far["b"]))})
     return pd.DataFrame(rows)
 
 
@@ -198,7 +213,7 @@ def run_stats(args: argparse.Namespace) -> dict:
     sets = fold_sets(assignments)
 
     tables = {
-        "fold_balance": fold_balance(patch, sets), "fold_spread": fold_spread(patch, sets),
+        "fold_balance": fold_balance(patch, sets), "fold_spread": fold_spread(patch, sets), "fold_largest_groups": largest_groups(patch, sets),
         "overlapping_patches": overlapping_patches(patch, sets), "fold_distances": fold_distances(args.embeddings, sets), "patch_correlations": correlation_matrix(patch, PATCH_VARIABLES),
         **ndb_tables(metadata, picture), **picture_tables(patch, picture),
     }
