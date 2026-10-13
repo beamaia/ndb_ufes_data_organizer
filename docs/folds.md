@@ -136,12 +136,6 @@ This count is reported but not balanced.
 | all folds | 595 (16%) |
 | spread | 7.6 points |
 
-## How even they are
-
-The chart shows, for every value in every fold, how many percentage points its share is above (red) or below (blue) its share in all the folds. For example, +4.5 in the OSCC column means 4.5 points more of the fold's patches are OSCC than of all patches. The largest gap is -5.3 points, for age group 0 in fold 3. [Old Folds and Contamination](old-folds.md) sets this against the original folds.
-
-![How far the share of each value in each fold is from its share in all the folds](assets/figures/fold_deviation.svg)
-
 ## Morphology clusters
 
 Patches of different pictures can look alike, and a fold made mostly of one kind of appearance would test something different from the other folds. So the folds are balanced on how the patches look as well. Each patch is turned into a list of numbers (an embedding) by the Virchow pathology model. Reduced to the two directions that vary most (the first two PCA components), the patches form the picture below, where each dot is a patch. The same patches are coloured by patch label on the left and by cluster on the right. The clusters describe appearance, not diagnosis: every class spreads over several of them.
@@ -160,7 +154,7 @@ The patches are grouped into 3 clusters with K-Means (seed 42). The number of PC
 
 ## Distance between the folds
 
-The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of 20 divisions), which is the distance that chance alone gives. The number in each title is the mean distance.
+The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of 20 divisions), which is the distance that chance alone gives. The number in each title is the mean distance. In each panel both axes are the folds: the square where a row and a column meet is the distance between those two folds, and the diagonal is empty because a fold has no distance to itself.
 
 ![Distance between every two folds, for the original folds, the new folds and a random division](assets/figures/fold_distances.svg)
 

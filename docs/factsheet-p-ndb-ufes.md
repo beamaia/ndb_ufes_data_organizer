@@ -54,18 +54,22 @@ The patch label is the label models train on. The NDB-UFES diagnosis belongs to 
 | OSCC | 1,519 | 40.4% |
 | not in NDB-UFES | 652 | 17.3% |
 
-A picture has many regions, so a patch can differ from its picture's label. No label was changed. The disagreement is recorded in `patch_vs_picture_diagnosis`:
+A picture has many regions, so a patch can differ from its picture's label. No label was changed. The disagreement is recorded in `patch_vs_picture_diagnosis`. The first percentage is of all 3,763 patches; the second leaves out the 652 patches whose picture is not in NDB-UFES, which have no diagnosis to compare with.
 
-| Patch against its picture | Patches | Percentage |
-| --- | ---: | ---: |
-| match | 1,777 | 47.2% |
-| patch_less_severe | 885 | 23.5% |
-| patch_more_severe | 449 | 11.9% |
-| not_in_ndb | 652 | 17.3% |
+| Patch against its picture | Patches | Percentage of all patches | Percentage of patches whose picture is in NDB-UFES |
+| --- | ---: | ---: | ---: |
+| match | 1,777 | 47.2% | 57.1% |
+| patch_less_severe | 885 | 23.5% | 28.4% |
+| patch_more_severe | 449 | 11.9% | 14.4% |
+| not_in_ndb | 652 | 17.3% |  |
 
 ## Where the labels differ
 
-Counting only the 3,111 patches whose picture is in NDB-UFES, the patch label equals the picture's diagnosis for 57.1% of them, is less severe for 28.4% and is more severe for 14.4%. The chart shows, for the pictures of each diagnosis, how their patches are labeled; the hatched parts are patches more severe than their picture.
+Counting only the 3,111 patches whose picture is in NDB-UFES (the last column of the table above), the patch label equals the picture's diagnosis for 57.1% of them, is less severe for 28.4% and is more severe for 14.4%. The first chart shows these shares for the pictures of each diagnosis and for all of them together.
+
+![How the patch label compares with the diagnosis of its picture, for the pictures of each diagnosis and for all of them](assets/figures/patch_vs_picture.svg)
+
+The second chart shows which labels the patches have, for the pictures of each diagnosis; the hatched parts are patches more severe than their picture.
 
 ![For the pictures of each NDB-UFES diagnosis, the share of their patches by patch label](assets/figures/patch_labels.svg)
 
@@ -73,6 +77,9 @@ Counting only the 3,111 patches whose picture is in NDB-UFES, the patch label eq
 - **More severe patches** (449, 11.9% of all patches) mean the picture's label is milder than part of its content.
     - Pictures labeled without dysplasia hold no OSCC patch. They do hold patches with dysplasia, 395 (60.0%): signs of dysplasia in pictures that were not labeled as having it.
     - Pictures labeled with dysplasia hold 54 (5.8%) OSCC patches. OSCC is the serious case, so these pictures need to be revalidated.
+
+!!! note "The hardest classes"
+    Leukoplakia with dysplasia and leukoplakia without dysplasia are the hardest classes to learn. The data shows why: 60% of the patches of the pictures judged as without dysplasia are labeled with dysplasia.
 
 **Why they may differ.** The patches were labeled in a later step, not necessarily by the team that labeled NDB-UFES. The NDB-UFES diagnosis of the picture was accessible, but it was not used to label the patches, and the labeling was not blind. That may explain some of the patches with a more severe label.
 
@@ -86,9 +93,11 @@ Counting only the 3,111 patches whose picture is in NDB-UFES, the patch label eq
 
 ![How many patches were cut from each picture](assets/figures/patches_per_picture.svg)
 
+The patch extractor kept at most 20 patches from an image file. 7 pictures have more, up to 40, because SAB holds two similar images of them, with identical pixels, and each gave its own patches.
+
 ## Related pictures
 
-Some pictures show the same tissue: a wide view and a close-up, or two shots of one region. 92 pairs of pictures are tied by matching SIFT features, in 75 groups of related pictures that hold 160 of the 288 pictures (56%). In 83 of the 92 pairs (90%) the zoom differs, usually by about four times, so one picture is a close-up of a part of the other. [Matching and Atlases](matching-and-atlases.md) shows how they were found and has the atlas.
+Some pictures show the same tissue: a wide view and a close-up, or two shots of one region. 92 pairs of pictures are tied by matching SIFT features, in 75 groups of related pictures that hold 160 of the 288 pictures (56%). In 83 of the 92 pairs (90%) the zoom differs, usually by about four times, so one picture is a close-up of a part of the other. This fits how the images were taken, with the 10x and 40x objectives: the two differ by a factor of four. [Matching and Atlases](matching-and-atlases.md) shows how they were found and has the atlas.
 
 ![Zoom between related pictures](assets/figures/related_zoom.svg)
 

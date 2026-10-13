@@ -1,6 +1,6 @@
 # Old Folds and Contamination
 
-The folds published with P-NDB-UFES on Mendeley Data, measured against the links rebuilt here and set beside the [new folds](folds.md). They are six folds of about 627 patches each, in six folders. Every number on this page comes from the published tables.
+The folds published with P-NDB-UFES on Mendeley Data, measured against the links rebuilt here and set beside the [new folds](folds.md). They are six folds of about 627 patches each, numbered 0 to 5 here, like the new folds, although the published files count them from 1. Every number on this page comes from the published tables.
 
 ## Contamination
 
@@ -13,13 +13,13 @@ Folds are contaminated when the same patient, picture or case has patches in mor
 | parent pictures | 247 | 245 (99%) | 0 (0%) |
 | groups of related pictures | 173 | 172 (99%) | 0 (0%) |
 
-3,762 of the 3,763 patches (99.97%) belong to a case that the original folds split. The chart shows, for cases and for pictures, in how many folds their patches are found. In the original folds nearly every case is spread over all six; in the new folds every case, and every picture, is in one.
+3,762 of the 3,763 patches (99.97%) belong to a case that the original folds split. The chart takes the 12 largest case groups and shows, for each, how many of its patches are in each fold. In the original folds (left) every bar is split over all six folds, so each of these patients has patches on both sides of any evaluation. In the new folds (right) every bar is a single colour.
 
-![In how many folds the patches of each case and of each picture are found, original and new folds](assets/figures/fold_spread.svg)
+![How the patches of the largest case groups are divided between the folds, original and new folds](assets/figures/fold_largest_groups.svg)
 
 ## Neighbouring patches
 
-Patches of one picture can overlap, because they were cut next to each other. Two overlapping patches in different folds share tissue between a training fold and a test fold. The table counts the pairs of patches of one picture that share at least the given part of their area, and how many of them are in different folds.
+Patches of one picture can overlap, because they were cut next to each other. Two overlapping patches in different folds share tissue between a training fold and a test fold. The first table counts the pairs of patches of one picture that share at least the given part of their area, and how many of them are in different folds.
 
 | Shared area | Pairs | In different folds, original folds | In different folds, new folds |
 | --- | ---: | ---: | ---: |
@@ -27,11 +27,19 @@ Patches of one picture can overlap, because they were cut next to each other. Tw
 | at least 50% | 3,149 | 2,621 (83%) | 0 (0%) |
 | at least 75% | 762 | 641 (84%) | 0 (0%) |
 
-An example from the data: `p0020` and `p0021` are cut from one picture, at (240, 719) and (486, 974), and share about 26% of their area. In the original folds they are in folders 5 and 3, so a model trained on one is tested on a neighbour that holds part of the same tissue. In the new folds they are in folds 0 and 0.
+The second table counts patches instead of pairs: the patches that have a neighbour sharing at least that part of their area, and, among all patches, those whose neighbour is in a different fold. In the original folds, 3,563 of the 3,763 patches (95%) have a neighbour sharing at least a quarter of their area in another fold, and in the new folds none do.
+
+| Shared area | Patches with such a neighbour | With that neighbour in a different fold, original folds | With that neighbour in a different fold, new folds |
+| --- | ---: | ---: | ---: |
+| at least 25% | 3,637 (97%) | 3,563 (95%) | 0 (0%) |
+| at least 50% | 3,034 (81%) | 2,767 (74%) | 0 (0%) |
+| at least 75% | 1,249 (33%) | 1,076 (29%) | 0 (0%) |
+
+An example from the data: `p0020` and `p0021` are cut from one picture, at (240, 719) and (486, 974), and share about 26% of their area. In the original folds they are in folds 4 and 2, so a model trained on one is tested on a neighbour that holds part of the same tissue. In the new folds they are in folds 0 and 0.
 
 ## Balance
 
-Contamination is one side. The other is whether the folds look alike. For each value, the table gives the spread: the percentage of the fold with the highest share of that value minus the percentage of the fold with the lowest, in percentage points. For example, if 30% of the patches of one fold are OSCC and 25% of another fold's, the spread is 5 points. Small numbers mean the folds look alike.
+Contamination is one side. The other is whether the folds look alike. In short, the new folds are less alike than the original ones: they give up some evenness to avoid the contamination. For each value, the table gives the spread: the percentage of the fold with the highest share of that value minus the percentage of the fold with the lowest, in percentage points. For example, if 30% of the patches of one fold are OSCC and 25% of another fold's, the spread is 5 points. Small numbers mean the folds look alike.
 
 | Value | Spread, original folds | Spread, new folds |
 | --- | ---: | ---: |
@@ -59,21 +67,21 @@ The original folds are the more even: their widest spread is 5.7 points, against
 
 ## The original folds and the morphology clusters
 
-The original folds deal patches out one by one, so patches of one picture end up in different folders. How the folders divide the three morphology clusters (see [New Folds](folds.md#morphology-clusters) for what they are):
+The original folds deal patches out one by one, so patches of one picture end up in different folds. How the folds divide the three morphology clusters (see [New Folds](folds.md#morphology-clusters) for what they are):
 
-| Folder | Cluster 0 | Cluster 1 | Cluster 2 |
+| Fold | Cluster 0 | Cluster 1 | Cluster 2 |
 | --- | ---: | ---: | ---: |
-| folder 1 | 281 (45%) | 224 (36%) | 123 (20%) |
-| folder 2 | 271 (43%) | 230 (37%) | 126 (20%) |
-| folder 3 | 255 (41%) | 228 (36%) | 144 (23%) |
-| folder 4 | 274 (44%) | 213 (34%) | 140 (22%) |
-| folder 5 | 276 (44%) | 233 (37%) | 118 (19%) |
-| folder 6 | 275 (44%) | 217 (35%) | 135 (22%) |
-| all folders | 1,632 (43%) | 1,345 (36%) | 786 (21%) |
+| fold 0 | 281 (45%) | 224 (36%) | 123 (20%) |
+| fold 1 | 271 (43%) | 230 (37%) | 126 (20%) |
+| fold 2 | 255 (41%) | 228 (36%) | 144 (23%) |
+| fold 3 | 274 (44%) | 213 (34%) | 140 (22%) |
+| fold 4 | 276 (44%) | 233 (37%) | 118 (19%) |
+| fold 5 | 275 (44%) | 217 (35%) | 135 (22%) |
+| all folds | 1,632 (43%) | 1,345 (36%) | 786 (21%) |
 
 ## Distance between the folds
 
-The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of 20 divisions), which is the distance that chance alone gives. The number in each title is the mean distance.
+The chart gives, for every two folds, how far apart they are in the plane of the first two PCA components of the patch embeddings (the picture under [Morphology clusters](folds.md#morphology-clusters)). The distance is 0 when two folds cover the space in exactly the same way and grows the more differently they cover it. The panels are the original folds, the new folds, and a random division of the patches into six folds of the same sizes as the new folds (the average of 20 divisions), which is the distance that chance alone gives. The number in each title is the mean distance. In each panel both axes are the folds: the square where a row and a column meet is the distance between those two folds, and the diagonal is empty because a fold has no distance to itself.
 
 ![Distance between every two folds, for the original folds, the new folds and a random division](assets/figures/fold_distances.svg)
 

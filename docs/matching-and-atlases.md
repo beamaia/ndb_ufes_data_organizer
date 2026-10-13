@@ -12,7 +12,7 @@ The datasets hold the same material in several forms, so two questions had to be
 ## What it found
 
 - 92 pairs of pictures are tied strongly, in 75 groups of related pictures that hold 160 of the 288 pictures (56%).
-- In 83 of the 92 pairs (90%) one picture is a zoomed close-up of part of the other, usually about four times.
+- In 83 of the 92 pairs (90%) one picture is a zoomed close-up of part of the other, usually about four times. This fits the 10x and 40x objectives the images were taken with, which differ by a factor of four.
 - 1,237 patches (33%) also appear in a second picture. Their position there was found by carrying the patch through the geometry between the two pictures.
 - The file names of SAB point to the same pictures: all 3,763 agree (100%). See [About the Data](about-the-data.md).
 

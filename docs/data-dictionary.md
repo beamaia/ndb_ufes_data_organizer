@@ -181,12 +181,13 @@ The numbers and charts of the wiki come from these tables in `results/phase2/tab
 | `related_pictures.csv` | 92 | One row per pair of strongly related pictures and the zoom between them. |
 | `fold_balance.csv` | 34 | For each value of each balanced variable, how far apart the folds are, for the new folds and the original folds. |
 | `fold_spread.csv` | 22 | For each kind of unit, how many have their patches in one fold, in two folds, and so on, for the new folds and the original folds. |
+| `fold_largest_groups.csv` | 140 | For the 12 largest case groups, how many of their patches are in each fold, for the new folds and the original folds. |
 | `fold_distances.csv` | 45 | How far apart every two folds are in the plane of the first two PCA components of the patch embeddings, for the new folds, the original folds and a random division. |
 | `overlapping_patches.csv` | 6 | Overlapping patch pairs of one picture and how many are in different folds. |
 
 | Column | Meaning |
 | --- | --- |
-| `fold_set` | `new folds` or `original folds` (the six folds published with P-NDB-UFES). |
+| `fold_set` | `new folds` or `original folds` (the six folds published with P-NDB-UFES, numbered here 0 to 5 like the new folds although the published files count from 1). |
 | `variable` | The variable counted, or the row of a correlation table (the other columns of a correlation table are the same variables). |
 | `column` | A column of the NDB-UFES metadata. |
 | `gender`, `age_group`, `skin_color`, `localization`, `tobacco_use`, `alcohol_consumption`, `sun_exposure` | Besides `diagnosis`, the NDB-UFES variables that name the other columns of `ndb_correlations.csv`; see the NDB-UFES factsheet for their meaning. |
@@ -197,7 +198,9 @@ The numbers and charts of the wiki come from these tables in `results/phase2/tab
 | `folds` | In how many folds the patches of a unit are found. |
 | `units` | How many units have their patches in that many folds. |
 | `value` | The value of an item, or the value of the variable that a row of `fold_balance.csv` is about. |
-| `patches` | Patches in the fold. |
+| `patches` | Patches in the fold, or in the fold set. |
+| `case_group` | A case group. |
+| `fold` | A fold of the fold set. |
 | `fold_a`, `fold_b` | Two folds of a fold set. |
 | `distance` | How far apart the two folds are: the energy distance between their patches, which is 0 when they cover the space in the same way. |
 | `spread_points` | The percentage of the fold with the highest share of that value minus that of the fold with the lowest, in percentage points. |
@@ -209,6 +212,8 @@ The numbers and charts of the wiki come from these tables in `results/phase2/tab
 | `shared_area_at_least` | The part of their area two patches share: 25%, 50% or 75%. |
 | `pairs` | Pairs of patches of one picture that share that much. |
 | `pairs_in_different_folds` | Those pairs whose patches are in different folds. |
+| `patches_with_neighbour` | Patches that are in at least one such pair. |
+| `patches_in_different_folds` | Patches that have such a neighbour in a different fold. |
 | `share_in_different_folds` | The same as a fraction of the pairs. |
 | `pictures` | The group of pictures a row summarizes. |
 | `count`, `mean`, `median`, `q1`, `q3`, `smallest`, `largest` | Patches per picture: number of pictures, mean, median, first and third quartile, and range. |

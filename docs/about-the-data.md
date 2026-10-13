@@ -11,11 +11,19 @@ This is a study of the NDB-UFES dataset and of P-NDB-UFES, the dataset of patche
 | SAB | No | The internal dataset the patches were generated from: the parent images, filed by the SAB database. | `carcinoma`, `leucoplasia`, `benigno` (three folders) |
 | patches_data | No | The internal patches with the labels the dental team gave them, divided into hold-out sets. | `carcinoma`, `with_dysplasia`, `no_dysplasia` (three folders), which correspond to OSCC, leukoplakia with dysplasia and leukoplakia without dysplasia |
 
-## NDB-UFES and P-NDB-UFES
+## NDB-UFES
+
+NDB-UFES (de Assis et al., 2023, [Mendeley Data](https://data.mendeley.com/datasets/bbmmm4wgr8/4)) was built with the Oral Pathological Anatomy Service of the Dentistry Course of the Federal University of Espírito Santo, also known as SAP Bucal. It includes patients of the extension project Oral Diagnosis Center, from January 2010 to December 2021, who were diagnosed with oral leukoplakia or oral squamous cell carcinoma (OSCC).
+
+The images were taken from the selected slides with an attached camera, with the 10x and 40x objectives, and saved at 2048 × 1536 pixels. Each image comes from the most representative area of the lesion (the epithelial dysplasia or the OSCC), or from the most prevalent area, according to the slide. Each image comes with patient data and a diagnosis, which the [factsheet of NDB-UFES](factsheet-ndb-ufes.md) describes column by column.
+
+## P-NDB-UFES
+
+The number of whole images is small for training deep learning models, so the images were divided into smaller patches. Each image went through Scikit-Learn's PatchExtractor (Pedregosa et al., 2011), set to at most 20 patches of 512 × 512 pixels per image. Pathologists of SAP Bucal labeled the patches, and P-NDB-UFES holds only the patches that were put in one of three classes: OSCC, leukoplakia with dysplasia and leukoplakia without dysplasia. The [factsheet of P-NDB-UFES](factsheet-p-ndb-ufes.md) has the counts.
 
 P-NDB-UFES was not built specifically on NDB-UFES. It does contain patches for most of the NDB-UFES images, but it also contains patches that do not belong to any NDB-UFES image: they were cut from other parent images that exist only in the internal SAB dataset.
 
-Not every NDB-UFES image has patches. Some are also in SAB but were never cut into usable patches, and some images exist only in NDB-UFES: they are not in SAB, and they have no patches in P-NDB-UFES. The [factsheet of NDB-UFES](factsheet-ndb-ufes.md) and the [factsheet of P-NDB-UFES](factsheet-p-ndb-ufes.md) have the counts.
+Not every NDB-UFES image has patches. Some are also in SAB but were never cut into usable patches, and some images exist only in NDB-UFES: they are not in SAB, and they have no patches in P-NDB-UFES. The two factsheets have the counts.
 
 ## SAB
 
@@ -60,3 +68,8 @@ The prefixes were added late. They come from archived files that were hard to lo
 4. The folds are cut on case groups, so patches of the same patient are never on both sides of an evaluation.
 
 The [data dictionary](data-dictionary.md) explains every column of the tables this produces.
+
+## References
+
+- Falcao Ribeiro de Assis, Maria Clara; Lima, Leandro Muniz de; de Barros, Liliana Aparecida Pimenta; Velloso, Tania Regina; Krohling, Renato; Camisasca, Danielle. 2023. "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data." Mendeley Data, V4. doi: 10.17632/bbmmm4wgr8.4. <https://data.mendeley.com/datasets/bbmmm4wgr8/4>
+- Pedregosa, F. et al. 2011. "Scikit-learn: Machine Learning in Python." Journal of Machine Learning Research 12: 2825-2830.

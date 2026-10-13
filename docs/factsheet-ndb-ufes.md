@@ -1,6 +1,6 @@
 # Factsheet: NDB-UFES
 
-NDB-UFES, the public dataset of whole histopathology images with patient data and a diagnosis for each image, counted from its metadata file. The patches cut from these images are described in the [P-NDB-UFES factsheet](factsheet-p-ndb-ufes.md). Every number on this page comes from the published tables.
+NDB-UFES, the public dataset of whole histopathology images with patient data and a diagnosis for each image, counted from its metadata file. How it was built is in [About the Data](about-the-data.md). The patches cut from these images are described in the [P-NDB-UFES factsheet](factsheet-p-ndb-ufes.md). Every number on this page comes from the published tables.
 
 ## At a glance
 
