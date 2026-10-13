@@ -1,0 +1,312 @@
+schema: '2.0'
+stages:
+  picture-features:
+    cmd: uv run python scripts/phase0.py picture-features
+    deps:
+    - path: data/SAB
+      hash: md5
+      md5: 253f32da98953c712ca16748a5940e2c.dir
+      size: 2019197488
+      nfiles: 278
+    - path: data/ndb_ufes/origin_level/images
+      hash: md5
+      md5: a9a1cacbc95c1c626ab1c224f0eed458.dir
+      size: 1737224903
+      nfiles: 238
+    - path: scripts/src/phase0_dataset_builder
+      hash: md5
+      md5: 0732c2829adaa92dfb24bd152887492d.dir
+      size: 471292
+      nfiles: 34
+    outs:
+    - path: results/phase0/picture_feature_cache/picture_features.pkl
+      hash: md5
+      md5: 34f9983cc9ecf08f0ed21db9de1a8fab
+      size: 352886041
+  picture-relations:
+    cmd: uv run python scripts/phase0.py picture-relations
+    deps:
+    - path: results/phase0/picture_feature_cache/picture_features.pkl
+      hash: md5
+      md5: 34f9983cc9ecf08f0ed21db9de1a8fab
+      size: 352886041
+    - path: scripts/src/phase0_dataset_builder
+      hash: md5
+      md5: 0732c2829adaa92dfb24bd152887492d.dir
+      size: 471292
+      nfiles: 34
+    outs:
+    - path: results/phase0/picture_relations/picture_relations.csv
+      hash: md5
+      md5: df6787378f3bb2f33b8689c0d336a57f
+      size: 86721
+  patch-pool-search:
+    cmd: uv run python scripts/phase0.py patch-pool-search
+    deps:
+    - path: data/SAB
+      hash: md5
+      md5: 253f32da98953c712ca16748a5940e2c.dir
+      size: 2019197488
+      nfiles: 278
+    - path: data/ndb_ufes/origin_level/images
+      hash: md5
+      md5: a9a1cacbc95c1c626ab1c224f0eed458.dir
+      size: 1737224903
+      nfiles: 238
+    - path: data/ndb_ufes/patch_level/csvs/sab_patch_names.csv
+      hash: md5
+      md5: b404708b165a51e2ab9e946bbf5129df
+      size: 242763
+    - path: data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      hash: md5
+      md5: 5b0f70e2b2f84a8c5e8ce57e80b1c3a0
+      size: 83353
+    - path: data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      hash: md5
+      md5: f1ed36a7c308ebff0778feff316c199d
+      size: 16699
+    - path: data/ndb_ufes/patch_level/images
+      hash: md5
+      md5: fa104418a79006c85940fddb8c3832ba.dir
+      size: 1457542044
+      nfiles: 3763
+    - path: scripts/src/phase0_dataset_builder
+      hash: md5
+      md5: 0732c2829adaa92dfb24bd152887492d.dir
+      size: 471292
+      nfiles: 34
+    outs:
+    - path: results/phase0/patch_pool_search/patch_pool_matches.csv
+      hash: md5
+      md5: a4ae7a5f481c6a6b235c5c66c2fb3b28
+      size: 269712
+  patch-placements:
+    cmd: uv run python scripts/phase0.py patch-placements
+    deps:
+    - path: data/SAB
+      hash: md5
+      md5: 253f32da98953c712ca16748a5940e2c.dir
+      size: 2019197488
+      nfiles: 278
+    - path: data/ndb_ufes/origin_level/images
+      hash: md5
+      md5: a9a1cacbc95c1c626ab1c224f0eed458.dir
+      size: 1737224903
+      nfiles: 238
+    - path: data/ndb_ufes/patch_level/images
+      hash: md5
+      md5: fa104418a79006c85940fddb8c3832ba.dir
+      size: 1457542044
+      nfiles: 3763
+    - path: results/phase0/patch_pool_search/patch_pool_matches.csv
+      hash: md5
+      md5: a4ae7a5f481c6a6b235c5c66c2fb3b28
+      size: 269712
+    - path: results/phase0/picture_relations/picture_relations.csv
+      hash: md5
+      md5: df6787378f3bb2f33b8689c0d336a57f
+      size: 86721
+    - path: scripts/src/phase0_dataset_builder
+      hash: md5
+      md5: 0732c2829adaa92dfb24bd152887492d.dir
+      size: 471292
+      nfiles: 34
+    outs:
+    - path: results/phase0/patch_placements/patch_placements.csv
+      hash: md5
+      md5: fc7e09436bcdfe49d2b489d8528e0b34
+      size: 198150
+  patch-table:
+    cmd: uv run python scripts/phase0.py patch-table
+    deps:
+    - path: data/SAB
+      hash: md5
+      md5: 253f32da98953c712ca16748a5940e2c.dir
+      size: 2019197488
+      nfiles: 278
+    - path: data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+      hash: md5
+      md5: 63c496c45acf27f48d88482c1b49a790
+      size: 30811
+    - path: data/ndb_ufes/origin_level/images
+      hash: md5
+      md5: a9a1cacbc95c1c626ab1c224f0eed458.dir
+      size: 1737224903
+      nfiles: 238
+    - path: data/ndb_ufes/patch_level/csvs/sab_patch_names.csv
+      hash: md5
+      md5: b404708b165a51e2ab9e946bbf5129df
+      size: 242763
+    - path: data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      hash: md5
+      md5: 5b0f70e2b2f84a8c5e8ce57e80b1c3a0
+      size: 83353
+    - path: data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      hash: md5
+      md5: f1ed36a7c308ebff0778feff316c199d
+      size: 16699
+    - path: data/ndb_ufes/patch_level/images
+      hash: md5
+      md5: fa104418a79006c85940fddb8c3832ba.dir
+      size: 1457542044
+      nfiles: 3763
+    - path: data/patches_data
+      hash: md5
+      md5: 96314e20b50118e67149279fb7be2c64.dir
+      size: 1457564735
+      nfiles: 3767
+    - path: results/phase0/patch_placements/patch_placements.csv
+      hash: md5
+      md5: fc7e09436bcdfe49d2b489d8528e0b34
+      size: 198150
+    - path: results/phase0/patch_pool_search/patch_pool_matches.csv
+      hash: md5
+      md5: a4ae7a5f481c6a6b235c5c66c2fb3b28
+      size: 269712
+    - path: results/phase0/picture_relations/picture_relations.csv
+      hash: md5
+      md5: df6787378f3bb2f33b8689c0d336a57f
+      size: 86721
+    - path: scripts/src/phase0_dataset_builder
+      hash: md5
+      md5: 0732c2829adaa92dfb24bd152887492d.dir
+      size: 471292
+      nfiles: 34
+    outs:
+    - path: results/phase0/dataset_tables/case_table_public.csv
+      hash: md5
+      md5: d0ef0285abbe52e60f6f391ec4d76181
+      size: 1592
+    - path: results/phase0/dataset_tables/patch_table_public.csv
+      hash: md5
+      md5: 2a59c432a933f6327e7150a2b4a57727
+      size: 826554
+    - path: results/phase0/dataset_tables/picture_table_public.csv
+      hash: md5
+      md5: 0f5343f57ab35ebdf7031c5e5b3447e6
+      size: 51161
+    - path: results/phase0/dataset_tables/private_lab
+      hash: md5
+      md5: 77a95b74279a3890f41fd189520bca60.dir
+      size: 1619094
+      nfiles: 4
+  patch-embeddings:
+    cmd: uv run python scripts/phase1.py patch-embeddings
+    deps:
+    - path: data/ndb_ufes/patch_level/images
+      hash: md5
+      md5: fa104418a79006c85940fddb8c3832ba.dir
+      size: 1457542044
+      nfiles: 3763
+    - path: results/phase0/dataset_tables/patch_table_public.csv
+      hash: md5
+      md5: 2a59c432a933f6327e7150a2b4a57727
+      size: 826554
+    - path: scripts/src/models
+      hash: md5
+      md5: be99c6d185295d4b88a80b0d79c4067c.dir
+      size: 132714
+      nfiles: 9
+    - path: scripts/src/phase1_folds/embeddings.py
+      hash: md5
+      md5: 1cddb4b760e225571000be34bd2889d1
+      size: 3179
+    outs:
+    - path: results/phase1/embeddings/virchow_patch_embeddings.npz
+      hash: md5
+      md5: 07a137e9fa9b1022eff229807300c482
+      size: 35781755
+  patch-clusters:
+    cmd: uv run python scripts/phase1.py patch-clusters
+    deps:
+    - path: results/phase0/dataset_tables/patch_table_public.csv
+      hash: md5
+      md5: 2a59c432a933f6327e7150a2b4a57727
+      size: 826554
+    - path: results/phase1/embeddings/virchow_patch_embeddings.npz
+      hash: md5
+      md5: 07a137e9fa9b1022eff229807300c482
+      size: 35781755
+    - path: scripts/src/phase1_folds
+      hash: md5
+      md5: d2169f774c7c9b6b16406ba74bbb1be8.dir
+      size: 96070
+      nfiles: 6
+    outs:
+    - path: results/phase1/clusters/patch_clusters.csv
+      hash: md5
+      md5: df01d77c8c290f65ae46fdbabea8f486
+      size: 30124
+  folds:
+    cmd: uv run python scripts/phase1.py folds
+    deps:
+    - path: data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+      hash: md5
+      md5: 63c496c45acf27f48d88482c1b49a790
+      size: 30811
+    - path: results/phase0/dataset_tables/patch_table_public.csv
+      hash: md5
+      md5: 2a59c432a933f6327e7150a2b4a57727
+      size: 826554
+    - path: results/phase0/dataset_tables/picture_table_public.csv
+      hash: md5
+      md5: 0f5343f57ab35ebdf7031c5e5b3447e6
+      size: 51161
+    - path: results/phase1/clusters/patch_clusters.csv
+      hash: md5
+      md5: df01d77c8c290f65ae46fdbabea8f486
+      size: 30124
+    - path: scripts/src/phase0_dataset_builder/cases.py
+      hash: md5
+      md5: c606c0bfb68c35180520575f469c82bb
+      size: 28886
+    - path: scripts/src/phase1_folds
+      hash: md5
+      md5: d2169f774c7c9b6b16406ba74bbb1be8.dir
+      size: 96070
+      nfiles: 6
+    outs:
+    - path: results/phase1/folds/fold_assignments.csv
+      hash: md5
+      md5: 2b09438e7d960288885fd18169684508
+      size: 150521
+    - path: results/phase1/folds/fold_summary.csv
+      hash: md5
+      md5: e467e77af3b91358b4467a4b60fedf20
+      size: 987
+  factsheet:
+    cmd: uv run python scripts/src/docs/build_factsheet.py
+    deps:
+    - path: results/phase0/dataset_tables/case_table_public.csv
+      hash: md5
+      md5: d0ef0285abbe52e60f6f391ec4d76181
+      size: 1592
+    - path: results/phase0/dataset_tables/patch_table_public.csv
+      hash: md5
+      md5: 2a59c432a933f6327e7150a2b4a57727
+      size: 826554
+    - path: results/phase0/dataset_tables/picture_table_public.csv
+      hash: md5
+      md5: 0f5343f57ab35ebdf7031c5e5b3447e6
+      size: 51161
+    - path: results/phase1/clusters/patch_clusters.csv
+      hash: md5
+      md5: df01d77c8c290f65ae46fdbabea8f486
+      size: 30124
+    - path: results/phase1/folds/fold_assignments.csv
+      hash: md5
+      md5: 2b09438e7d960288885fd18169684508
+      size: 150521
+    - path: results/phase1/folds/fold_summary.csv
+      hash: md5
+      md5: e467e77af3b91358b4467a4b60fedf20
+      size: 987
+    - path: scripts/src/docs/build_factsheet.py
+      hash: md5
+      md5: c3b6dc9c472f9ccd258e43f1d868d63d
+      size: 10037
+    outs:
+    - path: docs/factsheet.md
+      hash: md5
+      md5: c8c7d5679f5155a7a12bb28f9314b083
+      size: 7338
