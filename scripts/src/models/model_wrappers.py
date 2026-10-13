@@ -1,7 +1,5 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-from typing import Union
 from src.utils.logger import logger
 
 
@@ -223,7 +221,7 @@ class ModelWrapperFactory:
             return self._wrap_torchvision(model, model_name)
         
         elif source == 'timm':
-            logger.info(f"  -> Using TIMM model wrapper")
+            logger.info("  -> Using TIMM model wrapper")
             return TimmModelWrapper(model, model_name)
         
         else:
@@ -236,62 +234,62 @@ class ModelWrapperFactory:
     def _wrap_huggingface(self, model, model_name: str) -> BaseModelWrapper:        
         # pathology foundation models
         if 'uni' in model_name.lower() or 'MahmoodLab' in str(model):
-            logger.info(f"  -> Using UNI wrapper")
+            logger.info("  -> Using UNI wrapper")
             return UNIWrapper(model, model_name)
         
         elif 'virchow' in model_name.lower() or 'paige' in str(model):
-            logger.info(f"  -> Using Virchow wrapper")
+            logger.info("  -> Using Virchow wrapper")
             return VirchowWrapper(model, model_name)
         
         elif 'ctranspath' in model_name.lower():
-            logger.info(f"  -> Using CTransPath wrapper")
+            logger.info("  -> Using CTransPath wrapper")
             return CTransPathWrapper(model, model_name)
         
         elif 'transpath' in model_name.lower():
-            logger.info(f"  -> Using TransPathNet wrapper")
+            logger.info("  -> Using TransPathNet wrapper")
             return HFTransPathNetWrapper(model, model_name)
         
         elif 'mocov3' in model_name.lower() or 'mocov3_vit' in model_name.lower():
-            logger.info(f"  -> Using MoCo V3 ViT wrapper")
+            logger.info("  -> Using MoCo V3 ViT wrapper")
             return HFMoCoV3VitWrapper(model, model_name)
         
         # vit
         elif 'clip' in model_name.lower() or hasattr(model, "vision_model"):
-            logger.info(f"  -> Using CLIP vision wrapper")
+            logger.info("  -> Using CLIP vision wrapper")
             return HFCLIPVisionWrapper(model, model_name)
 
         elif 'vit' in model_name.lower() and 'deit' not in model_name.lower():
-            logger.info(f"  -> Using HF ViT wrapper")
+            logger.info("  -> Using HF ViT wrapper")
             return HFViTWrapper(model, model_name)
         
         elif 'deit' in model_name.lower():
-            logger.info(f"  -> Using DeiT wrapper")
+            logger.info("  -> Using DeiT wrapper")
             return HFDeiTWrapper(model, model_name)
         
         elif 'swin' in model_name.lower():
             # check if it's SwinTransformer v2
             if 'swinv2' in model_name.lower() or 'v2' in model_name.lower():
-                logger.info(f"  -> Using Swin Transformer V2 wrapper")
+                logger.info("  -> Using Swin Transformer V2 wrapper")
                 return HFSwinTransformerWrapper(model, model_name)
             else:
-                logger.info(f"  -> Using Swin Transformer wrapper")
+                logger.info("  -> Using Swin Transformer wrapper")
                 return HFSwinWrapper(model, model_name)
         
         else:
-            logger.info(f"  -> Using generic HF ViT wrapper (default for HuggingFace)")
+            logger.info("  -> Using generic HF ViT wrapper (default for HuggingFace)")
             return HFViTWrapper(model, model_name)
     
     def _wrap_torchvision(self, model, model_name: str) -> BaseModelWrapper:        
         if 'resnet' in model_name.lower():
-            logger.info(f"  -> Using Torchvision ResNet wrapper")
+            logger.info("  -> Using Torchvision ResNet wrapper")
             return TorchvisionResNetWrapper(model, model_name)
         
         elif 'efficientnet' in model_name.lower():
-            logger.info(f"  -> Using Torchvision EfficientNet wrapper")
+            logger.info("  -> Using Torchvision EfficientNet wrapper")
             return TorchvisionEfficientNetWrapper(model, model_name)
         
         elif 'densenet' in model_name.lower():
-            logger.info(f"  -> Using Torchvision DenseNet wrapper")
+            logger.info("  -> Using Torchvision DenseNet wrapper")
             return TorchvisionDenseNetWrapper(model, model_name)
         
         else:

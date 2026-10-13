@@ -21,7 +21,7 @@ class ModelLoader:
             registry_path: Path to model_registry.yaml. If None, uses default location.
         """
         if registry_path is None:
-            registry_path = pl.Path(__file__).parent.parent / "phase1" / "config.yaml"
+            registry_path = pl.Path(__file__).parent / "registry.yaml"
             registry_path = pl.Path(registry_path)
         else:
             registry_path = pl.Path(registry_path)
@@ -158,7 +158,7 @@ class ModelLoader:
         value to avoid passing num_classes twice.
         """
         try:
-            logger.info(f"Loading Virchow model with special handling...")
+            logger.info("Loading Virchow model with special handling...")
             
             config = AutoConfig.from_pretrained(
                 model_config.model_id,
@@ -179,7 +179,7 @@ class ModelLoader:
             
             model = model.to(device)
             model.eval()
-            logger.info(f"Successfully loaded Virchow model")
+            logger.info("Successfully loaded Virchow model")
             return model
         except Exception as e:
             logger.error(f"Failed to load Virchow model: {e}")
@@ -192,7 +192,7 @@ class ModelLoader:
         CTransPath is based on Swin Transformer, so we load it as such.
         """
         try:
-            logger.info(f"Loading CTransPath model with special handling...")
+            logger.info("Loading CTransPath model with special handling...")
             
             # CTransPath is a swin-based model
             try:
@@ -213,7 +213,7 @@ class ModelLoader:
             
             model = model.to(device)
             model.eval()
-            logger.info(f"Successfully loaded CTransPath model")
+            logger.info("Successfully loaded CTransPath model")
             return model
         except Exception as e:
             logger.error(f"Failed to load CTransPath model: {e}")
@@ -227,7 +227,7 @@ class ModelLoader:
         TransPath is a ViT-based model for histopathology.
         """
         try:            
-            logger.info(f"Loading TransPath model with special handling...")
+            logger.info("Loading TransPath model with special handling...")
             
             try:
                 model = AutoModel.from_pretrained(
@@ -247,7 +247,7 @@ class ModelLoader:
             
             model = model.to(device)
             model.eval()
-            logger.info(f"Successfully loaded TransPath model")
+            logger.info("Successfully loaded TransPath model")
             return model
         except Exception as e:
             logger.error(f"Failed to load TransPath model: {e}")
@@ -374,7 +374,7 @@ class ModelLoader:
         wrapped_model = wrap_model(model, model_name, str(model_config.source))
         wrapped_model = wrapped_model.to(device)
         
-        logger.info(f"Model loaded and wrapped successfully\n")
+        logger.info("Model loaded and wrapped successfully\n")
         
         return wrapped_model
     
