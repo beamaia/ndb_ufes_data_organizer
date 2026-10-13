@@ -1,66 +1,45 @@
 # NDB-UFES Data Organizer
 
 <div class="ndb-hero" markdown>
-This repository organizes the public NDB-UFES oral histopathology dataset, keeps related patches together, and publishes the final thesis experiment assignments, results, and source-image linkage.
+This repository rebuilds the dataset behind the P-NDB-UFES oral histopathology patches. It ties every patch to the parent picture it was cut from, keeps related pictures and patients together, and publishes folds that do not leak between patients.
 </div>
+
+## What is here
+
+- **Every patch traced to its image.** Each of the 3,763 P-NDB-UFES patches is tied to the parent picture it was cut from, found by exact pixel matching. Most of those pictures are NDB-UFES images; the others come from internal datasets that are described in [About the Data](about-the-data.md).
+- **Cases and case groups.** Pictures and patients that share evidence are tied into case groups, and a case group is never split across folds.
+- **Six folds.** Balanced at once on the patch label, the NDB-UFES diagnosis of the picture, gender, age group and three morphology clusters. See [New Folds](folds.md) for the numbers.
+- **Nothing relabeled.** Where the patch label and the picture's diagnosis disagree, the disagreement is recorded, not corrected. A disagreement is not necessarily bad: a picture labeled OSCC can also contain dysplasia, so a with-dysplasia patch in it is expected. The problem is the other direction, a picture labeled with dysplasia that has an OSCC patch.
+
+## Download
+
+The tables are small CSV files in this repository:
+
+- [Fold assignments](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/results/phase1/folds/fold_assignments.csv): the fold of every patch. **Use this file to train and evaluate.**
+- [Patch table](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/results/phase0/dataset_tables/patch_table_public.csv): label, parent picture, position and checks for every patch.
+- [Picture table](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/results/phase0/dataset_tables/picture_table_public.csv): one row per parent picture.
+- [Case table](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/results/phase0/dataset_tables/case_table_public.csv): the masked cases and their case groups.
+
+Every column is explained in the [data dictionary](data-dictionary.md). The images themselves are not published here: the patches are in P-NDB-UFES and the origin images in NDB-UFES (Mendeley Data). Some parent images come from an internal dataset, SAB, which is private; see [About the Data](about-the-data.md).
+
+## Using the folds
+
+- Use `fold_assignments.csv` instead of a random patch-level split. Patches of one case group are always in one fold, so patches of the same patient never sit on both sides of an evaluation.
+- Each fold is held out in turn. There is no separate train/test split.
+- Skip the three patches with an empty `fold`: they are exact duplicates of another patch, which stays in the folds.
+- The label to predict is `patch_diagnosis`. `ndb_diagnosis` belongs to the whole picture and is context, not a target.
+
+## Where to look
+
+- To see how the four datasets differ and how they relate, read [About the Data](about-the-data.md).
+- For the factsheet of NDB-UFES, read [Factsheet: NDB-UFES](factsheet-ndb-ufes.md).
+- For the factsheet of P-NDB-UFES, read [Factsheet: P-NDB-UFES](factsheet-p-ndb-ufes.md).
+- To see how patches and pictures were matched, and to open the atlases, read [Matching and Atlases](matching-and-atlases.md).
+- For the old fold configuration and how contaminated it was, read [Old Folds and Contamination](old-folds.md).
+- For the new fold configuration, read [New Folds](folds.md).
+- For every column and value of the tables, read the [Data Dictionary](data-dictionary.md).
+- To install, preview the wiki and rebuild the dataset, read [Setup and Installation](setup.md) and [Reproducibility](reproducibility.md).
 
 ## AI-Assisted Documentation Note
 
-This wiki was prepared with assistance from Codex (GPT-5), following instructions and guidelines written by a human. Published pages are reviewed and validated by a human before release.
-
-## Final Dataset Scope
-
-Both experiments use all **3,763 P-NDB-UFES patches**. The validated linkage assigns every patch to one of **251 source-image groups**:
-
-| Source-image role | Groups | Patches |
-| --- | ---: | ---: |
-| Public NDB-UFES + SAB evidence | 203 | 3,111 |
-| SAB-only evidence | 48 | 652 |
-| **Total** | **251** | **3,763** |
-
-The 3,111 patches in both-source groups are the public NDB-UFES-linked set used throughout this wiki. The 652 SAB-only patches remain in both final experiments and are grouped by their validated SAB source-image relationships.
-
-## Download the Fold Assignments
-
-Most users should download **Experiment 2**, the patient-first grouped split. Use Experiment 1 only when the patch-level reference comparison is required.
-
-- [Download Experiment 2 fold assignments — patient-first grouped CSV](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment2_patch_assignments.csv)
-- [Download Experiment 1 fold assignments — reference CSV](https://raw.githubusercontent.com/beamaia/ndb_ufes_data_organizer/main/release/v1.0.0/public/tables/experiment1_patch_assignments.csv)
-
-Each CSV contains all 3,763 patches. Use the provided `fold` and `role` columns rather than creating a new random split.
-
-## Choose a Reading Path
-
-| If you want to... | Start here |
-| --- | --- |
-| understand the released dataset and linkage | [Factsheet](factsheet.md) |
-| understand the two final experiment splits | [Thesis Experiment Design](thesis-experiment-batches.md) |
-| inspect the completed model comparison | [Canonical Experiment Results](experiment-results.md) |
-| inspect files, columns, and counts | [Data Dictionary](data-dictionary.md) |
-| reproduce the final public outputs | [Reproducibility](reproducibility.md) |
-| preview or build the wiki | [Setup & Installation](setup.md) |
-| understand the contamination-risk example | [Contamination Checks](contamination-analysis.md) |
-
-## Final Outputs
-
-- Two 3,763-row experiment assignment tables.
-- A 251-row public source-image index.
-- Canonical results from six parent runs and 30 child-fold evaluations.
-- Public figures, machine-readable metrics, and provenance.
-- A data dictionary, factsheet, reproducibility guide, and validation report.
-
-The public site loads text-first documentation and sanitized research artifacts. Private source identifiers, private crosswalks, local paths, checkpoints, and raw MLflow storage are excluded.
-
-The published documentation site is:
-
-```text
-https://beamaia.github.io/ndb_ufes_data_organizer/
-```
-
-## Lab Attribution
-
-This work is attributed to the [Nature-inspired Computing Lab, Labcin](https://www.researchgate.net/lab/Nature-inspired-Computing-Lab-Labcin-Renato-Krohling), and is documented here as part of the lab's reproducible research material.
-
-## Citation
-
-Falcao Ribeiro de Assis, Maria Clara. Lima, Leandro Muniz de. de Barros, Liliana Aparecida Pimenta. Velloso, Tania Regina. Krohling, Renato. Camisasca, Danielle. 2023. "NDB-UFES: An oral cancer and leukoplakia dataset composed of histopathological images and patient data." Mendeley Data, V4. doi: 10.17632/bbmmm4wgr8.4.
+This wiki was prepared with the help of AI tools, following instructions written by a human. Pages are reviewed and validated by a human before release.

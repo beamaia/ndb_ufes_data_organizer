@@ -1,0 +1,35 @@
+fold_set,variable,value,spread_points
+new folds,patch label,Leukoplakia with dysplasia,7.8
+new folds,patch label,Leukoplakia without dysplasia,2.6
+new folds,patch label,OSCC,7.3
+new folds,NDB-UFES diagnosis,Leukoplakia with dysplasia,3.6
+new folds,NDB-UFES diagnosis,Leukoplakia without dysplasia,1.8
+new folds,NDB-UFES diagnosis,OSCC,6.4
+new folds,NDB-UFES diagnosis,not in NDB-UFES,3.6
+new folds,gender,F,7.9
+new folds,gender,M,5.7
+new folds,gender,unknown,3.6
+new folds,age group,0,9.6
+new folds,age group,1,8.6
+new folds,age group,2,7.0
+new folds,age group,unknown,3.6
+new folds,morphology cluster,0,7.8
+new folds,morphology cluster,1,5.7
+new folds,morphology cluster,2,3.7
+original folds,patch label,Leukoplakia with dysplasia,0.2
+original folds,patch label,Leukoplakia without dysplasia,0.2
+original folds,patch label,OSCC,0.2
+original folds,NDB-UFES diagnosis,Leukoplakia with dysplasia,4.1
+original folds,NDB-UFES diagnosis,Leukoplakia without dysplasia,3.2
+original folds,NDB-UFES diagnosis,OSCC,5.1
+original folds,NDB-UFES diagnosis,not in NDB-UFES,5.4
+original folds,gender,F,5.3
+original folds,gender,M,5.7
+original folds,gender,unknown,5.4
+original folds,age group,0,1.6
+original folds,age group,1,4.6
+original folds,age group,2,2.1
+original folds,age group,unknown,5.4
+original folds,morphology cluster,0,4.1
+original folds,morphology cluster,1,3.2
+original folds,morphology cluster,2,4.1

@@ -1,0 +1,23 @@
+fold_set,unit,folds,units
+new folds,cases,1,64
+new folds,case groups,1,63
+new folds,parent pictures,1,247
+new folds,groups of related pictures,1,173
+original folds,cases,1,1
+original folds,cases,5,1
+original folds,cases,6,62
+original folds,case groups,1,1
+original folds,case groups,5,1
+original folds,case groups,6,61
+original folds,parent pictures,1,2
+original folds,parent pictures,2,6
+original folds,parent pictures,3,14
+original folds,parent pictures,4,21
+original folds,parent pictures,5,47
+original folds,parent pictures,6,157
+original folds,groups of related pictures,1,1
+original folds,groups of related pictures,2,2
+original folds,groups of related pictures,3,8
+original folds,groups of related pictures,4,10
+original folds,groups of related pictures,5,25
+original folds,groups of related pictures,6,127

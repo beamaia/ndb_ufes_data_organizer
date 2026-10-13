@@ -1,0 +1,30 @@
+variable,value,images,share
+diagnosis,OSCC,91,0.384
+diagnosis,Leukoplakia with dysplasia,89,0.3755
+diagnosis,Leukoplakia without dysplasia,57,0.2405
+gender,M,132,0.557
+gender,F,105,0.443
+age_group,2,111,0.4684
+age_group,1,111,0.4684
+age_group,0,15,0.0633
+skin_color,Not informed,100,0.4219
+skin_color,White,89,0.3755
+skin_color,Black,31,0.1308
+skin_color,Brown,17,0.0717
+localization,Tongue,79,0.3333
+localization,Gingiva,59,0.2489
+localization,Buccal mucosa,35,0.1477
+localization,Floor of mouth,32,0.135
+localization,Lip,20,0.0844
+localization,Palate,12,0.0506
+tobacco_use,Not informed,112,0.4726
+tobacco_use,Yes,68,0.2869
+tobacco_use,No,43,0.1814
+tobacco_use,Former,14,0.0591
+alcohol_consumption,Not informed,112,0.4726
+alcohol_consumption,No,63,0.2658
+alcohol_consumption,Yes,34,0.1435
+alcohol_consumption,Former,28,0.1181
+sun_exposure,Not informed,122,0.5148
+sun_exposure,No,80,0.3376
+sun_exposure,Yes,35,0.1477

@@ -1,0 +1,7 @@
+variable,patch label,NDB-UFES diagnosis,gender,age group,morphology cluster,SAB folder
+patch label,1.0,0.442,0.258,0.214,0.218,0.507
+NDB-UFES diagnosis,0.442,1.0,0.729,0.608,0.27,0.89
+gender,0.258,0.729,1.0,0.717,0.186,0.73
+age group,0.214,0.608,0.717,1.0,0.08,0.707
+morphology cluster,0.218,0.27,0.186,0.08,1.0,0.279
+SAB folder,0.507,0.89,0.73,0.707,0.279,1.0

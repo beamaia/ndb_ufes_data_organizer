@@ -1,0 +1,7 @@
+fold_set,shared_area_at_least,pairs,pairs_in_different_folds,share_in_different_folds
+new folds,25%,7099,0,0.0
+new folds,50%,3140,0,0.0
+new folds,75%,759,0,0.0
+original folds,25%,7119,5963,0.8376
+original folds,50%,3149,2621,0.8323
+original folds,75%,762,641,0.8412

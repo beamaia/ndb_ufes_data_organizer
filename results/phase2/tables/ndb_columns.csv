@@ -1,0 +1,18 @@
+column,filled,values
+public_id,237,237 distinct
+lesion_id,237,77 distinct
+patient_id,237,69 distinct
+path,237,237 distinct
+localization,237,"Buccal mucosa, Floor of mouth, Gingiva, Lip, Palate, Tongue"
+larger_size,237,20 distinct
+tobacco_use,237,"Former, No, Not informed, Yes"
+alcohol_consumption,237,"Former, No, Not informed, Yes"
+sun_exposure,237,"No, Not informed, Yes"
+gender,237,"F, M"
+skin_color,237,"Black, Brown, Not informed, White"
+age_group,237,"0, 1, 2"
+diagnosis,237,"Leukoplakia with dysplasia, Leukoplakia without dysplasia, OSCC"
+dysplasia_severity,89,"Mild, Moderate, Severe"
+TaskII,237,"Leukoplakia, OSCC"
+TaskIII,237,"Absence, Presence"
+TaskIV,237,"Leukoplakia with dysplasia, Leukoplakia without dysplasia, OSCC"

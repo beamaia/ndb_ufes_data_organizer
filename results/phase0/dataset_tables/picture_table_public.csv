@@ -1,0 +1,289 @@
+histopath_id,datasets,ndb_origin_id,ndb_diagnosis,sab_folders,case_pseudonym,picture_group,case_group,n_patches,patch_diagnoses,group_conflicts,overlap_with_group
+hp_0ee14ee11e2b,ndb,0221,OSCC,,,hp_91b7fb574e7a,,0,,,hp_91b7fb574e7a: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.09
+hp_150ca66f1c8d,ndb,0224,OSCC,,,hp_150ca66f1c8d,,0,,,
+hp_1796b7641e71,ndb,0228,Leukoplakia with dysplasia,,,hp_1796b7641e71,,0,,,
+hp_1cfb068a4456,ndb,0229,OSCC,,,hp_8de2f093caee,,0,,,hp_8de2f093caee: this_seen_in_other=0.03 other_seen_in_this=0.52 scale=4.05
+hp_3ef8b6c372b7,ndb,0218,Leukoplakia with dysplasia,,,hp_3ef8b6c372b7,,0,,,
+hp_3f537de4e474,ndb,0227,Leukoplakia with dysplasia,,,hp_3f537de4e474,,0,,,
+hp_43f7f60de1e6,ndb,0235,Leukoplakia without dysplasia,,,hp_f5ce6c0132f0,,0,,,hp_f5ce6c0132f0: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.15
+hp_45eaa6fc400f,ndb,0234,Leukoplakia without dysplasia,,,hp_45eaa6fc400f,,0,,,
+hp_47bde9048dfd,ndb,0233,Leukoplakia without dysplasia,,,hp_47bde9048dfd,,0,,,
+hp_49e79216f56c,ndb,0232,Leukoplakia with dysplasia,,,hp_b1b2c5dda592,,0,,,hp_b1b2c5dda592: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.27
+hp_6166c9e613a7,ndb,0226,OSCC,,,hp_6166c9e613a7,,0,,,
+hp_8de2f093caee,ndb,0230,OSCC,,,hp_8de2f093caee,,0,,,hp_1cfb068a4456: this_seen_in_other=0.52 other_seen_in_this=0.03 scale=4.05
+hp_916b87b910ae,ndb,0220,Leukoplakia with dysplasia,,,hp_f4956eca189d,,0,,,hp_f4956eca189d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_91b7fb574e7a,ndb,0222,OSCC,,,hp_91b7fb574e7a,,0,,,hp_0ee14ee11e2b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.09
+hp_9f3cddd1f871,ndb,0225,OSCC,,,hp_9f3cddd1f871,,0,,,
+hp_aa1fbd963b26,ndb,0217,Leukoplakia with dysplasia,,,hp_aa1fbd963b26,,0,,,
+hp_b1b2c5dda592,ndb,0231,Leukoplakia with dysplasia,,,hp_b1b2c5dda592,,0,,,hp_49e79216f56c: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.27
+hp_ebad2a055596,ndb,0223,OSCC,,,hp_ebad2a055596,,0,,,
+hp_f4956eca189d,ndb,0219,Leukoplakia with dysplasia,,,hp_f4956eca189d,,0,,,hp_916b87b910ae: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_f5ce6c0132f0,ndb,0236,Leukoplakia without dysplasia,,,hp_f5ce6c0132f0,,0,,,hp_43f7f60de1e6: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.15
+hp_0e3e140755f3,ndb+sab,0044,Leukoplakia with dysplasia,leucoplasia,case_001,hp_0e3e140755f3,group_001,0,,,
+hp_0f9423fcd3b1,sab,,,benigno,case_001,hp_af82b4a7e513,group_001,20,OSCC: 14; Leukoplakia with dysplasia: 6,sab_folder_differs_in_group patch_labels_differ_in_group,hp_194816486385: this_seen_in_other=0.88 other_seen_in_this=0.88 scale=0.99 | hp_af82b4a7e513: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_14adad134e2b,ndb+sab,0007,Leukoplakia with dysplasia,leucoplasia,case_001,hp_ef29b44759fb,group_001,14,Leukoplakia with dysplasia: 14,,hp_ef29b44759fb: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.23
+hp_194816486385,ndb+sab,0041,Leukoplakia with dysplasia,leucoplasia,case_001,hp_af82b4a7e513,group_001,20,Leukoplakia with dysplasia: 20,sab_folder_differs_in_group patch_labels_differ_in_group,hp_0f9423fcd3b1: this_seen_in_other=0.88 other_seen_in_this=0.88 scale=0.99 | hp_af82b4a7e513: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_1dacf59e6664,ndb+sab,0043,Leukoplakia with dysplasia,leucoplasia,case_001,hp_9fcff2b5d180,group_001,19,Leukoplakia without dysplasia: 19,,hp_9fcff2b5d180: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.09
+hp_2ca3750b8622,ndb+sab,0009,Leukoplakia with dysplasia,leucoplasia,case_001,hp_d3b676cfdf5d,group_001,16,Leukoplakia with dysplasia: 16,,hp_d3b676cfdf5d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_5c21e9b72413,ndb+sab,0042,Leukoplakia with dysplasia,leucoplasia,case_001,hp_5c21e9b72413,group_001,17,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 7,,
+hp_67d81b044511,sab,,,benigno,case_001,hp_961e39b2d569,group_001,0,,,hp_961e39b2d569: this_seen_in_other=0.99 other_seen_in_this=0.06 scale=0.24
+hp_961e39b2d569,sab,,,benigno,case_001,hp_961e39b2d569,group_001,15,Leukoplakia with dysplasia: 15,,hp_67d81b044511: this_seen_in_other=0.06 other_seen_in_this=0.99 scale=0.24
+hp_9fcff2b5d180,ndb+sab,0045,Leukoplakia with dysplasia,leucoplasia,case_001,hp_9fcff2b5d180,group_001,0,,,hp_1dacf59e6664: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.09
+hp_af82b4a7e513,ndb+sab,0040,Leukoplakia with dysplasia,leucoplasia,case_001,hp_af82b4a7e513,group_001,0,,sab_folder_differs_in_group patch_labels_differ_in_group,hp_0f9423fcd3b1: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25 | hp_194816486385: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_d3b676cfdf5d,ndb+sab,0006,Leukoplakia with dysplasia,leucoplasia,case_001,hp_d3b676cfdf5d,group_001,11,Leukoplakia with dysplasia: 8; Leukoplakia without dysplasia: 3,,hp_2ca3750b8622: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_ef29b44759fb,ndb+sab,0008,Leukoplakia with dysplasia,leucoplasia,case_001,hp_ef29b44759fb,group_001,19,Leukoplakia with dysplasia: 19,,hp_14adad134e2b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.23
+hp_34d97792757b,ndb+sab,0012,OSCC,carcinoma,case_002,hp_b8ecb1507527,group_002,40,OSCC: 40,,hp_407f61f45354: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25 | hp_4ec6973e7086: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25 | hp_b8ecb1507527: this_seen_in_other=0.88 other_seen_in_this=0.88 scale=0.99
+hp_407f61f45354,ndb+sab,0010,OSCC,carcinoma,case_002,hp_b8ecb1507527,group_002,30,OSCC: 30,,hp_34d97792757b: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25 | hp_4ec6973e7086: this_seen_in_other=0.71 other_seen_in_this=0.71 scale=1.01 | hp_b8ecb1507527: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.07
+hp_4ec6973e7086,ndb+sab,0013,OSCC,carcinoma,case_002,hp_b8ecb1507527,group_002,25,OSCC: 21; Leukoplakia with dysplasia: 4,,hp_34d97792757b: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25 | hp_407f61f45354: this_seen_in_other=0.71 other_seen_in_this=0.71 scale=1.01 | hp_b8ecb1507527: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_b8ecb1507527,ndb+sab,0011,OSCC,carcinoma,case_002,hp_b8ecb1507527,group_002,40,OSCC: 40,,hp_34d97792757b: this_seen_in_other=0.88 other_seen_in_this=0.88 scale=0.99 | hp_407f61f45354: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.07 | hp_4ec6973e7086: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_d9d0d408a75a,sab,,,benigno,case_002,hp_d9d0d408a75a,group_002,28,Leukoplakia with dysplasia: 15; Leukoplakia without dysplasia: 13,,
+hp_df73bd2e7526,sab,,,benigno,case_002,hp_ed852f432417,group_002,29,OSCC: 15; Leukoplakia with dysplasia: 14,,hp_ed852f432417: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_ed852f432417,sab,,,benigno,case_002,hp_ed852f432417,group_002,8,OSCC: 8,,hp_df73bd2e7526: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_4eb46b39ec96,ndb+sab,0014,Leukoplakia with dysplasia,carcinoma,case_003,hp_6edb44270eb8,group_003,20,Leukoplakia with dysplasia: 20,,hp_6edb44270eb8: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=3.95
+hp_6edb44270eb8,ndb+sab,0015,Leukoplakia with dysplasia,carcinoma,case_003,hp_6edb44270eb8,group_003,20,Leukoplakia with dysplasia: 11; OSCC: 9,,hp_4eb46b39ec96: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=3.95
+hp_22608f5c7482,sab,,,benigno,case_004,hp_ceef4d667083,group_004,20,OSCC: 17; Leukoplakia with dysplasia: 3,patch_labels_differ_in_group,hp_ceef4d667083: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_3125445e31bd,ndb+sab,0005,OSCC,carcinoma,case_004,hp_d460182f7c9e,group_004,20,OSCC: 20,,hp_d460182f7c9e: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_ceef4d667083,sab,,,benigno,case_004,hp_ceef4d667083,group_004,20,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 9,patch_labels_differ_in_group,hp_22608f5c7482: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_d460182f7c9e,ndb+sab,0004,OSCC,carcinoma,case_004,hp_d460182f7c9e,group_004,17,OSCC: 14; Leukoplakia with dysplasia: 3,,hp_3125445e31bd: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_1de7256bb931,ndb+sab,0018,OSCC,carcinoma,case_005,hp_1de7256bb931,group_005,10,OSCC: 10,,
+hp_2c006abfd41a,ndb+sab,0021,OSCC,carcinoma,case_005,hp_2d671ed2afe7,group_005,20,OSCC: 20,,hp_2d671ed2afe7: this_seen_in_other=0.32 other_seen_in_this=0.02 scale=0.25
+hp_2d671ed2afe7,ndb+sab,0019,OSCC,carcinoma,case_005,hp_2d671ed2afe7,group_005,20,OSCC: 20,,hp_2c006abfd41a: this_seen_in_other=0.02 other_seen_in_this=0.32 scale=0.25
+hp_4ad33f3f2c4e,ndb+sab,0020,OSCC,carcinoma,case_005,hp_4ad33f3f2c4e,group_005,20,OSCC: 20,,
+hp_1393fb2c4e3b,ndb+sab,0023,Leukoplakia without dysplasia,leucoplasia,case_006,hp_1393fb2c4e3b,group_006,14,Leukoplakia with dysplasia: 13; Leukoplakia without dysplasia: 1,,
+hp_8b2a483e4a20,ndb+sab,0022,Leukoplakia without dysplasia,leucoplasia,case_006,hp_8b2a483e4a20,group_006,5,Leukoplakia without dysplasia: 5,,
+hp_551c3b36ecf8,ndb+sab,0027,Leukoplakia without dysplasia,leucoplasia,case_007,hp_551c3b36ecf8,group_007,0,,,
+hp_69e272f5bd9c,ndb+sab,0026,Leukoplakia without dysplasia,leucoplasia,case_007,hp_69e272f5bd9c,group_007,8,Leukoplakia with dysplasia: 8,,
+hp_69f1ee73460c,ndb+sab,0024,Leukoplakia without dysplasia,leucoplasia,case_007,hp_69f1ee73460c,group_007,4,Leukoplakia without dysplasia: 3; Leukoplakia with dysplasia: 1,,
+hp_ee8e14fca22b,ndb+sab,0025,Leukoplakia without dysplasia,leucoplasia,case_007,hp_ee8e14fca22b,group_007,17,Leukoplakia with dysplasia: 17,,
+hp_31dc2ad723f9,ndb+sab,0028,Leukoplakia with dysplasia,leucoplasia,case_008,hp_ac89e386ec2f,group_008,12,Leukoplakia with dysplasia: 12,,hp_ac89e386ec2f: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.12
+hp_ac89e386ec2f,ndb+sab,0029,Leukoplakia with dysplasia,leucoplasia,case_008,hp_ac89e386ec2f,group_008,17,Leukoplakia with dysplasia: 17,,hp_31dc2ad723f9: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.12
+hp_2d103ca16e76,sab,,,leucoplasia,case_009,hp_2d103ca16e76,group_009,1,Leukoplakia with dysplasia: 1,,
+hp_06191a225722,ndb+sab,0030,OSCC,carcinoma,case_010,hp_a0991ab07fd6,group_010,15,OSCC: 12; Leukoplakia with dysplasia: 3,,hp_a0991ab07fd6: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.15
+hp_1b68453722f7,sab,,,benigno,case_010,hp_1b68453722f7,group_010,19,Leukoplakia without dysplasia: 13; Leukoplakia with dysplasia: 6,,
+hp_1e9ca6858786,sab,,,benigno,case_010,hp_1e9ca6858786,group_010,6,Leukoplakia without dysplasia: 4; Leukoplakia with dysplasia: 2,,
+hp_a0991ab07fd6,ndb+sab,0031,OSCC,carcinoma,case_010,hp_a0991ab07fd6,group_010,14,OSCC: 14,,hp_06191a225722: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.15
+hp_329b441691e5,ndb+sab,0034,OSCC,carcinoma,case_011,hp_7f170f1b62b6,group_011,12,OSCC: 7; Leukoplakia with dysplasia: 5,,hp_7f170f1b62b6: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_45bc92649200,sab,,,benigno,case_011,hp_bd9090294f31,group_011,17,Leukoplakia with dysplasia: 17,,hp_bd9090294f31: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_7f170f1b62b6,ndb+sab,0035,OSCC,carcinoma,case_011,hp_7f170f1b62b6,group_011,20,OSCC: 20,,hp_329b441691e5: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_885cca3b9806,ndb+sab,0033,OSCC,leucoplasia,case_011,hp_a742e5199ddc,group_011,17,Leukoplakia with dysplasia: 17,,hp_a742e5199ddc: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_a742e5199ddc,ndb+sab,0032,OSCC,leucoplasia,case_011,hp_a742e5199ddc,group_011,2,Leukoplakia with dysplasia: 2,,hp_885cca3b9806: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_bd9090294f31,sab,,,benigno,case_011,hp_bd9090294f31,group_011,7,Leukoplakia with dysplasia: 7,,hp_45bc92649200: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_16512f4517b7,ndb+sab,0036,Leukoplakia with dysplasia,leucoplasia,case_012,hp_16512f4517b7,group_012,2,Leukoplakia without dysplasia: 2,,
+hp_ad02e246feaf,ndb+sab,0039,Leukoplakia with dysplasia,leucoplasia,case_012,hp_ad02e246feaf,group_012,20,Leukoplakia with dysplasia: 20,,
+hp_ba8484b3b2dc,ndb+sab,0038,Leukoplakia with dysplasia,leucoplasia,case_012,hp_ba8484b3b2dc,group_012,13,Leukoplakia with dysplasia: 13,,
+hp_d91d3e13da1b,ndb+sab,0037,Leukoplakia with dysplasia,leucoplasia,case_012,hp_d91d3e13da1b,group_012,20,Leukoplakia without dysplasia: 20,,
+hp_3caeb572a12e,ndb+sab,0047,Leukoplakia without dysplasia,leucoplasia,case_013,hp_a021bdf9977a,group_013,4,Leukoplakia without dysplasia: 3; Leukoplakia with dysplasia: 1,patch_labels_differ_in_group,hp_a021bdf9977a: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.24
+hp_a021bdf9977a,ndb+sab,0046,Leukoplakia without dysplasia,leucoplasia,case_013,hp_a021bdf9977a,group_013,18,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 8,patch_labels_differ_in_group,hp_3caeb572a12e: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.24
+hp_27fccd7fe158,ndb+sab,0157,OSCC,carcinoma,case_014,hp_86854ec25caf,group_014,20,OSCC: 20,,hp_86854ec25caf: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_86854ec25caf,ndb+sab,0156,OSCC,carcinoma,case_014,hp_86854ec25caf,group_014,18,OSCC: 18,,hp_27fccd7fe158: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_27d20fd239dd,ndb+sab,0050,Leukoplakia with dysplasia,leucoplasia,case_015,hp_27d20fd239dd,group_015,17,Leukoplakia without dysplasia: 17,,
+hp_39baa7d92964,ndb+sab,0053,Leukoplakia with dysplasia,leucoplasia,case_015,hp_a89c51cfb58c,group_015,13,Leukoplakia with dysplasia: 13,,hp_a89c51cfb58c: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_8a32d2b9d318,ndb+sab,0048,Leukoplakia with dysplasia,carcinoma,case_015,hp_8a32d2b9d318,group_015,12,OSCC: 7; Leukoplakia with dysplasia: 5,,
+hp_a5ec2f5b3257,ndb+sab,0049,Leukoplakia with dysplasia,carcinoma,case_015,hp_a5ec2f5b3257,group_015,4,OSCC: 4,,
+hp_a89c51cfb58c,ndb+sab,0051,Leukoplakia with dysplasia,leucoplasia,case_015,hp_a89c51cfb58c,group_015,14,Leukoplakia with dysplasia: 14,,hp_39baa7d92964: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_b862957e43e5,ndb+sab,0052,Leukoplakia with dysplasia,leucoplasia,case_015,hp_b862957e43e5,group_015,15,Leukoplakia with dysplasia: 15,,
+hp_5a673ffc8461,sab,,,benigno,case_016,hp_b44f17b84b35,group_016,19,OSCC: 10; Leukoplakia with dysplasia: 9,patch_labels_differ_in_group,hp_b44f17b84b35: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_86a04413492c,ndb+sab,0001,OSCC,carcinoma,case_016,hp_eb7e97ae9b6d,group_016,20,Leukoplakia with dysplasia: 12; OSCC: 8,patch_labels_differ_in_group,hp_eb7e97ae9b6d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_b44f17b84b35,sab,,,benigno,case_016,hp_b44f17b84b35,group_016,15,Leukoplakia with dysplasia: 15,patch_labels_differ_in_group,hp_5a673ffc8461: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_eb7e97ae9b6d,ndb+sab,0000,OSCC,carcinoma,case_016,hp_eb7e97ae9b6d,group_016,20,OSCC: 11; Leukoplakia with dysplasia: 9,patch_labels_differ_in_group,hp_86a04413492c: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_0126a17050e6,sab,,,benigno,case_017,hp_59cc6d0cdc6a,group_017,14,Leukoplakia with dysplasia: 14,,hp_59cc6d0cdc6a: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_59cc6d0cdc6a,sab,,,benigno,case_017,hp_59cc6d0cdc6a,group_017,16,Leukoplakia with dysplasia: 16,,hp_0126a17050e6: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_31eb160f817d,ndb+sab,0055,Leukoplakia with dysplasia,leucoplasia,case_018,hp_31eb160f817d,group_018,20,Leukoplakia without dysplasia: 12; Leukoplakia with dysplasia: 8,,
+hp_44e308100ace,ndb+sab,0057,Leukoplakia with dysplasia,leucoplasia,case_018,hp_ab5b85463ab1,group_018,9,Leukoplakia with dysplasia: 9,,hp_ab5b85463ab1: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_98e55d1b0b08,ndb+sab,0054,Leukoplakia with dysplasia,leucoplasia,case_018,hp_98e55d1b0b08,group_018,9,Leukoplakia with dysplasia: 6; Leukoplakia without dysplasia: 3,,
+hp_ab5b85463ab1,ndb+sab,0056,Leukoplakia with dysplasia,leucoplasia,case_018,hp_ab5b85463ab1,group_018,8,Leukoplakia with dysplasia: 5; Leukoplakia without dysplasia: 3,,hp_44e308100ace: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_266d7d376fc8,ndb+sab,0058,OSCC,leucoplasia,case_019,hp_daa04569a31b,group_019,15,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 5,,hp_daa04569a31b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_2be128845f05,ndb+sab,0063,OSCC,leucoplasia,case_019,hp_2be128845f05,group_019,20,Leukoplakia with dysplasia: 12; Leukoplakia without dysplasia: 8,,
+hp_359f1abe0ac8,ndb+sab,0061,OSCC,leucoplasia,case_019,hp_359f1abe0ac8,group_019,20,Leukoplakia without dysplasia: 17; Leukoplakia with dysplasia: 3,,
+hp_3e6339e31a92,ndb+sab,0065,OSCC,leucoplasia,case_019,hp_3e6339e31a92,group_019,20,Leukoplakia without dysplasia: 20,,
+hp_4e960a6f6490,ndb+sab,0064,OSCC,leucoplasia,case_019,hp_4e960a6f6490,group_019,20,Leukoplakia with dysplasia: 17; Leukoplakia without dysplasia: 3,,
+hp_cc1c85f64a8d,ndb+sab,0062,OSCC,leucoplasia,case_019,hp_cc1c85f64a8d,group_019,17,Leukoplakia with dysplasia: 17,,
+hp_daa04569a31b,ndb+sab,0059,OSCC,leucoplasia,case_019,hp_daa04569a31b,group_019,9,Leukoplakia with dysplasia: 8; Leukoplakia without dysplasia: 1,,hp_266d7d376fc8: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_ef66e257931b,ndb+sab,0060,OSCC,leucoplasia,case_019,hp_ef66e257931b,group_019,8,Leukoplakia without dysplasia: 5; Leukoplakia with dysplasia: 3,,
+hp_564fcbf05a53,ndb+sab,0067,OSCC,carcinoma,case_020,hp_564fcbf05a53,group_020,20,Leukoplakia with dysplasia: 20,,
+hp_5f5dae8e3bfb,ndb+sab,0066,OSCC,carcinoma,case_020,hp_5f5dae8e3bfb,group_020,20,Leukoplakia with dysplasia: 18; OSCC: 2,,
+hp_68dd87cef837,sab,,,benigno,case_020,hp_a97a1f25eeb0,group_020,19,Leukoplakia with dysplasia: 15; Leukoplakia without dysplasia: 4,,hp_a97a1f25eeb0: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_a97a1f25eeb0,sab,,,benigno,case_020,hp_a97a1f25eeb0,group_020,14,Leukoplakia with dysplasia: 12; Leukoplakia without dysplasia: 2,,hp_68dd87cef837: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_0a1938f59c3c,ndb+sab,0070,Leukoplakia without dysplasia,leucoplasia,case_021,hp_bc0433ba4a4b,group_021,13,Leukoplakia with dysplasia: 13,patch_labels_differ_in_group,hp_bc0433ba4a4b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_0eff73752441,ndb+sab,0069,Leukoplakia without dysplasia,leucoplasia,case_021,hp_6ef255220d56,group_021,16,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 5,,hp_6ef255220d56: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_6ef255220d56,ndb+sab,0071,Leukoplakia without dysplasia,leucoplasia,case_021,hp_6ef255220d56,group_021,20,Leukoplakia with dysplasia: 20,,hp_0eff73752441: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_bc0433ba4a4b,ndb+sab,0068,Leukoplakia without dysplasia,leucoplasia,case_021,hp_bc0433ba4a4b,group_021,14,Leukoplakia without dysplasia: 14,patch_labels_differ_in_group,hp_0a1938f59c3c: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_088e74112610,sab,,,benigno,case_022,hp_c0c017d08ab2,group_022,12,Leukoplakia with dysplasia: 12,,hp_c0c017d08ab2: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.01
+hp_0acdc7dfef19,ndb+sab,0075,OSCC,carcinoma,case_022,hp_5ded3bdeb67a,group_022,20,OSCC: 20,,hp_5ded3bdeb67a: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_4f4462648c06,ndb+sab,0074,OSCC,carcinoma,case_022,hp_f2df2d166a5d,group_022,15,OSCC: 15,,hp_f2df2d166a5d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_5ded3bdeb67a,ndb+sab,0073,OSCC,carcinoma,case_022,hp_5ded3bdeb67a,group_022,18,OSCC: 18,,hp_0acdc7dfef19: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_c0c017d08ab2,sab,,,benigno,case_022,hp_c0c017d08ab2,group_022,13,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 2,,hp_088e74112610: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.01
+hp_f2df2d166a5d,ndb+sab,0072,OSCC,carcinoma,case_022,hp_f2df2d166a5d,group_022,17,OSCC: 17,,hp_4f4462648c06: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_9412b3c0a7ad,ndb+sab,0077,Leukoplakia with dysplasia,leucoplasia,case_023,hp_9412b3c0a7ad,group_023,19,Leukoplakia with dysplasia: 19,,
+hp_dca747a57fd7,ndb+sab,0076,Leukoplakia with dysplasia,leucoplasia,case_023,hp_dca747a57fd7,group_023,11,Leukoplakia without dysplasia: 6; Leukoplakia with dysplasia: 5,,
+hp_d42ceb1dedee,ndb+sab,0081,Leukoplakia without dysplasia,leucoplasia,case_024,hp_d42ceb1dedee,group_024,19,Leukoplakia with dysplasia: 13; Leukoplakia without dysplasia: 6,,
+hp_da52d1d51675,ndb+sab,0080,Leukoplakia without dysplasia,leucoplasia,case_024,hp_da52d1d51675,group_024,10,Leukoplakia without dysplasia: 6; Leukoplakia with dysplasia: 4,,
+hp_44699c3a8231,ndb+sab,0085,Leukoplakia without dysplasia,leucoplasia,case_025,hp_f9d6e9595430,group_025,12,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 1,patch_labels_differ_in_group,hp_f9d6e9595430: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_64b5902ca5c7,ndb+sab,0084,Leukoplakia without dysplasia,leucoplasia,case_025,hp_64b5902ca5c7,group_025,12,Leukoplakia with dysplasia: 12,,
+hp_7e988bc9543d,ndb+sab,0082,Leukoplakia without dysplasia,leucoplasia,case_025,hp_7e988bc9543d,group_025,12,Leukoplakia without dysplasia: 12,,
+hp_9b1508a1df27,ndb+sab,0083,Leukoplakia without dysplasia,leucoplasia,case_025,hp_9b1508a1df27,group_025,13,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 3,,
+hp_f9d6e9595430,ndb+sab,0086,Leukoplakia without dysplasia,leucoplasia,case_025,hp_f9d6e9595430,group_025,3,Leukoplakia without dysplasia: 3,patch_labels_differ_in_group,hp_44699c3a8231: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_3791903c89cd,sab,,,benigno,case_026,hp_61e77097762f,group_026,0,,,hp_61e77097762f: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.01
+hp_5289302d28ed,ndb+sab,0002,OSCC,carcinoma,case_026,hp_eb7f4898327c,group_026,15,OSCC: 15,,hp_eb7f4898327c: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.11
+hp_61e77097762f,sab,,,benigno,case_026,hp_61e77097762f,group_026,0,,,hp_3791903c89cd: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.01
+hp_eb7f4898327c,ndb+sab,0003,OSCC,carcinoma,case_026,hp_eb7f4898327c,group_026,20,OSCC: 20,,hp_5289302d28ed: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.11
+hp_38c40d075c52,ndb+sab,0182,Leukoplakia with dysplasia,leucoplasia,case_027,hp_df128cf3078b,group_027,16,Leukoplakia without dysplasia: 8; Leukoplakia with dysplasia: 8,,hp_df128cf3078b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_56aaccb1c014,ndb+sab,0017,Leukoplakia with dysplasia,leucoplasia,case_027,hp_56aaccb1c014,group_027,0,,,
+hp_608d9fa7fc00,ndb+sab,0016,Leukoplakia with dysplasia,leucoplasia,case_027,hp_608d9fa7fc00,group_027,0,,,
+hp_c023bfe920a8,sab,,,benigno,case_027,hp_c023bfe920a8,group_027,0,,,
+hp_df128cf3078b,ndb+sab,0181,Leukoplakia with dysplasia,leucoplasia,case_027,hp_df128cf3078b,group_027,2,Leukoplakia without dysplasia: 1; Leukoplakia with dysplasia: 1,,hp_38c40d075c52: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_fba35595ecc6,sab,,,benigno,case_027,hp_fba35595ecc6,group_027,9,Leukoplakia with dysplasia: 9,,
+hp_1d6624b7e598,ndb+sab,0091,Leukoplakia without dysplasia,leucoplasia,case_028,hp_1d6624b7e598,group_028,15,Leukoplakia without dysplasia: 9; Leukoplakia with dysplasia: 6,,
+hp_2b10ae59a7b0,ndb+sab,0094,Leukoplakia without dysplasia,leucoplasia,case_028,hp_2b10ae59a7b0,group_028,19,Leukoplakia with dysplasia: 19,,
+hp_3c0d8a1ef91f,ndb+sab,0088,Leukoplakia without dysplasia,leucoplasia,case_028,hp_3c0d8a1ef91f,group_028,16,Leukoplakia with dysplasia: 16,,
+hp_3cdf26a4f15f,ndb+sab,0089,Leukoplakia without dysplasia,leucoplasia,case_028,hp_3cdf26a4f15f,group_028,11,Leukoplakia without dysplasia: 7; Leukoplakia with dysplasia: 4,,
+hp_4d96e0c7714e,ndb+sab,0092,Leukoplakia without dysplasia,leucoplasia,case_028,hp_4d96e0c7714e,group_028,19,Leukoplakia with dysplasia: 19,,
+hp_63c4b95f7f4a,ndb+sab,0087,Leukoplakia without dysplasia,leucoplasia,case_028,hp_63c4b95f7f4a,group_028,3,Leukoplakia without dysplasia: 3,,
+hp_7248d91a43ff,ndb+sab,0090,Leukoplakia without dysplasia,leucoplasia,case_028,hp_a1453e364622,group_028,14,Leukoplakia with dysplasia: 14,patch_labels_differ_in_group,hp_a1453e364622: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.23
+hp_a1453e364622,ndb+sab,0093,Leukoplakia without dysplasia,leucoplasia,case_028,hp_a1453e364622,group_028,10,Leukoplakia without dysplasia: 10,patch_labels_differ_in_group,hp_7248d91a43ff: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.23
+hp_3d8e08ce4a19,ndb+sab,0097,Leukoplakia without dysplasia,leucoplasia,case_029,hp_3d8e08ce4a19,group_029,20,Leukoplakia with dysplasia: 20,,
+hp_654a28682ad4,ndb+sab,0095,Leukoplakia without dysplasia,leucoplasia,case_029,hp_654a28682ad4,group_029,11,Leukoplakia without dysplasia: 11,,
+hp_65ab545aeefc,ndb+sab,0098,Leukoplakia without dysplasia,leucoplasia,case_029,hp_65ab545aeefc,group_029,16,Leukoplakia with dysplasia: 16,,
+hp_74213b303be5,ndb+sab,0096,Leukoplakia without dysplasia,leucoplasia,case_029,hp_74213b303be5,group_029,19,Leukoplakia without dysplasia: 19,,
+hp_247b7b3b9941,ndb+sab,0101,OSCC,carcinoma,case_030,hp_e938834837ff,group_030,14,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 4,,hp_e938834837ff: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=3.97
+hp_4143c2486369,ndb+sab,0100,OSCC,carcinoma,case_030,hp_fa46a7261cad,group_030,7,Leukoplakia with dysplasia: 7,,hp_fa46a7261cad: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_b345d2ecf999,sab,,,benigno,case_030,hp_c9a413b11d41,group_030,14,Leukoplakia with dysplasia: 14,,hp_c9a413b11d41: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.20
+hp_c9a413b11d41,sab,,,benigno,case_030,hp_c9a413b11d41,group_030,17,Leukoplakia with dysplasia: 17,,hp_b345d2ecf999: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.20
+hp_e938834837ff,ndb+sab,0102,OSCC,carcinoma,case_030,hp_e938834837ff,group_030,18,Leukoplakia with dysplasia: 17; Leukoplakia without dysplasia: 1,,hp_247b7b3b9941: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=3.97
+hp_fa46a7261cad,ndb+sab,0099,OSCC,carcinoma,case_030,hp_fa46a7261cad,group_030,18,Leukoplakia with dysplasia: 11; OSCC: 7,,hp_4143c2486369: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_7811ffb94d9b,ndb+sab,0103,OSCC,carcinoma,case_031,hp_7811ffb94d9b,group_031,20,OSCC: 20,,
+hp_a6d80304e34a,ndb+sab,0104,OSCC,carcinoma,case_031,hp_a6d80304e34a,group_031,20,OSCC: 17; Leukoplakia with dysplasia: 3,,
+hp_c9768f36b604,sab,,,benigno,case_031,hp_db56c1015a81,group_031,20,OSCC: 12; Leukoplakia with dysplasia: 8,patch_labels_differ_in_group,hp_db56c1015a81: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_db56c1015a81,sab,,,benigno,case_031,hp_db56c1015a81,group_031,14,Leukoplakia with dysplasia: 14,patch_labels_differ_in_group,hp_c9768f36b604: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_03856cda3958,ndb+sab,0107,Leukoplakia with dysplasia,leucoplasia,case_032,hp_50f584394fc0,group_032,16,Leukoplakia with dysplasia: 16,,hp_50f584394fc0: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_50f584394fc0,ndb+sab,0105,Leukoplakia with dysplasia,leucoplasia,case_032,hp_50f584394fc0,group_032,4,Leukoplakia with dysplasia: 4,,hp_03856cda3958: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_c574e0535de0,ndb+sab,0108,Leukoplakia with dysplasia,leucoplasia,case_032,hp_c574e0535de0,group_032,15,Leukoplakia without dysplasia: 9; Leukoplakia with dysplasia: 6,,
+hp_ff2fef6903e6,ndb+sab,0106,Leukoplakia with dysplasia,leucoplasia,case_032,hp_ff2fef6903e6,group_032,5,Leukoplakia without dysplasia: 5,,
+hp_82ace5e51785,ndb+sab,0109,OSCC,carcinoma,case_033,hp_b240305d0f8e,group_033,15,OSCC: 15,patch_labels_differ_in_group,hp_b240305d0f8e: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.09
+hp_9d9c21009677,ndb+sab,0111,OSCC,carcinoma,case_033,hp_9d9c21009677,group_033,20,OSCC: 13; Leukoplakia with dysplasia: 7,,
+hp_a9f0433bf416,ndb+sab,0112,OSCC,carcinoma,case_033,hp_a9f0433bf416,group_033,20,OSCC: 20,,
+hp_b240305d0f8e,ndb+sab,0110,OSCC,carcinoma,case_033,hp_b240305d0f8e,group_033,20,Leukoplakia with dysplasia: 20,patch_labels_differ_in_group,hp_82ace5e51785: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.09
+hp_005a12046f4c,ndb+sab,0114,OSCC,carcinoma,case_034,hp_98cec00a1a2d,group_034,20,OSCC: 20,,hp_98cec00a1a2d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_73af3512fdb3,ndb+sab,0115,OSCC,carcinoma,case_034,hp_fe9131e8fa30,group_034,20,OSCC: 20,,hp_fe9131e8fa30: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.11
+hp_98cec00a1a2d,ndb+sab,0113,OSCC,carcinoma,case_034,hp_98cec00a1a2d,group_034,20,OSCC: 20,,hp_005a12046f4c: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_fe9131e8fa30,ndb+sab,0116,OSCC,carcinoma,case_034,hp_fe9131e8fa30,group_034,20,OSCC: 20,,hp_73af3512fdb3: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.11
+hp_1afde22c93d7,ndb+sab,0118,Leukoplakia with dysplasia,leucoplasia,case_035,hp_1afde22c93d7,group_035,0,,,
+hp_5f844eea6445,ndb+sab,0117,Leukoplakia with dysplasia,leucoplasia,case_035,hp_ac84a11971d5,group_035,10,Leukoplakia with dysplasia: 10,,hp_ac84a11971d5: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=3.99
+hp_ac84a11971d5,ndb+sab,0119,Leukoplakia with dysplasia,leucoplasia,case_035,hp_ac84a11971d5,group_035,10,Leukoplakia with dysplasia: 10,,hp_5f844eea6445: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=3.99
+hp_30027460484b,ndb+sab,0121,Leukoplakia with dysplasia,leucoplasia,case_036,hp_30027460484b,group_036,5,Leukoplakia without dysplasia: 5,,
+hp_91998aeaf511,ndb+sab,0120,Leukoplakia with dysplasia,leucoplasia,case_036,hp_c313973f026a,group_036,13,Leukoplakia without dysplasia: 13,patch_labels_differ_in_group,hp_c313973f026a: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.01
+hp_a94e72df217c,ndb+sab,0123,Leukoplakia with dysplasia,leucoplasia,case_036,hp_a94e72df217c,group_036,17,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 6,,
+hp_c313973f026a,ndb+sab,0122,Leukoplakia with dysplasia,leucoplasia,case_036,hp_c313973f026a,group_036,16,Leukoplakia with dysplasia: 16,patch_labels_differ_in_group,hp_91998aeaf511: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.01
+hp_1f816021ab3d,ndb+sab,0124,Leukoplakia with dysplasia,leucoplasia,case_037,hp_1f816021ab3d,group_037,0,,,
+hp_26c1b0d6c3b4,ndb+sab,0126,Leukoplakia with dysplasia,leucoplasia,case_037,hp_26c1b0d6c3b4,group_037,20,Leukoplakia without dysplasia: 20,,
+hp_6f7de41b4760,ndb+sab,0131,Leukoplakia with dysplasia,leucoplasia,case_037,hp_6f7de41b4760,group_037,13,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 3,,
+hp_c0ae9a0bff1b,ndb+sab,0127,Leukoplakia with dysplasia,leucoplasia,case_037,hp_c0ae9a0bff1b,group_037,0,,,
+hp_c31b88fc95ff,ndb+sab,0130,Leukoplakia with dysplasia,leucoplasia,case_037,hp_c31b88fc95ff,group_037,20,Leukoplakia with dysplasia: 18; Leukoplakia without dysplasia: 2,,
+hp_c3834e80196c,ndb+sab,0129,Leukoplakia with dysplasia,leucoplasia,case_037,hp_c3834e80196c,group_037,5,Leukoplakia without dysplasia: 5,,
+hp_c6c38bf68800,ndb+sab,0128,Leukoplakia with dysplasia,leucoplasia,case_037,hp_c6c38bf68800,group_037,7,Leukoplakia with dysplasia: 5; Leukoplakia without dysplasia: 2,,
+hp_eb81f34123b5,ndb+sab,0125,Leukoplakia with dysplasia,leucoplasia,case_037,hp_eb81f34123b5,group_037,0,,,
+hp_4c9147d59ab8,ndb+sab,0079,Leukoplakia with dysplasia,carcinoma,case_038,hp_4c9147d59ab8,group_038,20,Leukoplakia with dysplasia: 11; OSCC: 9,,
+hp_d5d7da027ec7,ndb+sab,0078,Leukoplakia with dysplasia,carcinoma,case_038,hp_d5d7da027ec7,group_038,13,Leukoplakia with dysplasia: 11; OSCC: 2,,
+hp_1185341075c9,ndb+sab,0134,OSCC,carcinoma,case_039,hp_9b098ab6889a,group_039,20,OSCC: 20,,hp_1689f129285b: this_seen_in_other=0.12 other_seen_in_this=0.12 scale=0.99 | hp_fbe5eb923492: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_1689f129285b,ndb+sab,0135,OSCC,carcinoma,case_039,hp_9b098ab6889a,group_039,20,OSCC: 20,,hp_1185341075c9: this_seen_in_other=0.12 other_seen_in_this=0.12 scale=0.99 | hp_9b098ab6889a: this_seen_in_other=0.34 other_seen_in_this=0.02 scale=0.25 | hp_fbe5eb923492: this_seen_in_other=0.94 other_seen_in_this=0.06 scale=0.24
+hp_39ca98522d4b,sab,,,benigno,case_039,hp_a3246738f20d,group_039,17,Leukoplakia with dysplasia: 13; OSCC: 3; Leukoplakia without dysplasia: 1,,hp_5693e078c4dc: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.12 | hp_7173c05ab0af: this_seen_in_other=0.06 other_seen_in_this=0.97 scale=4.21 | hp_a3246738f20d: this_seen_in_other=0.50 other_seen_in_this=0.50 scale=1.01
+hp_5693e078c4dc,sab,,,benigno,case_039,hp_a3246738f20d,group_039,0,,,hp_39ca98522d4b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.12 | hp_7173c05ab0af: this_seen_in_other=0.09 other_seen_in_this=0.09 scale=1.01
+hp_7173c05ab0af,sab,,,benigno,case_039,hp_a3246738f20d,group_039,0,,,hp_39ca98522d4b: this_seen_in_other=0.97 other_seen_in_this=0.06 scale=4.21 | hp_5693e078c4dc: this_seen_in_other=0.09 other_seen_in_this=0.09 scale=1.01
+hp_9b098ab6889a,ndb+sab,0132,OSCC,carcinoma,case_039,hp_9b098ab6889a,group_039,20,OSCC: 20,,hp_1689f129285b: this_seen_in_other=0.02 other_seen_in_this=0.34 scale=0.25 | hp_fbe5eb923492: this_seen_in_other=0.26 other_seen_in_this=0.26 scale=1.01
+hp_a3246738f20d,sab,,,benigno,case_039,hp_a3246738f20d,group_039,19,Leukoplakia with dysplasia: 17; OSCC: 2,,hp_39ca98522d4b: this_seen_in_other=0.50 other_seen_in_this=0.50 scale=1.01
+hp_fbe5eb923492,ndb+sab,0133,OSCC,carcinoma,case_039,hp_9b098ab6889a,group_039,20,OSCC: 20,,hp_1185341075c9: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24 | hp_1689f129285b: this_seen_in_other=0.06 other_seen_in_this=0.94 scale=0.24 | hp_9b098ab6889a: this_seen_in_other=0.26 other_seen_in_this=0.26 scale=1.01
+hp_60391de2148b,ndb+sab,0139,OSCC,carcinoma,case_040,hp_60391de2148b,group_040,19,Leukoplakia with dysplasia: 19,,
+hp_906a43a96957,sab,,,benigno,case_040,hp_9667152b350d,group_040,1,Leukoplakia with dysplasia: 1,,hp_9667152b350d: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.19
+hp_925185d1ced4,ndb+sab,0137,OSCC,carcinoma,case_040,hp_c27b47a9f9fd,group_040,17,Leukoplakia with dysplasia: 16; Leukoplakia without dysplasia: 1,patch_labels_differ_in_group,hp_c27b47a9f9fd: this_seen_in_other=0.67 other_seen_in_this=0.04 scale=0.25
+hp_9667152b350d,sab,,,benigno,case_040,hp_9667152b350d,group_040,13,Leukoplakia with dysplasia: 13,,hp_906a43a96957: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.19
+hp_c27b47a9f9fd,ndb+sab,0136,OSCC,carcinoma,case_040,hp_c27b47a9f9fd,group_040,15,OSCC: 11; Leukoplakia with dysplasia: 4,patch_labels_differ_in_group,hp_925185d1ced4: this_seen_in_other=0.04 other_seen_in_this=0.67 scale=0.25
+hp_f148fb720a18,ndb+sab,0138,OSCC,carcinoma,case_040,hp_f148fb720a18,group_040,20,OSCC: 20,,
+hp_072cc5a5edfd,ndb+sab,0141,Leukoplakia without dysplasia,leucoplasia,case_041,hp_5eaeae7b383c,group_041,12,Leukoplakia with dysplasia: 10; Leukoplakia without dysplasia: 2,patch_labels_differ_in_group,hp_5eaeae7b383c: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.24
+hp_5eaeae7b383c,ndb+sab,0140,Leukoplakia without dysplasia,leucoplasia,case_041,hp_5eaeae7b383c,group_041,6,Leukoplakia without dysplasia: 6,patch_labels_differ_in_group,hp_072cc5a5edfd: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.24
+hp_11c40fc3eb01,ndb+sab,0144,Leukoplakia without dysplasia,leucoplasia,case_042,hp_e5e2c990131d,group_042,19,Leukoplakia without dysplasia: 19,,hp_e5e2c990131d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_1866adaae47a,ndb+sab,0143,Leukoplakia without dysplasia,leucoplasia,case_042,hp_ab9b03c0304d,group_042,16,Leukoplakia with dysplasia: 16,patch_labels_differ_in_group,hp_ab9b03c0304d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.23
+hp_9b019ca3203f,ndb+sab,0145,Leukoplakia without dysplasia,leucoplasia,case_042,hp_9b019ca3203f,group_042,0,,,
+hp_9f8f8aa32155,ndb+sab,0146,Leukoplakia without dysplasia,leucoplasia,case_042,hp_9f8f8aa32155,group_042,0,,,
+hp_ab9b03c0304d,ndb+sab,0142,Leukoplakia without dysplasia,leucoplasia,case_042,hp_ab9b03c0304d,group_042,8,Leukoplakia without dysplasia: 4; Leukoplakia with dysplasia: 4,patch_labels_differ_in_group,hp_1866adaae47a: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.23
+hp_e5e2c990131d,ndb+sab,0147,Leukoplakia without dysplasia,leucoplasia,case_042,hp_e5e2c990131d,group_042,6,Leukoplakia without dysplasia: 6,,hp_11c40fc3eb01: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_0f2518099edd,ndb+sab,0148,Leukoplakia with dysplasia,leucoplasia,case_043,hp_0f2518099edd,group_043,10,Leukoplakia without dysplasia: 10,,
+hp_bd70a13d552a,ndb+sab,0149,Leukoplakia with dysplasia,leucoplasia,case_043,hp_bd70a13d552a,group_043,14,Leukoplakia with dysplasia: 14,,
+hp_41798e739431,ndb+sab,0151,Leukoplakia without dysplasia,leucoplasia,case_044,hp_41798e739431,group_044,10,Leukoplakia without dysplasia: 10,,
+hp_440f8b71f2c3,ndb+sab,0152,Leukoplakia without dysplasia,leucoplasia,case_044,hp_4aa957089a11,group_044,13,Leukoplakia without dysplasia: 13,patch_labels_differ_in_group,hp_4aa957089a11: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_4aa957089a11,ndb+sab,0153,Leukoplakia without dysplasia,leucoplasia,case_044,hp_4aa957089a11,group_044,9,Leukoplakia with dysplasia: 6; Leukoplakia without dysplasia: 3,patch_labels_differ_in_group,hp_440f8b71f2c3: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_e3e8c44862d1,ndb+sab,0150,Leukoplakia without dysplasia,leucoplasia,case_044,hp_e3e8c44862d1,group_044,16,Leukoplakia without dysplasia: 16,,
+hp_cefb6b451b8d,ndb+sab,0155,Leukoplakia with dysplasia,leucoplasia,case_045,hp_cefb6b451b8d,group_045,2,Leukoplakia without dysplasia: 2,,
+hp_f4dc8bfce289,ndb+sab,0154,Leukoplakia with dysplasia,leucoplasia,case_045,hp_f4dc8bfce289,group_045,7,Leukoplakia with dysplasia: 7,,
+hp_33e617819ad9,ndb+sab,0159,Leukoplakia without dysplasia,leucoplasia,case_046,hp_54824458033a,group_046,17,Leukoplakia without dysplasia: 9; Leukoplakia with dysplasia: 8,patch_labels_differ_in_group,hp_54824458033a: this_seen_in_other=0.94 other_seen_in_this=0.06 scale=0.25
+hp_54824458033a,ndb+sab,0158,Leukoplakia without dysplasia,leucoplasia,case_046,hp_54824458033a,group_046,12,Leukoplakia with dysplasia: 9; Leukoplakia without dysplasia: 3,patch_labels_differ_in_group,hp_33e617819ad9: this_seen_in_other=0.06 other_seen_in_this=0.94 scale=0.25
+hp_19da6439c37d,ndb+sab,0162,Leukoplakia with dysplasia,leucoplasia,case_047,hp_19da6439c37d,group_047,9,Leukoplakia without dysplasia: 7; Leukoplakia with dysplasia: 2,,
+hp_aa9b1357f80c,ndb+sab,0160,Leukoplakia with dysplasia,leucoplasia,case_047,hp_aa9b1357f80c,group_047,17,Leukoplakia with dysplasia: 9; Leukoplakia without dysplasia: 8,,
+hp_daf31203934c,ndb+sab,0161,Leukoplakia with dysplasia,leucoplasia,case_047,hp_daf31203934c,group_047,20,Leukoplakia without dysplasia: 20,,
+hp_dd06a3f3b0b0,ndb+sab,0163,Leukoplakia with dysplasia,leucoplasia,case_047,hp_dd06a3f3b0b0,group_047,20,Leukoplakia with dysplasia: 20,,
+hp_2179820e1e4d,ndb+sab,0164,Leukoplakia with dysplasia,leucoplasia,case_048,hp_4ad4b62decae,group_048,10,Leukoplakia with dysplasia: 7; Leukoplakia without dysplasia: 3,,hp_4ad4b62decae: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_4ad4b62decae,ndb+sab,0165,Leukoplakia with dysplasia,leucoplasia,case_048,hp_4ad4b62decae,group_048,15,Leukoplakia with dysplasia: 15,,hp_2179820e1e4d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_141779e7f742,ndb+sab,0167,OSCC,carcinoma,case_049,hp_141779e7f742,group_049,0,,,
+hp_c428ac7e2ce3,sab,,,benigno,case_049,hp_c428ac7e2ce3,group_049,15,Leukoplakia with dysplasia: 14; Leukoplakia without dysplasia: 1,,
+hp_f2c88f0423cc,ndb+sab,0166,OSCC,carcinoma,case_049,hp_f2c88f0423cc,group_049,20,Leukoplakia with dysplasia: 20,,
+hp_f2d3e81172b7,sab,,,benigno,case_049,hp_f2d3e81172b7,group_049,19,OSCC: 12; Leukoplakia with dysplasia: 7,,
+hp_402c82fb18f7,ndb+sab,0168,OSCC,carcinoma,case_050,hp_c0b8ff64fd75,group_050,20,Leukoplakia with dysplasia: 20,,hp_8a74d34f650a: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05 | hp_c0b8ff64fd75: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.12
+hp_8a74d34f650a,ndb+sab,0170,OSCC,carcinoma,case_050,hp_c0b8ff64fd75,group_050,20,Leukoplakia with dysplasia: 20,,hp_402c82fb18f7: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_c0b8ff64fd75,ndb+sab,0169,OSCC,carcinoma,case_050,hp_c0b8ff64fd75,group_050,20,Leukoplakia with dysplasia: 20,,hp_402c82fb18f7: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.12
+hp_823dd7d3f75d,sab,,,carcinoma,case_050 case_051,hp_823dd7d3f75d,group_050,23,OSCC: 23,,
+hp_43474fcc23e1,sab,,,benigno,case_051,hp_fd8dc65800ce,group_050,9,Leukoplakia without dysplasia: 9,patch_labels_differ_in_group,hp_fd247efed36c: this_seen_in_other=0.55 other_seen_in_this=0.55 scale=1.01
+hp_4b5975a01b99,sab,,,benigno,case_051,hp_fd8dc65800ce,group_050,6,Leukoplakia without dysplasia: 5; Leukoplakia with dysplasia: 1,patch_labels_differ_in_group,hp_fd247efed36c: this_seen_in_other=0.48 other_seen_in_this=0.48 scale=0.99
+hp_562614558833,sab,,,benigno,case_051,hp_562614558833,group_050,18,Leukoplakia with dysplasia: 12; Leukoplakia without dysplasia: 6,,
+hp_62232bb753be,sab,,,benigno,case_051,hp_62232bb753be,group_050,10,Leukoplakia with dysplasia: 10,,
+hp_d3b65a71ff8f,sab,,,carcinoma,case_051,hp_d3b65a71ff8f,group_050,8,Leukoplakia without dysplasia: 8,,
+hp_d7321a5ffc27,sab,,,carcinoma,case_051,hp_d7321a5ffc27,group_050,20,Leukoplakia with dysplasia: 20,,
+hp_df65b4df0310,sab,,,carcinoma,case_051,hp_df65b4df0310,group_050,5,OSCC: 3; Leukoplakia without dysplasia: 2,,
+hp_fd247efed36c,sab,,,benigno,case_051,hp_fd8dc65800ce,group_050,10,Leukoplakia with dysplasia: 10,patch_labels_differ_in_group,hp_43474fcc23e1: this_seen_in_other=0.55 other_seen_in_this=0.55 scale=1.01 | hp_4b5975a01b99: this_seen_in_other=0.48 other_seen_in_this=0.48 scale=0.99 | hp_fd8dc65800ce: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.04
+hp_fd8dc65800ce,sab,,,benigno,case_051,hp_fd8dc65800ce,group_050,15,Leukoplakia with dysplasia: 15,patch_labels_differ_in_group,hp_fd247efed36c: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.04
+hp_0957bb92f6a3,ndb+sab,0201,Leukoplakia without dysplasia,leucoplasia,case_052,hp_0957bb92f6a3,group_051,16,Leukoplakia with dysplasia: 11; Leukoplakia without dysplasia: 5,,
+hp_2dca50f9e39f,ndb+sab,0202,Leukoplakia without dysplasia,leucoplasia,case_052,hp_2dca50f9e39f,group_051,11,Leukoplakia with dysplasia: 11,,
+hp_404958b5a401,ndb+sab,0173,Leukoplakia with dysplasia,leucoplasia,case_053,hp_404958b5a401,group_052,4,Leukoplakia without dysplasia: 4,,
+hp_8974b6705aa1,ndb+sab,0174,Leukoplakia with dysplasia,leucoplasia,case_053,hp_8974b6705aa1,group_052,17,Leukoplakia without dysplasia: 14; Leukoplakia with dysplasia: 3,,
+hp_972106d58e8b,ndb+sab,0171,Leukoplakia with dysplasia,leucoplasia,case_054,hp_e6af71844a23,group_053,13,Leukoplakia with dysplasia: 13,,hp_e6af71844a23: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_e6af71844a23,ndb+sab,0172,Leukoplakia with dysplasia,leucoplasia,case_054,hp_e6af71844a23,group_053,17,Leukoplakia with dysplasia: 13; Leukoplakia without dysplasia: 4,,hp_972106d58e8b: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_0c940095738b,ndb+sab,0179,OSCC,carcinoma,case_055,hp_0c940095738b,group_054,19,OSCC: 19,,
+hp_1adc7f2f8bb7,ndb+sab,0176,OSCC,carcinoma,case_055,hp_1adc7f2f8bb7,group_054,18,OSCC: 16; Leukoplakia with dysplasia: 2,,
+hp_43673f0e44e5,ndb+sab,0177,OSCC,carcinoma,case_055,hp_43673f0e44e5,group_054,20,Leukoplakia with dysplasia: 19; OSCC: 1,,
+hp_59d033d1df01,ndb+sab,0175,OSCC,carcinoma,case_055,hp_59d033d1df01,group_054,19,OSCC: 12; Leukoplakia with dysplasia: 7,,
+hp_8624cf10646f,ndb+sab,0180,OSCC,carcinoma,case_055,hp_8624cf10646f,group_054,20,OSCC: 20,,
+hp_ba3959a0907a,ndb+sab,0178,OSCC,carcinoma,case_055,hp_ba3959a0907a,group_054,20,Leukoplakia with dysplasia: 17; OSCC: 3,,
+hp_0ec3bd2732f0,ndb+sab,0183,Leukoplakia without dysplasia,leucoplasia,case_056,hp_df3971f08c60,group_055,19,Leukoplakia without dysplasia: 19,patch_labels_differ_in_group,hp_df3971f08c60: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.19
+hp_df3971f08c60,ndb+sab,0184,Leukoplakia without dysplasia,leucoplasia,case_056,hp_df3971f08c60,group_055,12,Leukoplakia with dysplasia: 12,patch_labels_differ_in_group,hp_0ec3bd2732f0: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.19
+hp_34a9cdc6baf7,ndb+sab,0190,Leukoplakia with dysplasia,leucoplasia,case_057,hp_d0206c530251,group_056,9,Leukoplakia with dysplasia: 7; Leukoplakia without dysplasia: 2,,hp_d0206c530251: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.03
+hp_43096995cb3d,ndb+sab,0186,Leukoplakia with dysplasia,leucoplasia,case_057,hp_e4395d11b11c,group_056,16,Leukoplakia without dysplasia: 9; Leukoplakia with dysplasia: 7,,hp_e4395d11b11c: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_5eaf2f105388,ndb+sab,0189,Leukoplakia with dysplasia,leucoplasia,case_057,hp_a699fd6d6733,group_056,6,Leukoplakia with dysplasia: 4; Leukoplakia without dysplasia: 2,patch_labels_differ_in_group,hp_a699fd6d6733: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.05
+hp_a699fd6d6733,ndb+sab,0187,Leukoplakia with dysplasia,leucoplasia,case_057,hp_a699fd6d6733,group_056,18,Leukoplakia without dysplasia: 9; Leukoplakia with dysplasia: 9,patch_labels_differ_in_group,hp_5eaf2f105388: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.05
+hp_d0206c530251,ndb+sab,0188,Leukoplakia with dysplasia,leucoplasia,case_057,hp_d0206c530251,group_056,18,Leukoplakia with dysplasia: 18,,hp_34a9cdc6baf7: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.03
+hp_e4395d11b11c,ndb+sab,0185,Leukoplakia with dysplasia,leucoplasia,case_057,hp_e4395d11b11c,group_056,3,Leukoplakia without dysplasia: 3,,hp_43096995cb3d: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_45fa29fc9f69,ndb+sab,0192,OSCC,carcinoma,case_058,hp_45fa29fc9f69,group_057,20,Leukoplakia with dysplasia: 20,,
+hp_7015fbba1516,ndb+sab,0194,OSCC,carcinoma,case_058,hp_7015fbba1516,group_057,20,Leukoplakia with dysplasia: 20,,
+hp_872d88e464db,ndb+sab,0193,OSCC,carcinoma,case_058,hp_872d88e464db,group_057,0,,,
+hp_b9d6e3d0d4e2,ndb+sab,0191,OSCC,carcinoma,case_058,hp_b9d6e3d0d4e2,group_057,16,Leukoplakia with dysplasia: 16,,
+hp_840ac20fd313,ndb+sab,0198,Leukoplakia with dysplasia,leucoplasia,case_059,hp_840ac20fd313,group_058,10,Leukoplakia with dysplasia: 10,,
+hp_8ece0c671ed2,ndb+sab,0196,Leukoplakia with dysplasia,leucoplasia,case_059,hp_f67f672e17e5,group_058,11,Leukoplakia without dysplasia: 11,,hp_f67f672e17e5: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.18
+hp_d5a404fddfb8,ndb+sab,0197,Leukoplakia with dysplasia,leucoplasia,case_059,hp_d5a404fddfb8,group_058,19,Leukoplakia without dysplasia: 12; Leukoplakia with dysplasia: 7,,
+hp_f67f672e17e5,ndb+sab,0195,Leukoplakia with dysplasia,leucoplasia,case_059,hp_f67f672e17e5,group_058,7,Leukoplakia without dysplasia: 7,,hp_8ece0c671ed2: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.18
+hp_2799d99979ad,ndb+sab,0199,Leukoplakia without dysplasia,leucoplasia,case_060,hp_66984c2da839,group_059,15,Leukoplakia with dysplasia: 8; Leukoplakia without dysplasia: 7,,hp_66984c2da839: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.14
+hp_66984c2da839,ndb+sab,0200,Leukoplakia without dysplasia,leucoplasia,case_060,hp_66984c2da839,group_059,18,Leukoplakia with dysplasia: 18,,hp_2799d99979ad: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.14
+hp_5523eea3590f,ndb+sab,0204,Leukoplakia without dysplasia,leucoplasia,case_061,hp_f5890876b7a5,group_060,17,Leukoplakia with dysplasia: 17,patch_labels_differ_in_group,hp_f5890876b7a5: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_f5890876b7a5,ndb+sab,0203,Leukoplakia without dysplasia,leucoplasia,case_061,hp_f5890876b7a5,group_060,19,Leukoplakia without dysplasia: 12; Leukoplakia with dysplasia: 7,patch_labels_differ_in_group,hp_5523eea3590f: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_2e149e6d7637,sab,,,benigno,case_062,hp_2e149e6d7637,group_061,20,OSCC: 12; Leukoplakia with dysplasia: 8,,
+hp_32cc24101969,ndb+sab,0206,OSCC,carcinoma,case_062,hp_551c6185b7e8,group_061,20,OSCC: 20,,hp_551c6185b7e8: this_seen_in_other=0.05 other_seen_in_this=0.81 scale=4.34
+hp_551c6185b7e8,ndb+sab,0205,OSCC,carcinoma,case_062,hp_551c6185b7e8,group_061,19,OSCC: 14; Leukoplakia with dysplasia: 5,,hp_32cc24101969: this_seen_in_other=0.81 other_seen_in_this=0.05 scale=4.34
+hp_5ce1f6153418,ndb+sab,0210,OSCC,carcinoma,case_062,hp_631ed4f723af,group_061,20,OSCC: 20,,hp_631ed4f723af: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_631ed4f723af,ndb+sab,0209,OSCC,carcinoma,case_062,hp_631ed4f723af,group_061,20,OSCC: 20,,hp_5ce1f6153418: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_6ca13d77dc12,sab,,,benigno,case_062,hp_b5bec0081b7d,group_061,20,Leukoplakia with dysplasia: 11; OSCC: 9,,hp_b5bec0081b7d: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.25
+hp_8a344739b162,ndb+sab,0207,OSCC,carcinoma,case_062,hp_e187349b9591,group_061,20,OSCC: 20,patch_labels_differ_in_group,hp_e187349b9591: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=4.07
+hp_b5bec0081b7d,sab,,,benigno,case_062,hp_b5bec0081b7d,group_061,18,Leukoplakia with dysplasia: 16; Leukoplakia without dysplasia: 2,,hp_6ca13d77dc12: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.25
+hp_d964e8066f5c,sab,,,benigno,case_062,hp_d964e8066f5c,group_061,0,,,
+hp_e187349b9591,ndb+sab,0208,OSCC,carcinoma,case_062,hp_e187349b9591,group_061,20,Leukoplakia with dysplasia: 20,patch_labels_differ_in_group,hp_8a344739b162: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=4.07
+hp_06bfd208bc8f,ndb+sab,0211,OSCC,carcinoma,case_063,hp_06bfd208bc8f,group_062,20,OSCC: 19; Leukoplakia with dysplasia: 1,,
+hp_887b5a2ab8c2,ndb+sab,0214,OSCC,carcinoma,case_063,hp_887b5a2ab8c2,group_062,16,Leukoplakia with dysplasia: 16,,
+hp_9143a73aac95,ndb+sab,0212,OSCC,carcinoma,case_063,hp_9143a73aac95,group_062,18,OSCC: 13; Leukoplakia with dysplasia: 5,,
+hp_c5d4056c7d28,ndb+sab,0213,OSCC,carcinoma,case_063,hp_c5d4056c7d28,group_062,17,Leukoplakia with dysplasia: 17,,
+hp_3ce2ca07af8b,ndb+sab,0216,Leukoplakia with dysplasia,carcinoma,case_064,hp_d0e42fd6b9cc,group_063,15,OSCC: 15,,hp_d0e42fd6b9cc: this_seen_in_other=1.00 other_seen_in_this=0.06 scale=0.26
+hp_d0e42fd6b9cc,ndb+sab,0215,Leukoplakia with dysplasia,carcinoma,case_064,hp_d0e42fd6b9cc,group_063,9,OSCC: 8; Leukoplakia with dysplasia: 1,,hp_3ce2ca07af8b: this_seen_in_other=0.06 other_seen_in_this=1.00 scale=0.26

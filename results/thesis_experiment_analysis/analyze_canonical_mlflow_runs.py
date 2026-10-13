@@ -20,7 +20,7 @@ from sklearn.metrics import confusion_matrix
 
 
 OUTPUT_DIR = Path(__file__).resolve().parent
-MLFLOW_ENV = Path("/Users/beamaia/thesis_organization/ndb_ufes_mlflow/.env")
+MLFLOW_ENV = Path(__file__).resolve().parents[3] / "ndb_ufes_mlflow" / ".env"  # the MLflow component next to this repository in the umbrella checkout
 EXPERIMENT_NAME = "pndb_ufes_leakage_batches"
 
 # Exact IDs prevent same-name retries from entering the thesis evidence.
@@ -845,7 +845,7 @@ def write_guidance(
 ## Discussion points to include
 
 - The split definition is the main experimental change, which supports an association between grouping and the performance decrease. Avoid saying that the experiment proves every part of the decrease was caused only by leakage.
-- Explain that related WSI, shifted or zoomed tissue views, and patches from linked patients can reduce effective visual diversity when separated across folds.
+- Explain that related histopathology images, shifted or zoomed tissue views, and patches from linked patients can reduce effective visual diversity when separated across folds.
 - Connect the class-specific confusion to the known subjectivity of epithelial dysplasia assessment.
 - State that the statistical analysis is exploratory because only five folds are available and their training subsets overlap.
 - The within-experiment Friedman tests evaluate whether the three CNNs have different fold-level BCC distributions. The between-experiment tests compare the same architecture across the two split strategies; they do not compare every model against every other model.

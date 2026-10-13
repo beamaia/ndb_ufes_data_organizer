@@ -1,0 +1,4 @@
+pictures,count,mean,median,q1,q3,smallest,largest
+all pictures with patches,247,15.2,16.0,12.0,20.0,1,40
+pictures in ndb+sab,203,15.3,17.0,12.0,20.0,2,40
+pictures in sab,44,14.8,15.0,10.0,19.0,1,29

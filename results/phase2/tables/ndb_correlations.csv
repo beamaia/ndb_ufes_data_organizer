@@ -1,0 +1,9 @@
+variable,diagnosis,gender,age_group,skin_color,localization,tobacco_use,alcohol_consumption,sun_exposure
+diagnosis,1.0,0.239,0.192,0.328,0.57,0.243,0.302,0.157
+gender,0.239,1.0,0.078,0.309,0.336,0.187,0.378,0.124
+age_group,0.192,0.078,1.0,0.204,0.301,0.304,0.276,0.215
+skin_color,0.328,0.309,0.204,1.0,0.243,0.476,0.453,0.545
+localization,0.57,0.336,0.301,0.243,1.0,0.322,0.37,0.219
+tobacco_use,0.243,0.187,0.304,0.476,0.322,1.0,0.608,0.683
+alcohol_consumption,0.302,0.378,0.276,0.453,0.37,0.608,1.0,0.658
+sun_exposure,0.157,0.124,0.215,0.545,0.219,0.683,0.658,1.0
