@@ -1,36 +1,28 @@
 # NDB-UFES Data Organizer
 
-Repository for the final public NDB-UFES oral histopathology experiment assignments, validated patch-to-source-image linkage, canonical results, data dictionary, reproducibility notes, and leakage-aware reuse guidance.
+Rebuilds the dataset behind the P-NDB-UFES oral histopathology patches: every patch is tied to its parent picture, pictures and patients that share evidence are grouped into case groups, and the folds never split a case group. It publishes the tables, the folds, a factsheet and a data dictionary.
 
-This repository publishes data-organization and result artifacts. Model training remains in a separate repository.
+This repository builds the dataset and the folds. Model training is in a separate repository, `ndb_ufes_training_pipeline`, which reads the folds from here.
 
-## Final Scope
+## The dataset
 
-Both released experiments contain all 3,763 P-NDB-UFES patches. The validated linkage assigns them to 251 source-image groups:
+| Item | Count |
+| --- | ---: |
+| Patches (512 × 512 pixels) | 3,763 |
+| Parent pictures | 288 |
+| Cases (masked patients) / case groups | 64 / 63 |
+| Classes | 3 |
+| Folds | 6 |
 
-| Source-image role | Groups | Patches |
-| --- | ---: | ---: |
-| Public NDB-UFES + SAB evidence | 203 | 3,111 |
-| SAB-only evidence | 48 | 652 |
-| **Total** | **251** | **3,763** |
+The full numbers, generated from the tables, are in `docs/factsheet-ndb-ufes.md`, `docs/factsheet-p-ndb-ufes.md`, `docs/old-folds.md` and `docs/folds.md`. Every column is described in `docs/data-dictionary.md`.
 
-Experiment 1 is the released patch-level reference split. Experiment 2 is the patient-first grouped split and keeps validated source-image and patient/case groups within one fold.
+## Use the folds
 
-## Public Documentation
+Download `results/phase1/folds/fold_assignments.csv` and use its `fold` column instead of a random patch-level split. Patches of one case group are always in one fold, so patches of the same patient never sit on both sides of an evaluation. The three patches with an empty `fold` are exact duplicates and are left out. The label to predict is `patch_diagnosis`.
 
-The published wiki is available at:
+## Documentation
 
-https://beamaia.github.io/ndb_ufes_data_organizer/
-
-Key pages:
-
-- `docs/factsheet.md`: final scope, linkage, labels, experiments, and reuse limits.
-- `docs/data-dictionary.md`: public files, counts, columns, and field interpretation.
-- `docs/thesis-experiment-batches.md`: frozen two-experiment design.
-- `docs/experiment-results.md`: canonical metrics, figures, statistics, and run provenance.
-- `docs/reproducibility.md`: final bundle and documentation validation commands.
-
-Preview locally:
+The wiki is published at https://beamaia.github.io/ndb_ufes_data_organizer/.
 
 ```bash
 uv sync --extra docs
@@ -39,40 +31,33 @@ uv run python -m mkdocs serve
 
 Open `http://127.0.0.1:8000/ndb_ufes_data_organizer/`.
 
-## Build the Final Public Outputs
+## Rebuild
 
 ```bash
-uv sync
-uv run python scripts/src/release/build_canonical_experiment_release.py
-uv run python scripts/src/release/generate_research_ready_tables.py --profile public
+uv run dvc pull      # maintainers only: the source data and pipeline outputs
+uv run dvc repro     # runs every stage of dvc.yaml
 ```
 
-The sanitized bundle is written under `release/v1.0.0/public/`.
+The stages, their commands and what each guarantees are in `docs/reproducibility.md`. DVC and the private S3 remote are for the maintainers; the public source data is on Mendeley Data (below).
 
-## Validate the Wiki
+## Check before publishing
 
 ```bash
-uv sync --extra docs
+uv run python scripts/src/release/check_repo.py
 uv run python -m mkdocs build --strict
 uv run python scripts/src/release/validate_static_site.py site
 uv run python scripts/src/release/validate_public_payload.py site --max-mib 55
 ```
 
-Private source-image identifiers, private crosswalks, direct patient/lesion identifiers, local paths, checkpoints, and raw MLflow storage are excluded from the public payload.
+The first command scans everything git would publish for case prefixes, SAB photo names, local paths and oversized files, and checks that every published column is in the data dictionary. SAB images, case prefixes, file names and paths are private and never published; the public tables use pseudonyms.
 
-## Source Dataset
+## Source dataset
 
 Download NDB-UFES from Mendeley Data:
 
 ```text
 https://data.mendeley.com/datasets/bbmmm4wgr8/4
 ```
-
-DVC/AWS S3 synchronization is maintainer-only and is not the public download path.
-
-## Leakage-Aware Use
-
-Use the released fold assignments instead of random patch-level splits. Keep validated source-image and patient/case groups within one train, validation, or test partition. Fold 5 is held out from training and validation.
 
 ## Licensing
 

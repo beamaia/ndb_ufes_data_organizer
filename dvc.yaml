@@ -1,0 +1,190 @@
+# The dataset build: phase 0 builds the patch, picture and case tables, phase 1 builds the folds.
+# Rebuild everything with `dvc repro`, or one stage with `dvc repro <stage>`.
+# The public tables and the folds are small and go to git (cache: false); everything else, and everything
+# in a private_lab folder (case prefixes, file paths), is kept by DVC and never by git.
+stages:
+  picture-features:
+    cmd: uv run python scripts/phase0.py picture-features
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - scripts/src/phase0_dataset_builder
+    outs:
+      - results/phase0/picture_feature_cache/picture_features.pkl
+
+  picture-relations:
+    cmd: uv run python scripts/phase0.py picture-relations
+    deps:
+      - results/phase0/picture_feature_cache/picture_features.pkl
+      - scripts/src/phase0_dataset_builder
+    outs:
+      - results/phase0/picture_relations/picture_relations.csv
+
+  patch-pool-search:
+    cmd: uv run python scripts/phase0.py patch-pool-search
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - data/ndb_ufes/patch_level/images
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - scripts/src/phase0_dataset_builder
+    outs:
+      - results/phase0/patch_pool_search/patch_pool_matches.csv
+
+  patch-placements:
+    cmd: uv run python scripts/phase0.py patch-placements
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - data/ndb_ufes/patch_level/images
+      - results/phase0/patch_pool_search/patch_pool_matches.csv
+      - results/phase0/picture_relations/picture_relations.csv
+      - scripts/src/phase0_dataset_builder
+    outs:
+      - results/phase0/patch_placements/patch_placements.csv
+
+  patch-table:
+    cmd: uv run python scripts/phase0.py patch-table
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - data/ndb_ufes/patch_level/images
+      - data/patches_data
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - data/ndb_ufes/patch_level/csvs/sab_patch_names.csv
+      - data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+      - results/phase0/patch_pool_search/patch_pool_matches.csv
+      - results/phase0/picture_relations/picture_relations.csv
+      - results/phase0/patch_placements/patch_placements.csv
+      - scripts/src/phase0_dataset_builder
+    outs:
+      - results/phase0/dataset_tables/private_lab
+      - results/phase0/dataset_tables/patch_table_public.csv:
+          cache: false
+      - results/phase0/dataset_tables/picture_table_public.csv:
+          cache: false
+      - results/phase0/dataset_tables/case_table_public.csv:
+          cache: false
+
+  patch-embeddings:
+    cmd: uv run python scripts/phase1.py patch-embeddings
+    deps:
+      - data/ndb_ufes/patch_level/images
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - scripts/src/models
+      - scripts/src/phase1_folds/embeddings.py
+    outs:
+      - results/phase1/embeddings/virchow_patch_embeddings.npz
+
+  patch-clusters:
+    cmd: uv run python scripts/phase1.py patch-clusters
+    deps:
+      - results/phase1/embeddings/virchow_patch_embeddings.npz
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - scripts/src/phase1_folds
+    outs:
+      - results/phase1/clusters/patch_clusters.csv:
+          cache: false
+
+  folds:
+    cmd: uv run python scripts/phase1.py folds
+    deps:
+      - data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - results/phase0/dataset_tables/picture_table_public.csv
+      - results/phase1/clusters/patch_clusters.csv
+      - scripts/src/phase1_folds
+      - scripts/src/phase0_dataset_builder/cases.py
+    outs:
+      - results/phase1/folds/fold_assignments.csv:
+          cache: false
+      - results/phase1/folds/fold_summary.csv:
+          cache: false
+
+  patient-atlas:
+    cmd: uv run python scripts/phase2.py patient-atlas
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - data/ndb_ufes/patch_level/images
+      - results/phase0/dataset_tables/private_lab
+      - scripts/src/phase2_report/atlas.py
+    outs:
+      - atlases/patient_atlas.pdf:
+          cache: false
+
+  aligned-atlas:
+    cmd: uv run python scripts/phase2.py aligned-atlas
+    deps:
+      - data/ndb_ufes/origin_level/images
+      - data/SAB
+      - results/phase0/dataset_tables/private_lab
+      - results/phase0/picture_relations/picture_relations.csv
+      - scripts/src/phase2_report/atlas.py
+    outs:
+      - atlases/aligned_atlas.pdf:
+          cache: false
+
+  stats:
+    cmd: uv run python scripts/phase2.py stats
+    deps:
+      - data/ndb_ufes/origin_level/csvs/ndb-ufes.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - results/phase0/dataset_tables/picture_table_public.csv
+      - results/phase1/folds/fold_assignments.csv
+      - results/phase1/clusters/patch_clusters.csv
+      - results/phase1/embeddings/virchow_patch_embeddings.npz
+      - scripts/src/phase2_report/stats.py
+    outs:
+      - results/phase2/tables:
+          cache: false
+
+  figures:
+    cmd: uv run python scripts/phase2.py figures
+    deps:
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - results/phase1/folds/fold_assignments.csv
+      - results/phase1/folds/fold_summary.csv
+      - results/phase1/clusters/patch_clusters.csv
+      - results/phase1/clusters/cluster_choices.csv
+      - results/phase1/embeddings/virchow_patch_embeddings.npz
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - results/phase2/tables
+      - scripts/src/phase2_report/figures.py
+      - scripts/src/phase1_folds/clusters.py
+    outs:
+      - docs/assets/figures:
+          cache: false
+
+  pages:
+    cmd: uv run python scripts/phase2.py pages
+    deps:
+      - results/phase2/tables
+      - docs/assets/figures
+      - results/phase0/dataset_tables/patch_table_public.csv
+      - results/phase0/dataset_tables/picture_table_public.csv
+      - results/phase0/dataset_tables/case_table_public.csv
+      - results/phase1/folds/fold_assignments.csv
+      - results/phase1/folds/fold_summary.csv
+      - results/phase1/clusters/patch_clusters.csv
+      - atlases/aligned_atlas.pdf
+      - atlases/patient_atlas.pdf
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - scripts/src/phase2_report/pages.py
+    outs:
+      - docs/factsheet-ndb-ufes.md:
+          cache: false
+      - docs/factsheet-p-ndb-ufes.md:
+          cache: false
+      - docs/matching-and-atlases.md:
+          cache: false
+      - docs/old-folds.md:
+          cache: false
+      - docs/folds.md:
+          cache: false

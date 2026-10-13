@@ -1,5 +1,5 @@
 site_name: NDB-UFES Data Organizer
-site_description: Leakage-aware folds and reproducibility notes for the NDB-UFES oral histopathology dataset
+site_description: The rebuilt NDB-UFES and SAB patch dataset, its case groups and leakage-aware folds
 site_url: https://beamaia.github.io/ndb_ufes_data_organizer/
 repo_url: https://github.com/beamaia/ndb_ufes_data_organizer
 repo_name: GitHub
@@ -37,15 +37,6 @@ theme:
 extra_css:
   - styles/labcin.css
 
-extra_javascript:
-  - javascripts/plotly-loader.js
-
-# Keep local-only review and non-release visualization assets out of the
-# public Pages artifact.
-exclude_docs: |
-  assets/contamination/contaminated_patches_comparison.png
-  visualizations/
-
 extra:
   social:
     - icon: fontawesome/brands/researchgate
@@ -54,17 +45,19 @@ extra:
 
 nav:
   - Home: index.md
-  - Start Here:
-    - Factsheet: factsheet.md
-    - Setup & Installation: setup.md
-    - Thesis Experiment Design: thesis-experiment-batches.md
-    - Canonical Experiment Results: experiment-results.md
-  - Final Release:
-    - Output Status: status.md
-    - Reproducibility: reproducibility.md
+  - Dataset:
+    - About the Data: about-the-data.md
+    - Factsheet NDB-UFES: factsheet-ndb-ufes.md
+    - Factsheet P-NDB-UFES: factsheet-p-ndb-ufes.md
+    - Matching and Atlases: matching-and-atlases.md
+  - Folds:
+    - Old Folds and Contamination: old-folds.md
+    - New Folds: folds.md
   - Reference:
     - Data Dictionary: data-dictionary.md
-    - Contamination Checks: contamination-analysis.md
+  - Use It:
+    - Setup & Installation: setup.md
+    - Reproducibility: reproducibility.md
 
 plugins:
   - search:
