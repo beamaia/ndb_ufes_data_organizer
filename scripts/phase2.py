@@ -1,259 +1,41 @@
+from __future__ import annotations
+
+import argparse
+import sys
 from pathlib import Path
 
-import pandas as pd
 
-from src.phase2.phase2_average_results import average_results, save_averaged_results
-from src.phase2.phase2_enhanced_visualizations import (
-    create_basic_visualizations,
-    create_enhanced_visualizations,
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from src.phase2_report.atlas import (
+    render_aligned_atlas_arg_parser, render_patient_atlas_arg_parser, run_render_aligned_atlas, run_render_patient_atlas,
 )
-from src.phase2.phase2_save_params import (
-    NoEligibleClusteringError,
-    save_optimal_params,
-    select_optimal_params,
-)
-from src.phase2.phase2_tune_clustering import (
-    aggregate_to_wsi_level,
-    discover_latest_embeddings,
-    load_config,
-    load_embeddings,
-    load_origin_ids,
-    run_grid_search,
-)
-from src.utils.logger import logger
+from src.phase2_report.figures import figures_arg_parser, run_figures
+from src.phase2_report.pages import pages_arg_parser, run_pages
+from src.phase2_report.stats import run_stats, stats_arg_parser
 
 
-PROJECT_ROOT = Path(__file__).parent.parent
-CONFIG_PATH = PROJECT_ROOT / "scripts/src/phase2/config.yaml"
-LOG_SEPARATOR = "=" * 80
+COMMANDS = {
+    "patient-atlas": ("PDF of case groups: pictures, patch boxes, each patch beside its crop", render_patient_atlas_arg_parser, run_render_patient_atlas),
+    "aligned-atlas": ("PDF of related pictures rotated into one frame", render_aligned_atlas_arg_parser, run_render_aligned_atlas),
+    "stats": ("Every table and statistic as a CSV file", stats_arg_parser, run_stats),
+    "figures": ("The SVG charts of the wiki", figures_arg_parser, run_figures),
+    "pages": ("The generated wiki pages", pages_arg_parser, run_pages),
+}
 
 
-def project_path(path: str) -> Path:
-    configured_path = Path(path)
-    if configured_path.is_absolute():
-        return configured_path
-    return PROJECT_ROOT / configured_path
-
-
-def configured_output_path(template: str, **values) -> Path:
-    return project_path(template.format(**values))
-
-
-def log_phase_start(model_count: int) -> None:
-    logger.info(LOG_SEPARATOR)
-    logger.info("PHASE 2: CLUSTERING PARAMETER TUNING")
-    logger.info(f"Processing {model_count} models")
-    logger.info(LOG_SEPARATOR)
-
-
-def log_phase_end(
-    optimal_params: dict[str, dict],
-    rejected_models: dict[str, str],
-    selected_params: dict,
-) -> None:
-    logger.info(LOG_SEPARATOR)
-    logger.info("PHASE 2 COMPLETE")
-    logger.info(LOG_SEPARATOR)
-    for model_name, params in sorted(optimal_params.items()):
-        logger.info(
-            f"{model_name:30s} PCA={params['pca_components']:2d}, "
-            f"K={params['kmeans_clusters']}, "
-            f"silhouette={params['silhouette_score']:.4f} "
-            f"+/- {params['silhouette_std']:.4f}"
-        )
-    for model_name, reason in sorted(rejected_models.items()):
-        logger.info(f"{model_name:30s} REJECTED: {reason}")
-    logger.info("-" * 80)
-    logger.info(
-        f"Selected model: {selected_params['model_name']} "
-        f"(PCA={selected_params['pca_components']}, "
-        f"K={selected_params['kmeans_clusters']}, "
-        f"silhouette={selected_params['silhouette_score']:.4f})"
-    )
-
-
-def run(config_path: Path = CONFIG_PATH) -> dict[str, dict]:
-    config = load_config(config_path)
-    tuning = config["tuning"]
-    selection = config["selection"]
-    inputs = config["input"]
-    outputs = config["output"]
-    visualizations = config.get("visualizations", {})
-
-    embedding_pattern = str(project_path(inputs["embeddings_pattern"]))
-    logger.info(f"Searching for embeddings matching: {embedding_pattern}")
-    embedding_files = discover_latest_embeddings(embedding_pattern)
-    origin_ids = load_origin_ids(project_path(inputs["origin_metadata_file"]))
-    logger.info(f"Loaded {len(origin_ids)} Phase 1 origins")
-    log_phase_start(len(embedding_files))
-
-    all_optimal_params = {}
-    rejected_models = {}
-    selection_records = []
-    failed_models = {}
-
-    for model_index, (model_name, embeddings_path) in enumerate(
-        embedding_files.items(),
-        start=1,
-    ):
-        logger.info("-" * 80)
-        logger.info(f"MODEL {model_index}/{len(embedding_files)}: {model_name.upper()}")
-        logger.info("-" * 80)
-
-        try:
-            embeddings = load_embeddings(embeddings_path)
-            wsi_features = aggregate_to_wsi_level(embeddings, origin_ids)
-            logger.info(f"WSI feature matrix: {wsi_features.shape}")
-
-            run_results = []
-            for run_id in range(1, tuning["n_runs"] + 1):
-                random_state = tuning["random_state"] + run_id - 1
-                logger.info(
-                    f"Run {run_id}/{tuning['n_runs']} "
-                    f"(random_state={random_state})"
-                )
-                results = run_grid_search(
-                    wsi_features=wsi_features,
-                    pca_components=tuning["pca_components_to_test"],
-                    cluster_counts=tuning["kmeans_clusters_to_test"],
-                    random_state=random_state,
-                    run_id=run_id,
-                )
-                run_path = configured_output_path(
-                    outputs["run_results_template"],
-                    model=model_name,
-                    run_id=run_id,
-                )
-                run_path.parent.mkdir(parents=True, exist_ok=True)
-                results.to_csv(run_path, index=False)
-                run_results.append(results)
-
-            averaged_results = average_results(run_results)
-            averaged_path = configured_output_path(
-                outputs["averaged_results_template"],
-                model=model_name,
-            )
-            save_averaged_results(averaged_results, averaged_path)
-
-            create_basic_visualizations(
-                results=averaged_results,
-                model_name=model_name,
-                elbow_path=configured_output_path(
-                    visualizations["elbow_curves_template"],
-                    model=model_name,
-                ),
-                silhouette_path=configured_output_path(
-                    visualizations["silhouette_heatmap_template"],
-                    model=model_name,
-                ),
-            )
-            create_enhanced_visualizations(
-                results=averaged_results,
-                model_name=model_name,
-                output_dir=project_path(outputs["results_dir"]),
-            )
-
-            params_path = configured_output_path(
-                outputs["params_template"],
-                model=model_name,
-            )
-            constraints = {
-                "min_cluster_size": selection["min_cluster_size"],
-                "max_cluster_size_ratio": selection["max_cluster_size_ratio"],
-            }
-            eligible_count = int((
-                (averaged_results["min_cluster_size_min"] >= selection["min_cluster_size"])
-                & (
-                    averaged_results["cluster_size_ratio_max"]
-                    <= selection["max_cluster_size_ratio"]
-                )
-            ).sum())
-            try:
-                params = select_optimal_params(
-                    averaged_results,
-                    random_state=tuning["random_state"],
-                    min_cluster_size=selection["min_cluster_size"],
-                    max_cluster_size_ratio=selection["max_cluster_size_ratio"],
-                )
-            except NoEligibleClusteringError as error:
-                reason = str(error)
-                rejected_models[model_name] = reason
-                rejection = {
-                    "model_name": model_name,
-                    "embeddings_file": str(embeddings_path),
-                    "eligibility_status": "rejected",
-                    "eligibility_reason": reason,
-                    "eligible_configuration_count": eligible_count,
-                    "configurations_evaluated": int(len(averaged_results)),
-                    "selection_constraints": constraints,
-                }
-                save_optimal_params(rejection, params_path)
-                selection_records.append(rejection)
-                logger.warning(f"Rejected model from selection: {reason}")
-                continue
-
-            params.update({
-                "eligibility_status": "eligible",
-                "eligible_configuration_count": eligible_count,
-                "configurations_evaluated": int(len(averaged_results)),
-            })
-            save_optimal_params(params, params_path)
-            all_optimal_params[model_name] = params
-            selection_records.append({
-                "model_name": model_name,
-                "embeddings_file": str(embeddings_path),
-                **params,
-            })
-            logger.info(
-                f"Selected PCA={params['pca_components']}, "
-                f"K={params['kmeans_clusters']}, "
-                f"silhouette={params['silhouette_score']:.4f}, "
-                f"minimum cluster={params['min_cluster_size']}, "
-                f"maximum ratio={params['max_cluster_size_ratio']:.2f}"
-            )
-        except Exception as error:
-            failed_models[model_name] = str(error)
-            logger.exception(f"Failed to tune {model_name}")
-
-    if failed_models:
-        failures = "; ".join(
-            f"{model}: {error}" for model, error in sorted(failed_models.items())
-        )
-        raise RuntimeError(f"Phase 2 failed for {len(failed_models)} models: {failures}")
-    if not all_optimal_params:
-        raise RuntimeError("Phase 2 found no eligible model configurations")
-
-    selected_model = max(
-        all_optimal_params,
-        key=lambda model_name: all_optimal_params[model_name]["silhouette_score"],
-    )
-    selected_params = {
-        "model_name": selected_model,
-        "embeddings_file": str(embedding_files[selected_model]),
-        **all_optimal_params[selected_model],
-    }
-    selected_params_path = project_path(outputs["selected_params_file"])
-    save_optimal_params(selected_params, selected_params_path)
-
-    selection_summary = pd.DataFrame(selection_records)
-    selection_summary["selection_constraints"] = selection_summary[
-        "selection_constraints"
-    ].astype(str)
-    selection_summary = selection_summary.sort_values(
-        ["eligibility_status", "silhouette_score"],
-        ascending=[True, False],
-        na_position="last",
-    )
-    selection_summary_path = project_path(outputs["selection_summary_file"])
-    selection_summary_path.parent.mkdir(parents=True, exist_ok=True)
-    selection_summary.to_csv(selection_summary_path, index=False)
-
-    log_phase_end(all_optimal_params, rejected_models, selected_params)
-    logger.info(f"Results saved under {project_path(outputs['results_dir'])}")
-    logger.info(f"Selected model parameters saved to {selected_params_path}")
-    logger.info(f"Model selection summary saved to {selection_summary_path}")
-    return selected_params
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("command", choices=sorted(COMMANDS))
+    args, remaining = parser.parse_known_args()
+    label, arg_parser_factory, runner = COMMANDS[args.command]
+    command_args = arg_parser_factory().parse_args(remaining)
+    summary = runner(command_args)
+    print(f"{label} complete")
+    for key, value in summary.items():
+        print(f"{key}: {value}")
+    return 0
 
 
 if __name__ == "__main__":
-    run()
+    raise SystemExit(main())

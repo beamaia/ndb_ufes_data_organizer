@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate internal links, assets, anchors, search, and release downloads."""
+"""Validate internal links, assets, anchors, and search."""
 
 from __future__ import annotations
 
@@ -12,16 +12,15 @@ from urllib.parse import unquote, urlsplit
 
 SITE_PREFIX = "/ndb_ufes_data_organizer/"
 REQUIRED_SEARCH_TITLES = {
-    "Thesis Experiment Design",
-    "Canonical Experiment Results",
-}
-REQUIRED_DOWNLOADS = {
-    "assets/experiments/canonical_run_manifest.json",
-    "assets/experiments/fold_test_metrics.csv",
-    "assets/experiments/results_summary.csv",
-    "assets/experiments/execution_times.csv",
-    "assets/experiments/statistics_within_experiment.csv",
-    "assets/experiments/statistics_between_experiments.csv",
+    "About the Data",
+    "Factsheet: NDB-UFES",
+    "Factsheet: P-NDB-UFES",
+    "Matching and Atlases",
+    "Old Folds and Contamination",
+    "New Folds",
+    "Data Dictionary",
+    "Setup and Installation",
+    "Reproducibility",
 }
 
 
@@ -96,15 +95,11 @@ def main() -> None:
     if missing_titles:
         failures.append(f"search index missing titles: {sorted(missing_titles)}")
 
-    for relative in REQUIRED_DOWNLOADS:
-        if not (site / relative).is_file():
-            failures.append(f"missing release download: {relative}")
-
     if failures:
         raise SystemExit("\n".join(failures))
     print(
         f"validated static site: {len(html_files)} HTML pages, "
-        f"{checked} local references, search and downloads present"
+        f"{checked} local references, search present"
     )
 
 
