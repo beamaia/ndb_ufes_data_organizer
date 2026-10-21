@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 from src.phase0_dataset_builder.cases import FOLDER_DIFFERS, find_leaks
-from src.phase0_dataset_builder.sources import NDB_METADATA, SHORT_LABEL, Diagnosis
+from src.phase0_dataset_builder.sources import NDB_METADATA, SAB_LESION_TO_DIAGNOSIS, SHORT_LABEL, Diagnosis
 from src.utils.logger import logger
 
 
@@ -30,6 +30,11 @@ NOT_IN_NDB = "not in NDB-UFES"
 UNKNOWN = "unknown"  # gender and age group of patches whose picture is not in NDB-UFES
 NDB_COLUMNS = [*(f"NDB-UFES {label}" for label in CLASSES), NOT_IN_NDB]
 BALANCE_GROUPS = ("label", "ndb", "metadata", "cluster")  # what the folds can balance; the patch label and the total always count
+ORIGINAL_FOLD_FILES = [  # the six folds published with P-NDB-UFES: five folders, and a sixth that was the test set
+    Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv"),
+    Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv"),
+]
+PUBLISHED_OUTPUT_NAME = "fold_assignments_published.csv"
 OUTPUT_COLUMNS = ["patch_id", "case_group", "fold", "patch_diagnosis", "dropped_duplicate_of"]
 ALLOWED_CELLS = {  # the only shapes a cell of the published file may have
     "patch_id": r"p\d{4}",
@@ -357,6 +362,57 @@ def run_folds(args: argparse.Namespace) -> dict:
         **validation,
         **benigno_report(kept, pictures),
     }
+
+
+def original_table(files: list[Path] = ORIGINAL_FOLD_FILES) -> pd.DataFrame:
+    """Fold (0 to 5, like the new folds; the published files number them 1 to 6) and label (spelled as in the new folds) of each patch of the folds published with P-NDB-UFES, by patch id."""
+    published = pd.concat([pd.read_csv(path, dtype=str) for path in files])
+    return published.assign(patch_id=published["path"].str.removesuffix(".png"), fold=(published["folder"].astype(int) - 1).astype(str),
+                            label=published["lesion"].map(lambda lesion: SAB_LESION_TO_DIAGNOSIS[lesion].value)).set_index("patch_id")[["fold", "label"]]
+
+
+def original_folds(files: list[Path] = ORIGINAL_FOLD_FILES) -> pd.Series:
+    """patch id -> fold (0 to 5) of the folds published with P-NDB-UFES."""
+    return original_table(files)["fold"]
+
+
+def published_folds_table(assignments: pd.DataFrame, published: pd.DataFrame) -> pd.DataFrame:
+    """The folds file of the new folds with the published fold of each patch instead, for the experiment that compares the two. The patches, the labels and the
+    dropped duplicates are the same, so that only the folds differ. The published folds put patches of one case in several folds, so every patch is its own
+    case group, which is what a trainer that refuses a case group in two folds needs; that the folds leak is what these folds are for."""
+    table = assignments.copy()
+    kept = table["fold"] != ""
+    unknown = sorted(set(table.loc[kept, "patch_id"]) - set(published.index))
+    if unknown:
+        raise ValueError(f"{len(unknown)} patches have no published fold, for example {unknown[:3]}")
+    shown = published.loc[table.loc[kept, "patch_id"]]
+    different = table.loc[kept, "patch_diagnosis"].to_numpy() != shown["label"].to_numpy()
+    if different.any():
+        raise ValueError(f"The label of {int(different.sum())} patches differs between the new folds file and the published folds")
+    table.loc[kept, "fold"] = shown["fold"].to_numpy()
+    table["case_group"] = table["patch_id"]
+    return table
+
+
+def run_published_folds(args: argparse.Namespace) -> dict:
+    assignments = pd.read_csv(args.folds, dtype=str, keep_default_na=False)
+    table = published_folds_table(assignments, original_table())
+    kept = table[table["fold"] != ""]
+    per_fold = pd.crosstab(kept["fold"], kept["patch_diagnosis"])
+    if set(per_fold.columns) != set(CLASSES) or (per_fold == 0).any().any():
+        raise ValueError(f"Every published fold must hold all the classes:\n{per_fold}")
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    output = args.output_dir / PUBLISHED_OUTPUT_NAME
+    table[OUTPUT_COLUMNS].to_csv(output, index=False)
+    logger.info(f"Wrote {output}")
+    return {"output": str(output), "patches": len(kept), "dropped_duplicates": int((table["fold"] == "").sum()), "fold_counts": kept["fold"].value_counts().sort_index().to_dict()}
+
+
+def published_folds_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="The folds file with the folds published with P-NDB-UFES, for the experiment that compares them with the new folds.")
+    parser.add_argument("--folds", type=Path, default=DEFAULT_OUTPUT_DIR / OUTPUT_NAME, help="The folds file of the new folds, which gives the patches, the labels and the dropped duplicates.")
+    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    return parser
 
 
 def folds_arg_parser() -> argparse.ArgumentParser:

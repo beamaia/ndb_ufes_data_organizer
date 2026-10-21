@@ -11,7 +11,8 @@ import pandas as pd
 
 from src.phase0_dataset_builder.sources import AGE_GROUP_YEARS, SHORT_LABEL
 from src.phase2_report.figures import CHOSEN_CLUSTERS, CHOSEN_PCA
-from src.phase2_report.stats import NDB_LISTED_VALUES, RANDOM_DRAWS, original_folds
+from src.phase1_folds.folds import original_folds
+from src.phase2_report.stats import NDB_LISTED_VALUES, RANDOM_DRAWS
 from src.utils.logger import logger
 
 

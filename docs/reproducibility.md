@@ -25,6 +25,7 @@ The matching code, though, can be used with the public data alone, NDB-UFES and 
 | `patch-embeddings` | `uv run python scripts/phase1.py patch-embeddings` | A Virchow embedding of every patch. |
 | `patch-clusters` | `uv run python scripts/phase1.py patch-clusters` | Three morphology clusters of the patches. |
 | `folds` | `uv run python scripts/phase1.py folds` | The six folds and their summary. |
+| `published-folds` | `uv run python scripts/phase1.py published-folds` | The folds file with the folds published with P-NDB-UFES, for the experiment that compares them with the new folds. |
 | `patient-atlas` | `uv run python scripts/phase2.py patient-atlas` | A PDF with every parent picture, its patch boxes and each patch beside its crop. |
 | `aligned-atlas` | `uv run python scripts/phase2.py aligned-atlas` | A PDF with related pictures rotated into one frame. |
 | `stats` | `uv run python scripts/phase2.py stats` | Every table and statistic as a CSV file. |
@@ -47,4 +48,4 @@ The same inputs give the same files. SIFT matching uses exact search, the search
 
 The SAB images, the case prefixes behind the masked cases, the SAB file names, and all file paths are never published. They live in `private_lab` folders and in `data/`, which DVC keeps in a private remote; git ignores them. The published tables carry pseudonyms only (`case_NNN`, `group_NNN`) and repository-relative paths of public images.
 
-`uv run python scripts/src/release/check_repo.py` scans everything git would publish for these identifiers and for oversized files, and it is the last step before a push.
+`uv run python scripts/src/release/check_repo.py` scans everything git would publish for these identifiers and for oversized files, and it is the last step before a push. A git hook can run it before every push: turn it on once with `git config core.hooksPath scripts/hooks`.

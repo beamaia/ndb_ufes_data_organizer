@@ -14,17 +14,13 @@ from scipy.stats import chi2_contingency
 from src.phase0_dataset_builder.sources import NDB_METADATA, SEVERITY
 from src.phase1_folds.clusters import load_embeddings, reduce_embeddings
 from src.phase1_folds.embeddings import EMBEDDINGS
-from src.phase1_folds.folds import add_patch_attributes
+from src.phase1_folds.folds import add_patch_attributes, original_folds
 from src.utils.logger import logger
 
 
 TABLES = Path("results/phase0/dataset_tables")
 FOLDS = Path("results/phase1/folds")
 CLUSTERS = Path("results/phase1/clusters/patch_clusters.csv")
-ORIGINAL_FOLD_FILES = [  # the six folds published with P-NDB-UFES: five folders, and a sixth that was the test set
-    Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv"),
-    Path("data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv"),
-]
 OUTPUT_DIR = Path("results/phase2/tables")
 LARGEST_GROUPS = 12  # the case groups shown patch by patch in the chart of how the folds divide a patient
 RANDOM_DRAWS = 20  # random divisions of the patches, averaged, as the level that no structure gives
@@ -53,12 +49,6 @@ def correlation_matrix(frame: pd.DataFrame, columns: dict[str, str]) -> pd.DataF
     """Cramér's V between every two variables; ``columns`` maps the name shown to the column of ``frame``."""
     matrix = pd.DataFrame({a: {b: round(cramers_v(frame[columns[a]], frame[columns[b]]), 3) for b in columns} for a in columns})
     return matrix.rename_axis("variable").reset_index()
-
-
-def original_folds(files: list[Path] = ORIGINAL_FOLD_FILES) -> pd.Series:
-    """patch id -> fold (0 to 5, like the new folds) of the folds published with P-NDB-UFES, whose files number them 1 to 6."""
-    published = pd.concat([pd.read_csv(path, dtype=str) for path in files])
-    return published.assign(patch_id=published["path"].str.removesuffix(".png"), fold=(published["folder"].astype(int) - 1).astype(str)).set_index("patch_id")["fold"]
 
 
 def fold_sets(assignments: pd.DataFrame) -> dict[str, pd.Series]:

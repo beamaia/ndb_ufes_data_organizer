@@ -103,6 +103,17 @@ stages:
       - results/phase1/folds/fold_summary.csv:
           cache: false
 
+  published-folds:
+    cmd: uv run python scripts/phase1.py published-folds
+    deps:
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_folders.csv
+      - data/ndb_ufes/patch_level/csvs/sabpatch_parsed_test.csv
+      - results/phase1/folds/fold_assignments.csv
+      - scripts/src/phase1_folds/folds.py
+    outs:
+      - results/phase1/folds/fold_assignments_published.csv:
+          cache: false
+
   patient-atlas:
     cmd: uv run python scripts/phase2.py patient-atlas
     deps:

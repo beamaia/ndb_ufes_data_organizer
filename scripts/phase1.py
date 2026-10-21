@@ -12,7 +12,7 @@ from src.phase1_folds.clusters import (
     run_patch_clusters,
 )
 from src.phase1_folds.embeddings import patch_embeddings_arg_parser, run_patch_embeddings
-from src.phase1_folds.folds import folds_arg_parser, run_folds
+from src.phase1_folds.folds import folds_arg_parser, published_folds_arg_parser, run_folds, run_published_folds
 
 
 COMMANDS = {
@@ -21,6 +21,7 @@ COMMANDS = {
     "patch-clusters": ("Cluster the patches and show what each cluster is made of", patch_clusters_arg_parser, run_patch_clusters),
     "patch-embeddings": ("Virchow embedding of every patch", patch_embeddings_arg_parser, run_patch_embeddings),
     "folds": ("Folds over the case groups", folds_arg_parser, run_folds),
+    "published-folds": ("The folds file with the folds published with P-NDB-UFES", published_folds_arg_parser, run_published_folds),
 }
 
 
