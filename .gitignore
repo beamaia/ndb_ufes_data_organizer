@@ -206,3 +206,6 @@ tests/
 # Local plotting/runtime caches
 .cache/
 .uv-cache/
+
+# Per-patch predictions of the color filters: 5.5 MB, over the size limit of check_repo.py; src/color_filters.py makes them again
+results/experiments/*/color_filters_predictions.csv
