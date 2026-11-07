@@ -14,7 +14,7 @@ from src.phase0_dataset_builder.matching import (
 )
 from src.phase0_dataset_builder.sources import (
     NDB_METADATA, PATCH_PLACEMENTS, PATCH_TABLE_LAB, PICTURE_RELATIONS, PICTURE_TABLE_LAB, POOL_MATCHES,
-    SAB_PATCHES_DIR, SEVERITY, Diagnosis, HistopathImage, Patch, add_source_arguments, format_counts, load_patch_table,
+    SAB_PATCHES_DIR, SEVERITY, ZOOM_REVIEW, Diagnosis, HistopathImage, Patch, add_source_arguments, format_counts, load_patch_table,
     load_pictures, pixel_sha256,
 )
 from src.utils.logger import logger
@@ -35,6 +35,7 @@ LAB_COLUMNS = [
     "x", "y", "x2", "y2", "match_status",
     "ndb_diagnosis", "patch_vs_picture_diagnosis",
     "other_confirmed_pictures", "other_confirmed_picture_ids", "sab_crop_check", "identical_patch_ids", "parent_image_check",
+    "possible_zoom", "zoom_evidence",
 ]
 PUBLIC_COLUMNS = [
     "patch_id", "patch_path", "patch_diagnosis", "case_pseudonym",
@@ -42,14 +43,17 @@ PUBLIC_COLUMNS = [
     "x", "y", "x2", "y2", "match_status",
     "ndb_diagnosis", "patch_vs_picture_diagnosis",
     "other_confirmed_pictures", "other_confirmed_picture_ids", "sab_crop_check", "identical_patch_ids", "parent_image_check",
+    "possible_zoom", "zoom_evidence",
 ]
 PICTURE_LAB_COLUMNS = [
     "histopath_id", "datasets", "ndb_origin_id", "ndb_diagnosis", "sab_folders", "case_pseudonym", "case_prefix",
     "sab_files", "picture_group", "case_group", "n_patches", "patch_diagnoses", "group_conflicts", "overlap_with_group",
+    "possible_zoom", "zoom_evidence", "relative_zoom", "relative_zoom_to",
 ]
 PICTURE_PUBLIC_COLUMNS = [
     "histopath_id", "datasets", "ndb_origin_id", "ndb_diagnosis", "sab_folders", "case_pseudonym",
     "picture_group", "case_group", "n_patches", "patch_diagnoses", "group_conflicts", "overlap_with_group",
+    "possible_zoom", "zoom_evidence", "relative_zoom", "relative_zoom_to",
 ]
 
 LEAK_PATTERNS = {
@@ -407,6 +411,28 @@ def picture_case_groups(lab_pictures: pd.DataFrame, group_of_prefix: dict[str, s
     return result
 
 
+def add_possible_zoom(lab: pd.DataFrame, lab_pictures: pd.DataFrame, path: Path) -> None:
+    """Possible zoom (10x / 40x) of each picture and, since patches are crops at the picture's own scale, of each patch.
+
+    A non-expert reading by eye helped by the SIFT relative scale (see the zoom-review page), not checked by a pathologist;
+    `zoom_evidence` says what each value rests on, `relative_zoom` is the measured SIFT scale against `relative_zoom_to`.
+    """
+    columns = {"possible_zoom": "possible_zoom", "evidence": "zoom_evidence", "relative_zoom": "relative_zoom", "relative_to": "relative_zoom_to"}
+    if not Path(path).exists():
+        logger.warning(f"No zoom review at {path}; the possible zoom columns are left empty (run phase2.py zoom-review)")
+        sheet = pd.DataFrame(columns=["histopath_id", *columns])
+    else:
+        sheet = pd.read_csv(path, dtype=str, keep_default_na=False)
+    zoom = sheet.set_index("histopath_id")[list(columns)].rename(columns=columns)
+    missing = set(lab_pictures["histopath_id"]) - set(zoom.index)
+    if len(sheet) and missing:
+        raise ValueError(f"{path} has no row for {len(missing)} pictures; rerun phase2.py zoom-review to add them")
+    for column in columns.values():
+        lab_pictures[column] = lab_pictures["histopath_id"].map(zoom[column]).fillna("")
+    for column in ("possible_zoom", "zoom_evidence"):
+        lab[column] = lab["histopath_id"].map(zoom[column]).fillna("")
+
+
 def build_case_table(lab: pd.DataFrame, lab_pictures: pd.DataFrame, pseudonym_of: dict[str, str], group_of_prefix: dict[str, str]) -> pd.DataFrame:
     cases = pd.DataFrame({"case_prefix": sorted(group_of_prefix)})
     cases["case_pseudonym"] = cases["case_prefix"].map(pseudonym_of)
@@ -477,6 +503,7 @@ def run_build_patch_table(args: argparse.Namespace) -> dict:
     spread = lab.groupby("histopath_id")["case_group"].nunique()
     if (spread > 1).any():
         raise ValueError(f"Patches of one picture fell in different case groups: {list(spread[spread > 1].index)}")
+    add_possible_zoom(lab, lab_pictures, args.zoom_review)
     lab, lab_pictures = lab[LAB_COLUMNS], lab_pictures[PICTURE_LAB_COLUMNS]
     cases = build_case_table(lab, lab_pictures, pseudonym_of, groups.group_of_prefix)
 
@@ -521,6 +548,12 @@ def run_build_patch_table(args: argparse.Namespace) -> dict:
     logger.info(f"SAB folder against patch label, patches: {folder_vs_patches}")
     logger.info(f"Pictures whose group disagrees: {by_conflict}")
     logger.info(f"{len(cases)} cases form {case_sizes.size} groups; {int((case_sizes > 1).sum())} groups hold more than one case; flags {flag_counts}")
+    zoom_counts = {
+        "patches": lab["possible_zoom"].replace("", "not set").value_counts().to_dict(),
+        "pictures": lab_pictures["possible_zoom"].replace("", "not set").value_counts().to_dict(),
+        "patches_by_evidence": {f"{zoom} / {evidence}": int(n) for (zoom, evidence), n in lab.groupby(["possible_zoom", "zoom_evidence"]).size().items()},
+    }
+    logger.info(f"Possible zoom: {zoom_counts}")
     logger.info(f"{len(lab)} patches in {lab['histopath_id'].nunique()} pictures; relation to the NDB-UFES diagnosis: {relation_counts}")
     logger.info(f"Public tables checked for identifying content: clean. Lab tables saved under {lab_dir}; public under {output_dir}")
     return {
@@ -542,6 +575,7 @@ def run_build_patch_table(args: argparse.Namespace) -> dict:
         "case_groups": int(case_sizes.size),
         "groups_with_more_than_one_case": int((case_sizes > 1).sum()),
         "case_group_flags": flag_counts,
+        "possible_zoom": zoom_counts,
     }
 
 
@@ -553,5 +587,6 @@ def build_patch_table_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--placements", type=Path, default=PATCH_PLACEMENTS)
     parser.add_argument("--pool-matches", type=Path, default=POOL_MATCHES)
     parser.add_argument("--sab-patches-dir", type=Path, default=SAB_PATCHES_DIR)
+    parser.add_argument("--zoom-review", type=Path, default=ZOOM_REVIEW, help="Possible zoom per picture (phase2.py zoom-review).")
     parser.add_argument("--output-dir", type=Path, default=TABLES_DIR)
     return parser

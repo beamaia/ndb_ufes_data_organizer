@@ -8,19 +8,25 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from src.phase2_report.atlas import (
-    render_aligned_atlas_arg_parser, render_patient_atlas_arg_parser, run_render_aligned_atlas, run_render_patient_atlas,
+    render_aligned_atlas_arg_parser, render_patient_atlas_arg_parser, render_steps_atlas_arg_parser, run_render_aligned_atlas, run_render_patient_atlas,
+    run_render_steps_atlas,
 )
 from src.phase2_report.figures import figures_arg_parser, run_figures
 from src.phase2_report.pages import pages_arg_parser, run_pages
+from src.phase2_report.slides import run_slides, slides_arg_parser
 from src.phase2_report.stats import run_stats, stats_arg_parser
+from src.phase2_report.zoom_review import run_zoom_review, zoom_review_arg_parser
 
 
 COMMANDS = {
     "patient-atlas": ("PDF of case groups: pictures, patch boxes, each patch beside its crop", render_patient_atlas_arg_parser, run_render_patient_atlas),
+    "steps-atlas": ("Private PDF of every picture and patch through the cluster-trait steps", render_steps_atlas_arg_parser, run_render_steps_atlas),
     "aligned-atlas": ("PDF of related pictures rotated into one frame", render_aligned_atlas_arg_parser, run_render_aligned_atlas),
+    "zoom-review": ("Page on localhost to judge each SIFT zoom proposal by eye", zoom_review_arg_parser, run_zoom_review),
     "stats": ("Every table and statistic as a CSV file", stats_arg_parser, run_stats),
     "figures": ("The SVG charts of the wiki", figures_arg_parser, run_figures),
     "pages": ("The generated wiki pages", pages_arg_parser, run_pages),
+    "slides": ("Figures for the private slides (SAB pictures): a picture with its patches, and patches split by the published folds", slides_arg_parser, run_slides),
 }
 
 

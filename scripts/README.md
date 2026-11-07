@@ -6,7 +6,7 @@ Top-level scripts are phase entrypoints only; the code is in `src/`.
 - `phase1.py`: embeddings, morphology clusters and folds (`src/phase1_folds/`).
 - `src/models/`: the model registry, loader and feature extractor used for the embeddings.
 - `phase2.py`: renders what the wiki and the thesis show: the atlases, statistics, charts and the generated pages (`src/phase2_report/`).
-- `src/release/`: the checks and validators run before publishing, and the v1.0.0 release builder.
+- `src/release/`: the checks and validators run before publishing.
 
 The whole build is described in `../dvc.yaml`; `uv run dvc repro` runs it in order.
 

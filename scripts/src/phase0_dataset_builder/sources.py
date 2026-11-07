@@ -32,6 +32,7 @@ PHASE0_RESULTS = Path("results/phase0")
 POOL_MATCHES = PHASE0_RESULTS / "patch_pool_search" / "patch_pool_matches.csv"
 PICTURE_FEATURES = PHASE0_RESULTS / "picture_feature_cache" / "picture_features.pkl"
 PICTURE_RELATIONS = PHASE0_RESULTS / "picture_relations" / "picture_relations.csv"
+ZOOM_REVIEW = PICTURE_RELATIONS.parent / "zoom_review.csv"  # possible zoom per picture, set by eye with the zoom-review page
 PATCH_PLACEMENTS = PHASE0_RESULTS / "patch_placements" / "patch_placements.csv"
 PATCH_TABLE_LAB = PHASE0_RESULTS / "dataset_tables" / "private_lab" / "patch_table_lab.csv"
 PICTURE_TABLE_LAB = PHASE0_RESULTS / "dataset_tables" / "private_lab" / "picture_table_lab.csv"

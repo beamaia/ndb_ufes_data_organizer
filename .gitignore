@@ -195,8 +195,8 @@ results/training_runs/
 results/phase0/validated_linkage/private_lab_crosswalks/
 results/phase0/dataset_tables/private_lab/
 research_ready_tables/
-release/*/lab/
 NDB_UFES_SAB_atlas.pdf
+atlases/private/
 NDB_UFES_SAB_atlas_public.docx
 ~$*.docx
 

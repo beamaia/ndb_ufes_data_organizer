@@ -256,6 +256,7 @@ PANEL_HEADER_IN = 0.3
 BLOCK_HEADER_IN = 0.3
 EQUALS_WIDTH_IN = 0.6
 SAME_ZOOM_PANEL_IN = 3.6  # three panels and two signs fit on the page
+PAGE_WIDTH_IN = 2 * COLUMN_WIDTH_IN + EQUALS_WIDTH_IN + 2 * GAP_IN
 
 
 def _corners(width: int, height: int) -> np.ndarray:
@@ -391,19 +392,28 @@ def _zoom_block(wide: pd.Series, close: pd.Series, wide_rgb: np.ndarray, close_r
     return _Block(f"{header} | {inside:.0%} of the close-up lies in the wide picture (orange line: its edge; shaded: outside it)", panels, signs=["="])
 
 
-def _relation_block(relation, pictures: dict[str, pd.Series], images: dict[str, np.ndarray]) -> _Block:
+def _relation_block(relation, number: int, pictures: dict[str, pd.Series], images: dict[str, np.ndarray]) -> _Block:
     a, b = pictures[relation.a], pictures[relation.b]
     a_to_b = parse_homography(relation.homography)
     scale, rotation = _scale_and_rotation(a_to_b)
     matched = f"{relation.inliers} matched features"
     if scale < 1 / SAME_ZOOM_RATIO:  # A fills only a small part of B: A is the close-up
-        header = f"{b['histopath_id']} contains {a['histopath_id']} | close-up x{1 / scale:.1f} | {matched}"
+        header = f"relation {number} | {b['histopath_id']} contains {a['histopath_id']} | close-up x{1 / scale:.1f} | {matched}"
         return _zoom_block(b, a, images[relation.b], images[relation.a], a_to_b, header)
     if scale > SAME_ZOOM_RATIO:  # B is the close-up of A
-        header = f"{a['histopath_id']} contains {b['histopath_id']} | close-up x{scale:.1f} | {matched}"
+        header = f"relation {number} | {a['histopath_id']} contains {b['histopath_id']} | close-up x{scale:.1f} | {matched}"
         return _zoom_block(a, b, images[relation.a], images[relation.b], np.linalg.inv(a_to_b), header)
-    header = f"{a['histopath_id']} and {b['histopath_id']} | same zoom (x{scale:.2f}), rotated {_angle(rotation):+.1f} deg | {matched}"
+    header = f"relation {number} | {a['histopath_id']} and {b['histopath_id']} | same zoom (x{scale:.2f}), rotated {_angle(rotation):+.1f} deg | {matched}"
     return _same_zoom_block(a, b, images[relation.a], images[relation.b], np.linalg.inv(a_to_b), header)
+
+
+def _ordered_relations(pictures: pd.DataFrame, strong: pd.DataFrame) -> list[tuple[int, str, object]]:
+    """The strong relations in atlas order (case group, then picture group), each with its relation number and picture group."""
+    group_of = dict(zip(pictures["histopath_id"], pictures["picture_group"]))
+    case_of = dict(pictures.drop_duplicates("picture_group")[["picture_group", "case_group"]].itertuples(index=False))
+    groups = sorted({group_of[a] for a in strong["a"]}, key=lambda group: (case_of[group] or "~", group))
+    ordered = [(group, relation) for group in groups for relation in strong[strong["a"].map(group_of) == group].itertuples()]
+    return [(number, group, relation) for number, (group, relation) in enumerate(ordered, start=1)]
 
 
 def _signed_area(polygon: np.ndarray) -> float:
@@ -450,19 +460,19 @@ def run_render_aligned_atlas(args: argparse.Namespace) -> dict:
     relations = pd.read_csv(args.relations)
     strong = relations[relations["strong"].astype(bool)]
     picture_rows = {row["histopath_id"]: row for _, row in pictures.iterrows()}
-    group_of = dict(zip(pictures["histopath_id"], pictures["picture_group"]))
 
-    related_groups = sorted({group_of[a] for a in strong["a"]}, key=lambda group: (pictures.loc[pictures["picture_group"] == group, "case_group"].iloc[0] or "~", group))
-    if args.limit_groups:
-        related_groups = related_groups[: args.limit_groups]
-    page_width = 2 * COLUMN_WIDTH_IN + EQUALS_WIDTH_IN + 2 * GAP_IN
+    by_group: dict[str, list] = {}
+    for number, group, relation in _ordered_relations(pictures, strong):
+        by_group.setdefault(group, []).append((number, relation))
+    related_groups = list(by_group)[: args.limit_groups] if args.limit_groups else list(by_group)
+    page_width = PAGE_WIDTH_IN
     pages = blocks_drawn = 0
     with PdfPages(output_dir / ALIGNED_ATLAS.name) as pdf:
         for group in related_groups:
             members = pictures[pictures["picture_group"] == group]
             ids = set(members["histopath_id"])
             images = {i: cv.cvtColor(read_bgr(_picture_path(picture_rows[i], args.ndb_origin_dir)), cv.COLOR_BGR2RGB) for i in ids}
-            blocks = [_relation_block(relation, picture_rows, images) for relation in strong[strong["a"].isin(ids) & strong["b"].isin(ids)].itertuples()]
+            blocks = [_relation_block(relation, number, picture_rows, images) for number, relation in by_group[group]]
 
             case_group = members["case_group"].iloc[0] or UNASSIGNED
             cases = ", ".join(sorted({name for cell in members["case_pseudonym"] for name in cell.split()})) or "no case"
@@ -502,4 +512,63 @@ def render_aligned_atlas_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--ndb-origin-dir", type=Path, default=DEFAULT_NDB_ORIGIN_DIR)
     parser.add_argument("--output-dir", type=Path, default=ALIGNED_ATLAS.parent)
     parser.add_argument("--limit-groups", type=int, default=None, help="Trial run on the first N groups.")
+    return parser
+
+
+# steps-atlas: every picture and every patch through the five steps of the cluster traits (the image, its hematoxylin channel, Otsu's threshold,
+# the dark blobs kept, the background), so the measures can be judged by eye. A picture starts a page: first its own row, then a row per patch.
+STEPS_ATLAS = Path("atlases/private/steps_atlas.pdf")  # private: it holds the SAB-only pictures (gitignored)
+STEPS_ROWS_PER_PAGE = 6
+
+
+def run_render_steps_atlas(args: argparse.Namespace) -> dict:
+    from src.phase1_folds.clusters import draw_trait_row
+
+    output = Path(args.output)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    patches = pd.read_csv(args.patch_table, dtype=str, keep_default_na=False)
+    pictures = pd.read_csv(args.picture_table, dtype=str, keep_default_na=False)
+    pictures["case_group"] = pictures["case_group"].replace("", UNASSIGNED)
+    pictures = pictures.assign(last=pictures["case_group"] == UNASSIGNED).sort_values(["last", "case_group", "picture_group", "histopath_id"])
+    if args.limit_pictures:
+        pictures = pictures.head(args.limit_pictures)
+    patches_of = {picture_id: group.sort_values("patch_id") for picture_id, group in patches.groupby("histopath_id")}
+
+    pages = drawn_patches = 0
+    with PdfPages(output) as pdf:
+        for n, picture in enumerate(pictures.itertuples(), start=1):
+            mine = patches_of.get(picture.histopath_id, patches.iloc[0:0])
+            diagnosis = SHORT.get(picture.ndb_diagnosis, "not in NDB-UFES")
+            rows = [(_picture_path(pd.Series(picture._asdict()), args.ndb_origin_dir), f"picture {picture.histopath_id} (NDB-UFES: {diagnosis})")]
+            rows += [(Path(args.patch_images) / f"{patch.patch_id}.png", f"patch {patch.patch_id}: {SHORT.get(patch.patch_diagnosis, patch.patch_diagnosis)}") for patch in mine.itertuples()]
+            chunks = [rows[start : start + STEPS_ROWS_PER_PAGE] for start in range(0, len(rows), STEPS_ROWS_PER_PAGE)]
+            for number, chunk in enumerate(chunks, start=1):
+                fig, axes = plt.subplots(len(chunk), 5, figsize=(17, 3.4 * len(chunk) + 0.5), squeeze=False, constrained_layout=True)
+                part = f"  (page {number}/{len(chunks)})" if len(chunks) > 1 else ""
+                fig.suptitle(f"{picture.case_group} | {picture.histopath_id} | {len(mine)} patches{part}", fontsize=11, fontweight="bold")
+                for row, (path, name) in zip(axes, chunk):
+                    draw_trait_row(row, path, name, args.display_px)
+                pdf.savefig(fig, dpi=100)
+                plt.close(fig)
+                pages += 1
+            drawn_patches += len(mine)
+            if n % 25 == 0:
+                logger.info(f"Drew {n} of {len(pictures)} pictures ({drawn_patches} patches, {pages} pages)")
+    shrink_pdf(output)
+    size_mb = output.stat().st_size / 1e6
+    logger.info(f"Wrote {output}")
+    return {"pictures": len(pictures), "patches": drawn_patches, "pages": pages, "pdf_megabytes": round(size_mb, 1)}
+
+
+def render_steps_atlas_arg_parser() -> argparse.ArgumentParser:
+    from src.phase0_dataset_builder.sources import DEFAULT_PATCH_IMAGE_DIR
+
+    parser = argparse.ArgumentParser(description="PDF of every picture and patch through the steps of the cluster traits: hematoxylin, Otsu's threshold, dark blobs, background.")
+    parser.add_argument("--patch-table", type=Path, default=PATCH_TABLE_LAB)
+    parser.add_argument("--picture-table", type=Path, default=PICTURE_TABLE_LAB)
+    parser.add_argument("--ndb-origin-dir", type=Path, default=DEFAULT_NDB_ORIGIN_DIR)
+    parser.add_argument("--patch-images", type=Path, default=DEFAULT_PATCH_IMAGE_DIR)
+    parser.add_argument("--output", type=Path, default=STEPS_ATLAS)
+    parser.add_argument("--display-px", type=int, default=256, help="Longest side of each drawn panel in pixels (the masks are computed on the full image); larger means a bigger file.")
+    parser.add_argument("--limit-pictures", type=int, default=None, help="Trial run on the first N pictures.")
     return parser

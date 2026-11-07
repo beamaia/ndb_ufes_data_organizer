@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from src.phase0_dataset_builder.sources import AGE_GROUP_YEARS, DIAGNOSIS_COLOR, SEVERITY
+from src.phase0_dataset_builder.sources import AGE_GROUP_YEARS, DEFAULT_PATCH_IMAGE_DIR, DIAGNOSIS_COLOR, SEVERITY
 from src.phase1_folds.clusters import load_embeddings, reduce_embeddings
 from src.phase1_folds.embeddings import EMBEDDINGS
 from src.utils.logger import logger
@@ -262,6 +262,27 @@ def embedding_view(frame: pd.DataFrame, output_dir: Path) -> None:
     save(fig, output_dir, "embedding_view")
 
 
+def cluster_examples(frame: pd.DataFrame, patch: pd.DataFrame, patch_dir: Path, output_dir: Path, per_cluster: int = 3) -> None:
+    """The most typical patches of each morphology cluster: the ones closest to its centre in the PCA plane, each from a different picture."""
+    picture = patch.set_index("patch_id")["histopath_id"]
+    fig, axes = plt.subplots(CHOSEN_CLUSTERS, per_cluster, figsize=(2.2 * per_cluster, 2.4 * CHOSEN_CLUSTERS))
+    for cluster in range(CHOSEN_CLUSTERS):
+        part = frame[frame["cluster"] == cluster]
+        centre = part[["pc1", "pc2"]].mean()
+        distance = np.hypot(part["pc1"] - centre["pc1"], part["pc2"] - centre["pc2"]).sort_values()
+        chosen = pd.Series(distance.index, index=picture.reindex(distance.index).to_numpy()).groupby(level=0, sort=False).first().iloc[:per_cluster]
+        for ax, patch_id in zip(axes[cluster], chosen):
+            ax.imshow(plt.imread(patch_dir / f"{patch_id}.png")[::2, ::2])  # half size, to keep the SVG small
+            ax.set_xticks([])
+            ax.set_yticks([])
+            ax.spines[:].set_color(CLUSTER_COLOR[cluster])
+            ax.spines[:].set_linewidth(3)
+            ax.spines[:].set_visible(True)
+            ax.set_title(frame.at[patch_id, "label"].replace("Leukoplakia ", ""), fontsize=12, fontweight="normal")
+        axes[cluster][0].set_ylabel(f"cluster {cluster}\n{len(part):,} patches", fontsize=13, fontweight="bold")
+    save(fig, output_dir, "cluster_examples")
+
+
 def fold_distance_view(stats: Path, output_dir: Path) -> None:
     """How far apart every two folds are, for the original folds, the new folds and a random division of the patches, on one colour scale."""
     data = pd.read_csv(stats / "fold_distances.csv", dtype={"fold_a": str, "fold_b": str})
@@ -318,7 +339,7 @@ def run_figures(args: argparse.Namespace) -> dict:
     charts = [
         lambda: ndb_distributions(args.stats, output_dir), lambda: heatmap(pd.read_csv(args.stats / "ndb_correlations.csv"), output_dir, "ndb_correlations"), lambda: ndb_images_with_patches(args.stats, output_dir),
         lambda: patch_labels(patch, output_dir), lambda: patch_vs_picture(patch, output_dir), lambda: heatmap(pd.read_csv(args.stats / "patch_correlations.csv"), output_dir, "patch_correlations"), lambda: sab_folders(args.stats, output_dir), lambda: patches_per_picture(patch, output_dir), lambda: related_zoom(args.stats, output_dir),
-        lambda: embedding_view(frame, output_dir), lambda: fold_distance_view(args.stats, output_dir), lambda: cluster_choices(args.clusters, output_dir),
+        lambda: embedding_view(frame, output_dir), lambda: cluster_examples(frame, patch, args.patch_images, output_dir), lambda: fold_distance_view(args.stats, output_dir), lambda: cluster_choices(args.clusters, output_dir),
          lambda: fold_largest_groups(args.stats, output_dir), lambda: fold_balance(args.stats, output_dir),
     ]
     for chart in charts:
@@ -334,5 +355,6 @@ def figures_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--embeddings", type=Path, default=EMBEDDINGS)
     parser.add_argument("--clusters", type=Path, default=CLUSTER_DIR)
     parser.add_argument("--stats", type=Path, default=STATS)
+    parser.add_argument("--patch-images", type=Path, default=DEFAULT_PATCH_IMAGE_DIR)
     parser.add_argument("--output-dir", type=Path, default=OUTPUT_DIR)
     return parser
