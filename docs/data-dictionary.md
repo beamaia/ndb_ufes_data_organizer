@@ -61,6 +61,8 @@ This page defines every column of the public tables, the folds, and the labels a
 | `sab_crop_check` | Pixel check of the patch against the SAB crop with the recorded file name; see the vocabulary below. |
 | `identical_patch_ids` | Other patches whose images have exactly the same pixels; empty for all but 6 patches. |
 | `parent_image_check` | Whether the template search found the parent picture named in the SAB file name; see the vocabulary below. |
+| `possible_zoom` | The possible zoom of the parent picture, `10x` or `40x`. A patch is a crop at the scale of its picture, so it has the zoom of its picture. A non-expert reading by eye, helped by the SIFT relative scale of related pictures, not checked by a pathologist. Empty when it was not set. |
+| `zoom_evidence` | What `possible_zoom` rests on; see the vocabulary below. |
 
 ## Picture table
 
@@ -80,6 +82,10 @@ This page defines every column of the public tables, the folds, and the labels a
 | `patch_diagnoses` | Its patches by label, as `label: count; label: count`. |
 | `group_conflicts` | Disagreements inside its group of related pictures; see the vocabulary below. Empty when there is none. |
 | `overlap_with_group` | For each related picture: how much of this picture is seen in it, how much of it is seen in this one, and the scale between them. Empty when the picture has no related picture. |
+| `possible_zoom` | Its possible zoom, `10x` or `40x`. A non-expert reading by eye, helped by the SIFT relative scale of related pictures, not checked by a pathologist. Empty when it was not set. |
+| `zoom_evidence` | What `possible_zoom` rests on; see the vocabulary below. |
+| `relative_zoom` | The zoom between this picture and `relative_zoom_to`, as SIFT measured it: how many times more tissue-scale this picture shows than the widest picture linked to it (1.0 for that widest picture itself; the two objectives are 4 times apart). Empty when the picture has no related picture. |
+| `relative_zoom_to` | The widest picture of its SIFT-linked pictures, the one `relative_zoom` is measured against. Empty when the picture has no related picture. |
 
 ## Case table
 
@@ -163,6 +169,19 @@ No label is changed anywhere. These values only flag disagreement between two la
 | --- | --- |
 | `sab_folder_differs_in_group` | Related pictures are filed under different SAB folders. |
 | `patch_labels_differ_in_group` | The most common patch label differs between related pictures. |
+
+**`zoom_evidence`**
+
+Every value is a non-expert reading, not checked by a pathologist; they are listed from the strongest to the weakest.
+
+| Value | Meaning |
+| --- | --- |
+| `by_eye_agrees_with_sift` | The zoom was set by eye for this picture, and it agrees with the zoom its SIFT relations give it. |
+| `by_eye_against_sift` | Set by eye, and the SIFT relations say the other zoom. |
+| `by_eye_in_sift_group` | Set by eye for a picture whose SIFT group does not give it a single zoom (a conflict, or the same zoom as the rest of its group). |
+| `by_eye_only` | Set by eye for a picture that has no SIFT relation. |
+| `derived_from_sift` | Not set for this picture: derived from the zoom set for another picture of its group, through the zoom levels between them. |
+| empty | No possible zoom. |
 
 ## Statistics tables
 
