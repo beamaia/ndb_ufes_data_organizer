@@ -1,0 +1,15 @@
+subset,unit,against,n,cramers_v,p_value
+all,patches,cluster,3763,0.98,
+all,patches,patch_diagnosis,3763,0.225,
+all,pictures,cluster,247,0.992,1.6689226172288305e-53
+all,pictures,ndb_diagnosis,247,0.038,0.9493905335258471
+all,patches,cluster within OSCC,1126,0.983,
+all,patches,cluster within Dys+,1930,0.978,
+all,patches,cluster within Dys-,707,0.973,
+sift_backed,patches,cluster,2221,0.974,
+sift_backed,patches,patch_diagnosis,2221,0.174,
+sift_backed,pictures,cluster,143,1.0,8.870427362353291e-32
+sift_backed,pictures,ndb_diagnosis,143,0.059,0.9210347499892005
+sift_backed,patches,cluster within OSCC,829,0.976,
+sift_backed,patches,cluster within Dys+,1102,0.979,
+sift_backed,patches,cluster within Dys-,290,0.944,
