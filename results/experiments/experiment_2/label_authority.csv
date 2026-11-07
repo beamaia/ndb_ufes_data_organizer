@@ -1,0 +1,23 @@
+predictions on,patch label,parent diagnosis,patches,pictures,"models saying OSCC, %","consensus OSCC, % of patches",mean severity,"mean severity, by picture"
+test fold,With dysplasia,OSCC,118,9,94.21,98.31,1.94,1.9
+test fold,With dysplasia,With dysplasia,114,8,18.64,16.67,1.09,1.01
+test fold,With dysplasia,Without dysplasia,67,6,4.48,1.49,0.91,0.86
+test fold,With dysplasia,not in NDB-UFES,56,6,1.93,1.79,0.75,0.85
+test fold,OSCC,OSCC,146,8,82.59,83.56,1.83,1.83
+test fold,OSCC,With dysplasia,0,0,,,,
+test fold,OSCC,not in NDB-UFES,43,3,1.16,0.0,0.97,0.97
+test fold,Without dysplasia,With dysplasia,53,6,1.57,1.89,0.26,0.26
+test fold,Without dysplasia,Without dysplasia,49,5,0.51,0.0,0.25,0.25
+test fold,Without dysplasia,OSCC,0,0,,,,
+test fold,Without dysplasia,not in NDB-UFES,10,2,70.0,80.0,1.52,0.85
+validation folds,With dysplasia,OSCC,404,35,34.98,30.45,1.26,1.16
+validation folds,With dysplasia,With dysplasia,468,46,12.93,10.47,0.94,0.88
+validation folds,With dysplasia,Without dysplasia,328,29,1.68,0.0,0.73,0.64
+validation folds,With dysplasia,not in NDB-UFES,375,33,5.84,1.87,0.76,0.7
+validation folds,OSCC,OSCC,786,46,83.09,86.51,1.8,1.7
+validation folds,OSCC,With dysplasia,54,7,64.97,64.81,1.62,1.52
+validation folds,OSCC,not in NDB-UFES,97,10,35.74,38.14,1.32,1.32
+validation folds,Without dysplasia,With dysplasia,242,33,2.86,0.41,0.5,0.38
+validation folds,Without dysplasia,Without dysplasia,214,29,2.34,0.93,0.37,0.3
+validation folds,Without dysplasia,OSCC,65,10,0.64,0.0,0.25,0.48
+validation folds,Without dysplasia,not in NDB-UFES,71,13,10.21,11.27,0.72,0.82

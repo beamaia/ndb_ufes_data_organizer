@@ -1,0 +1,13 @@
+model,family,mean_rank,balanced_acc_mean,balanced_acc_std
+swin_tiny_patch4_window7_224,transformer,2.6,61.387,1.6
+vit_small_patch16_384,transformer,3.6,61.058,3.18
+pit_s_distilled_224,transformer,5.2,59.722,2.554
+mobilenetv2,cnn,5.8,58.382,3.028
+coat_lite_small,transformer,6.0,58.545,2.202
+vgg16,cnn,6.2,58.734,1.723
+convnext_large,cnn,6.8,57.729,2.85
+densenet121,cnn,6.8,58.331,3.403
+efficientnet_b0,cnn,6.8,56.767,2.941
+swin_base_patch4_window7_224,transformer,7.4,57.603,3.384
+efficientnet_b3,cnn,10.4,54.485,1.606
+resnet50,cnn,10.4,54.777,1.296

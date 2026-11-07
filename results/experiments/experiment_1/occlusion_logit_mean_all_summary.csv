@@ -1,0 +1,1879 @@
+model,group,patch_id,label,parent,predicted,p_predicted,max_drop,windows_over_0.1,focality_top3,centre_share
+vgg16,all test patches,p3136,OSCC,not in NDB-UFES,OSCC,0.6083,0.5406,5,0.7629,0.0
+vgg16,all test patches,p3137,OSCC,not in NDB-UFES,OSCC,0.9777,1.2455,7,0.6212,0.0
+vgg16,all test patches,p3138,OSCC,not in NDB-UFES,OSCC,0.9999,1.4583,22,0.2966,0.0
+vgg16,all test patches,p3139,OSCC,OSCC,OSCC,0.9852,0.646,11,0.4875,0.0
+vgg16,all test patches,p3140,OSCC,OSCC,OSCC,0.9999,2.053,11,0.6204,0.0
+vgg16,all test patches,p3141,OSCC,OSCC,OSCC,0.9999,1.1924,12,0.4288,0.0092
+vgg16,all test patches,p3142,OSCC,not in NDB-UFES,OSCC,0.9769,1.2254,11,0.5302,0.0009
+vgg16,all test patches,p3143,OSCC,OSCC,OSCC,0.9999,1.8125,12,0.5023,0.0261
+vgg16,all test patches,p3144,OSCC,OSCC,OSCC,0.9998,1.1219,13,0.4192,0.0
+vgg16,all test patches,p3145,OSCC,OSCC,OSCC,1.0,1.1932,19,0.3097,0.1432
+vgg16,all test patches,p3146,OSCC,OSCC,OSCC,0.999,1.8026,12,0.5177,0.0
+vgg16,all test patches,p3147,OSCC,not in NDB-UFES,OSCC,0.9995,1.1324,21,0.2714,0.0
+vgg16,all test patches,p3148,OSCC,not in NDB-UFES,OSCC,0.9958,1.2486,17,0.333,0.451
+vgg16,all test patches,p3149,OSCC,OSCC,OSCC,0.9998,1.4173,14,0.4271,0.0
+vgg16,all test patches,p3150,OSCC,OSCC,OSCC,0.9992,1.4143,8,0.6612,0.0
+vgg16,all test patches,p3151,OSCC,OSCC,OSCC,0.9998,0.3436,5,0.6725,0.0
+vgg16,all test patches,p3152,OSCC,OSCC,OSCC,0.9979,0.9474,7,0.593,0.0
+vgg16,all test patches,p3153,OSCC,OSCC,OSCC,1.0,1.5412,18,0.3332,0.0226
+vgg16,all test patches,p3154,OSCC,OSCC,OSCC,0.9985,0.5319,4,0.8095,0.0304
+vgg16,all test patches,p3155,OSCC,OSCC,OSCC,0.9988,0.9946,5,0.8448,0.0087
+vgg16,all test patches,p3156,OSCC,OSCC,OSCC,0.9998,1.4102,6,0.6976,0.0
+vgg16,all test patches,p3157,OSCC,OSCC,OSCC,1.0,1.4935,29,0.2231,0.0127
+vgg16,all test patches,p3158,OSCC,OSCC,OSCC,0.9999,1.4342,20,0.2831,0.1428
+vgg16,all test patches,p3159,OSCC,OSCC,OSCC,0.9893,1.4077,15,0.4141,0.0
+vgg16,all test patches,p3160,OSCC,OSCC,OSCC,0.9999,1.7811,24,0.2387,0.0406
+vgg16,all test patches,p3161,OSCC,not in NDB-UFES,OSCC,0.6887,2.0223,13,0.5153,0.0
+vgg16,all test patches,p3162,OSCC,not in NDB-UFES,OSCC,0.9982,0.8799,6,0.6627,0.0
+vgg16,all test patches,p3163,OSCC,OSCC,OSCC,0.9982,1.4382,20,0.3428,0.002
+vgg16,all test patches,p3164,OSCC,OSCC,OSCC,0.989,1.4757,31,0.1994,0.2195
+vgg16,all test patches,p3165,OSCC,OSCC,OSCC,0.9999,1.6215,24,0.2982,0.0138
+vgg16,all test patches,p3166,OSCC,OSCC,OSCC,0.9673,1.4742,3,1.0,0.0
+vgg16,all test patches,p3167,OSCC,OSCC,OSCC,0.9703,0.7649,13,0.4265,0.1131
+vgg16,all test patches,p3168,OSCC,OSCC,OSCC,0.9997,1.0529,23,0.2482,0.0796
+vgg16,all test patches,p3169,OSCC,OSCC,OSCC,0.9983,0.5502,12,0.4044,0.0
+vgg16,all test patches,p3170,OSCC,OSCC,OSCC,0.9077,0.663,2,1.0,0.7839
+vgg16,all test patches,p3171,OSCC,OSCC,OSCC,0.7577,-0.0375,0,,
+vgg16,all test patches,p3172,OSCC,OSCC,OSCC,0.9999,2.6774,15,0.4421,0.1522
+vgg16,all test patches,p3173,OSCC,OSCC,OSCC,0.999,0.7959,14,0.3847,0.0197
+vgg16,all test patches,p3174,OSCC,OSCC,OSCC,0.9997,1.8699,14,0.4818,0.0703
+vgg16,all test patches,p3175,OSCC,OSCC,OSCC,0.5161,0.0797,0,1.0,0.0
+vgg16,all test patches,p3176,OSCC,OSCC,OSCC,0.9962,0.748,7,0.6227,0.0
+vgg16,all test patches,p3177,OSCC,OSCC,With dysplasia,0.4978,3.593,45,0.156,0.2974
+vgg16,all test patches,p3178,OSCC,OSCC,OSCC,0.9659,1.6777,12,0.4174,0.0119
+vgg16,all test patches,p3179,OSCC,OSCC,OSCC,0.9995,1.7897,24,0.2791,0.1783
+vgg16,all test patches,p3180,OSCC,OSCC,OSCC,0.9862,1.4011,6,0.7775,0.0
+vgg16,all test patches,p3181,OSCC,OSCC,OSCC,0.9996,1.0287,10,0.5245,0.0
+vgg16,all test patches,p3182,OSCC,OSCC,OSCC,0.9986,0.6518,11,0.4435,0.1268
+vgg16,all test patches,p3183,OSCC,OSCC,OSCC,0.9957,0.6632,13,0.4163,0.0428
+vgg16,all test patches,p3184,OSCC,With dysplasia,OSCC,0.8423,0.8455,12,0.4389,0.4694
+vgg16,all test patches,p3185,OSCC,With dysplasia,OSCC,0.6285,0.917,6,0.6919,0.0
+vgg16,all test patches,p3186,OSCC,not in NDB-UFES,OSCC,0.9947,1.1086,10,0.5427,0.2976
+vgg16,all test patches,p3187,OSCC,not in NDB-UFES,With dysplasia,0.5732,3.4151,42,0.1483,0.3319
+vgg16,all test patches,p3188,OSCC,OSCC,OSCC,0.9893,1.0955,7,0.7179,0.0
+vgg16,all test patches,p3189,OSCC,OSCC,OSCC,0.9935,1.2542,11,0.4875,0.0
+vgg16,all test patches,p3190,OSCC,OSCC,OSCC,0.8456,1.4341,12,0.4554,0.0
+vgg16,all test patches,p3191,OSCC,OSCC,OSCC,0.9933,1.0795,12,0.4767,0.0087
+vgg16,all test patches,p3192,OSCC,OSCC,OSCC,0.9968,1.2495,9,0.5691,0.0
+vgg16,all test patches,p3193,OSCC,OSCC,OSCC,0.9599,0.8482,4,0.8269,0.0
+vgg16,all test patches,p3194,OSCC,OSCC,OSCC,0.9912,1.205,19,0.3129,0.0902
+vgg16,all test patches,p3195,OSCC,OSCC,OSCC,0.9878,1.1293,13,0.4543,0.2158
+vgg16,all test patches,p3196,OSCC,OSCC,OSCC,0.7812,0.9305,3,0.8754,0.0
+vgg16,all test patches,p3197,OSCC,OSCC,OSCC,0.9355,1.2766,7,0.6651,0.0
+vgg16,all test patches,p3198,OSCC,OSCC,OSCC,0.9997,2.2793,15,0.4047,0.0118
+vgg16,all test patches,p3199,OSCC,OSCC,OSCC,0.9982,1.658,8,0.7428,0.0
+vgg16,all test patches,p3200,OSCC,OSCC,OSCC,0.6946,2.0988,29,0.3457,0.1562
+vgg16,all test patches,p3201,OSCC,OSCC,OSCC,0.9999,1.8187,25,0.2663,0.0096
+vgg16,all test patches,p3202,OSCC,OSCC,OSCC,0.9942,0.8339,2,1.0,0.0
+vgg16,all test patches,p3203,OSCC,OSCC,OSCC,0.9999,1.018,9,0.5305,0.0
+vgg16,all test patches,p3204,OSCC,OSCC,OSCC,0.8059,0.7862,8,0.5658,0.0
+vgg16,all test patches,p3205,OSCC,OSCC,OSCC,0.9975,0.9357,6,0.7229,0.0
+vgg16,all test patches,p3206,OSCC,OSCC,OSCC,0.9995,0.788,6,0.6851,0.0
+vgg16,all test patches,p3207,OSCC,OSCC,OSCC,1.0,1.3473,12,0.4785,0.0
+vgg16,all test patches,p3208,OSCC,OSCC,OSCC,0.9998,0.9917,10,0.4838,0.0
+vgg16,all test patches,p3209,OSCC,OSCC,OSCC,1.0,1.4059,21,0.2763,0.2018
+vgg16,all test patches,p3210,OSCC,OSCC,OSCC,0.9216,0.3657,5,0.6592,0.2283
+vgg16,all test patches,p3211,OSCC,OSCC,OSCC,0.7741,2.4481,16,0.4313,0.1799
+vgg16,all test patches,p3212,OSCC,OSCC,With dysplasia,0.6224,2.8928,44,0.1194,0.2463
+vgg16,all test patches,p3213,OSCC,OSCC,With dysplasia,0.8299,3.076,44,0.1347,0.2409
+vgg16,all test patches,p3214,OSCC,OSCC,OSCC,0.8336,0.8909,8,0.5535,0.0
+vgg16,all test patches,p3215,OSCC,OSCC,OSCC,0.8279,1.2092,7,0.7182,0.0
+vgg16,all test patches,p3216,OSCC,not in NDB-UFES,OSCC,0.9854,1.4438,17,0.4261,0.3713
+vgg16,all test patches,p3217,OSCC,not in NDB-UFES,OSCC,0.9289,0.925,12,0.4475,0.0
+vgg16,all test patches,p3218,OSCC,OSCC,OSCC,0.9961,1.1936,30,0.2384,0.0316
+vgg16,all test patches,p3219,OSCC,OSCC,OSCC,0.9993,1.0607,23,0.2867,0.2363
+vgg16,all test patches,p3220,OSCC,OSCC,OSCC,0.9988,0.9457,27,0.2354,0.1617
+vgg16,all test patches,p3221,OSCC,OSCC,OSCC,0.9982,1.2564,33,0.1881,0.0401
+vgg16,all test patches,p3222,OSCC,OSCC,OSCC,0.7332,0.8625,6,0.686,0.0
+vgg16,all test patches,p3223,OSCC,OSCC,OSCC,1.0,1.3646,15,0.407,0.0
+vgg16,all test patches,p3224,OSCC,OSCC,OSCC,0.9998,1.3242,31,0.199,0.1105
+vgg16,all test patches,p3225,OSCC,OSCC,OSCC,0.9998,0.7903,8,0.6109,0.0
+vgg16,all test patches,p3226,OSCC,OSCC,OSCC,0.9933,1.1594,8,0.5766,0.0
+vgg16,all test patches,p3227,OSCC,OSCC,OSCC,0.9693,1.0438,12,0.5116,0.0943
+vgg16,all test patches,p3228,OSCC,OSCC,OSCC,0.9968,1.0234,5,0.831,0.0
+vgg16,all test patches,p3229,OSCC,OSCC,OSCC,0.9986,0.5395,3,0.8483,0.0
+vgg16,all test patches,p3230,OSCC,OSCC,OSCC,0.9993,0.601,4,0.7814,0.0
+vgg16,all test patches,p3231,OSCC,OSCC,OSCC,0.9987,0.8771,7,0.713,0.0
+vgg16,all test patches,p3232,OSCC,OSCC,OSCC,0.9999,2.4143,11,0.6275,0.0
+vgg16,all test patches,p3233,OSCC,OSCC,OSCC,0.9979,1.0371,6,0.7531,0.0
+vgg16,all test patches,p3234,OSCC,OSCC,OSCC,0.9912,0.9172,7,0.5853,0.0
+vgg16,all test patches,p3235,OSCC,OSCC,OSCC,0.9544,1.1695,1,1.0,0.0
+vgg16,all test patches,p3236,OSCC,OSCC,OSCC,0.9653,0.6624,5,0.7534,0.0
+vgg16,all test patches,p3237,OSCC,OSCC,OSCC,0.9767,1.1025,10,0.5559,0.0
+vgg16,all test patches,p3238,OSCC,OSCC,OSCC,0.9925,1.2618,17,0.3099,0.0693
+vgg16,all test patches,p3239,OSCC,With dysplasia,OSCC,0.7674,0.7606,7,0.6488,0.082
+vgg16,all test patches,p3240,OSCC,With dysplasia,With dysplasia,0.9217,3.4629,47,0.1278,0.2104
+vgg16,all test patches,p3241,OSCC,With dysplasia,With dysplasia,0.7198,2.9744,41,0.1562,0.2688
+vgg16,all test patches,p3242,OSCC,not in NDB-UFES,OSCC,0.8011,0.8902,22,0.2266,0.0891
+vgg16,all test patches,p3243,OSCC,OSCC,OSCC,0.9988,1.02,14,0.5012,0.0
+vgg16,all test patches,p3244,OSCC,OSCC,OSCC,1.0,2.2442,24,0.2933,0.2471
+vgg16,all test patches,p3245,OSCC,OSCC,OSCC,0.9997,1.3263,12,0.482,0.0
+vgg16,all test patches,p3246,OSCC,OSCC,OSCC,0.9999,0.5688,3,0.9787,0.0
+vgg16,all test patches,p3247,OSCC,OSCC,OSCC,0.9999,0.6768,10,0.4907,0.0
+vgg16,all test patches,p3248,OSCC,OSCC,OSCC,0.9999,0.7509,6,0.6539,0.0
+vgg16,all test patches,p3249,OSCC,OSCC,OSCC,1.0,0.9796,9,0.5451,0.0
+vgg16,all test patches,p3250,OSCC,OSCC,OSCC,0.9999,0.6887,11,0.4316,0.0
+vgg16,all test patches,p3251,OSCC,OSCC,OSCC,0.9999,0.5059,10,0.3797,0.0
+vgg16,all test patches,p3252,OSCC,OSCC,OSCC,0.999,0.9216,7,0.6847,0.0
+vgg16,all test patches,p3253,OSCC,OSCC,OSCC,0.9998,1.243,16,0.4168,0.0756
+vgg16,all test patches,p3254,OSCC,OSCC,OSCC,0.9977,1.1566,18,0.3344,0.0
+vgg16,all test patches,p3255,OSCC,OSCC,OSCC,0.956,1.0989,19,0.254,0.0946
+vgg16,all test patches,p3256,OSCC,OSCC,OSCC,0.9999,1.474,8,0.6845,0.0
+vgg16,all test patches,p3257,OSCC,OSCC,OSCC,1.0,1.4731,19,0.2817,0.1496
+vgg16,all test patches,p3258,OSCC,OSCC,OSCC,0.9464,0.6659,11,0.3976,0.1097
+vgg16,all test patches,p3259,OSCC,not in NDB-UFES,OSCC,0.9441,0.6939,10,0.3943,0.0
+vgg16,all test patches,p3260,OSCC,not in NDB-UFES,OSCC,0.9977,1.7918,30,0.2655,0.1911
+vgg16,all test patches,p3261,OSCC,not in NDB-UFES,OSCC,0.9983,1.4395,26,0.2488,0.1805
+vgg16,all test patches,p3262,OSCC,not in NDB-UFES,OSCC,0.9773,0.95,18,0.2752,0.0151
+vgg16,all test patches,p3263,OSCC,OSCC,OSCC,0.9838,0.6287,3,0.8504,0.0
+vgg16,all test patches,p3264,OSCC,OSCC,OSCC,0.9826,0.1482,1,1.0,0.0
+vgg16,all test patches,p3265,OSCC,OSCC,OSCC,0.9719,1.2432,10,0.5622,0.0796
+vgg16,all test patches,p3266,OSCC,OSCC,OSCC,0.925,0.834,5,0.7834,0.5472
+vgg16,all test patches,p3267,OSCC,OSCC,OSCC,0.9954,0.6919,3,0.972,0.0
+vgg16,all test patches,p3268,OSCC,OSCC,OSCC,0.9972,1.6165,24,0.3002,0.0629
+vgg16,all test patches,p3269,OSCC,OSCC,OSCC,0.6519,0.6761,9,0.6022,0.2517
+vgg16,all test patches,p3270,OSCC,OSCC,OSCC,0.986,0.9231,18,0.3385,0.1926
+vgg16,all test patches,p3271,OSCC,OSCC,OSCC,0.5551,1.8155,11,0.5136,0.1085
+vgg16,all test patches,p3272,OSCC,OSCC,OSCC,0.9826,1.439,17,0.3773,0.1047
+vgg16,all test patches,p3273,OSCC,OSCC,OSCC,0.9993,1.8236,38,0.1592,0.3009
+vgg16,all test patches,p3274,OSCC,OSCC,OSCC,0.9991,0.8321,9,0.5888,0.0096
+vgg16,all test patches,p3275,OSCC,OSCC,OSCC,0.9999,1.4806,23,0.2594,0.126
+vgg16,all test patches,p3276,OSCC,OSCC,OSCC,0.9998,1.0787,15,0.4568,0.0508
+vgg16,all test patches,p3277,OSCC,OSCC,OSCC,1.0,1.3101,34,0.1715,0.111
+vgg16,all test patches,p3278,OSCC,OSCC,With dysplasia,0.6704,1.9517,41,0.1696,0.255
+vgg16,all test patches,p3279,OSCC,OSCC,OSCC,0.9899,1.2742,31,0.2072,0.3277
+vgg16,all test patches,p3280,OSCC,OSCC,Without dysplasia,0.4958,1.782,40,0.1451,0.2394
+vgg16,all test patches,p3281,OSCC,OSCC,OSCC,0.999,2.0651,27,0.2703,0.2765
+vgg16,all test patches,p3282,OSCC,not in NDB-UFES,OSCC,0.9539,1.0831,5,0.8799,0.0
+vgg16,all test patches,p3283,OSCC,OSCC,OSCC,0.9997,0.553,4,0.8526,0.0
+vgg16,all test patches,p3284,OSCC,OSCC,OSCC,0.9955,1.2792,8,0.7602,0.0
+vgg16,all test patches,p3285,OSCC,OSCC,OSCC,0.9997,0.6617,8,0.5216,0.0
+vgg16,all test patches,p3286,OSCC,OSCC,OSCC,0.9994,0.5849,3,0.8102,0.207
+vgg16,all test patches,p3287,OSCC,OSCC,OSCC,1.0,0.478,11,0.3995,0.0
+vgg16,all test patches,p3288,OSCC,OSCC,OSCC,0.9993,1.55,8,0.6669,0.003
+vgg16,all test patches,p3289,OSCC,not in NDB-UFES,OSCC,0.9763,0.4121,5,0.7777,0.085
+vgg16,all test patches,p3290,OSCC,OSCC,With dysplasia,0.5467,3.6326,45,0.1434,0.2116
+vgg16,all test patches,p3291,OSCC,OSCC,OSCC,0.9782,0.3696,4,0.8211,0.0
+vgg16,all test patches,p3292,OSCC,OSCC,With dysplasia,0.9738,3.1078,45,0.1306,0.2938
+vgg16,all test patches,p3293,OSCC,OSCC,With dysplasia,0.7933,3.3994,46,0.145,0.2216
+vgg16,all test patches,p3294,OSCC,OSCC,OSCC,0.9957,0.4748,4,0.7125,0.0
+vgg16,all test patches,p3295,OSCC,OSCC,OSCC,1.0,1.4477,26,0.2429,0.0
+vgg16,all test patches,p3296,OSCC,OSCC,OSCC,0.9968,0.6864,8,0.4895,0.0
+vgg16,all test patches,p3297,OSCC,With dysplasia,OSCC,0.9493,1.344,8,0.5817,0.0
+vgg16,all test patches,p3298,OSCC,With dysplasia,OSCC,0.9598,0.2682,1,1.0,0.0
+vgg16,all test patches,p3299,OSCC,With dysplasia,OSCC,0.9411,0.1352,1,1.0,0.1635
+vgg16,all test patches,p3300,Without dysplasia,With dysplasia,With dysplasia,0.8807,2.967,16,0.3481,0.3236
+vgg16,all test patches,p3301,Without dysplasia,With dysplasia,Without dysplasia,0.9955,1.9258,48,0.1216,0.1747
+vgg16,all test patches,p3302,Without dysplasia,With dysplasia,Without dysplasia,0.985,1.2888,39,0.1528,0.1926
+vgg16,all test patches,p3303,Without dysplasia,With dysplasia,With dysplasia,0.7282,0.438,5,0.7357,0.0
+vgg16,all test patches,p3304,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9849,1.8229,44,0.1448,0.2874
+vgg16,all test patches,p3305,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9823,1.0532,31,0.2287,0.3412
+vgg16,all test patches,p3306,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9912,1.9109,44,0.149,0.259
+vgg16,all test patches,p3307,Without dysplasia,not in NDB-UFES,With dysplasia,0.5105,1.1136,8,0.5796,0.0854
+vgg16,all test patches,p3308,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9772,2.0,45,0.1337,0.294
+vgg16,all test patches,p3309,Without dysplasia,Without dysplasia,Without dysplasia,0.5722,3.4044,44,0.1603,0.3216
+vgg16,all test patches,p3310,Without dysplasia,Without dysplasia,Without dysplasia,0.5692,3.1886,38,0.19,0.2729
+vgg16,all test patches,p3311,Without dysplasia,not in NDB-UFES,Without dysplasia,0.973,1.9916,43,0.1331,0.285
+vgg16,all test patches,p3312,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9353,4.1863,48,0.1734,0.3496
+vgg16,all test patches,p3313,Without dysplasia,With dysplasia,Without dysplasia,0.5238,1.5656,36,0.182,0.2025
+vgg16,all test patches,p3314,Without dysplasia,With dysplasia,Without dysplasia,0.7287,2.6499,33,0.2046,0.3492
+vgg16,all test patches,p3315,Without dysplasia,Without dysplasia,Without dysplasia,0.8533,1.821,37,0.1676,0.4193
+vgg16,all test patches,p3316,Without dysplasia,Without dysplasia,Without dysplasia,0.9992,3.5429,42,0.148,0.2958
+vgg16,all test patches,p3317,Without dysplasia,With dysplasia,With dysplasia,0.8896,1.0088,15,0.3395,0.0138
+vgg16,all test patches,p3318,Without dysplasia,With dysplasia,Without dysplasia,0.9676,1.4808,46,0.1419,0.334
+vgg16,all test patches,p3319,Without dysplasia,With dysplasia,Without dysplasia,0.9626,1.3646,48,0.1233,0.2882
+vgg16,all test patches,p3320,Without dysplasia,With dysplasia,Without dysplasia,0.9109,3.1249,34,0.2025,0.3381
+vgg16,all test patches,p3321,Without dysplasia,With dysplasia,Without dysplasia,0.9992,1.1414,38,0.168,0.2609
+vgg16,all test patches,p3322,Without dysplasia,With dysplasia,Without dysplasia,0.996,1.7583,36,0.1885,0.3339
+vgg16,all test patches,p3323,Without dysplasia,OSCC,With dysplasia,0.8648,3.6016,13,0.4226,0.1416
+vgg16,all test patches,p3324,Without dysplasia,OSCC,Without dysplasia,0.9078,3.2082,40,0.2021,0.2297
+vgg16,all test patches,p3325,Without dysplasia,OSCC,Without dysplasia,0.9714,0.8697,33,0.1701,0.2854
+vgg16,all test patches,p3326,Without dysplasia,OSCC,Without dysplasia,0.9727,1.9661,38,0.1603,0.2298
+vgg16,all test patches,p3327,Without dysplasia,OSCC,Without dysplasia,0.572,2.4894,38,0.2118,0.2798
+vgg16,all test patches,p3328,Without dysplasia,OSCC,Without dysplasia,0.9131,2.0606,43,0.1635,0.245
+vgg16,all test patches,p3329,Without dysplasia,OSCC,Without dysplasia,0.989,1.6693,45,0.1371,0.2911
+vgg16,all test patches,p3330,Without dysplasia,OSCC,Without dysplasia,0.9672,1.3034,32,0.2266,0.3899
+vgg16,all test patches,p3331,Without dysplasia,OSCC,Without dysplasia,0.9723,1.5073,37,0.1882,0.2579
+vgg16,all test patches,p3332,Without dysplasia,OSCC,Without dysplasia,0.969,1.4723,45,0.1447,0.1883
+vgg16,all test patches,p3333,Without dysplasia,OSCC,Without dysplasia,0.9804,1.2052,46,0.1241,0.2689
+vgg16,all test patches,p3334,Without dysplasia,OSCC,Without dysplasia,0.9703,1.7167,42,0.1834,0.3539
+vgg16,all test patches,p3335,Without dysplasia,OSCC,Without dysplasia,0.9619,1.6658,41,0.175,0.1955
+vgg16,all test patches,p3336,Without dysplasia,OSCC,Without dysplasia,0.8198,2.1221,48,0.1346,0.2518
+vgg16,all test patches,p3337,Without dysplasia,Without dysplasia,Without dysplasia,0.9785,2.3251,41,0.121,0.2501
+vgg16,all test patches,p3338,Without dysplasia,Without dysplasia,With dysplasia,0.5578,1.0231,9,0.5452,0.023
+vgg16,all test patches,p3339,Without dysplasia,With dysplasia,Without dysplasia,0.9978,2.633,38,0.1931,0.445
+vgg16,all test patches,p3340,Without dysplasia,Without dysplasia,Without dysplasia,0.6533,0.9276,27,0.2233,0.1866
+vgg16,all test patches,p3341,Without dysplasia,Without dysplasia,Without dysplasia,0.9715,1.5651,40,0.1506,0.2984
+vgg16,all test patches,p3342,Without dysplasia,Without dysplasia,Without dysplasia,0.9844,0.971,28,0.2449,0.1806
+vgg16,all test patches,p3343,Without dysplasia,Without dysplasia,Without dysplasia,0.973,0.8343,34,0.1673,0.1867
+vgg16,all test patches,p3344,Without dysplasia,Without dysplasia,Without dysplasia,0.99,2.3997,46,0.1346,0.2768
+vgg16,all test patches,p3345,Without dysplasia,Without dysplasia,Without dysplasia,0.9752,3.391,43,0.1568,0.3117
+vgg16,all test patches,p3346,Without dysplasia,Without dysplasia,Without dysplasia,0.9796,2.7327,42,0.1367,0.243
+vgg16,all test patches,p3347,Without dysplasia,Without dysplasia,Without dysplasia,0.9929,2.2756,47,0.1348,0.2674
+vgg16,all test patches,p3348,Without dysplasia,Without dysplasia,Without dysplasia,0.9735,1.1343,42,0.1277,0.1734
+vgg16,all test patches,p3349,Without dysplasia,With dysplasia,Without dysplasia,0.9128,2.3691,46,0.1487,0.2914
+vgg16,all test patches,p3350,Without dysplasia,With dysplasia,Without dysplasia,0.6556,2.6133,39,0.1553,0.265
+vgg16,all test patches,p3351,Without dysplasia,With dysplasia,Without dysplasia,0.9991,4.5745,38,0.1929,0.1235
+vgg16,all test patches,p3352,Without dysplasia,With dysplasia,Without dysplasia,0.9997,4.1948,40,0.1541,0.1074
+vgg16,all test patches,p3353,Without dysplasia,With dysplasia,Without dysplasia,0.9997,3.9346,45,0.146,0.2532
+vgg16,all test patches,p3354,Without dysplasia,With dysplasia,Without dysplasia,0.7693,1.9412,33,0.1674,0.2221
+vgg16,all test patches,p3355,Without dysplasia,With dysplasia,Without dysplasia,0.6769,1.3586,40,0.1455,0.2978
+vgg16,all test patches,p3357,Without dysplasia,With dysplasia,Without dysplasia,0.9947,3.4778,42,0.1651,0.3198
+vgg16,all test patches,p3358,Without dysplasia,Without dysplasia,Without dysplasia,0.9741,2.1143,42,0.1408,0.2526
+vgg16,all test patches,p3359,Without dysplasia,Without dysplasia,Without dysplasia,0.9747,1.9737,41,0.1397,0.1861
+vgg16,all test patches,p3360,Without dysplasia,Without dysplasia,Without dysplasia,0.9805,3.5804,45,0.1568,0.2213
+vgg16,all test patches,p3361,Without dysplasia,Without dysplasia,Without dysplasia,0.6695,3.4486,35,0.1948,0.3731
+vgg16,all test patches,p3362,Without dysplasia,Without dysplasia,Without dysplasia,0.9948,2.8296,45,0.1567,0.36
+vgg16,all test patches,p3363,Without dysplasia,Without dysplasia,Without dysplasia,0.7189,2.5309,43,0.1357,0.2789
+vgg16,all test patches,p3364,Without dysplasia,Without dysplasia,Without dysplasia,0.9928,4.7915,49,0.154,0.3469
+vgg16,all test patches,p3365,Without dysplasia,Without dysplasia,Without dysplasia,0.9836,4.3774,43,0.1932,0.1452
+vgg16,all test patches,p3366,Without dysplasia,Without dysplasia,Without dysplasia,0.9895,3.4582,37,0.1676,0.3155
+vgg16,all test patches,p3367,Without dysplasia,Without dysplasia,With dysplasia,0.7492,1.634,11,0.5982,0.028
+vgg16,all test patches,p3368,Without dysplasia,With dysplasia,Without dysplasia,0.7211,1.4856,35,0.1479,0.2335
+vgg16,all test patches,p3369,Without dysplasia,With dysplasia,Without dysplasia,0.9165,2.6709,44,0.1443,0.3227
+vgg16,all test patches,p3370,Without dysplasia,With dysplasia,Without dysplasia,0.9614,3.8079,48,0.1557,0.2811
+vgg16,all test patches,p3371,Without dysplasia,Without dysplasia,Without dysplasia,0.9761,2.1104,38,0.1688,0.2755
+vgg16,all test patches,p3372,Without dysplasia,Without dysplasia,Without dysplasia,0.9976,3.7295,48,0.1523,0.3254
+vgg16,all test patches,p3373,Without dysplasia,Without dysplasia,Without dysplasia,0.9796,2.2542,40,0.1561,0.2286
+vgg16,all test patches,p3374,Without dysplasia,Without dysplasia,Without dysplasia,0.9987,2.431,40,0.1469,0.2205
+vgg16,all test patches,p3375,Without dysplasia,With dysplasia,Without dysplasia,0.9624,2.5648,28,0.2242,0.111
+vgg16,all test patches,p3376,Without dysplasia,Without dysplasia,Without dysplasia,0.8992,2.6671,33,0.247,0.1952
+vgg16,all test patches,p3377,Without dysplasia,Without dysplasia,Without dysplasia,0.9993,2.0371,46,0.1354,0.2858
+vgg16,all test patches,p3378,Without dysplasia,Without dysplasia,Without dysplasia,0.9999,2.0722,49,0.1187,0.2118
+vgg16,all test patches,p3379,Without dysplasia,With dysplasia,With dysplasia,0.6082,0.3069,7,0.4796,0.1729
+vgg16,all test patches,p3380,Without dysplasia,With dysplasia,Without dysplasia,0.9696,2.2044,42,0.1884,0.4042
+vgg16,all test patches,p3381,Without dysplasia,With dysplasia,With dysplasia,0.8311,1.604,16,0.4186,0.124
+vgg16,all test patches,p3382,Without dysplasia,With dysplasia,Without dysplasia,0.9884,1.5646,47,0.119,0.2069
+vgg16,all test patches,p3383,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9691,1.4268,29,0.2015,0.3838
+vgg16,all test patches,p3384,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9751,1.2494,28,0.2431,0.3864
+vgg16,all test patches,p3385,Without dysplasia,not in NDB-UFES,With dysplasia,0.5882,0.4055,4,0.7428,0.0249
+vgg16,all test patches,p3386,Without dysplasia,not in NDB-UFES,Without dysplasia,0.5848,1.4841,40,0.1502,0.2913
+vgg16,all test patches,p3387,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9874,1.7103,43,0.1604,0.1981
+vgg16,all test patches,p3388,Without dysplasia,not in NDB-UFES,With dysplasia,0.5836,0.5078,8,0.5566,0.0
+vgg16,all test patches,p3389,Without dysplasia,With dysplasia,With dysplasia,0.8604,2.4982,22,0.3208,0.1967
+vgg16,all test patches,p3390,Without dysplasia,With dysplasia,Without dysplasia,0.9638,2.7669,41,0.1567,0.1221
+vgg16,all test patches,p3391,Without dysplasia,With dysplasia,Without dysplasia,0.9993,2.3675,42,0.1411,0.2796
+vgg16,all test patches,p3392,Without dysplasia,Without dysplasia,Without dysplasia,0.8381,3.5388,44,0.1658,0.3945
+vgg16,all test patches,p3393,Without dysplasia,Without dysplasia,Without dysplasia,0.5727,2.9032,43,0.1569,0.363
+vgg16,all test patches,p3394,Without dysplasia,With dysplasia,Without dysplasia,0.6151,2.0947,36,0.1988,0.3082
+vgg16,all test patches,p3395,Without dysplasia,With dysplasia,Without dysplasia,0.9134,2.3158,45,0.1058,0.2298
+vgg16,all test patches,p3396,Without dysplasia,With dysplasia,Without dysplasia,0.9997,3.1717,45,0.1145,0.2472
+vgg16,all test patches,p3397,Without dysplasia,With dysplasia,Without dysplasia,0.9976,4.1054,47,0.1684,0.2843
+vgg16,all test patches,p3398,Without dysplasia,With dysplasia,Without dysplasia,0.9054,1.0239,36,0.2083,0.3709
+vgg16,all test patches,p3399,Without dysplasia,With dysplasia,Without dysplasia,0.8564,0.9649,28,0.2051,0.2491
+vgg16,all test patches,p3400,Without dysplasia,With dysplasia,Without dysplasia,0.9169,1.2184,32,0.1859,0.2385
+vgg16,all test patches,p3401,Without dysplasia,Without dysplasia,Without dysplasia,0.9153,3.7188,46,0.1424,0.2253
+vgg16,all test patches,p3402,Without dysplasia,Without dysplasia,Without dysplasia,0.9976,3.1535,46,0.1365,0.3309
+vgg16,all test patches,p3403,Without dysplasia,Without dysplasia,Without dysplasia,0.5031,3.9783,42,0.1664,0.3196
+vgg16,all test patches,p3404,Without dysplasia,Without dysplasia,Without dysplasia,0.9529,2.022,42,0.1645,0.2106
+vgg16,all test patches,p3405,Without dysplasia,Without dysplasia,Without dysplasia,0.9838,3.4924,49,0.1419,0.293
+vgg16,all test patches,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.9607,3.6083,26,0.331,0.3193
+vgg16,all test patches,p3407,With dysplasia,not in NDB-UFES,With dysplasia,0.9866,2.0921,30,0.194,0.1221
+vgg16,all test patches,p3408,With dysplasia,With dysplasia,With dysplasia,0.9997,6.2055,47,0.1285,0.2723
+vgg16,all test patches,p3409,With dysplasia,With dysplasia,With dysplasia,0.9996,6.7098,48,0.1315,0.2587
+vgg16,all test patches,p3410,With dysplasia,With dysplasia,With dysplasia,0.9885,5.0248,45,0.1406,0.3509
+vgg16,all test patches,p3411,With dysplasia,With dysplasia,With dysplasia,0.9948,0.8315,11,0.4896,0.2545
+vgg16,all test patches,p3412,With dysplasia,With dysplasia,With dysplasia,0.9999,4.1779,49,0.1303,0.2492
+vgg16,all test patches,p3413,With dysplasia,With dysplasia,With dysplasia,0.9932,4.3442,48,0.1069,0.2506
+vgg16,all test patches,p3414,With dysplasia,With dysplasia,With dysplasia,0.9975,3.1884,49,0.1051,0.1902
+vgg16,all test patches,p3415,With dysplasia,With dysplasia,With dysplasia,0.9896,1.9058,43,0.1409,0.2257
+vgg16,all test patches,p3416,With dysplasia,With dysplasia,With dysplasia,0.9652,1.6367,15,0.4644,0.0682
+vgg16,all test patches,p3417,With dysplasia,With dysplasia,With dysplasia,0.9982,2.197,47,0.1129,0.2887
+vgg16,all test patches,p3418,With dysplasia,With dysplasia,With dysplasia,0.8725,0.5229,5,0.7376,0.0
+vgg16,all test patches,p3419,With dysplasia,With dysplasia,With dysplasia,0.7536,1.5127,9,0.5759,0.0
+vgg16,all test patches,p3420,With dysplasia,With dysplasia,With dysplasia,0.8431,1.281,7,0.6501,0.0
+vgg16,all test patches,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.7351,3.5802,36,0.1639,0.3299
+vgg16,all test patches,p3422,With dysplasia,not in NDB-UFES,With dysplasia,0.9961,2.481,30,0.2007,0.2024
+vgg16,all test patches,p3423,With dysplasia,not in NDB-UFES,With dysplasia,0.9821,2.3675,24,0.2557,0.2882
+vgg16,all test patches,p3424,With dysplasia,not in NDB-UFES,With dysplasia,0.9241,2.8546,17,0.4382,0.0957
+vgg16,all test patches,p3425,With dysplasia,not in NDB-UFES,With dysplasia,0.9972,2.3608,42,0.1915,0.4393
+vgg16,all test patches,p3426,With dysplasia,not in NDB-UFES,With dysplasia,0.9879,3.1862,23,0.2526,0.1645
+vgg16,all test patches,p3427,With dysplasia,not in NDB-UFES,With dysplasia,0.9936,1.6882,29,0.2031,0.2885
+vgg16,all test patches,p3428,With dysplasia,With dysplasia,With dysplasia,0.8272,2.7284,38,0.1868,0.2177
+vgg16,all test patches,p3429,With dysplasia,With dysplasia,With dysplasia,0.7463,1.7388,4,0.904,0.0
+vgg16,all test patches,p3430,With dysplasia,With dysplasia,With dysplasia,0.928,0.7487,9,0.4825,0.0504
+vgg16,all test patches,p3431,With dysplasia,With dysplasia,With dysplasia,0.8003,0.1754,2,0.7513,0.0
+vgg16,all test patches,p3432,With dysplasia,With dysplasia,OSCC,0.5423,0.841,3,0.959,0.0
+vgg16,all test patches,p3433,With dysplasia,With dysplasia,OSCC,0.9834,0.3395,2,1.0,0.0
+vgg16,all test patches,p3434,With dysplasia,OSCC,OSCC,0.7596,1.7671,26,0.244,0.1449
+vgg16,all test patches,p3435,With dysplasia,Without dysplasia,With dysplasia,0.9894,2.8731,41,0.1609,0.3497
+vgg16,all test patches,p3436,With dysplasia,Without dysplasia,With dysplasia,0.5515,1.5586,16,0.4632,0.1504
+vgg16,all test patches,p3437,With dysplasia,Without dysplasia,With dysplasia,0.992,2.321,29,0.2368,0.2762
+vgg16,all test patches,p3438,With dysplasia,With dysplasia,With dysplasia,0.9644,3.7992,41,0.2126,0.1486
+vgg16,all test patches,p3439,With dysplasia,With dysplasia,With dysplasia,0.959,4.5868,45,0.1373,0.2594
+vgg16,all test patches,p3440,With dysplasia,With dysplasia,With dysplasia,0.9935,0.8883,23,0.2402,0.1682
+vgg16,all test patches,p3441,With dysplasia,With dysplasia,With dysplasia,0.9774,1.1035,20,0.3178,0.1943
+vgg16,all test patches,p3442,With dysplasia,not in NDB-UFES,Without dysplasia,0.9218,1.7721,35,0.1608,0.2146
+vgg16,all test patches,p3443,With dysplasia,OSCC,With dysplasia,0.9869,2.2788,42,0.1307,0.266
+vgg16,all test patches,p3444,With dysplasia,OSCC,With dysplasia,0.9326,1.8149,35,0.2018,0.0782
+vgg16,all test patches,p3445,With dysplasia,not in NDB-UFES,Without dysplasia,0.9049,1.58,43,0.1487,0.3334
+vgg16,all test patches,p3446,With dysplasia,not in NDB-UFES,With dysplasia,0.9755,1.1469,18,0.2948,0.1703
+vgg16,all test patches,p3447,With dysplasia,not in NDB-UFES,Without dysplasia,0.5306,2.6345,43,0.1693,0.39
+vgg16,all test patches,p3448,With dysplasia,not in NDB-UFES,With dysplasia,0.9795,1.0784,22,0.2331,0.2722
+vgg16,all test patches,p3449,With dysplasia,not in NDB-UFES,With dysplasia,0.9295,0.9109,38,0.1565,0.2019
+vgg16,all test patches,p3450,With dysplasia,With dysplasia,With dysplasia,0.9852,1.5867,21,0.2969,0.0278
+vgg16,all test patches,p3451,With dysplasia,With dysplasia,With dysplasia,0.9409,1.1492,22,0.2622,0.0054
+vgg16,all test patches,p3452,With dysplasia,With dysplasia,With dysplasia,0.9991,1.3145,12,0.431,0.0569
+vgg16,all test patches,p3453,With dysplasia,With dysplasia,With dysplasia,0.9802,1.2034,12,0.4806,0.0
+vgg16,all test patches,p3454,With dysplasia,With dysplasia,With dysplasia,1.0,3.407,47,0.1429,0.2717
+vgg16,all test patches,p3455,With dysplasia,With dysplasia,With dysplasia,0.9983,2.9315,43,0.172,0.1526
+vgg16,all test patches,p3456,With dysplasia,With dysplasia,With dysplasia,0.9957,1.0651,15,0.3621,0.1596
+vgg16,all test patches,p3457,With dysplasia,Without dysplasia,With dysplasia,0.9419,0.5351,7,0.545,0.0
+vgg16,all test patches,p3458,With dysplasia,With dysplasia,With dysplasia,0.9898,2.1946,33,0.2138,0.4252
+vgg16,all test patches,p3459,With dysplasia,With dysplasia,With dysplasia,0.9992,3.044,38,0.2084,0.3281
+vgg16,all test patches,p3460,With dysplasia,With dysplasia,Without dysplasia,0.6919,4.2498,44,0.1473,0.3159
+vgg16,all test patches,p3461,With dysplasia,not in NDB-UFES,With dysplasia,0.9973,3.2316,45,0.1745,0.1834
+vgg16,all test patches,p3462,With dysplasia,not in NDB-UFES,With dysplasia,0.9974,1.7369,30,0.1802,0.213
+vgg16,all test patches,p3463,With dysplasia,not in NDB-UFES,OSCC,0.9128,1.5423,12,0.4063,0.0931
+vgg16,all test patches,p3464,With dysplasia,not in NDB-UFES,With dysplasia,0.928,3.455,43,0.136,0.2951
+vgg16,all test patches,p3465,With dysplasia,not in NDB-UFES,With dysplasia,0.9676,3.5841,46,0.1461,0.3208
+vgg16,all test patches,p3466,With dysplasia,OSCC,OSCC,0.7388,1.5024,12,0.413,0.0548
+vgg16,all test patches,p3467,With dysplasia,OSCC,OSCC,0.6642,1.3921,8,0.5791,0.0
+vgg16,all test patches,p3468,With dysplasia,OSCC,With dysplasia,0.9989,1.0736,28,0.1972,0.1826
+vgg16,all test patches,p3469,With dysplasia,OSCC,OSCC,0.6241,2.084,10,0.598,0.0
+vgg16,all test patches,p3470,With dysplasia,OSCC,With dysplasia,0.9996,1.6397,36,0.212,0.0869
+vgg16,all test patches,p3471,With dysplasia,OSCC,With dysplasia,0.9991,1.257,14,0.4222,0.0
+vgg16,all test patches,p3472,With dysplasia,not in NDB-UFES,With dysplasia,0.9921,0.9305,12,0.4757,0.0
+vgg16,all test patches,p3473,With dysplasia,not in NDB-UFES,With dysplasia,0.9811,0.8218,9,0.4713,0.09
+vgg16,all test patches,p3474,With dysplasia,not in NDB-UFES,With dysplasia,1.0,2.1004,47,0.1239,0.2364
+vgg16,all test patches,p3475,With dysplasia,not in NDB-UFES,With dysplasia,0.923,1.2102,15,0.3825,0.0
+vgg16,all test patches,p3476,With dysplasia,not in NDB-UFES,With dysplasia,0.9969,1.6738,23,0.266,0.0909
+vgg16,all test patches,p3477,With dysplasia,With dysplasia,With dysplasia,0.9828,2.9091,48,0.1378,0.256
+vgg16,all test patches,p3478,With dysplasia,With dysplasia,With dysplasia,0.8262,1.0722,8,0.5506,0.0
+vgg16,all test patches,p3479,With dysplasia,With dysplasia,With dysplasia,0.9985,1.7195,44,0.1316,0.268
+vgg16,all test patches,p3480,With dysplasia,With dysplasia,With dysplasia,0.9971,2.7379,42,0.1757,0.2322
+vgg16,all test patches,p3481,With dysplasia,OSCC,With dysplasia,0.9993,1.6314,12,0.4439,0.2314
+vgg16,all test patches,p3482,With dysplasia,OSCC,With dysplasia,0.9979,3.1516,32,0.2078,0.2325
+vgg16,all test patches,p3483,With dysplasia,OSCC,With dysplasia,0.9978,2.1165,26,0.2174,0.2032
+vgg16,all test patches,p3484,With dysplasia,OSCC,With dysplasia,0.9975,2.4106,36,0.1792,0.2551
+vgg16,all test patches,p3485,With dysplasia,OSCC,With dysplasia,1.0,3.1505,49,0.1124,0.2375
+vgg16,all test patches,p3486,With dysplasia,OSCC,With dysplasia,0.999,4.2303,48,0.1264,0.3098
+vgg16,all test patches,p3487,With dysplasia,OSCC,With dysplasia,0.9999,3.813,44,0.1343,0.2987
+vgg16,all test patches,p3488,With dysplasia,OSCC,With dysplasia,1.0,3.6965,47,0.1571,0.3007
+vgg16,all test patches,p3489,With dysplasia,OSCC,With dysplasia,0.9995,2.2515,37,0.2064,0.2259
+vgg16,all test patches,p3490,With dysplasia,not in NDB-UFES,With dysplasia,0.9984,3.2956,36,0.222,0.2335
+vgg16,all test patches,p3491,With dysplasia,not in NDB-UFES,Without dysplasia,0.9941,1.8607,48,0.1288,0.2572
+vgg16,all test patches,p3492,With dysplasia,OSCC,With dysplasia,0.9923,3.3242,46,0.1156,0.2921
+vgg16,all test patches,p3493,With dysplasia,OSCC,With dysplasia,0.9948,3.8191,48,0.1263,0.2931
+vgg16,all test patches,p3494,With dysplasia,OSCC,With dysplasia,0.9879,4.3969,35,0.2209,0.3824
+vgg16,all test patches,p3495,With dysplasia,OSCC,With dysplasia,0.9153,2.5367,45,0.1082,0.2246
+vgg16,all test patches,p3496,With dysplasia,OSCC,With dysplasia,0.8302,1.085,11,0.4937,0.1583
+vgg16,all test patches,p3497,With dysplasia,not in NDB-UFES,With dysplasia,0.9501,2.2798,27,0.2753,0.2307
+vgg16,all test patches,p3498,With dysplasia,not in NDB-UFES,Without dysplasia,0.5285,3.3608,47,0.1934,0.2324
+vgg16,all test patches,p3499,With dysplasia,Without dysplasia,With dysplasia,0.9994,1.1593,21,0.3006,0.1804
+vgg16,all test patches,p3500,With dysplasia,Without dysplasia,With dysplasia,0.9984,2.513,32,0.2648,0.0718
+vgg16,all test patches,p3501,With dysplasia,Without dysplasia,With dysplasia,0.8861,0.657,20,0.2308,0.2391
+vgg16,all test patches,p3502,With dysplasia,Without dysplasia,Without dysplasia,0.9952,2.2642,48,0.1216,0.2627
+vgg16,all test patches,p3503,With dysplasia,Without dysplasia,With dysplasia,0.8845,1.089,6,0.6577,0.0
+vgg16,all test patches,p3504,With dysplasia,Without dysplasia,With dysplasia,0.9808,1.3295,28,0.1954,0.2374
+vgg16,all test patches,p3505,With dysplasia,Without dysplasia,With dysplasia,0.9582,1.034,14,0.3623,0.4192
+vgg16,all test patches,p3506,With dysplasia,Without dysplasia,With dysplasia,0.954,1.6248,28,0.2555,0.2072
+vgg16,all test patches,p3507,With dysplasia,not in NDB-UFES,With dysplasia,0.7574,1.1645,10,0.5157,0.0202
+vgg16,all test patches,p3508,With dysplasia,With dysplasia,With dysplasia,0.7125,2.4157,17,0.4191,0.105
+vgg16,all test patches,p3509,With dysplasia,With dysplasia,With dysplasia,0.9839,2.5275,35,0.218,0.3102
+vgg16,all test patches,p3510,With dysplasia,With dysplasia,Without dysplasia,0.878,2.6924,33,0.2519,0.2618
+vgg16,all test patches,p3511,With dysplasia,Without dysplasia,With dysplasia,0.9618,3.9884,48,0.1765,0.3258
+vgg16,all test patches,p3512,With dysplasia,Without dysplasia,With dysplasia,0.9892,0.8504,10,0.4883,0.0
+vgg16,all test patches,p3513,With dysplasia,Without dysplasia,With dysplasia,0.9953,2.2267,16,0.4468,0.1373
+vgg16,all test patches,p3514,With dysplasia,Without dysplasia,With dysplasia,0.9883,0.9663,9,0.5832,0.0
+vgg16,all test patches,p3515,With dysplasia,Without dysplasia,With dysplasia,0.9608,0.833,8,0.5911,0.152
+vgg16,all test patches,p3516,With dysplasia,Without dysplasia,With dysplasia,0.9643,1.0599,6,0.784,0.3719
+vgg16,all test patches,p3517,With dysplasia,With dysplasia,Without dysplasia,0.9248,4.468,42,0.1702,0.3514
+vgg16,all test patches,p3518,With dysplasia,not in NDB-UFES,With dysplasia,0.9216,1.5282,11,0.4941,0.074
+vgg16,all test patches,p3519,With dysplasia,not in NDB-UFES,Without dysplasia,0.832,1.3851,30,0.1878,0.2167
+vgg16,all test patches,p3520,With dysplasia,not in NDB-UFES,With dysplasia,0.9749,1.2525,13,0.4452,0.0
+vgg16,all test patches,p3521,With dysplasia,With dysplasia,With dysplasia,0.9997,1.6408,35,0.1955,0.3742
+vgg16,all test patches,p3522,With dysplasia,With dysplasia,With dysplasia,0.9708,1.4675,21,0.3478,0.029
+vgg16,all test patches,p3523,With dysplasia,With dysplasia,With dysplasia,0.9961,1.0185,11,0.47,0.0
+vgg16,all test patches,p3524,With dysplasia,Without dysplasia,With dysplasia,0.9999,2.9371,30,0.2874,0.0949
+vgg16,all test patches,p3525,With dysplasia,Without dysplasia,With dysplasia,0.9988,2.9628,29,0.3228,0.0821
+vgg16,all test patches,p3526,With dysplasia,Without dysplasia,With dysplasia,1.0,2.6608,34,0.2254,0.2985
+vgg16,all test patches,p3527,With dysplasia,Without dysplasia,Without dysplasia,0.8452,1.0021,34,0.1771,0.2596
+vgg16,all test patches,p3528,With dysplasia,Without dysplasia,Without dysplasia,0.8666,0.8472,34,0.1625,0.1421
+vgg16,all test patches,p3529,With dysplasia,Without dysplasia,With dysplasia,0.9998,2.2826,21,0.3187,0.1153
+vgg16,all test patches,p3530,With dysplasia,Without dysplasia,With dysplasia,0.9882,1.1869,20,0.2393,0.1649
+vgg16,all test patches,p3531,With dysplasia,Without dysplasia,With dysplasia,0.9984,2.3179,21,0.3416,0.0746
+vgg16,all test patches,p3532,With dysplasia,Without dysplasia,With dysplasia,0.8815,0.6928,11,0.4671,0.0
+vgg16,all test patches,p3533,With dysplasia,Without dysplasia,With dysplasia,0.9108,1.8012,44,0.1295,0.2767
+vgg16,all test patches,p3534,With dysplasia,Without dysplasia,With dysplasia,0.8848,0.5612,9,0.4231,0.1451
+vgg16,all test patches,p3535,With dysplasia,Without dysplasia,With dysplasia,0.8906,1.4749,20,0.2926,0.1208
+vgg16,all test patches,p3536,With dysplasia,Without dysplasia,Without dysplasia,0.6583,1.6657,37,0.1958,0.1158
+vgg16,all test patches,p3537,With dysplasia,Without dysplasia,With dysplasia,0.9301,2.3966,18,0.3296,0.1252
+vgg16,all test patches,p3538,With dysplasia,Without dysplasia,With dysplasia,0.9998,1.4245,9,0.6352,0.0
+vgg16,all test patches,p3539,With dysplasia,Without dysplasia,With dysplasia,0.9862,1.8477,48,0.1222,0.2212
+vgg16,all test patches,p3540,With dysplasia,Without dysplasia,With dysplasia,0.9986,2.984,46,0.1237,0.2968
+vgg16,all test patches,p3541,With dysplasia,Without dysplasia,With dysplasia,0.9994,2.7229,38,0.181,0.3161
+vgg16,all test patches,p3542,With dysplasia,OSCC,With dysplasia,0.9993,2.6286,17,0.4311,0.0682
+vgg16,all test patches,p3543,With dysplasia,OSCC,With dysplasia,0.9813,2.8953,46,0.1419,0.2072
+vgg16,all test patches,p3544,With dysplasia,OSCC,With dysplasia,0.999,4.4419,45,0.1475,0.296
+vgg16,all test patches,p3545,With dysplasia,not in NDB-UFES,Without dysplasia,0.9141,1.3585,33,0.176,0.2986
+vgg16,all test patches,p3546,With dysplasia,not in NDB-UFES,With dysplasia,0.9989,1.8943,39,0.1799,0.3121
+vgg16,all test patches,p3547,With dysplasia,not in NDB-UFES,With dysplasia,0.9837,2.2118,17,0.3868,0.1332
+vgg16,all test patches,p3548,With dysplasia,not in NDB-UFES,Without dysplasia,0.7603,4.3611,41,0.2081,0.4218
+vgg16,all test patches,p3549,With dysplasia,OSCC,With dysplasia,0.856,2.6722,41,0.1484,0.3335
+vgg16,all test patches,p3550,With dysplasia,OSCC,OSCC,0.5583,1.7376,23,0.2764,0.0908
+vgg16,all test patches,p3551,With dysplasia,OSCC,OSCC,0.8312,0.5557,13,0.3443,0.0
+vgg16,all test patches,p3552,With dysplasia,not in NDB-UFES,With dysplasia,0.4438,1.2247,31,0.1716,0.3105
+vgg16,all test patches,p3553,With dysplasia,not in NDB-UFES,With dysplasia,0.9688,1.18,20,0.2921,0.2293
+vgg16,all test patches,p3554,With dysplasia,not in NDB-UFES,With dysplasia,0.8202,1.6131,15,0.4004,0.3089
+vgg16,all test patches,p3555,With dysplasia,With dysplasia,With dysplasia,0.9994,4.6018,49,0.1402,0.3194
+vgg16,all test patches,p3556,With dysplasia,With dysplasia,With dysplasia,0.9492,2.0424,17,0.3799,0.136
+vgg16,all test patches,p3557,With dysplasia,With dysplasia,Without dysplasia,0.7965,2.1137,44,0.1417,0.292
+vgg16,all test patches,p3558,With dysplasia,OSCC,With dysplasia,1.0,3.5432,46,0.1264,0.2224
+vgg16,all test patches,p3559,With dysplasia,OSCC,With dysplasia,0.9999,3.4867,36,0.2262,0.103
+vgg16,all test patches,p3560,With dysplasia,OSCC,With dysplasia,0.9999,5.1017,48,0.1386,0.1664
+vgg16,all test patches,p3561,With dysplasia,With dysplasia,With dysplasia,0.9989,2.2187,41,0.1355,0.2964
+vgg16,all test patches,p3562,With dysplasia,With dysplasia,With dysplasia,0.9983,3.4176,46,0.1213,0.2817
+vgg16,all test patches,p3563,With dysplasia,With dysplasia,With dysplasia,0.9968,3.2446,48,0.132,0.2565
+vgg16,all test patches,p3564,With dysplasia,With dysplasia,With dysplasia,0.9999,3.991,45,0.1717,0.2168
+vgg16,all test patches,p3565,With dysplasia,With dysplasia,With dysplasia,0.9999,2.8646,45,0.1181,0.1684
+vgg16,all test patches,p3566,With dysplasia,With dysplasia,With dysplasia,0.999,5.099,48,0.1338,0.2168
+vgg16,all test patches,p3567,With dysplasia,With dysplasia,With dysplasia,0.999,3.585,45,0.1134,0.1796
+vgg16,all test patches,p3568,With dysplasia,With dysplasia,With dysplasia,0.9998,1.7812,24,0.2712,0.0815
+vgg16,all test patches,p3569,With dysplasia,With dysplasia,With dysplasia,0.9984,2.0466,29,0.2187,0.3351
+vgg16,all test patches,p3570,With dysplasia,With dysplasia,With dysplasia,0.978,2.0877,46,0.141,0.3443
+vgg16,all test patches,p3571,With dysplasia,With dysplasia,With dysplasia,0.9931,2.7781,44,0.1745,0.3782
+vgg16,all test patches,p3572,With dysplasia,With dysplasia,With dysplasia,0.9915,2.1997,39,0.1722,0.3217
+vgg16,all test patches,p3573,With dysplasia,With dysplasia,With dysplasia,0.9996,2.796,48,0.1249,0.2782
+vgg16,all test patches,p3574,With dysplasia,With dysplasia,With dysplasia,0.9848,1.5899,26,0.2165,0.2181
+vgg16,all test patches,p3575,With dysplasia,not in NDB-UFES,With dysplasia,0.9626,1.459,27,0.2593,0.3335
+vgg16,all test patches,p3576,With dysplasia,not in NDB-UFES,With dysplasia,0.99,2.5535,41,0.1813,0.3224
+vgg16,all test patches,p3577,With dysplasia,not in NDB-UFES,OSCC,0.9828,1.6785,21,0.3559,0.1636
+vgg16,all test patches,p3578,With dysplasia,not in NDB-UFES,With dysplasia,0.9861,1.7227,41,0.1359,0.2782
+vgg16,all test patches,p3579,With dysplasia,not in NDB-UFES,With dysplasia,0.9942,2.3851,48,0.139,0.3257
+vgg16,all test patches,p3580,With dysplasia,not in NDB-UFES,With dysplasia,0.9846,4.7766,43,0.1716,0.3277
+vgg16,all test patches,p3581,With dysplasia,OSCC,With dysplasia,0.9969,0.7562,8,0.5894,0.0
+vgg16,all test patches,p3582,With dysplasia,OSCC,With dysplasia,0.7028,2.3799,36,0.1615,0.3363
+vgg16,all test patches,p3583,With dysplasia,not in NDB-UFES,With dysplasia,0.9981,0.986,16,0.3451,0.193
+vgg16,all test patches,p3584,With dysplasia,OSCC,With dysplasia,0.998,1.9003,32,0.1998,0.2382
+vgg16,all test patches,p3585,With dysplasia,OSCC,With dysplasia,0.9941,1.2252,11,0.4564,0.1032
+vgg16,all test patches,p3586,With dysplasia,OSCC,With dysplasia,0.9806,1.0383,6,0.6796,0.0
+vgg16,all test patches,p3587,With dysplasia,OSCC,With dysplasia,0.9938,4.2047,42,0.171,0.2709
+vgg16,all test patches,p3588,With dysplasia,OSCC,With dysplasia,0.9869,1.2358,10,0.5211,0.0073
+vgg16,all test patches,p3589,With dysplasia,Without dysplasia,With dysplasia,0.9966,2.2307,26,0.2481,0.2478
+vgg16,all test patches,p3590,With dysplasia,With dysplasia,With dysplasia,0.9899,3.6222,44,0.1503,0.2899
+vgg16,all test patches,p3591,With dysplasia,With dysplasia,With dysplasia,0.9559,3.1674,41,0.1564,0.1965
+vgg16,all test patches,p3592,With dysplasia,Without dysplasia,With dysplasia,0.9359,1.5825,27,0.1985,0.1995
+vgg16,all test patches,p3593,With dysplasia,With dysplasia,With dysplasia,0.9997,3.1084,44,0.1589,0.2876
+vgg16,all test patches,p3594,With dysplasia,Without dysplasia,With dysplasia,0.7458,1.8415,35,0.1865,0.369
+vgg16,all test patches,p3595,With dysplasia,Without dysplasia,Without dysplasia,0.9994,1.7438,49,0.1111,0.2626
+vgg16,all test patches,p3596,With dysplasia,With dysplasia,With dysplasia,0.9981,2.3584,45,0.1341,0.207
+vgg16,all test patches,p3597,With dysplasia,With dysplasia,With dysplasia,0.9819,0.4945,6,0.5936,0.0
+vgg16,all test patches,p3598,With dysplasia,With dysplasia,Without dysplasia,0.9444,4.5949,38,0.2393,0.2516
+vgg16,all test patches,p3599,With dysplasia,With dysplasia,Without dysplasia,0.6115,2.1766,39,0.1751,0.1761
+vgg16,all test patches,p3600,With dysplasia,With dysplasia,With dysplasia,0.6972,0.5443,3,0.9958,0.0
+vgg16,all test patches,p3601,With dysplasia,With dysplasia,Without dysplasia,0.9343,1.7953,41,0.1304,0.2386
+vgg16,all test patches,p3602,With dysplasia,With dysplasia,With dysplasia,0.7233,1.9454,8,0.683,0.1778
+vgg16,all test patches,p3603,With dysplasia,With dysplasia,With dysplasia,0.9999,2.5153,42,0.1872,0.3009
+vgg16,all test patches,p3604,With dysplasia,With dysplasia,With dysplasia,0.9982,0.9528,19,0.2954,0.2747
+vgg16,all test patches,p3605,With dysplasia,With dysplasia,With dysplasia,0.9943,0.7004,3,1.0,0.0
+vgg16,all test patches,p3606,With dysplasia,not in NDB-UFES,With dysplasia,0.9507,3.1609,45,0.1171,0.265
+vgg16,all test patches,p3607,With dysplasia,OSCC,With dysplasia,0.9956,4.0049,49,0.1162,0.2279
+vgg16,all test patches,p3608,With dysplasia,OSCC,With dysplasia,0.9988,2.7194,45,0.1379,0.2162
+vgg16,all test patches,p3609,With dysplasia,OSCC,With dysplasia,0.9994,3.4308,49,0.1115,0.2507
+vgg16,all test patches,p3610,With dysplasia,OSCC,With dysplasia,0.9964,1.9441,40,0.1833,0.2667
+vgg16,all test patches,p3611,With dysplasia,OSCC,With dysplasia,0.9825,1.4342,15,0.5044,0.076
+vgg16,all test patches,p3612,With dysplasia,OSCC,With dysplasia,0.9919,3.486,48,0.1331,0.3345
+vgg16,all test patches,p3613,With dysplasia,OSCC,With dysplasia,0.9909,1.38,15,0.4173,0.248
+vgg16,all test patches,p3614,With dysplasia,OSCC,With dysplasia,0.9574,3.755,43,0.1675,0.2538
+vgg16,all test patches,p3615,With dysplasia,OSCC,With dysplasia,0.9914,1.0568,8,0.5061,0.0
+vgg16,all test patches,p3616,With dysplasia,OSCC,With dysplasia,1.0,4.3743,48,0.143,0.2019
+vgg16,all test patches,p3617,With dysplasia,OSCC,With dysplasia,0.9999,4.8965,45,0.1694,0.3215
+vgg16,all test patches,p3618,With dysplasia,OSCC,With dysplasia,0.9423,3.2649,45,0.1372,0.3414
+vgg16,all test patches,p3619,With dysplasia,OSCC,With dysplasia,0.9999,4.0463,49,0.1257,0.2401
+vgg16,all test patches,p3620,With dysplasia,OSCC,With dysplasia,0.9985,5.4774,46,0.1588,0.2743
+vgg16,all test patches,p3621,With dysplasia,OSCC,With dysplasia,0.999,4.3905,44,0.1627,0.3656
+vgg16,all test patches,p3622,With dysplasia,not in NDB-UFES,With dysplasia,0.989,1.0097,9,0.5537,0.0
+vgg16,all test patches,p3623,With dysplasia,not in NDB-UFES,With dysplasia,0.9967,2.1122,20,0.4077,0.1057
+vgg16,all test patches,p3624,With dysplasia,not in NDB-UFES,With dysplasia,0.9127,1.8961,34,0.1881,0.4173
+vgg16,all test patches,p3625,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,3.6863,48,0.1265,0.2871
+vgg16,all test patches,p3626,With dysplasia,not in NDB-UFES,With dysplasia,0.9051,1.4911,11,0.4179,0.1137
+vgg16,all test patches,p3627,With dysplasia,not in NDB-UFES,With dysplasia,0.9959,4.2054,42,0.1779,0.2564
+vgg16,all test patches,p3628,With dysplasia,not in NDB-UFES,Without dysplasia,0.6448,1.6737,34,0.1931,0.205
+vgg16,all test patches,p3629,With dysplasia,not in NDB-UFES,Without dysplasia,0.7849,1.2662,28,0.217,0.1734
+vgg16,all test patches,p3630,With dysplasia,Without dysplasia,With dysplasia,0.9164,1.0919,16,0.3809,0.4258
+vgg16,all test patches,p3631,With dysplasia,Without dysplasia,With dysplasia,0.9942,1.4526,32,0.2063,0.1945
+vgg16,all test patches,p3632,With dysplasia,Without dysplasia,With dysplasia,0.9999,3.5385,47,0.1423,0.3043
+vgg16,all test patches,p3633,With dysplasia,With dysplasia,With dysplasia,0.9511,1.6795,26,0.2421,0.2166
+vgg16,all test patches,p3634,With dysplasia,With dysplasia,With dysplasia,0.9994,2.6768,31,0.2687,0.2129
+vgg16,all test patches,p3635,With dysplasia,With dysplasia,With dysplasia,0.9838,1.8753,23,0.3315,0.0412
+vgg16,all test patches,p3636,With dysplasia,OSCC,With dysplasia,0.9994,5.0674,48,0.1492,0.3134
+vgg16,all test patches,p3637,With dysplasia,OSCC,With dysplasia,0.9746,3.4931,47,0.1239,0.3098
+vgg16,all test patches,p3638,With dysplasia,OSCC,OSCC,0.8092,0.852,4,0.9236,0.0
+vgg16,all test patches,p3639,With dysplasia,OSCC,With dysplasia,0.8244,2.796,31,0.2183,0.3933
+vgg16,all test patches,p3640,With dysplasia,OSCC,With dysplasia,0.9999,3.2524,47,0.1255,0.2728
+vgg16,all test patches,p3641,With dysplasia,OSCC,With dysplasia,0.9996,3.5048,40,0.1877,0.3127
+vgg16,all test patches,p3642,With dysplasia,Without dysplasia,With dysplasia,1.0,1.9255,25,0.2254,0.0383
+vgg16,all test patches,p3643,With dysplasia,Without dysplasia,With dysplasia,1.0,1.7011,19,0.3145,0.0888
+vgg16,all test patches,p3644,With dysplasia,Without dysplasia,With dysplasia,0.9998,1.3833,15,0.4317,0.1575
+vgg16,all test patches,p3645,With dysplasia,With dysplasia,With dysplasia,0.9968,3.2994,48,0.1188,0.1366
+vgg16,all test patches,p3646,With dysplasia,With dysplasia,With dysplasia,0.9371,4.4389,43,0.1684,0.2455
+vgg16,all test patches,p3647,With dysplasia,With dysplasia,With dysplasia,0.9994,5.6129,48,0.1385,0.329
+vgg16,all test patches,p3648,With dysplasia,With dysplasia,With dysplasia,0.9932,4.2216,48,0.1409,0.2348
+vgg16,all test patches,p3649,With dysplasia,With dysplasia,With dysplasia,0.8327,4.238,47,0.1621,0.3073
+vgg16,all test patches,p3650,With dysplasia,With dysplasia,With dysplasia,0.9724,1.7338,29,0.2163,0.3617
+vgg16,all test patches,p3651,With dysplasia,With dysplasia,With dysplasia,0.6106,0.5289,3,0.8185,0.9186
+vgg16,all test patches,p3652,With dysplasia,With dysplasia,With dysplasia,0.854,1.5491,22,0.2704,0.1955
+vgg16,all test patches,p3653,With dysplasia,With dysplasia,With dysplasia,0.7712,0.6392,10,0.4974,0.0
+vgg16,all test patches,p3654,With dysplasia,OSCC,With dysplasia,0.9927,5.854,48,0.1217,0.2588
+vgg16,all test patches,p3655,With dysplasia,OSCC,With dysplasia,0.8926,3.5127,46,0.1368,0.1913
+vgg16,all test patches,p3656,With dysplasia,OSCC,With dysplasia,0.962,2.7309,41,0.1596,0.4066
+vgg16,all test patches,p3657,With dysplasia,OSCC,With dysplasia,0.8144,2.2624,46,0.1302,0.2797
+vgg16,all test patches,p3658,With dysplasia,OSCC,With dysplasia,0.8417,2.5522,41,0.1565,0.323
+vgg16,all test patches,p3659,With dysplasia,OSCC,With dysplasia,0.9158,2.4995,47,0.1272,0.2117
+vgg16,all test patches,p3660,With dysplasia,OSCC,With dysplasia,0.823,2.7585,43,0.1431,0.1587
+vgg16,all test patches,p3661,With dysplasia,OSCC,OSCC,0.7357,0.4757,3,1.0,0.0
+vgg16,all test patches,p3662,With dysplasia,OSCC,OSCC,0.8053,0.8336,2,1.0,0.0428
+vgg16,all test patches,p3663,With dysplasia,With dysplasia,With dysplasia,0.8596,0.3593,6,0.6022,0.0
+vgg16,all test patches,p3664,With dysplasia,With dysplasia,Without dysplasia,0.9211,1.6456,30,0.2186,0.1674
+vgg16,all test patches,p3665,With dysplasia,Without dysplasia,Without dysplasia,0.6987,1.8368,44,0.1296,0.2121
+vgg16,all test patches,p3666,With dysplasia,Without dysplasia,With dysplasia,0.9984,1.2981,34,0.1948,0.1005
+vgg16,all test patches,p3667,With dysplasia,Without dysplasia,With dysplasia,0.9979,4.5114,49,0.124,0.2612
+vgg16,all test patches,p3668,With dysplasia,Without dysplasia,With dysplasia,0.9149,2.1009,48,0.1305,0.2244
+vgg16,all test patches,p3669,With dysplasia,Without dysplasia,With dysplasia,0.9771,1.009,16,0.3497,0.0
+vgg16,all test patches,p3670,With dysplasia,Without dysplasia,With dysplasia,0.9947,0.961,9,0.6025,0.0337
+vgg16,all test patches,p3671,With dysplasia,Without dysplasia,With dysplasia,0.9885,1.584,24,0.2603,0.0021
+vgg16,all test patches,p3672,With dysplasia,Without dysplasia,With dysplasia,0.9786,0.9072,10,0.5638,0.0
+vgg16,all test patches,p3673,With dysplasia,Without dysplasia,With dysplasia,0.9891,0.4939,8,0.5357,0.086
+vgg16,all test patches,p3674,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,2.9475,44,0.1468,0.2514
+vgg16,all test patches,p3675,With dysplasia,not in NDB-UFES,With dysplasia,0.9966,3.1251,44,0.1819,0.2267
+vgg16,all test patches,p3676,With dysplasia,not in NDB-UFES,With dysplasia,0.9529,3.6401,19,0.2866,0.1768
+vgg16,all test patches,p3677,With dysplasia,not in NDB-UFES,With dysplasia,0.7616,4.1308,47,0.1331,0.3145
+vgg16,all test patches,p3678,With dysplasia,not in NDB-UFES,OSCC,0.9371,0.9185,7,0.6178,0.0
+vgg16,all test patches,p3679,With dysplasia,not in NDB-UFES,OSCC,0.7342,-0.0665,0,,
+vgg16,all test patches,p3680,With dysplasia,not in NDB-UFES,With dysplasia,0.9505,3.1328,46,0.1228,0.2112
+vgg16,all test patches,p3681,With dysplasia,not in NDB-UFES,OSCC,0.5718,0.9828,4,0.8341,0.0
+vgg16,all test patches,p3682,With dysplasia,OSCC,With dysplasia,0.9999,3.3295,46,0.1527,0.3315
+vgg16,all test patches,p3683,With dysplasia,OSCC,With dysplasia,0.9914,3.8176,40,0.1571,0.1744
+vgg16,all test patches,p3684,With dysplasia,OSCC,With dysplasia,0.9197,3.6172,45,0.127,0.273
+vgg16,all test patches,p3685,With dysplasia,OSCC,With dysplasia,0.988,3.8664,45,0.1247,0.2422
+vgg16,all test patches,p3686,With dysplasia,OSCC,With dysplasia,0.9942,5.009,46,0.1429,0.3054
+vgg16,all test patches,p3687,With dysplasia,OSCC,With dysplasia,0.9995,4.1853,40,0.2131,0.3199
+vgg16,all test patches,p3688,With dysplasia,OSCC,With dysplasia,0.9997,3.2975,47,0.1447,0.3637
+vgg16,all test patches,p3689,With dysplasia,OSCC,With dysplasia,0.983,1.5873,42,0.1594,0.3316
+vgg16,all test patches,p3690,With dysplasia,OSCC,With dysplasia,0.9998,5.4168,48,0.1525,0.2834
+vgg16,all test patches,p3691,OSCC,not in NDB-UFES,With dysplasia,0.5488,3.1832,39,0.202,0.3228
+vgg16,all test patches,p3692,OSCC,not in NDB-UFES,OSCC,0.8953,1.8182,15,0.4047,0.0
+vgg16,all test patches,p3693,OSCC,OSCC,OSCC,0.9996,0.948,4,0.9293,0.0
+vgg16,all test patches,p3694,OSCC,OSCC,OSCC,0.9596,0.6666,4,0.8357,0.0
+vgg16,all test patches,p3695,OSCC,OSCC,OSCC,0.9993,1.3708,17,0.3395,0.0642
+vgg16,all test patches,p3696,OSCC,OSCC,OSCC,0.9854,0.4737,5,0.6402,0.0
+vgg16,all test patches,p3697,OSCC,OSCC,OSCC,0.9972,1.1735,5,0.7652,0.0
+vgg16,all test patches,p3698,OSCC,OSCC,OSCC,0.9997,1.6873,28,0.2433,0.1843
+vgg16,all test patches,p3699,OSCC,OSCC,OSCC,0.9806,0.5997,5,0.7642,0.0
+vgg16,all test patches,p3700,OSCC,OSCC,OSCC,0.9941,0.3133,2,0.8472,0.0
+vgg16,all test patches,p3701,OSCC,OSCC,OSCC,0.9991,1.3268,9,0.5639,0.0
+vgg16,all test patches,p3702,OSCC,OSCC,OSCC,0.9929,0.3775,3,0.9392,0.0
+vgg16,all test patches,p3703,OSCC,OSCC,OSCC,0.9901,0.941,17,0.2994,0.154
+vgg16,all test patches,p3704,OSCC,With dysplasia,With dysplasia,0.9876,4.2911,39,0.1938,0.2636
+vgg16,all test patches,p3705,OSCC,OSCC,OSCC,0.9953,1.0721,13,0.4608,0.1191
+vgg16,all test patches,p3706,OSCC,OSCC,OSCC,0.9979,0.8248,4,0.9521,0.0
+vgg16,all test patches,p3707,OSCC,OSCC,OSCC,0.9999,0.7303,8,0.568,0.0
+vgg16,all test patches,p3708,OSCC,OSCC,OSCC,1.0,1.1475,27,0.2138,0.0781
+vgg16,all test patches,p3709,OSCC,OSCC,OSCC,0.8397,0.7187,8,0.5318,0.0267
+vgg16,all test patches,p3710,OSCC,OSCC,OSCC,0.9945,3.0144,36,0.2883,0.3293
+vgg16,all test patches,p3711,OSCC,OSCC,With dysplasia,0.5103,3.2315,39,0.1846,0.2905
+vgg16,all test patches,p3712,OSCC,OSCC,OSCC,0.9993,0.6911,13,0.3777,0.0
+vgg16,all test patches,p3713,OSCC,OSCC,OSCC,0.9972,0.2261,5,0.6398,0.0
+vgg16,all test patches,p3714,Without dysplasia,With dysplasia,Without dysplasia,0.9984,3.7419,40,0.1839,0.3439
+vgg16,all test patches,p3715,Without dysplasia,With dysplasia,Without dysplasia,0.9887,2.3002,42,0.1782,0.3406
+vgg16,all test patches,p3716,Without dysplasia,OSCC,Without dysplasia,0.9983,1.5064,43,0.1504,0.1351
+vgg16,all test patches,p3717,Without dysplasia,OSCC,Without dysplasia,0.9342,2.6067,48,0.1499,0.2614
+vgg16,all test patches,p3718,Without dysplasia,OSCC,Without dysplasia,0.9869,1.7225,40,0.174,0.218
+vgg16,all test patches,p3719,Without dysplasia,Without dysplasia,Without dysplasia,0.7211,2.3885,37,0.1791,0.1515
+vgg16,all test patches,p3720,Without dysplasia,With dysplasia,Without dysplasia,0.9846,1.6731,44,0.1756,0.2932
+vgg16,all test patches,p3721,Without dysplasia,Without dysplasia,Without dysplasia,0.9776,0.96,30,0.2306,0.0836
+vgg16,all test patches,p3722,Without dysplasia,With dysplasia,Without dysplasia,0.8999,1.787,46,0.1238,0.2897
+vgg16,all test patches,p3723,Without dysplasia,Without dysplasia,Without dysplasia,0.9749,2.6533,43,0.1546,0.2992
+vgg16,all test patches,p3724,Without dysplasia,Without dysplasia,Without dysplasia,0.979,3.2584,44,0.181,0.3341
+vgg16,all test patches,p3725,Without dysplasia,With dysplasia,Without dysplasia,0.7971,3.9647,45,0.1441,0.2831
+vgg16,all test patches,p3726,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,2.7752,37,0.1542,0.28
+vgg16,all test patches,p3727,With dysplasia,With dysplasia,With dysplasia,0.9976,1.7106,25,0.2693,0.4133
+vgg16,all test patches,p3728,With dysplasia,OSCC,Without dysplasia,0.5484,2.013,33,0.1923,0.2327
+vgg16,all test patches,p3729,With dysplasia,Without dysplasia,With dysplasia,0.9763,1.2625,27,0.2635,0.473
+vgg16,all test patches,p3730,With dysplasia,Without dysplasia,With dysplasia,0.9999,1.724,37,0.1793,0.0974
+vgg16,all test patches,p3731,With dysplasia,With dysplasia,With dysplasia,0.9975,6.037,48,0.1301,0.2851
+vgg16,all test patches,p3732,With dysplasia,With dysplasia,With dysplasia,0.9989,1.8554,14,0.4321,0.0265
+vgg16,all test patches,p3733,With dysplasia,With dysplasia,With dysplasia,0.9694,1.4873,12,0.4294,0.0298
+vgg16,all test patches,p3734,With dysplasia,With dysplasia,OSCC,0.5926,0.8408,7,0.6047,0.0
+vgg16,all test patches,p3735,With dysplasia,With dysplasia,Without dysplasia,0.9184,1.5969,36,0.1587,0.2988
+vgg16,all test patches,p3736,With dysplasia,OSCC,With dysplasia,0.9428,1.8218,29,0.2349,0.4834
+vgg16,all test patches,p3737,With dysplasia,OSCC,With dysplasia,0.9604,1.0392,4,0.9102,0.006
+vgg16,all test patches,p3738,With dysplasia,Without dysplasia,Without dysplasia,0.5766,2.3161,43,0.1488,0.2956
+vgg16,all test patches,p3739,With dysplasia,Without dysplasia,With dysplasia,0.9176,2.843,23,0.2807,0.0997
+vgg16,all test patches,p3740,With dysplasia,Without dysplasia,With dysplasia,0.9966,2.0749,10,0.5635,0.1741
+vgg16,all test patches,p3741,With dysplasia,Without dysplasia,With dysplasia,0.9741,2.0781,21,0.3329,0.386
+vgg16,all test patches,p3742,With dysplasia,Without dysplasia,With dysplasia,0.9653,1.5286,27,0.2219,0.1451
+vgg16,all test patches,p3743,With dysplasia,not in NDB-UFES,Without dysplasia,0.5614,1.993,31,0.2334,0.2945
+vgg16,all test patches,p3744,With dysplasia,OSCC,With dysplasia,0.9986,4.5964,48,0.1467,0.2647
+vgg16,all test patches,p3745,With dysplasia,OSCC,With dysplasia,0.9921,1.6346,17,0.4095,0.2185
+vgg16,all test patches,p3746,With dysplasia,OSCC,OSCC,0.9801,1.9374,21,0.3379,0.0
+vgg16,all test patches,p3747,With dysplasia,Without dysplasia,With dysplasia,1.0,3.3593,46,0.1418,0.1596
+vgg16,all test patches,p3748,With dysplasia,Without dysplasia,With dysplasia,0.977,1.593,22,0.2996,0.2372
+vgg16,all test patches,p3749,With dysplasia,Without dysplasia,Without dysplasia,0.76,1.3056,27,0.2242,0.1773
+vgg16,all test patches,p3750,With dysplasia,OSCC,With dysplasia,0.9894,3.6072,47,0.1438,0.2111
+vgg16,all test patches,p3751,With dysplasia,OSCC,With dysplasia,0.999,4.3412,44,0.1147,0.2213
+vgg16,all test patches,p3752,With dysplasia,Without dysplasia,With dysplasia,0.5438,2.2668,11,0.4705,0.1581
+vgg16,all test patches,p3753,With dysplasia,Without dysplasia,With dysplasia,0.9953,1.3917,34,0.1992,0.2595
+vgg16,all test patches,p3754,With dysplasia,With dysplasia,With dysplasia,0.9996,2.3651,43,0.1679,0.3735
+vgg16,all test patches,p3755,With dysplasia,OSCC,With dysplasia,0.998,3.8091,46,0.1193,0.251
+vgg16,all test patches,p3756,With dysplasia,OSCC,Without dysplasia,0.8645,1.6414,40,0.1442,0.3674
+vgg16,all test patches,p3757,With dysplasia,OSCC,With dysplasia,0.9995,2.7915,49,0.1245,0.2653
+vgg16,all test patches,p3758,With dysplasia,With dysplasia,With dysplasia,0.9391,1.2479,8,0.6942,0.0645
+vgg16,all test patches,p3759,With dysplasia,OSCC,With dysplasia,0.4524,2.8869,33,0.23,0.3778
+vgg16,all test patches,p3760,With dysplasia,Without dysplasia,Without dysplasia,0.6447,2.7179,47,0.1573,0.3381
+vgg16,all test patches,p3761,With dysplasia,not in NDB-UFES,With dysplasia,0.9971,1.6615,42,0.1187,0.1964
+vgg16,all test patches,p3762,With dysplasia,OSCC,With dysplasia,0.9999,5.9809,47,0.1469,0.1821
+densenet121,all test patches,p3136,OSCC,not in NDB-UFES,With dysplasia,0.8073,1.5974,22,0.3153,0.2549
+densenet121,all test patches,p3137,OSCC,not in NDB-UFES,OSCC,0.957,2.0964,35,0.2537,0.1792
+densenet121,all test patches,p3138,OSCC,not in NDB-UFES,OSCC,0.9994,2.2286,27,0.2294,0.3844
+densenet121,all test patches,p3139,OSCC,OSCC,OSCC,0.9979,2.4741,29,0.2872,0.0414
+densenet121,all test patches,p3140,OSCC,OSCC,OSCC,0.9999,2.3428,29,0.2244,0.3002
+densenet121,all test patches,p3141,OSCC,OSCC,OSCC,0.9999,2.418,25,0.2783,0.2338
+densenet121,all test patches,p3142,OSCC,not in NDB-UFES,OSCC,0.9974,2.3855,41,0.1449,0.2435
+densenet121,all test patches,p3143,OSCC,OSCC,OSCC,0.9997,2.0315,24,0.3166,0.1351
+densenet121,all test patches,p3144,OSCC,OSCC,OSCC,0.9998,4.1065,34,0.2238,0.2443
+densenet121,all test patches,p3145,OSCC,OSCC,OSCC,0.9999,3.5284,22,0.3449,0.2278
+densenet121,all test patches,p3146,OSCC,OSCC,OSCC,1.0,3.0886,30,0.2256,0.1981
+densenet121,all test patches,p3147,OSCC,not in NDB-UFES,OSCC,0.9889,1.3404,18,0.3485,0.0762
+densenet121,all test patches,p3148,OSCC,not in NDB-UFES,OSCC,0.9711,2.5531,26,0.3115,0.2939
+densenet121,all test patches,p3149,OSCC,OSCC,OSCC,0.9873,0.7525,5,0.7401,0.0
+densenet121,all test patches,p3150,OSCC,OSCC,OSCC,1.0,4.0794,38,0.2178,0.3577
+densenet121,all test patches,p3151,OSCC,OSCC,OSCC,0.9996,1.0924,15,0.3712,0.1384
+densenet121,all test patches,p3152,OSCC,OSCC,OSCC,0.9994,1.8035,31,0.2356,0.0975
+densenet121,all test patches,p3153,OSCC,OSCC,OSCC,0.9999,2.9134,28,0.2591,0.2836
+densenet121,all test patches,p3154,OSCC,OSCC,OSCC,0.9997,2.2937,18,0.3365,0.1711
+densenet121,all test patches,p3155,OSCC,OSCC,OSCC,0.9983,3.6811,35,0.222,0.3759
+densenet121,all test patches,p3156,OSCC,OSCC,OSCC,0.9999,3.2165,23,0.3235,0.2219
+densenet121,all test patches,p3157,OSCC,OSCC,OSCC,1.0,3.1358,39,0.195,0.3054
+densenet121,all test patches,p3158,OSCC,OSCC,OSCC,1.0,2.9552,34,0.2297,0.1994
+densenet121,all test patches,p3159,OSCC,OSCC,OSCC,0.996,4.5256,36,0.2774,0.2124
+densenet121,all test patches,p3160,OSCC,OSCC,OSCC,0.9948,2.2719,19,0.4363,0.0689
+densenet121,all test patches,p3161,OSCC,not in NDB-UFES,OSCC,0.9948,3.8216,47,0.133,0.1999
+densenet121,all test patches,p3162,OSCC,not in NDB-UFES,OSCC,0.9997,2.3477,36,0.1623,0.3059
+densenet121,all test patches,p3163,OSCC,OSCC,OSCC,1.0,4.8299,43,0.1557,0.3127
+densenet121,all test patches,p3164,OSCC,OSCC,OSCC,0.8612,2.8807,25,0.235,0.4149
+densenet121,all test patches,p3165,OSCC,OSCC,OSCC,1.0,5.0538,46,0.1239,0.2515
+densenet121,all test patches,p3166,OSCC,OSCC,OSCC,0.999,2.8481,33,0.1831,0.3326
+densenet121,all test patches,p3167,OSCC,OSCC,OSCC,0.8035,3.2298,32,0.2038,0.3901
+densenet121,all test patches,p3168,OSCC,OSCC,OSCC,0.9923,2.326,33,0.2054,0.3355
+densenet121,all test patches,p3169,OSCC,OSCC,OSCC,0.9996,3.4226,46,0.145,0.2324
+densenet121,all test patches,p3170,OSCC,OSCC,OSCC,0.9715,2.93,17,0.4018,0.1454
+densenet121,all test patches,p3171,OSCC,OSCC,OSCC,0.8027,0.5282,3,1.0,0.0
+densenet121,all test patches,p3172,OSCC,OSCC,OSCC,0.9999,3.5047,23,0.3404,0.0923
+densenet121,all test patches,p3173,OSCC,OSCC,OSCC,0.9999,2.7222,14,0.4135,0.5743
+densenet121,all test patches,p3174,OSCC,OSCC,OSCC,0.9999,4.4547,24,0.2766,0.4404
+densenet121,all test patches,p3175,OSCC,OSCC,OSCC,0.9524,2.2214,27,0.2959,0.3333
+densenet121,all test patches,p3176,OSCC,OSCC,OSCC,0.9946,3.1895,28,0.1963,0.3148
+densenet121,all test patches,p3177,OSCC,OSCC,OSCC,0.8938,4.8872,40,0.1989,0.2607
+densenet121,all test patches,p3178,OSCC,OSCC,OSCC,0.8471,2.3234,20,0.3658,0.1504
+densenet121,all test patches,p3179,OSCC,OSCC,OSCC,0.9999,4.5025,45,0.1618,0.1414
+densenet121,all test patches,p3180,OSCC,OSCC,OSCC,0.9988,3.2137,44,0.122,0.2121
+densenet121,all test patches,p3181,OSCC,OSCC,OSCC,0.999,2.5966,40,0.1597,0.282
+densenet121,all test patches,p3182,OSCC,OSCC,OSCC,0.9945,2.3187,20,0.3355,0.1148
+densenet121,all test patches,p3183,OSCC,OSCC,OSCC,0.9514,2.6957,27,0.2357,0.3415
+densenet121,all test patches,p3184,OSCC,With dysplasia,OSCC,0.9976,4.0732,33,0.2669,0.4971
+densenet121,all test patches,p3185,OSCC,With dysplasia,With dysplasia,0.7803,2.5895,26,0.2539,0.1678
+densenet121,all test patches,p3186,OSCC,not in NDB-UFES,OSCC,0.9801,2.8981,43,0.1485,0.3352
+densenet121,all test patches,p3187,OSCC,not in NDB-UFES,With dysplasia,0.8759,1.0804,6,0.709,0.0
+densenet121,all test patches,p3188,OSCC,OSCC,OSCC,0.9898,1.7365,13,0.4922,0.0732
+densenet121,all test patches,p3189,OSCC,OSCC,OSCC,0.6091,0.9244,7,0.6715,0.0
+densenet121,all test patches,p3190,OSCC,OSCC,OSCC,0.6626,2.1169,25,0.2589,0.3355
+densenet121,all test patches,p3191,OSCC,OSCC,OSCC,0.9993,3.3838,28,0.2425,0.3646
+densenet121,all test patches,p3192,OSCC,OSCC,OSCC,0.9902,2.1645,33,0.1623,0.255
+densenet121,all test patches,p3193,OSCC,OSCC,OSCC,0.9507,2.9281,33,0.2059,0.183
+densenet121,all test patches,p3194,OSCC,OSCC,OSCC,0.9696,2.7456,33,0.2243,0.0885
+densenet121,all test patches,p3195,OSCC,OSCC,OSCC,0.9686,2.8991,36,0.1819,0.353
+densenet121,all test patches,p3196,OSCC,OSCC,OSCC,0.9878,4.4484,44,0.1463,0.2422
+densenet121,all test patches,p3197,OSCC,OSCC,OSCC,0.7096,2.0481,35,0.1897,0.2122
+densenet121,all test patches,p3198,OSCC,OSCC,OSCC,0.9994,2.6025,38,0.154,0.1738
+densenet121,all test patches,p3199,OSCC,OSCC,OSCC,0.9995,2.742,35,0.1964,0.2704
+densenet121,all test patches,p3200,OSCC,OSCC,OSCC,0.8005,0.9709,17,0.3116,0.1855
+densenet121,all test patches,p3201,OSCC,OSCC,OSCC,0.9999,3.4257,26,0.2666,0.0803
+densenet121,all test patches,p3202,OSCC,OSCC,OSCC,0.9999,4.3035,48,0.1299,0.2631
+densenet121,all test patches,p3203,OSCC,OSCC,OSCC,0.9847,2.3476,37,0.1894,0.2185
+densenet121,all test patches,p3204,OSCC,OSCC,OSCC,0.5375,1.4378,14,0.4058,0.1189
+densenet121,all test patches,p3205,OSCC,OSCC,OSCC,1.0,5.1661,47,0.1207,0.2407
+densenet121,all test patches,p3206,OSCC,OSCC,OSCC,0.9983,2.6607,38,0.1839,0.2248
+densenet121,all test patches,p3207,OSCC,OSCC,OSCC,0.99,1.7642,22,0.2929,0.4685
+densenet121,all test patches,p3208,OSCC,OSCC,OSCC,0.9968,3.128,28,0.2135,0.4515
+densenet121,all test patches,p3209,OSCC,OSCC,OSCC,0.9998,2.873,26,0.2692,0.4597
+densenet121,all test patches,p3210,OSCC,OSCC,OSCC,0.9444,2.5256,22,0.3368,0.4213
+densenet121,all test patches,p3211,OSCC,OSCC,OSCC,0.9981,4.0246,44,0.1415,0.2602
+densenet121,all test patches,p3212,OSCC,OSCC,With dysplasia,0.9331,1.6094,21,0.291,0.0602
+densenet121,all test patches,p3213,OSCC,OSCC,With dysplasia,0.9315,1.9675,21,0.3085,0.0676
+densenet121,all test patches,p3214,OSCC,OSCC,With dysplasia,0.8462,1.945,22,0.2347,0.1037
+densenet121,all test patches,p3215,OSCC,OSCC,OSCC,0.9463,2.2588,33,0.1861,0.0275
+densenet121,all test patches,p3216,OSCC,not in NDB-UFES,OSCC,0.93,4.56,42,0.1693,0.2587
+densenet121,all test patches,p3217,OSCC,not in NDB-UFES,OSCC,0.9773,6.145,43,0.1547,0.3047
+densenet121,all test patches,p3218,OSCC,OSCC,OSCC,0.9993,3.7378,45,0.1361,0.2888
+densenet121,all test patches,p3219,OSCC,OSCC,OSCC,0.9998,3.9714,49,0.1291,0.2981
+densenet121,all test patches,p3220,OSCC,OSCC,OSCC,0.9998,4.3415,49,0.1176,0.2509
+densenet121,all test patches,p3221,OSCC,OSCC,OSCC,0.9965,4.21,30,0.2586,0.1478
+densenet121,all test patches,p3222,OSCC,OSCC,OSCC,0.5538,1.0455,9,0.6173,0.2635
+densenet121,all test patches,p3223,OSCC,OSCC,OSCC,0.9978,1.4403,13,0.4365,0.4279
+densenet121,all test patches,p3224,OSCC,OSCC,OSCC,0.9997,4.0992,41,0.1708,0.3324
+densenet121,all test patches,p3225,OSCC,OSCC,OSCC,1.0,4.5484,44,0.155,0.29
+densenet121,all test patches,p3226,OSCC,OSCC,OSCC,0.9985,3.4785,42,0.1724,0.2684
+densenet121,all test patches,p3227,OSCC,OSCC,OSCC,1.0,3.4475,43,0.1469,0.2727
+densenet121,all test patches,p3228,OSCC,OSCC,OSCC,0.9985,3.3119,42,0.1791,0.1507
+densenet121,all test patches,p3229,OSCC,OSCC,OSCC,0.9995,5.3433,39,0.1816,0.4134
+densenet121,all test patches,p3230,OSCC,OSCC,OSCC,0.9991,1.4807,16,0.3538,0.3916
+densenet121,all test patches,p3231,OSCC,OSCC,OSCC,0.9993,1.701,16,0.3436,0.3261
+densenet121,all test patches,p3232,OSCC,OSCC,OSCC,0.9998,1.5092,12,0.3885,0.0306
+densenet121,all test patches,p3233,OSCC,OSCC,OSCC,0.9997,2.8071,29,0.261,0.2452
+densenet121,all test patches,p3234,OSCC,OSCC,OSCC,0.9977,3.7083,32,0.1969,0.3637
+densenet121,all test patches,p3235,OSCC,OSCC,OSCC,0.982,1.1238,14,0.3694,0.0444
+densenet121,all test patches,p3236,OSCC,OSCC,OSCC,0.9977,2.7753,38,0.1929,0.233
+densenet121,all test patches,p3237,OSCC,OSCC,OSCC,0.9526,2.3788,44,0.1483,0.3034
+densenet121,all test patches,p3238,OSCC,OSCC,OSCC,0.9961,3.5422,40,0.1679,0.3228
+densenet121,all test patches,p3239,OSCC,With dysplasia,OSCC,0.9857,3.742,34,0.2494,0.2906
+densenet121,all test patches,p3240,OSCC,With dysplasia,OSCC,0.9516,1.7908,27,0.2834,0.1661
+densenet121,all test patches,p3241,OSCC,With dysplasia,OSCC,0.9899,2.2786,35,0.1737,0.3107
+densenet121,all test patches,p3242,OSCC,not in NDB-UFES,OSCC,0.9254,1.1115,11,0.5036,0.4187
+densenet121,all test patches,p3243,OSCC,OSCC,OSCC,0.9995,1.0915,6,0.6343,0.0031
+densenet121,all test patches,p3244,OSCC,OSCC,OSCC,1.0,4.9756,26,0.2784,0.4052
+densenet121,all test patches,p3245,OSCC,OSCC,OSCC,0.9969,2.7494,31,0.2063,0.2603
+densenet121,all test patches,p3246,OSCC,OSCC,OSCC,0.9904,2.9273,22,0.3358,0.2465
+densenet121,all test patches,p3247,OSCC,OSCC,OSCC,0.9999,2.3536,21,0.3514,0.1791
+densenet121,all test patches,p3248,OSCC,OSCC,OSCC,1.0,3.1843,28,0.2913,0.1434
+densenet121,all test patches,p3249,OSCC,OSCC,OSCC,0.9999,3.1681,34,0.2205,0.3056
+densenet121,all test patches,p3250,OSCC,OSCC,OSCC,1.0,2.0728,22,0.2771,0.2545
+densenet121,all test patches,p3251,OSCC,OSCC,OSCC,0.9997,1.6849,13,0.3901,0.1169
+densenet121,all test patches,p3252,OSCC,OSCC,OSCC,0.9995,2.9394,35,0.2281,0.3467
+densenet121,all test patches,p3253,OSCC,OSCC,OSCC,0.9936,2.4116,24,0.2663,0.4469
+densenet121,all test patches,p3254,OSCC,OSCC,OSCC,0.9996,2.6144,28,0.2397,0.2407
+densenet121,all test patches,p3255,OSCC,OSCC,OSCC,0.9854,2.9146,32,0.1772,0.333
+densenet121,all test patches,p3256,OSCC,OSCC,OSCC,0.9966,1.7542,17,0.3109,0.2356
+densenet121,all test patches,p3257,OSCC,OSCC,OSCC,0.9927,1.0881,11,0.4562,0.0
+densenet121,all test patches,p3258,OSCC,OSCC,OSCC,0.8171,0.7995,10,0.4632,0.0
+densenet121,all test patches,p3259,OSCC,not in NDB-UFES,OSCC,0.9975,1.7269,20,0.3139,0.068
+densenet121,all test patches,p3260,OSCC,not in NDB-UFES,OSCC,0.9866,2.7426,38,0.179,0.1946
+densenet121,all test patches,p3261,OSCC,not in NDB-UFES,OSCC,0.9948,2.5274,31,0.2198,0.2234
+densenet121,all test patches,p3262,OSCC,not in NDB-UFES,OSCC,0.9962,3.5688,43,0.1935,0.129
+densenet121,all test patches,p3263,OSCC,OSCC,OSCC,0.9964,2.6074,36,0.2049,0.2474
+densenet121,all test patches,p3264,OSCC,OSCC,OSCC,0.9889,2.5655,27,0.2897,0.5066
+densenet121,all test patches,p3265,OSCC,OSCC,OSCC,0.9765,1.4737,34,0.1811,0.2401
+densenet121,all test patches,p3266,OSCC,OSCC,OSCC,0.9593,1.4797,22,0.2657,0.3458
+densenet121,all test patches,p3267,OSCC,OSCC,OSCC,0.9997,4.2805,38,0.2342,0.2252
+densenet121,all test patches,p3268,OSCC,OSCC,OSCC,0.9986,1.8862,38,0.1524,0.2155
+densenet121,all test patches,p3269,OSCC,OSCC,OSCC,0.9975,3.0332,44,0.149,0.3295
+densenet121,all test patches,p3270,OSCC,OSCC,OSCC,0.9865,2.8901,44,0.1541,0.2813
+densenet121,all test patches,p3271,OSCC,OSCC,With dysplasia,0.6541,1.8796,18,0.3444,0.056
+densenet121,all test patches,p3272,OSCC,OSCC,OSCC,0.9949,4.0254,45,0.1539,0.2853
+densenet121,all test patches,p3273,OSCC,OSCC,OSCC,0.9986,3.6273,44,0.1912,0.3415
+densenet121,all test patches,p3274,OSCC,OSCC,OSCC,0.9999,2.4907,36,0.1919,0.2466
+densenet121,all test patches,p3275,OSCC,OSCC,OSCC,1.0,2.3915,45,0.1364,0.174
+densenet121,all test patches,p3276,OSCC,OSCC,OSCC,0.9999,4.8705,41,0.1935,0.2284
+densenet121,all test patches,p3277,OSCC,OSCC,OSCC,1.0,3.3655,47,0.1333,0.1979
+densenet121,all test patches,p3278,OSCC,OSCC,With dysplasia,0.9468,3.5783,31,0.2362,0.3784
+densenet121,all test patches,p3279,OSCC,OSCC,OSCC,1.0,5.3794,42,0.207,0.2413
+densenet121,all test patches,p3280,OSCC,OSCC,OSCC,0.9473,2.5668,29,0.2348,0.1893
+densenet121,all test patches,p3281,OSCC,OSCC,OSCC,0.9958,4.5276,42,0.1621,0.3388
+densenet121,all test patches,p3282,OSCC,not in NDB-UFES,OSCC,0.8696,1.6784,17,0.349,0.5697
+densenet121,all test patches,p3283,OSCC,OSCC,OSCC,0.9996,2.4855,30,0.2115,0.2791
+densenet121,all test patches,p3284,OSCC,OSCC,OSCC,0.9933,3.2856,40,0.1868,0.3148
+densenet121,all test patches,p3285,OSCC,OSCC,OSCC,0.9999,3.383,35,0.1619,0.2003
+densenet121,all test patches,p3286,OSCC,OSCC,OSCC,0.9978,3.4769,31,0.2173,0.2148
+densenet121,all test patches,p3287,OSCC,OSCC,OSCC,1.0,3.6095,36,0.1798,0.2217
+densenet121,all test patches,p3288,OSCC,OSCC,OSCC,0.9996,3.4955,29,0.2575,0.4772
+densenet121,all test patches,p3289,OSCC,not in NDB-UFES,OSCC,0.9819,1.6343,41,0.1549,0.1084
+densenet121,all test patches,p3290,OSCC,OSCC,With dysplasia,0.6565,1.5768,22,0.2455,0.095
+densenet121,all test patches,p3291,OSCC,OSCC,OSCC,0.9997,3.216,38,0.1694,0.1937
+densenet121,all test patches,p3292,OSCC,OSCC,OSCC,0.961,2.1285,33,0.2087,0.2226
+densenet121,all test patches,p3293,OSCC,OSCC,OSCC,0.9767,2.9105,35,0.2176,0.4419
+densenet121,all test patches,p3294,OSCC,OSCC,OSCC,0.9983,2.6539,34,0.1914,0.3816
+densenet121,all test patches,p3295,OSCC,OSCC,OSCC,1.0,4.0712,42,0.185,0.2332
+densenet121,all test patches,p3296,OSCC,OSCC,OSCC,0.9983,1.7301,23,0.2456,0.3154
+densenet121,all test patches,p3297,OSCC,With dysplasia,OSCC,0.9379,2.7318,30,0.2337,0.3801
+densenet121,all test patches,p3298,OSCC,With dysplasia,OSCC,0.584,1.7248,21,0.3085,0.1135
+densenet121,all test patches,p3299,OSCC,With dysplasia,OSCC,0.9852,3.7977,28,0.3061,0.6769
+densenet121,all test patches,p3300,Without dysplasia,With dysplasia,Without dysplasia,0.9625,2.5008,44,0.1643,0.2284
+densenet121,all test patches,p3301,Without dysplasia,With dysplasia,Without dysplasia,0.9915,4.3193,45,0.1258,0.2701
+densenet121,all test patches,p3302,Without dysplasia,With dysplasia,Without dysplasia,0.8909,3.2794,47,0.1508,0.2106
+densenet121,all test patches,p3303,Without dysplasia,With dysplasia,With dysplasia,0.9883,1.9933,26,0.2505,0.3152
+densenet121,all test patches,p3304,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9354,3.6675,43,0.2175,0.3452
+densenet121,all test patches,p3305,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9865,3.1944,37,0.2451,0.1569
+densenet121,all test patches,p3306,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9971,4.4909,45,0.1638,0.2988
+densenet121,all test patches,p3307,Without dysplasia,not in NDB-UFES,With dysplasia,0.9309,1.1411,12,0.4379,0.3389
+densenet121,all test patches,p3308,Without dysplasia,not in NDB-UFES,Without dysplasia,0.996,2.3176,43,0.1415,0.2801
+densenet121,all test patches,p3309,Without dysplasia,Without dysplasia,Without dysplasia,0.9511,3.9451,43,0.1642,0.343
+densenet121,all test patches,p3310,Without dysplasia,Without dysplasia,Without dysplasia,0.83,5.8151,41,0.2216,0.259
+densenet121,all test patches,p3311,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9868,0.9232,26,0.2224,0.1564
+densenet121,all test patches,p3312,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9727,2.317,39,0.1917,0.3784
+densenet121,all test patches,p3313,Without dysplasia,With dysplasia,With dysplasia,0.9411,2.3052,25,0.2144,0.1873
+densenet121,all test patches,p3314,Without dysplasia,With dysplasia,With dysplasia,0.6746,3.2901,45,0.1392,0.2734
+densenet121,all test patches,p3315,Without dysplasia,Without dysplasia,Without dysplasia,0.9944,2.2232,41,0.1518,0.3011
+densenet121,all test patches,p3316,Without dysplasia,Without dysplasia,Without dysplasia,0.9989,1.7605,25,0.2999,0.1196
+densenet121,all test patches,p3317,Without dysplasia,With dysplasia,Without dysplasia,0.7287,2.8945,43,0.1534,0.288
+densenet121,all test patches,p3318,Without dysplasia,With dysplasia,Without dysplasia,0.9952,2.6601,46,0.1438,0.31
+densenet121,all test patches,p3319,Without dysplasia,With dysplasia,Without dysplasia,0.9966,2.811,48,0.1339,0.2699
+densenet121,all test patches,p3320,Without dysplasia,With dysplasia,Without dysplasia,0.6784,1.1631,25,0.2458,0.1818
+densenet121,all test patches,p3321,Without dysplasia,With dysplasia,Without dysplasia,0.9994,1.5575,29,0.2365,0.5545
+densenet121,all test patches,p3322,Without dysplasia,With dysplasia,Without dysplasia,0.9991,2.4013,36,0.2332,0.2655
+densenet121,all test patches,p3323,Without dysplasia,OSCC,Without dysplasia,0.4338,3.3367,40,0.1855,0.2686
+densenet121,all test patches,p3324,Without dysplasia,OSCC,Without dysplasia,0.5912,3.2538,41,0.1669,0.2481
+densenet121,all test patches,p3325,Without dysplasia,OSCC,Without dysplasia,0.9991,2.032,47,0.1331,0.2429
+densenet121,all test patches,p3326,Without dysplasia,OSCC,Without dysplasia,0.9822,1.4806,17,0.3538,0.0298
+densenet121,all test patches,p3327,Without dysplasia,OSCC,Without dysplasia,0.9575,1.8911,16,0.3948,0.3148
+densenet121,all test patches,p3328,Without dysplasia,OSCC,Without dysplasia,0.9914,2.9506,41,0.1674,0.3248
+densenet121,all test patches,p3329,Without dysplasia,OSCC,Without dysplasia,0.9977,3.8016,46,0.1293,0.2954
+densenet121,all test patches,p3330,Without dysplasia,OSCC,Without dysplasia,0.993,2.0744,41,0.2249,0.273
+densenet121,all test patches,p3331,Without dysplasia,OSCC,Without dysplasia,0.9956,3.1921,43,0.1694,0.2137
+densenet121,all test patches,p3332,Without dysplasia,OSCC,Without dysplasia,0.9895,2.1708,36,0.1706,0.2097
+densenet121,all test patches,p3333,Without dysplasia,OSCC,Without dysplasia,0.9945,2.2198,45,0.1725,0.1705
+densenet121,all test patches,p3334,Without dysplasia,OSCC,Without dysplasia,0.9919,3.1102,38,0.2143,0.2798
+densenet121,all test patches,p3335,Without dysplasia,OSCC,Without dysplasia,0.9889,4.3037,35,0.307,0.2976
+densenet121,all test patches,p3336,Without dysplasia,OSCC,Without dysplasia,0.9958,3.2227,47,0.1288,0.2415
+densenet121,all test patches,p3337,Without dysplasia,Without dysplasia,Without dysplasia,0.9784,3.1436,38,0.1808,0.2624
+densenet121,all test patches,p3338,Without dysplasia,Without dysplasia,With dysplasia,0.8881,0.4191,8,0.4728,0.1183
+densenet121,all test patches,p3339,Without dysplasia,With dysplasia,Without dysplasia,0.9996,1.4488,39,0.1324,0.2635
+densenet121,all test patches,p3340,Without dysplasia,Without dysplasia,Without dysplasia,0.9698,1.7626,34,0.2026,0.3402
+densenet121,all test patches,p3341,Without dysplasia,Without dysplasia,Without dysplasia,0.9978,2.8232,39,0.1725,0.3308
+densenet121,all test patches,p3342,Without dysplasia,Without dysplasia,Without dysplasia,0.9279,1.2746,25,0.3176,0.1542
+densenet121,all test patches,p3343,Without dysplasia,Without dysplasia,Without dysplasia,0.9952,2.0476,26,0.2847,0.1622
+densenet121,all test patches,p3344,Without dysplasia,Without dysplasia,Without dysplasia,0.9745,2.2535,44,0.1458,0.2521
+densenet121,all test patches,p3345,Without dysplasia,Without dysplasia,Without dysplasia,0.9951,4.7201,46,0.1638,0.2573
+densenet121,all test patches,p3346,Without dysplasia,Without dysplasia,Without dysplasia,0.8927,2.4499,40,0.163,0.2208
+densenet121,all test patches,p3347,Without dysplasia,Without dysplasia,Without dysplasia,0.9982,3.264,41,0.1858,0.3549
+densenet121,all test patches,p3348,Without dysplasia,Without dysplasia,Without dysplasia,0.9858,2.1873,38,0.1797,0.1692
+densenet121,all test patches,p3349,Without dysplasia,With dysplasia,Without dysplasia,0.9404,3.3495,37,0.2099,0.4367
+densenet121,all test patches,p3350,Without dysplasia,With dysplasia,With dysplasia,0.9333,1.6842,9,0.6862,0.0
+densenet121,all test patches,p3351,Without dysplasia,With dysplasia,Without dysplasia,0.9902,2.5004,15,0.4082,0.0562
+densenet121,all test patches,p3352,Without dysplasia,With dysplasia,Without dysplasia,0.9819,2.6599,10,0.531,0.0615
+densenet121,all test patches,p3353,Without dysplasia,With dysplasia,Without dysplasia,0.9983,2.5038,21,0.3478,0.2136
+densenet121,all test patches,p3354,Without dysplasia,With dysplasia,Without dysplasia,0.8783,2.8585,38,0.1771,0.262
+densenet121,all test patches,p3355,Without dysplasia,With dysplasia,With dysplasia,0.8351,1.9296,25,0.2495,0.0642
+densenet121,all test patches,p3357,Without dysplasia,With dysplasia,Without dysplasia,0.9999,6.1128,46,0.1988,0.2202
+densenet121,all test patches,p3358,Without dysplasia,Without dysplasia,Without dysplasia,0.9954,3.0226,38,0.1704,0.2685
+densenet121,all test patches,p3359,Without dysplasia,Without dysplasia,Without dysplasia,0.9995,3.1172,44,0.165,0.1747
+densenet121,all test patches,p3360,Without dysplasia,Without dysplasia,Without dysplasia,0.9984,4.1019,45,0.1469,0.2198
+densenet121,all test patches,p3361,Without dysplasia,Without dysplasia,Without dysplasia,0.7861,4.0114,42,0.1476,0.2632
+densenet121,all test patches,p3362,Without dysplasia,Without dysplasia,Without dysplasia,0.9987,3.613,44,0.1395,0.2654
+densenet121,all test patches,p3363,Without dysplasia,Without dysplasia,Without dysplasia,0.9615,3.7984,48,0.1315,0.313
+densenet121,all test patches,p3364,Without dysplasia,Without dysplasia,Without dysplasia,0.9744,3.3377,46,0.1286,0.3107
+densenet121,all test patches,p3365,Without dysplasia,Without dysplasia,Without dysplasia,0.9997,3.019,45,0.1247,0.2485
+densenet121,all test patches,p3366,Without dysplasia,Without dysplasia,Without dysplasia,0.9658,4.4709,46,0.1327,0.3363
+densenet121,all test patches,p3367,Without dysplasia,Without dysplasia,Without dysplasia,0.528,2.4918,49,0.1296,0.2142
+densenet121,all test patches,p3368,Without dysplasia,With dysplasia,Without dysplasia,0.8904,2.7475,41,0.1466,0.3211
+densenet121,all test patches,p3369,Without dysplasia,With dysplasia,Without dysplasia,0.5428,2.9054,41,0.1382,0.3247
+densenet121,all test patches,p3370,Without dysplasia,With dysplasia,Without dysplasia,0.7999,2.6451,40,0.1296,0.2612
+densenet121,all test patches,p3371,Without dysplasia,Without dysplasia,Without dysplasia,0.9212,1.4101,28,0.1998,0.3537
+densenet121,all test patches,p3372,Without dysplasia,Without dysplasia,Without dysplasia,0.9896,2.5002,42,0.1534,0.3201
+densenet121,all test patches,p3373,Without dysplasia,Without dysplasia,Without dysplasia,0.9987,2.1079,47,0.1302,0.2083
+densenet121,all test patches,p3374,Without dysplasia,Without dysplasia,Without dysplasia,0.9976,2.2206,34,0.2454,0.1891
+densenet121,all test patches,p3375,Without dysplasia,With dysplasia,Without dysplasia,0.9949,2.99,46,0.1464,0.244
+densenet121,all test patches,p3376,Without dysplasia,Without dysplasia,Without dysplasia,0.8766,2.1968,25,0.2467,0.2417
+densenet121,all test patches,p3377,Without dysplasia,Without dysplasia,Without dysplasia,0.9895,4.1699,44,0.1637,0.259
+densenet121,all test patches,p3378,Without dysplasia,Without dysplasia,Without dysplasia,0.996,3.0797,39,0.1939,0.237
+densenet121,all test patches,p3379,Without dysplasia,With dysplasia,Without dysplasia,0.9109,2.4595,26,0.2441,0.4121
+densenet121,all test patches,p3380,Without dysplasia,With dysplasia,Without dysplasia,0.9995,2.9407,39,0.1834,0.3573
+densenet121,all test patches,p3381,Without dysplasia,With dysplasia,Without dysplasia,0.7407,3.2713,35,0.2199,0.2367
+densenet121,all test patches,p3382,Without dysplasia,With dysplasia,Without dysplasia,0.9734,4.9881,37,0.2353,0.2238
+densenet121,all test patches,p3383,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9901,3.3287,45,0.1343,0.2597
+densenet121,all test patches,p3384,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9987,3.4262,46,0.1438,0.296
+densenet121,all test patches,p3385,Without dysplasia,not in NDB-UFES,Without dysplasia,0.8837,2.5724,37,0.2359,0.349
+densenet121,all test patches,p3386,Without dysplasia,not in NDB-UFES,Without dysplasia,0.7821,2.6584,40,0.1982,0.255
+densenet121,all test patches,p3387,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9818,4.2327,45,0.1527,0.2854
+densenet121,all test patches,p3388,Without dysplasia,not in NDB-UFES,Without dysplasia,0.8141,2.2914,46,0.139,0.1722
+densenet121,all test patches,p3389,Without dysplasia,With dysplasia,Without dysplasia,0.6208,2.45,23,0.2611,0.2011
+densenet121,all test patches,p3390,Without dysplasia,With dysplasia,Without dysplasia,0.9746,3.6473,41,0.1717,0.2714
+densenet121,all test patches,p3391,Without dysplasia,With dysplasia,Without dysplasia,0.9962,2.6038,40,0.1503,0.2077
+densenet121,all test patches,p3392,Without dysplasia,Without dysplasia,With dysplasia,0.5197,0.9434,11,0.4743,0.2
+densenet121,all test patches,p3393,Without dysplasia,Without dysplasia,Without dysplasia,0.5889,3.0816,28,0.2566,0.2765
+densenet121,all test patches,p3394,Without dysplasia,With dysplasia,With dysplasia,0.9969,4.0373,33,0.2414,0.0905
+densenet121,all test patches,p3395,Without dysplasia,With dysplasia,With dysplasia,0.9063,1.9147,9,0.645,0.0
+densenet121,all test patches,p3396,Without dysplasia,With dysplasia,Without dysplasia,0.9194,2.6351,32,0.1995,0.3186
+densenet121,all test patches,p3397,Without dysplasia,With dysplasia,Without dysplasia,0.9975,3.7097,17,0.4247,0.0912
+densenet121,all test patches,p3398,Without dysplasia,With dysplasia,With dysplasia,0.7064,2.2884,35,0.1865,0.2754
+densenet121,all test patches,p3399,Without dysplasia,With dysplasia,Without dysplasia,0.5125,0.8901,7,0.5977,0.1255
+densenet121,all test patches,p3400,Without dysplasia,With dysplasia,Without dysplasia,0.9553,3.3047,32,0.1946,0.2706
+densenet121,all test patches,p3401,Without dysplasia,Without dysplasia,Without dysplasia,0.7647,2.6694,44,0.1404,0.2967
+densenet121,all test patches,p3402,Without dysplasia,Without dysplasia,Without dysplasia,0.9928,1.8987,27,0.2236,0.1434
+densenet121,all test patches,p3403,Without dysplasia,Without dysplasia,Without dysplasia,0.6977,2.334,36,0.1956,0.4071
+densenet121,all test patches,p3404,Without dysplasia,Without dysplasia,Without dysplasia,0.9968,3.0313,17,0.564,0.046
+densenet121,all test patches,p3405,Without dysplasia,Without dysplasia,Without dysplasia,0.988,1.1656,31,0.2201,0.2019
+densenet121,all test patches,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.8982,1.4871,6,0.6921,0.0
+densenet121,all test patches,p3407,With dysplasia,not in NDB-UFES,With dysplasia,0.9951,2.1583,5,0.7951,0.0
+densenet121,all test patches,p3408,With dysplasia,With dysplasia,With dysplasia,0.9985,1.6489,31,0.2017,0.2208
+densenet121,all test patches,p3409,With dysplasia,With dysplasia,OSCC,0.6711,3.452,36,0.179,0.3333
+densenet121,all test patches,p3410,With dysplasia,With dysplasia,OSCC,0.6481,3.1752,39,0.1569,0.272
+densenet121,all test patches,p3411,With dysplasia,With dysplasia,With dysplasia,0.9977,1.8772,30,0.2254,0.2696
+densenet121,all test patches,p3412,With dysplasia,With dysplasia,With dysplasia,0.9941,1.2514,21,0.2817,0.1693
+densenet121,all test patches,p3413,With dysplasia,With dysplasia,With dysplasia,0.9968,3.5324,47,0.1412,0.2729
+densenet121,all test patches,p3414,With dysplasia,With dysplasia,With dysplasia,0.9489,4.9555,47,0.1621,0.1503
+densenet121,all test patches,p3415,With dysplasia,With dysplasia,With dysplasia,0.9995,3.4108,40,0.1726,0.2337
+densenet121,all test patches,p3416,With dysplasia,With dysplasia,With dysplasia,0.9957,2.0375,28,0.215,0.177
+densenet121,all test patches,p3417,With dysplasia,With dysplasia,With dysplasia,0.9938,2.7614,42,0.1656,0.1984
+densenet121,all test patches,p3418,With dysplasia,With dysplasia,With dysplasia,0.9812,0.8716,5,0.7901,0.4158
+densenet121,all test patches,p3419,With dysplasia,With dysplasia,With dysplasia,0.9866,0.8978,14,0.3881,0.0
+densenet121,all test patches,p3420,With dysplasia,With dysplasia,With dysplasia,0.9867,0.8205,5,0.7242,0.0
+densenet121,all test patches,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.6249,1.9383,23,0.2241,0.4404
+densenet121,all test patches,p3422,With dysplasia,not in NDB-UFES,With dysplasia,0.9818,0.9597,3,0.9673,0.1428
+densenet121,all test patches,p3423,With dysplasia,not in NDB-UFES,With dysplasia,0.976,1.5508,10,0.5203,0.0712
+densenet121,all test patches,p3424,With dysplasia,not in NDB-UFES,With dysplasia,0.7633,0.8768,3,0.9353,0.0
+densenet121,all test patches,p3425,With dysplasia,not in NDB-UFES,With dysplasia,0.9982,4.62,35,0.1885,0.4325
+densenet121,all test patches,p3426,With dysplasia,not in NDB-UFES,With dysplasia,0.9396,3.5953,25,0.2286,0.1472
+densenet121,all test patches,p3427,With dysplasia,not in NDB-UFES,With dysplasia,0.9981,4.1467,40,0.179,0.213
+densenet121,all test patches,p3428,With dysplasia,With dysplasia,With dysplasia,0.8597,2.9097,36,0.1953,0.1182
+densenet121,all test patches,p3429,With dysplasia,With dysplasia,With dysplasia,0.993,2.2423,35,0.2054,0.2878
+densenet121,all test patches,p3430,With dysplasia,With dysplasia,With dysplasia,0.9672,2.3092,35,0.2056,0.1852
+densenet121,all test patches,p3431,With dysplasia,With dysplasia,With dysplasia,0.958,0.9983,18,0.2754,0.0252
+densenet121,all test patches,p3432,With dysplasia,With dysplasia,With dysplasia,0.8103,3.6201,41,0.1317,0.2359
+densenet121,all test patches,p3433,With dysplasia,With dysplasia,OSCC,0.719,1.0974,6,0.7425,0.0
+densenet121,all test patches,p3434,With dysplasia,OSCC,With dysplasia,0.8628,2.0603,27,0.2333,0.0691
+densenet121,all test patches,p3435,With dysplasia,Without dysplasia,With dysplasia,0.9987,2.0975,46,0.1382,0.2906
+densenet121,all test patches,p3436,With dysplasia,Without dysplasia,With dysplasia,0.978,1.6855,33,0.191,0.2268
+densenet121,all test patches,p3437,With dysplasia,Without dysplasia,With dysplasia,0.997,2.5208,40,0.1752,0.2702
+densenet121,all test patches,p3438,With dysplasia,With dysplasia,With dysplasia,0.8147,2.5406,26,0.3065,0.0944
+densenet121,all test patches,p3439,With dysplasia,With dysplasia,With dysplasia,0.899,3.6591,28,0.2472,0.1444
+densenet121,all test patches,p3440,With dysplasia,With dysplasia,With dysplasia,0.9995,3.1858,43,0.1536,0.1602
+densenet121,all test patches,p3441,With dysplasia,With dysplasia,With dysplasia,0.9992,3.1068,47,0.112,0.2312
+densenet121,all test patches,p3442,With dysplasia,not in NDB-UFES,Without dysplasia,0.8976,4.353,35,0.1967,0.2505
+densenet121,all test patches,p3443,With dysplasia,OSCC,With dysplasia,0.9979,2.0967,15,0.3963,0.101
+densenet121,all test patches,p3444,With dysplasia,OSCC,With dysplasia,0.8767,3.2446,39,0.1678,0.1504
+densenet121,all test patches,p3445,With dysplasia,not in NDB-UFES,With dysplasia,0.9124,3.4185,12,0.478,0.0
+densenet121,all test patches,p3446,With dysplasia,not in NDB-UFES,With dysplasia,0.9674,1.7463,10,0.5425,0.01
+densenet121,all test patches,p3447,With dysplasia,not in NDB-UFES,With dysplasia,0.4977,0.4636,2,0.9279,0.0
+densenet121,all test patches,p3448,With dysplasia,not in NDB-UFES,With dysplasia,0.9406,2.4134,34,0.1583,0.1315
+densenet121,all test patches,p3449,With dysplasia,not in NDB-UFES,With dysplasia,0.964,2.2747,46,0.1245,0.1329
+densenet121,all test patches,p3450,With dysplasia,With dysplasia,With dysplasia,0.9826,2.8793,44,0.1441,0.2469
+densenet121,all test patches,p3451,With dysplasia,With dysplasia,With dysplasia,0.9598,3.2054,27,0.2741,0.0934
+densenet121,all test patches,p3452,With dysplasia,With dysplasia,With dysplasia,0.9968,1.805,19,0.3373,0.0308
+densenet121,all test patches,p3453,With dysplasia,With dysplasia,With dysplasia,0.955,1.2685,8,0.674,0.041
+densenet121,all test patches,p3454,With dysplasia,With dysplasia,With dysplasia,1.0,3.0176,37,0.1783,0.2885
+densenet121,all test patches,p3455,With dysplasia,With dysplasia,With dysplasia,0.9997,2.1989,40,0.1568,0.1366
+densenet121,all test patches,p3456,With dysplasia,With dysplasia,With dysplasia,0.9868,1.3277,14,0.3275,0.3215
+densenet121,all test patches,p3457,With dysplasia,Without dysplasia,With dysplasia,0.9926,1.1378,19,0.2831,0.0981
+densenet121,all test patches,p3458,With dysplasia,With dysplasia,With dysplasia,0.9883,2.0287,13,0.5116,0.3495
+densenet121,all test patches,p3459,With dysplasia,With dysplasia,With dysplasia,0.9998,1.9311,31,0.2318,0.2004
+densenet121,all test patches,p3460,With dysplasia,With dysplasia,With dysplasia,0.9986,1.1585,9,0.6061,0.0
+densenet121,all test patches,p3461,With dysplasia,not in NDB-UFES,With dysplasia,0.9997,2.654,32,0.1753,0.2388
+densenet121,all test patches,p3462,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,3.6917,26,0.2612,0.0537
+densenet121,all test patches,p3463,With dysplasia,not in NDB-UFES,OSCC,0.6828,3.3239,41,0.1948,0.1627
+densenet121,all test patches,p3464,With dysplasia,not in NDB-UFES,With dysplasia,0.5614,1.1047,8,0.5812,0.0373
+densenet121,all test patches,p3465,With dysplasia,not in NDB-UFES,With dysplasia,0.969,0.4248,5,0.7327,0.1522
+densenet121,all test patches,p3466,With dysplasia,OSCC,With dysplasia,0.9807,2.8227,35,0.1711,0.2524
+densenet121,all test patches,p3467,With dysplasia,OSCC,With dysplasia,0.9311,3.7166,30,0.243,0.1297
+densenet121,all test patches,p3468,With dysplasia,OSCC,With dysplasia,0.996,0.8792,16,0.3712,0.3185
+densenet121,all test patches,p3469,With dysplasia,OSCC,OSCC,0.8725,2.6312,11,0.5116,0.0
+densenet121,all test patches,p3470,With dysplasia,OSCC,With dysplasia,0.9268,0.6394,7,0.6391,0.0
+densenet121,all test patches,p3471,With dysplasia,OSCC,With dysplasia,0.9975,2.1091,26,0.2102,0.117
+densenet121,all test patches,p3472,With dysplasia,not in NDB-UFES,With dysplasia,0.9996,1.8058,13,0.4296,0.0501
+densenet121,all test patches,p3473,With dysplasia,not in NDB-UFES,With dysplasia,0.9925,0.8505,4,0.8083,0.0
+densenet121,all test patches,p3474,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,3.3448,37,0.1564,0.3011
+densenet121,all test patches,p3475,With dysplasia,not in NDB-UFES,With dysplasia,0.9991,2.8078,47,0.112,0.2196
+densenet121,all test patches,p3476,With dysplasia,not in NDB-UFES,With dysplasia,0.998,1.4675,13,0.5068,0.0698
+densenet121,all test patches,p3477,With dysplasia,With dysplasia,With dysplasia,0.8858,1.2399,12,0.4762,0.0
+densenet121,all test patches,p3478,With dysplasia,With dysplasia,With dysplasia,0.9124,0.9564,13,0.4116,0.0
+densenet121,all test patches,p3479,With dysplasia,With dysplasia,With dysplasia,0.9998,6.7527,39,0.2592,0.4519
+densenet121,all test patches,p3480,With dysplasia,With dysplasia,With dysplasia,0.9886,2.494,23,0.3249,0.3553
+densenet121,all test patches,p3481,With dysplasia,OSCC,With dysplasia,1.0,2.8217,37,0.2214,0.22
+densenet121,all test patches,p3482,With dysplasia,OSCC,With dysplasia,0.9993,4.0372,31,0.1843,0.1499
+densenet121,all test patches,p3483,With dysplasia,OSCC,With dysplasia,0.9979,3.3029,37,0.1993,0.2742
+densenet121,all test patches,p3484,With dysplasia,OSCC,With dysplasia,0.9982,2.1225,21,0.3839,0.022
+densenet121,all test patches,p3485,With dysplasia,OSCC,With dysplasia,1.0,3.7692,46,0.1493,0.226
+densenet121,all test patches,p3486,With dysplasia,OSCC,With dysplasia,1.0,3.3936,48,0.1288,0.2407
+densenet121,all test patches,p3487,With dysplasia,OSCC,With dysplasia,1.0,4.1538,43,0.1624,0.2078
+densenet121,all test patches,p3488,With dysplasia,OSCC,With dysplasia,1.0,4.1998,47,0.1254,0.2904
+densenet121,all test patches,p3489,With dysplasia,OSCC,With dysplasia,0.9962,1.3405,24,0.2346,0.1778
+densenet121,all test patches,p3490,With dysplasia,not in NDB-UFES,With dysplasia,0.9996,3.1482,29,0.2484,0.1534
+densenet121,all test patches,p3491,With dysplasia,not in NDB-UFES,With dysplasia,0.8416,0.5601,10,0.3731,0.0
+densenet121,all test patches,p3492,With dysplasia,OSCC,With dysplasia,0.9956,2.2835,32,0.1878,0.1397
+densenet121,all test patches,p3493,With dysplasia,OSCC,With dysplasia,0.9973,3.626,45,0.1783,0.1458
+densenet121,all test patches,p3494,With dysplasia,OSCC,With dysplasia,0.9996,2.371,38,0.1438,0.2824
+densenet121,all test patches,p3495,With dysplasia,OSCC,With dysplasia,0.7322,1.5011,25,0.2483,0.0331
+densenet121,all test patches,p3496,With dysplasia,OSCC,With dysplasia,0.9968,3.9,32,0.2857,0.1061
+densenet121,all test patches,p3497,With dysplasia,not in NDB-UFES,With dysplasia,0.9863,3.9477,39,0.2393,0.0985
+densenet121,all test patches,p3498,With dysplasia,not in NDB-UFES,With dysplasia,0.9971,2.7145,40,0.2024,0.0445
+densenet121,all test patches,p3499,With dysplasia,Without dysplasia,With dysplasia,0.9636,1.1448,11,0.4903,0.0
+densenet121,all test patches,p3500,With dysplasia,Without dysplasia,With dysplasia,0.9736,2.5127,22,0.3128,0.0159
+densenet121,all test patches,p3501,With dysplasia,Without dysplasia,Without dysplasia,0.7998,1.5767,35,0.1731,0.1792
+densenet121,all test patches,p3502,With dysplasia,Without dysplasia,Without dysplasia,0.7755,2.3051,18,0.4518,0.2082
+densenet121,all test patches,p3503,With dysplasia,Without dysplasia,With dysplasia,0.9761,1.4027,29,0.2062,0.2563
+densenet121,all test patches,p3504,With dysplasia,Without dysplasia,With dysplasia,0.7718,1.3134,8,0.6487,0.0
+densenet121,all test patches,p3505,With dysplasia,Without dysplasia,With dysplasia,0.9829,1.6433,25,0.2476,0.1157
+densenet121,all test patches,p3506,With dysplasia,Without dysplasia,With dysplasia,0.7884,1.3504,19,0.3334,0.0586
+densenet121,all test patches,p3507,With dysplasia,not in NDB-UFES,With dysplasia,0.9297,2.3473,12,0.4676,0.0
+densenet121,all test patches,p3508,With dysplasia,With dysplasia,With dysplasia,0.9616,2.6224,30,0.2239,0.0558
+densenet121,all test patches,p3509,With dysplasia,With dysplasia,With dysplasia,0.9439,0.9265,14,0.3607,0.0
+densenet121,all test patches,p3510,With dysplasia,With dysplasia,With dysplasia,0.8931,2.1641,30,0.2206,0.249
+densenet121,all test patches,p3511,With dysplasia,Without dysplasia,With dysplasia,0.919,2.5921,26,0.2823,0.3113
+densenet121,all test patches,p3512,With dysplasia,Without dysplasia,With dysplasia,0.9982,2.6625,29,0.225,0.0907
+densenet121,all test patches,p3513,With dysplasia,Without dysplasia,With dysplasia,0.9956,2.0528,26,0.2542,0.2309
+densenet121,all test patches,p3514,With dysplasia,Without dysplasia,With dysplasia,0.9958,1.881,34,0.2167,0.182
+densenet121,all test patches,p3515,With dysplasia,Without dysplasia,With dysplasia,0.9925,1.0398,14,0.3262,0.0518
+densenet121,all test patches,p3516,With dysplasia,Without dysplasia,With dysplasia,0.9841,1.3387,20,0.2391,0.0534
+densenet121,all test patches,p3517,With dysplasia,With dysplasia,With dysplasia,0.9648,1.1807,7,0.6801,0.3035
+densenet121,all test patches,p3518,With dysplasia,not in NDB-UFES,With dysplasia,1.0,5.018,37,0.1791,0.3319
+densenet121,all test patches,p3519,With dysplasia,not in NDB-UFES,With dysplasia,0.9731,2.9107,21,0.2863,0.0868
+densenet121,all test patches,p3520,With dysplasia,not in NDB-UFES,With dysplasia,1.0,4.3011,29,0.283,0.4475
+densenet121,all test patches,p3521,With dysplasia,With dysplasia,With dysplasia,0.992,1.4534,23,0.3035,0.322
+densenet121,all test patches,p3522,With dysplasia,With dysplasia,With dysplasia,0.9939,1.5084,13,0.4474,0.0455
+densenet121,all test patches,p3523,With dysplasia,With dysplasia,With dysplasia,0.955,0.3048,10,0.4249,0.0715
+densenet121,all test patches,p3524,With dysplasia,Without dysplasia,With dysplasia,1.0,2.1724,26,0.2264,0.2167
+densenet121,all test patches,p3525,With dysplasia,Without dysplasia,With dysplasia,0.9994,2.0859,35,0.2038,0.3118
+densenet121,all test patches,p3526,With dysplasia,Without dysplasia,With dysplasia,1.0,3.4869,41,0.1651,0.2667
+densenet121,all test patches,p3527,With dysplasia,Without dysplasia,Without dysplasia,0.6029,0.7225,26,0.2398,0.1473
+densenet121,all test patches,p3528,With dysplasia,Without dysplasia,Without dysplasia,0.9766,2.4372,45,0.162,0.2622
+densenet121,all test patches,p3529,With dysplasia,Without dysplasia,With dysplasia,1.0,2.6792,25,0.2677,0.2221
+densenet121,all test patches,p3530,With dysplasia,Without dysplasia,With dysplasia,0.9965,1.5137,8,0.5824,0.34
+densenet121,all test patches,p3531,With dysplasia,Without dysplasia,With dysplasia,0.9999,3.0211,31,0.2516,0.0757
+densenet121,all test patches,p3532,With dysplasia,Without dysplasia,With dysplasia,0.9989,2.1234,34,0.1734,0.3464
+densenet121,all test patches,p3533,With dysplasia,Without dysplasia,With dysplasia,0.99,1.9555,30,0.2517,0.2855
+densenet121,all test patches,p3534,With dysplasia,Without dysplasia,With dysplasia,0.9996,3.3008,34,0.2174,0.3209
+densenet121,all test patches,p3535,With dysplasia,Without dysplasia,With dysplasia,0.8883,2.6641,20,0.3329,0.2093
+densenet121,all test patches,p3536,With dysplasia,Without dysplasia,With dysplasia,0.6529,1.3105,36,0.1757,0.2589
+densenet121,all test patches,p3537,With dysplasia,Without dysplasia,With dysplasia,0.9976,2.0078,12,0.5251,0.0
+densenet121,all test patches,p3538,With dysplasia,Without dysplasia,With dysplasia,0.9744,0.7306,3,1.0,0.0
+densenet121,all test patches,p3539,With dysplasia,Without dysplasia,With dysplasia,0.9986,2.8542,48,0.1364,0.2055
+densenet121,all test patches,p3540,With dysplasia,Without dysplasia,With dysplasia,0.9953,1.4676,20,0.2572,0.0
+densenet121,all test patches,p3541,With dysplasia,Without dysplasia,With dysplasia,0.9999,5.3005,46,0.1505,0.256
+densenet121,all test patches,p3542,With dysplasia,OSCC,With dysplasia,0.9928,1.402,20,0.2921,0.1931
+densenet121,all test patches,p3543,With dysplasia,OSCC,With dysplasia,0.9973,3.5558,34,0.2705,0.2834
+densenet121,all test patches,p3544,With dysplasia,OSCC,With dysplasia,0.9873,1.5536,16,0.3884,0.1887
+densenet121,all test patches,p3545,With dysplasia,not in NDB-UFES,With dysplasia,0.9518,1.5859,8,0.6391,0.0
+densenet121,all test patches,p3546,With dysplasia,not in NDB-UFES,With dysplasia,0.9607,0.8338,4,0.8006,0.0
+densenet121,all test patches,p3547,With dysplasia,not in NDB-UFES,With dysplasia,0.9384,1.6675,17,0.3743,0.0075
+densenet121,all test patches,p3548,With dysplasia,not in NDB-UFES,Without dysplasia,0.6209,1.4291,30,0.2104,0.2972
+densenet121,all test patches,p3549,With dysplasia,OSCC,With dysplasia,0.8509,1.5414,28,0.2273,0.0882
+densenet121,all test patches,p3550,With dysplasia,OSCC,With dysplasia,0.8904,2.8586,27,0.3001,0.4968
+densenet121,all test patches,p3551,With dysplasia,OSCC,OSCC,0.8415,2.8236,42,0.1535,0.2976
+densenet121,all test patches,p3552,With dysplasia,not in NDB-UFES,With dysplasia,0.6033,1.6919,19,0.3405,0.143
+densenet121,all test patches,p3553,With dysplasia,not in NDB-UFES,With dysplasia,0.9969,1.5208,18,0.3831,0.0889
+densenet121,all test patches,p3554,With dysplasia,not in NDB-UFES,With dysplasia,0.9972,2.9254,23,0.3247,0.2695
+densenet121,all test patches,p3555,With dysplasia,With dysplasia,With dysplasia,1.0,3.4775,45,0.1347,0.277
+densenet121,all test patches,p3556,With dysplasia,With dysplasia,With dysplasia,0.9974,2.4197,20,0.2527,0.1451
+densenet121,all test patches,p3557,With dysplasia,With dysplasia,Without dysplasia,0.6707,3.629,33,0.1754,0.3643
+densenet121,all test patches,p3558,With dysplasia,OSCC,With dysplasia,0.9826,1.1577,15,0.3464,0.131
+densenet121,all test patches,p3559,With dysplasia,OSCC,With dysplasia,0.9962,2.6916,36,0.1818,0.2289
+densenet121,all test patches,p3560,With dysplasia,OSCC,With dysplasia,0.8935,3.5445,17,0.4669,0.0257
+densenet121,all test patches,p3561,With dysplasia,With dysplasia,With dysplasia,0.9936,1.7937,29,0.2356,0.1568
+densenet121,all test patches,p3562,With dysplasia,With dysplasia,With dysplasia,0.8811,0.7425,9,0.4792,0.0
+densenet121,all test patches,p3563,With dysplasia,With dysplasia,With dysplasia,0.9687,0.4203,9,0.5075,0.1098
+densenet121,all test patches,p3564,With dysplasia,With dysplasia,With dysplasia,0.9994,3.1695,38,0.2106,0.1629
+densenet121,all test patches,p3565,With dysplasia,With dysplasia,With dysplasia,0.9983,1.9097,15,0.451,0.0572
+densenet121,all test patches,p3566,With dysplasia,With dysplasia,With dysplasia,0.9996,2.6846,33,0.2611,0.1755
+densenet121,all test patches,p3567,With dysplasia,With dysplasia,With dysplasia,0.992,2.3378,30,0.1872,0.024
+densenet121,all test patches,p3568,With dysplasia,With dysplasia,With dysplasia,0.9998,1.8521,29,0.1885,0.0349
+densenet121,all test patches,p3569,With dysplasia,With dysplasia,With dysplasia,1.0,1.6596,32,0.2001,0.1775
+densenet121,all test patches,p3570,With dysplasia,With dysplasia,With dysplasia,0.9716,1.4408,26,0.2326,0.2347
+densenet121,all test patches,p3571,With dysplasia,With dysplasia,With dysplasia,0.9998,4.4762,38,0.1932,0.33
+densenet121,all test patches,p3572,With dysplasia,With dysplasia,With dysplasia,0.9987,2.8337,31,0.2312,0.1876
+densenet121,all test patches,p3573,With dysplasia,With dysplasia,With dysplasia,1.0,4.3186,47,0.129,0.1744
+densenet121,all test patches,p3574,With dysplasia,With dysplasia,With dysplasia,0.992,2.1795,25,0.2944,0.5125
+densenet121,all test patches,p3575,With dysplasia,not in NDB-UFES,With dysplasia,0.9801,1.1253,26,0.1984,0.1355
+densenet121,all test patches,p3576,With dysplasia,not in NDB-UFES,With dysplasia,0.9961,2.0215,40,0.1783,0.2446
+densenet121,all test patches,p3577,With dysplasia,not in NDB-UFES,OSCC,0.4372,0.7876,9,0.4811,0.1137
+densenet121,all test patches,p3578,With dysplasia,not in NDB-UFES,With dysplasia,0.9939,2.7623,44,0.1565,0.3521
+densenet121,all test patches,p3579,With dysplasia,not in NDB-UFES,With dysplasia,0.9989,3.2042,47,0.133,0.2347
+densenet121,all test patches,p3580,With dysplasia,not in NDB-UFES,With dysplasia,0.98,2.3744,38,0.168,0.226
+densenet121,all test patches,p3581,With dysplasia,OSCC,With dysplasia,0.9999,1.0093,17,0.2929,0.17
+densenet121,all test patches,p3582,With dysplasia,OSCC,With dysplasia,0.9946,1.6413,18,0.3267,0.0
+densenet121,all test patches,p3583,With dysplasia,not in NDB-UFES,With dysplasia,0.9616,0.9887,9,0.5631,0.0146
+densenet121,all test patches,p3584,With dysplasia,OSCC,With dysplasia,0.999,2.3499,16,0.3513,0.0045
+densenet121,all test patches,p3585,With dysplasia,OSCC,With dysplasia,0.9989,1.7181,18,0.3518,0.0085
+densenet121,all test patches,p3586,With dysplasia,OSCC,With dysplasia,0.9739,0.8814,10,0.4922,0.0
+densenet121,all test patches,p3587,With dysplasia,OSCC,With dysplasia,0.9993,1.4861,28,0.2065,0.1202
+densenet121,all test patches,p3588,With dysplasia,OSCC,With dysplasia,0.9997,1.2365,24,0.2095,0.1223
+densenet121,all test patches,p3589,With dysplasia,Without dysplasia,With dysplasia,1.0,5.2203,43,0.1573,0.2957
+densenet121,all test patches,p3590,With dysplasia,With dysplasia,With dysplasia,0.9943,1.4616,21,0.2744,0.0096
+densenet121,all test patches,p3591,With dysplasia,With dysplasia,With dysplasia,0.9871,1.0158,23,0.2417,0.2326
+densenet121,all test patches,p3592,With dysplasia,Without dysplasia,With dysplasia,0.7668,2.3083,20,0.4093,0.1088
+densenet121,all test patches,p3593,With dysplasia,With dysplasia,With dysplasia,1.0,1.5428,21,0.2751,0.0477
+densenet121,all test patches,p3594,With dysplasia,Without dysplasia,With dysplasia,0.7925,3.0509,33,0.1913,0.2925
+densenet121,all test patches,p3595,With dysplasia,Without dysplasia,Without dysplasia,0.9982,3.3577,41,0.1939,0.2795
+densenet121,all test patches,p3596,With dysplasia,With dysplasia,With dysplasia,0.9918,1.2523,19,0.2751,0.1575
+densenet121,all test patches,p3597,With dysplasia,With dysplasia,With dysplasia,0.9999,2.2014,37,0.1695,0.2303
+densenet121,all test patches,p3598,With dysplasia,With dysplasia,Without dysplasia,0.8941,2.2361,34,0.2084,0.219
+densenet121,all test patches,p3599,With dysplasia,With dysplasia,With dysplasia,0.9951,3.1123,28,0.2319,0.4608
+densenet121,all test patches,p3600,With dysplasia,With dysplasia,With dysplasia,0.8342,1.0986,27,0.1841,0.1918
+densenet121,all test patches,p3601,With dysplasia,With dysplasia,With dysplasia,0.7065,2.6971,30,0.2313,0.1166
+densenet121,all test patches,p3602,With dysplasia,With dysplasia,With dysplasia,0.8688,1.5364,6,0.7477,0.3102
+densenet121,all test patches,p3603,With dysplasia,With dysplasia,With dysplasia,0.9999,2.2919,34,0.2241,0.1697
+densenet121,all test patches,p3604,With dysplasia,With dysplasia,With dysplasia,0.9924,2.7645,21,0.3393,0.3312
+densenet121,all test patches,p3605,With dysplasia,With dysplasia,With dysplasia,0.9985,2.0124,25,0.2745,0.0352
+densenet121,all test patches,p3606,With dysplasia,not in NDB-UFES,With dysplasia,0.983,2.9748,40,0.1768,0.1837
+densenet121,all test patches,p3607,With dysplasia,OSCC,With dysplasia,0.8754,1.4751,25,0.2619,0.1866
+densenet121,all test patches,p3608,With dysplasia,OSCC,With dysplasia,0.9668,1.7831,12,0.5156,0.0
+densenet121,all test patches,p3609,With dysplasia,OSCC,With dysplasia,0.9994,3.1399,43,0.1961,0.3919
+densenet121,all test patches,p3610,With dysplasia,OSCC,With dysplasia,0.9797,0.9918,14,0.3856,0.2393
+densenet121,all test patches,p3611,With dysplasia,OSCC,With dysplasia,0.9908,0.9886,4,0.915,0.8286
+densenet121,all test patches,p3612,With dysplasia,OSCC,With dysplasia,0.848,2.6169,14,0.4153,0.0225
+densenet121,all test patches,p3613,With dysplasia,OSCC,With dysplasia,0.9986,1.2084,27,0.2635,0.0109
+densenet121,all test patches,p3614,With dysplasia,OSCC,With dysplasia,0.5878,4.0262,34,0.2484,0.1158
+densenet121,all test patches,p3615,With dysplasia,OSCC,With dysplasia,0.9982,1.6786,23,0.3152,0.4982
+densenet121,all test patches,p3616,With dysplasia,OSCC,With dysplasia,1.0,2.8012,46,0.1277,0.2267
+densenet121,all test patches,p3617,With dysplasia,OSCC,With dysplasia,0.9998,2.5533,37,0.199,0.2824
+densenet121,all test patches,p3618,With dysplasia,OSCC,With dysplasia,0.9941,2.1612,26,0.2538,0.1771
+densenet121,all test patches,p3619,With dysplasia,OSCC,With dysplasia,0.999,1.7529,35,0.1771,0.0957
+densenet121,all test patches,p3620,With dysplasia,OSCC,With dysplasia,0.9981,1.7047,34,0.1972,0.2632
+densenet121,all test patches,p3621,With dysplasia,OSCC,With dysplasia,0.9991,2.0642,34,0.1938,0.3657
+densenet121,all test patches,p3622,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,1.0461,16,0.3257,0.0137
+densenet121,all test patches,p3623,With dysplasia,not in NDB-UFES,With dysplasia,0.9997,1.0078,11,0.4133,0.1781
+densenet121,all test patches,p3624,With dysplasia,not in NDB-UFES,With dysplasia,0.999,2.6094,32,0.2244,0.2356
+densenet121,all test patches,p3625,With dysplasia,not in NDB-UFES,With dysplasia,0.9995,3.7222,39,0.2014,0.2337
+densenet121,all test patches,p3626,With dysplasia,not in NDB-UFES,With dysplasia,0.9193,0.8439,4,0.792,0.0
+densenet121,all test patches,p3627,With dysplasia,not in NDB-UFES,With dysplasia,1.0,2.5721,41,0.1987,0.1889
+densenet121,all test patches,p3628,With dysplasia,not in NDB-UFES,With dysplasia,0.9523,2.6252,19,0.3765,0.3691
+densenet121,all test patches,p3629,With dysplasia,not in NDB-UFES,With dysplasia,0.9882,1.9546,18,0.2986,0.3131
+densenet121,all test patches,p3630,With dysplasia,Without dysplasia,With dysplasia,0.9471,1.9974,30,0.2225,0.1017
+densenet121,all test patches,p3631,With dysplasia,Without dysplasia,With dysplasia,0.9979,3.5122,40,0.1754,0.2638
+densenet121,all test patches,p3632,With dysplasia,Without dysplasia,With dysplasia,0.9938,1.4641,15,0.4561,0.1484
+densenet121,all test patches,p3633,With dysplasia,With dysplasia,With dysplasia,0.9998,5.3158,34,0.2231,0.2116
+densenet121,all test patches,p3634,With dysplasia,With dysplasia,With dysplasia,0.9999,4.2601,32,0.2322,0.3315
+densenet121,all test patches,p3635,With dysplasia,With dysplasia,With dysplasia,0.9991,1.7839,25,0.2939,0.1002
+densenet121,all test patches,p3636,With dysplasia,OSCC,With dysplasia,0.9999,3.3879,41,0.148,0.2778
+densenet121,all test patches,p3637,With dysplasia,OSCC,With dysplasia,0.9838,2.8849,32,0.1975,0.0763
+densenet121,all test patches,p3638,With dysplasia,OSCC,With dysplasia,0.8662,1.668,10,0.4835,0.0
+densenet121,all test patches,p3639,With dysplasia,OSCC,With dysplasia,0.9684,3.6491,23,0.3059,0.5978
+densenet121,all test patches,p3640,With dysplasia,OSCC,With dysplasia,0.9994,2.4461,46,0.1207,0.2336
+densenet121,all test patches,p3641,With dysplasia,OSCC,With dysplasia,0.9883,2.9161,29,0.2749,0.0
+densenet121,all test patches,p3642,With dysplasia,Without dysplasia,With dysplasia,1.0,1.9605,21,0.2588,0.2292
+densenet121,all test patches,p3643,With dysplasia,Without dysplasia,With dysplasia,1.0,3.0135,36,0.177,0.2042
+densenet121,all test patches,p3644,With dysplasia,Without dysplasia,With dysplasia,0.9959,1.567,29,0.2337,0.0798
+densenet121,all test patches,p3645,With dysplasia,With dysplasia,With dysplasia,0.9928,0.9282,17,0.3544,0.1667
+densenet121,all test patches,p3646,With dysplasia,With dysplasia,With dysplasia,0.9776,1.8882,15,0.4103,0.0617
+densenet121,all test patches,p3647,With dysplasia,With dysplasia,With dysplasia,0.9922,1.3322,14,0.4542,0.4342
+densenet121,all test patches,p3648,With dysplasia,With dysplasia,With dysplasia,0.9997,2.4764,37,0.1578,0.1518
+densenet121,all test patches,p3649,With dysplasia,With dysplasia,With dysplasia,0.9907,1.5569,30,0.174,0.2968
+densenet121,all test patches,p3650,With dysplasia,With dysplasia,With dysplasia,0.9876,2.2974,20,0.3049,0.2397
+densenet121,all test patches,p3651,With dysplasia,With dysplasia,With dysplasia,0.9363,1.7171,16,0.4251,0.1183
+densenet121,all test patches,p3652,With dysplasia,With dysplasia,With dysplasia,0.9926,1.6981,30,0.1857,0.2109
+densenet121,all test patches,p3653,With dysplasia,With dysplasia,With dysplasia,0.8887,1.4469,18,0.3662,0.1463
+densenet121,all test patches,p3654,With dysplasia,OSCC,With dysplasia,0.9249,0.9977,26,0.2057,0.1471
+densenet121,all test patches,p3655,With dysplasia,OSCC,With dysplasia,0.8171,0.7918,12,0.3878,0.4037
+densenet121,all test patches,p3656,With dysplasia,OSCC,With dysplasia,0.9835,1.9835,37,0.1552,0.1723
+densenet121,all test patches,p3657,With dysplasia,OSCC,With dysplasia,0.9909,2.8178,47,0.1189,0.2028
+densenet121,all test patches,p3658,With dysplasia,OSCC,With dysplasia,0.9987,4.0582,48,0.1211,0.2271
+densenet121,all test patches,p3659,With dysplasia,OSCC,With dysplasia,0.9968,1.1779,25,0.2602,0.183
+densenet121,all test patches,p3660,With dysplasia,OSCC,With dysplasia,0.9956,2.1689,37,0.1566,0.2136
+densenet121,all test patches,p3661,With dysplasia,OSCC,With dysplasia,0.9918,2.2348,38,0.1514,0.1534
+densenet121,all test patches,p3662,With dysplasia,OSCC,OSCC,0.6984,1.4365,16,0.3394,0.1588
+densenet121,all test patches,p3663,With dysplasia,With dysplasia,Without dysplasia,0.5191,2.0704,34,0.1962,0.102
+densenet121,all test patches,p3664,With dysplasia,With dysplasia,With dysplasia,0.5972,1.8686,41,0.1631,0.1408
+densenet121,all test patches,p3665,With dysplasia,Without dysplasia,With dysplasia,0.9912,4.531,21,0.3396,0.0273
+densenet121,all test patches,p3666,With dysplasia,Without dysplasia,With dysplasia,0.995,2.3961,31,0.2065,0.2984
+densenet121,all test patches,p3667,With dysplasia,Without dysplasia,With dysplasia,0.9966,2.5971,38,0.2032,0.3214
+densenet121,all test patches,p3668,With dysplasia,Without dysplasia,With dysplasia,0.9998,3.257,40,0.1484,0.291
+densenet121,all test patches,p3669,With dysplasia,Without dysplasia,With dysplasia,0.9889,1.8665,26,0.209,0.3092
+densenet121,all test patches,p3670,With dysplasia,Without dysplasia,With dysplasia,0.996,1.202,17,0.3829,0.2114
+densenet121,all test patches,p3671,With dysplasia,Without dysplasia,With dysplasia,0.9133,2.6281,26,0.2497,0.1042
+densenet121,all test patches,p3672,With dysplasia,Without dysplasia,With dysplasia,0.9693,1.5514,10,0.5092,0.0
+densenet121,all test patches,p3673,With dysplasia,Without dysplasia,With dysplasia,0.9894,2.6067,18,0.4685,0.0352
+densenet121,all test patches,p3674,With dysplasia,not in NDB-UFES,With dysplasia,0.9279,1.7331,16,0.3723,0.0
+densenet121,all test patches,p3675,With dysplasia,not in NDB-UFES,With dysplasia,0.8472,4.4952,38,0.2178,0.2311
+densenet121,all test patches,p3676,With dysplasia,not in NDB-UFES,Without dysplasia,0.6849,3.3215,41,0.1526,0.2556
+densenet121,all test patches,p3677,With dysplasia,not in NDB-UFES,OSCC,0.8016,1.0146,13,0.3517,0.3256
+densenet121,all test patches,p3678,With dysplasia,not in NDB-UFES,OSCC,0.7095,1.5884,21,0.3008,0.3056
+densenet121,all test patches,p3679,With dysplasia,not in NDB-UFES,OSCC,0.6114,1.5922,42,0.1559,0.1759
+densenet121,all test patches,p3680,With dysplasia,not in NDB-UFES,With dysplasia,0.4932,0.5232,9,0.4129,0.0
+densenet121,all test patches,p3681,With dysplasia,not in NDB-UFES,OSCC,0.66,2.1572,33,0.1961,0.3092
+densenet121,all test patches,p3682,With dysplasia,OSCC,With dysplasia,0.9969,1.4029,22,0.2545,0.2309
+densenet121,all test patches,p3683,With dysplasia,OSCC,With dysplasia,0.9803,2.4086,29,0.2111,0.0886
+densenet121,all test patches,p3684,With dysplasia,OSCC,With dysplasia,0.5727,1.2979,12,0.5377,0.0
+densenet121,all test patches,p3685,With dysplasia,OSCC,With dysplasia,0.9917,1.8164,23,0.2876,0.0853
+densenet121,all test patches,p3686,With dysplasia,OSCC,With dysplasia,0.9853,0.6137,10,0.4232,0.0
+densenet121,all test patches,p3687,With dysplasia,OSCC,With dysplasia,0.9965,1.1224,29,0.2014,0.1088
+densenet121,all test patches,p3688,With dysplasia,OSCC,With dysplasia,0.9841,1.3018,20,0.3134,0.0615
+densenet121,all test patches,p3689,With dysplasia,OSCC,With dysplasia,0.9814,1.3748,19,0.3127,0.0193
+densenet121,all test patches,p3690,With dysplasia,OSCC,With dysplasia,0.9986,2.9521,38,0.1984,0.4048
+densenet121,all test patches,p3691,OSCC,not in NDB-UFES,With dysplasia,0.6647,1.7019,25,0.225,0.0232
+densenet121,all test patches,p3692,OSCC,not in NDB-UFES,OSCC,0.9984,3.8262,48,0.136,0.2197
+densenet121,all test patches,p3693,OSCC,OSCC,OSCC,0.9959,2.4482,33,0.2209,0.3374
+densenet121,all test patches,p3694,OSCC,OSCC,OSCC,0.9922,0.8376,10,0.4201,0.0759
+densenet121,all test patches,p3695,OSCC,OSCC,OSCC,0.9982,2.1747,30,0.2497,0.0722
+densenet121,all test patches,p3696,OSCC,OSCC,OSCC,0.9908,2.4589,32,0.1895,0.3606
+densenet121,all test patches,p3697,OSCC,OSCC,OSCC,0.9998,3.6921,40,0.1439,0.2997
+densenet121,all test patches,p3698,OSCC,OSCC,OSCC,0.9999,3.4906,39,0.1909,0.2169
+densenet121,all test patches,p3699,OSCC,OSCC,OSCC,0.9995,3.8675,45,0.1446,0.3271
+densenet121,all test patches,p3700,OSCC,OSCC,OSCC,0.9973,2.1068,24,0.2365,0.1524
+densenet121,all test patches,p3701,OSCC,OSCC,OSCC,0.9998,1.4133,18,0.2997,0.1275
+densenet121,all test patches,p3702,OSCC,OSCC,OSCC,0.9968,1.6585,20,0.3244,0.3809
+densenet121,all test patches,p3703,OSCC,OSCC,OSCC,0.9946,4.1788,46,0.1999,0.2011
+densenet121,all test patches,p3704,OSCC,With dysplasia,With dysplasia,0.5751,2.0209,17,0.3603,0.2086
+densenet121,all test patches,p3705,OSCC,OSCC,OSCC,0.9955,2.0549,28,0.2314,0.3473
+densenet121,all test patches,p3706,OSCC,OSCC,OSCC,0.996,2.0497,20,0.3509,0.1003
+densenet121,all test patches,p3707,OSCC,OSCC,OSCC,1.0,3.3122,23,0.3839,0.4929
+densenet121,all test patches,p3708,OSCC,OSCC,OSCC,0.9957,1.5467,24,0.2672,0.0586
+densenet121,all test patches,p3709,OSCC,OSCC,OSCC,0.994,1.6499,23,0.2661,0.2353
+densenet121,all test patches,p3710,OSCC,OSCC,OSCC,0.9886,2.6094,40,0.1927,0.2864
+densenet121,all test patches,p3711,OSCC,OSCC,OSCC,0.8323,4.4513,26,0.3028,0.1328
+densenet121,all test patches,p3712,OSCC,OSCC,OSCC,0.9999,4.3487,46,0.1186,0.1911
+densenet121,all test patches,p3713,OSCC,OSCC,OSCC,1.0,3.3016,44,0.1686,0.2157
+densenet121,all test patches,p3714,Without dysplasia,With dysplasia,Without dysplasia,0.9931,3.76,39,0.185,0.3295
+densenet121,all test patches,p3715,Without dysplasia,With dysplasia,Without dysplasia,0.9924,2.5144,45,0.1614,0.3245
+densenet121,all test patches,p3716,Without dysplasia,OSCC,Without dysplasia,0.9974,1.1938,22,0.2881,0.2893
+densenet121,all test patches,p3717,Without dysplasia,OSCC,Without dysplasia,0.9979,4.0142,41,0.1683,0.2779
+densenet121,all test patches,p3718,Without dysplasia,OSCC,Without dysplasia,0.998,1.5169,41,0.1408,0.1708
+densenet121,all test patches,p3719,Without dysplasia,Without dysplasia,Without dysplasia,0.9915,4.3639,38,0.2139,0.1826
+densenet121,all test patches,p3720,Without dysplasia,With dysplasia,Without dysplasia,0.9589,1.8656,41,0.1895,0.2434
+densenet121,all test patches,p3721,Without dysplasia,Without dysplasia,Without dysplasia,0.952,2.4437,38,0.2468,0.0733
+densenet121,all test patches,p3722,Without dysplasia,With dysplasia,Without dysplasia,0.9596,2.9342,36,0.1852,0.3121
+densenet121,all test patches,p3723,Without dysplasia,Without dysplasia,Without dysplasia,0.9519,3.0585,46,0.1443,0.2344
+densenet121,all test patches,p3724,Without dysplasia,Without dysplasia,Without dysplasia,0.9963,3.5272,39,0.1495,0.3178
+densenet121,all test patches,p3725,Without dysplasia,With dysplasia,With dysplasia,0.9528,2.2375,19,0.4252,0.3086
+densenet121,all test patches,p3726,With dysplasia,not in NDB-UFES,With dysplasia,0.9981,1.9074,21,0.3293,0.1979
+densenet121,all test patches,p3727,With dysplasia,With dysplasia,With dysplasia,0.9877,1.5459,13,0.4145,0.0725
+densenet121,all test patches,p3728,With dysplasia,OSCC,With dysplasia,0.8648,1.9924,31,0.2303,0.2507
+densenet121,all test patches,p3729,With dysplasia,Without dysplasia,With dysplasia,0.9717,0.9622,20,0.237,0.1573
+densenet121,all test patches,p3730,With dysplasia,Without dysplasia,With dysplasia,0.9983,1.9615,31,0.2338,0.0788
+densenet121,all test patches,p3731,With dysplasia,With dysplasia,With dysplasia,0.9986,5.4511,46,0.1412,0.3565
+densenet121,all test patches,p3732,With dysplasia,With dysplasia,With dysplasia,1.0,2.7457,39,0.1636,0.1297
+densenet121,all test patches,p3733,With dysplasia,With dysplasia,With dysplasia,0.9997,2.6411,36,0.1772,0.3034
+densenet121,all test patches,p3734,With dysplasia,With dysplasia,Without dysplasia,0.5472,2.1671,37,0.1665,0.1205
+densenet121,all test patches,p3735,With dysplasia,With dysplasia,Without dysplasia,0.9945,2.4031,41,0.1528,0.3691
+densenet121,all test patches,p3736,With dysplasia,OSCC,With dysplasia,0.8871,2.0647,32,0.1948,0.2189
+densenet121,all test patches,p3737,With dysplasia,OSCC,With dysplasia,0.9427,0.9428,6,0.6917,0.0
+densenet121,all test patches,p3738,With dysplasia,Without dysplasia,With dysplasia,0.8953,2.1415,16,0.3197,0.2149
+densenet121,all test patches,p3739,With dysplasia,Without dysplasia,Without dysplasia,0.8727,1.7413,17,0.3619,0.2155
+densenet121,all test patches,p3740,With dysplasia,Without dysplasia,With dysplasia,0.9993,1.8986,26,0.227,0.185
+densenet121,all test patches,p3741,With dysplasia,Without dysplasia,With dysplasia,0.9958,2.3632,41,0.1584,0.2719
+densenet121,all test patches,p3742,With dysplasia,Without dysplasia,With dysplasia,0.9835,2.1888,36,0.2199,0.3678
+densenet121,all test patches,p3743,With dysplasia,not in NDB-UFES,With dysplasia,0.8149,0.5916,5,0.8434,0.8434
+densenet121,all test patches,p3744,With dysplasia,OSCC,With dysplasia,0.9648,2.2021,28,0.2565,0.301
+densenet121,all test patches,p3745,With dysplasia,OSCC,With dysplasia,0.9831,0.3622,5,0.6949,0.2805
+densenet121,all test patches,p3746,With dysplasia,OSCC,OSCC,0.9482,0.6815,10,0.4458,0.0387
+densenet121,all test patches,p3747,With dysplasia,Without dysplasia,With dysplasia,1.0,2.5345,37,0.1948,0.0936
+densenet121,all test patches,p3748,With dysplasia,Without dysplasia,With dysplasia,0.969,3.1646,27,0.2754,0.5026
+densenet121,all test patches,p3749,With dysplasia,Without dysplasia,Without dysplasia,0.7904,2.1057,37,0.1822,0.1354
+densenet121,all test patches,p3750,With dysplasia,OSCC,With dysplasia,0.9827,1.3498,24,0.2876,0.1033
+densenet121,all test patches,p3751,With dysplasia,OSCC,With dysplasia,0.6626,1.5158,15,0.4402,0.0
+densenet121,all test patches,p3752,With dysplasia,Without dysplasia,With dysplasia,0.863,2.7287,25,0.323,0.0673
+densenet121,all test patches,p3753,With dysplasia,Without dysplasia,With dysplasia,0.9912,2.6537,29,0.2493,0.3954
+densenet121,all test patches,p3754,With dysplasia,With dysplasia,With dysplasia,1.0,1.6381,19,0.4025,0.0613
+densenet121,all test patches,p3755,With dysplasia,OSCC,With dysplasia,0.9996,3.2638,47,0.1199,0.2107
+densenet121,all test patches,p3756,With dysplasia,OSCC,Without dysplasia,0.3828,2.3378,42,0.1461,0.2712
+densenet121,all test patches,p3757,With dysplasia,OSCC,With dysplasia,0.9999,5.1399,40,0.1566,0.2844
+densenet121,all test patches,p3758,With dysplasia,With dysplasia,With dysplasia,0.9972,2.5301,25,0.3618,0.1287
+densenet121,all test patches,p3759,With dysplasia,OSCC,With dysplasia,0.9059,2.0803,22,0.2975,0.0
+densenet121,all test patches,p3760,With dysplasia,Without dysplasia,With dysplasia,0.7829,1.637,22,0.3824,0.0311
+densenet121,all test patches,p3761,With dysplasia,not in NDB-UFES,With dysplasia,1.0,3.9427,44,0.1499,0.1658
+densenet121,all test patches,p3762,With dysplasia,OSCC,With dysplasia,0.9919,1.7374,20,0.3131,0.2683
+swin_tiny_patch4_window7_224,all test patches,p3136,OSCC,not in NDB-UFES,OSCC,0.9214,0.6703,15,0.3253,0.0
+swin_tiny_patch4_window7_224,all test patches,p3137,OSCC,not in NDB-UFES,OSCC,0.5215,1.7505,10,0.604,0.0444
+swin_tiny_patch4_window7_224,all test patches,p3138,OSCC,not in NDB-UFES,OSCC,0.9201,0.6771,19,0.2575,0.1906
+swin_tiny_patch4_window7_224,all test patches,p3139,OSCC,OSCC,OSCC,0.9993,1.217,15,0.3961,0.0057
+swin_tiny_patch4_window7_224,all test patches,p3140,OSCC,OSCC,OSCC,1.0,1.5821,39,0.1847,0.1459
+swin_tiny_patch4_window7_224,all test patches,p3141,OSCC,OSCC,OSCC,1.0,2.0676,46,0.1501,0.2496
+swin_tiny_patch4_window7_224,all test patches,p3142,OSCC,not in NDB-UFES,OSCC,0.9923,2.2221,48,0.1283,0.2426
+swin_tiny_patch4_window7_224,all test patches,p3143,OSCC,OSCC,OSCC,1.0,1.5389,30,0.1977,0.1371
+swin_tiny_patch4_window7_224,all test patches,p3144,OSCC,OSCC,OSCC,1.0,2.0406,49,0.1133,0.2042
+swin_tiny_patch4_window7_224,all test patches,p3145,OSCC,OSCC,OSCC,1.0,1.4622,33,0.1562,0.1549
+swin_tiny_patch4_window7_224,all test patches,p3146,OSCC,OSCC,OSCC,0.9999,1.4348,21,0.2755,0.0983
+swin_tiny_patch4_window7_224,all test patches,p3147,OSCC,not in NDB-UFES,OSCC,0.9061,1.457,26,0.2864,0.109
+swin_tiny_patch4_window7_224,all test patches,p3148,OSCC,not in NDB-UFES,OSCC,0.9911,1.8621,28,0.2679,0.2743
+swin_tiny_patch4_window7_224,all test patches,p3149,OSCC,OSCC,OSCC,1.0,1.3175,41,0.1342,0.1395
+swin_tiny_patch4_window7_224,all test patches,p3150,OSCC,OSCC,OSCC,1.0,1.615,40,0.1473,0.2311
+swin_tiny_patch4_window7_224,all test patches,p3151,OSCC,OSCC,OSCC,1.0,1.7836,47,0.1268,0.1543
+swin_tiny_patch4_window7_224,all test patches,p3152,OSCC,OSCC,OSCC,0.9999,1.6924,26,0.267,0.0764
+swin_tiny_patch4_window7_224,all test patches,p3153,OSCC,OSCC,OSCC,1.0,1.1162,17,0.355,0.1375
+swin_tiny_patch4_window7_224,all test patches,p3154,OSCC,OSCC,OSCC,0.9998,1.0786,18,0.3294,0.3243
+swin_tiny_patch4_window7_224,all test patches,p3155,OSCC,OSCC,OSCC,1.0,2.5143,47,0.1511,0.1395
+swin_tiny_patch4_window7_224,all test patches,p3156,OSCC,OSCC,OSCC,1.0,1.6625,46,0.125,0.1398
+swin_tiny_patch4_window7_224,all test patches,p3157,OSCC,OSCC,OSCC,0.9997,1.4208,28,0.2607,0.0877
+swin_tiny_patch4_window7_224,all test patches,p3158,OSCC,OSCC,OSCC,1.0,2.7555,45,0.1544,0.1533
+swin_tiny_patch4_window7_224,all test patches,p3159,OSCC,OSCC,OSCC,0.9997,2.5754,46,0.1516,0.1955
+swin_tiny_patch4_window7_224,all test patches,p3160,OSCC,OSCC,OSCC,0.9998,2.5556,41,0.1768,0.0766
+swin_tiny_patch4_window7_224,all test patches,p3161,OSCC,not in NDB-UFES,OSCC,0.9213,2.6967,21,0.4137,0.0
+swin_tiny_patch4_window7_224,all test patches,p3162,OSCC,not in NDB-UFES,OSCC,0.9985,1.3342,32,0.2076,0.0999
+swin_tiny_patch4_window7_224,all test patches,p3163,OSCC,OSCC,OSCC,0.998,2.7351,28,0.2711,0.1829
+swin_tiny_patch4_window7_224,all test patches,p3164,OSCC,OSCC,OSCC,0.9716,1.8275,18,0.3945,0.3636
+swin_tiny_patch4_window7_224,all test patches,p3165,OSCC,OSCC,OSCC,1.0,1.0949,16,0.3332,0.0357
+swin_tiny_patch4_window7_224,all test patches,p3166,OSCC,OSCC,OSCC,0.9845,1.8704,35,0.209,0.0655
+swin_tiny_patch4_window7_224,all test patches,p3167,OSCC,OSCC,OSCC,0.9983,1.0943,24,0.2267,0.1753
+swin_tiny_patch4_window7_224,all test patches,p3168,OSCC,OSCC,OSCC,0.9997,1.2596,17,0.3286,0.0737
+swin_tiny_patch4_window7_224,all test patches,p3169,OSCC,OSCC,OSCC,0.9988,0.5654,4,0.7841,0.1275
+swin_tiny_patch4_window7_224,all test patches,p3170,OSCC,OSCC,OSCC,0.9709,1.9209,11,0.5653,0.1937
+swin_tiny_patch4_window7_224,all test patches,p3171,OSCC,OSCC,OSCC,0.9851,2.4818,16,0.41,0.0
+swin_tiny_patch4_window7_224,all test patches,p3172,OSCC,OSCC,OSCC,0.9998,1.5765,17,0.3918,0.0
+swin_tiny_patch4_window7_224,all test patches,p3173,OSCC,OSCC,OSCC,0.9996,1.926,24,0.2956,0.2766
+swin_tiny_patch4_window7_224,all test patches,p3174,OSCC,OSCC,OSCC,0.9995,1.2583,17,0.3377,0.0063
+swin_tiny_patch4_window7_224,all test patches,p3175,OSCC,OSCC,OSCC,0.692,0.8943,11,0.509,0.0702
+swin_tiny_patch4_window7_224,all test patches,p3176,OSCC,OSCC,OSCC,0.9998,1.1992,19,0.2665,0.3578
+swin_tiny_patch4_window7_224,all test patches,p3177,OSCC,OSCC,OSCC,0.9981,1.526,13,0.4425,0.2642
+swin_tiny_patch4_window7_224,all test patches,p3178,OSCC,OSCC,OSCC,0.9761,1.2316,27,0.26,0.0689
+swin_tiny_patch4_window7_224,all test patches,p3179,OSCC,OSCC,OSCC,0.999,1.8909,12,0.5869,0.0484
+swin_tiny_patch4_window7_224,all test patches,p3180,OSCC,OSCC,OSCC,0.9917,1.308,10,0.4929,0.1528
+swin_tiny_patch4_window7_224,all test patches,p3181,OSCC,OSCC,OSCC,0.9907,1.1148,11,0.445,0.125
+swin_tiny_patch4_window7_224,all test patches,p3182,OSCC,OSCC,OSCC,0.9975,1.2366,13,0.3987,0.2534
+swin_tiny_patch4_window7_224,all test patches,p3183,OSCC,OSCC,OSCC,0.9987,1.406,16,0.2994,0.1994
+swin_tiny_patch4_window7_224,all test patches,p3184,OSCC,With dysplasia,OSCC,0.7713,3.3215,20,0.4818,0.7186
+swin_tiny_patch4_window7_224,all test patches,p3185,OSCC,With dysplasia,OSCC,0.8863,0.5208,9,0.5284,0.1947
+swin_tiny_patch4_window7_224,all test patches,p3186,OSCC,not in NDB-UFES,OSCC,0.5031,0.4718,16,0.2937,0.0873
+swin_tiny_patch4_window7_224,all test patches,p3187,OSCC,not in NDB-UFES,With dysplasia,0.6774,1.1988,15,0.3145,0.2894
+swin_tiny_patch4_window7_224,all test patches,p3188,OSCC,OSCC,OSCC,0.9947,1.1354,17,0.3745,0.2886
+swin_tiny_patch4_window7_224,all test patches,p3189,OSCC,OSCC,OSCC,0.8616,0.7633,11,0.4853,0.1246
+swin_tiny_patch4_window7_224,all test patches,p3190,OSCC,OSCC,With dysplasia,0.6514,2.4961,45,0.1598,0.2693
+swin_tiny_patch4_window7_224,all test patches,p3191,OSCC,OSCC,OSCC,0.9634,0.8083,5,0.7893,0.0775
+swin_tiny_patch4_window7_224,all test patches,p3192,OSCC,OSCC,OSCC,0.9999,1.3664,31,0.2114,0.2796
+swin_tiny_patch4_window7_224,all test patches,p3193,OSCC,OSCC,OSCC,0.9998,2.2273,37,0.1608,0.1854
+swin_tiny_patch4_window7_224,all test patches,p3194,OSCC,OSCC,OSCC,0.9603,2.325,23,0.2666,0.178
+swin_tiny_patch4_window7_224,all test patches,p3195,OSCC,OSCC,OSCC,0.9992,1.1223,18,0.3139,0.1032
+swin_tiny_patch4_window7_224,all test patches,p3196,OSCC,OSCC,OSCC,0.9984,2.1232,37,0.1806,0.0699
+swin_tiny_patch4_window7_224,all test patches,p3197,OSCC,OSCC,OSCC,0.9671,2.0147,25,0.2575,0.0305
+swin_tiny_patch4_window7_224,all test patches,p3198,OSCC,OSCC,OSCC,0.9996,2.2379,34,0.194,0.1066
+swin_tiny_patch4_window7_224,all test patches,p3199,OSCC,OSCC,OSCC,0.9984,1.7124,48,0.1372,0.1432
+swin_tiny_patch4_window7_224,all test patches,p3200,OSCC,OSCC,With dysplasia,0.8126,1.6565,25,0.2785,0.2734
+swin_tiny_patch4_window7_224,all test patches,p3201,OSCC,OSCC,OSCC,0.997,1.8984,17,0.302,0.2225
+swin_tiny_patch4_window7_224,all test patches,p3202,OSCC,OSCC,OSCC,0.9999,1.7408,36,0.1834,0.2225
+swin_tiny_patch4_window7_224,all test patches,p3203,OSCC,OSCC,OSCC,0.9994,1.4825,36,0.1836,0.2144
+swin_tiny_patch4_window7_224,all test patches,p3204,OSCC,OSCC,OSCC,0.9902,1.7369,23,0.262,0.3234
+swin_tiny_patch4_window7_224,all test patches,p3205,OSCC,OSCC,OSCC,0.9997,1.1575,37,0.1739,0.1613
+swin_tiny_patch4_window7_224,all test patches,p3206,OSCC,OSCC,OSCC,0.9999,0.7747,17,0.3329,0.1899
+swin_tiny_patch4_window7_224,all test patches,p3207,OSCC,OSCC,OSCC,0.9975,1.7436,27,0.2457,0.3213
+swin_tiny_patch4_window7_224,all test patches,p3208,OSCC,OSCC,OSCC,0.9999,1.6244,26,0.2995,0.0871
+swin_tiny_patch4_window7_224,all test patches,p3209,OSCC,OSCC,OSCC,0.9999,2.4757,30,0.251,0.2714
+swin_tiny_patch4_window7_224,all test patches,p3210,OSCC,OSCC,OSCC,0.9996,1.1778,36,0.1783,0.0848
+swin_tiny_patch4_window7_224,all test patches,p3211,OSCC,OSCC,OSCC,0.9936,0.7928,19,0.2754,0.0834
+swin_tiny_patch4_window7_224,all test patches,p3212,OSCC,OSCC,OSCC,0.9365,1.2409,31,0.1821,0.2454
+swin_tiny_patch4_window7_224,all test patches,p3213,OSCC,OSCC,OSCC,0.8755,1.5068,22,0.2636,0.1946
+swin_tiny_patch4_window7_224,all test patches,p3214,OSCC,OSCC,With dysplasia,0.5138,1.9073,23,0.3512,0.064
+swin_tiny_patch4_window7_224,all test patches,p3215,OSCC,OSCC,OSCC,0.943,0.5502,9,0.491,0.0
+swin_tiny_patch4_window7_224,all test patches,p3216,OSCC,not in NDB-UFES,With dysplasia,0.9984,2.6263,49,0.1273,0.2138
+swin_tiny_patch4_window7_224,all test patches,p3217,OSCC,not in NDB-UFES,With dysplasia,0.9992,2.7456,42,0.1697,0.1764
+swin_tiny_patch4_window7_224,all test patches,p3218,OSCC,OSCC,OSCC,0.9998,1.884,41,0.1655,0.1512
+swin_tiny_patch4_window7_224,all test patches,p3219,OSCC,OSCC,OSCC,0.9999,2.4062,43,0.1565,0.2792
+swin_tiny_patch4_window7_224,all test patches,p3220,OSCC,OSCC,OSCC,0.9995,1.4508,29,0.2322,0.1972
+swin_tiny_patch4_window7_224,all test patches,p3221,OSCC,OSCC,OSCC,0.993,1.4946,13,0.4443,0.1248
+swin_tiny_patch4_window7_224,all test patches,p3222,OSCC,OSCC,OSCC,0.8716,1.8288,27,0.1934,0.1118
+swin_tiny_patch4_window7_224,all test patches,p3223,OSCC,OSCC,OSCC,0.9996,1.4303,38,0.1455,0.1165
+swin_tiny_patch4_window7_224,all test patches,p3224,OSCC,OSCC,OSCC,0.9959,1.5552,17,0.3911,0.0859
+swin_tiny_patch4_window7_224,all test patches,p3225,OSCC,OSCC,OSCC,0.965,2.0149,14,0.4762,0.2022
+swin_tiny_patch4_window7_224,all test patches,p3226,OSCC,OSCC,OSCC,0.9925,1.879,24,0.2881,0.2149
+swin_tiny_patch4_window7_224,all test patches,p3227,OSCC,OSCC,OSCC,0.9996,1.3586,11,0.5648,0.0518
+swin_tiny_patch4_window7_224,all test patches,p3228,OSCC,OSCC,OSCC,0.987,1.6331,13,0.3721,0.0093
+swin_tiny_patch4_window7_224,all test patches,p3229,OSCC,OSCC,OSCC,0.9996,1.3143,23,0.2462,0.0631
+swin_tiny_patch4_window7_224,all test patches,p3230,OSCC,OSCC,OSCC,1.0,1.913,34,0.2364,0.1014
+swin_tiny_patch4_window7_224,all test patches,p3231,OSCC,OSCC,OSCC,0.9997,1.4398,20,0.3093,0.0209
+swin_tiny_patch4_window7_224,all test patches,p3232,OSCC,OSCC,OSCC,0.9999,0.9743,11,0.4194,0.0
+swin_tiny_patch4_window7_224,all test patches,p3233,OSCC,OSCC,OSCC,1.0,0.7164,25,0.1832,0.1534
+swin_tiny_patch4_window7_224,all test patches,p3234,OSCC,OSCC,OSCC,1.0,2.219,43,0.1443,0.1208
+swin_tiny_patch4_window7_224,all test patches,p3235,OSCC,OSCC,OSCC,0.9999,2.1392,29,0.2513,0.0718
+swin_tiny_patch4_window7_224,all test patches,p3236,OSCC,OSCC,OSCC,0.9998,1.8769,40,0.1589,0.1209
+swin_tiny_patch4_window7_224,all test patches,p3237,OSCC,OSCC,OSCC,0.9991,1.3612,14,0.4004,0.0924
+swin_tiny_patch4_window7_224,all test patches,p3238,OSCC,OSCC,OSCC,0.9997,1.1481,18,0.3046,0.1649
+swin_tiny_patch4_window7_224,all test patches,p3239,OSCC,With dysplasia,OSCC,0.8716,1.2684,26,0.2166,0.1364
+swin_tiny_patch4_window7_224,all test patches,p3240,OSCC,With dysplasia,With dysplasia,0.6188,0.569,10,0.4689,0.0
+swin_tiny_patch4_window7_224,all test patches,p3241,OSCC,With dysplasia,OSCC,0.7837,1.1111,23,0.2644,0.3872
+swin_tiny_patch4_window7_224,all test patches,p3242,OSCC,not in NDB-UFES,OSCC,0.977,2.1833,36,0.1674,0.1665
+swin_tiny_patch4_window7_224,all test patches,p3243,OSCC,OSCC,OSCC,0.9943,0.1828,1,1.0,0.0
+swin_tiny_patch4_window7_224,all test patches,p3244,OSCC,OSCC,OSCC,1.0,1.977,46,0.1417,0.1378
+swin_tiny_patch4_window7_224,all test patches,p3245,OSCC,OSCC,OSCC,0.995,2.7689,44,0.1241,0.1954
+swin_tiny_patch4_window7_224,all test patches,p3246,OSCC,OSCC,OSCC,0.9997,1.7323,30,0.2367,0.0907
+swin_tiny_patch4_window7_224,all test patches,p3247,OSCC,OSCC,OSCC,0.9999,1.3109,36,0.1507,0.1168
+swin_tiny_patch4_window7_224,all test patches,p3248,OSCC,OSCC,OSCC,0.9999,1.5726,29,0.2451,0.1035
+swin_tiny_patch4_window7_224,all test patches,p3249,OSCC,OSCC,OSCC,0.9999,1.7941,38,0.1716,0.0819
+swin_tiny_patch4_window7_224,all test patches,p3250,OSCC,OSCC,OSCC,0.9999,1.7045,36,0.1958,0.1622
+swin_tiny_patch4_window7_224,all test patches,p3251,OSCC,OSCC,OSCC,1.0,1.7384,43,0.1387,0.2043
+swin_tiny_patch4_window7_224,all test patches,p3252,OSCC,OSCC,OSCC,1.0,2.5562,36,0.2664,0.1299
+swin_tiny_patch4_window7_224,all test patches,p3253,OSCC,OSCC,OSCC,0.9997,0.837,24,0.2188,0.0243
+swin_tiny_patch4_window7_224,all test patches,p3254,OSCC,OSCC,OSCC,0.9989,1.6592,22,0.3261,0.0049
+swin_tiny_patch4_window7_224,all test patches,p3255,OSCC,OSCC,OSCC,0.9383,1.1161,19,0.4132,0.0993
+swin_tiny_patch4_window7_224,all test patches,p3256,OSCC,OSCC,OSCC,0.9947,1.3702,21,0.3104,0.1476
+swin_tiny_patch4_window7_224,all test patches,p3257,OSCC,OSCC,OSCC,0.9991,1.3317,40,0.1348,0.2467
+swin_tiny_patch4_window7_224,all test patches,p3258,OSCC,OSCC,OSCC,0.995,1.8421,27,0.2607,0.1512
+swin_tiny_patch4_window7_224,all test patches,p3259,OSCC,not in NDB-UFES,OSCC,0.9292,1.4834,14,0.4913,0.1438
+swin_tiny_patch4_window7_224,all test patches,p3260,OSCC,not in NDB-UFES,OSCC,0.9998,1.3842,27,0.2366,0.1363
+swin_tiny_patch4_window7_224,all test patches,p3261,OSCC,not in NDB-UFES,OSCC,0.9996,2.7733,30,0.25,0.2279
+swin_tiny_patch4_window7_224,all test patches,p3262,OSCC,not in NDB-UFES,OSCC,0.9998,1.8773,36,0.2079,0.2568
+swin_tiny_patch4_window7_224,all test patches,p3263,OSCC,OSCC,OSCC,0.9962,1.0072,18,0.2959,0.0816
+swin_tiny_patch4_window7_224,all test patches,p3264,OSCC,OSCC,OSCC,0.9999,1.3395,23,0.2978,0.1578
+swin_tiny_patch4_window7_224,all test patches,p3265,OSCC,OSCC,OSCC,0.8794,1.1398,13,0.3989,0.0681
+swin_tiny_patch4_window7_224,all test patches,p3266,OSCC,OSCC,OSCC,0.906,1.6284,10,0.5242,0.0476
+swin_tiny_patch4_window7_224,all test patches,p3267,OSCC,OSCC,OSCC,0.9997,1.1902,16,0.4475,0.0399
+swin_tiny_patch4_window7_224,all test patches,p3268,OSCC,OSCC,OSCC,0.991,1.2963,8,0.719,0.4158
+swin_tiny_patch4_window7_224,all test patches,p3269,OSCC,OSCC,OSCC,0.9916,3.2365,33,0.2388,0.2603
+swin_tiny_patch4_window7_224,all test patches,p3270,OSCC,OSCC,OSCC,0.841,0.8189,3,0.968,0.921
+swin_tiny_patch4_window7_224,all test patches,p3271,OSCC,OSCC,With dysplasia,0.9227,2.3501,36,0.2182,0.2323
+swin_tiny_patch4_window7_224,all test patches,p3272,OSCC,OSCC,OSCC,0.6102,1.6602,4,0.8681,0.0578
+swin_tiny_patch4_window7_224,all test patches,p3273,OSCC,OSCC,OSCC,0.9965,1.4952,19,0.3204,0.2229
+swin_tiny_patch4_window7_224,all test patches,p3274,OSCC,OSCC,OSCC,0.9972,0.259,2,0.7567,0.0
+swin_tiny_patch4_window7_224,all test patches,p3275,OSCC,OSCC,OSCC,0.9996,1.4834,32,0.1872,0.1923
+swin_tiny_patch4_window7_224,all test patches,p3276,OSCC,OSCC,OSCC,0.9968,0.3148,4,0.8592,0.0
+swin_tiny_patch4_window7_224,all test patches,p3277,OSCC,OSCC,OSCC,0.9991,0.0761,0,1.0,0.0
+swin_tiny_patch4_window7_224,all test patches,p3278,OSCC,OSCC,OSCC,0.5428,1.8745,18,0.3438,0.0557
+swin_tiny_patch4_window7_224,all test patches,p3279,OSCC,OSCC,OSCC,0.9988,1.4343,29,0.2393,0.4415
+swin_tiny_patch4_window7_224,all test patches,p3280,OSCC,OSCC,OSCC,0.9475,2.7678,24,0.4002,0.015
+swin_tiny_patch4_window7_224,all test patches,p3281,OSCC,OSCC,OSCC,0.987,1.5366,16,0.474,0.5546
+swin_tiny_patch4_window7_224,all test patches,p3282,OSCC,not in NDB-UFES,OSCC,0.9652,0.4808,9,0.4514,0.1124
+swin_tiny_patch4_window7_224,all test patches,p3283,OSCC,OSCC,OSCC,0.9999,1.5002,36,0.2123,0.267
+swin_tiny_patch4_window7_224,all test patches,p3284,OSCC,OSCC,OSCC,0.9959,1.747,29,0.2365,0.2005
+swin_tiny_patch4_window7_224,all test patches,p3285,OSCC,OSCC,OSCC,0.9959,0.9316,5,0.8711,0.0
+swin_tiny_patch4_window7_224,all test patches,p3286,OSCC,OSCC,OSCC,0.9986,0.6454,7,0.6814,0.5262
+swin_tiny_patch4_window7_224,all test patches,p3287,OSCC,OSCC,OSCC,0.9971,0.666,6,0.682,0.0
+swin_tiny_patch4_window7_224,all test patches,p3288,OSCC,OSCC,OSCC,1.0,1.5176,36,0.1909,0.2302
+swin_tiny_patch4_window7_224,all test patches,p3289,OSCC,not in NDB-UFES,OSCC,0.9953,1.0982,20,0.2845,0.0677
+swin_tiny_patch4_window7_224,all test patches,p3290,OSCC,OSCC,With dysplasia,0.9439,2.3328,34,0.2041,0.3725
+swin_tiny_patch4_window7_224,all test patches,p3291,OSCC,OSCC,OSCC,0.9399,1.4782,20,0.3105,0.3252
+swin_tiny_patch4_window7_224,all test patches,p3292,OSCC,OSCC,OSCC,0.8044,1.2009,17,0.3751,0.0655
+swin_tiny_patch4_window7_224,all test patches,p3293,OSCC,OSCC,OSCC,0.9469,1.0661,17,0.3427,0.2426
+swin_tiny_patch4_window7_224,all test patches,p3294,OSCC,OSCC,OSCC,0.9926,0.7798,17,0.2944,0.2257
+swin_tiny_patch4_window7_224,all test patches,p3295,OSCC,OSCC,OSCC,0.9997,1.0196,37,0.1457,0.2389
+swin_tiny_patch4_window7_224,all test patches,p3296,OSCC,OSCC,OSCC,0.9997,0.8717,8,0.5637,0.3306
+swin_tiny_patch4_window7_224,all test patches,p3297,OSCC,With dysplasia,OSCC,0.9823,0.8336,14,0.3278,0.2043
+swin_tiny_patch4_window7_224,all test patches,p3298,OSCC,With dysplasia,OSCC,0.9993,1.1725,22,0.2599,0.2096
+swin_tiny_patch4_window7_224,all test patches,p3299,OSCC,With dysplasia,OSCC,0.9991,0.9151,15,0.4061,0.1755
+swin_tiny_patch4_window7_224,all test patches,p3300,Without dysplasia,With dysplasia,Without dysplasia,0.9997,3.4951,23,0.2994,0.0389
+swin_tiny_patch4_window7_224,all test patches,p3301,Without dysplasia,With dysplasia,Without dysplasia,0.9976,1.2535,23,0.3113,0.1794
+swin_tiny_patch4_window7_224,all test patches,p3302,Without dysplasia,With dysplasia,Without dysplasia,0.7465,1.794,17,0.3319,0.081
+swin_tiny_patch4_window7_224,all test patches,p3303,Without dysplasia,With dysplasia,Without dysplasia,0.8392,2.9901,14,0.6298,0.0728
+swin_tiny_patch4_window7_224,all test patches,p3304,Without dysplasia,not in NDB-UFES,With dysplasia,0.8621,2.0424,24,0.3209,0.1538
+swin_tiny_patch4_window7_224,all test patches,p3305,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9882,1.5254,14,0.3961,0.0
+swin_tiny_patch4_window7_224,all test patches,p3306,Without dysplasia,not in NDB-UFES,Without dysplasia,0.7699,2.2064,29,0.3244,0.2278
+swin_tiny_patch4_window7_224,all test patches,p3307,Without dysplasia,not in NDB-UFES,With dysplasia,0.8661,1.403,19,0.3601,0.1327
+swin_tiny_patch4_window7_224,all test patches,p3308,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9999,2.2838,23,0.2606,0.2447
+swin_tiny_patch4_window7_224,all test patches,p3309,Without dysplasia,Without dysplasia,Without dysplasia,0.9722,3.7525,30,0.2513,0.3436
+swin_tiny_patch4_window7_224,all test patches,p3310,Without dysplasia,Without dysplasia,Without dysplasia,0.9433,1.6545,12,0.4899,0.0054
+swin_tiny_patch4_window7_224,all test patches,p3311,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9354,0.429,24,0.1723,0.289
+swin_tiny_patch4_window7_224,all test patches,p3312,Without dysplasia,not in NDB-UFES,Without dysplasia,0.5178,1.2427,24,0.271,0.1866
+swin_tiny_patch4_window7_224,all test patches,p3313,Without dysplasia,With dysplasia,With dysplasia,0.6422,1.5002,37,0.197,0.101
+swin_tiny_patch4_window7_224,all test patches,p3314,Without dysplasia,With dysplasia,Without dysplasia,0.9312,0.6745,4,0.9099,0.6006
+swin_tiny_patch4_window7_224,all test patches,p3315,Without dysplasia,Without dysplasia,Without dysplasia,0.9983,1.9863,9,0.661,0.0083
+swin_tiny_patch4_window7_224,all test patches,p3316,Without dysplasia,Without dysplasia,Without dysplasia,1.0,1.1086,27,0.1964,0.1978
+swin_tiny_patch4_window7_224,all test patches,p3317,Without dysplasia,With dysplasia,Without dysplasia,0.9626,2.2402,34,0.2021,0.3707
+swin_tiny_patch4_window7_224,all test patches,p3318,Without dysplasia,With dysplasia,Without dysplasia,0.9961,2.7609,42,0.3209,0.1822
+swin_tiny_patch4_window7_224,all test patches,p3319,Without dysplasia,With dysplasia,Without dysplasia,0.9943,1.3888,24,0.2713,0.0892
+swin_tiny_patch4_window7_224,all test patches,p3320,Without dysplasia,With dysplasia,Without dysplasia,0.9949,3.2004,42,0.1746,0.2276
+swin_tiny_patch4_window7_224,all test patches,p3321,Without dysplasia,With dysplasia,Without dysplasia,0.9974,0.9298,17,0.3263,0.45
+swin_tiny_patch4_window7_224,all test patches,p3322,Without dysplasia,With dysplasia,Without dysplasia,0.8961,-0.0741,0,,
+swin_tiny_patch4_window7_224,all test patches,p3323,Without dysplasia,OSCC,With dysplasia,0.9794,4.5041,31,0.2874,0.0754
+swin_tiny_patch4_window7_224,all test patches,p3324,Without dysplasia,OSCC,With dysplasia,0.8656,4.2428,31,0.2609,0.0651
+swin_tiny_patch4_window7_224,all test patches,p3325,Without dysplasia,OSCC,Without dysplasia,0.9998,0.6065,8,0.5667,0.0
+swin_tiny_patch4_window7_224,all test patches,p3326,Without dysplasia,OSCC,Without dysplasia,0.9971,3.6073,28,0.2833,0.2
+swin_tiny_patch4_window7_224,all test patches,p3327,Without dysplasia,OSCC,Without dysplasia,0.7551,1.8557,28,0.2975,0.426
+swin_tiny_patch4_window7_224,all test patches,p3328,Without dysplasia,OSCC,Without dysplasia,0.9889,1.5,16,0.4823,0.6056
+swin_tiny_patch4_window7_224,all test patches,p3329,Without dysplasia,OSCC,Without dysplasia,0.9914,1.3397,33,0.2026,0.1917
+swin_tiny_patch4_window7_224,all test patches,p3330,Without dysplasia,OSCC,Without dysplasia,0.9996,1.7744,30,0.3483,0.3641
+swin_tiny_patch4_window7_224,all test patches,p3331,Without dysplasia,OSCC,Without dysplasia,0.9983,1.4032,15,0.3556,0.4623
+swin_tiny_patch4_window7_224,all test patches,p3332,Without dysplasia,OSCC,Without dysplasia,0.9986,0.7034,15,0.299,0.2134
+swin_tiny_patch4_window7_224,all test patches,p3333,Without dysplasia,OSCC,Without dysplasia,0.9997,1.5674,18,0.4248,0.257
+swin_tiny_patch4_window7_224,all test patches,p3334,Without dysplasia,OSCC,Without dysplasia,1.0,2.5873,31,0.3268,0.277
+swin_tiny_patch4_window7_224,all test patches,p3335,Without dysplasia,OSCC,Without dysplasia,0.9997,0.6662,20,0.2709,0.0541
+swin_tiny_patch4_window7_224,all test patches,p3336,Without dysplasia,OSCC,Without dysplasia,0.9977,1.5404,18,0.357,0.1458
+swin_tiny_patch4_window7_224,all test patches,p3337,Without dysplasia,Without dysplasia,Without dysplasia,0.9982,3.8885,39,0.1932,0.118
+swin_tiny_patch4_window7_224,all test patches,p3338,Without dysplasia,Without dysplasia,With dysplasia,0.9684,1.9338,37,0.1599,0.2825
+swin_tiny_patch4_window7_224,all test patches,p3339,Without dysplasia,With dysplasia,Without dysplasia,0.9994,3.2649,34,0.209,0.2888
+swin_tiny_patch4_window7_224,all test patches,p3340,Without dysplasia,Without dysplasia,Without dysplasia,0.9924,1.2905,21,0.3933,0.4402
+swin_tiny_patch4_window7_224,all test patches,p3341,Without dysplasia,Without dysplasia,Without dysplasia,1.0,1.3939,26,0.275,0.0351
+swin_tiny_patch4_window7_224,all test patches,p3342,Without dysplasia,Without dysplasia,Without dysplasia,0.99,1.5873,16,0.4995,0.0989
+swin_tiny_patch4_window7_224,all test patches,p3343,Without dysplasia,Without dysplasia,Without dysplasia,0.9996,6.6929,18,0.6357,0.0145
+swin_tiny_patch4_window7_224,all test patches,p3344,Without dysplasia,Without dysplasia,Without dysplasia,0.7685,1.8003,15,0.4368,0.1888
+swin_tiny_patch4_window7_224,all test patches,p3345,Without dysplasia,Without dysplasia,Without dysplasia,0.9998,4.9479,35,0.2912,0.1348
+swin_tiny_patch4_window7_224,all test patches,p3346,Without dysplasia,Without dysplasia,Without dysplasia,0.9986,1.7403,15,0.395,0.1321
+swin_tiny_patch4_window7_224,all test patches,p3347,Without dysplasia,Without dysplasia,Without dysplasia,0.9971,1.4973,44,0.1581,0.2695
+swin_tiny_patch4_window7_224,all test patches,p3348,Without dysplasia,Without dysplasia,Without dysplasia,0.9907,0.8986,5,0.7584,0.7599
+swin_tiny_patch4_window7_224,all test patches,p3349,Without dysplasia,With dysplasia,Without dysplasia,0.6016,1.7758,21,0.3253,0.2562
+swin_tiny_patch4_window7_224,all test patches,p3350,Without dysplasia,With dysplasia,Without dysplasia,0.9813,0.6692,25,0.2113,0.3429
+swin_tiny_patch4_window7_224,all test patches,p3351,Without dysplasia,With dysplasia,Without dysplasia,0.9991,0.9905,27,0.2268,0.1847
+swin_tiny_patch4_window7_224,all test patches,p3352,Without dysplasia,With dysplasia,Without dysplasia,0.9996,1.0581,34,0.1505,0.2374
+swin_tiny_patch4_window7_224,all test patches,p3353,Without dysplasia,With dysplasia,Without dysplasia,0.9981,0.8917,10,0.5231,0.095
+swin_tiny_patch4_window7_224,all test patches,p3354,Without dysplasia,With dysplasia,Without dysplasia,0.9811,2.9822,38,0.1807,0.1322
+swin_tiny_patch4_window7_224,all test patches,p3355,Without dysplasia,With dysplasia,With dysplasia,0.969,2.6432,32,0.1905,0.2408
+swin_tiny_patch4_window7_224,all test patches,p3357,Without dysplasia,With dysplasia,Without dysplasia,0.9994,2.3183,30,0.1827,0.1791
+swin_tiny_patch4_window7_224,all test patches,p3358,Without dysplasia,Without dysplasia,Without dysplasia,0.9999,2.5416,34,0.2082,0.0356
+swin_tiny_patch4_window7_224,all test patches,p3359,Without dysplasia,Without dysplasia,Without dysplasia,1.0,1.7059,33,0.2026,0.1643
+swin_tiny_patch4_window7_224,all test patches,p3360,Without dysplasia,Without dysplasia,Without dysplasia,1.0,2.0453,36,0.1783,0.1519
+swin_tiny_patch4_window7_224,all test patches,p3361,Without dysplasia,Without dysplasia,Without dysplasia,0.9571,1.1883,5,0.708,0.105
+swin_tiny_patch4_window7_224,all test patches,p3362,Without dysplasia,Without dysplasia,Without dysplasia,1.0,2.8725,32,0.2386,0.2615
+swin_tiny_patch4_window7_224,all test patches,p3363,Without dysplasia,Without dysplasia,Without dysplasia,0.986,1.164,18,0.3145,0.0
+swin_tiny_patch4_window7_224,all test patches,p3364,Without dysplasia,Without dysplasia,Without dysplasia,1.0,2.4962,38,0.19,0.1149
+swin_tiny_patch4_window7_224,all test patches,p3365,Without dysplasia,Without dysplasia,Without dysplasia,0.9984,1.109,9,0.4971,0.0
+swin_tiny_patch4_window7_224,all test patches,p3366,Without dysplasia,Without dysplasia,Without dysplasia,0.9902,0.999,24,0.2469,0.1512
+swin_tiny_patch4_window7_224,all test patches,p3367,Without dysplasia,Without dysplasia,Without dysplasia,0.9996,3.6558,31,0.2674,0.0516
+swin_tiny_patch4_window7_224,all test patches,p3368,Without dysplasia,With dysplasia,Without dysplasia,0.9908,1.8966,6,0.6257,0.5012
+swin_tiny_patch4_window7_224,all test patches,p3369,Without dysplasia,With dysplasia,Without dysplasia,0.9947,1.2944,27,0.2494,0.1137
+swin_tiny_patch4_window7_224,all test patches,p3370,Without dysplasia,With dysplasia,Without dysplasia,0.9208,1.6676,14,0.4639,0.3166
+swin_tiny_patch4_window7_224,all test patches,p3371,Without dysplasia,Without dysplasia,Without dysplasia,0.9815,0.3107,17,0.2558,0.0417
+swin_tiny_patch4_window7_224,all test patches,p3372,Without dysplasia,Without dysplasia,Without dysplasia,0.9999,3.5011,29,0.2815,0.0844
+swin_tiny_patch4_window7_224,all test patches,p3373,Without dysplasia,Without dysplasia,Without dysplasia,0.994,1.3515,17,0.3325,0.0686
+swin_tiny_patch4_window7_224,all test patches,p3374,Without dysplasia,Without dysplasia,Without dysplasia,0.9981,0.3127,4,0.7982,0.6271
+swin_tiny_patch4_window7_224,all test patches,p3375,Without dysplasia,With dysplasia,Without dysplasia,0.9993,2.8051,39,0.1796,0.1518
+swin_tiny_patch4_window7_224,all test patches,p3376,Without dysplasia,Without dysplasia,Without dysplasia,0.9995,2.1788,25,0.2923,0.2517
+swin_tiny_patch4_window7_224,all test patches,p3377,Without dysplasia,Without dysplasia,Without dysplasia,0.9938,1.1471,23,0.2712,0.1837
+swin_tiny_patch4_window7_224,all test patches,p3378,Without dysplasia,Without dysplasia,Without dysplasia,0.9991,1.699,31,0.1792,0.1127
+swin_tiny_patch4_window7_224,all test patches,p3379,Without dysplasia,With dysplasia,Without dysplasia,0.8745,1.3352,13,0.5295,0.0123
+swin_tiny_patch4_window7_224,all test patches,p3380,Without dysplasia,With dysplasia,Without dysplasia,0.996,2.3045,23,0.2986,0.0482
+swin_tiny_patch4_window7_224,all test patches,p3381,Without dysplasia,With dysplasia,Without dysplasia,0.9925,1.6455,27,0.2415,0.3322
+swin_tiny_patch4_window7_224,all test patches,p3382,Without dysplasia,With dysplasia,Without dysplasia,0.9701,1.155,24,0.2601,0.1304
+swin_tiny_patch4_window7_224,all test patches,p3383,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9959,1.4909,22,0.3243,0.1384
+swin_tiny_patch4_window7_224,all test patches,p3384,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9976,1.147,26,0.2462,0.0669
+swin_tiny_patch4_window7_224,all test patches,p3385,Without dysplasia,not in NDB-UFES,With dysplasia,0.9828,3.452,25,0.3197,0.0436
+swin_tiny_patch4_window7_224,all test patches,p3386,Without dysplasia,not in NDB-UFES,With dysplasia,0.9988,9.4527,33,0.4486,0.0176
+swin_tiny_patch4_window7_224,all test patches,p3387,Without dysplasia,not in NDB-UFES,Without dysplasia,0.9964,3.9625,32,0.3253,0.4045
+swin_tiny_patch4_window7_224,all test patches,p3388,Without dysplasia,not in NDB-UFES,With dysplasia,0.7102,1.5795,21,0.3812,0.1272
+swin_tiny_patch4_window7_224,all test patches,p3389,Without dysplasia,With dysplasia,With dysplasia,0.982,2.2151,29,0.2151,0.1719
+swin_tiny_patch4_window7_224,all test patches,p3390,Without dysplasia,With dysplasia,Without dysplasia,0.9813,1.9357,22,0.3019,0.2849
+swin_tiny_patch4_window7_224,all test patches,p3391,Without dysplasia,With dysplasia,Without dysplasia,0.9997,0.8921,4,0.8931,0.0
+swin_tiny_patch4_window7_224,all test patches,p3392,Without dysplasia,Without dysplasia,Without dysplasia,0.997,1.257,23,0.2639,0.243
+swin_tiny_patch4_window7_224,all test patches,p3393,Without dysplasia,Without dysplasia,Without dysplasia,0.9972,1.5937,29,0.2697,0.4417
+swin_tiny_patch4_window7_224,all test patches,p3394,Without dysplasia,With dysplasia,With dysplasia,0.947,1.899,32,0.1848,0.239
+swin_tiny_patch4_window7_224,all test patches,p3395,Without dysplasia,With dysplasia,With dysplasia,0.9654,2.8291,32,0.2196,0.1529
+swin_tiny_patch4_window7_224,all test patches,p3396,Without dysplasia,With dysplasia,Without dysplasia,0.9991,2.1655,41,0.1428,0.2806
+swin_tiny_patch4_window7_224,all test patches,p3397,Without dysplasia,With dysplasia,Without dysplasia,0.9272,1.9987,8,0.5866,0.1173
+swin_tiny_patch4_window7_224,all test patches,p3398,Without dysplasia,With dysplasia,Without dysplasia,0.988,1.1485,13,0.379,0.3095
+swin_tiny_patch4_window7_224,all test patches,p3399,Without dysplasia,With dysplasia,Without dysplasia,0.961,0.5304,4,0.8254,0.4027
+swin_tiny_patch4_window7_224,all test patches,p3400,Without dysplasia,With dysplasia,Without dysplasia,0.9023,1.1366,7,0.6852,0.0
+swin_tiny_patch4_window7_224,all test patches,p3401,Without dysplasia,Without dysplasia,With dysplasia,0.9103,1.2773,33,0.1846,0.1863
+swin_tiny_patch4_window7_224,all test patches,p3402,Without dysplasia,Without dysplasia,Without dysplasia,0.8866,1.8178,34,0.1772,0.1377
+swin_tiny_patch4_window7_224,all test patches,p3403,Without dysplasia,Without dysplasia,Without dysplasia,0.6154,1.7645,16,0.4022,0.074
+swin_tiny_patch4_window7_224,all test patches,p3404,Without dysplasia,Without dysplasia,Without dysplasia,0.9957,0.571,9,0.4527,0.0578
+swin_tiny_patch4_window7_224,all test patches,p3405,Without dysplasia,Without dysplasia,Without dysplasia,0.9994,1.3661,10,0.688,0.0479
+swin_tiny_patch4_window7_224,all test patches,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.9468,1.8281,23,0.3028,0.1104
+swin_tiny_patch4_window7_224,all test patches,p3407,With dysplasia,not in NDB-UFES,With dysplasia,0.9921,2.3285,32,0.1985,0.3103
+swin_tiny_patch4_window7_224,all test patches,p3408,With dysplasia,With dysplasia,With dysplasia,0.9476,1.1411,46,0.1231,0.1881
+swin_tiny_patch4_window7_224,all test patches,p3409,With dysplasia,With dysplasia,With dysplasia,0.9952,1.606,40,0.146,0.1403
+swin_tiny_patch4_window7_224,all test patches,p3410,With dysplasia,With dysplasia,With dysplasia,0.9942,1.8331,37,0.1733,0.2297
+swin_tiny_patch4_window7_224,all test patches,p3411,With dysplasia,With dysplasia,With dysplasia,0.9996,0.2993,5,0.706,0.0
+swin_tiny_patch4_window7_224,all test patches,p3412,With dysplasia,With dysplasia,With dysplasia,1.0,2.2096,37,0.1538,0.2209
+swin_tiny_patch4_window7_224,all test patches,p3413,With dysplasia,With dysplasia,With dysplasia,0.9929,1.7445,37,0.1459,0.2443
+swin_tiny_patch4_window7_224,all test patches,p3414,With dysplasia,With dysplasia,With dysplasia,0.8245,1.6172,32,0.196,0.06
+swin_tiny_patch4_window7_224,all test patches,p3415,With dysplasia,With dysplasia,With dysplasia,0.9997,3.3247,30,0.2621,0.1246
+swin_tiny_patch4_window7_224,all test patches,p3416,With dysplasia,With dysplasia,With dysplasia,0.9947,1.785,32,0.1892,0.0486
+swin_tiny_patch4_window7_224,all test patches,p3417,With dysplasia,With dysplasia,With dysplasia,0.9788,0.9958,17,0.3314,0.106
+swin_tiny_patch4_window7_224,all test patches,p3418,With dysplasia,With dysplasia,With dysplasia,0.9895,1.4317,9,0.5896,0.2893
+swin_tiny_patch4_window7_224,all test patches,p3419,With dysplasia,With dysplasia,With dysplasia,0.519,1.3681,9,0.5195,0.0
+swin_tiny_patch4_window7_224,all test patches,p3420,With dysplasia,With dysplasia,With dysplasia,0.9306,1.3492,15,0.3397,0.3398
+swin_tiny_patch4_window7_224,all test patches,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.8487,2.6138,36,0.1919,0.181
+swin_tiny_patch4_window7_224,all test patches,p3422,With dysplasia,not in NDB-UFES,With dysplasia,0.9779,1.145,20,0.2662,0.2234
+swin_tiny_patch4_window7_224,all test patches,p3423,With dysplasia,not in NDB-UFES,With dysplasia,0.9964,1.8032,25,0.2988,0.2601
+swin_tiny_patch4_window7_224,all test patches,p3424,With dysplasia,not in NDB-UFES,With dysplasia,0.9928,1.4085,31,0.1866,0.3042
+swin_tiny_patch4_window7_224,all test patches,p3425,With dysplasia,not in NDB-UFES,With dysplasia,0.9918,1.9905,38,0.1743,0.2355
+swin_tiny_patch4_window7_224,all test patches,p3426,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,4.722,40,0.2502,0.0593
+swin_tiny_patch4_window7_224,all test patches,p3427,With dysplasia,not in NDB-UFES,With dysplasia,0.9997,3.3859,40,0.1761,0.2749
+swin_tiny_patch4_window7_224,all test patches,p3428,With dysplasia,With dysplasia,With dysplasia,0.999,3.1712,48,0.1423,0.2946
+swin_tiny_patch4_window7_224,all test patches,p3429,With dysplasia,With dysplasia,With dysplasia,0.9997,4.2403,48,0.1548,0.2365
+swin_tiny_patch4_window7_224,all test patches,p3430,With dysplasia,With dysplasia,With dysplasia,0.7901,2.1996,34,0.1899,0.2037
+swin_tiny_patch4_window7_224,all test patches,p3431,With dysplasia,With dysplasia,With dysplasia,0.9796,2.6044,34,0.2184,0.1324
+swin_tiny_patch4_window7_224,all test patches,p3432,With dysplasia,With dysplasia,OSCC,0.9714,1.1001,10,0.5406,0.0023
+swin_tiny_patch4_window7_224,all test patches,p3433,With dysplasia,With dysplasia,OSCC,0.9786,0.452,4,0.7897,0.0
+swin_tiny_patch4_window7_224,all test patches,p3434,With dysplasia,OSCC,OSCC,0.7153,2.1417,39,0.1625,0.2761
+swin_tiny_patch4_window7_224,all test patches,p3435,With dysplasia,Without dysplasia,With dysplasia,0.9963,1.7881,33,0.2069,0.2592
+swin_tiny_patch4_window7_224,all test patches,p3436,With dysplasia,Without dysplasia,With dysplasia,0.999,3.0653,49,0.1151,0.2375
+swin_tiny_patch4_window7_224,all test patches,p3437,With dysplasia,Without dysplasia,With dysplasia,0.9915,1.2496,33,0.1578,0.2266
+swin_tiny_patch4_window7_224,all test patches,p3438,With dysplasia,With dysplasia,With dysplasia,0.9501,1.8399,31,0.2045,0.1723
+swin_tiny_patch4_window7_224,all test patches,p3439,With dysplasia,With dysplasia,With dysplasia,0.9955,1.9032,37,0.1749,0.2031
+swin_tiny_patch4_window7_224,all test patches,p3440,With dysplasia,With dysplasia,With dysplasia,0.9998,1.0246,34,0.216,0.2316
+swin_tiny_patch4_window7_224,all test patches,p3441,With dysplasia,With dysplasia,With dysplasia,0.9565,1.3708,18,0.3933,0.0
+swin_tiny_patch4_window7_224,all test patches,p3442,With dysplasia,not in NDB-UFES,With dysplasia,0.5021,2.2085,32,0.223,0.0675
+swin_tiny_patch4_window7_224,all test patches,p3443,With dysplasia,OSCC,With dysplasia,0.9999,1.8686,47,0.1046,0.1572
+swin_tiny_patch4_window7_224,all test patches,p3444,With dysplasia,OSCC,Without dysplasia,0.9839,1.318,19,0.3127,0.0685
+swin_tiny_patch4_window7_224,all test patches,p3445,With dysplasia,not in NDB-UFES,With dysplasia,0.8662,3.3364,22,0.34,0.1107
+swin_tiny_patch4_window7_224,all test patches,p3446,With dysplasia,not in NDB-UFES,With dysplasia,0.9853,3.0942,26,0.3503,0.0642
+swin_tiny_patch4_window7_224,all test patches,p3447,With dysplasia,not in NDB-UFES,With dysplasia,0.9741,2.7293,28,0.2316,0.054
+swin_tiny_patch4_window7_224,all test patches,p3448,With dysplasia,not in NDB-UFES,With dysplasia,0.9979,2.4265,38,0.1718,0.2013
+swin_tiny_patch4_window7_224,all test patches,p3449,With dysplasia,not in NDB-UFES,With dysplasia,0.9732,1.714,43,0.1346,0.249
+swin_tiny_patch4_window7_224,all test patches,p3450,With dysplasia,With dysplasia,Without dysplasia,0.9439,1.4456,22,0.3502,0.0717
+swin_tiny_patch4_window7_224,all test patches,p3451,With dysplasia,With dysplasia,With dysplasia,0.8889,3.4271,33,0.2357,0.2142
+swin_tiny_patch4_window7_224,all test patches,p3452,With dysplasia,With dysplasia,With dysplasia,0.9865,1.3438,44,0.1419,0.2111
+swin_tiny_patch4_window7_224,all test patches,p3453,With dysplasia,With dysplasia,With dysplasia,0.7394,0.4626,10,0.3767,0.2432
+swin_tiny_patch4_window7_224,all test patches,p3454,With dysplasia,With dysplasia,With dysplasia,1.0,2.3479,37,0.1941,0.1721
+swin_tiny_patch4_window7_224,all test patches,p3455,With dysplasia,With dysplasia,With dysplasia,0.9993,2.1637,43,0.1698,0.154
+swin_tiny_patch4_window7_224,all test patches,p3456,With dysplasia,With dysplasia,With dysplasia,0.9907,1.7452,30,0.2441,0.2711
+swin_tiny_patch4_window7_224,all test patches,p3457,With dysplasia,Without dysplasia,With dysplasia,0.9996,3.6292,49,0.1323,0.1781
+swin_tiny_patch4_window7_224,all test patches,p3458,With dysplasia,With dysplasia,With dysplasia,0.9927,1.581,40,0.1442,0.2352
+swin_tiny_patch4_window7_224,all test patches,p3459,With dysplasia,With dysplasia,With dysplasia,1.0,2.1733,47,0.1226,0.1788
+swin_tiny_patch4_window7_224,all test patches,p3460,With dysplasia,With dysplasia,With dysplasia,0.9949,1.5667,34,0.1788,0.2182
+swin_tiny_patch4_window7_224,all test patches,p3461,With dysplasia,not in NDB-UFES,With dysplasia,1.0,2.3766,40,0.1594,0.2437
+swin_tiny_patch4_window7_224,all test patches,p3462,With dysplasia,not in NDB-UFES,With dysplasia,0.9974,2.1799,33,0.1873,0.2358
+swin_tiny_patch4_window7_224,all test patches,p3463,With dysplasia,not in NDB-UFES,With dysplasia,0.6138,1.2477,25,0.1964,0.3291
+swin_tiny_patch4_window7_224,all test patches,p3464,With dysplasia,not in NDB-UFES,With dysplasia,0.8721,1.0052,27,0.2157,0.3201
+swin_tiny_patch4_window7_224,all test patches,p3465,With dysplasia,not in NDB-UFES,With dysplasia,0.9851,1.7361,33,0.1834,0.2417
+swin_tiny_patch4_window7_224,all test patches,p3466,With dysplasia,OSCC,With dysplasia,0.9544,1.6799,30,0.2224,0.3667
+swin_tiny_patch4_window7_224,all test patches,p3467,With dysplasia,OSCC,With dysplasia,0.9894,3.1591,45,0.1657,0.1811
+swin_tiny_patch4_window7_224,all test patches,p3468,With dysplasia,OSCC,With dysplasia,1.0,1.2474,31,0.1697,0.2368
+swin_tiny_patch4_window7_224,all test patches,p3469,With dysplasia,OSCC,OSCC,0.5918,1.8168,19,0.2823,0.0128
+swin_tiny_patch4_window7_224,all test patches,p3470,With dysplasia,OSCC,With dysplasia,1.0,1.6823,39,0.1922,0.1012
+swin_tiny_patch4_window7_224,all test patches,p3471,With dysplasia,OSCC,With dysplasia,0.9999,1.1577,32,0.1794,0.3652
+swin_tiny_patch4_window7_224,all test patches,p3472,With dysplasia,not in NDB-UFES,With dysplasia,0.9996,1.0079,16,0.372,0.2789
+swin_tiny_patch4_window7_224,all test patches,p3473,With dysplasia,not in NDB-UFES,With dysplasia,1.0,2.6556,44,0.1714,0.1845
+swin_tiny_patch4_window7_224,all test patches,p3474,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,1.1177,19,0.2938,0.0693
+swin_tiny_patch4_window7_224,all test patches,p3475,With dysplasia,not in NDB-UFES,With dysplasia,0.9978,3.2896,49,0.1638,0.1047
+swin_tiny_patch4_window7_224,all test patches,p3476,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,2.4305,34,0.2028,0.1432
+swin_tiny_patch4_window7_224,all test patches,p3477,With dysplasia,With dysplasia,With dysplasia,0.994,3.79,26,0.3372,0.1691
+swin_tiny_patch4_window7_224,all test patches,p3478,With dysplasia,With dysplasia,With dysplasia,0.9967,1.3527,43,0.1532,0.1795
+swin_tiny_patch4_window7_224,all test patches,p3479,With dysplasia,With dysplasia,With dysplasia,0.9989,1.6528,25,0.2634,0.025
+swin_tiny_patch4_window7_224,all test patches,p3480,With dysplasia,With dysplasia,With dysplasia,0.924,1.327,32,0.2136,0.0904
+swin_tiny_patch4_window7_224,all test patches,p3481,With dysplasia,OSCC,With dysplasia,1.0,0.8281,11,0.4715,0.0542
+swin_tiny_patch4_window7_224,all test patches,p3482,With dysplasia,OSCC,With dysplasia,0.9876,1.2702,24,0.2198,0.1852
+swin_tiny_patch4_window7_224,all test patches,p3483,With dysplasia,OSCC,With dysplasia,0.9821,1.5703,24,0.2927,0.2681
+swin_tiny_patch4_window7_224,all test patches,p3484,With dysplasia,OSCC,With dysplasia,0.9998,2.3983,39,0.2168,0.1414
+swin_tiny_patch4_window7_224,all test patches,p3485,With dysplasia,OSCC,With dysplasia,0.9962,1.0666,10,0.5318,0.0
+swin_tiny_patch4_window7_224,all test patches,p3486,With dysplasia,OSCC,With dysplasia,0.9999,0.6699,12,0.4003,0.0245
+swin_tiny_patch4_window7_224,all test patches,p3487,With dysplasia,OSCC,With dysplasia,0.9999,1.3142,8,0.6026,0.176
+swin_tiny_patch4_window7_224,all test patches,p3488,With dysplasia,OSCC,With dysplasia,0.9951,1.6239,18,0.3421,0.076
+swin_tiny_patch4_window7_224,all test patches,p3489,With dysplasia,OSCC,With dysplasia,0.9979,1.1861,17,0.2966,0.0064
+swin_tiny_patch4_window7_224,all test patches,p3490,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,4.4043,29,0.3038,0.1114
+swin_tiny_patch4_window7_224,all test patches,p3491,With dysplasia,not in NDB-UFES,With dysplasia,0.6201,1.9217,17,0.361,0.0459
+swin_tiny_patch4_window7_224,all test patches,p3492,With dysplasia,OSCC,With dysplasia,0.9998,4.1845,48,0.1497,0.278
+swin_tiny_patch4_window7_224,all test patches,p3493,With dysplasia,OSCC,With dysplasia,0.9984,3.8922,43,0.1459,0.3075
+swin_tiny_patch4_window7_224,all test patches,p3494,With dysplasia,OSCC,With dysplasia,0.9847,1.9571,43,0.1539,0.2097
+swin_tiny_patch4_window7_224,all test patches,p3495,With dysplasia,OSCC,OSCC,0.787,1.6904,9,0.5295,0.0094
+swin_tiny_patch4_window7_224,all test patches,p3496,With dysplasia,OSCC,With dysplasia,0.9988,1.4247,15,0.428,0.0
+swin_tiny_patch4_window7_224,all test patches,p3497,With dysplasia,not in NDB-UFES,With dysplasia,0.9677,1.2314,33,0.2233,0.1429
+swin_tiny_patch4_window7_224,all test patches,p3498,With dysplasia,not in NDB-UFES,Without dysplasia,0.6368,1.9613,15,0.4833,0.5031
+swin_tiny_patch4_window7_224,all test patches,p3499,With dysplasia,Without dysplasia,With dysplasia,0.9994,0.9283,13,0.4125,0.2922
+swin_tiny_patch4_window7_224,all test patches,p3500,With dysplasia,Without dysplasia,With dysplasia,0.9991,1.3419,46,0.1233,0.2391
+swin_tiny_patch4_window7_224,all test patches,p3501,With dysplasia,Without dysplasia,With dysplasia,0.7699,2.1594,33,0.2289,0.2038
+swin_tiny_patch4_window7_224,all test patches,p3502,With dysplasia,Without dysplasia,Without dysplasia,0.6724,1.4381,23,0.3157,0.1331
+swin_tiny_patch4_window7_224,all test patches,p3503,With dysplasia,Without dysplasia,With dysplasia,0.9686,1.1177,34,0.1743,0.1785
+swin_tiny_patch4_window7_224,all test patches,p3504,With dysplasia,Without dysplasia,With dysplasia,0.9728,2.2024,42,0.1331,0.1732
+swin_tiny_patch4_window7_224,all test patches,p3505,With dysplasia,Without dysplasia,With dysplasia,0.9974,2.6651,38,0.1608,0.0955
+swin_tiny_patch4_window7_224,all test patches,p3506,With dysplasia,Without dysplasia,With dysplasia,0.9948,1.8963,16,0.4141,0.1096
+swin_tiny_patch4_window7_224,all test patches,p3507,With dysplasia,not in NDB-UFES,With dysplasia,0.9976,1.6427,20,0.3289,0.2404
+swin_tiny_patch4_window7_224,all test patches,p3508,With dysplasia,With dysplasia,With dysplasia,0.9834,1.949,35,0.2232,0.1632
+swin_tiny_patch4_window7_224,all test patches,p3509,With dysplasia,With dysplasia,With dysplasia,0.974,2.5663,31,0.2479,0.3645
+swin_tiny_patch4_window7_224,all test patches,p3510,With dysplasia,With dysplasia,With dysplasia,0.7474,2.149,17,0.4885,0.0975
+swin_tiny_patch4_window7_224,all test patches,p3511,With dysplasia,Without dysplasia,With dysplasia,0.98,1.9788,46,0.1412,0.2115
+swin_tiny_patch4_window7_224,all test patches,p3512,With dysplasia,Without dysplasia,With dysplasia,0.9971,1.793,21,0.3662,0.219
+swin_tiny_patch4_window7_224,all test patches,p3513,With dysplasia,Without dysplasia,With dysplasia,0.9997,1.549,26,0.2281,0.0352
+swin_tiny_patch4_window7_224,all test patches,p3514,With dysplasia,Without dysplasia,With dysplasia,0.9999,0.9987,22,0.2375,0.1306
+swin_tiny_patch4_window7_224,all test patches,p3515,With dysplasia,Without dysplasia,With dysplasia,0.8221,0.9606,13,0.4655,0.178
+swin_tiny_patch4_window7_224,all test patches,p3516,With dysplasia,Without dysplasia,With dysplasia,0.9048,0.9928,16,0.3395,0.0775
+swin_tiny_patch4_window7_224,all test patches,p3517,With dysplasia,With dysplasia,With dysplasia,0.5479,2.1698,34,0.1945,0.1916
+swin_tiny_patch4_window7_224,all test patches,p3518,With dysplasia,not in NDB-UFES,With dysplasia,0.9988,1.1416,20,0.3084,0.1763
+swin_tiny_patch4_window7_224,all test patches,p3519,With dysplasia,not in NDB-UFES,With dysplasia,0.9587,1.2425,16,0.3811,0.446
+swin_tiny_patch4_window7_224,all test patches,p3520,With dysplasia,not in NDB-UFES,With dysplasia,0.9968,1.4371,18,0.3524,0.2704
+swin_tiny_patch4_window7_224,all test patches,p3521,With dysplasia,With dysplasia,With dysplasia,0.9998,3.4709,36,0.2361,0.1063
+swin_tiny_patch4_window7_224,all test patches,p3522,With dysplasia,With dysplasia,With dysplasia,0.8562,2.2519,19,0.3266,0.3452
+swin_tiny_patch4_window7_224,all test patches,p3523,With dysplasia,With dysplasia,With dysplasia,0.9984,3.3283,36,0.1845,0.3124
+swin_tiny_patch4_window7_224,all test patches,p3524,With dysplasia,Without dysplasia,With dysplasia,0.9991,1.8144,30,0.2849,0.185
+swin_tiny_patch4_window7_224,all test patches,p3525,With dysplasia,Without dysplasia,With dysplasia,0.9965,1.7555,24,0.2726,0.2253
+swin_tiny_patch4_window7_224,all test patches,p3526,With dysplasia,Without dysplasia,With dysplasia,0.9997,1.0219,27,0.2232,0.1813
+swin_tiny_patch4_window7_224,all test patches,p3527,With dysplasia,Without dysplasia,With dysplasia,0.8876,3.5625,29,0.3566,0.2071
+swin_tiny_patch4_window7_224,all test patches,p3528,With dysplasia,Without dysplasia,Without dysplasia,0.9563,2.1436,28,0.3157,0.0834
+swin_tiny_patch4_window7_224,all test patches,p3529,With dysplasia,Without dysplasia,With dysplasia,0.9999,1.7225,30,0.2107,0.13
+swin_tiny_patch4_window7_224,all test patches,p3530,With dysplasia,Without dysplasia,With dysplasia,1.0,2.4058,31,0.2617,0.2192
+swin_tiny_patch4_window7_224,all test patches,p3531,With dysplasia,Without dysplasia,With dysplasia,0.9997,1.3131,32,0.2122,0.1335
+swin_tiny_patch4_window7_224,all test patches,p3532,With dysplasia,Without dysplasia,With dysplasia,0.9989,1.6941,35,0.1772,0.2136
+swin_tiny_patch4_window7_224,all test patches,p3533,With dysplasia,Without dysplasia,With dysplasia,0.9766,1.8536,27,0.25,0.1844
+swin_tiny_patch4_window7_224,all test patches,p3534,With dysplasia,Without dysplasia,With dysplasia,0.9998,1.704,41,0.172,0.2193
+swin_tiny_patch4_window7_224,all test patches,p3535,With dysplasia,Without dysplasia,With dysplasia,0.9788,1.4696,33,0.2061,0.134
+swin_tiny_patch4_window7_224,all test patches,p3536,With dysplasia,Without dysplasia,With dysplasia,0.9966,3.3536,32,0.3818,0.0918
+swin_tiny_patch4_window7_224,all test patches,p3537,With dysplasia,Without dysplasia,With dysplasia,0.9998,3.0516,21,0.3152,0.1039
+swin_tiny_patch4_window7_224,all test patches,p3538,With dysplasia,Without dysplasia,With dysplasia,0.9979,1.508,27,0.2273,0.1188
+swin_tiny_patch4_window7_224,all test patches,p3539,With dysplasia,Without dysplasia,With dysplasia,0.9935,3.2334,38,0.1861,0.3031
+swin_tiny_patch4_window7_224,all test patches,p3540,With dysplasia,Without dysplasia,With dysplasia,0.9998,0.9789,42,0.1276,0.2382
+swin_tiny_patch4_window7_224,all test patches,p3541,With dysplasia,Without dysplasia,With dysplasia,0.9998,2.0445,45,0.1385,0.2151
+swin_tiny_patch4_window7_224,all test patches,p3542,With dysplasia,OSCC,With dysplasia,1.0,3.825,48,0.1474,0.1879
+swin_tiny_patch4_window7_224,all test patches,p3543,With dysplasia,OSCC,With dysplasia,0.9093,2.0141,40,0.1693,0.0705
+swin_tiny_patch4_window7_224,all test patches,p3544,With dysplasia,OSCC,With dysplasia,0.9999,2.3132,38,0.194,0.1396
+swin_tiny_patch4_window7_224,all test patches,p3545,With dysplasia,not in NDB-UFES,With dysplasia,0.7759,0.9642,12,0.4981,0.0849
+swin_tiny_patch4_window7_224,all test patches,p3546,With dysplasia,not in NDB-UFES,With dysplasia,0.9446,2.2723,29,0.2343,0.3666
+swin_tiny_patch4_window7_224,all test patches,p3547,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,4.793,43,0.1483,0.2146
+swin_tiny_patch4_window7_224,all test patches,p3548,With dysplasia,not in NDB-UFES,With dysplasia,0.7203,1.8003,13,0.507,0.0438
+swin_tiny_patch4_window7_224,all test patches,p3549,With dysplasia,OSCC,With dysplasia,0.569,1.6599,12,0.4421,0.0597
+swin_tiny_patch4_window7_224,all test patches,p3550,With dysplasia,OSCC,OSCC,0.6864,1.372,12,0.4967,0.0571
+swin_tiny_patch4_window7_224,all test patches,p3551,With dysplasia,OSCC,OSCC,0.5746,1.5528,16,0.3823,0.1452
+swin_tiny_patch4_window7_224,all test patches,p3552,With dysplasia,not in NDB-UFES,OSCC,0.9019,1.9211,19,0.4539,0.0439
+swin_tiny_patch4_window7_224,all test patches,p3553,With dysplasia,not in NDB-UFES,With dysplasia,0.9955,2.1915,19,0.3141,0.3206
+swin_tiny_patch4_window7_224,all test patches,p3554,With dysplasia,not in NDB-UFES,With dysplasia,0.9981,1.7262,19,0.3353,0.1619
+swin_tiny_patch4_window7_224,all test patches,p3555,With dysplasia,With dysplasia,With dysplasia,0.9974,3.0899,46,0.1386,0.1836
+swin_tiny_patch4_window7_224,all test patches,p3556,With dysplasia,With dysplasia,With dysplasia,0.8271,2.0227,28,0.2738,0.1744
+swin_tiny_patch4_window7_224,all test patches,p3557,With dysplasia,With dysplasia,Without dysplasia,0.7227,2.1381,30,0.2153,0.402
+swin_tiny_patch4_window7_224,all test patches,p3558,With dysplasia,OSCC,With dysplasia,0.9999,2.7749,33,0.2108,0.3055
+swin_tiny_patch4_window7_224,all test patches,p3559,With dysplasia,OSCC,With dysplasia,0.9999,2.5243,36,0.1744,0.0998
+swin_tiny_patch4_window7_224,all test patches,p3560,With dysplasia,OSCC,With dysplasia,0.9993,3.1943,37,0.1781,0.2098
+swin_tiny_patch4_window7_224,all test patches,p3561,With dysplasia,With dysplasia,With dysplasia,0.9993,1.8825,38,0.1551,0.1966
+swin_tiny_patch4_window7_224,all test patches,p3562,With dysplasia,With dysplasia,With dysplasia,0.9273,1.902,35,0.1848,0.305
+swin_tiny_patch4_window7_224,all test patches,p3563,With dysplasia,With dysplasia,With dysplasia,0.9958,2.3071,36,0.1789,0.1984
+swin_tiny_patch4_window7_224,all test patches,p3564,With dysplasia,With dysplasia,With dysplasia,0.9998,1.3308,32,0.1863,0.2951
+swin_tiny_patch4_window7_224,all test patches,p3565,With dysplasia,With dysplasia,With dysplasia,0.9999,2.5011,43,0.1588,0.2052
+swin_tiny_patch4_window7_224,all test patches,p3566,With dysplasia,With dysplasia,With dysplasia,0.9995,1.6158,33,0.1912,0.1577
+swin_tiny_patch4_window7_224,all test patches,p3567,With dysplasia,With dysplasia,With dysplasia,1.0,1.4555,40,0.1391,0.1612
+swin_tiny_patch4_window7_224,all test patches,p3568,With dysplasia,With dysplasia,With dysplasia,0.9996,1.0117,19,0.3388,0.0984
+swin_tiny_patch4_window7_224,all test patches,p3569,With dysplasia,With dysplasia,With dysplasia,0.9998,2.2526,27,0.2427,0.0197
+swin_tiny_patch4_window7_224,all test patches,p3570,With dysplasia,With dysplasia,With dysplasia,0.992,2.2825,42,0.1427,0.2627
+swin_tiny_patch4_window7_224,all test patches,p3571,With dysplasia,With dysplasia,With dysplasia,0.999,2.7417,43,0.154,0.1856
+swin_tiny_patch4_window7_224,all test patches,p3572,With dysplasia,With dysplasia,With dysplasia,1.0,3.3939,48,0.1407,0.2784
+swin_tiny_patch4_window7_224,all test patches,p3573,With dysplasia,With dysplasia,With dysplasia,1.0,4.108,33,0.2612,0.1178
+swin_tiny_patch4_window7_224,all test patches,p3574,With dysplasia,With dysplasia,With dysplasia,0.9969,2.4455,29,0.2165,0.2685
+swin_tiny_patch4_window7_224,all test patches,p3575,With dysplasia,not in NDB-UFES,With dysplasia,0.9995,4.1374,47,0.1992,0.1268
+swin_tiny_patch4_window7_224,all test patches,p3576,With dysplasia,not in NDB-UFES,With dysplasia,0.9985,1.0139,22,0.2444,0.2982
+swin_tiny_patch4_window7_224,all test patches,p3577,With dysplasia,not in NDB-UFES,With dysplasia,0.9563,1.3986,15,0.4399,0.1813
+swin_tiny_patch4_window7_224,all test patches,p3578,With dysplasia,not in NDB-UFES,With dysplasia,0.9839,1.3923,24,0.2905,0.1646
+swin_tiny_patch4_window7_224,all test patches,p3579,With dysplasia,not in NDB-UFES,With dysplasia,0.9906,1.0965,22,0.2761,0.1157
+swin_tiny_patch4_window7_224,all test patches,p3580,With dysplasia,not in NDB-UFES,With dysplasia,0.9897,1.2674,28,0.2244,0.2827
+swin_tiny_patch4_window7_224,all test patches,p3581,With dysplasia,OSCC,With dysplasia,0.9999,2.0899,28,0.3023,0.1966
+swin_tiny_patch4_window7_224,all test patches,p3582,With dysplasia,OSCC,With dysplasia,0.9874,0.8772,9,0.538,0.1421
+swin_tiny_patch4_window7_224,all test patches,p3583,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,1.2159,7,0.6995,0.0
+swin_tiny_patch4_window7_224,all test patches,p3584,With dysplasia,OSCC,With dysplasia,0.9997,1.2529,25,0.2455,0.0193
+swin_tiny_patch4_window7_224,all test patches,p3585,With dysplasia,OSCC,With dysplasia,0.9998,0.6729,23,0.237,0.1016
+swin_tiny_patch4_window7_224,all test patches,p3586,With dysplasia,OSCC,With dysplasia,0.9992,1.1696,14,0.3959,0.1011
+swin_tiny_patch4_window7_224,all test patches,p3587,With dysplasia,OSCC,With dysplasia,0.9999,1.5411,28,0.2695,0.4209
+swin_tiny_patch4_window7_224,all test patches,p3588,With dysplasia,OSCC,With dysplasia,0.9997,1.2816,19,0.3798,0.2038
+swin_tiny_patch4_window7_224,all test patches,p3589,With dysplasia,Without dysplasia,With dysplasia,0.9898,1.9831,33,0.1589,0.1918
+swin_tiny_patch4_window7_224,all test patches,p3590,With dysplasia,With dysplasia,With dysplasia,0.9997,2.1592,28,0.2352,0.223
+swin_tiny_patch4_window7_224,all test patches,p3591,With dysplasia,With dysplasia,With dysplasia,0.9758,0.7924,7,0.6346,0.0
+swin_tiny_patch4_window7_224,all test patches,p3592,With dysplasia,Without dysplasia,With dysplasia,0.9841,2.6392,37,0.2227,0.172
+swin_tiny_patch4_window7_224,all test patches,p3593,With dysplasia,With dysplasia,With dysplasia,1.0,2.0507,43,0.1861,0.1017
+swin_tiny_patch4_window7_224,all test patches,p3594,With dysplasia,Without dysplasia,With dysplasia,0.957,2.2271,21,0.2737,0.0543
+swin_tiny_patch4_window7_224,all test patches,p3595,With dysplasia,Without dysplasia,Without dysplasia,0.9992,2.0479,39,0.165,0.1348
+swin_tiny_patch4_window7_224,all test patches,p3596,With dysplasia,With dysplasia,With dysplasia,0.9995,1.6748,38,0.1599,0.1902
+swin_tiny_patch4_window7_224,all test patches,p3597,With dysplasia,With dysplasia,With dysplasia,0.9995,3.1145,43,0.1668,0.3064
+swin_tiny_patch4_window7_224,all test patches,p3598,With dysplasia,With dysplasia,With dysplasia,0.6654,1.2599,27,0.2437,0.4362
+swin_tiny_patch4_window7_224,all test patches,p3599,With dysplasia,With dysplasia,With dysplasia,0.9718,1.209,24,0.2512,0.3322
+swin_tiny_patch4_window7_224,all test patches,p3600,With dysplasia,With dysplasia,With dysplasia,0.9675,2.4602,32,0.2345,0.2425
+swin_tiny_patch4_window7_224,all test patches,p3601,With dysplasia,With dysplasia,With dysplasia,0.6409,1.7188,30,0.2516,0.0873
+swin_tiny_patch4_window7_224,all test patches,p3602,With dysplasia,With dysplasia,With dysplasia,0.9935,2.0167,37,0.2054,0.1464
+swin_tiny_patch4_window7_224,all test patches,p3603,With dysplasia,With dysplasia,With dysplasia,1.0,1.4883,44,0.1768,0.2463
+swin_tiny_patch4_window7_224,all test patches,p3604,With dysplasia,With dysplasia,With dysplasia,0.9984,1.4904,29,0.2116,0.2291
+swin_tiny_patch4_window7_224,all test patches,p3605,With dysplasia,With dysplasia,With dysplasia,0.9994,1.1738,34,0.1842,0.2201
+swin_tiny_patch4_window7_224,all test patches,p3606,With dysplasia,not in NDB-UFES,With dysplasia,0.9994,3.8225,47,0.1453,0.2473
+swin_tiny_patch4_window7_224,all test patches,p3607,With dysplasia,OSCC,With dysplasia,0.9628,2.1308,35,0.1842,0.2117
+swin_tiny_patch4_window7_224,all test patches,p3608,With dysplasia,OSCC,With dysplasia,1.0,2.0505,44,0.1325,0.1515
+swin_tiny_patch4_window7_224,all test patches,p3609,With dysplasia,OSCC,With dysplasia,0.9941,2.8674,42,0.1746,0.3678
+swin_tiny_patch4_window7_224,all test patches,p3610,With dysplasia,OSCC,With dysplasia,0.9997,2.1243,45,0.1181,0.1256
+swin_tiny_patch4_window7_224,all test patches,p3611,With dysplasia,OSCC,With dysplasia,0.9996,1.7814,32,0.2378,0.1707
+swin_tiny_patch4_window7_224,all test patches,p3612,With dysplasia,OSCC,With dysplasia,0.9988,2.5191,39,0.1918,0.1339
+swin_tiny_patch4_window7_224,all test patches,p3613,With dysplasia,OSCC,With dysplasia,1.0,1.1004,27,0.2173,0.3105
+swin_tiny_patch4_window7_224,all test patches,p3614,With dysplasia,OSCC,With dysplasia,0.9927,1.5082,25,0.2284,0.035
+swin_tiny_patch4_window7_224,all test patches,p3615,With dysplasia,OSCC,With dysplasia,0.994,1.2235,16,0.3779,0.0193
+swin_tiny_patch4_window7_224,all test patches,p3616,With dysplasia,OSCC,With dysplasia,0.999,0.8972,20,0.3037,0.1929
+swin_tiny_patch4_window7_224,all test patches,p3617,With dysplasia,OSCC,With dysplasia,0.9951,0.9977,25,0.2905,0.269
+swin_tiny_patch4_window7_224,all test patches,p3618,With dysplasia,OSCC,With dysplasia,0.9981,2.4175,36,0.221,0.2463
+swin_tiny_patch4_window7_224,all test patches,p3619,With dysplasia,OSCC,With dysplasia,0.9947,1.0002,20,0.2899,0.2397
+swin_tiny_patch4_window7_224,all test patches,p3620,With dysplasia,OSCC,With dysplasia,0.9989,1.3443,32,0.1718,0.1692
+swin_tiny_patch4_window7_224,all test patches,p3621,With dysplasia,OSCC,With dysplasia,0.9993,1.0749,33,0.1826,0.2944
+swin_tiny_patch4_window7_224,all test patches,p3622,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,1.5517,38,0.2001,0.1755
+swin_tiny_patch4_window7_224,all test patches,p3623,With dysplasia,not in NDB-UFES,With dysplasia,0.9997,1.7297,38,0.1739,0.1635
+swin_tiny_patch4_window7_224,all test patches,p3624,With dysplasia,not in NDB-UFES,With dysplasia,0.9998,1.6905,36,0.1922,0.1721
+swin_tiny_patch4_window7_224,all test patches,p3625,With dysplasia,not in NDB-UFES,With dysplasia,0.9999,1.3456,23,0.2451,0.0352
+swin_tiny_patch4_window7_224,all test patches,p3626,With dysplasia,not in NDB-UFES,With dysplasia,0.9765,1.726,19,0.3278,0.0042
+swin_tiny_patch4_window7_224,all test patches,p3627,With dysplasia,not in NDB-UFES,With dysplasia,0.9992,1.1448,15,0.344,0.0459
+swin_tiny_patch4_window7_224,all test patches,p3628,With dysplasia,not in NDB-UFES,With dysplasia,0.9915,2.4101,22,0.3469,0.2543
+swin_tiny_patch4_window7_224,all test patches,p3629,With dysplasia,not in NDB-UFES,With dysplasia,0.9906,1.4977,13,0.3853,0.1694
+swin_tiny_patch4_window7_224,all test patches,p3630,With dysplasia,Without dysplasia,With dysplasia,0.871,2.7682,20,0.3578,0.1504
+swin_tiny_patch4_window7_224,all test patches,p3631,With dysplasia,Without dysplasia,With dysplasia,0.9993,2.1437,46,0.1627,0.1697
+swin_tiny_patch4_window7_224,all test patches,p3632,With dysplasia,Without dysplasia,With dysplasia,1.0,2.1968,43,0.1618,0.1758
+swin_tiny_patch4_window7_224,all test patches,p3633,With dysplasia,With dysplasia,With dysplasia,0.9955,2.498,37,0.2648,0.1784
+swin_tiny_patch4_window7_224,all test patches,p3634,With dysplasia,With dysplasia,With dysplasia,0.9998,2.3744,41,0.1585,0.2476
+swin_tiny_patch4_window7_224,all test patches,p3635,With dysplasia,With dysplasia,With dysplasia,0.9916,2.406,36,0.1856,0.1109
+swin_tiny_patch4_window7_224,all test patches,p3636,With dysplasia,OSCC,With dysplasia,0.9863,1.3261,40,0.1263,0.1618
+swin_tiny_patch4_window7_224,all test patches,p3637,With dysplasia,OSCC,With dysplasia,0.9911,2.2261,44,0.1508,0.2765
+swin_tiny_patch4_window7_224,all test patches,p3638,With dysplasia,OSCC,With dysplasia,0.9936,3.119,43,0.1415,0.1897
+swin_tiny_patch4_window7_224,all test patches,p3639,With dysplasia,OSCC,With dysplasia,0.9193,1.5371,19,0.2654,0.1414
+swin_tiny_patch4_window7_224,all test patches,p3640,With dysplasia,OSCC,With dysplasia,0.9988,1.65,31,0.2444,0.3152
+swin_tiny_patch4_window7_224,all test patches,p3641,With dysplasia,OSCC,With dysplasia,0.9966,1.5308,30,0.2215,0.1778
+swin_tiny_patch4_window7_224,all test patches,p3642,With dysplasia,Without dysplasia,With dysplasia,0.9997,2.8707,37,0.1979,0.0883
+swin_tiny_patch4_window7_224,all test patches,p3643,With dysplasia,Without dysplasia,With dysplasia,0.9998,1.8247,35,0.1674,0.1094
+swin_tiny_patch4_window7_224,all test patches,p3644,With dysplasia,Without dysplasia,With dysplasia,0.9999,2.0878,38,0.1809,0.1032
+swin_tiny_patch4_window7_224,all test patches,p3645,With dysplasia,With dysplasia,With dysplasia,0.979,1.805,27,0.2996,0.3282
+swin_tiny_patch4_window7_224,all test patches,p3646,With dysplasia,With dysplasia,OSCC,0.8075,2.0194,38,0.167,0.1439
+swin_tiny_patch4_window7_224,all test patches,p3647,With dysplasia,With dysplasia,With dysplasia,0.8989,1.3931,22,0.2905,0.2307
+swin_tiny_patch4_window7_224,all test patches,p3648,With dysplasia,With dysplasia,With dysplasia,0.9998,1.7135,35,0.1712,0.1514
+swin_tiny_patch4_window7_224,all test patches,p3649,With dysplasia,With dysplasia,With dysplasia,0.7262,2.2282,25,0.2787,0.2355
+swin_tiny_patch4_window7_224,all test patches,p3650,With dysplasia,With dysplasia,With dysplasia,0.9829,1.9342,39,0.2005,0.156
+swin_tiny_patch4_window7_224,all test patches,p3651,With dysplasia,With dysplasia,With dysplasia,0.9993,2.6188,38,0.1618,0.2575
+swin_tiny_patch4_window7_224,all test patches,p3652,With dysplasia,With dysplasia,With dysplasia,0.9449,2.5774,36,0.1994,0.0669
+swin_tiny_patch4_window7_224,all test patches,p3653,With dysplasia,With dysplasia,With dysplasia,0.9998,2.9373,42,0.1419,0.1759
+swin_tiny_patch4_window7_224,all test patches,p3654,With dysplasia,OSCC,With dysplasia,0.7677,1.9995,45,0.1266,0.1405
+swin_tiny_patch4_window7_224,all test patches,p3655,With dysplasia,OSCC,With dysplasia,0.8838,2.4537,35,0.1989,0.1347
+swin_tiny_patch4_window7_224,all test patches,p3656,With dysplasia,OSCC,With dysplasia,0.9921,2.926,45,0.1312,0.2601
+swin_tiny_patch4_window7_224,all test patches,p3657,With dysplasia,OSCC,With dysplasia,0.9001,2.3042,36,0.1439,0.1838
+swin_tiny_patch4_window7_224,all test patches,p3658,With dysplasia,OSCC,With dysplasia,0.9998,4.4879,49,0.1745,0.3019
+swin_tiny_patch4_window7_224,all test patches,p3659,With dysplasia,OSCC,With dysplasia,0.9992,1.6521,28,0.2394,0.3007
+swin_tiny_patch4_window7_224,all test patches,p3660,With dysplasia,OSCC,With dysplasia,0.9995,2.548,39,0.1453,0.2152
+swin_tiny_patch4_window7_224,all test patches,p3661,With dysplasia,OSCC,With dysplasia,0.9591,2.9564,37,0.183,0.2933
+swin_tiny_patch4_window7_224,all test patches,p3662,With dysplasia,OSCC,With dysplasia,0.6131,1.7397,37,0.1687,0.2828
+swin_tiny_patch4_window7_224,all test patches,p3663,With dysplasia,With dysplasia,With dysplasia,0.6733,1.4523,17,0.4227,0.1799
+swin_tiny_patch4_window7_224,all test patches,p3664,With dysplasia,With dysplasia,Without dysplasia,0.8772,0.8944,6,0.7018,0.0029
+swin_tiny_patch4_window7_224,all test patches,p3665,With dysplasia,Without dysplasia,With dysplasia,0.9813,5.014,15,0.6277,0.0482
+swin_tiny_patch4_window7_224,all test patches,p3666,With dysplasia,Without dysplasia,With dysplasia,0.9997,1.9425,46,0.141,0.1679
+swin_tiny_patch4_window7_224,all test patches,p3667,With dysplasia,Without dysplasia,With dysplasia,1.0,4.0911,39,0.1668,0.3823
+swin_tiny_patch4_window7_224,all test patches,p3668,With dysplasia,Without dysplasia,With dysplasia,1.0,1.5831,47,0.133,0.2531
+swin_tiny_patch4_window7_224,all test patches,p3669,With dysplasia,Without dysplasia,With dysplasia,0.9991,1.6429,47,0.1144,0.2411
+swin_tiny_patch4_window7_224,all test patches,p3670,With dysplasia,Without dysplasia,With dysplasia,0.9967,1.8388,24,0.2983,0.1296
+swin_tiny_patch4_window7_224,all test patches,p3671,With dysplasia,Without dysplasia,With dysplasia,0.9992,1.6318,44,0.1467,0.1892
+swin_tiny_patch4_window7_224,all test patches,p3672,With dysplasia,Without dysplasia,With dysplasia,0.9981,1.7142,33,0.1707,0.3086
+swin_tiny_patch4_window7_224,all test patches,p3673,With dysplasia,Without dysplasia,With dysplasia,0.9998,1.7719,33,0.2124,0.2216
+swin_tiny_patch4_window7_224,all test patches,p3674,With dysplasia,not in NDB-UFES,With dysplasia,0.9994,1.8999,37,0.1638,0.2364
+swin_tiny_patch4_window7_224,all test patches,p3675,With dysplasia,not in NDB-UFES,With dysplasia,0.997,1.6165,22,0.3349,0.066
+swin_tiny_patch4_window7_224,all test patches,p3676,With dysplasia,not in NDB-UFES,Without dysplasia,0.6757,4.182,32,0.1943,0.266
+swin_tiny_patch4_window7_224,all test patches,p3677,With dysplasia,not in NDB-UFES,OSCC,0.9953,0.928,20,0.2814,0.0683
+swin_tiny_patch4_window7_224,all test patches,p3678,With dysplasia,not in NDB-UFES,With dysplasia,0.9762,3.222,41,0.196,0.1751
+swin_tiny_patch4_window7_224,all test patches,p3679,With dysplasia,not in NDB-UFES,OSCC,0.8922,1.2264,16,0.4417,0.2253
+swin_tiny_patch4_window7_224,all test patches,p3680,With dysplasia,not in NDB-UFES,OSCC,0.7734,1.7156,14,0.4684,0.0706
+swin_tiny_patch4_window7_224,all test patches,p3681,With dysplasia,not in NDB-UFES,OSCC,0.9964,1.3542,36,0.183,0.2054
+swin_tiny_patch4_window7_224,all test patches,p3682,With dysplasia,OSCC,With dysplasia,0.9943,1.913,26,0.2958,0.1667
+swin_tiny_patch4_window7_224,all test patches,p3683,With dysplasia,OSCC,With dysplasia,0.9982,2.5763,39,0.1666,0.1411
+swin_tiny_patch4_window7_224,all test patches,p3684,With dysplasia,OSCC,OSCC,0.9867,2.1126,22,0.3436,0.3983
+swin_tiny_patch4_window7_224,all test patches,p3685,With dysplasia,OSCC,With dysplasia,0.7333,1.6739,29,0.2212,0.1238
+swin_tiny_patch4_window7_224,all test patches,p3686,With dysplasia,OSCC,With dysplasia,0.9663,2.6162,31,0.1899,0.2615
+swin_tiny_patch4_window7_224,all test patches,p3687,With dysplasia,OSCC,With dysplasia,0.6565,1.7306,31,0.173,0.2747
+swin_tiny_patch4_window7_224,all test patches,p3688,With dysplasia,OSCC,OSCC,0.74,0.9791,19,0.3201,0.1766
+swin_tiny_patch4_window7_224,all test patches,p3689,With dysplasia,OSCC,With dysplasia,0.9999,3.1222,38,0.2467,0.1399
+swin_tiny_patch4_window7_224,all test patches,p3690,With dysplasia,OSCC,With dysplasia,1.0,1.8461,44,0.1426,0.1133
+swin_tiny_patch4_window7_224,all test patches,p3691,OSCC,not in NDB-UFES,With dysplasia,0.7098,1.6047,42,0.1437,0.161
+swin_tiny_patch4_window7_224,all test patches,p3692,OSCC,not in NDB-UFES,OSCC,0.9883,2.1595,45,0.1393,0.226
+swin_tiny_patch4_window7_224,all test patches,p3693,OSCC,OSCC,OSCC,1.0,2.0349,44,0.146,0.1509
+swin_tiny_patch4_window7_224,all test patches,p3694,OSCC,OSCC,OSCC,0.9999,1.8342,31,0.1978,0.2389
+swin_tiny_patch4_window7_224,all test patches,p3695,OSCC,OSCC,OSCC,0.9996,1.7741,36,0.1929,0.1268
+swin_tiny_patch4_window7_224,all test patches,p3696,OSCC,OSCC,OSCC,0.9943,1.3053,24,0.2995,0.1824
+swin_tiny_patch4_window7_224,all test patches,p3697,OSCC,OSCC,OSCC,1.0,1.9756,36,0.2408,0.1464
+swin_tiny_patch4_window7_224,all test patches,p3698,OSCC,OSCC,OSCC,0.9998,2.2209,28,0.3068,0.2213
+swin_tiny_patch4_window7_224,all test patches,p3699,OSCC,OSCC,OSCC,0.9632,0.622,6,0.6336,0.0
+swin_tiny_patch4_window7_224,all test patches,p3700,OSCC,OSCC,OSCC,0.9991,0.7987,18,0.2612,0.0428
+swin_tiny_patch4_window7_224,all test patches,p3701,OSCC,OSCC,OSCC,0.9999,1.3164,28,0.2302,0.0954
+swin_tiny_patch4_window7_224,all test patches,p3702,OSCC,OSCC,OSCC,0.9983,1.8005,31,0.2699,0.1011
+swin_tiny_patch4_window7_224,all test patches,p3703,OSCC,OSCC,OSCC,0.9984,0.39,4,0.7904,0.2339
+swin_tiny_patch4_window7_224,all test patches,p3704,OSCC,With dysplasia,With dysplasia,0.9536,1.8642,33,0.1825,0.3535
+swin_tiny_patch4_window7_224,all test patches,p3705,OSCC,OSCC,OSCC,0.9994,1.1994,22,0.2474,0.0387
+swin_tiny_patch4_window7_224,all test patches,p3706,OSCC,OSCC,OSCC,0.9983,1.886,29,0.2677,0.048
+swin_tiny_patch4_window7_224,all test patches,p3707,OSCC,OSCC,OSCC,1.0,1.8547,45,0.1369,0.2136
+swin_tiny_patch4_window7_224,all test patches,p3708,OSCC,OSCC,OSCC,0.9991,1.5242,35,0.1872,0.1796
+swin_tiny_patch4_window7_224,all test patches,p3709,OSCC,OSCC,OSCC,0.8577,2.3362,4,0.9308,0.0063
+swin_tiny_patch4_window7_224,all test patches,p3710,OSCC,OSCC,OSCC,0.9957,1.3443,36,0.1913,0.2701
+swin_tiny_patch4_window7_224,all test patches,p3711,OSCC,OSCC,OSCC,0.9945,3.3387,19,0.3937,0.1443
+swin_tiny_patch4_window7_224,all test patches,p3712,OSCC,OSCC,OSCC,0.9974,-0.0646,0,,
+swin_tiny_patch4_window7_224,all test patches,p3713,OSCC,OSCC,OSCC,0.9999,2.1245,40,0.2235,0.2838
+swin_tiny_patch4_window7_224,all test patches,p3714,Without dysplasia,With dysplasia,Without dysplasia,0.9948,2.1059,28,0.2451,0.3347
+swin_tiny_patch4_window7_224,all test patches,p3715,Without dysplasia,With dysplasia,Without dysplasia,0.98,1.645,23,0.242,0.2788
+swin_tiny_patch4_window7_224,all test patches,p3716,Without dysplasia,OSCC,Without dysplasia,0.9997,2.5791,29,0.2334,0.1609
+swin_tiny_patch4_window7_224,all test patches,p3717,Without dysplasia,OSCC,Without dysplasia,0.9985,2.2536,29,0.2534,0.1267
+swin_tiny_patch4_window7_224,all test patches,p3718,Without dysplasia,OSCC,Without dysplasia,0.9943,1.5494,20,0.4348,0.1561
+swin_tiny_patch4_window7_224,all test patches,p3719,Without dysplasia,Without dysplasia,Without dysplasia,1.0,2.101,32,0.2168,0.2604
+swin_tiny_patch4_window7_224,all test patches,p3720,Without dysplasia,With dysplasia,Without dysplasia,0.9847,1.5412,36,0.1795,0.2032
+swin_tiny_patch4_window7_224,all test patches,p3721,Without dysplasia,Without dysplasia,Without dysplasia,0.991,1.9,11,0.4016,0.0482
+swin_tiny_patch4_window7_224,all test patches,p3722,Without dysplasia,With dysplasia,Without dysplasia,0.9972,2.1816,6,0.8406,0.0
+swin_tiny_patch4_window7_224,all test patches,p3723,Without dysplasia,Without dysplasia,Without dysplasia,0.9804,1.5736,8,0.6585,0.0307
+swin_tiny_patch4_window7_224,all test patches,p3724,Without dysplasia,Without dysplasia,Without dysplasia,0.9941,1.7957,18,0.3434,0.1101
+swin_tiny_patch4_window7_224,all test patches,p3725,Without dysplasia,With dysplasia,With dysplasia,0.9539,2.5189,23,0.3035,0.1058
+swin_tiny_patch4_window7_224,all test patches,p3726,With dysplasia,not in NDB-UFES,With dysplasia,0.9817,1.1883,19,0.3106,0.1301
+swin_tiny_patch4_window7_224,all test patches,p3727,With dysplasia,With dysplasia,With dysplasia,1.0,1.9898,34,0.2448,0.1202
+swin_tiny_patch4_window7_224,all test patches,p3728,With dysplasia,OSCC,With dysplasia,0.9986,1.598,27,0.2328,0.2119
+swin_tiny_patch4_window7_224,all test patches,p3729,With dysplasia,Without dysplasia,With dysplasia,0.993,1.1211,14,0.4207,0.1001
+swin_tiny_patch4_window7_224,all test patches,p3730,With dysplasia,Without dysplasia,With dysplasia,0.9885,2.2726,35,0.2737,0.1908
+swin_tiny_patch4_window7_224,all test patches,p3731,With dysplasia,With dysplasia,With dysplasia,0.9997,1.6853,26,0.2954,0.4258
+swin_tiny_patch4_window7_224,all test patches,p3732,With dysplasia,With dysplasia,With dysplasia,0.9998,2.7077,41,0.1924,0.1496
+swin_tiny_patch4_window7_224,all test patches,p3733,With dysplasia,With dysplasia,With dysplasia,1.0,2.7564,41,0.1908,0.1439
+swin_tiny_patch4_window7_224,all test patches,p3734,With dysplasia,With dysplasia,With dysplasia,0.9539,2.27,39,0.1621,0.264
+swin_tiny_patch4_window7_224,all test patches,p3735,With dysplasia,With dysplasia,Without dysplasia,0.9848,0.3859,9,0.4728,0.3758
+swin_tiny_patch4_window7_224,all test patches,p3736,With dysplasia,OSCC,With dysplasia,0.9012,3.3773,40,0.2085,0.1796
+swin_tiny_patch4_window7_224,all test patches,p3737,With dysplasia,OSCC,With dysplasia,0.9252,0.9088,7,0.5739,0.1406
+swin_tiny_patch4_window7_224,all test patches,p3738,With dysplasia,Without dysplasia,With dysplasia,0.9475,1.6549,20,0.283,0.1191
+swin_tiny_patch4_window7_224,all test patches,p3739,With dysplasia,Without dysplasia,Without dysplasia,0.9967,4.0043,27,0.4236,0.1552
+swin_tiny_patch4_window7_224,all test patches,p3740,With dysplasia,Without dysplasia,With dysplasia,0.9991,1.2528,14,0.3733,0.183
+swin_tiny_patch4_window7_224,all test patches,p3741,With dysplasia,Without dysplasia,With dysplasia,0.9994,2.7558,47,0.1215,0.1681
+swin_tiny_patch4_window7_224,all test patches,p3742,With dysplasia,Without dysplasia,With dysplasia,0.9997,1.2322,37,0.1849,0.2206
+swin_tiny_patch4_window7_224,all test patches,p3743,With dysplasia,not in NDB-UFES,With dysplasia,0.5508,0.7013,12,0.387,0.1864
+swin_tiny_patch4_window7_224,all test patches,p3744,With dysplasia,OSCC,With dysplasia,0.9986,3.6139,29,0.2216,0.2511
+swin_tiny_patch4_window7_224,all test patches,p3745,With dysplasia,OSCC,With dysplasia,0.9961,0.5679,17,0.3094,0.1138
+swin_tiny_patch4_window7_224,all test patches,p3746,With dysplasia,OSCC,OSCC,0.6164,1.6433,12,0.5342,0.044
+swin_tiny_patch4_window7_224,all test patches,p3747,With dysplasia,Without dysplasia,With dysplasia,0.9998,2.4506,40,0.1519,0.2202
+swin_tiny_patch4_window7_224,all test patches,p3748,With dysplasia,Without dysplasia,With dysplasia,0.9004,1.4384,27,0.2763,0.0766
+swin_tiny_patch4_window7_224,all test patches,p3749,With dysplasia,Without dysplasia,Without dysplasia,0.6251,1.5869,19,0.2995,0.1863
+swin_tiny_patch4_window7_224,all test patches,p3750,With dysplasia,OSCC,With dysplasia,0.9994,2.1116,43,0.1412,0.2311
+swin_tiny_patch4_window7_224,all test patches,p3751,With dysplasia,OSCC,With dysplasia,0.9939,3.3839,37,0.2387,0.1707
+swin_tiny_patch4_window7_224,all test patches,p3752,With dysplasia,Without dysplasia,With dysplasia,0.9571,4.1912,26,0.267,0.1065
+swin_tiny_patch4_window7_224,all test patches,p3753,With dysplasia,Without dysplasia,With dysplasia,0.9997,2.0552,47,0.1356,0.2057
+swin_tiny_patch4_window7_224,all test patches,p3754,With dysplasia,With dysplasia,With dysplasia,0.9998,2.5173,44,0.1247,0.2305
+swin_tiny_patch4_window7_224,all test patches,p3755,With dysplasia,OSCC,With dysplasia,0.9427,1.8734,33,0.1932,0.3731
+swin_tiny_patch4_window7_224,all test patches,p3756,With dysplasia,OSCC,With dysplasia,0.8257,1.7937,18,0.3358,0.0757
+swin_tiny_patch4_window7_224,all test patches,p3757,With dysplasia,OSCC,With dysplasia,0.9934,2.5295,29,0.3049,0.0627
+swin_tiny_patch4_window7_224,all test patches,p3758,With dysplasia,With dysplasia,With dysplasia,1.0,1.369,41,0.1481,0.1613
+swin_tiny_patch4_window7_224,all test patches,p3759,With dysplasia,OSCC,With dysplasia,0.9975,2.66,41,0.1707,0.2257
+swin_tiny_patch4_window7_224,all test patches,p3760,With dysplasia,Without dysplasia,Without dysplasia,0.5832,1.5644,24,0.4006,0.2115
+swin_tiny_patch4_window7_224,all test patches,p3761,With dysplasia,not in NDB-UFES,With dysplasia,1.0,3.314,46,0.2121,0.1357
+swin_tiny_patch4_window7_224,all test patches,p3762,With dysplasia,OSCC,With dysplasia,1.0,3.2152,48,0.1398,0.2233

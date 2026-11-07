@@ -1,0 +1,29 @@
+x0,y0,size,coverage,patch_ids,region_id,histopath_id,n_patches,region_label,parent,patches_Without dysplasia,patches_With dysplasia,patches_OSCC,patches_predicted_max_vgg16,patches_predicted_max_densenet121,patches_predicted_max_swin_tiny_patch4_window7_224
+640,768,640,0.7325,p3473 p3476,hp_0126a17050e6_640_0,hp_0126a17050e6,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,With dysplasia
+128,320,640,0.716875,p3631 p3753,hp_0957bb92f6a3_640_0,hp_0957bb92f6a3,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+768,192,640,0.74625,p3264 p3267,hp_0c940095738b_640_0,hp_0c940095738b,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1024,448,768,0.71484375,p3247 p3249,hp_1689f129285b_768_0,hp_1689f129285b,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1312,512,640,0.749375,p3180 p3181,hp_27fccd7fe158_640_0,hp_27fccd7fe158,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+768,896,640,0.73625,p3680 p3681,hp_2e149e6d7637_640_0,hp_2e149e6d7637,2,With dysplasia,not in NDB-UFES,0,2,0,OSCC,OSCC,OSCC
+800,640,640,0.78125,p3285 p3286,hp_32cc24101969_640_0,hp_32cc24101969,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1408,736,640,0.779375,p3377 p3378,hp_33e617819ad9_640_0,hp_33e617819ad9,2,Without dysplasia,Without dysplasia,2,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+352,320,1024,0.77685546875,p3327 p3328 p3329 p3717,hp_359f1abe0ac8_1024_0,hp_359f1abe0ac8,4,Without dysplasia,OSCC,4,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+1184,608,768,0.7686631944444444,p3342 p3528 p3721,hp_3cdf26a4f15f_768_0,hp_3cdf26a4f15f,3,With dysplasia,Without dysplasia,2,1,0,Without dysplasia,Without dysplasia,Without dysplasia
+512,736,768,0.7230902777777778,p3539 p3541,hp_3d8e08ce4a19_768_0,hp_3d8e08ce4a19,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+416,128,640,0.76375,p3385 p3386,hp_4b5975a01b99_640_0,hp_4b5975a01b99,2,Without dysplasia,not in NDB-UFES,2,0,0,With dysplasia,Without dysplasia,With dysplasia
+832,864,640,0.7625,p3239 p3240,hp_4c9147d59ab8_640_0,hp_4c9147d59ab8,2,OSCC,With dysplasia,0,0,2,OSCC,OSCC,OSCC
+1088,96,640,0.73125,p3515 p3516,hp_64b5902ca5c7_640_0,hp_64b5902ca5c7,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+1312,480,640,0.779375,p3291 p3713,hp_9143a73aac95_640_0,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+704,0,640,0.7325,p3292 p3293,hp_9143a73aac95_640_1,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,With dysplasia,OSCC,OSCC
+640,448,640,0.82625,p3576 p3579,hp_a3246738f20d_640_0,hp_a3246738f20d,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,With dysplasia
+736,256,640,0.830625,p3645 p3646,hp_a699fd6d6733_640_0,hp_a699fd6d6733,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,OSCC
+512,64,768,0.7087673611111112,p3559 p3744,hp_b240305d0f8e_768_0,hp_b240305d0f8e,2,With dysplasia,OSCC,0,2,0,With dysplasia,With dysplasia,With dysplasia
+96,736,768,0.7092013888888888,p3565 p3568,hp_c313973f026a_768_0,hp_c313973f026a,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+64,0,640,0.71375,p3216 p3217,hp_c9768f36b604_640_0,hp_c9768f36b604,2,OSCC,not in NDB-UFES,0,0,2,OSCC,OSCC,With dysplasia
+928,512,640,0.76625,p3418 p3420,hp_d3b676cfdf5d_640_0,hp_d3b676cfdf5d,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+1024,288,768,0.7087673611111112,p3419 p3420,hp_d3b676cfdf5d_768_0,hp_d3b676cfdf5d,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+1056,448,640,0.7625,p3305 p3306,hp_d9d0d408a75a_640_0,hp_d9d0d408a75a,2,Without dysplasia,not in NDB-UFES,2,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+640,576,640,0.7625,p3425 p3427,hp_d9d0d408a75a_640_1,hp_d9d0d408a75a,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,With dysplasia
+704,32,640,0.7325,p3423 p3424,hp_d9d0d408a75a_640_2,hp_d9d0d408a75a,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,With dysplasia
+864,32,640,0.7625,p3642 p3643,hp_df3971f08c60_640_0,hp_df3971f08c60,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+960,32,768,0.7161458333333334,p3642 p3644,hp_df3971f08c60_768_0,hp_df3971f08c60,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia

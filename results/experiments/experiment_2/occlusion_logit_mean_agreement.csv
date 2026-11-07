@@ -1,0 +1,262 @@
+group,patch_id,model_1,model_2,spearman
+agrees with the parent,p3133,densenet121,swin_tiny_patch4_window7_224,0.182
+agrees with the parent,p3133,densenet121,vgg16,0.363
+agrees with the parent,p3133,swin_tiny_patch4_window7_224,vgg16,-0.255
+agrees with the parent,p2677,densenet121,swin_tiny_patch4_window7_224,-0.087
+agrees with the parent,p2677,densenet121,vgg16,0.008
+agrees with the parent,p2677,swin_tiny_patch4_window7_224,vgg16,0.198
+agrees with the parent,p2829,densenet121,swin_tiny_patch4_window7_224,-0.14
+agrees with the parent,p2829,densenet121,vgg16,-0.024
+agrees with the parent,p2829,swin_tiny_patch4_window7_224,vgg16,0.131
+agrees with the parent,p2673,densenet121,swin_tiny_patch4_window7_224,0.236
+agrees with the parent,p2673,densenet121,vgg16,0.26
+agrees with the parent,p2673,swin_tiny_patch4_window7_224,vgg16,0.013
+agrees with the parent,p2812,densenet121,swin_tiny_patch4_window7_224,0.149
+agrees with the parent,p2812,densenet121,vgg16,-0.05
+agrees with the parent,p2812,swin_tiny_patch4_window7_224,vgg16,0.119
+agrees with the parent,p3655,densenet121,swin_tiny_patch4_window7_224,-0.223
+agrees with the parent,p3655,densenet121,vgg16,0.045
+agrees with the parent,p3655,swin_tiny_patch4_window7_224,vgg16,-0.503
+agrees with the parent,p2448,densenet121,swin_tiny_patch4_window7_224,-0.212
+agrees with the parent,p2448,densenet121,vgg16,-0.368
+agrees with the parent,p2448,swin_tiny_patch4_window7_224,vgg16,0.148
+agrees with the parent,p3688,densenet121,swin_tiny_patch4_window7_224,0.268
+agrees with the parent,p3688,densenet121,vgg16,0.359
+agrees with the parent,p3688,swin_tiny_patch4_window7_224,vgg16,0.172
+agrees with the parent,p3656,densenet121,swin_tiny_patch4_window7_224,-0.132
+agrees with the parent,p3656,densenet121,vgg16,-0.261
+agrees with the parent,p3656,swin_tiny_patch4_window7_224,vgg16,0.296
+agrees with the parent,p3609,densenet121,swin_tiny_patch4_window7_224,0.031
+agrees with the parent,p3609,densenet121,vgg16,0.434
+agrees with the parent,p3609,swin_tiny_patch4_window7_224,vgg16,0.192
+agrees with the parent,p2456,densenet121,swin_tiny_patch4_window7_224,0.372
+agrees with the parent,p2456,densenet121,vgg16,-0.006
+agrees with the parent,p2456,swin_tiny_patch4_window7_224,vgg16,0.337
+agrees with the parent,p2694,densenet121,swin_tiny_patch4_window7_224,0.003
+agrees with the parent,p2694,densenet121,vgg16,-0.6
+agrees with the parent,p2694,swin_tiny_patch4_window7_224,vgg16,0.086
+agrees with the parent,p2696,densenet121,swin_tiny_patch4_window7_224,-0.201
+agrees with the parent,p2696,densenet121,vgg16,-0.301
+agrees with the parent,p2696,swin_tiny_patch4_window7_224,vgg16,0.399
+agrees with the parent,p3135,densenet121,swin_tiny_patch4_window7_224,-0.259
+agrees with the parent,p3135,densenet121,vgg16,-0.068
+agrees with the parent,p3135,swin_tiny_patch4_window7_224,vgg16,-0.224
+agrees with the parent,p3132,densenet121,swin_tiny_patch4_window7_224,-0.016
+agrees with the parent,p3132,densenet121,vgg16,0.424
+agrees with the parent,p3132,swin_tiny_patch4_window7_224,vgg16,0.412
+agrees with the parent,p2701,densenet121,swin_tiny_patch4_window7_224,-0.533
+agrees with the parent,p2701,densenet121,vgg16,-0.293
+agrees with the parent,p2701,swin_tiny_patch4_window7_224,vgg16,0.28
+agrees with the parent,p2816,densenet121,swin_tiny_patch4_window7_224,0.205
+agrees with the parent,p2816,densenet121,vgg16,0.367
+agrees with the parent,p2816,swin_tiny_patch4_window7_224,vgg16,0.167
+agrees with the parent,p2709,densenet121,swin_tiny_patch4_window7_224,-0.099
+agrees with the parent,p2709,densenet121,vgg16,-0.159
+agrees with the parent,p2709,swin_tiny_patch4_window7_224,vgg16,0.195
+agrees with the parent,p2828,densenet121,swin_tiny_patch4_window7_224,0.08
+agrees with the parent,p2828,densenet121,vgg16,0.305
+agrees with the parent,p2828,swin_tiny_patch4_window7_224,vgg16,0.188
+agrees with the parent,p3661,densenet121,swin_tiny_patch4_window7_224,0.204
+agrees with the parent,p3661,densenet121,vgg16,0.284
+agrees with the parent,p3661,swin_tiny_patch4_window7_224,vgg16,0.466
+agrees with the parent,p2815,densenet121,swin_tiny_patch4_window7_224,0.297
+agrees with the parent,p2815,densenet121,vgg16,-0.174
+agrees with the parent,p2815,swin_tiny_patch4_window7_224,vgg16,-0.179
+agrees with the parent,p3434,densenet121,swin_tiny_patch4_window7_224,-0.227
+agrees with the parent,p3434,densenet121,vgg16,0.403
+agrees with the parent,p3434,swin_tiny_patch4_window7_224,vgg16,-0.033
+agrees with the parent,p1514,densenet121,swin_tiny_patch4_window7_224,0.016
+agrees with the parent,p1514,densenet121,vgg16,-0.124
+agrees with the parent,p1514,swin_tiny_patch4_window7_224,vgg16,-0.305
+agrees with the parent,p2814,densenet121,swin_tiny_patch4_window7_224,-0.065
+agrees with the parent,p2814,densenet121,vgg16,0.035
+agrees with the parent,p2814,swin_tiny_patch4_window7_224,vgg16,0.263
+genuine error,p2982,densenet121,swin_tiny_patch4_window7_224,-0.404
+genuine error,p2982,densenet121,vgg16,0.187
+genuine error,p2982,swin_tiny_patch4_window7_224,vgg16,-0.168
+genuine error,p1396,densenet121,swin_tiny_patch4_window7_224,0.096
+genuine error,p1396,densenet121,vgg16,-0.175
+genuine error,p1396,swin_tiny_patch4_window7_224,vgg16,-0.014
+genuine error,p1393,densenet121,swin_tiny_patch4_window7_224,-0.246
+genuine error,p1393,densenet121,vgg16,-0.288
+genuine error,p1393,swin_tiny_patch4_window7_224,vgg16,0.14
+all models right,p2209,densenet121,swin_tiny_patch4_window7_224,0.275
+all models right,p2209,densenet121,vgg16,0.408
+all models right,p2209,swin_tiny_patch4_window7_224,vgg16,0.107
+all models right,p2980,densenet121,swin_tiny_patch4_window7_224,0.188
+all models right,p2980,densenet121,vgg16,0.207
+all models right,p2980,swin_tiny_patch4_window7_224,vgg16,-0.028
+all models right,p1640,densenet121,swin_tiny_patch4_window7_224,0.014
+all models right,p1640,densenet121,vgg16,0.305
+all models right,p1640,swin_tiny_patch4_window7_224,vgg16,0.455
+all models right,p1387,densenet121,swin_tiny_patch4_window7_224,-0.477
+all models right,p1387,densenet121,vgg16,0.041
+all models right,p1387,swin_tiny_patch4_window7_224,vgg16,0.156
+all models right,p2218,densenet121,swin_tiny_patch4_window7_224,-0.464
+all models right,p2218,densenet121,vgg16,0.267
+all models right,p2218,swin_tiny_patch4_window7_224,vgg16,-0.496
+all models right,p2630,densenet121,swin_tiny_patch4_window7_224,0.447
+all models right,p2630,densenet121,vgg16,-0.226
+all models right,p2630,swin_tiny_patch4_window7_224,vgg16,-0.06
+all models right,p3070,densenet121,swin_tiny_patch4_window7_224,-0.112
+all models right,p3070,densenet121,vgg16,-0.023
+all models right,p3070,swin_tiny_patch4_window7_224,vgg16,0.041
+all models right,p3412,densenet121,swin_tiny_patch4_window7_224,0.143
+all models right,p3412,densenet121,vgg16,0.181
+all models right,p3412,swin_tiny_patch4_window7_224,vgg16,0.008
+all models right,p3414,densenet121,swin_tiny_patch4_window7_224,0.198
+all models right,p3414,densenet121,vgg16,-0.13
+all models right,p3414,swin_tiny_patch4_window7_224,vgg16,-0.23
+all models right,p1413,densenet121,swin_tiny_patch4_window7_224,0.009
+all models right,p1413,densenet121,vgg16,0.106
+all models right,p1413,swin_tiny_patch4_window7_224,vgg16,-0.042
+all models right,p1877,densenet121,swin_tiny_patch4_window7_224,0.159
+all models right,p1877,densenet121,vgg16,0.053
+all models right,p1877,swin_tiny_patch4_window7_224,vgg16,-0.036
+all models right,p1438,densenet121,swin_tiny_patch4_window7_224,-0.212
+all models right,p1438,densenet121,vgg16,0.279
+all models right,p1438,swin_tiny_patch4_window7_224,vgg16,0.303
+all models right,p2633,densenet121,swin_tiny_patch4_window7_224,-0.019
+all models right,p2633,densenet121,vgg16,-0.018
+all models right,p2633,swin_tiny_patch4_window7_224,vgg16,0.057
+all models right,p3644,densenet121,swin_tiny_patch4_window7_224,0.078
+all models right,p3644,densenet121,vgg16,0.103
+all models right,p3644,swin_tiny_patch4_window7_224,vgg16,-0.019
+all models right,p1874,densenet121,swin_tiny_patch4_window7_224,-0.315
+all models right,p1874,densenet121,vgg16,0.231
+all models right,p1874,swin_tiny_patch4_window7_224,vgg16,-0.302
+all models right,p1414,densenet121,swin_tiny_patch4_window7_224,-0.118
+all models right,p1414,densenet121,vgg16,0.096
+all models right,p1414,swin_tiny_patch4_window7_224,vgg16,-0.27
+all models right,p2438,densenet121,swin_tiny_patch4_window7_224,0.471
+all models right,p2438,densenet121,vgg16,0.445
+all models right,p2438,swin_tiny_patch4_window7_224,vgg16,0.596
+all models right,p2993,densenet121,swin_tiny_patch4_window7_224,-0.001
+all models right,p2993,densenet121,vgg16,0.098
+all models right,p2993,swin_tiny_patch4_window7_224,vgg16,0.074
+all models right,p1882,densenet121,swin_tiny_patch4_window7_224,-0.347
+all models right,p1882,densenet121,vgg16,-0.444
+all models right,p1882,swin_tiny_patch4_window7_224,vgg16,0.513
+all models right,p1513,densenet121,swin_tiny_patch4_window7_224,-0.159
+all models right,p1513,densenet121,vgg16,-0.356
+all models right,p1513,swin_tiny_patch4_window7_224,vgg16,0.198
+all models right,p2213,densenet121,swin_tiny_patch4_window7_224,-0.213
+all models right,p2213,densenet121,vgg16,-0.001
+all models right,p2213,swin_tiny_patch4_window7_224,vgg16,-0.238
+all models right,p3570,densenet121,swin_tiny_patch4_window7_224,0.138
+all models right,p3570,densenet121,vgg16,-0.098
+all models right,p3570,swin_tiny_patch4_window7_224,vgg16,-0.278
+all models right,p1433,densenet121,swin_tiny_patch4_window7_224,-0.364
+all models right,p1433,densenet121,vgg16,0.082
+all models right,p1433,swin_tiny_patch4_window7_224,vgg16,0.258
+all models right,p3606,densenet121,swin_tiny_patch4_window7_224,0.288
+all models right,p3606,densenet121,vgg16,-0.286
+all models right,p3606,swin_tiny_patch4_window7_224,vgg16,-0.01
+all models right,p2215,densenet121,swin_tiny_patch4_window7_224,-0.03
+all models right,p2215,densenet121,vgg16,0.004
+all models right,p2215,swin_tiny_patch4_window7_224,vgg16,0.444
+all models right,p3406,densenet121,swin_tiny_patch4_window7_224,0.333
+all models right,p3406,densenet121,vgg16,0.349
+all models right,p3406,swin_tiny_patch4_window7_224,vgg16,0.303
+all models right,p1451,densenet121,swin_tiny_patch4_window7_224,0.17
+all models right,p1451,densenet121,vgg16,-0.202
+all models right,p1451,swin_tiny_patch4_window7_224,vgg16,-0.126
+all models right,p2440,densenet121,swin_tiny_patch4_window7_224,-0.122
+all models right,p2440,densenet121,vgg16,-0.052
+all models right,p2440,swin_tiny_patch4_window7_224,vgg16,0.114
+all models right,p3421,densenet121,swin_tiny_patch4_window7_224,0.128
+all models right,p3421,densenet121,vgg16,0.162
+all models right,p3421,swin_tiny_patch4_window7_224,vgg16,0.111
+all models right,p1645,densenet121,swin_tiny_patch4_window7_224,0.271
+all models right,p1645,densenet121,vgg16,0.388
+all models right,p1645,swin_tiny_patch4_window7_224,vgg16,0.15
+no model right,p3691,densenet121,swin_tiny_patch4_window7_224,0.049
+no model right,p3691,densenet121,vgg16,0.093
+no model right,p3691,swin_tiny_patch4_window7_224,vgg16,0.432
+no model right,p2713,densenet121,swin_tiny_patch4_window7_224,-0.032
+no model right,p2713,densenet121,vgg16,0.049
+no model right,p2713,swin_tiny_patch4_window7_224,vgg16,0.222
+no model right,p0004,densenet121,swin_tiny_patch4_window7_224,-0.556
+no model right,p0004,densenet121,vgg16,0.511
+no model right,p0004,swin_tiny_patch4_window7_224,vgg16,-0.367
+no model right,p1317,densenet121,swin_tiny_patch4_window7_224,0.273
+no model right,p1317,densenet121,vgg16,0.035
+no model right,p1317,swin_tiny_patch4_window7_224,vgg16,0.176
+no model right,p2696,densenet121,swin_tiny_patch4_window7_224,-0.201
+no model right,p2696,densenet121,vgg16,-0.301
+no model right,p2696,swin_tiny_patch4_window7_224,vgg16,0.399
+no model right,p3654,densenet121,swin_tiny_patch4_window7_224,0.221
+no model right,p3654,densenet121,vgg16,0.034
+no model right,p3654,swin_tiny_patch4_window7_224,vgg16,-0.157
+no model right,p0008,densenet121,swin_tiny_patch4_window7_224,-0.016
+no model right,p0008,densenet121,vgg16,0.36
+no model right,p0008,swin_tiny_patch4_window7_224,vgg16,0.058
+no model right,p0160,densenet121,swin_tiny_patch4_window7_224,-0.207
+no model right,p0160,densenet121,vgg16,0.005
+no model right,p0160,swin_tiny_patch4_window7_224,vgg16,0.044
+no model right,p0643,densenet121,swin_tiny_patch4_window7_224,-0.055
+no model right,p0643,densenet121,vgg16,0.281
+no model right,p0643,swin_tiny_patch4_window7_224,vgg16,-0.22
+no model right,p2807,densenet121,swin_tiny_patch4_window7_224,0.006
+no model right,p2807,densenet121,vgg16,-0.083
+no model right,p2807,swin_tiny_patch4_window7_224,vgg16,0.563
+no model right,p2433,densenet121,swin_tiny_patch4_window7_224,-0.137
+no model right,p2433,densenet121,vgg16,-0.066
+no model right,p2433,swin_tiny_patch4_window7_224,vgg16,-0.164
+no model right,p2447,densenet121,swin_tiny_patch4_window7_224,0.333
+no model right,p2447,densenet121,vgg16,-0.263
+no model right,p2447,swin_tiny_patch4_window7_224,vgg16,0.071
+no model right,p2822,densenet121,swin_tiny_patch4_window7_224,-0.229
+no model right,p2822,densenet121,vgg16,-0.091
+no model right,p2822,swin_tiny_patch4_window7_224,vgg16,-0.084
+no model right,p3658,densenet121,swin_tiny_patch4_window7_224,-0.231
+no model right,p3658,densenet121,vgg16,-0.132
+no model right,p3658,swin_tiny_patch4_window7_224,vgg16,0.111
+no model right,p0642,densenet121,swin_tiny_patch4_window7_224,0.102
+no model right,p0642,densenet121,vgg16,0.011
+no model right,p0642,swin_tiny_patch4_window7_224,vgg16,0.012
+no model right,p2700,densenet121,swin_tiny_patch4_window7_224,-0.539
+no model right,p2700,densenet121,vgg16,-0.648
+no model right,p2700,swin_tiny_patch4_window7_224,vgg16,0.459
+no model right,p2673,densenet121,swin_tiny_patch4_window7_224,0.236
+no model right,p2673,densenet121,vgg16,0.26
+no model right,p2673,swin_tiny_patch4_window7_224,vgg16,0.013
+no model right,p2828,densenet121,swin_tiny_patch4_window7_224,0.08
+no model right,p2828,densenet121,vgg16,0.305
+no model right,p2828,swin_tiny_patch4_window7_224,vgg16,0.188
+no model right,p3408,densenet121,swin_tiny_patch4_window7_224,-0.033
+no model right,p3408,densenet121,vgg16,-0.26
+no model right,p3408,swin_tiny_patch4_window7_224,vgg16,0.261
+no model right,p2823,densenet121,swin_tiny_patch4_window7_224,-0.149
+no model right,p2823,densenet121,vgg16,0.354
+no model right,p2823,swin_tiny_patch4_window7_224,vgg16,-0.29
+no model right,p3131,densenet121,swin_tiny_patch4_window7_224,0.155
+no model right,p3131,densenet121,vgg16,-0.347
+no model right,p3131,swin_tiny_patch4_window7_224,vgg16,-0.154
+no model right,p2703,densenet121,swin_tiny_patch4_window7_224,-0.225
+no model right,p2703,densenet121,vgg16,0.2
+no model right,p2703,swin_tiny_patch4_window7_224,vgg16,0.187
+no model right,p2425,densenet121,swin_tiny_patch4_window7_224,0.07
+no model right,p2425,densenet121,vgg16,-0.201
+no model right,p2425,swin_tiny_patch4_window7_224,vgg16,-0.347
+no model right,p2683,densenet121,swin_tiny_patch4_window7_224,0.395
+no model right,p2683,densenet121,vgg16,-0.264
+no model right,p2683,swin_tiny_patch4_window7_224,vgg16,-0.019
+no model right,p1391,densenet121,swin_tiny_patch4_window7_224,0.368
+no model right,p1391,densenet121,vgg16,0.417
+no model right,p1391,swin_tiny_patch4_window7_224,vgg16,0.554
+no model right,p0162,densenet121,swin_tiny_patch4_window7_224,-0.449
+no model right,p0162,densenet121,vgg16,-0.345
+no model right,p0162,swin_tiny_patch4_window7_224,vgg16,0.169
+no model right,p0146,densenet121,swin_tiny_patch4_window7_224,-0.082
+no model right,p0146,densenet121,vgg16,-0.192
+no model right,p0146,swin_tiny_patch4_window7_224,vgg16,0.109
+no model right,p1390,densenet121,swin_tiny_patch4_window7_224,0.418
+no model right,p1390,densenet121,vgg16,0.078
+no model right,p1390,swin_tiny_patch4_window7_224,vgg16,0.296
+no model right,p2705,densenet121,swin_tiny_patch4_window7_224,0.049
+no model right,p2705,densenet121,vgg16,-0.382
+no model right,p2705,swin_tiny_patch4_window7_224,vgg16,0.106
+no model right,p0159,densenet121,swin_tiny_patch4_window7_224,-0.008
+no model right,p0159,densenet121,vgg16,-0.322
+no model right,p0159,swin_tiny_patch4_window7_224,vgg16,-0.079

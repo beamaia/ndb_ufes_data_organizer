@@ -1,0 +1,163 @@
+x0,y0,size,coverage,patch_ids,region_id,histopath_id,n_patches,region_label,parent,patches_Without dysplasia,patches_With dysplasia,patches_OSCC,patches_predicted_max_vgg16,patches_predicted_max_densenet121,patches_predicted_max_swin_tiny_patch4_window7_224
+800,0,640,0.7875,p0521 p0527,hp_005a12046f4c_640_0,hp_005a12046f4c,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+704,544,640,0.75125,p2886 p3236,hp_005a12046f4c_640_1,hp_005a12046f4c,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+608,256,640,0.72875,p0520 p2885,hp_005a12046f4c_640_2,hp_005a12046f4c,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+576,320,768,0.71484375,p0520 p2885 p3236,hp_005a12046f4c_768_0,hp_005a12046f4c,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+416,64,1024,0.819580078125,p0519 p0520 p0521 p0526 p0527 p0528 p0530 p2885 p3236,hp_005a12046f4c_1024_0,hp_005a12046f4c,9,OSCC,OSCC,0,0,9,OSCC,OSCC,OSCC
+0,32,1024,0.81689453125,p0519 p0525 p0526 p0530 p2883 p3702,hp_005a12046f4c_1024_1,hp_005a12046f4c,6,OSCC,OSCC,0,0,6,OSCC,OSCC,OSCC
+928,64,640,0.82375,p0820 p0824 p0829,hp_06bfd208bc8f_640_0,hp_06bfd208bc8f,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+1248,224,640,0.779375,p0819 p0825,hp_06bfd208bc8f_640_1,hp_06bfd208bc8f,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1184,96,768,0.7981770833333334,p0819 p0825 p0828 p3294,hp_06bfd208bc8f_768_0,hp_06bfd208bc8f,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+800,0,768,0.7313368055555556,p0820 p0824 p0829 p3295,hp_06bfd208bc8f_768_1,hp_06bfd208bc8f,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+416,128,640,0.795,p1895 p1896,hp_0a1938f59c3c_640_0,hp_0a1938f59c3c,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,Without dysplasia,With dysplasia
+160,640,640,0.748125,p1892 p3505,hp_0a1938f59c3c_640_1,hp_0a1938f59c3c,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,Without dysplasia,With dysplasia
+384,640,640,0.74625,p1890 p3036,hp_0a1938f59c3c_640_2,hp_0a1938f59c3c,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,Without dysplasia,With dysplasia
+864,224,640,0.72875,p3035 p3506,hp_0a1938f59c3c_640_3,hp_0a1938f59c3c,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,Without dysplasia,Without dysplasia
+256,704,768,0.7825520833333334,p1890 p1897 p3505,hp_0a1938f59c3c_768_0,hp_0a1938f59c3c,3,With dysplasia,Without dysplasia,0,3,0,With dysplasia,With dysplasia,With dysplasia
+288,0,768,0.7248263888888888,p1895 p1896 p3504,hp_0a1938f59c3c_768_1,hp_0a1938f59c3c,3,With dysplasia,Without dysplasia,0,3,0,With dysplasia,Without dysplasia,With dysplasia
+0,512,640,0.76375,p1322 p1323,hp_0ec3bd2732f0_640_0,hp_0ec3bd2732f0,2,Without dysplasia,Without dysplasia,2,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+1088,0,640,0.748125,p1315 p3392,hp_0ec3bd2732f0_640_1,hp_0ec3bd2732f0,2,Without dysplasia,Without dysplasia,2,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+640,896,640,0.73,p1320 p2971,hp_0ec3bd2732f0_640_2,hp_0ec3bd2732f0,2,Without dysplasia,Without dysplasia,2,0,0,Without dysplasia,With dysplasia,With dysplasia
+576,512,1024,0.71435546875,p1310 p1312 p1317 p1320 p1321 p2969 p2971,hp_0ec3bd2732f0_1024_0,hp_0ec3bd2732f0,7,Without dysplasia,Without dysplasia,7,0,0,Without dysplasia,With dysplasia,With dysplasia
+352,416,768,0.7751736111111112,p1884 p1889 p3738,hp_0eff73752441_768_0,hp_0eff73752441,3,With dysplasia,Without dysplasia,0,3,0,With dysplasia,With dysplasia,With dysplasia
+320,736,768,0.7595486111111112,p1885 p3501 p3503,hp_0eff73752441_768_1,hp_0eff73752441,3,With dysplasia,Without dysplasia,0,3,0,With dysplasia,Without dysplasia,Without dysplasia
+512,544,640,0.846875,p0001 p0002 p0005,hp_0f9423fcd3b1_640_0,hp_0f9423fcd3b1,3,OSCC,not in NDB-UFES,0,0,3,With dysplasia,With dysplasia,With dysplasia
+0,800,640,0.790625,p0000 p1451 p1452,hp_0f9423fcd3b1_640_1,hp_0f9423fcd3b1,3,OSCC,not in NDB-UFES,0,2,1,With dysplasia,With dysplasia,With dysplasia
+0,672,768,0.7756076388888888,p0000 p1451 p1452 p1454 p2993 p3421,hp_0f9423fcd3b1_768_0,hp_0f9423fcd3b1,6,OSCC,not in NDB-UFES,0,5,1,With dysplasia,With dysplasia,With dysplasia
+384,416,768,0.7473958333333334,p0001 p0002 p0005 p0006,hp_0f9423fcd3b1_768_1,hp_0f9423fcd3b1,4,OSCC,not in NDB-UFES,0,0,4,With dysplasia,With dysplasia,With dysplasia
+128,416,1024,0.725341796875,p0001 p0002 p0005 p0006 p2993 p3136 p3421 p3691,hp_0f9423fcd3b1_1024_0,hp_0f9423fcd3b1,8,OSCC,not in NDB-UFES,0,2,6,With dysplasia,With dysplasia,With dysplasia
+1248,32,768,0.76953125,p1444 p2988 p3417,hp_14adad134e2b_768_0,hp_14adad134e2b,3,With dysplasia,With dysplasia,0,3,0,With dysplasia,With dysplasia,With dysplasia
+1088,224,768,0.7417534722222222,p1446 p2989 p2991,hp_14adad134e2b_768_1,hp_14adad134e2b,3,With dysplasia,With dysplasia,0,3,0,With dysplasia,With dysplasia,With dysplasia
+992,0,1024,0.71728515625,p1443 p1444 p1446 p2988 p2989 p2991 p3417,hp_14adad134e2b_1024_0,hp_14adad134e2b,7,With dysplasia,With dysplasia,0,7,0,With dysplasia,With dysplasia,With dysplasia
+576,896,640,0.82625,p1426 p1436,hp_194816486385_640_0,hp_194816486385,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+1088,736,640,0.79875,p1430 p3413,hp_194816486385_640_1,hp_194816486385,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+672,160,640,0.79625,p1432 p1434,hp_194816486385_640_2,hp_194816486385,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,Without dysplasia,With dysplasia
+352,0,640,0.730625,p1438 p2986,hp_194816486385_640_3,hp_194816486385,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+512,768,768,0.7608506944444444,p1426 p1427 p1436 p2985,hp_194816486385_768_0,hp_194816486385,4,With dysplasia,With dysplasia,0,4,0,With dysplasia,With dysplasia,With dysplasia
+608,256,1024,0.733642578125,p1427 p1432 p1435 p1437,hp_194816486385_1024_0,hp_194816486385,4,With dysplasia,With dysplasia,0,4,0,With dysplasia,With dysplasia,With dysplasia
+1120,480,640,0.77125,p0866 p0867 p2923,hp_1dacf59e6664_640_0,hp_1dacf59e6664,3,Without dysplasia,With dysplasia,3,0,0,With dysplasia,Without dysplasia,Without dysplasia
+640,448,640,0.76625,p0858 p0863,hp_1dacf59e6664_640_1,hp_1dacf59e6664,2,Without dysplasia,With dysplasia,2,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+640,736,640,0.7525,p0862 p2922,hp_1dacf59e6664_640_2,hp_1dacf59e6664,2,Without dysplasia,With dysplasia,2,0,0,With dysplasia,Without dysplasia,Without dysplasia
+512,544,768,0.7886284722222222,p0854 p0863 p2922,hp_1dacf59e6664_768_0,hp_1dacf59e6664,3,Without dysplasia,With dysplasia,3,0,0,Without dysplasia,Without dysplasia,Without dysplasia
+992,512,768,0.7552083333333334,p0861 p0865 p0866 p0867 p2923,hp_1dacf59e6664_768_1,hp_1dacf59e6664,5,Without dysplasia,With dysplasia,5,0,0,With dysplasia,Without dysplasia,Without dysplasia
+704,416,1024,0.8076171875,p0857 p0858 p0861 p0862 p0863 p0864 p0865 p0866 p2922 p2923 p3301,hp_1dacf59e6664_1024_0,hp_1dacf59e6664,11,Without dysplasia,With dysplasia,11,0,0,With dysplasia,With dysplasia,Without dysplasia
+576,0,1024,0.75830078125,p0856 p0857 p0858 p3302,hp_1dacf59e6664_1024_1,hp_1dacf59e6664,4,Without dysplasia,With dysplasia,4,0,0,With dysplasia,Without dysplasia,Without dysplasia
+768,480,640,0.830625,p0162 p2842,hp_22608f5c7482_640_0,hp_22608f5c7482,2,OSCC,not in NDB-UFES,0,0,2,With dysplasia,With dysplasia,With dysplasia
+960,96,640,0.800625,p0164 p2843 p3162,hp_22608f5c7482_640_1,hp_22608f5c7482,3,OSCC,not in NDB-UFES,0,0,3,With dysplasia,With dysplasia,With dysplasia
+480,0,640,0.78125,p0161 p2846,hp_22608f5c7482_640_2,hp_22608f5c7482,2,OSCC,not in NDB-UFES,0,0,2,With dysplasia,With dysplasia,OSCC
+32,224,768,0.7087673611111112,p1511 p2844,hp_22608f5c7482_768_0,hp_22608f5c7482,2,OSCC,not in NDB-UFES,0,1,1,With dysplasia,With dysplasia,OSCC
+576,96,1024,0.75146484375,p0161 p0162 p0164 p2842 p2843 p2848 p3162,hp_22608f5c7482_1024_0,hp_22608f5c7482,7,OSCC,not in NDB-UFES,0,0,7,With dysplasia,With dysplasia,OSCC
+1024,0,1024,0.7021484375,p0160 p0164 p2849 p3161,hp_22608f5c7482_1024_1,hp_22608f5c7482,4,OSCC,not in NDB-UFES,0,0,4,With dysplasia,With dysplasia,With dysplasia
+608,128,768,0.7222222222222222,p1404 p3727,hp_2ca3750b8622_768_0,hp_2ca3750b8622,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+672,384,640,0.795,p0150 p3158,hp_3125445e31bd_640_0,hp_3125445e31bd,2,OSCC,OSCC,0,0,2,With dysplasia,With dysplasia,With dysplasia
+864,352,640,0.78125,p0146 p0148,hp_3125445e31bd_640_1,hp_3125445e31bd,2,OSCC,OSCC,0,0,2,With dysplasia,With dysplasia,With dysplasia
+0,896,640,0.748125,p0157 p2841,hp_3125445e31bd_640_2,hp_3125445e31bd,2,OSCC,OSCC,0,0,2,With dysplasia,OSCC,With dysplasia
+736,416,768,0.7999131944444444,p0146 p0148 p0150 p0154,hp_3125445e31bd_768_0,hp_3125445e31bd,4,OSCC,OSCC,0,0,4,With dysplasia,With dysplasia,With dysplasia
+448,352,768,0.7096354166666666,p0144 p0155 p3158,hp_3125445e31bd_768_1,hp_3125445e31bd,3,OSCC,OSCC,0,0,3,With dysplasia,With dysplasia,With dysplasia
+768,0,1024,0.805419921875,p0145 p0146 p0148 p0150 p0153 p3159 p3160,hp_3125445e31bd_1024_0,hp_3125445e31bd,7,OSCC,OSCC,0,0,7,With dysplasia,With dysplasia,With dysplasia
+416,96,1024,0.799072265625,p0144 p0147 p0148 p0150 p0155 p3157 p3158 p3159,hp_3125445e31bd_1024_1,hp_3125445e31bd,8,OSCC,OSCC,0,0,8,With dysplasia,With dysplasia,With dysplasia
+544,416,1024,0.78564453125,p0146 p0148 p0150 p0151 p0152 p0154 p0155,hp_3125445e31bd_1024_2,hp_3125445e31bd,7,OSCC,OSCC,0,0,7,With dysplasia,With dysplasia,With dysplasia
+32,448,1024,0.7763671875,p0143 p0144 p0156 p2841,hp_3125445e31bd_1024_3,hp_3125445e31bd,4,OSCC,OSCC,0,0,4,With dysplasia,OSCC,With dysplasia
+704,192,640,0.845,p2703 p2707 p3115,hp_45fa29fc9f69_640_0,hp_45fa29fc9f69,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+1152,160,640,0.831875,p2701 p2702 p2713,hp_45fa29fc9f69_640_1,hp_45fa29fc9f69,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+384,0,768,0.7803819444444444,p2704 p2710 p2712 p3659,hp_45fa29fc9f69_768_0,hp_45fa29fc9f69,4,With dysplasia,OSCC,0,4,0,OSCC,OSCC,OSCC
+704,288,768,0.7061631944444444,p2703 p2709 p2714,hp_45fa29fc9f69_768_1,hp_45fa29fc9f69,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+768,32,1024,0.7412109375,p2701 p2702 p2703 p2705 p2709 p2713 p2714 p3115 p3660,hp_45fa29fc9f69_1024_0,hp_45fa29fc9f69,9,With dysplasia,OSCC,0,9,0,OSCC,OSCC,OSCC
+384,128,1024,0.717041015625,p2703 p2707 p2708 p2710 p2712 p2714 p3115,hp_45fa29fc9f69_1024_1,hp_45fa29fc9f69,7,With dysplasia,OSCC,0,7,0,OSCC,OSCC,OSCC
+576,256,640,0.821875,p1418 p1419 p1424,hp_5c21e9b72413_640_0,hp_5c21e9b72413,3,With dysplasia,With dysplasia,0,3,0,With dysplasia,With dysplasia,Without dysplasia
+672,704,768,0.7222222222222222,p0849 p0852 p3714,hp_5c21e9b72413_768_0,hp_5c21e9b72413,3,Without dysplasia,With dysplasia,3,0,0,With dysplasia,With dysplasia,With dysplasia
+672,256,1024,0.766845703125,p0849 p0850 p0852 p1419 p2983 p3300,hp_5c21e9b72413_1024_0,hp_5c21e9b72413,6,With dysplasia,With dysplasia,4,2,0,OSCC,With dysplasia,With dysplasia
+1312,608,640,0.795,p1876 p1881,hp_6ef255220d56_640_0,hp_6ef255220d56,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+1312,352,640,0.7675,p1866 p1871,hp_6ef255220d56_640_1,hp_6ef255220d56,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+32,800,640,0.7325,p1869 p1874,hp_6ef255220d56_640_2,hp_6ef255220d56,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,OSCC,OSCC
+1280,576,768,0.7217881944444444,p1876 p1880 p1881 p3499,hp_6ef255220d56_768_0,hp_6ef255220d56,4,With dysplasia,Without dysplasia,0,4,0,With dysplasia,With dysplasia,With dysplasia
+1088,0,640,0.74625,p2680 p2684,hp_7015fbba1516_640_0,hp_7015fbba1516,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+576,576,768,0.7725694444444444,p2675 p2678 p3654,hp_7015fbba1516_768_0,hp_7015fbba1516,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+288,160,1024,0.808837890625,p2672 p2675 p2676 p2682 p2683 p2685 p2686 p3114 p3654,hp_7015fbba1516_1024_0,hp_7015fbba1516,9,With dysplasia,OSCC,0,9,0,OSCC,OSCC,OSCC
+672,96,1024,0.798095703125,p2672 p2680 p2687 p3114 p3654,hp_7015fbba1516_1024_1,hp_7015fbba1516,5,With dysplasia,OSCC,0,5,0,OSCC,OSCC,OSCC
+832,576,640,0.781875,p0535 p0541,hp_73af3512fdb3_640_0,hp_73af3512fdb3,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+832,352,768,0.7808159722222222,p0532 p0535 p0539 p3703,hp_73af3512fdb3_768_0,hp_73af3512fdb3,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+416,96,768,0.7222222222222222,p0538 p0540 p3237,hp_73af3512fdb3_768_1,hp_73af3512fdb3,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+416,96,1024,0.7734375,p0532 p0533 p0535 p0538 p0540 p0542 p3237 p3238,hp_73af3512fdb3_1024_0,hp_73af3512fdb3,8,OSCC,OSCC,0,0,8,OSCC,OSCC,OSCC
+288,32,640,0.86625,p2817 p2826 p3690,hp_887b5a2ab8c2_640_0,hp_887b5a2ab8c2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+1056,320,640,0.79625,p2820 p2823,hp_887b5a2ab8c2_640_1,hp_887b5a2ab8c2,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+0,544,640,0.779375,p2827 p2829,hp_887b5a2ab8c2_640_2,hp_887b5a2ab8c2,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+864,160,640,0.76375,p2822 p2828,hp_887b5a2ab8c2_640_3,hp_887b5a2ab8c2,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+0,640,768,0.7669270833333334,p2816 p2825 p2829,hp_887b5a2ab8c2_768_0,hp_887b5a2ab8c2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+864,192,768,0.7643229166666666,p2822 p2823 p2828,hp_887b5a2ab8c2_768_1,hp_887b5a2ab8c2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+1088,608,640,0.81125,p0811 p0812,hp_9143a73aac95_640_0,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1312,480,640,0.779375,p3291 p3713,hp_9143a73aac95_640_1,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+704,0,640,0.7325,p3292 p3293,hp_9143a73aac95_640_2,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+64,384,640,0.7325,p0808 p2813,hp_9143a73aac95_640_3,hp_9143a73aac95,2,OSCC,OSCC,0,1,1,OSCC,OSCC,OSCC
+896,576,640,0.72875,p0810 p0814,hp_9143a73aac95_640_4,hp_9143a73aac95,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+1184,544,768,0.7864583333333334,p0807 p0812 p0813 p3291,hp_9143a73aac95_768_0,hp_9143a73aac95,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+864,672,768,0.7677951388888888,p0809 p0811 p0814,hp_9143a73aac95_768_1,hp_9143a73aac95,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+64,256,768,0.7513020833333334,p0808 p2813 p2814,hp_9143a73aac95_768_2,hp_9143a73aac95,3,OSCC,OSCC,0,2,1,OSCC,OSCC,OSCC
+864,736,768,0.7361111111111112,p1135 p3351 p3352,hp_91998aeaf511_768_0,hp_91998aeaf511,3,Without dysplasia,With dysplasia,3,0,0,With dysplasia,Without dysplasia,Without dysplasia
+128,192,768,0.7092013888888888,p1385 p1386,hp_961e39b2d569_768_0,hp_961e39b2d569,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,With dysplasia
+480,640,640,0.755625,p0513 p0515 p3231,hp_98cec00a1a2d_640_0,hp_98cec00a1a2d,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+1056,480,640,0.73,p0509 p2882,hp_98cec00a1a2d_640_1,hp_98cec00a1a2d,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+256,576,768,0.7452256944444444,p0511 p0512 p0515 p3231,hp_98cec00a1a2d_768_0,hp_98cec00a1a2d,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+160,96,1024,0.764892578125,p0507 p0510 p0512 p0514 p0517 p3701,hp_98cec00a1a2d_1024_0,hp_98cec00a1a2d,6,OSCC,OSCC,0,0,6,OSCC,OSCC,OSCC
+736,864,640,0.745625,p0927 p3315,hp_a021bdf9977a_640_0,hp_a021bdf9977a,2,Without dysplasia,Without dysplasia,2,0,0,With dysplasia,With dysplasia,Without dysplasia
+704,256,640,0.72875,p1645 p3457,hp_a021bdf9977a_640_1,hp_a021bdf9977a,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+512,192,768,0.7352430555555556,p1643 p1646 p3457,hp_a021bdf9977a_768_0,hp_a021bdf9977a,3,With dysplasia,Without dysplasia,0,3,0,OSCC,OSCC,OSCC
+608,736,768,0.7287326388888888,p0927 p0930 p0931 p3315,hp_a021bdf9977a_768_1,hp_a021bdf9977a,4,Without dysplasia,Without dysplasia,4,0,0,With dysplasia,With dysplasia,Without dysplasia
+448,512,768,0.70703125,p0931 p1641,hp_a021bdf9977a_768_2,hp_a021bdf9977a,2,With dysplasia,Without dysplasia,1,1,0,With dysplasia,OSCC,With dysplasia
+352,320,1024,0.823974609375,p0930 p0931 p1639 p1640 p1641 p1645 p1646 p3457,hp_a021bdf9977a_1024_0,hp_a021bdf9977a,8,With dysplasia,Without dysplasia,2,6,0,OSCC,OSCC,OSCC
+1120,352,640,0.751875,p2215 p2220,hp_a94e72df217c_640_0,hp_a94e72df217c,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+256,768,640,0.74625,p1119 p1120,hp_a94e72df217c_640_1,hp_a94e72df217c,2,Without dysplasia,With dysplasia,2,0,0,With dysplasia,Without dysplasia,Without dysplasia
+1216,32,640,0.73,p2217 p3570,hp_a94e72df217c_640_2,hp_a94e72df217c,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+224,640,768,0.7547743055555556,p1118 p1119 p1120 p1122,hp_a94e72df217c_768_0,hp_a94e72df217c,4,Without dysplasia,With dysplasia,4,0,0,With dysplasia,With dysplasia,Without dysplasia
+0,320,640,0.7675,p2689 p2699,hp_b9d6e3d0d4e2_640_0,hp_b9d6e3d0d4e2,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+448,128,640,0.748125,p2693 p2694,hp_b9d6e3d0d4e2_640_1,hp_b9d6e3d0d4e2,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+224,0,768,0.7482638888888888,p2692 p2694 p3658,hp_b9d6e3d0d4e2_768_0,hp_b9d6e3d0d4e2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+0,544,768,0.7404513888888888,p2688 p2691 p2700,hp_b9d6e3d0d4e2_768_1,hp_b9d6e3d0d4e2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+0,288,768,0.7239583333333334,p2689 p2699 p2700,hp_b9d6e3d0d4e2_768_2,hp_b9d6e3d0d4e2,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+96,32,1024,0.822509765625,p2690 p2693 p2694 p2697 p2700 p3658,hp_b9d6e3d0d4e2_1024_0,hp_b9d6e3d0d4e2,6,With dysplasia,OSCC,0,6,0,OSCC,OSCC,OSCC
+160,352,640,0.765,p1003 p1007,hp_bc0433ba4a4b_640_0,hp_bc0433ba4a4b,2,Without dysplasia,Without dysplasia,2,0,0,With dysplasia,Without dysplasia,Without dysplasia
+32,224,768,0.8237847222222222,p1003 p1005 p1006 p1007,hp_bc0433ba4a4b_768_0,hp_bc0433ba4a4b,4,Without dysplasia,Without dysplasia,4,0,0,With dysplasia,Without dysplasia,Without dysplasia
+96,480,1024,0.801513671875,p1007 p1010 p1011 p1012 p2935 p2936,hp_bc0433ba4a4b_1024_0,hp_bc0433ba4a4b,6,Without dysplasia,Without dysplasia,6,0,0,With dysplasia,Without dysplasia,Without dysplasia
+1088,128,640,0.748125,p2209 p3567,hp_c313973f026a_640_0,hp_c313973f026a,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+96,736,768,0.7092013888888888,p3565 p3568,hp_c313973f026a_768_0,hp_c313973f026a,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+640,0,1024,0.736328125,p2206 p2209 p2211 p2212 p2213,hp_c313973f026a_1024_0,hp_c313973f026a,5,With dysplasia,With dysplasia,0,5,0,With dysplasia,With dysplasia,With dysplasia
+480,64,640,0.76375,p2425 p2437,hp_c428ac7e2ce3_640_0,hp_c428ac7e2ce3,2,With dysplasia,not in NDB-UFES,0,2,0,Without dysplasia,Without dysplasia,Without dysplasia
+480,640,640,0.7325,p1265 p2435,hp_c428ac7e2ce3_640_1,hp_c428ac7e2ce3,2,With dysplasia,not in NDB-UFES,1,1,0,With dysplasia,With dysplasia,With dysplasia
+416,416,768,0.7291666666666666,p1265 p2426 p2434 p3095,hp_c428ac7e2ce3_768_0,hp_c428ac7e2ce3,4,With dysplasia,not in NDB-UFES,1,3,0,With dysplasia,With dysplasia,Without dysplasia
+576,320,1024,0.706787109375,p1265 p2426 p2430 p2431 p2432 p2434,hp_c428ac7e2ce3_1024_0,hp_c428ac7e2ce3,6,With dysplasia,not in NDB-UFES,1,5,0,With dysplasia,With dysplasia,With dysplasia
+320,896,640,0.810625,p2808 p3132,hp_c5d4056c7d28_640_0,hp_c5d4056c7d28,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+192,768,768,0.7361111111111112,p2806 p2808 p3132,hp_c5d4056c7d28_768_0,hp_c5d4056c7d28,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+192,0,768,0.7022569444444444,p2809 p3687 p3688,hp_c5d4056c7d28_768_1,hp_c5d4056c7d28,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,OSCC
+0,320,768,0.7013888888888888,p2802 p2805,hp_c5d4056c7d28_768_2,hp_c5d4056c7d28,2,With dysplasia,OSCC,0,2,0,OSCC,OSCC,OSCC
+832,128,640,0.78125,p1507 p2999,hp_ceef4d667083_640_0,hp_ceef4d667083,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,Without dysplasia,With dysplasia
+1184,256,640,0.7675,p0880 p3308,hp_ceef4d667083_640_1,hp_ceef4d667083,2,Without dysplasia,not in NDB-UFES,2,0,0,OSCC,Without dysplasia,OSCC
+192,896,640,0.730625,p1505 p1510,hp_ceef4d667083_640_2,hp_ceef4d667083,2,With dysplasia,not in NDB-UFES,0,2,0,With dysplasia,With dysplasia,Without dysplasia
+992,832,640,0.72875,p0879 p0884,hp_ceef4d667083_640_3,hp_ceef4d667083,2,Without dysplasia,not in NDB-UFES,2,0,0,With dysplasia,Without dysplasia,OSCC
+1216,256,768,0.8107638888888888,p0880 p0883 p0885 p3308,hp_ceef4d667083_768_0,hp_ceef4d667083,4,Without dysplasia,not in NDB-UFES,4,0,0,OSCC,Without dysplasia,OSCC
+128,736,768,0.7552083333333334,p1509 p1510 p2998,hp_ceef4d667083_768_1,hp_ceef4d667083,3,With dysplasia,not in NDB-UFES,0,3,0,With dysplasia,With dysplasia,Without dysplasia
+896,0,1024,0.715576171875,p0880 p0882 p0883 p1507 p2999 p3307 p3308,hp_ceef4d667083_1024_0,hp_ceef4d667083,7,With dysplasia,not in NDB-UFES,5,2,0,OSCC,Without dysplasia,OSCC
+928,512,640,0.76625,p3418 p3420,hp_d3b676cfdf5d_640_0,hp_d3b676cfdf5d,2,With dysplasia,With dysplasia,0,2,0,With dysplasia,With dysplasia,Without dysplasia
+1024,288,768,0.7087673611111112,p3419 p3420,hp_d3b676cfdf5d_768_0,hp_d3b676cfdf5d,2,With dysplasia,With dysplasia,0,2,0,Without dysplasia,With dysplasia,Without dysplasia
+1056,96,640,0.795,p0171 p0172,hp_d460182f7c9e_640_0,hp_d460182f7c9e,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+800,192,640,0.779375,p0166 p0169,hp_d460182f7c9e_640_1,hp_d460182f7c9e,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+768,224,768,0.7196180555555556,p0166 p0169 p3164,hp_d460182f7c9e_768_0,hp_d460182f7c9e,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+864,32,640,0.7625,p3642 p3643,hp_df3971f08c60_640_0,hp_df3971f08c60,2,With dysplasia,Without dysplasia,0,2,0,With dysplasia,With dysplasia,With dysplasia
+960,32,768,0.7434895833333334,p2629 p3642 p3644,hp_df3971f08c60_768_0,hp_df3971f08c60,3,With dysplasia,Without dysplasia,0,3,0,With dysplasia,With dysplasia,With dysplasia
+672,96,768,0.7408854166666666,p2630 p2634 p2636 p3643,hp_df3971f08c60_768_1,hp_df3971f08c60,4,With dysplasia,Without dysplasia,0,4,0,With dysplasia,With dysplasia,With dysplasia
+704,0,1024,0.80615234375,p2629 p2630 p2632 p2633 p2634 p2635 p2636 p3642 p3643 p3644,hp_df3971f08c60_1024_0,hp_df3971f08c60,10,With dysplasia,Without dysplasia,0,10,0,With dysplasia,With dysplasia,With dysplasia
+608,288,640,0.779375,p1391 p3410,hp_ef29b44759fb_640_0,hp_ef29b44759fb,2,With dysplasia,With dysplasia,0,2,0,OSCC,OSCC,OSCC
+480,160,768,0.71875,p1391 p1392 p3410,hp_ef29b44759fb_768_0,hp_ef29b44759fb,3,With dysplasia,With dysplasia,0,3,0,OSCC,OSCC,OSCC
+800,32,1024,0.760986328125,p1389 p1394 p1395 p1401 p2982 p3409,hp_ef29b44759fb_1024_0,hp_ef29b44759fb,6,With dysplasia,With dysplasia,0,6,0,OSCC,OSCC,OSCC
+768,224,768,0.734375,p2446 p2455 p3608,hp_f2c88f0423cc_768_0,hp_f2c88f0423cc,3,With dysplasia,OSCC,0,3,0,OSCC,OSCC,With dysplasia
+768,96,1024,0.765869140625,p2445 p2446 p2448 p2455 p3607 p3608 p3609,hp_f2c88f0423cc_1024_0,hp_f2c88f0423cc,7,With dysplasia,OSCC,0,7,0,OSCC,OSCC,With dysplasia
+160,448,640,0.748125,p2439 p2899,hp_f2d3e81172b7_640_0,hp_f2d3e81172b7,2,OSCC,not in NDB-UFES,0,1,1,With dysplasia,OSCC,With dysplasia
+1056,768,640,0.7325,p0642 p0645,hp_f2d3e81172b7_640_1,hp_f2d3e81172b7,2,OSCC,not in NDB-UFES,0,0,2,With dysplasia,Without dysplasia,With dysplasia
+96,64,768,0.7135416666666666,p0644 p2438,hp_f2d3e81172b7_768_0,hp_f2d3e81172b7,2,OSCC,not in NDB-UFES,0,1,1,With dysplasia,With dysplasia,With dysplasia
+96,32,1024,0.832763671875,p0640 p0644 p0646 p2438 p2439 p2442 p3096,hp_f2d3e81172b7_1024_0,hp_f2d3e81172b7,7,OSCC,not in NDB-UFES,0,4,3,With dysplasia,OSCC,With dysplasia
+1024,320,640,0.78125,p0494 p0498,hp_fe9131e8fa30_640_0,hp_fe9131e8fa30,2,OSCC,OSCC,0,0,2,OSCC,OSCC,OSCC
+256,416,640,0.751875,p0495 p0500 p3229,hp_fe9131e8fa30_640_1,hp_fe9131e8fa30,3,OSCC,OSCC,0,0,3,OSCC,With dysplasia,OSCC
+896,416,768,0.7964409722222222,p0497 p0498 p0502,hp_fe9131e8fa30_768_0,hp_fe9131e8fa30,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+288,64,768,0.7877604166666666,p0493 p0499 p2879 p2880,hp_fe9131e8fa30_768_1,hp_fe9131e8fa30,4,OSCC,OSCC,0,0,4,OSCC,OSCC,OSCC
+672,512,768,0.7391493055555556,p0496 p0497 p3700,hp_fe9131e8fa30_768_2,hp_fe9131e8fa30,3,OSCC,OSCC,0,0,3,OSCC,OSCC,OSCC
+256,480,1024,0.744873046875,p0495 p0496 p3226 p3228 p3229,hp_fe9131e8fa30_1024_0,hp_fe9131e8fa30,5,OSCC,OSCC,0,0,5,OSCC,OSCC,OSCC
+672,160,1024,0.713134765625,p0494 p0496 p0497 p0498 p0502 p0504 p3227,hp_fe9131e8fa30_1024_1,hp_fe9131e8fa30,7,OSCC,OSCC,0,0,7,OSCC,OSCC,OSCC

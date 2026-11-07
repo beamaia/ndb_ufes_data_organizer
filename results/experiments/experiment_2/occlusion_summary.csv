@@ -1,0 +1,262 @@
+model,group,patch_id,label,parent,predicted,p_predicted,max_drop,windows_over_0.1,focality_top3,centre_share
+vgg16,agrees with the parent,p3133,With dysplasia,OSCC,OSCC,0.9841,0.0429,0,0.2212,0.0814
+vgg16,agrees with the parent,p2677,With dysplasia,OSCC,OSCC,0.994,0.0143,0,0.2985,0.015
+vgg16,agrees with the parent,p2829,With dysplasia,OSCC,OSCC,0.6304,0.0974,0,0.4744,0.0
+vgg16,agrees with the parent,p2673,With dysplasia,OSCC,OSCC,0.9808,0.0648,0,0.4419,0.0
+vgg16,agrees with the parent,p2812,With dysplasia,OSCC,OSCC,0.9921,0.0313,0,0.3558,0.0021
+vgg16,agrees with the parent,p3655,With dysplasia,OSCC,OSCC,0.9512,0.1286,2,0.4369,0.0
+vgg16,agrees with the parent,p2448,With dysplasia,OSCC,OSCC,0.8534,0.2552,3,0.5937,0.0
+vgg16,agrees with the parent,p3688,With dysplasia,OSCC,OSCC,0.9703,0.0425,0,0.443,0.0
+vgg16,agrees with the parent,p3656,With dysplasia,OSCC,OSCC,0.9433,0.1149,1,0.2143,0.0168
+vgg16,agrees with the parent,p3609,With dysplasia,OSCC,OSCC,0.8271,0.164,2,0.6475,0.0
+vgg16,agrees with the parent,p2456,With dysplasia,OSCC,OSCC,0.9925,0.0278,0,0.2684,0.0208
+vgg16,agrees with the parent,p2694,With dysplasia,OSCC,OSCC,0.9402,0.2381,3,0.2956,0.0143
+vgg16,agrees with the parent,p2696,With dysplasia,OSCC,OSCC,0.9181,0.1226,3,0.1973,0.086
+vgg16,agrees with the parent,p3135,With dysplasia,OSCC,OSCC,0.9757,0.0497,0,0.2476,0.042
+vgg16,agrees with the parent,p3132,With dysplasia,OSCC,OSCC,0.8929,0.0902,0,0.2155,0.0227
+vgg16,agrees with the parent,p2701,With dysplasia,OSCC,OSCC,0.9523,0.0986,0,0.1515,0.0873
+vgg16,agrees with the parent,p2816,With dysplasia,OSCC,OSCC,0.7002,0.2175,1,0.6002,0.0
+vgg16,agrees with the parent,p2709,With dysplasia,OSCC,OSCC,0.9727,0.0455,0,0.1862,0.0329
+vgg16,agrees with the parent,p2828,With dysplasia,OSCC,OSCC,0.989,0.0326,0,0.3647,0.0
+vgg16,agrees with the parent,p3661,With dysplasia,OSCC,OSCC,0.9035,0.2395,9,0.2491,0.1651
+vgg16,agrees with the parent,p2815,With dysplasia,OSCC,OSCC,0.8395,0.1485,3,0.3383,0.072
+vgg16,agrees with the parent,p3434,With dysplasia,OSCC,OSCC,0.8068,0.3298,6,0.4628,0.0
+vgg16,agrees with the parent,p1514,With dysplasia,OSCC,OSCC,0.8487,0.3205,14,0.2475,0.0159
+vgg16,agrees with the parent,p2814,With dysplasia,OSCC,OSCC,0.9818,0.0282,0,0.1634,0.09
+vgg16,genuine error,p2982,With dysplasia,With dysplasia,OSCC,0.9561,0.0679,0,0.3962,0.0
+vgg16,genuine error,p1396,With dysplasia,With dysplasia,OSCC,0.9983,0.0035,0,0.2371,0.033
+vgg16,genuine error,p1393,With dysplasia,With dysplasia,OSCC,0.9961,0.0064,0,0.3038,0.0
+vgg16,all models right,p2209,With dysplasia,With dysplasia,With dysplasia,0.8578,0.3713,25,0.1807,0.2603
+vgg16,all models right,p2980,With dysplasia,not in NDB-UFES,With dysplasia,0.5721,0.1421,6,0.1566,0.3542
+vgg16,all models right,p1640,With dysplasia,Without dysplasia,With dysplasia,0.7817,0.2463,18,0.1566,0.3477
+vgg16,all models right,p1387,With dysplasia,not in NDB-UFES,With dysplasia,0.5558,0.0855,0,0.2113,0.1493
+vgg16,all models right,p2218,With dysplasia,With dysplasia,With dysplasia,0.8233,0.1069,1,0.1379,0.1379
+vgg16,all models right,p2630,With dysplasia,Without dysplasia,With dysplasia,0.8237,0.0538,0,0.3594,0.0
+vgg16,all models right,p3070,With dysplasia,With dysplasia,With dysplasia,0.8123,0.1744,6,0.1749,0.1932
+vgg16,all models right,p3412,With dysplasia,With dysplasia,With dysplasia,0.7914,0.3448,27,0.1628,0.2434
+vgg16,all models right,p3414,With dysplasia,With dysplasia,With dysplasia,0.8283,0.1395,4,0.1396,0.2551
+vgg16,all models right,p1413,With dysplasia,With dysplasia,With dysplasia,0.7953,0.201,16,0.1336,0.3078
+vgg16,all models right,p1877,With dysplasia,Without dysplasia,With dysplasia,0.8607,0.1622,9,0.1501,0.2872
+vgg16,all models right,p1438,With dysplasia,With dysplasia,With dysplasia,0.7578,0.0978,0,0.1123,0.1884
+vgg16,all models right,p2633,With dysplasia,Without dysplasia,With dysplasia,0.9053,0.0585,0,0.274,0.0
+vgg16,all models right,p3644,With dysplasia,Without dysplasia,With dysplasia,0.8751,0.0884,0,0.3187,0.0266
+vgg16,all models right,p1874,With dysplasia,Without dysplasia,With dysplasia,0.8636,0.1672,9,0.1492,0.2522
+vgg16,all models right,p1414,With dysplasia,With dysplasia,With dysplasia,0.8666,0.2397,13,0.1667,0.3108
+vgg16,all models right,p2438,With dysplasia,not in NDB-UFES,With dysplasia,0.6754,0.3179,34,0.1155,0.2953
+vgg16,all models right,p2993,With dysplasia,not in NDB-UFES,With dysplasia,0.6216,0.0501,0,0.3517,0.0749
+vgg16,all models right,p1882,With dysplasia,Without dysplasia,With dysplasia,0.9063,0.1375,3,0.2194,0.1617
+vgg16,all models right,p1513,With dysplasia,not in NDB-UFES,With dysplasia,0.7325,0.0717,0,0.1967,0.0516
+vgg16,all models right,p2213,With dysplasia,With dysplasia,With dysplasia,0.837,0.2724,22,0.1501,0.2
+vgg16,all models right,p3570,With dysplasia,With dysplasia,With dysplasia,0.9039,0.1392,10,0.1408,0.201
+vgg16,all models right,p1433,With dysplasia,With dysplasia,With dysplasia,0.8818,0.2476,13,0.1808,0.3191
+vgg16,all models right,p3606,With dysplasia,not in NDB-UFES,With dysplasia,0.7729,0.3477,30,0.146,0.3224
+vgg16,all models right,p2215,With dysplasia,With dysplasia,With dysplasia,0.8986,0.08,0,0.1359,0.1957
+vgg16,all models right,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.5273,0.0811,0,0.1703,0.2552
+vgg16,all models right,p1451,With dysplasia,not in NDB-UFES,With dysplasia,0.7171,0.058,0,0.1814,0.1424
+vgg16,all models right,p2440,With dysplasia,not in NDB-UFES,With dysplasia,0.8,0.2299,17,0.1477,0.2845
+vgg16,all models right,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.6073,0.0641,0,0.4831,0.0
+vgg16,all models right,p1645,With dysplasia,Without dysplasia,With dysplasia,0.7369,0.1717,17,0.1318,0.203
+vgg16,no model right,p3691,OSCC,not in NDB-UFES,With dysplasia,0.585,0.1164,1,0.8352,0.0
+vgg16,no model right,p2713,With dysplasia,OSCC,OSCC,0.9324,0.0701,0,0.1402,0.0521
+vgg16,no model right,p0004,OSCC,not in NDB-UFES,With dysplasia,0.7748,0.1944,16,0.1548,0.3032
+vgg16,no model right,p1317,Without dysplasia,Without dysplasia,Without dysplasia,0.4886,0.1767,7,0.2478,0.2128
+vgg16,no model right,p2696,With dysplasia,OSCC,OSCC,0.9181,0.1226,3,0.1973,0.086
+vgg16,no model right,p3654,With dysplasia,OSCC,OSCC,0.9978,0.0058,0,0.2799,0.0022
+vgg16,no model right,p0008,OSCC,not in NDB-UFES,With dysplasia,0.7379,0.0984,0,0.1636,0.1706
+vgg16,no model right,p0160,OSCC,not in NDB-UFES,With dysplasia,0.8183,0.141,2,0.1314,0.2471
+vgg16,no model right,p0643,OSCC,not in NDB-UFES,With dysplasia,0.833,0.1582,6,0.1498,0.2073
+vgg16,no model right,p2807,With dysplasia,OSCC,OSCC,0.8716,0.0917,0,0.4174,0.0
+vgg16,no model right,p2433,With dysplasia,not in NDB-UFES,Without dysplasia,0.6089,0.0442,0,0.253,0.2884
+vgg16,no model right,p2447,With dysplasia,OSCC,OSCC,0.964,0.0477,0,0.3604,0.0
+vgg16,no model right,p2822,With dysplasia,OSCC,OSCC,0.9873,0.0321,0,0.4215,0.0137
+vgg16,no model right,p3658,With dysplasia,OSCC,OSCC,0.9631,0.0791,0,0.1925,0.0496
+vgg16,no model right,p0642,OSCC,not in NDB-UFES,With dysplasia,0.8918,0.1298,9,0.131,0.3234
+vgg16,no model right,p2700,With dysplasia,OSCC,OSCC,0.9447,0.1132,2,0.1701,0.0897
+vgg16,no model right,p2673,With dysplasia,OSCC,OSCC,0.9808,0.0648,0,0.4419,0.0
+vgg16,no model right,p2828,With dysplasia,OSCC,OSCC,0.989,0.0326,0,0.3647,0.0
+vgg16,no model right,p3408,With dysplasia,With dysplasia,OSCC,0.9979,0.006,0,0.318,0.0
+vgg16,no model right,p2823,With dysplasia,OSCC,OSCC,0.9096,0.1455,2,0.5523,0.0
+vgg16,no model right,p3131,With dysplasia,OSCC,OSCC,0.9609,0.0346,0,0.1747,0.1552
+vgg16,no model right,p2703,With dysplasia,OSCC,OSCC,0.9888,0.0293,0,0.2468,0.0433
+vgg16,no model right,p2425,With dysplasia,not in NDB-UFES,Without dysplasia,0.5752,0.1046,1,0.466,0.4423
+vgg16,no model right,p2683,With dysplasia,OSCC,OSCC,0.9936,0.0166,0,0.4496,0.0
+vgg16,no model right,p1391,With dysplasia,With dysplasia,OSCC,0.982,0.1141,1,0.61,0.0
+vgg16,no model right,p0162,OSCC,not in NDB-UFES,With dysplasia,0.8595,0.0638,0,0.1866,0.0557
+vgg16,no model right,p0146,OSCC,OSCC,With dysplasia,0.9301,0.0573,0,0.1657,0.104
+vgg16,no model right,p1390,With dysplasia,With dysplasia,OSCC,0.9966,0.0061,0,0.3195,0.0
+vgg16,no model right,p2705,With dysplasia,OSCC,OSCC,0.9864,0.0227,0,0.1719,0.0447
+vgg16,no model right,p0159,OSCC,not in NDB-UFES,With dysplasia,0.826,0.093,0,0.1812,0.098
+densenet121,agrees with the parent,p3133,With dysplasia,OSCC,OSCC,0.988,0.0219,0,0.3369,0.0862
+densenet121,agrees with the parent,p2677,With dysplasia,OSCC,OSCC,0.9931,0.0913,0,0.5302,0.3293
+densenet121,agrees with the parent,p2829,With dysplasia,OSCC,OSCC,0.9569,0.0901,0,0.4096,0.1777
+densenet121,agrees with the parent,p2673,With dysplasia,OSCC,OSCC,0.9986,0.0039,0,0.4138,0.2042
+densenet121,agrees with the parent,p2812,With dysplasia,OSCC,OSCC,0.6628,0.0878,0,0.6078,0.0
+densenet121,agrees with the parent,p3655,With dysplasia,OSCC,OSCC,0.9968,0.0119,0,0.2255,0.2208
+densenet121,agrees with the parent,p2448,With dysplasia,OSCC,With dysplasia,0.7165,0.5517,40,0.1089,0.262
+densenet121,agrees with the parent,p3688,With dysplasia,OSCC,OSCC,0.7845,0.0523,0,1.0,0.0
+densenet121,agrees with the parent,p3656,With dysplasia,OSCC,OSCC,0.9114,0.2286,9,0.2296,0.4876
+densenet121,agrees with the parent,p3609,With dysplasia,OSCC,OSCC,0.7841,0.3199,8,0.3936,0.0
+densenet121,agrees with the parent,p2456,With dysplasia,OSCC,OSCC,0.9771,0.0346,0,0.3086,0.3242
+densenet121,agrees with the parent,p2694,With dysplasia,OSCC,OSCC,0.9296,0.3134,12,0.2633,0.394
+densenet121,agrees with the parent,p2696,With dysplasia,OSCC,OSCC,0.8857,0.2219,9,0.2232,0.4439
+densenet121,agrees with the parent,p3135,With dysplasia,OSCC,OSCC,0.6176,0.1729,2,0.443,0.2163
+densenet121,agrees with the parent,p3132,With dysplasia,OSCC,OSCC,0.8309,0.1022,1,0.5765,0.0
+densenet121,agrees with the parent,p2701,With dysplasia,OSCC,OSCC,0.9887,0.0647,0,0.1934,0.3115
+densenet121,agrees with the parent,p2816,With dysplasia,OSCC,OSCC,0.8962,0.0481,0,0.5861,0.0742
+densenet121,agrees with the parent,p2709,With dysplasia,OSCC,OSCC,0.9774,0.1027,1,0.2294,0.4231
+densenet121,agrees with the parent,p2828,With dysplasia,OSCC,OSCC,0.9898,0.064,0,0.4596,0.1322
+densenet121,agrees with the parent,p3661,With dysplasia,OSCC,OSCC,0.9718,0.1275,7,0.2026,0.484
+densenet121,agrees with the parent,p2815,With dysplasia,OSCC,OSCC,0.4811,0.1789,5,0.5041,0.0927
+densenet121,agrees with the parent,p3434,With dysplasia,OSCC,With dysplasia,0.6026,0.2283,24,0.1262,0.134
+densenet121,agrees with the parent,p1514,With dysplasia,OSCC,OSCC,0.4988,0.2076,4,0.5116,0.2215
+densenet121,agrees with the parent,p2814,With dysplasia,OSCC,OSCC,0.86,0.0727,0,0.322,0.0938
+densenet121,genuine error,p2982,With dysplasia,With dysplasia,OSCC,0.9141,0.1819,10,0.2173,0.2399
+densenet121,genuine error,p1396,With dysplasia,With dysplasia,OSCC,0.9972,0.0075,0,0.239,0.2351
+densenet121,genuine error,p1393,With dysplasia,With dysplasia,OSCC,0.9962,0.0146,0,0.1913,0.2316
+densenet121,all models right,p2209,With dysplasia,With dysplasia,With dysplasia,0.9087,0.2459,17,0.1822,0.0992
+densenet121,all models right,p2980,With dysplasia,not in NDB-UFES,With dysplasia,0.7929,0.331,41,0.1102,0.2056
+densenet121,all models right,p1640,With dysplasia,Without dysplasia,With dysplasia,0.8314,0.4069,32,0.1513,0.2777
+densenet121,all models right,p1387,With dysplasia,not in NDB-UFES,With dysplasia,0.6477,0.2632,33,0.1145,0.241
+densenet121,all models right,p2218,With dysplasia,With dysplasia,With dysplasia,0.6246,0.2621,13,0.2408,0.2334
+densenet121,all models right,p2630,With dysplasia,Without dysplasia,With dysplasia,0.9934,0.0393,0,0.2177,0.322
+densenet121,all models right,p3070,With dysplasia,With dysplasia,With dysplasia,0.919,0.106,1,0.2457,0.04
+densenet121,all models right,p3412,With dysplasia,With dysplasia,With dysplasia,0.9764,0.1628,11,0.1575,0.2561
+densenet121,all models right,p3414,With dysplasia,With dysplasia,With dysplasia,0.8932,0.2455,25,0.1332,0.2998
+densenet121,all models right,p1413,With dysplasia,With dysplasia,With dysplasia,0.9942,0.1139,2,0.1796,0.3394
+densenet121,all models right,p1877,With dysplasia,Without dysplasia,With dysplasia,0.83,0.1556,4,0.3661,0.1899
+densenet121,all models right,p1438,With dysplasia,With dysplasia,With dysplasia,0.4997,0.3056,15,0.22,0.2606
+densenet121,all models right,p2633,With dysplasia,Without dysplasia,With dysplasia,0.9969,0.0185,0,0.2806,0.0677
+densenet121,all models right,p3644,With dysplasia,Without dysplasia,With dysplasia,0.9702,0.1039,1,0.2891,0.2232
+densenet121,all models right,p1874,With dysplasia,Without dysplasia,OSCC,0.6735,0.3103,15,0.2563,0.2978
+densenet121,all models right,p1414,With dysplasia,With dysplasia,With dysplasia,0.9603,0.1192,4,0.1339,0.1298
+densenet121,all models right,p2438,With dysplasia,not in NDB-UFES,With dysplasia,0.8991,0.3639,40,0.1071,0.2645
+densenet121,all models right,p2993,With dysplasia,not in NDB-UFES,Without dysplasia,0.6186,0.2739,20,0.169,0.2735
+densenet121,all models right,p1882,With dysplasia,Without dysplasia,With dysplasia,0.869,0.1642,3,0.414,0.1849
+densenet121,all models right,p1513,With dysplasia,not in NDB-UFES,Without dysplasia,0.6052,0.488,30,0.153,0.1763
+densenet121,all models right,p2213,With dysplasia,With dysplasia,With dysplasia,0.9084,0.4609,22,0.2473,0.1745
+densenet121,all models right,p3570,With dysplasia,With dysplasia,With dysplasia,0.7357,0.1766,6,0.3033,0.0879
+densenet121,all models right,p1433,With dysplasia,With dysplasia,With dysplasia,0.8178,0.2595,14,0.2125,0.2458
+densenet121,all models right,p3606,With dysplasia,not in NDB-UFES,Without dysplasia,0.4973,0.2869,21,0.1825,0.0
+densenet121,all models right,p2215,With dysplasia,With dysplasia,With dysplasia,0.9926,0.0485,0,0.1545,0.3012
+densenet121,all models right,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.6906,0.4611,37,0.1461,0.1704
+densenet121,all models right,p1451,With dysplasia,not in NDB-UFES,With dysplasia,0.7612,0.1822,6,0.2764,0.1816
+densenet121,all models right,p2440,With dysplasia,not in NDB-UFES,With dysplasia,0.8,0.47,18,0.2186,0.096
+densenet121,all models right,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.7237,0.2004,1,0.4173,0.1057
+densenet121,all models right,p1645,With dysplasia,Without dysplasia,With dysplasia,0.6354,0.4158,32,0.1503,0.1246
+densenet121,no model right,p3691,OSCC,not in NDB-UFES,With dysplasia,0.6184,0.1376,1,0.3138,0.0741
+densenet121,no model right,p2713,With dysplasia,OSCC,OSCC,0.9844,0.083,0,0.2804,0.4108
+densenet121,no model right,p0004,OSCC,not in NDB-UFES,With dysplasia,0.5872,0.2043,3,0.6157,0.2224
+densenet121,no model right,p1317,Without dysplasia,Without dysplasia,With dysplasia,0.6619,0.2819,19,0.181,0.1663
+densenet121,no model right,p2696,With dysplasia,OSCC,OSCC,0.8857,0.2219,9,0.2232,0.4439
+densenet121,no model right,p3654,With dysplasia,OSCC,OSCC,0.9998,0.0016,0,0.2725,0.2917
+densenet121,no model right,p0008,OSCC,not in NDB-UFES,With dysplasia,0.611,0.3385,13,0.2565,0.2232
+densenet121,no model right,p0160,OSCC,not in NDB-UFES,With dysplasia,0.8869,0.3266,16,0.2076,0.3768
+densenet121,no model right,p0643,OSCC,not in NDB-UFES,Without dysplasia,0.8615,0.2517,10,0.2003,0.0953
+densenet121,no model right,p2807,With dysplasia,OSCC,OSCC,0.9461,0.0484,0,0.4435,0.1369
+densenet121,no model right,p2433,With dysplasia,not in NDB-UFES,Without dysplasia,0.6944,0.3033,20,0.2008,0.2499
+densenet121,no model right,p2447,With dysplasia,OSCC,OSCC,0.9026,0.281,14,0.2352,0.3678
+densenet121,no model right,p2822,With dysplasia,OSCC,OSCC,0.9626,0.1809,1,0.3035,0.1183
+densenet121,no model right,p3658,With dysplasia,OSCC,OSCC,0.8975,0.0995,0,0.3409,0.3496
+densenet121,no model right,p0642,OSCC,not in NDB-UFES,Without dysplasia,0.6903,0.4644,20,0.2048,0.158
+densenet121,no model right,p2700,With dysplasia,OSCC,OSCC,0.9306,0.1762,11,0.1482,0.3411
+densenet121,no model right,p2673,With dysplasia,OSCC,OSCC,0.9986,0.0039,0,0.4138,0.2042
+densenet121,no model right,p2828,With dysplasia,OSCC,OSCC,0.9898,0.064,0,0.4596,0.1322
+densenet121,no model right,p3408,With dysplasia,With dysplasia,OSCC,0.9801,0.0256,0,0.3312,0.3288
+densenet121,no model right,p2823,With dysplasia,OSCC,OSCC,0.9552,0.031,0,0.4802,0.2404
+densenet121,no model right,p3131,With dysplasia,OSCC,OSCC,0.9522,0.2512,4,0.5033,0.0337
+densenet121,no model right,p2703,With dysplasia,OSCC,OSCC,0.9635,0.1388,2,0.2969,0.2947
+densenet121,no model right,p2425,With dysplasia,not in NDB-UFES,Without dysplasia,0.8493,0.1484,11,0.1244,0.1744
+densenet121,no model right,p2683,With dysplasia,OSCC,OSCC,0.9985,0.0225,0,0.3549,0.3894
+densenet121,no model right,p1391,With dysplasia,With dysplasia,OSCC,0.9342,0.1605,4,0.5204,0.0053
+densenet121,no model right,p0162,OSCC,not in NDB-UFES,With dysplasia,0.9923,0.1617,1,0.2093,0.3555
+densenet121,no model right,p0146,OSCC,OSCC,With dysplasia,0.9319,0.3337,21,0.1969,0.4044
+densenet121,no model right,p1390,With dysplasia,With dysplasia,OSCC,0.9807,0.0354,0,0.3834,0.0555
+densenet121,no model right,p2705,With dysplasia,OSCC,OSCC,0.9847,0.0457,0,0.2394,0.3625
+densenet121,no model right,p0159,OSCC,not in NDB-UFES,With dysplasia,0.9956,0.0762,0,0.2014,0.3073
+swin_tiny_patch4_window7_224,agrees with the parent,p3133,With dysplasia,OSCC,OSCC,0.8841,0.133,5,0.2457,0.4338
+swin_tiny_patch4_window7_224,agrees with the parent,p2677,With dysplasia,OSCC,OSCC,0.9892,0.0239,0,0.2133,0.1726
+swin_tiny_patch4_window7_224,agrees with the parent,p2829,With dysplasia,OSCC,With dysplasia,0.5328,0.3321,26,0.1587,0.0711
+swin_tiny_patch4_window7_224,agrees with the parent,p2673,With dysplasia,OSCC,OSCC,0.9841,0.017,0,0.257,0.3809
+swin_tiny_patch4_window7_224,agrees with the parent,p2812,With dysplasia,OSCC,OSCC,0.951,0.0226,0,0.8126,0.0
+swin_tiny_patch4_window7_224,agrees with the parent,p3655,With dysplasia,OSCC,OSCC,0.9771,0.0451,0,0.2439,0.4205
+swin_tiny_patch4_window7_224,agrees with the parent,p2448,With dysplasia,OSCC,With dysplasia,0.7981,0.11,1,0.3567,0.0442
+swin_tiny_patch4_window7_224,agrees with the parent,p3688,With dysplasia,OSCC,OSCC,0.9846,0.0333,0,0.2239,0.2936
+swin_tiny_patch4_window7_224,agrees with the parent,p3656,With dysplasia,OSCC,OSCC,0.9638,0.0552,0,0.1794,0.1738
+swin_tiny_patch4_window7_224,agrees with the parent,p3609,With dysplasia,OSCC,With dysplasia,0.9264,0.0903,0,0.3838,0.134
+swin_tiny_patch4_window7_224,agrees with the parent,p2456,With dysplasia,OSCC,OSCC,0.5144,0.2532,19,0.1786,0.2104
+swin_tiny_patch4_window7_224,agrees with the parent,p2694,With dysplasia,OSCC,OSCC,0.9755,0.0428,0,0.1465,0.2235
+swin_tiny_patch4_window7_224,agrees with the parent,p2696,With dysplasia,OSCC,OSCC,0.9691,0.0656,0,0.1939,0.194
+swin_tiny_patch4_window7_224,agrees with the parent,p3135,With dysplasia,OSCC,With dysplasia,0.756,0.2361,8,0.2193,0.1965
+swin_tiny_patch4_window7_224,agrees with the parent,p3132,With dysplasia,OSCC,OSCC,0.5133,0.2664,2,0.588,0.1314
+swin_tiny_patch4_window7_224,agrees with the parent,p2701,With dysplasia,OSCC,OSCC,0.9804,0.0418,0,0.3783,0.1627
+swin_tiny_patch4_window7_224,agrees with the parent,p2816,With dysplasia,OSCC,OSCC,0.7601,0.3279,4,0.6028,0.1376
+swin_tiny_patch4_window7_224,agrees with the parent,p2709,With dysplasia,OSCC,OSCC,0.8713,0.0779,0,0.268,0.3673
+swin_tiny_patch4_window7_224,agrees with the parent,p2828,With dysplasia,OSCC,OSCC,0.9909,0.0212,0,0.2625,0.2588
+swin_tiny_patch4_window7_224,agrees with the parent,p3661,With dysplasia,OSCC,OSCC,0.97,0.0348,0,0.1837,0.3184
+swin_tiny_patch4_window7_224,agrees with the parent,p2815,With dysplasia,OSCC,OSCC,0.9122,0.3416,8,0.3301,0.3463
+swin_tiny_patch4_window7_224,agrees with the parent,p3434,With dysplasia,OSCC,OSCC,0.4171,0.2463,10,0.291,0.3487
+swin_tiny_patch4_window7_224,agrees with the parent,p1514,With dysplasia,OSCC,With dysplasia,0.4819,0.3142,22,0.1843,0.1763
+swin_tiny_patch4_window7_224,agrees with the parent,p2814,With dysplasia,OSCC,OSCC,0.8017,0.0952,0,0.4584,0.1135
+swin_tiny_patch4_window7_224,genuine error,p2982,With dysplasia,With dysplasia,OSCC,0.9184,0.1006,2,0.4676,0.551
+swin_tiny_patch4_window7_224,genuine error,p1396,With dysplasia,With dysplasia,OSCC,0.9862,0.0258,0,0.342,0.0895
+swin_tiny_patch4_window7_224,genuine error,p1393,With dysplasia,With dysplasia,OSCC,0.9961,0.0031,0,0.1888,0.2288
+swin_tiny_patch4_window7_224,all models right,p2209,With dysplasia,With dysplasia,With dysplasia,0.7736,0.1881,19,0.1447,0.2117
+swin_tiny_patch4_window7_224,all models right,p2980,With dysplasia,not in NDB-UFES,With dysplasia,0.6409,0.0602,0,0.2162,0.137
+swin_tiny_patch4_window7_224,all models right,p1640,With dysplasia,Without dysplasia,Without dysplasia,0.7376,0.0821,0,0.8978,0.0
+swin_tiny_patch4_window7_224,all models right,p1387,With dysplasia,not in NDB-UFES,With dysplasia,0.6477,0.1911,10,0.1922,0.3637
+swin_tiny_patch4_window7_224,all models right,p2218,With dysplasia,With dysplasia,Without dysplasia,0.6462,0.0896,0,1.0,0.0
+swin_tiny_patch4_window7_224,all models right,p2630,With dysplasia,Without dysplasia,With dysplasia,0.7314,0.3749,26,0.1687,0.2048
+swin_tiny_patch4_window7_224,all models right,p3070,With dysplasia,With dysplasia,With dysplasia,0.7112,0.1836,3,0.3132,0.1998
+swin_tiny_patch4_window7_224,all models right,p3412,With dysplasia,With dysplasia,With dysplasia,0.9465,0.0769,0,0.244,0.1709
+swin_tiny_patch4_window7_224,all models right,p3414,With dysplasia,With dysplasia,With dysplasia,0.8029,0.3509,37,0.1176,0.2507
+swin_tiny_patch4_window7_224,all models right,p1413,With dysplasia,With dysplasia,With dysplasia,0.6128,0.3673,37,0.1272,0.2149
+swin_tiny_patch4_window7_224,all models right,p1877,With dysplasia,Without dysplasia,With dysplasia,0.9212,0.1477,7,0.1558,0.204
+swin_tiny_patch4_window7_224,all models right,p1438,With dysplasia,With dysplasia,With dysplasia,0.7772,0.2489,28,0.1309,0.2665
+swin_tiny_patch4_window7_224,all models right,p2633,With dysplasia,Without dysplasia,With dysplasia,0.9697,0.0892,0,0.1896,0.2286
+swin_tiny_patch4_window7_224,all models right,p3644,With dysplasia,Without dysplasia,With dysplasia,0.7597,0.3103,21,0.1782,0.3153
+swin_tiny_patch4_window7_224,all models right,p1874,With dysplasia,Without dysplasia,OSCC,0.5028,0.2616,28,0.1358,0.168
+swin_tiny_patch4_window7_224,all models right,p1414,With dysplasia,With dysplasia,With dysplasia,0.8854,0.1282,5,0.1638,0.1815
+swin_tiny_patch4_window7_224,all models right,p2438,With dysplasia,not in NDB-UFES,With dysplasia,0.6722,0.2504,14,0.2374,0.1537
+swin_tiny_patch4_window7_224,all models right,p2993,With dysplasia,not in NDB-UFES,With dysplasia,0.894,0.2831,19,0.1729,0.1996
+swin_tiny_patch4_window7_224,all models right,p1882,With dysplasia,Without dysplasia,With dysplasia,0.9839,0.0537,0,0.1668,0.1511
+swin_tiny_patch4_window7_224,all models right,p1513,With dysplasia,not in NDB-UFES,With dysplasia,0.7098,0.1999,7,0.2405,0.1655
+swin_tiny_patch4_window7_224,all models right,p2213,With dysplasia,With dysplasia,With dysplasia,0.8669,0.2617,15,0.1493,0.2555
+swin_tiny_patch4_window7_224,all models right,p3570,With dysplasia,With dysplasia,With dysplasia,0.965,0.0667,0,0.2039,0.1562
+swin_tiny_patch4_window7_224,all models right,p1433,With dysplasia,With dysplasia,With dysplasia,0.9482,0.09,0,0.1607,0.1763
+swin_tiny_patch4_window7_224,all models right,p3606,With dysplasia,not in NDB-UFES,With dysplasia,0.7739,0.0802,0,0.323,0.247
+swin_tiny_patch4_window7_224,all models right,p2215,With dysplasia,With dysplasia,With dysplasia,0.7865,0.2252,14,0.1535,0.2867
+swin_tiny_patch4_window7_224,all models right,p3406,With dysplasia,not in NDB-UFES,With dysplasia,0.5357,0.2474,10,0.2887,0.1157
+swin_tiny_patch4_window7_224,all models right,p1451,With dysplasia,not in NDB-UFES,With dysplasia,0.9788,0.0554,0,0.253,0.1419
+swin_tiny_patch4_window7_224,all models right,p2440,With dysplasia,not in NDB-UFES,With dysplasia,0.9683,0.0493,0,0.1616,0.2006
+swin_tiny_patch4_window7_224,all models right,p3421,With dysplasia,not in NDB-UFES,With dysplasia,0.9748,0.0518,0,0.2156,0.1647
+swin_tiny_patch4_window7_224,all models right,p1645,With dysplasia,Without dysplasia,With dysplasia,0.4303,0.1711,9,0.1789,0.2497
+swin_tiny_patch4_window7_224,no model right,p3691,OSCC,not in NDB-UFES,With dysplasia,0.9909,0.0424,0,0.1882,0.2033
+swin_tiny_patch4_window7_224,no model right,p2713,With dysplasia,OSCC,OSCC,0.9576,0.0298,0,0.2985,0.2078
+swin_tiny_patch4_window7_224,no model right,p0004,OSCC,not in NDB-UFES,OSCC,0.7233,0.4375,23,0.1858,0.2632
+swin_tiny_patch4_window7_224,no model right,p1317,Without dysplasia,Without dysplasia,With dysplasia,0.6067,0.2571,7,0.2121,0.3202
+swin_tiny_patch4_window7_224,no model right,p2696,With dysplasia,OSCC,OSCC,0.9691,0.0656,0,0.1939,0.194
+swin_tiny_patch4_window7_224,no model right,p3654,With dysplasia,OSCC,OSCC,0.9931,0.0113,0,0.2963,0.419
+swin_tiny_patch4_window7_224,no model right,p0008,OSCC,not in NDB-UFES,Without dysplasia,0.5865,0.1126,2,0.7377,0.0
+swin_tiny_patch4_window7_224,no model right,p0160,OSCC,not in NDB-UFES,With dysplasia,0.8802,0.1005,1,0.1962,0.2181
+swin_tiny_patch4_window7_224,no model right,p0643,OSCC,not in NDB-UFES,Without dysplasia,0.6015,0.0304,0,0.4919,0.0
+swin_tiny_patch4_window7_224,no model right,p2807,With dysplasia,OSCC,OSCC,0.9617,0.0946,0,0.3126,0.3699
+swin_tiny_patch4_window7_224,no model right,p2433,With dysplasia,not in NDB-UFES,Without dysplasia,0.7884,0.0561,0,0.5233,0.3351
+swin_tiny_patch4_window7_224,no model right,p2447,With dysplasia,OSCC,OSCC,0.531,0.2307,15,0.1949,0.292
+swin_tiny_patch4_window7_224,no model right,p2822,With dysplasia,OSCC,OSCC,0.9945,0.0122,0,0.232,0.2703
+swin_tiny_patch4_window7_224,no model right,p3658,With dysplasia,OSCC,OSCC,0.9687,0.0737,0,0.2166,0.2458
+swin_tiny_patch4_window7_224,no model right,p0642,OSCC,not in NDB-UFES,With dysplasia,0.659,0.2705,11,0.2083,0.2987
+swin_tiny_patch4_window7_224,no model right,p2700,With dysplasia,OSCC,OSCC,0.9944,0.0178,0,0.163,0.1438
+swin_tiny_patch4_window7_224,no model right,p2673,With dysplasia,OSCC,OSCC,0.9841,0.017,0,0.257,0.3809
+swin_tiny_patch4_window7_224,no model right,p2828,With dysplasia,OSCC,OSCC,0.9909,0.0212,0,0.2625,0.2588
+swin_tiny_patch4_window7_224,no model right,p3408,With dysplasia,With dysplasia,OSCC,0.9937,0.0039,0,0.2058,0.0759
+swin_tiny_patch4_window7_224,no model right,p2823,With dysplasia,OSCC,OSCC,0.9966,0.0052,0,0.2149,0.2992
+swin_tiny_patch4_window7_224,no model right,p3131,With dysplasia,OSCC,OSCC,0.9547,0.1016,1,0.4364,0.1684
+swin_tiny_patch4_window7_224,no model right,p2703,With dysplasia,OSCC,OSCC,0.9684,0.0934,0,0.2853,0.1713
+swin_tiny_patch4_window7_224,no model right,p2425,With dysplasia,not in NDB-UFES,Without dysplasia,0.6414,0.0299,0,1.0,0.0383
+swin_tiny_patch4_window7_224,no model right,p2683,With dysplasia,OSCC,OSCC,0.9837,0.04,0,0.3128,0.5917
+swin_tiny_patch4_window7_224,no model right,p1391,With dysplasia,With dysplasia,OSCC,0.8575,0.1342,3,0.3932,0.0438
+swin_tiny_patch4_window7_224,no model right,p0162,OSCC,not in NDB-UFES,With dysplasia,0.94,0.0873,0,0.16,0.2497
+swin_tiny_patch4_window7_224,no model right,p0146,OSCC,OSCC,With dysplasia,0.8786,0.2456,28,0.1218,0.2022
+swin_tiny_patch4_window7_224,no model right,p1390,With dysplasia,With dysplasia,OSCC,0.9957,0.0046,0,0.2117,0.1771
+swin_tiny_patch4_window7_224,no model right,p2705,With dysplasia,OSCC,OSCC,0.9525,0.0471,0,0.2351,0.0579
+swin_tiny_patch4_window7_224,no model right,p0159,OSCC,not in NDB-UFES,With dysplasia,0.8996,0.2739,20,0.1644,0.2182

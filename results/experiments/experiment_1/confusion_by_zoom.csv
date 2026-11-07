@@ -1,0 +1,235 @@
+model,zoom,true,predicted,count,share of true class %,patches,pictures
+coat_lite_small,10x,Without dysplasia,Without dysplasia,331,83.8,79,38
+coat_lite_small,10x,Without dysplasia,With dysplasia,63,15.9,79,38
+coat_lite_small,10x,Without dysplasia,OSCC,1,0.3,79,38
+coat_lite_small,10x,With dysplasia,Without dysplasia,25,4.6,108,53
+coat_lite_small,10x,With dysplasia,With dysplasia,494,91.5,108,53
+coat_lite_small,10x,With dysplasia,OSCC,21,3.9,108,53
+coat_lite_small,10x,OSCC,Without dysplasia,0,0.0,94,32
+coat_lite_small,10x,OSCC,With dysplasia,22,4.7,94,32
+coat_lite_small,10x,OSCC,OSCC,448,95.3,94,32
+coat_lite_small,40x,Without dysplasia,Without dysplasia,154,81.1,38,18
+coat_lite_small,40x,Without dysplasia,With dysplasia,34,17.9,38,18
+coat_lite_small,40x,Without dysplasia,OSCC,2,1.1,38,18
+coat_lite_small,40x,With dysplasia,Without dysplasia,29,2.7,214,85
+coat_lite_small,40x,With dysplasia,With dysplasia,990,92.5,214,85
+coat_lite_small,40x,With dysplasia,OSCC,51,4.8,214,85
+coat_lite_small,40x,OSCC,Without dysplasia,0,0.0,93,32
+coat_lite_small,40x,OSCC,With dysplasia,32,6.9,93,32
+coat_lite_small,40x,OSCC,OSCC,433,93.1,93,32
+convnext_large,10x,Without dysplasia,Without dysplasia,348,88.1,79,38
+convnext_large,10x,Without dysplasia,With dysplasia,47,11.9,79,38
+convnext_large,10x,Without dysplasia,OSCC,0,0.0,79,38
+convnext_large,10x,With dysplasia,Without dysplasia,48,8.9,108,53
+convnext_large,10x,With dysplasia,With dysplasia,472,87.4,108,53
+convnext_large,10x,With dysplasia,OSCC,20,3.7,108,53
+convnext_large,10x,OSCC,Without dysplasia,1,0.2,94,32
+convnext_large,10x,OSCC,With dysplasia,29,6.2,94,32
+convnext_large,10x,OSCC,OSCC,440,93.6,94,32
+convnext_large,40x,Without dysplasia,Without dysplasia,166,87.4,38,18
+convnext_large,40x,Without dysplasia,With dysplasia,24,12.6,38,18
+convnext_large,40x,Without dysplasia,OSCC,0,0.0,38,18
+convnext_large,40x,With dysplasia,Without dysplasia,42,3.9,214,85
+convnext_large,40x,With dysplasia,With dysplasia,973,90.9,214,85
+convnext_large,40x,With dysplasia,OSCC,55,5.1,214,85
+convnext_large,40x,OSCC,Without dysplasia,1,0.2,93,32
+convnext_large,40x,OSCC,With dysplasia,31,6.7,93,32
+convnext_large,40x,OSCC,OSCC,433,93.1,93,32
+densenet121,10x,Without dysplasia,Without dysplasia,348,88.1,79,38
+densenet121,10x,Without dysplasia,With dysplasia,47,11.9,79,38
+densenet121,10x,Without dysplasia,OSCC,0,0.0,79,38
+densenet121,10x,With dysplasia,Without dysplasia,56,10.4,108,53
+densenet121,10x,With dysplasia,With dysplasia,472,87.4,108,53
+densenet121,10x,With dysplasia,OSCC,12,2.2,108,53
+densenet121,10x,OSCC,Without dysplasia,1,0.2,94,32
+densenet121,10x,OSCC,With dysplasia,22,4.7,94,32
+densenet121,10x,OSCC,OSCC,447,95.1,94,32
+densenet121,40x,Without dysplasia,Without dysplasia,175,92.1,38,18
+densenet121,40x,Without dysplasia,With dysplasia,15,7.9,38,18
+densenet121,40x,Without dysplasia,OSCC,0,0.0,38,18
+densenet121,40x,With dysplasia,Without dysplasia,52,4.9,214,85
+densenet121,40x,With dysplasia,With dysplasia,972,90.8,214,85
+densenet121,40x,With dysplasia,OSCC,46,4.3,214,85
+densenet121,40x,OSCC,Without dysplasia,0,0.0,93,32
+densenet121,40x,OSCC,With dysplasia,33,7.1,93,32
+densenet121,40x,OSCC,OSCC,432,92.9,93,32
+efficientnet_b0,10x,Without dysplasia,Without dysplasia,343,86.8,79,38
+efficientnet_b0,10x,Without dysplasia,With dysplasia,50,12.7,79,38
+efficientnet_b0,10x,Without dysplasia,OSCC,2,0.5,79,38
+efficientnet_b0,10x,With dysplasia,Without dysplasia,61,11.3,108,53
+efficientnet_b0,10x,With dysplasia,With dysplasia,461,85.4,108,53
+efficientnet_b0,10x,With dysplasia,OSCC,18,3.3,108,53
+efficientnet_b0,10x,OSCC,Without dysplasia,1,0.2,94,32
+efficientnet_b0,10x,OSCC,With dysplasia,23,4.9,94,32
+efficientnet_b0,10x,OSCC,OSCC,446,94.9,94,32
+efficientnet_b0,40x,Without dysplasia,Without dysplasia,162,85.3,38,18
+efficientnet_b0,40x,Without dysplasia,With dysplasia,28,14.7,38,18
+efficientnet_b0,40x,Without dysplasia,OSCC,0,0.0,38,18
+efficientnet_b0,40x,With dysplasia,Without dysplasia,47,4.4,214,85
+efficientnet_b0,40x,With dysplasia,With dysplasia,972,90.8,214,85
+efficientnet_b0,40x,With dysplasia,OSCC,51,4.8,214,85
+efficientnet_b0,40x,OSCC,Without dysplasia,3,0.6,93,32
+efficientnet_b0,40x,OSCC,With dysplasia,37,8.0,93,32
+efficientnet_b0,40x,OSCC,OSCC,425,91.4,93,32
+efficientnet_b3,10x,Without dysplasia,Without dysplasia,347,87.8,79,38
+efficientnet_b3,10x,Without dysplasia,With dysplasia,47,11.9,79,38
+efficientnet_b3,10x,Without dysplasia,OSCC,1,0.3,79,38
+efficientnet_b3,10x,With dysplasia,Without dysplasia,58,10.7,108,53
+efficientnet_b3,10x,With dysplasia,With dysplasia,456,84.4,108,53
+efficientnet_b3,10x,With dysplasia,OSCC,26,4.8,108,53
+efficientnet_b3,10x,OSCC,Without dysplasia,1,0.2,94,32
+efficientnet_b3,10x,OSCC,With dysplasia,29,6.2,94,32
+efficientnet_b3,10x,OSCC,OSCC,440,93.6,94,32
+efficientnet_b3,40x,Without dysplasia,Without dysplasia,164,86.3,38,18
+efficientnet_b3,40x,Without dysplasia,With dysplasia,25,13.2,38,18
+efficientnet_b3,40x,Without dysplasia,OSCC,1,0.5,38,18
+efficientnet_b3,40x,With dysplasia,Without dysplasia,42,3.9,214,85
+efficientnet_b3,40x,With dysplasia,With dysplasia,981,91.7,214,85
+efficientnet_b3,40x,With dysplasia,OSCC,47,4.4,214,85
+efficientnet_b3,40x,OSCC,Without dysplasia,3,0.6,93,32
+efficientnet_b3,40x,OSCC,With dysplasia,29,6.2,93,32
+efficientnet_b3,40x,OSCC,OSCC,433,93.1,93,32
+mobilenetv2,10x,Without dysplasia,Without dysplasia,358,90.6,79,38
+mobilenetv2,10x,Without dysplasia,With dysplasia,37,9.4,79,38
+mobilenetv2,10x,Without dysplasia,OSCC,0,0.0,79,38
+mobilenetv2,10x,With dysplasia,Without dysplasia,73,13.5,108,53
+mobilenetv2,10x,With dysplasia,With dysplasia,443,82.0,108,53
+mobilenetv2,10x,With dysplasia,OSCC,24,4.4,108,53
+mobilenetv2,10x,OSCC,Without dysplasia,2,0.4,94,32
+mobilenetv2,10x,OSCC,With dysplasia,19,4.0,94,32
+mobilenetv2,10x,OSCC,OSCC,449,95.5,94,32
+mobilenetv2,40x,Without dysplasia,Without dysplasia,155,81.6,38,18
+mobilenetv2,40x,Without dysplasia,With dysplasia,35,18.4,38,18
+mobilenetv2,40x,Without dysplasia,OSCC,0,0.0,38,18
+mobilenetv2,40x,With dysplasia,Without dysplasia,51,4.8,214,85
+mobilenetv2,40x,With dysplasia,With dysplasia,964,90.1,214,85
+mobilenetv2,40x,With dysplasia,OSCC,55,5.1,214,85
+mobilenetv2,40x,OSCC,Without dysplasia,2,0.4,93,32
+mobilenetv2,40x,OSCC,With dysplasia,43,9.2,93,32
+mobilenetv2,40x,OSCC,OSCC,420,90.3,93,32
+pit_s_distilled_224,10x,Without dysplasia,Without dysplasia,336,85.1,79,38
+pit_s_distilled_224,10x,Without dysplasia,With dysplasia,59,14.9,79,38
+pit_s_distilled_224,10x,Without dysplasia,OSCC,0,0.0,79,38
+pit_s_distilled_224,10x,With dysplasia,Without dysplasia,35,6.5,108,53
+pit_s_distilled_224,10x,With dysplasia,With dysplasia,486,90.0,108,53
+pit_s_distilled_224,10x,With dysplasia,OSCC,19,3.5,108,53
+pit_s_distilled_224,10x,OSCC,Without dysplasia,0,0.0,94,32
+pit_s_distilled_224,10x,OSCC,With dysplasia,28,6.0,94,32
+pit_s_distilled_224,10x,OSCC,OSCC,442,94.0,94,32
+pit_s_distilled_224,40x,Without dysplasia,Without dysplasia,161,84.7,38,18
+pit_s_distilled_224,40x,Without dysplasia,With dysplasia,28,14.7,38,18
+pit_s_distilled_224,40x,Without dysplasia,OSCC,1,0.5,38,18
+pit_s_distilled_224,40x,With dysplasia,Without dysplasia,28,2.6,214,85
+pit_s_distilled_224,40x,With dysplasia,With dysplasia,989,92.4,214,85
+pit_s_distilled_224,40x,With dysplasia,OSCC,53,5.0,214,85
+pit_s_distilled_224,40x,OSCC,Without dysplasia,0,0.0,93,32
+pit_s_distilled_224,40x,OSCC,With dysplasia,21,4.5,93,32
+pit_s_distilled_224,40x,OSCC,OSCC,444,95.5,93,32
+resnet50,10x,Without dysplasia,Without dysplasia,353,89.4,79,38
+resnet50,10x,Without dysplasia,With dysplasia,42,10.6,79,38
+resnet50,10x,Without dysplasia,OSCC,0,0.0,79,38
+resnet50,10x,With dysplasia,Without dysplasia,60,11.1,108,53
+resnet50,10x,With dysplasia,With dysplasia,462,85.6,108,53
+resnet50,10x,With dysplasia,OSCC,18,3.3,108,53
+resnet50,10x,OSCC,Without dysplasia,0,0.0,94,32
+resnet50,10x,OSCC,With dysplasia,24,5.1,94,32
+resnet50,10x,OSCC,OSCC,446,94.9,94,32
+resnet50,40x,Without dysplasia,Without dysplasia,173,91.1,38,18
+resnet50,40x,Without dysplasia,With dysplasia,17,8.9,38,18
+resnet50,40x,Without dysplasia,OSCC,0,0.0,38,18
+resnet50,40x,With dysplasia,Without dysplasia,48,4.5,214,85
+resnet50,40x,With dysplasia,With dysplasia,962,89.9,214,85
+resnet50,40x,With dysplasia,OSCC,60,5.6,214,85
+resnet50,40x,OSCC,Without dysplasia,0,0.0,93,32
+resnet50,40x,OSCC,With dysplasia,21,4.5,93,32
+resnet50,40x,OSCC,OSCC,444,95.5,93,32
+swin_base_patch4_window7_224,10x,Without dysplasia,Without dysplasia,354,89.6,79,38
+swin_base_patch4_window7_224,10x,Without dysplasia,With dysplasia,41,10.4,79,38
+swin_base_patch4_window7_224,10x,Without dysplasia,OSCC,0,0.0,79,38
+swin_base_patch4_window7_224,10x,With dysplasia,Without dysplasia,47,8.7,108,53
+swin_base_patch4_window7_224,10x,With dysplasia,With dysplasia,463,85.7,108,53
+swin_base_patch4_window7_224,10x,With dysplasia,OSCC,30,5.6,108,53
+swin_base_patch4_window7_224,10x,OSCC,Without dysplasia,0,0.0,94,32
+swin_base_patch4_window7_224,10x,OSCC,With dysplasia,16,3.4,94,32
+swin_base_patch4_window7_224,10x,OSCC,OSCC,454,96.6,94,32
+swin_base_patch4_window7_224,40x,Without dysplasia,Without dysplasia,172,90.5,38,18
+swin_base_patch4_window7_224,40x,Without dysplasia,With dysplasia,18,9.5,38,18
+swin_base_patch4_window7_224,40x,Without dysplasia,OSCC,0,0.0,38,18
+swin_base_patch4_window7_224,40x,With dysplasia,Without dysplasia,38,3.6,214,85
+swin_base_patch4_window7_224,40x,With dysplasia,With dysplasia,968,90.5,214,85
+swin_base_patch4_window7_224,40x,With dysplasia,OSCC,64,6.0,214,85
+swin_base_patch4_window7_224,40x,OSCC,Without dysplasia,0,0.0,93,32
+swin_base_patch4_window7_224,40x,OSCC,With dysplasia,31,6.7,93,32
+swin_base_patch4_window7_224,40x,OSCC,OSCC,434,93.3,93,32
+swin_tiny_patch4_window7_224,10x,Without dysplasia,Without dysplasia,342,86.6,79,38
+swin_tiny_patch4_window7_224,10x,Without dysplasia,With dysplasia,53,13.4,79,38
+swin_tiny_patch4_window7_224,10x,Without dysplasia,OSCC,0,0.0,79,38
+swin_tiny_patch4_window7_224,10x,With dysplasia,Without dysplasia,42,7.8,108,53
+swin_tiny_patch4_window7_224,10x,With dysplasia,With dysplasia,474,87.8,108,53
+swin_tiny_patch4_window7_224,10x,With dysplasia,OSCC,24,4.4,108,53
+swin_tiny_patch4_window7_224,10x,OSCC,Without dysplasia,2,0.4,94,32
+swin_tiny_patch4_window7_224,10x,OSCC,With dysplasia,27,5.7,94,32
+swin_tiny_patch4_window7_224,10x,OSCC,OSCC,441,93.8,94,32
+swin_tiny_patch4_window7_224,40x,Without dysplasia,Without dysplasia,166,87.4,38,18
+swin_tiny_patch4_window7_224,40x,Without dysplasia,With dysplasia,24,12.6,38,18
+swin_tiny_patch4_window7_224,40x,Without dysplasia,OSCC,0,0.0,38,18
+swin_tiny_patch4_window7_224,40x,With dysplasia,Without dysplasia,41,3.8,214,85
+swin_tiny_patch4_window7_224,40x,With dysplasia,With dysplasia,964,90.1,214,85
+swin_tiny_patch4_window7_224,40x,With dysplasia,OSCC,65,6.1,214,85
+swin_tiny_patch4_window7_224,40x,OSCC,Without dysplasia,0,0.0,93,32
+swin_tiny_patch4_window7_224,40x,OSCC,With dysplasia,32,6.9,93,32
+swin_tiny_patch4_window7_224,40x,OSCC,OSCC,433,93.1,93,32
+vgg16,10x,Without dysplasia,Without dysplasia,340,86.1,79,38
+vgg16,10x,Without dysplasia,With dysplasia,55,13.9,79,38
+vgg16,10x,Without dysplasia,OSCC,0,0.0,79,38
+vgg16,10x,With dysplasia,Without dysplasia,75,13.9,108,53
+vgg16,10x,With dysplasia,With dysplasia,436,80.7,108,53
+vgg16,10x,With dysplasia,OSCC,29,5.4,108,53
+vgg16,10x,OSCC,Without dysplasia,2,0.4,94,32
+vgg16,10x,OSCC,With dysplasia,22,4.7,94,32
+vgg16,10x,OSCC,OSCC,446,94.9,94,32
+vgg16,40x,Without dysplasia,Without dysplasia,163,85.8,38,18
+vgg16,40x,Without dysplasia,With dysplasia,27,14.2,38,18
+vgg16,40x,Without dysplasia,OSCC,0,0.0,38,18
+vgg16,40x,With dysplasia,Without dysplasia,36,3.4,214,85
+vgg16,40x,With dysplasia,With dysplasia,982,91.8,214,85
+vgg16,40x,With dysplasia,OSCC,52,4.9,214,85
+vgg16,40x,OSCC,Without dysplasia,0,0.0,93,32
+vgg16,40x,OSCC,With dysplasia,22,4.7,93,32
+vgg16,40x,OSCC,OSCC,443,95.3,93,32
+vit_small_patch16_384,10x,Without dysplasia,Without dysplasia,318,80.5,79,38
+vit_small_patch16_384,10x,Without dysplasia,With dysplasia,77,19.5,79,38
+vit_small_patch16_384,10x,Without dysplasia,OSCC,0,0.0,79,38
+vit_small_patch16_384,10x,With dysplasia,Without dysplasia,34,6.3,108,53
+vit_small_patch16_384,10x,With dysplasia,With dysplasia,489,90.6,108,53
+vit_small_patch16_384,10x,With dysplasia,OSCC,17,3.1,108,53
+vit_small_patch16_384,10x,OSCC,Without dysplasia,0,0.0,94,32
+vit_small_patch16_384,10x,OSCC,With dysplasia,42,8.9,94,32
+vit_small_patch16_384,10x,OSCC,OSCC,428,91.1,94,32
+vit_small_patch16_384,40x,Without dysplasia,Without dysplasia,157,82.6,38,18
+vit_small_patch16_384,40x,Without dysplasia,With dysplasia,31,16.3,38,18
+vit_small_patch16_384,40x,Without dysplasia,OSCC,2,1.1,38,18
+vit_small_patch16_384,40x,With dysplasia,Without dysplasia,37,3.5,214,85
+vit_small_patch16_384,40x,With dysplasia,With dysplasia,979,91.5,214,85
+vit_small_patch16_384,40x,With dysplasia,OSCC,54,5.0,214,85
+vit_small_patch16_384,40x,OSCC,Without dysplasia,1,0.2,93,32
+vit_small_patch16_384,40x,OSCC,With dysplasia,31,6.7,93,32
+vit_small_patch16_384,40x,OSCC,OSCC,433,93.1,93,32
+all models,10x,Without dysplasia,Without dysplasia,4118,86.9,79,38
+all models,10x,Without dysplasia,With dysplasia,618,13.0,79,38
+all models,10x,Without dysplasia,OSCC,4,0.1,79,38
+all models,10x,With dysplasia,Without dysplasia,614,9.5,108,53
+all models,10x,With dysplasia,With dysplasia,5608,86.5,108,53
+all models,10x,With dysplasia,OSCC,258,4.0,108,53
+all models,10x,OSCC,Without dysplasia,10,0.2,94,32
+all models,10x,OSCC,With dysplasia,303,5.4,94,32
+all models,10x,OSCC,OSCC,5327,94.5,94,32
+all models,40x,Without dysplasia,Without dysplasia,1968,86.3,38,18
+all models,40x,Without dysplasia,With dysplasia,306,13.4,38,18
+all models,40x,Without dysplasia,OSCC,6,0.3,38,18
+all models,40x,With dysplasia,Without dysplasia,491,3.8,214,85
+all models,40x,With dysplasia,With dysplasia,11696,91.1,214,85
+all models,40x,With dysplasia,OSCC,653,5.1,214,85
+all models,40x,OSCC,Without dysplasia,10,0.2,93,32
+all models,40x,OSCC,With dysplasia,363,6.5,93,32
+all models,40x,OSCC,OSCC,5207,93.3,93,32

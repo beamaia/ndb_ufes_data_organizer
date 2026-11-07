@@ -1,0 +1,13 @@
+parent,label,patches,% of the parent diagnosis,% of the patch label
+Without dysplasia,Without dysplasia,263,40.0,37.2
+Without dysplasia,With dysplasia,395,60.0,20.5
+Without dysplasia,OSCC,0,0.0,0.0
+With dysplasia,Without dysplasia,298,31.9,42.1
+With dysplasia,With dysplasia,582,62.3,30.2
+With dysplasia,OSCC,54,5.8,4.8
+OSCC,Without dysplasia,65,4.3,9.2
+OSCC,With dysplasia,522,34.4,27.0
+OSCC,OSCC,932,61.4,82.8
+not in NDB-UFES,Without dysplasia,81,12.4,11.5
+not in NDB-UFES,With dysplasia,431,66.1,22.3
+not in NDB-UFES,OSCC,140,21.5,12.4

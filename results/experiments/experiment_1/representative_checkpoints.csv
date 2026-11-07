@@ -1,0 +1,4 @@
+model,fold,run_id,val_balanced_acc_at_best_epoch,checkpoint,megabytes
+densenet121,1,4a9f6a420d2046ac89b9b3cc63f14a4a,0.9358,3/4a9f6a420d2046ac89b9b3cc63f14a4a/artifacts/model/model_densenet121_optim_sgd_best.pt,27.0
+swin_tiny_patch4_window7_224,3,49c0b282311a498598a917f337968ff7,0.9222,3/49c0b282311a498598a917f337968ff7/artifacts/model/model_swin_tiny_patch4_window7_224_optim_sgd_best.pt,105.0
+vgg16,1,f0d1c70069bb4e41ae6ed4e9a9d24300,0.9178,3/f0d1c70069bb4e41ae6ed4e9a9d24300/artifacts/model/model_vgg16_optim_sgd_best.pt,512.0

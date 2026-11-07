@@ -1,0 +1,325 @@
+anchor,partner,overlap,group,control,blocks,content_rho,position_rho,same_picture_position_rho,random_position_rho,model
+p2677,p2679,0.862,agrees with the parent,p3114,210,0.595,0.685,0.595,0.136,vgg16
+p2829,p2827,0.713,agrees with the parent,p2826,168,0.137,0.7,0.595,0.276,vgg16
+p2829,p2816,0.543,agrees with the parent,p2823,126,0.107,0.767,0.428,0.018,vgg16
+p2673,p2686,0.553,no model right,p2677,130,0.022,0.341,0.497,-0.504,vgg16
+p2673,p2685,0.511,no model right,p2678,120,-0.324,0.381,0.424,-0.243,vgg16
+p2448,p3609,0.617,agrees with the parent,p2443,143,0.205,0.689,0.437,0.107,vgg16
+p2448,p2455,0.524,agrees with the parent,p2445,120,-0.217,0.789,0.651,0.166,vgg16
+p3688,p3687,0.56,agrees with the parent,p2802,132,0.295,0.706,0.835,0.631,vgg16
+p3656,p2696,0.928,agrees with the parent,p2691,225,0.798,0.747,0.486,0.723,vgg16
+p3656,p2689,0.813,agrees with the parent,p3657,195,0.659,0.716,0.133,0.004,vgg16
+p3656,p2699,0.596,agrees with the parent,p2698,140,0.361,0.32,0.701,0.452,vgg16
+p2456,p2451,0.709,agrees with the parent,p3750,180,0.518,0.499,0.695,-0.16,vgg16
+p2456,p2443,0.588,agrees with the parent,p2452,143,0.099,0.718,0.686,0.543,vgg16
+p2694,p2693,0.751,agrees with the parent,p2698,182,0.817,0.564,0.697,0.462,vgg16
+p2694,p3658,0.667,agrees with the parent,p3657,150,0.09,0.446,0.245,0.495,vgg16
+p2696,p2689,0.812,no model right,p2698,195,0.761,0.631,0.625,-0.122,vgg16
+p2696,p2699,0.646,no model right,p2697,150,0.603,0.157,0.37,0.456,vgg16
+p3132,p2808,0.666,agrees with the parent,p2811,156,0.294,0.707,0.517,0.441,vgg16
+p2701,p2702,0.796,agrees with the parent,p2711,195,0.35,0.701,0.368,0.569,vgg16
+p2701,p2713,0.755,agrees with the parent,p3759,182,0.202,0.395,0.273,0.348,vgg16
+p2701,p3660,0.573,agrees with the parent,p2707,143,0.417,0.488,0.599,0.359,vgg16
+p2816,p2825,0.579,agrees with the parent,p2828,135,-0.159,0.376,0.442,0.177,vgg16
+p2709,p2714,0.846,agrees with the parent,p3661,195,0.835,0.649,-0.389,0.578,vgg16
+p2828,p2822,0.719,no model right,p2816,182,0.363,0.791,0.442,0.479,vgg16
+p2982,p3409,0.577,genuine error,p1396,135,-0.2,0.512,0.716,0.597,vgg16
+p1393,p3408,0.552,genuine error,p2982,132,-0.149,0.726,0.622,-0.083,vgg16
+p2209,p3567,0.795,all models right,p3564,196,0.698,0.686,0.092,-0.247,vgg16
+p2209,p2213,0.565,all models right,p2206,135,-0.331,0.12,0.163,0.099,vgg16
+p2980,p1387,0.528,all models right,p2981,117,0.153,-0.1,0.043,-0.081,vgg16
+p1640,p1645,0.521,all models right,p1644,126,0.296,0.096,-0.249,-0.704,vgg16
+p1640,p3457,0.508,all models right,p2929,120,-0.045,0.484,0.235,0.65,vgg16
+p2630,p2632,0.862,all models right,,210,0.776,0.691,,0.358,vgg16
+p2630,p3643,0.587,all models right,,135,-0.016,0.715,,-0.339,vgg16
+p2630,p2634,0.546,all models right,,132,-0.447,0.581,,-0.056,vgg16
+p3414,p1425,0.549,all models right,p1430,130,0.373,0.591,0.303,0.233,vgg16
+p1877,p1867,0.589,all models right,p1868,143,0.024,0.452,0.162,-0.466,vgg16
+p1438,p2986,0.814,all models right,p2987,196,0.292,0.376,0.508,0.079,vgg16
+p1438,p1428,0.554,all models right,p1425,130,0.015,0.444,0.34,-0.028,vgg16
+p2633,p2637,0.92,all models right,p3642,225,0.885,0.92,0.357,0.544,vgg16
+p2633,p2632,0.513,all models right,p2629,120,-0.222,0.616,0.629,-0.511,vgg16
+p3644,p2635,0.548,all models right,p2633,126,-0.439,0.567,0.667,0.1,vgg16
+p1874,p1869,0.776,all models right,p1877,195,0.614,0.581,0.666,-0.243,vgg16
+p1414,p3727,0.854,all models right,p1409,210,0.619,0.773,-0.037,0.422,vgg16
+p2438,p0646,0.664,all models right,p0642,150,0.101,0.605,0.61,-0.563,vgg16
+p2993,p1454,0.648,all models right,p0003,150,-0.159,0.084,-0.055,0.36,vgg16
+p2993,p3421,0.587,all models right,p0003,143,-0.581,-0.169,-0.055,0.217,vgg16
+p2993,p1452,0.563,all models right,p0003,130,-0.337,-0.015,-0.055,0.234,vgg16
+p1882,p1866,0.543,all models right,p1867,126,0.844,0.066,0.465,0.476,vgg16
+p1513,p0158,0.634,all models right,p2846,140,0.571,-0.251,0.175,-0.096,vgg16
+p2213,p2212,0.509,all models right,p3565,126,0.58,0.043,0.448,-0.007,vgg16
+p3570,p2217,0.761,all models right,p2216,182,0.582,0.553,-0.017,0.408,vgg16
+p1433,p2987,0.609,all models right,p1428,143,0.084,0.641,0.617,-0.127,vgg16
+p3606,p3096,0.969,all models right,p2439,225,0.929,0.899,0.261,-0.607,vgg16
+p3606,p2442,0.72,all models right,p2440,165,0.182,0.788,0.731,-0.474,vgg16
+p2215,p2220,0.786,all models right,p1120,195,-0.129,0.215,0.231,0.147,vgg16
+p3406,p1388,0.589,all models right,p1384,143,0.821,0.273,0.098,-0.389,vgg16
+p1451,p1452,0.919,all models right,p3137,225,0.131,0.239,0.228,0.164,vgg16
+p1451,p1454,0.798,all models right,p2831,195,-0.14,0.184,0.227,0.045,vgg16
+p1451,p0000,0.782,all models right,p3137,195,0.257,0.353,0.228,0.428,vgg16
+p2440,p0647,0.518,all models right,p0645,120,0.188,0.612,0.58,-0.053,vgg16
+p3421,p1452,0.73,all models right,p0008,169,0.374,0.237,0.236,0.176,vgg16
+p3421,p1451,0.694,all models right,p3137,168,-0.007,0.091,-0.338,0.146,vgg16
+p3421,p0000,0.687,all models right,p0008,154,0.677,0.533,0.236,0.355,vgg16
+p1645,p3457,0.786,all models right,p3315,182,0.327,0.412,0.021,-0.007,vgg16
+p1645,p1643,0.595,all models right,p2929,144,0.401,-0.524,0.009,-0.013,vgg16
+p3691,p3421,0.599,no model right,p0009,140,0.683,0.552,0.484,0.408,vgg16
+p3691,p1453,0.582,no model right,p0007,143,0.191,0.648,0.617,-0.039,vgg16
+p3691,p2993,0.53,no model right,p3137,130,-0.655,0.068,-0.253,0.461,vgg16
+p2713,p2702,0.74,no model right,p2706,180,0.255,0.217,0.078,-0.099,vgg16
+p2713,p2705,0.703,no model right,p2712,169,-0.02,0.421,0.394,0.4,vgg16
+p1317,p2969,0.944,no model right,p2970,225,0.873,0.777,0.168,-0.448,vgg16
+p1317,p1320,0.611,no model right,p3392,135,0.889,-0.059,0.415,0.193,vgg16
+p1317,p2971,0.582,no model right,p1322,143,-0.055,0.265,-0.402,-0.538,vgg16
+p3654,p2672,0.654,no model right,p2677,165,0.339,0.296,0.617,0.457,vgg16
+p3654,p2675,0.549,no model right,p2677,130,0.362,0.178,0.617,0.33,vgg16
+p3654,p2678,0.544,no model right,p2679,126,-0.474,0.274,0.514,-0.275,vgg16
+p0008,p0006,0.624,no model right,p1452,144,0.29,0.345,0.292,-0.115,vgg16
+p0008,p2831,0.596,no model right,p3137,140,-0.067,0.389,0.239,0.061,vgg16
+p0008,p0007,0.541,no model right,p3421,130,-0.306,0.341,0.236,0.181,vgg16
+p0643,p0645,0.717,no model right,p0641,168,0.694,0.4,0.289,-0.297,vgg16
+p0643,p0642,0.565,no model right,p3606,135,0.416,0.25,0.174,-0.003,vgg16
+p2807,p2804,0.633,no model right,p2811,150,0.235,0.557,0.68,0.478,vgg16
+p2433,p2429,0.938,no model right,p2428,225,0.719,0.637,-0.252,-0.04,vgg16
+p2433,p2437,0.653,no model right,p2432,150,0.659,0.034,-0.139,-0.455,vgg16
+p2433,p2425,0.605,no model right,p2431,143,0.255,0.254,0.103,0.336,vgg16
+p3658,p2692,0.593,no model right,p2691,135,0.093,0.505,0.302,0.003,vgg16
+p0642,p0645,0.791,no model right,p2438,195,0.508,0.732,0.61,-0.396,vgg16
+p0642,p0638,0.541,no model right,p2899,126,0.214,-0.21,0.364,-0.274,vgg16
+p2700,p2688,0.579,no model right,p2698,140,-0.002,0.384,0.178,-0.301,vgg16
+p2700,p2699,0.565,no model right,p2698,132,0.162,0.619,0.178,0.067,vgg16
+p3408,p1394,0.647,no model right,p1396,150,-0.088,0.696,0.592,0.041,vgg16
+p3408,p1401,0.633,no model right,p1403,160,-0.36,0.605,0.623,-0.275,vgg16
+p2823,p2820,0.671,no model right,p2821,156,0.274,0.484,0.497,-0.578,vgg16
+p3131,p3686,0.597,no model right,p2805,144,-0.215,0.147,0.451,0.112,vgg16
+p2703,p2707,0.848,no model right,p3759,196,0.768,0.656,0.442,0.511,vgg16
+p2703,p3115,0.721,no model right,p2706,168,0.317,0.643,0.062,0.463,vgg16
+p2425,p2437,0.768,no model right,p2427,182,0.511,0.327,-0.224,-0.029,vgg16
+p2425,p2429,0.583,no model right,p2432,132,0.553,0.159,0.559,-0.054,vgg16
+p2683,p2682,0.666,no model right,p2684,154,0.049,0.669,0.654,0.243,vgg16
+p1391,p3410,0.716,no model right,p1389,169,0.6,0.706,0.683,0.278,vgg16
+p1391,p3409,0.582,no model right,p1390,132,-0.142,0.528,0.667,0.558,vgg16
+p0162,p2848,0.89,no model right,p1511,210,0.409,0.493,-0.2,0.512,vgg16
+p0162,p2842,0.637,no model right,p2847,156,0.554,0.49,-0.12,0.286,vgg16
+p0146,p0145,0.71,no model right,p0152,165,0.386,0.305,-0.174,-0.133,vgg16
+p0146,p0148,0.696,no model right,p2841,168,0.169,0.319,-0.245,-0.1,vgg16
+p0146,p0150,0.581,no model right,p0149,135,0.289,0.181,0.288,-0.16,vgg16
+p2705,p2702,0.558,no model right,p2708,130,-0.104,0.258,-0.182,0.133,vgg16
+p2705,p2701,0.501,no model right,p3661,121,-0.427,0.317,0.137,-0.162,vgg16
+p2677,p2679,0.862,agrees with the parent,p3114,210,0.485,0.514,-0.045,0.33,densenet121
+p2829,p2827,0.713,agrees with the parent,p2826,168,0.739,0.225,-0.393,-0.16,densenet121
+p2829,p2816,0.543,agrees with the parent,p2823,126,-0.103,0.031,-0.04,0.392,densenet121
+p2673,p2686,0.553,no model right,p2677,130,0.557,-0.119,-0.173,0.256,densenet121
+p2673,p2685,0.511,no model right,p2678,120,0.493,0.198,-0.158,0.055,densenet121
+p2448,p3609,0.617,agrees with the parent,p2443,143,-0.326,-0.277,0.363,0.183,densenet121
+p2448,p2455,0.524,agrees with the parent,p2445,120,0.348,0.236,0.221,0.103,densenet121
+p3688,p3687,0.56,agrees with the parent,p2802,132,0.692,0.233,0.25,-0.282,densenet121
+p3656,p2696,0.928,agrees with the parent,p2691,225,0.737,0.724,0.369,0.371,densenet121
+p3656,p2689,0.813,agrees with the parent,p3657,195,0.543,0.617,0.563,0.285,densenet121
+p3656,p2699,0.596,agrees with the parent,p2698,140,0.05,0.714,0.719,0.219,densenet121
+p2456,p2451,0.709,agrees with the parent,p3750,180,0.067,0.052,0.294,0.184,densenet121
+p2456,p2443,0.588,agrees with the parent,p2452,143,0.524,0.34,-0.224,0.047,densenet121
+p2694,p2693,0.751,agrees with the parent,p2698,182,0.807,0.716,0.558,0.323,densenet121
+p2694,p3658,0.667,agrees with the parent,p3657,150,0.267,0.368,0.372,-0.02,densenet121
+p2696,p2689,0.812,no model right,p2698,195,0.181,0.496,0.675,-0.331,densenet121
+p2696,p2699,0.646,no model right,p2697,150,0.027,0.374,0.403,0.258,densenet121
+p3132,p2808,0.666,agrees with the parent,p2811,156,0.609,-0.07,-0.323,-0.314,densenet121
+p2701,p2702,0.796,agrees with the parent,p2711,195,0.63,0.731,0.592,-0.252,densenet121
+p2701,p2713,0.755,agrees with the parent,p3759,182,0.405,0.481,0.604,-0.102,densenet121
+p2701,p3660,0.573,agrees with the parent,p2707,143,0.268,0.579,0.392,0.056,densenet121
+p2816,p2825,0.579,agrees with the parent,p2828,135,-0.728,0.088,0.277,-0.282,densenet121
+p2709,p2714,0.846,agrees with the parent,p3661,195,0.478,0.74,0.245,-0.348,densenet121
+p2828,p2822,0.719,no model right,p2816,182,0.009,0.233,0.277,0.261,densenet121
+p2982,p3409,0.577,genuine error,p1396,135,0.848,0.425,-0.314,-0.161,densenet121
+p1393,p3408,0.552,genuine error,p2982,132,0.276,0.386,-0.044,-0.31,densenet121
+p2209,p3567,0.795,all models right,p3564,196,0.647,0.32,-0.44,-0.227,densenet121
+p2209,p2213,0.565,all models right,p2206,135,-0.276,-0.002,0.03,0.041,densenet121
+p2980,p1387,0.528,all models right,p2981,117,-0.118,0.305,-0.026,0.591,densenet121
+p1640,p1645,0.521,all models right,p1644,126,0.857,0.349,0.391,-0.327,densenet121
+p1640,p3457,0.508,all models right,p2929,120,0.681,0.164,-0.501,-0.026,densenet121
+p2630,p2632,0.862,all models right,,210,0.602,0.472,,-0.368,densenet121
+p2630,p3643,0.587,all models right,,135,-0.314,-0.185,,0.306,densenet121
+p2630,p2634,0.546,all models right,,132,0.364,-0.27,,-0.261,densenet121
+p3414,p1425,0.549,all models right,p1430,130,0.087,0.347,-0.356,0.305,densenet121
+p1877,p1867,0.589,all models right,p1868,143,-0.673,-0.145,-0.464,0.066,densenet121
+p1438,p2986,0.814,all models right,p2987,196,0.146,-0.152,0.372,0.008,densenet121
+p1438,p1428,0.554,all models right,p1425,130,0.317,0.258,-0.048,-0.418,densenet121
+p2633,p2637,0.92,all models right,p3642,225,0.157,0.397,0.609,0.279,densenet121
+p2633,p2632,0.513,all models right,p2629,120,0.436,-0.379,0.276,0.008,densenet121
+p3644,p2635,0.548,all models right,p2633,126,0.59,0.385,0.263,-0.35,densenet121
+p1874,p1869,0.776,all models right,p1877,195,-0.766,-0.257,-0.102,0.062,densenet121
+p1414,p3727,0.854,all models right,p1409,210,0.254,0.205,-0.254,0.199,densenet121
+p2438,p0646,0.664,all models right,p0642,150,0.242,-0.012,0.357,-0.023,densenet121
+p2993,p1454,0.648,all models right,p0003,150,-0.057,0.079,-0.135,0.341,densenet121
+p2993,p3421,0.587,all models right,p0003,143,-0.214,-0.241,-0.135,0.188,densenet121
+p2993,p1452,0.563,all models right,p0003,130,-0.127,0.059,-0.135,0.105,densenet121
+p1882,p1866,0.543,all models right,p1867,126,-0.114,0.565,0.461,-0.314,densenet121
+p1513,p0158,0.634,all models right,p2846,140,-0.246,-0.062,-0.18,0.651,densenet121
+p2213,p2212,0.509,all models right,p3565,126,0.412,0.333,-0.383,-0.196,densenet121
+p3570,p2217,0.761,all models right,p2216,182,0.762,0.508,-0.385,-0.343,densenet121
+p1433,p2987,0.609,all models right,p1428,143,0.554,0.361,0.189,0.187,densenet121
+p3606,p3096,0.969,all models right,p2439,225,0.787,0.713,-0.575,0.493,densenet121
+p3606,p2442,0.72,all models right,p2440,165,0.733,-0.254,0.111,-0.408,densenet121
+p2215,p2220,0.786,all models right,p1120,195,0.586,0.264,-0.026,0.176,densenet121
+p3406,p1388,0.589,all models right,p1384,143,0.581,-0.048,0.077,0.18,densenet121
+p1451,p1452,0.919,all models right,p3137,225,0.571,0.55,0.034,-0.016,densenet121
+p1451,p1454,0.798,all models right,p2831,195,0.456,0.419,-0.267,0.094,densenet121
+p1451,p0000,0.782,all models right,p3137,195,-0.061,-0.195,0.034,0.017,densenet121
+p2440,p0647,0.518,all models right,p0645,120,0.349,-0.259,0.011,-0.107,densenet121
+p3421,p1452,0.73,all models right,p0008,169,0.262,-0.287,0.233,-0.017,densenet121
+p3421,p1451,0.694,all models right,p3137,168,-0.067,-0.249,-0.398,-0.11,densenet121
+p3421,p0000,0.687,all models right,p0008,154,0.681,0.419,0.233,-0.209,densenet121
+p1645,p3457,0.786,all models right,p3315,182,0.518,0.44,-0.624,0.046,densenet121
+p1645,p1643,0.595,all models right,p2929,144,-0.108,-0.113,-0.673,-0.196,densenet121
+p3691,p3421,0.599,no model right,p0009,140,0.117,-0.0,-0.397,-0.659,densenet121
+p3691,p1453,0.582,no model right,p0007,143,0.037,0.294,0.482,0.045,densenet121
+p3691,p2993,0.53,no model right,p3137,130,-0.806,-0.054,0.542,-0.456,densenet121
+p2713,p2702,0.74,no model right,p2706,180,0.492,0.651,0.619,0.381,densenet121
+p2713,p2705,0.703,no model right,p2712,169,0.162,0.455,0.631,-0.229,densenet121
+p1317,p2969,0.944,no model right,p2970,225,0.742,0.71,-0.199,-0.217,densenet121
+p1317,p1320,0.611,no model right,p3392,135,0.617,0.189,0.6,-0.263,densenet121
+p1317,p2971,0.582,no model right,p1322,143,0.674,0.002,0.208,-0.164,densenet121
+p3654,p2672,0.654,no model right,p2677,165,0.426,-0.03,0.072,0.347,densenet121
+p3654,p2675,0.549,no model right,p2677,130,0.205,-0.172,0.072,-0.248,densenet121
+p3654,p2678,0.544,no model right,p2679,126,0.506,0.128,0.135,0.131,densenet121
+p0008,p0006,0.624,no model right,p1452,144,0.239,-0.088,-0.222,-0.212,densenet121
+p0008,p2831,0.596,no model right,p3137,140,0.328,0.279,0.21,0.053,densenet121
+p0008,p0007,0.541,no model right,p3421,130,0.496,0.54,0.233,0.111,densenet121
+p0643,p0645,0.717,no model right,p0641,168,0.585,0.407,0.278,-0.1,densenet121
+p0643,p0642,0.565,no model right,p3606,135,0.641,0.361,0.428,0.544,densenet121
+p2807,p2804,0.633,no model right,p2811,150,0.53,0.261,-0.066,0.189,densenet121
+p2433,p2429,0.938,no model right,p2428,225,0.884,0.809,0.734,0.654,densenet121
+p2433,p2437,0.653,no model right,p2432,150,0.855,0.093,0.454,0.293,densenet121
+p2433,p2425,0.605,no model right,p2431,143,0.826,0.353,0.573,-0.221,densenet121
+p3658,p2692,0.593,no model right,p2691,135,-0.127,0.355,0.125,0.359,densenet121
+p0642,p0645,0.791,no model right,p2438,195,0.868,0.7,0.357,0.199,densenet121
+p0642,p0638,0.541,no model right,p2899,126,0.852,0.088,0.721,0.303,densenet121
+p2700,p2688,0.579,no model right,p2698,140,0.15,0.725,0.653,0.145,densenet121
+p2700,p2699,0.565,no model right,p2698,132,-0.174,0.45,0.653,0.578,densenet121
+p3408,p1394,0.647,no model right,p1396,150,-0.008,0.297,0.243,0.303,densenet121
+p3408,p1401,0.633,no model right,p1403,160,0.32,0.206,0.139,-0.132,densenet121
+p2823,p2820,0.671,no model right,p2821,156,0.439,0.154,0.106,0.318,densenet121
+p3131,p3686,0.597,no model right,p2805,144,0.409,0.066,-0.036,0.597,densenet121
+p2703,p2707,0.848,no model right,p3759,196,0.743,0.591,0.247,0.522,densenet121
+p2703,p3115,0.721,no model right,p2706,168,0.703,0.538,0.125,0.418,densenet121
+p2425,p2437,0.768,no model right,p2427,182,0.494,0.265,0.226,0.55,densenet121
+p2425,p2429,0.583,no model right,p2432,132,0.81,0.148,0.099,-0.35,densenet121
+p2683,p2682,0.666,no model right,p2684,154,0.843,0.395,0.235,0.323,densenet121
+p1391,p3410,0.716,no model right,p1389,169,0.434,0.538,-0.243,-0.471,densenet121
+p1391,p3409,0.582,no model right,p1390,132,0.683,0.697,0.267,-0.004,densenet121
+p0162,p2848,0.89,no model right,p1511,210,0.825,0.849,0.17,-0.126,densenet121
+p0162,p2842,0.637,no model right,p2847,156,0.639,0.733,0.6,0.26,densenet121
+p0146,p0145,0.71,no model right,p0152,165,0.453,0.364,0.187,0.582,densenet121
+p0146,p0148,0.696,no model right,p2841,168,0.834,0.588,-0.612,0.361,densenet121
+p0146,p0150,0.581,no model right,p0149,135,0.434,0.036,0.198,0.118,densenet121
+p2705,p2702,0.558,no model right,p2708,130,0.196,0.423,0.287,-0.034,densenet121
+p2705,p2701,0.501,no model right,p3661,121,-0.334,0.385,0.278,0.001,densenet121
+p2677,p2679,0.862,agrees with the parent,p3114,210,0.525,0.594,0.07,-0.181,swin_tiny_patch4_window7_224
+p2829,p2827,0.713,agrees with the parent,p2826,168,0.065,-0.17,-0.013,0.189,swin_tiny_patch4_window7_224
+p2829,p2816,0.543,agrees with the parent,p2823,126,-0.234,-0.197,-0.127,-0.012,swin_tiny_patch4_window7_224
+p2673,p2686,0.553,no model right,p2677,130,0.001,0.472,0.182,0.268,swin_tiny_patch4_window7_224
+p2673,p2685,0.511,no model right,p2678,120,0.333,0.455,0.076,-0.011,swin_tiny_patch4_window7_224
+p2448,p3609,0.617,agrees with the parent,p2443,143,0.342,-0.031,-0.068,0.3,swin_tiny_patch4_window7_224
+p2448,p2455,0.524,agrees with the parent,p2445,120,0.29,0.072,0.335,-0.254,swin_tiny_patch4_window7_224
+p3688,p3687,0.56,agrees with the parent,p2802,132,0.108,0.077,0.515,0.118,swin_tiny_patch4_window7_224
+p3656,p2696,0.928,agrees with the parent,p2691,225,0.677,0.729,0.292,-0.252,swin_tiny_patch4_window7_224
+p3656,p2689,0.813,agrees with the parent,p3657,195,0.571,0.576,0.27,-0.175,swin_tiny_patch4_window7_224
+p3656,p2699,0.596,agrees with the parent,p2698,140,0.356,0.374,0.19,0.244,swin_tiny_patch4_window7_224
+p2456,p2451,0.709,agrees with the parent,p3750,180,0.586,0.269,-0.091,-0.311,swin_tiny_patch4_window7_224
+p2456,p2443,0.588,agrees with the parent,p2452,143,-0.77,-0.348,0.059,-0.154,swin_tiny_patch4_window7_224
+p2694,p2693,0.751,agrees with the parent,p2698,182,0.473,0.443,0.416,0.052,swin_tiny_patch4_window7_224
+p2694,p3658,0.667,agrees with the parent,p3657,150,0.669,0.347,0.429,0.061,swin_tiny_patch4_window7_224
+p2696,p2689,0.812,no model right,p2698,195,0.518,0.552,0.396,-0.078,swin_tiny_patch4_window7_224
+p2696,p2699,0.646,no model right,p2697,150,0.422,0.471,0.131,0.409,swin_tiny_patch4_window7_224
+p3132,p2808,0.666,agrees with the parent,p2811,156,0.254,0.153,0.194,-0.016,swin_tiny_patch4_window7_224
+p2701,p2702,0.796,agrees with the parent,p2711,195,0.577,0.281,-0.021,0.181,swin_tiny_patch4_window7_224
+p2701,p2713,0.755,agrees with the parent,p3759,182,0.262,0.106,0.206,-0.19,swin_tiny_patch4_window7_224
+p2701,p3660,0.573,agrees with the parent,p2707,143,0.172,-0.102,-0.059,0.193,swin_tiny_patch4_window7_224
+p2816,p2825,0.579,agrees with the parent,p2828,135,0.109,0.273,-0.043,0.039,swin_tiny_patch4_window7_224
+p2709,p2714,0.846,agrees with the parent,p3661,195,0.633,0.596,0.087,-0.103,swin_tiny_patch4_window7_224
+p2828,p2822,0.719,no model right,p2816,182,0.74,0.49,-0.043,-0.154,swin_tiny_patch4_window7_224
+p2982,p3409,0.577,genuine error,p1396,135,0.606,0.137,0.36,0.085,swin_tiny_patch4_window7_224
+p1393,p3408,0.552,genuine error,p2982,132,0.334,-0.136,0.212,-0.06,swin_tiny_patch4_window7_224
+p2209,p3567,0.795,all models right,p3564,196,-0.158,0.165,0.163,0.017,swin_tiny_patch4_window7_224
+p2209,p2213,0.565,all models right,p2206,135,0.43,0.039,0.168,0.138,swin_tiny_patch4_window7_224
+p2980,p1387,0.528,all models right,p2981,117,0.281,-0.136,0.16,0.083,swin_tiny_patch4_window7_224
+p1640,p1645,0.521,all models right,p1644,126,-0.251,-0.464,-0.004,-0.081,swin_tiny_patch4_window7_224
+p1640,p3457,0.508,all models right,p2929,120,-0.212,-0.431,-0.145,0.344,swin_tiny_patch4_window7_224
+p2630,p2632,0.862,all models right,,210,0.664,0.602,,-0.095,swin_tiny_patch4_window7_224
+p2630,p3643,0.587,all models right,,135,-0.367,-0.294,,0.108,swin_tiny_patch4_window7_224
+p2630,p2634,0.546,all models right,,132,0.159,0.399,,0.304,swin_tiny_patch4_window7_224
+p3414,p1425,0.549,all models right,p1430,130,-0.088,0.321,0.479,-0.388,swin_tiny_patch4_window7_224
+p1877,p1867,0.589,all models right,p1868,143,-0.151,0.305,0.226,0.053,swin_tiny_patch4_window7_224
+p1438,p2986,0.814,all models right,p2987,196,0.261,0.289,0.054,0.08,swin_tiny_patch4_window7_224
+p1438,p1428,0.554,all models right,p1425,130,0.34,0.586,0.421,0.138,swin_tiny_patch4_window7_224
+p2633,p2637,0.92,all models right,p3642,225,0.63,0.617,0.341,0.278,swin_tiny_patch4_window7_224
+p2633,p2632,0.513,all models right,p2629,120,0.315,0.155,-0.008,0.073,swin_tiny_patch4_window7_224
+p3644,p2635,0.548,all models right,p2633,126,0.524,0.116,0.122,-0.234,swin_tiny_patch4_window7_224
+p1874,p1869,0.776,all models right,p1877,195,-0.002,-0.125,0.076,-0.182,swin_tiny_patch4_window7_224
+p1414,p3727,0.854,all models right,p1409,210,0.451,0.381,-0.314,-0.286,swin_tiny_patch4_window7_224
+p2438,p0646,0.664,all models right,p0642,150,0.156,0.112,-0.072,0.144,swin_tiny_patch4_window7_224
+p2993,p1454,0.648,all models right,p0003,150,0.279,0.167,-0.037,-0.02,swin_tiny_patch4_window7_224
+p2993,p3421,0.587,all models right,p0003,143,-0.146,-0.051,-0.037,0.191,swin_tiny_patch4_window7_224
+p2993,p1452,0.563,all models right,p0003,130,0.23,0.367,-0.037,-0.253,swin_tiny_patch4_window7_224
+p1882,p1866,0.543,all models right,p1867,126,-0.058,-0.008,0.24,0.143,swin_tiny_patch4_window7_224
+p1513,p0158,0.634,all models right,p2846,140,0.619,-0.136,0.064,-0.159,swin_tiny_patch4_window7_224
+p2213,p2212,0.509,all models right,p3565,126,0.068,0.283,0.123,-0.071,swin_tiny_patch4_window7_224
+p3570,p2217,0.761,all models right,p2216,182,0.136,0.289,-0.201,0.431,swin_tiny_patch4_window7_224
+p1433,p2987,0.609,all models right,p1428,143,0.656,0.465,0.396,0.143,swin_tiny_patch4_window7_224
+p3606,p3096,0.969,all models right,p2439,225,0.326,0.583,0.288,-0.241,swin_tiny_patch4_window7_224
+p3606,p2442,0.72,all models right,p2440,165,0.152,0.154,0.257,-0.193,swin_tiny_patch4_window7_224
+p2215,p2220,0.786,all models right,p1120,195,0.296,0.616,0.131,-0.28,swin_tiny_patch4_window7_224
+p3406,p1388,0.589,all models right,p1384,143,0.055,-0.129,0.263,-0.283,swin_tiny_patch4_window7_224
+p1451,p1452,0.919,all models right,p3137,225,0.327,0.26,0.029,0.229,swin_tiny_patch4_window7_224
+p1451,p1454,0.798,all models right,p2831,195,0.114,0.059,0.256,-0.166,swin_tiny_patch4_window7_224
+p1451,p0000,0.782,all models right,p3137,195,0.155,0.409,0.029,-0.087,swin_tiny_patch4_window7_224
+p2440,p0647,0.518,all models right,p0645,120,-0.45,0.038,0.244,-0.115,swin_tiny_patch4_window7_224
+p3421,p1452,0.73,all models right,p0008,169,0.429,0.259,-0.207,-0.069,swin_tiny_patch4_window7_224
+p3421,p1451,0.694,all models right,p3137,168,0.413,0.229,-0.285,0.052,swin_tiny_patch4_window7_224
+p3421,p0000,0.687,all models right,p0008,154,0.724,0.532,-0.207,0.064,swin_tiny_patch4_window7_224
+p1645,p3457,0.786,all models right,p3315,182,0.555,0.399,-0.102,-0.375,swin_tiny_patch4_window7_224
+p1645,p1643,0.595,all models right,p2929,144,-0.067,0.269,0.256,0.097,swin_tiny_patch4_window7_224
+p3691,p3421,0.599,no model right,p0009,140,0.253,0.068,0.555,-0.326,swin_tiny_patch4_window7_224
+p3691,p1453,0.582,no model right,p0007,143,0.3,-0.024,0.495,-0.415,swin_tiny_patch4_window7_224
+p3691,p2993,0.53,no model right,p3137,130,-0.546,0.086,0.013,0.244,swin_tiny_patch4_window7_224
+p2713,p2702,0.74,no model right,p2706,180,0.057,0.084,-0.015,-0.047,swin_tiny_patch4_window7_224
+p2713,p2705,0.703,no model right,p2712,169,0.469,0.177,0.369,0.281,swin_tiny_patch4_window7_224
+p1317,p2969,0.944,no model right,p2970,225,0.704,0.679,-0.242,0.063,swin_tiny_patch4_window7_224
+p1317,p1320,0.611,no model right,p3392,135,0.68,0.044,-0.215,0.167,swin_tiny_patch4_window7_224
+p1317,p2971,0.582,no model right,p1322,143,-0.06,-0.144,-0.047,0.503,swin_tiny_patch4_window7_224
+p3654,p2672,0.654,no model right,p2677,165,0.47,0.293,0.468,0.175,swin_tiny_patch4_window7_224
+p3654,p2675,0.549,no model right,p2677,130,0.442,0.028,0.468,-0.064,swin_tiny_patch4_window7_224
+p3654,p2678,0.544,no model right,p2679,126,0.681,0.122,0.366,-0.005,swin_tiny_patch4_window7_224
+p0008,p0006,0.624,no model right,p1452,144,-0.306,-0.276,-0.358,-0.004,swin_tiny_patch4_window7_224
+p0008,p2831,0.596,no model right,p3137,140,0.191,-0.431,-0.039,-0.049,swin_tiny_patch4_window7_224
+p0008,p0007,0.541,no model right,p3421,130,-0.077,-0.363,-0.207,0.279,swin_tiny_patch4_window7_224
+p0643,p0645,0.717,no model right,p0641,168,-0.257,-0.104,0.377,-0.129,swin_tiny_patch4_window7_224
+p0643,p0642,0.565,no model right,p3606,135,-0.348,-0.115,0.023,-0.143,swin_tiny_patch4_window7_224
+p2807,p2804,0.633,no model right,p2811,150,0.676,-0.011,0.069,-0.11,swin_tiny_patch4_window7_224
+p2433,p2429,0.938,no model right,p2428,225,0.701,0.782,0.218,-0.089,swin_tiny_patch4_window7_224
+p2433,p2437,0.653,no model right,p2432,150,0.034,-0.09,0.215,-0.05,swin_tiny_patch4_window7_224
+p2433,p2425,0.605,no model right,p2431,143,0.189,0.013,0.256,0.017,swin_tiny_patch4_window7_224
+p3658,p2692,0.593,no model right,p2691,135,0.238,-0.317,0.303,0.593,swin_tiny_patch4_window7_224
+p0642,p0645,0.791,no model right,p2438,195,0.127,0.114,-0.072,-0.183,swin_tiny_patch4_window7_224
+p0642,p0638,0.541,no model right,p2899,126,0.398,0.056,0.039,-0.064,swin_tiny_patch4_window7_224
+p2700,p2688,0.579,no model right,p2698,140,0.649,-0.103,0.163,0.187,swin_tiny_patch4_window7_224
+p2700,p2699,0.565,no model right,p2698,132,-0.205,0.105,0.163,0.075,swin_tiny_patch4_window7_224
+p3408,p1394,0.647,no model right,p1396,150,0.4,-0.067,0.279,0.428,swin_tiny_patch4_window7_224
+p3408,p1401,0.633,no model right,p1403,160,0.356,-0.178,-0.36,0.435,swin_tiny_patch4_window7_224
+p2823,p2820,0.671,no model right,p2821,156,0.321,0.074,0.345,-0.274,swin_tiny_patch4_window7_224
+p3131,p3686,0.597,no model right,p2805,144,0.404,0.048,0.136,0.17,swin_tiny_patch4_window7_224
+p2703,p2707,0.848,no model right,p3759,196,0.435,0.301,0.104,-0.407,swin_tiny_patch4_window7_224
+p2703,p3115,0.721,no model right,p2706,168,0.426,0.101,0.238,0.112,swin_tiny_patch4_window7_224
+p2425,p2437,0.768,no model right,p2427,182,0.188,0.252,0.186,-0.199,swin_tiny_patch4_window7_224
+p2425,p2429,0.583,no model right,p2432,132,0.284,-0.058,0.029,-0.555,swin_tiny_patch4_window7_224
+p2683,p2682,0.666,no model right,p2684,154,0.693,0.222,0.245,-0.109,swin_tiny_patch4_window7_224
+p1391,p3410,0.716,no model right,p1389,169,-0.44,-0.031,0.236,0.01,swin_tiny_patch4_window7_224
+p1391,p3409,0.582,no model right,p1390,132,0.538,0.188,0.049,0.106,swin_tiny_patch4_window7_224
+p0162,p2848,0.89,no model right,p1511,210,0.598,0.406,0.202,0.154,swin_tiny_patch4_window7_224
+p0162,p2842,0.637,no model right,p2847,156,0.748,0.112,0.357,0.366,swin_tiny_patch4_window7_224
+p0146,p0145,0.71,no model right,p0152,165,-0.121,0.301,0.118,-0.071,swin_tiny_patch4_window7_224
+p0146,p0148,0.696,no model right,p2841,168,0.183,0.412,0.044,0.153,swin_tiny_patch4_window7_224
+p0146,p0150,0.581,no model right,p0149,135,-0.06,0.125,0.262,-0.257,swin_tiny_patch4_window7_224
+p2705,p2702,0.558,no model right,p2708,130,-0.122,0.076,-0.179,0.105,swin_tiny_patch4_window7_224
+p2705,p2701,0.501,no model right,p3661,121,-0.004,0.049,-0.153,0.225,swin_tiny_patch4_window7_224
