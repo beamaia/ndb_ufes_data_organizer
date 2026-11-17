@@ -40,11 +40,14 @@ plt.rcParams.update({
 })
 
 
+FORMAT = "svg"  # "png" gives the figures for the thesis: dark text on white, 300 dpi (set by run_figures)
+
+
 def save(fig: plt.Figure, output_dir: Path, name: str) -> None:
     fig.tight_layout()
-    fig.savefig(output_dir / f"{name}.svg", format="svg", metadata={"Date": None}, dpi=150)
+    fig.savefig(output_dir / f"{name}.{FORMAT}", format=FORMAT, metadata={"Date": None} if FORMAT == "svg" else None, dpi=300 if FORMAT == "png" else 150, bbox_inches="tight" if FORMAT == "png" else None)
     plt.close(fig)
-    logger.info(f"Wrote {output_dir / name}.svg")
+    logger.info(f"Wrote {output_dir / name}.{FORMAT}")
 
 
 def stacked_bars(ax: plt.Axes, table: pd.DataFrame) -> None:
@@ -331,6 +334,11 @@ def cluster_choices(clusters: Path, output_dir: Path) -> None:
 
 
 def run_figures(args: argparse.Namespace) -> dict:
+    global FORMAT
+    FORMAT = args.format
+    if FORMAT == "png":  # for a white page: dark text, a white background
+        plt.rcParams.update({"text.color": "#222222", "axes.labelcolor": "#222222", "xtick.color": "#222222", "ytick.color": "#222222", "axes.edgecolor": "#222222",
+                             "legend.labelcolor": "#222222", "figure.facecolor": "white", "axes.facecolor": "white", "savefig.transparent": False, "font.size": 10})
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     patch = pd.read_csv(args.tables / "patch_table_public.csv", dtype=str, keep_default_na=False)
@@ -349,7 +357,8 @@ def run_figures(args: argparse.Namespace) -> dict:
 
 
 def figures_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Draw the SVG charts of the wiki.")
+    parser = argparse.ArgumentParser(description="Draw the charts of the wiki (SVG), or the same charts as PNG for the thesis.")
+    parser.add_argument("--format", choices=["svg", "png"], default="svg", help="png: dark text on white, 300 dpi, for the thesis.")
     parser.add_argument("--tables", type=Path, default=TABLES)
     parser.add_argument("--folds", type=Path, default=FOLDS)
     parser.add_argument("--embeddings", type=Path, default=EMBEDDINGS)

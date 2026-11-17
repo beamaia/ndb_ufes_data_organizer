@@ -1,0 +1,1879 @@
+model,patch_id,importance_share,area_share,preference,zoom,label,right
+densenet121,p3136,0.5509,0.5423,1.0159,40x,OSCC,False
+densenet121,p3137,0.7509,0.7156,1.0493,40x,OSCC,True
+densenet121,p3138,0.5366,0.4839,1.1089,10x,OSCC,True
+densenet121,p3139,0.2554,0.2131,1.1984,10x,OSCC,True
+densenet121,p3140,0.6936,0.586,1.1836,40x,OSCC,True
+densenet121,p3141,0.2953,0.284,1.0399,40x,OSCC,True
+densenet121,p3142,0.3496,0.3542,0.9871,40x,OSCC,True
+densenet121,p3143,0.3722,0.3067,1.2136,40x,OSCC,True
+densenet121,p3144,0.5272,0.5395,0.9772,40x,OSCC,True
+densenet121,p3145,0.5152,0.4259,1.2097,40x,OSCC,True
+densenet121,p3146,0.2468,0.2019,1.2227,40x,OSCC,True
+densenet121,p3147,0.6255,0.5976,1.0468,10x,OSCC,True
+densenet121,p3148,0.4836,0.4529,1.0679,10x,OSCC,True
+densenet121,p3149,0.2812,0.3721,0.7559,40x,OSCC,True
+densenet121,p3150,0.3807,0.4,0.9518,40x,OSCC,True
+densenet121,p3151,0.3858,0.401,0.9622,10x,OSCC,True
+densenet121,p3152,0.0868,0.1185,0.7327,10x,OSCC,True
+densenet121,p3153,0.396,0.3553,1.1145,10x,OSCC,True
+densenet121,p3154,0.3137,0.2504,1.2529,10x,OSCC,True
+densenet121,p3155,0.729,0.7038,1.0359,40x,OSCC,True
+densenet121,p3156,0.6077,0.5506,1.1039,40x,OSCC,True
+densenet121,p3157,0.1039,0.1135,0.9157,40x,OSCC,True
+densenet121,p3158,0.139,0.1022,1.3604,40x,OSCC,True
+densenet121,p3159,0.2647,0.1819,1.4553,40x,OSCC,True
+densenet121,p3160,0.0454,0.0521,0.871,40x,OSCC,True
+densenet121,p3161,0.2633,0.2398,1.0979,40x,OSCC,True
+densenet121,p3162,0.3831,0.3158,1.2131,40x,OSCC,True
+densenet121,p3163,0.0351,0.027,1.2987,10x,OSCC,True
+densenet121,p3164,0.0309,0.0172,1.7926,10x,OSCC,True
+densenet121,p3165,0.039,0.0379,1.0292,10x,OSCC,True
+densenet121,p3166,0.3802,0.3377,1.1256,40x,OSCC,True
+densenet121,p3167,0.0002,0.0003,0.6798,10x,OSCC,True
+densenet121,p3168,0.5093,0.4896,1.0402,10x,OSCC,True
+densenet121,p3169,0.2513,0.2606,0.9642,10x,OSCC,True
+densenet121,p3170,0.3774,0.2704,1.3956,40x,OSCC,True
+densenet121,p3171,0.2937,0.2926,1.0035,40x,OSCC,True
+densenet121,p3172,0.1289,0.1676,0.7695,40x,OSCC,True
+densenet121,p3173,0.1385,0.2732,0.507,40x,OSCC,True
+densenet121,p3174,0.1154,0.116,0.9944,40x,OSCC,True
+densenet121,p3175,0.1855,0.2064,0.8991,40x,OSCC,False
+densenet121,p3176,0.1868,0.1786,1.046,40x,OSCC,True
+densenet121,p3177,0.1414,0.1834,0.771,40x,OSCC,True
+densenet121,p3178,0.133,0.1411,0.9426,10x,OSCC,True
+densenet121,p3179,0.4515,0.5197,0.8688,10x,OSCC,True
+densenet121,p3180,0.2672,0.2723,0.9816,40x,OSCC,True
+densenet121,p3181,0.2583,0.2753,0.938,40x,OSCC,True
+densenet121,p3182,0.2732,0.269,1.0157,40x,OSCC,True
+densenet121,p3183,0.4842,0.4568,1.0598,40x,OSCC,True
+densenet121,p3184,0.2845,0.3774,0.7538,10x,OSCC,True
+densenet121,p3185,0.3314,0.3786,0.8752,40x,OSCC,False
+densenet121,p3186,0.5224,0.4723,1.1059,40x,OSCC,True
+densenet121,p3187,0.2229,0.3776,0.5904,40x,OSCC,False
+densenet121,p3188,0.1582,0.1424,1.1103,10x,OSCC,True
+densenet121,p3189,0.2218,0.1301,1.704,10x,OSCC,True
+densenet121,p3190,0.1855,0.0893,2.0771,10x,OSCC,False
+densenet121,p3191,0.2144,0.1604,1.3371,10x,OSCC,True
+densenet121,p3192,0.2033,0.2368,0.8583,40x,OSCC,True
+densenet121,p3193,0.3396,0.3233,1.0506,40x,OSCC,True
+densenet121,p3194,0.0775,0.0432,1.7924,40x,OSCC,True
+densenet121,p3195,0.0226,0.0609,0.3708,40x,OSCC,True
+densenet121,p3196,0.0731,0.0808,0.9051,40x,OSCC,True
+densenet121,p3197,0.0856,0.1052,0.8132,40x,OSCC,True
+densenet121,p3198,0.2014,0.2118,0.9511,40x,OSCC,True
+densenet121,p3199,0.4012,0.4265,0.9408,10x,OSCC,True
+densenet121,p3200,0.0564,0.0208,2.712,10x,OSCC,True
+densenet121,p3201,0.1655,0.096,1.7235,10x,OSCC,True
+densenet121,p3202,0.0518,0.05,1.0356,10x,OSCC,True
+densenet121,p3203,0.0174,0.0334,0.5193,10x,OSCC,True
+densenet121,p3204,0.0409,0.03,1.3625,10x,OSCC,True
+densenet121,p3205,0.2351,0.2529,0.9294,10x,OSCC,True
+densenet121,p3206,0.0464,0.0561,0.827,10x,OSCC,True
+densenet121,p3207,0.523,0.4542,1.1514,10x,OSCC,True
+densenet121,p3208,0.1413,0.1125,1.2555,40x,OSCC,True
+densenet121,p3209,0.1322,0.1278,1.034,40x,OSCC,True
+densenet121,p3210,0.1247,0.1013,1.2319,40x,OSCC,True
+densenet121,p3211,0.1294,0.0943,1.3718,40x,OSCC,True
+densenet121,p3212,0.1718,0.156,1.1013,10x,OSCC,True
+densenet121,p3213,0.1518,0.1537,0.9876,10x,OSCC,True
+densenet121,p3214,0.1714,0.16,1.0709,10x,OSCC,False
+densenet121,p3215,0.1777,0.1905,0.933,40x,OSCC,True
+densenet121,p3216,0.4294,0.4493,0.9557,40x,OSCC,True
+densenet121,p3217,0.4232,0.4301,0.9839,40x,OSCC,True
+densenet121,p3218,0.1015,0.1053,0.9638,10x,OSCC,True
+densenet121,p3219,0.0955,0.0967,0.9874,10x,OSCC,True
+densenet121,p3220,0.1694,0.1708,0.992,10x,OSCC,True
+densenet121,p3221,0.1235,0.1176,1.0504,10x,OSCC,True
+densenet121,p3222,0.8605,0.5511,1.5614,10x,OSCC,False
+densenet121,p3223,0.3127,0.4542,0.6883,40x,OSCC,True
+densenet121,p3224,0.0783,0.0605,1.2943,10x,OSCC,True
+densenet121,p3225,0.1162,0.1219,0.9535,10x,OSCC,True
+densenet121,p3226,0.2502,0.2532,0.9878,40x,OSCC,True
+densenet121,p3227,0.0919,0.0958,0.9591,40x,OSCC,True
+densenet121,p3228,0.1776,0.1828,0.9712,40x,OSCC,True
+densenet121,p3229,0.4078,0.3503,1.1641,40x,OSCC,True
+densenet121,p3230,0.5229,0.5359,0.9757,10x,OSCC,True
+densenet121,p3231,0.6886,0.6311,1.0913,10x,OSCC,True
+densenet121,p3232,0.3504,0.3743,0.9362,10x,OSCC,True
+densenet121,p3233,0.2927,0.3424,0.8549,10x,OSCC,True
+densenet121,p3234,0.2435,0.2536,0.9601,40x,OSCC,True
+densenet121,p3235,0.2857,0.3116,0.9169,40x,OSCC,True
+densenet121,p3236,0.3745,0.3422,1.0942,40x,OSCC,True
+densenet121,p3237,0.3594,0.3594,1.0,10x,OSCC,True
+densenet121,p3238,0.3492,0.3694,0.9453,10x,OSCC,True
+densenet121,p3239,0.2636,0.2653,0.9934,40x,OSCC,True
+densenet121,p3240,0.2467,0.2455,1.0049,40x,OSCC,True
+densenet121,p3241,0.2546,0.2735,0.9309,40x,OSCC,True
+densenet121,p3242,0.9859,0.923,1.0681,10x,OSCC,True
+densenet121,p3243,0.652,0.4338,1.503,10x,OSCC,True
+densenet121,p3244,0.7322,0.6852,1.0685,40x,OSCC,True
+densenet121,p3245,0.8574,0.7685,1.1157,40x,OSCC,True
+densenet121,p3246,0.8971,0.8356,1.0736,40x,OSCC,True
+densenet121,p3247,0.6594,0.7322,0.9006,40x,OSCC,True
+densenet121,p3248,0.7721,0.7477,1.0327,40x,OSCC,True
+densenet121,p3249,0.7846,0.7544,1.04,40x,OSCC,True
+densenet121,p3250,0.7144,0.7357,0.971,40x,OSCC,True
+densenet121,p3251,0.4576,0.4514,1.0138,10x,OSCC,True
+densenet121,p3252,0.254,0.2457,1.034,10x,OSCC,True
+densenet121,p3253,0.324,0.3747,0.8647,10x,OSCC,True
+densenet121,p3254,0.4201,0.4581,0.917,10x,OSCC,True
+densenet121,p3255,0.2547,0.2478,1.0276,10x,OSCC,True
+densenet121,p3256,0.3094,0.3482,0.8885,10x,OSCC,True
+densenet121,p3257,0.658,0.5382,1.2226,10x,OSCC,True
+densenet121,p3258,0.5362,0.3444,1.557,10x,OSCC,True
+densenet121,p3259,0.0916,0.1031,0.8883,40x,OSCC,True
+densenet121,p3260,0.2317,0.2405,0.9634,10x,OSCC,True
+densenet121,p3261,0.3535,0.3144,1.1244,10x,OSCC,True
+densenet121,p3262,0.3525,0.3575,0.9861,10x,OSCC,True
+densenet121,p3263,0.2998,0.306,0.9797,40x,OSCC,True
+densenet121,p3264,0.2445,0.2627,0.9307,40x,OSCC,True
+densenet121,p3265,0.0635,0.0716,0.8866,40x,OSCC,True
+densenet121,p3266,0.1536,0.1825,0.8413,40x,OSCC,True
+densenet121,p3267,0.2642,0.2772,0.9533,40x,OSCC,True
+densenet121,p3268,0.8414,0.8703,0.9668,10x,OSCC,True
+densenet121,p3269,0.4941,0.4263,1.1589,10x,OSCC,True
+densenet121,p3270,0.6272,0.6212,1.0097,10x,OSCC,True
+densenet121,p3271,0.1669,0.3571,0.4674,10x,OSCC,False
+densenet121,p3272,0.5855,0.5826,1.0049,10x,OSCC,True
+densenet121,p3273,0.9539,0.9532,1.0007,10x,OSCC,True
+densenet121,p3274,0.1099,0.1066,1.0304,10x,OSCC,True
+densenet121,p3275,0.0428,0.0461,0.9278,10x,OSCC,True
+densenet121,p3276,0.1155,0.112,1.0306,10x,OSCC,True
+densenet121,p3277,0.0925,0.0805,1.1502,10x,OSCC,True
+densenet121,p3278,0.2821,0.2327,1.2123,10x,OSCC,False
+densenet121,p3279,0.0722,0.0955,0.7562,10x,OSCC,True
+densenet121,p3280,0.1175,0.0982,1.1964,10x,OSCC,True
+densenet121,p3281,0.3256,0.3016,1.0793,10x,OSCC,True
+densenet121,p3282,0.0944,0.1392,0.6781,40x,OSCC,True
+densenet121,p3283,0.3837,0.3832,1.0014,10x,OSCC,True
+densenet121,p3284,0.0293,0.0307,0.9529,10x,OSCC,True
+densenet121,p3285,0.1193,0.1317,0.9059,10x,OSCC,True
+densenet121,p3286,0.1795,0.2099,0.8552,10x,OSCC,True
+densenet121,p3287,0.3534,0.3514,1.0055,10x,OSCC,True
+densenet121,p3288,0.2302,0.2326,0.9898,10x,OSCC,True
+densenet121,p3289,0.4782,0.5005,0.9556,40x,OSCC,True
+densenet121,p3290,0.1932,0.1861,1.0383,40x,OSCC,True
+densenet121,p3291,0.1242,0.1476,0.842,10x,OSCC,True
+densenet121,p3292,0.102,0.0956,1.0671,10x,OSCC,True
+densenet121,p3293,0.1494,0.1351,1.1057,10x,OSCC,True
+densenet121,p3294,0.0756,0.0684,1.1046,10x,OSCC,True
+densenet121,p3295,0.0187,0.0187,1.0012,10x,OSCC,True
+densenet121,p3296,0.0285,0.0215,1.3236,10x,OSCC,True
+densenet121,p3297,0.688,0.6733,1.0218,40x,OSCC,True
+densenet121,p3298,0.3537,0.3696,0.9569,40x,OSCC,True
+densenet121,p3299,0.386,0.3491,1.1056,40x,OSCC,True
+densenet121,p3300,0.3819,0.3747,1.0194,10x,Without dysplasia,True
+densenet121,p3301,0.5517,0.5639,0.9784,10x,Without dysplasia,True
+densenet121,p3302,0.3646,0.3352,1.0877,10x,Without dysplasia,True
+densenet121,p3303,0.0126,0.0156,0.8054,10x,Without dysplasia,False
+densenet121,p3304,0.0328,0.0255,1.2874,10x,Without dysplasia,True
+densenet121,p3305,0.0017,0.002,0.85,10x,Without dysplasia,True
+densenet121,p3306,0.0215,0.015,1.4296,10x,Without dysplasia,True
+densenet121,p3307,0.1912,0.1389,1.3761,10x,Without dysplasia,False
+densenet121,p3308,0.0534,0.0546,0.9775,10x,Without dysplasia,True
+densenet121,p3309,0.033,0.037,0.8909,10x,Without dysplasia,True
+densenet121,p3310,0.0898,0.0878,1.023,10x,Without dysplasia,True
+densenet121,p3311,0.0947,0.0791,1.1977,40x,Without dysplasia,True
+densenet121,p3312,0.1098,0.0771,1.425,40x,Without dysplasia,True
+densenet121,p3313,0.4274,0.3488,1.2255,10x,Without dysplasia,True
+densenet121,p3314,0.0655,0.0671,0.976,40x,Without dysplasia,False
+densenet121,p3315,0.0144,0.0143,1.0064,40x,Without dysplasia,True
+densenet121,p3316,0.2366,0.2246,1.0535,40x,Without dysplasia,True
+densenet121,p3317,0.4787,0.4669,1.0253,10x,Without dysplasia,True
+densenet121,p3318,0.0077,0.0153,0.501,10x,Without dysplasia,True
+densenet121,p3319,0.0361,0.0526,0.6867,10x,Without dysplasia,True
+densenet121,p3320,0.0005,0.0008,0.6425,10x,Without dysplasia,True
+densenet121,p3321,0.0,0.0,0.1991,40x,Without dysplasia,True
+densenet121,p3322,0.0,0.0001,0.4407,40x,Without dysplasia,True
+densenet121,p3323,0.0371,0.0777,0.4769,40x,Without dysplasia,True
+densenet121,p3324,0.1294,0.2312,0.5597,40x,Without dysplasia,True
+densenet121,p3325,0.0143,0.0191,0.7502,40x,Without dysplasia,True
+densenet121,p3326,0.0452,0.0352,1.2838,40x,Without dysplasia,True
+densenet121,p3327,0.0993,0.0923,1.0762,10x,Without dysplasia,True
+densenet121,p3328,0.1453,0.1133,1.2832,10x,Without dysplasia,True
+densenet121,p3329,0.0149,0.0149,0.9943,10x,Without dysplasia,True
+densenet121,p3330,0.0134,0.0135,0.993,10x,Without dysplasia,True
+densenet121,p3331,0.1084,0.1035,1.0482,10x,Without dysplasia,True
+densenet121,p3332,0.5438,0.5051,1.0766,10x,Without dysplasia,True
+densenet121,p3333,0.1051,0.1078,0.9749,10x,Without dysplasia,True
+densenet121,p3334,0.0296,0.0313,0.9452,10x,Without dysplasia,True
+densenet121,p3335,0.0802,0.0589,1.3611,10x,Without dysplasia,True
+densenet121,p3336,0.3645,0.3725,0.9784,10x,Without dysplasia,True
+densenet121,p3337,0.7239,0.7048,1.0271,10x,Without dysplasia,True
+densenet121,p3338,0.5555,0.7351,0.7557,10x,Without dysplasia,False
+densenet121,p3339,0.042,0.0279,1.509,40x,Without dysplasia,True
+densenet121,p3340,0.0139,0.0148,0.9372,10x,Without dysplasia,True
+densenet121,p3341,0.014,0.0252,0.5576,10x,Without dysplasia,True
+densenet121,p3342,0.0501,0.0564,0.8892,10x,Without dysplasia,True
+densenet121,p3343,0.0649,0.0718,0.9044,10x,Without dysplasia,True
+densenet121,p3344,0.4069,0.357,1.1396,10x,Without dysplasia,True
+densenet121,p3345,0.1781,0.1688,1.0554,10x,Without dysplasia,True
+densenet121,p3346,0.0962,0.0941,1.0217,10x,Without dysplasia,True
+densenet121,p3347,0.0107,0.0188,0.5691,10x,Without dysplasia,True
+densenet121,p3348,0.0181,0.0168,1.0759,10x,Without dysplasia,True
+densenet121,p3349,0.1739,0.2153,0.8078,10x,Without dysplasia,True
+densenet121,p3350,0.0735,0.1268,0.5797,40x,Without dysplasia,True
+densenet121,p3351,0.5461,0.5554,0.9833,10x,Without dysplasia,True
+densenet121,p3352,0.5686,0.5757,0.9877,10x,Without dysplasia,True
+densenet121,p3353,0.5107,0.4751,1.0749,10x,Without dysplasia,True
+densenet121,p3354,0.8484,0.7619,1.1134,10x,Without dysplasia,True
+densenet121,p3355,0.0694,0.1006,0.6902,40x,Without dysplasia,False
+densenet121,p3357,0.014,0.0063,2.2127,40x,Without dysplasia,True
+densenet121,p3358,0.8712,0.7758,1.123,10x,Without dysplasia,True
+densenet121,p3359,0.6429,0.5369,1.1974,10x,Without dysplasia,True
+densenet121,p3360,0.8462,0.8102,1.0444,10x,Without dysplasia,True
+densenet121,p3361,0.1403,0.1414,0.992,40x,Without dysplasia,True
+densenet121,p3362,0.2048,0.1911,1.0715,40x,Without dysplasia,True
+densenet121,p3363,0.4497,0.4028,1.1165,40x,Without dysplasia,True
+densenet121,p3364,0.2082,0.2115,0.9846,40x,Without dysplasia,True
+densenet121,p3365,0.4102,0.364,1.127,40x,Without dysplasia,True
+densenet121,p3366,0.2284,0.2082,1.0971,40x,Without dysplasia,True
+densenet121,p3367,0.1499,0.159,0.9429,40x,Without dysplasia,True
+densenet121,p3368,0.4658,0.4945,0.942,10x,Without dysplasia,True
+densenet121,p3369,0.5106,0.4132,1.2357,10x,Without dysplasia,False
+densenet121,p3370,0.4292,0.4856,0.8837,10x,Without dysplasia,True
+densenet121,p3371,0.0015,0.0063,0.2421,40x,Without dysplasia,True
+densenet121,p3372,0.1504,0.1603,0.938,40x,Without dysplasia,True
+densenet121,p3373,0.0502,0.0434,1.156,40x,Without dysplasia,True
+densenet121,p3374,0.1057,0.1084,0.9754,10x,Without dysplasia,True
+densenet121,p3375,0.9905,0.9876,1.0029,10x,Without dysplasia,True
+densenet121,p3376,0.0523,0.0807,0.6479,40x,Without dysplasia,True
+densenet121,p3377,0.189,0.2124,0.8899,40x,Without dysplasia,True
+densenet121,p3378,0.2653,0.3225,0.8225,40x,Without dysplasia,True
+densenet121,p3379,0.1297,0.14,0.9264,40x,Without dysplasia,True
+densenet121,p3380,0.042,0.0916,0.4584,40x,Without dysplasia,True
+densenet121,p3381,0.9761,0.9717,1.0045,10x,Without dysplasia,True
+densenet121,p3382,0.6727,0.6384,1.0538,10x,Without dysplasia,True
+densenet121,p3383,0.0269,0.0224,1.2019,40x,Without dysplasia,True
+densenet121,p3384,0.0324,0.0266,1.221,40x,Without dysplasia,True
+densenet121,p3385,1.0,1.0,1.0,10x,Without dysplasia,True
+densenet121,p3386,1.0,1.0,1.0,10x,Without dysplasia,True
+densenet121,p3387,0.3468,0.3016,1.1501,10x,Without dysplasia,True
+densenet121,p3388,0.1846,0.196,0.9419,10x,Without dysplasia,True
+densenet121,p3389,0.1348,0.1829,0.7372,40x,Without dysplasia,True
+densenet121,p3390,0.0751,0.0707,1.0617,40x,Without dysplasia,True
+densenet121,p3391,0.0398,0.0466,0.8545,40x,Without dysplasia,True
+densenet121,p3392,0.0011,0.0062,0.1734,10x,Without dysplasia,True
+densenet121,p3393,0.0117,0.0057,2.0557,10x,Without dysplasia,True
+densenet121,p3394,0.6007,0.7212,0.8329,10x,Without dysplasia,False
+densenet121,p3395,0.5684,0.7434,0.7646,10x,Without dysplasia,False
+densenet121,p3396,0.0666,0.121,0.5504,40x,Without dysplasia,True
+densenet121,p3397,0.8188,0.8275,0.9894,10x,Without dysplasia,True
+densenet121,p3398,0.0909,0.0939,0.9676,10x,Without dysplasia,True
+densenet121,p3399,0.0823,0.0865,0.9516,10x,Without dysplasia,True
+densenet121,p3400,0.0386,0.0278,1.387,10x,Without dysplasia,True
+densenet121,p3401,0.0409,0.0408,1.0023,10x,Without dysplasia,False
+densenet121,p3402,0.1697,0.2014,0.8427,10x,Without dysplasia,True
+densenet121,p3403,0.0335,0.0327,1.0238,10x,Without dysplasia,False
+densenet121,p3404,0.0009,0.0008,1.1829,10x,Without dysplasia,True
+densenet121,p3405,0.0011,0.0008,1.3598,10x,Without dysplasia,True
+densenet121,p3406,0.6911,0.3098,2.2308,10x,With dysplasia,True
+densenet121,p3407,0.7424,0.7109,1.0442,10x,With dysplasia,True
+densenet121,p3408,0.5453,0.5242,1.0404,40x,With dysplasia,True
+densenet121,p3409,0.6407,0.6365,1.0066,40x,With dysplasia,True
+densenet121,p3410,0.6195,0.6011,1.0307,40x,With dysplasia,True
+densenet121,p3411,0.0083,0.0073,1.1448,40x,With dysplasia,True
+densenet121,p3412,0.1052,0.1233,0.8532,40x,With dysplasia,True
+densenet121,p3413,0.5349,0.5302,1.0089,40x,With dysplasia,True
+densenet121,p3414,0.3057,0.299,1.0223,40x,With dysplasia,True
+densenet121,p3415,0.1555,0.29,0.5362,10x,With dysplasia,True
+densenet121,p3416,0.3868,0.314,1.2322,10x,With dysplasia,True
+densenet121,p3417,0.3817,0.3788,1.0075,10x,With dysplasia,True
+densenet121,p3418,0.0001,0.0014,0.1014,10x,With dysplasia,True
+densenet121,p3419,0.0,0.0004,0.0509,10x,With dysplasia,True
+densenet121,p3420,0.0006,0.0021,0.3032,10x,With dysplasia,True
+densenet121,p3421,0.8864,0.7382,1.2008,40x,With dysplasia,True
+densenet121,p3422,0.0764,0.1207,0.6327,40x,With dysplasia,True
+densenet121,p3423,0.0,0.0536,0.0008,10x,With dysplasia,True
+densenet121,p3424,0.0,0.0311,0.0,10x,With dysplasia,True
+densenet121,p3425,0.2693,0.3821,0.7048,10x,With dysplasia,True
+densenet121,p3426,0.2709,0.1541,1.758,10x,With dysplasia,True
+densenet121,p3427,0.4261,0.5454,0.7814,10x,With dysplasia,True
+densenet121,p3428,0.2602,0.2476,1.0508,10x,With dysplasia,True
+densenet121,p3429,0.134,0.1955,0.6856,10x,With dysplasia,True
+densenet121,p3430,0.1024,0.1175,0.8711,10x,With dysplasia,True
+densenet121,p3431,0.0841,0.1554,0.5416,10x,With dysplasia,True
+densenet121,p3432,0.0833,0.1003,0.8302,40x,With dysplasia,True
+densenet121,p3433,0.2007,0.1893,1.06,40x,With dysplasia,True
+densenet121,p3434,0.0006,0.001,0.6397,10x,With dysplasia,True
+densenet121,p3435,0.0114,0.0114,1.0004,40x,With dysplasia,True
+densenet121,p3436,0.0113,0.0125,0.904,40x,With dysplasia,True
+densenet121,p3437,0.016,0.0156,1.0221,40x,With dysplasia,True
+densenet121,p3438,0.6124,0.6176,0.9915,40x,With dysplasia,True
+densenet121,p3439,0.6604,0.6292,1.0494,40x,With dysplasia,True
+densenet121,p3440,0.8176,0.8584,0.9525,10x,With dysplasia,True
+densenet121,p3441,0.6434,0.6653,0.967,10x,With dysplasia,True
+densenet121,p3442,0.2153,0.2273,0.9472,10x,With dysplasia,False
+densenet121,p3443,0.1522,0.1589,0.9577,40x,With dysplasia,True
+densenet121,p3444,0.0509,0.0542,0.9388,40x,With dysplasia,True
+densenet121,p3445,0.0951,0.2696,0.3529,10x,With dysplasia,True
+densenet121,p3446,0.5812,0.3503,1.6589,10x,With dysplasia,True
+densenet121,p3447,0.458,0.4804,0.9535,10x,With dysplasia,True
+densenet121,p3448,0.3559,0.343,1.0377,40x,With dysplasia,True
+densenet121,p3449,0.1349,0.1684,0.8009,40x,With dysplasia,True
+densenet121,p3450,0.1552,0.1626,0.9543,10x,With dysplasia,True
+densenet121,p3451,0.1414,0.129,1.0956,10x,With dysplasia,True
+densenet121,p3452,0.0577,0.0421,1.3732,40x,With dysplasia,True
+densenet121,p3453,0.0233,0.0066,3.5434,40x,With dysplasia,True
+densenet121,p3454,0.064,0.0776,0.8248,40x,With dysplasia,True
+densenet121,p3455,0.0083,0.0087,0.9533,40x,With dysplasia,True
+densenet121,p3456,0.0137,0.0134,1.0234,40x,With dysplasia,True
+densenet121,p3457,0.044,0.0594,0.7415,40x,With dysplasia,True
+densenet121,p3458,0.1521,0.1744,0.8725,40x,With dysplasia,True
+densenet121,p3459,0.2435,0.2654,0.9171,40x,With dysplasia,True
+densenet121,p3460,0.272,0.3252,0.8364,40x,With dysplasia,True
+densenet121,p3461,0.266,0.3206,0.8298,10x,With dysplasia,True
+densenet121,p3462,0.6342,0.5649,1.1227,10x,With dysplasia,True
+densenet121,p3463,0.4606,0.4149,1.11,40x,With dysplasia,False
+densenet121,p3464,0.4403,0.3331,1.3217,40x,With dysplasia,True
+densenet121,p3465,0.2223,0.2822,0.7879,40x,With dysplasia,True
+densenet121,p3466,0.1308,0.1348,0.9703,10x,With dysplasia,True
+densenet121,p3467,0.0665,0.0624,1.0655,10x,With dysplasia,True
+densenet121,p3468,0.0341,0.0286,1.1929,40x,With dysplasia,True
+densenet121,p3469,0.0418,0.0388,1.0786,40x,With dysplasia,False
+densenet121,p3470,0.0435,0.0516,0.8438,40x,With dysplasia,True
+densenet121,p3471,0.0489,0.0442,1.1062,40x,With dysplasia,True
+densenet121,p3472,0.0026,0.0083,0.3103,10x,With dysplasia,True
+densenet121,p3473,0.088,0.0822,1.0705,40x,With dysplasia,True
+densenet121,p3474,0.0809,0.1053,0.7685,40x,With dysplasia,True
+densenet121,p3475,0.0128,0.0101,1.2644,40x,With dysplasia,True
+densenet121,p3476,0.1258,0.1119,1.124,40x,With dysplasia,True
+densenet121,p3477,0.0007,0.0018,0.3612,40x,With dysplasia,True
+densenet121,p3478,0.0007,0.0002,3.0473,40x,With dysplasia,True
+densenet121,p3479,0.0162,0.019,0.8515,10x,With dysplasia,True
+densenet121,p3480,0.0229,0.0156,1.4647,10x,With dysplasia,True
+densenet121,p3481,0.2484,0.2586,0.9607,40x,With dysplasia,True
+densenet121,p3482,0.2584,0.2735,0.9448,10x,With dysplasia,True
+densenet121,p3483,0.2668,0.2761,0.9663,10x,With dysplasia,True
+densenet121,p3484,0.552,0.5115,1.0792,40x,With dysplasia,True
+densenet121,p3485,0.6087,0.6183,0.9844,40x,With dysplasia,True
+densenet121,p3486,0.6397,0.6336,1.0096,40x,With dysplasia,True
+densenet121,p3487,0.6336,0.6175,1.0261,40x,With dysplasia,True
+densenet121,p3488,0.5758,0.5788,0.9949,40x,With dysplasia,True
+densenet121,p3489,0.2696,0.2596,1.0386,40x,With dysplasia,True
+densenet121,p3490,0.7202,0.6483,1.1108,10x,With dysplasia,True
+densenet121,p3491,0.2161,0.1742,1.2402,10x,With dysplasia,True
+densenet121,p3492,0.0903,0.0947,0.9532,40x,With dysplasia,True
+densenet121,p3493,0.1063,0.0973,1.0921,40x,With dysplasia,True
+densenet121,p3494,0.2752,0.2637,1.0437,40x,With dysplasia,True
+densenet121,p3495,0.1663,0.1585,1.0488,40x,With dysplasia,True
+densenet121,p3496,0.4749,0.4049,1.1727,10x,With dysplasia,True
+densenet121,p3497,0.1354,0.0873,1.5512,40x,With dysplasia,True
+densenet121,p3498,0.1223,0.152,0.805,40x,With dysplasia,True
+densenet121,p3499,0.1621,0.1798,0.9013,40x,With dysplasia,True
+densenet121,p3500,0.1025,0.0988,1.0374,40x,With dysplasia,True
+densenet121,p3501,0.0855,0.1061,0.8062,10x,With dysplasia,False
+densenet121,p3502,0.2096,0.1555,1.3473,10x,With dysplasia,False
+densenet121,p3503,0.228,0.187,1.2197,10x,With dysplasia,True
+densenet121,p3504,0.1827,0.1431,1.2769,40x,With dysplasia,True
+densenet121,p3505,0.2517,0.2304,1.0922,40x,With dysplasia,True
+densenet121,p3506,0.2715,0.261,1.0399,40x,With dysplasia,True
+densenet121,p3507,0.727,0.7096,1.0245,10x,With dysplasia,True
+densenet121,p3508,0.0604,0.0519,1.1623,40x,With dysplasia,True
+densenet121,p3509,0.1111,0.1585,0.7007,40x,With dysplasia,True
+densenet121,p3510,0.0632,0.0496,1.2726,40x,With dysplasia,True
+densenet121,p3511,0.2781,0.2565,1.0844,40x,With dysplasia,True
+densenet121,p3512,0.2036,0.2022,1.0067,40x,With dysplasia,True
+densenet121,p3513,0.2353,0.2183,1.078,40x,With dysplasia,True
+densenet121,p3514,0.2483,0.208,1.1938,40x,With dysplasia,True
+densenet121,p3515,0.3631,0.3462,1.0488,40x,With dysplasia,True
+densenet121,p3516,0.4191,0.3844,1.0901,40x,With dysplasia,True
+densenet121,p3517,0.0859,0.0422,2.0354,10x,With dysplasia,True
+densenet121,p3518,0.0538,0.0649,0.829,10x,With dysplasia,True
+densenet121,p3519,0.0581,0.0804,0.7236,10x,With dysplasia,True
+densenet121,p3520,0.0249,0.0354,0.7046,10x,With dysplasia,True
+densenet121,p3521,0.0418,0.0679,0.6155,40x,With dysplasia,True
+densenet121,p3522,0.0537,0.0245,2.1941,40x,With dysplasia,True
+densenet121,p3523,0.0786,0.0632,1.244,40x,With dysplasia,True
+densenet121,p3524,0.2432,0.2393,1.0161,40x,With dysplasia,True
+densenet121,p3525,0.0871,0.0863,1.0099,40x,With dysplasia,True
+densenet121,p3526,0.1834,0.22,0.8334,40x,With dysplasia,True
+densenet121,p3527,0.012,0.023,0.5203,40x,With dysplasia,False
+densenet121,p3528,0.1803,0.1726,1.0448,10x,With dysplasia,True
+densenet121,p3529,0.4573,0.4143,1.1037,40x,With dysplasia,True
+densenet121,p3530,0.3704,0.2402,1.5419,40x,With dysplasia,True
+densenet121,p3531,0.2136,0.1884,1.1334,40x,With dysplasia,True
+densenet121,p3532,0.172,0.1778,0.9672,40x,With dysplasia,True
+densenet121,p3533,0.4199,0.3602,1.1659,40x,With dysplasia,True
+densenet121,p3534,0.1902,0.1963,0.9689,40x,With dysplasia,True
+densenet121,p3535,0.09,0.0591,1.5212,40x,With dysplasia,True
+densenet121,p3536,0.0791,0.0414,1.91,40x,With dysplasia,True
+densenet121,p3537,0.6947,0.466,1.4907,40x,With dysplasia,True
+densenet121,p3538,0.6904,0.4905,1.4075,40x,With dysplasia,True
+densenet121,p3539,0.1454,0.1326,1.0968,40x,With dysplasia,True
+densenet121,p3540,0.2097,0.1948,1.0762,40x,With dysplasia,True
+densenet121,p3541,0.2872,0.2665,1.0776,40x,With dysplasia,True
+densenet121,p3542,0.0839,0.0647,1.2968,40x,With dysplasia,True
+densenet121,p3543,0.0068,0.012,0.5688,40x,With dysplasia,True
+densenet121,p3544,0.1011,0.1446,0.6996,40x,With dysplasia,True
+densenet121,p3545,0.0111,0.0018,6.0785,10x,With dysplasia,True
+densenet121,p3546,0.1618,0.1936,0.8359,40x,With dysplasia,True
+densenet121,p3547,0.1112,0.075,1.4826,40x,With dysplasia,True
+densenet121,p3548,0.0068,0.0059,1.1654,40x,With dysplasia,False
+densenet121,p3549,0.2468,0.1998,1.2354,10x,With dysplasia,True
+densenet121,p3550,0.0579,0.0953,0.6073,10x,With dysplasia,True
+densenet121,p3551,0.0872,0.1109,0.7862,40x,With dysplasia,True
+densenet121,p3552,0.0481,0.0607,0.7915,40x,With dysplasia,False
+densenet121,p3553,0.3536,0.413,0.8563,10x,With dysplasia,True
+densenet121,p3554,0.4962,0.5633,0.8808,10x,With dysplasia,True
+densenet121,p3555,0.3898,0.4266,0.9139,40x,With dysplasia,True
+densenet121,p3556,0.76,0.4061,1.8715,40x,With dysplasia,True
+densenet121,p3557,0.0911,0.2109,0.4321,40x,With dysplasia,False
+densenet121,p3558,0.0604,0.0847,0.7132,40x,With dysplasia,True
+densenet121,p3559,0.0922,0.0909,1.0144,40x,With dysplasia,True
+densenet121,p3560,0.1161,0.0872,1.331,40x,With dysplasia,True
+densenet121,p3561,0.4757,0.4984,0.9544,10x,With dysplasia,True
+densenet121,p3562,0.3075,0.2868,1.0723,40x,With dysplasia,True
+densenet121,p3563,0.2017,0.1815,1.1111,40x,With dysplasia,True
+densenet121,p3564,0.5343,0.5135,1.0405,40x,With dysplasia,True
+densenet121,p3565,0.2918,0.3778,0.7721,40x,With dysplasia,True
+densenet121,p3566,0.392,0.5676,0.6906,40x,With dysplasia,True
+densenet121,p3567,0.3313,0.3302,1.0033,40x,With dysplasia,True
+densenet121,p3568,0.4779,0.4888,0.9776,40x,With dysplasia,True
+densenet121,p3569,0.4225,0.5045,0.8374,40x,With dysplasia,True
+densenet121,p3570,0.2282,0.2379,0.959,40x,With dysplasia,True
+densenet121,p3571,0.1647,0.171,0.9628,40x,With dysplasia,True
+densenet121,p3572,0.2676,0.2371,1.129,40x,With dysplasia,True
+densenet121,p3573,0.2812,0.2848,0.9871,40x,With dysplasia,True
+densenet121,p3574,0.3633,0.2927,1.2414,10x,With dysplasia,True
+densenet121,p3575,0.5421,0.4814,1.1262,10x,With dysplasia,True
+densenet121,p3576,0.6687,0.7341,0.911,10x,With dysplasia,True
+densenet121,p3577,0.9031,0.9036,0.9994,10x,With dysplasia,False
+densenet121,p3578,0.8026,0.8062,0.9955,10x,With dysplasia,True
+densenet121,p3579,0.7775,0.7878,0.9868,10x,With dysplasia,True
+densenet121,p3580,0.7128,0.7262,0.9814,10x,With dysplasia,True
+densenet121,p3581,0.2429,0.2395,1.014,40x,With dysplasia,True
+densenet121,p3582,0.3532,0.3445,1.0252,40x,With dysplasia,True
+densenet121,p3583,0.2663,0.3566,0.7467,40x,With dysplasia,True
+densenet121,p3584,0.4002,0.3921,1.0207,40x,With dysplasia,True
+densenet121,p3585,0.2938,0.287,1.0239,40x,With dysplasia,True
+densenet121,p3586,0.2398,0.2357,1.0175,40x,With dysplasia,True
+densenet121,p3587,0.399,0.4048,0.9857,40x,With dysplasia,True
+densenet121,p3588,0.328,0.3459,0.9482,40x,With dysplasia,True
+densenet121,p3589,0.4308,0.3991,1.0794,40x,With dysplasia,True
+densenet121,p3590,0.3907,0.4488,0.8707,40x,With dysplasia,True
+densenet121,p3591,0.1486,0.1548,0.9596,40x,With dysplasia,True
+densenet121,p3592,0.3016,0.1537,1.9624,10x,With dysplasia,False
+densenet121,p3593,0.2462,0.2671,0.9221,40x,With dysplasia,True
+densenet121,p3594,0.1474,0.1237,1.1909,40x,With dysplasia,True
+densenet121,p3595,0.1713,0.269,0.6369,40x,With dysplasia,False
+densenet121,p3596,0.6458,0.6505,0.9928,40x,With dysplasia,True
+densenet121,p3597,0.8079,0.7914,1.0208,40x,With dysplasia,True
+densenet121,p3598,0.9714,0.9696,1.0018,10x,With dysplasia,False
+densenet121,p3599,0.3994,0.493,0.8102,10x,With dysplasia,True
+densenet121,p3600,0.3743,0.3773,0.9922,10x,With dysplasia,True
+densenet121,p3601,0.3266,0.2249,1.4522,10x,With dysplasia,False
+densenet121,p3602,0.6926,0.5505,1.2582,10x,With dysplasia,True
+densenet121,p3603,0.4265,0.4434,0.9619,40x,With dysplasia,True
+densenet121,p3604,0.3845,0.3935,0.9773,40x,With dysplasia,True
+densenet121,p3605,0.4381,0.3352,1.307,40x,With dysplasia,True
+densenet121,p3606,0.2033,0.2187,0.9297,40x,With dysplasia,True
+densenet121,p3607,0.2937,0.2836,1.0357,40x,With dysplasia,True
+densenet121,p3608,0.2642,0.2559,1.0326,40x,With dysplasia,True
+densenet121,p3609,0.265,0.2532,1.0466,40x,With dysplasia,True
+densenet121,p3610,0.0366,0.0548,0.6673,40x,With dysplasia,True
+densenet121,p3611,0.1125,0.0262,4.301,40x,With dysplasia,True
+densenet121,p3612,0.1848,0.3135,0.5893,40x,With dysplasia,True
+densenet121,p3613,0.0525,0.0499,1.0503,40x,With dysplasia,True
+densenet121,p3614,0.2565,0.2891,0.8872,10x,With dysplasia,True
+densenet121,p3615,0.0061,0.0063,0.9708,10x,With dysplasia,True
+densenet121,p3616,0.3056,0.305,1.0019,40x,With dysplasia,True
+densenet121,p3617,0.3622,0.359,1.0089,40x,With dysplasia,True
+densenet121,p3618,0.4056,0.4063,0.9981,40x,With dysplasia,True
+densenet121,p3619,0.3693,0.3525,1.0477,40x,With dysplasia,True
+densenet121,p3620,0.3477,0.3265,1.0649,40x,With dysplasia,True
+densenet121,p3621,0.3678,0.3627,1.014,40x,With dysplasia,True
+densenet121,p3622,0.2231,0.1526,1.4617,40x,With dysplasia,True
+densenet121,p3623,0.126,0.1043,1.2083,40x,With dysplasia,True
+densenet121,p3624,0.0762,0.0867,0.8784,40x,With dysplasia,True
+densenet121,p3625,0.3613,0.3181,1.1359,40x,With dysplasia,True
+densenet121,p3626,0.4063,0.2278,1.7835,40x,With dysplasia,True
+densenet121,p3627,0.2785,0.2682,1.0383,40x,With dysplasia,True
+densenet121,p3628,0.5217,0.6403,0.8148,10x,With dysplasia,True
+densenet121,p3629,0.2687,0.1158,2.3198,10x,With dysplasia,True
+densenet121,p3630,0.3242,0.2193,1.4781,10x,With dysplasia,True
+densenet121,p3631,0.3498,0.3779,0.9256,10x,With dysplasia,True
+densenet121,p3632,0.3719,0.3024,1.2299,40x,With dysplasia,True
+densenet121,p3633,0.5762,0.3953,1.4578,10x,With dysplasia,True
+densenet121,p3634,0.7703,0.6212,1.24,10x,With dysplasia,True
+densenet121,p3635,0.4772,0.5187,0.9201,10x,With dysplasia,True
+densenet121,p3636,0.5654,0.5469,1.034,40x,With dysplasia,True
+densenet121,p3637,0.7726,0.6979,1.107,40x,With dysplasia,True
+densenet121,p3638,0.5412,0.4979,1.0871,40x,With dysplasia,True
+densenet121,p3639,0.2563,0.2243,1.1426,10x,With dysplasia,True
+densenet121,p3640,0.5702,0.6022,0.9469,40x,With dysplasia,True
+densenet121,p3641,0.4833,0.5767,0.838,40x,With dysplasia,True
+densenet121,p3642,0.2768,0.2364,1.1711,40x,With dysplasia,True
+densenet121,p3643,0.2576,0.2713,0.9492,40x,With dysplasia,True
+densenet121,p3644,0.2645,0.2437,1.0855,40x,With dysplasia,True
+densenet121,p3645,0.3429,0.4047,0.8473,40x,With dysplasia,True
+densenet121,p3646,0.514,0.4176,1.2308,40x,With dysplasia,True
+densenet121,p3647,0.4474,0.3314,1.35,40x,With dysplasia,True
+densenet121,p3648,0.453,0.4627,0.979,40x,With dysplasia,True
+densenet121,p3649,0.3401,0.516,0.6592,40x,With dysplasia,True
+densenet121,p3650,0.2089,0.2156,0.9692,10x,With dysplasia,True
+densenet121,p3651,0.2203,0.1903,1.158,10x,With dysplasia,True
+densenet121,p3652,0.2007,0.1703,1.1785,10x,With dysplasia,True
+densenet121,p3653,0.1837,0.1637,1.1223,40x,With dysplasia,True
+densenet121,p3654,0.2568,0.2742,0.9366,40x,With dysplasia,True
+densenet121,p3655,0.1784,0.1657,1.0768,40x,With dysplasia,True
+densenet121,p3656,0.0217,0.0196,1.1113,10x,With dysplasia,True
+densenet121,p3657,0.0272,0.0326,0.8351,10x,With dysplasia,True
+densenet121,p3658,0.0369,0.0344,1.0707,10x,With dysplasia,True
+densenet121,p3659,0.145,0.1483,0.9772,10x,With dysplasia,True
+densenet121,p3660,0.1315,0.1829,0.719,10x,With dysplasia,True
+densenet121,p3661,0.1702,0.1891,0.9,10x,With dysplasia,True
+densenet121,p3662,0.1673,0.1933,0.8653,10x,With dysplasia,True
+densenet121,p3663,0.321,0.3348,0.9586,40x,With dysplasia,True
+densenet121,p3664,0.1274,0.1104,1.1542,10x,With dysplasia,False
+densenet121,p3665,0.8351,0.4401,1.8976,10x,With dysplasia,True
+densenet121,p3666,0.2978,0.2804,1.0619,40x,With dysplasia,True
+densenet121,p3667,0.3272,0.3686,0.8875,40x,With dysplasia,True
+densenet121,p3668,0.4669,0.452,1.033,40x,With dysplasia,True
+densenet121,p3669,0.0382,0.03,1.2713,40x,With dysplasia,True
+densenet121,p3670,0.1371,0.1573,0.8721,40x,With dysplasia,True
+densenet121,p3671,0.0371,0.0229,1.6225,40x,With dysplasia,True
+densenet121,p3672,0.0688,0.0992,0.6937,40x,With dysplasia,True
+densenet121,p3673,0.1212,0.114,1.0632,40x,With dysplasia,True
+densenet121,p3674,0.4603,0.4756,0.9678,10x,With dysplasia,True
+densenet121,p3675,0.7501,0.7232,1.0373,10x,With dysplasia,True
+densenet121,p3676,0.198,0.1542,1.2842,10x,With dysplasia,True
+densenet121,p3677,0.2334,0.2331,1.0011,40x,With dysplasia,False
+densenet121,p3678,0.0741,0.1229,0.603,40x,With dysplasia,False
+densenet121,p3679,0.6018,0.5567,1.081,40x,With dysplasia,False
+densenet121,p3680,0.3643,0.3369,1.0813,40x,With dysplasia,True
+densenet121,p3681,0.3394,0.3999,0.8488,40x,With dysplasia,False
+densenet121,p3682,0.1138,0.1233,0.9229,40x,With dysplasia,True
+densenet121,p3683,0.145,0.1628,0.8906,40x,With dysplasia,True
+densenet121,p3684,0.1188,0.1026,1.1583,40x,With dysplasia,False
+densenet121,p3685,0.0884,0.0771,1.1471,40x,With dysplasia,True
+densenet121,p3686,0.0416,0.0692,0.6003,40x,With dysplasia,True
+densenet121,p3687,0.0554,0.0673,0.8241,40x,With dysplasia,True
+densenet121,p3688,0.0828,0.0731,1.133,40x,With dysplasia,True
+densenet121,p3689,0.3891,0.4825,0.8065,40x,With dysplasia,True
+densenet121,p3690,0.5086,0.4588,1.1087,40x,With dysplasia,True
+densenet121,p3691,0.7046,0.6965,1.0115,40x,OSCC,False
+densenet121,p3692,0.3583,0.3046,1.1764,40x,OSCC,True
+densenet121,p3693,0.677,0.6469,1.0465,40x,OSCC,True
+densenet121,p3694,0.2172,0.3607,0.6024,40x,OSCC,True
+densenet121,p3695,0.194,0.2455,0.79,40x,OSCC,True
+densenet121,p3696,0.331,0.3023,1.0951,10x,OSCC,True
+densenet121,p3697,0.2059,0.2161,0.9528,40x,OSCC,True
+densenet121,p3698,0.1315,0.1267,1.0375,40x,OSCC,True
+densenet121,p3699,0.0167,0.0171,0.9751,10x,OSCC,True
+densenet121,p3700,0.1833,0.1946,0.942,40x,OSCC,True
+densenet121,p3701,0.5737,0.5364,1.0695,10x,OSCC,True
+densenet121,p3702,0.3385,0.4405,0.7685,40x,OSCC,True
+densenet121,p3703,0.316,0.3088,1.0231,10x,OSCC,True
+densenet121,p3704,0.1401,0.1903,0.7363,40x,OSCC,False
+densenet121,p3705,0.475,0.4652,1.0212,10x,OSCC,True
+densenet121,p3706,0.7985,0.77,1.037,40x,OSCC,True
+densenet121,p3707,0.7557,0.8055,0.9382,40x,OSCC,True
+densenet121,p3708,0.6296,0.5418,1.1622,10x,OSCC,True
+densenet121,p3709,0.0922,0.0967,0.9532,40x,OSCC,True
+densenet121,p3710,0.9035,0.8973,1.0068,10x,OSCC,True
+densenet121,p3711,0.276,0.221,1.2488,40x,OSCC,True
+densenet121,p3712,0.1278,0.1195,1.0696,10x,OSCC,True
+densenet121,p3713,0.1694,0.1419,1.194,10x,OSCC,True
+densenet121,p3714,0.4175,0.4115,1.0147,10x,Without dysplasia,True
+densenet121,p3715,0.0101,0.0103,0.9786,10x,Without dysplasia,True
+densenet121,p3716,0.0801,0.0934,0.8571,40x,Without dysplasia,True
+densenet121,p3717,0.0611,0.0662,0.9226,10x,Without dysplasia,True
+densenet121,p3718,0.078,0.074,1.054,10x,Without dysplasia,True
+densenet121,p3719,0.321,0.3555,0.903,10x,Without dysplasia,True
+densenet121,p3720,0.006,0.007,0.8584,10x,Without dysplasia,True
+densenet121,p3721,0.0639,0.0707,0.904,10x,Without dysplasia,True
+densenet121,p3722,0.3264,0.3762,0.8677,10x,Without dysplasia,True
+densenet121,p3723,0.0691,0.0456,1.5164,10x,Without dysplasia,True
+densenet121,p3724,0.0009,0.0036,0.2475,10x,Without dysplasia,True
+densenet121,p3725,0.2461,0.2371,1.0377,40x,Without dysplasia,False
+densenet121,p3726,0.4939,0.3668,1.3463,10x,With dysplasia,True
+densenet121,p3727,0.0725,0.0821,0.8827,40x,With dysplasia,True
+densenet121,p3728,0.0997,0.1009,0.9877,10x,With dysplasia,True
+densenet121,p3729,0.0001,0.0002,0.548,10x,With dysplasia,True
+densenet121,p3730,0.0038,0.0055,0.6881,40x,With dysplasia,True
+densenet121,p3731,0.6674,0.686,0.9729,40x,With dysplasia,True
+densenet121,p3732,0.0569,0.0384,1.4811,40x,With dysplasia,True
+densenet121,p3733,0.0962,0.0727,1.3227,10x,With dysplasia,True
+densenet121,p3734,0.5394,0.5343,1.0095,10x,With dysplasia,False
+densenet121,p3735,0.0,0.0006,0.0783,40x,With dysplasia,False
+densenet121,p3736,0.0154,0.0101,1.5163,40x,With dysplasia,True
+densenet121,p3737,0.2854,0.1972,1.4473,10x,With dysplasia,True
+densenet121,p3738,0.2796,0.2582,1.083,10x,With dysplasia,True
+densenet121,p3739,0.0163,0.0172,0.948,40x,With dysplasia,False
+densenet121,p3740,0.2198,0.1998,1.1001,40x,With dysplasia,True
+densenet121,p3741,0.8678,0.8413,1.0314,10x,With dysplasia,True
+densenet121,p3742,0.0528,0.0468,1.1271,40x,With dysplasia,True
+densenet121,p3743,0.1652,0.1242,1.3304,10x,With dysplasia,True
+densenet121,p3744,0.0835,0.0894,0.934,40x,With dysplasia,True
+densenet121,p3745,0.5157,0.4024,1.2815,40x,With dysplasia,True
+densenet121,p3746,0.3272,0.2948,1.1098,10x,With dysplasia,False
+densenet121,p3747,0.2577,0.2573,1.0014,40x,With dysplasia,True
+densenet121,p3748,0.0606,0.0581,1.0438,40x,With dysplasia,True
+densenet121,p3749,0.471,0.4521,1.0417,40x,With dysplasia,False
+densenet121,p3750,0.2588,0.2504,1.0332,40x,With dysplasia,True
+densenet121,p3751,0.3119,0.3151,0.99,40x,With dysplasia,True
+densenet121,p3752,0.1875,0.139,1.3487,10x,With dysplasia,True
+densenet121,p3753,0.3475,0.3621,0.9598,10x,With dysplasia,True
+densenet121,p3754,0.7768,0.6575,1.1813,10x,With dysplasia,True
+densenet121,p3755,0.6373,0.6903,0.9232,40x,With dysplasia,True
+densenet121,p3756,0.1862,0.1426,1.3062,10x,With dysplasia,True
+densenet121,p3757,0.7051,0.6479,1.0882,40x,With dysplasia,True
+densenet121,p3758,0.3575,0.2719,1.3149,40x,With dysplasia,True
+densenet121,p3759,0.0977,0.1153,0.8478,10x,With dysplasia,True
+densenet121,p3760,0.0005,0.0011,0.466,10x,With dysplasia,True
+densenet121,p3761,0.342,0.2706,1.264,10x,With dysplasia,True
+densenet121,p3762,0.2044,0.2148,0.9517,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3136,0.5333,0.5423,0.9835,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3137,0.6685,0.7156,0.9341,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3138,0.516,0.4839,1.0663,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3139,0.4017,0.2131,1.8854,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3140,0.5697,0.586,0.9722,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3141,0.288,0.284,1.0143,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3142,0.3874,0.3542,1.0937,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3143,0.3372,0.3067,1.0996,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3144,0.549,0.5395,1.0175,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3145,0.4143,0.4259,0.9727,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3146,0.2346,0.2019,1.1623,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3147,0.5838,0.5976,0.977,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3148,0.4851,0.4529,1.0711,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3149,0.4007,0.3721,1.0769,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3150,0.4013,0.4,1.0033,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3151,0.422,0.401,1.0523,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3152,0.1239,0.1185,1.0462,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3153,0.3734,0.3553,1.0508,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3154,0.2012,0.2504,0.8038,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3155,0.6959,0.7038,0.9889,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3156,0.532,0.5506,0.9663,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3157,0.1238,0.1135,1.091,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3158,0.1058,0.1022,1.0354,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3159,0.1917,0.1819,1.0537,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3160,0.0439,0.0521,0.8416,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3161,0.3012,0.2398,1.2563,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3162,0.3504,0.3158,1.1095,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3163,0.0235,0.027,0.8686,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3164,0.0231,0.0172,1.3426,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3165,0.0381,0.0379,1.0059,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3166,0.3329,0.3377,0.9856,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3167,0.0002,0.0003,0.5781,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3168,0.5305,0.4896,1.0835,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3169,0.2941,0.2606,1.1287,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3170,0.2895,0.2704,1.0704,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3171,0.3103,0.2926,1.0603,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3172,0.2038,0.1676,1.216,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3173,0.3125,0.2732,1.1439,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3174,0.1199,0.116,1.0332,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3175,0.2306,0.2064,1.1174,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3176,0.2008,0.1786,1.1248,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3177,0.1541,0.1834,0.8404,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3178,0.1123,0.1411,0.7956,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3179,0.4305,0.5197,0.8284,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3180,0.312,0.2723,1.1461,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3181,0.2849,0.2753,1.0348,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3182,0.3061,0.269,1.1381,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3183,0.4477,0.4568,0.9801,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3184,0.3623,0.3774,0.96,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3185,0.3077,0.3786,0.8128,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3186,0.4884,0.4723,1.0341,40x,OSCC,False
+swin_tiny_patch4_window7_224,p3187,0.1779,0.3776,0.4711,40x,OSCC,False
+swin_tiny_patch4_window7_224,p3188,0.1848,0.1424,1.2976,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3189,0.1469,0.1301,1.1287,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3190,0.058,0.0893,0.6501,10x,OSCC,False
+swin_tiny_patch4_window7_224,p3191,0.1694,0.1604,1.0564,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3192,0.2478,0.2368,1.0463,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3193,0.3369,0.3233,1.0423,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3194,0.0403,0.0432,0.9329,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3195,0.0683,0.0609,1.1226,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3196,0.0807,0.0808,0.9987,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3197,0.0903,0.1052,0.8578,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3198,0.2109,0.2118,0.996,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3199,0.4574,0.4265,1.0725,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3200,0.0303,0.0208,1.4539,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3201,0.0995,0.096,1.0364,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3202,0.0584,0.05,1.167,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3203,0.0233,0.0334,0.6971,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3204,0.0534,0.03,1.7777,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3205,0.257,0.2529,1.0161,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3206,0.0512,0.0561,0.9131,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3207,0.5665,0.4542,1.2473,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3208,0.1193,0.1125,1.0602,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3209,0.1442,0.1278,1.1285,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3210,0.1106,0.1013,1.0923,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3211,0.1176,0.0943,1.247,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3212,0.174,0.156,1.1156,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3213,0.1925,0.1537,1.2531,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3214,0.1241,0.16,0.7753,10x,OSCC,False
+swin_tiny_patch4_window7_224,p3215,0.2413,0.1905,1.2668,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3216,0.4593,0.4493,1.0223,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3217,0.4569,0.4301,1.0623,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3218,0.0978,0.1053,0.9287,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3219,0.0944,0.0967,0.9767,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3220,0.1715,0.1708,1.0042,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3221,0.133,0.1176,1.1309,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3222,0.6198,0.5511,1.1246,10x,OSCC,False
+swin_tiny_patch4_window7_224,p3223,0.4348,0.4542,0.9573,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3224,0.059,0.0605,0.9753,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3225,0.1316,0.1219,1.0801,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3226,0.2701,0.2532,1.0667,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3227,0.0954,0.0958,0.9964,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3228,0.1644,0.1828,0.899,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3229,0.35,0.3503,0.999,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3230,0.5508,0.5359,1.0278,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3231,0.6093,0.6311,0.9655,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3232,0.3791,0.3743,1.0128,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3233,0.3283,0.3424,0.9589,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3234,0.2706,0.2536,1.0673,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3235,0.3195,0.3116,1.0255,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3236,0.3344,0.3422,0.9772,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3237,0.4032,0.3594,1.1221,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3238,0.3153,0.3694,0.8535,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3239,0.2719,0.2653,1.0246,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3240,0.1931,0.2455,0.7863,40x,OSCC,False
+swin_tiny_patch4_window7_224,p3241,0.3019,0.2735,1.104,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3242,0.9749,0.923,1.0563,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3243,0.4135,0.4338,0.9534,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3244,0.679,0.6852,0.9909,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3245,0.7473,0.7685,0.9724,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3246,0.8335,0.8356,0.9975,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3247,0.7395,0.7322,1.01,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3248,0.7454,0.7477,0.9969,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3249,0.7493,0.7544,0.9932,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3250,0.7537,0.7357,1.0244,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3251,0.4677,0.4514,1.0362,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3252,0.2447,0.2457,0.996,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3253,0.3482,0.3747,0.9292,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3254,0.4606,0.4581,1.0056,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3255,0.2881,0.2478,1.1624,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3256,0.3347,0.3482,0.9613,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3257,0.5752,0.5382,1.0688,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3258,0.5028,0.3444,1.46,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3259,0.0787,0.1031,0.763,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3260,0.2322,0.2405,0.9653,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3261,0.3461,0.3144,1.1006,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3262,0.3608,0.3575,1.0094,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3263,0.2829,0.306,0.9247,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3264,0.2498,0.2627,0.9509,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3265,0.0954,0.0716,1.3322,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3266,0.179,0.1825,0.9806,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3267,0.2697,0.2772,0.9731,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3268,0.8222,0.8703,0.9448,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3269,0.2884,0.4263,0.6763,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3270,0.6761,0.6212,1.0885,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3271,0.3437,0.3571,0.9625,10x,OSCC,False
+swin_tiny_patch4_window7_224,p3272,0.7027,0.5826,1.2061,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3273,0.9589,0.9532,1.006,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3274,0.1065,0.1066,0.9988,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3275,0.0558,0.0461,1.2104,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3276,0.1123,0.112,1.002,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3277,0.0877,0.0805,1.0894,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3278,0.1477,0.2327,0.6347,10x,OSCC,False
+swin_tiny_patch4_window7_224,p3279,0.052,0.0955,0.5447,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3280,0.1029,0.0982,1.0482,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3281,0.3497,0.3016,1.1595,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3282,0.209,0.1392,1.501,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3283,0.3724,0.3832,0.9719,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3284,0.0325,0.0307,1.0559,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3285,0.1769,0.1317,1.3428,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3286,0.2434,0.2099,1.1596,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3287,0.3679,0.3514,1.0468,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3288,0.2451,0.2326,1.0539,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3289,0.495,0.5005,0.9891,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3290,0.2051,0.1861,1.102,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3291,0.1144,0.1476,0.7755,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3292,0.1006,0.0956,1.0519,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3293,0.1529,0.1351,1.1317,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3294,0.0634,0.0684,0.9269,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3295,0.0143,0.0187,0.7633,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3296,0.029,0.0215,1.3481,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3297,0.6714,0.6733,0.9971,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3298,0.3985,0.3696,1.0783,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3299,0.4068,0.3491,1.1653,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3300,0.2024,0.3747,0.5402,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3301,0.4343,0.5639,0.7702,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3302,0.3481,0.3352,1.0383,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3303,0.0222,0.0156,1.4232,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3304,0.0649,0.0255,2.5519,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3305,0.0062,0.002,3.113,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3306,0.0288,0.015,1.9155,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3307,0.2182,0.1389,1.571,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3308,0.0624,0.0546,1.1422,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3309,0.0323,0.037,0.8735,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3310,0.0767,0.0878,0.8736,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3311,0.1044,0.0791,1.3202,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3312,0.1669,0.0771,2.1655,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3313,0.248,0.3488,0.711,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3314,0.0617,0.0671,0.9182,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3315,0.0335,0.0143,2.343,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3316,0.3031,0.2246,1.3499,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3317,0.4782,0.4669,1.0242,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3318,0.0454,0.0153,2.9678,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3319,0.117,0.0526,2.2236,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3320,0.0004,0.0008,0.4804,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3321,0.0,0.0,0.0,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3322,0.0,0.0001,0.0,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3323,0.2119,0.0777,2.7251,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3324,0.2299,0.2312,0.9944,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3325,0.0196,0.0191,1.0274,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3326,0.0446,0.0352,1.267,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3327,0.0993,0.0923,1.0761,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3328,0.1172,0.1133,1.0343,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3329,0.0104,0.0149,0.6981,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3330,0.0184,0.0135,1.3655,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3331,0.1205,0.1035,1.1643,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3332,0.6044,0.5051,1.1965,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3333,0.1068,0.1078,0.99,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3334,0.0379,0.0313,1.2112,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3335,0.0858,0.0589,1.4569,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3336,0.5049,0.3725,1.3553,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3337,0.6204,0.7048,0.8803,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3338,0.956,0.7351,1.3006,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3339,0.0363,0.0279,1.3044,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3340,0.035,0.0148,2.3651,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3341,0.0351,0.0252,1.3964,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3342,0.0719,0.0564,1.2752,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3343,0.062,0.0718,0.8636,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3344,0.1846,0.357,0.5171,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3345,0.1847,0.1688,1.0944,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3346,0.0705,0.0941,0.7493,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3347,0.0133,0.0188,0.7045,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3348,0.0241,0.0168,1.4302,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3349,0.5174,0.2153,2.4037,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3350,0.1265,0.1268,0.9981,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3351,0.6194,0.5554,1.1153,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3352,0.6131,0.5757,1.065,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3353,0.5334,0.4751,1.1227,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3354,0.7294,0.7619,0.9573,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3355,0.0617,0.1006,0.6135,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3357,0.0185,0.0063,2.915,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3358,0.5727,0.7758,0.7383,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3359,0.5897,0.5369,1.0983,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3360,0.7088,0.8102,0.8748,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3361,0.2037,0.1414,1.4406,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3362,0.1813,0.1911,0.9485,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3363,0.444,0.4028,1.1023,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3364,0.2376,0.2115,1.1236,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3365,0.3105,0.364,0.8531,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3366,0.1615,0.2082,0.7755,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3367,0.2442,0.159,1.5364,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3368,0.5165,0.4945,1.0444,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3369,0.4079,0.4132,0.9872,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3370,0.6164,0.4856,1.2694,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3371,0.0066,0.0063,1.0527,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3372,0.1933,0.1603,1.2061,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3373,0.029,0.0434,0.6675,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3374,0.1048,0.1084,0.9669,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3375,0.9857,0.9876,0.9981,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3376,0.0634,0.0807,0.7857,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3377,0.1215,0.2124,0.5723,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3378,0.3951,0.3225,1.2251,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3379,0.1252,0.14,0.8939,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3380,0.1384,0.0916,1.5114,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3381,0.9719,0.9717,1.0002,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3382,0.6292,0.6384,0.9856,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3383,0.0181,0.0224,0.8114,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3384,0.0173,0.0266,0.6507,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3385,1.0,1.0,1.0,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3386,1.0,1.0,1.0,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3387,0.3461,0.3016,1.1477,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3388,0.1323,0.196,0.6752,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3389,0.1973,0.1829,1.0786,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3390,0.0725,0.0707,1.0244,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3391,0.061,0.0466,1.3092,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3392,0.0085,0.0062,1.3687,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3393,0.0103,0.0057,1.819,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3394,0.7081,0.7212,0.9818,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3395,0.7198,0.7434,0.9683,10x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3396,0.0858,0.121,0.7093,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3397,0.7446,0.8275,0.8998,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3398,0.1017,0.0939,1.0828,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3399,0.0958,0.0865,1.1078,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3400,0.0382,0.0278,1.3752,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3401,0.0507,0.0408,1.2441,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3402,0.1862,0.2014,0.9248,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3403,0.0402,0.0327,1.2264,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3404,0.0008,0.0008,1.0558,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3405,0.0004,0.0008,0.5228,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3406,0.4392,0.3098,1.4176,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3407,0.7251,0.7109,1.02,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3408,0.5374,0.5242,1.0253,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3409,0.6244,0.6365,0.9811,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3410,0.6797,0.6011,1.1308,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3411,0.0255,0.0073,3.5199,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3412,0.1268,0.1233,1.0284,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3413,0.5622,0.5302,1.0604,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3414,0.3615,0.299,1.2087,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3415,0.4415,0.29,1.5222,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3416,0.4594,0.314,1.4633,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3417,0.4916,0.3788,1.2977,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3418,0.0024,0.0014,1.7848,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3419,0.0016,0.0004,4.0306,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3420,0.0031,0.0021,1.5001,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3421,0.7652,0.7382,1.0366,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3422,0.0522,0.1207,0.4326,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3423,0.0028,0.0536,0.0526,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3424,0.0454,0.0311,1.46,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3425,0.3761,0.3821,0.9842,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3426,0.2722,0.1541,1.7664,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3427,0.5518,0.5454,1.0118,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3428,0.2427,0.2476,0.98,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3429,0.2055,0.1955,1.0511,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3430,0.1279,0.1175,1.0881,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3431,0.1318,0.1554,0.8486,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3432,0.1249,0.1003,1.2453,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3433,0.2041,0.1893,1.0782,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3434,0.0004,0.001,0.3977,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3435,0.0047,0.0114,0.4088,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3436,0.0146,0.0125,1.1713,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3437,0.0139,0.0156,0.8924,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3438,0.6531,0.6176,1.0574,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3439,0.692,0.6292,1.0998,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3440,0.8615,0.8584,1.0037,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3441,0.6427,0.6653,0.966,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3442,0.2714,0.2273,1.1941,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3443,0.1937,0.1589,1.2189,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3444,0.0594,0.0542,1.0971,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3445,0.3496,0.2696,1.2969,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3446,0.5233,0.3503,1.4936,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3447,0.5469,0.4804,1.1385,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3448,0.3834,0.343,1.1176,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3449,0.163,0.1684,0.9679,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3450,0.1725,0.1626,1.0609,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3451,0.1131,0.129,0.8763,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3452,0.0387,0.0421,0.9209,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3453,0.0035,0.0066,0.5273,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3454,0.082,0.0776,1.0575,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3455,0.0143,0.0087,1.6377,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3456,0.0273,0.0134,2.0415,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3457,0.0656,0.0594,1.1056,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3458,0.1787,0.1744,1.0246,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3459,0.2549,0.2654,0.9603,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3460,0.2746,0.3252,0.8445,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3461,0.3991,0.3206,1.2449,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3462,0.5857,0.5649,1.0369,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3463,0.3448,0.4149,0.8309,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3464,0.2386,0.3331,0.7163,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3465,0.2444,0.2822,0.8661,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3466,0.114,0.1348,0.846,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3467,0.0607,0.0624,0.9729,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3468,0.021,0.0286,0.7339,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3469,0.0586,0.0388,1.5123,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3470,0.0673,0.0516,1.3043,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3471,0.042,0.0442,0.9493,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3472,0.0115,0.0083,1.3807,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3473,0.0924,0.0822,1.1237,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3474,0.0899,0.1053,0.8539,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3475,0.0197,0.0101,1.9518,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3476,0.1138,0.1119,1.0164,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3477,0.0068,0.0018,3.7358,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3478,0.0002,0.0002,0.8728,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3479,0.0093,0.019,0.487,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3480,0.0187,0.0156,1.1978,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3481,0.3376,0.2586,1.3054,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3482,0.2522,0.2735,0.9223,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3483,0.2796,0.2761,1.0128,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3484,0.64,0.5115,1.2511,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3485,0.5944,0.6183,0.9613,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3486,0.5135,0.6336,0.8104,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3487,0.418,0.6175,0.6769,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3488,0.6108,0.5788,1.0554,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3489,0.2776,0.2596,1.0695,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3490,0.6281,0.6483,0.9687,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3491,0.2962,0.1742,1.6998,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3492,0.093,0.0947,0.9827,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3493,0.0858,0.0973,0.8819,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3494,0.2473,0.2637,0.9379,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3495,0.1958,0.1585,1.2349,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3496,0.5728,0.4049,1.4146,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3497,0.0659,0.0873,0.7544,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3498,0.1943,0.152,1.2784,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3499,0.2173,0.1798,1.2081,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3500,0.1156,0.0988,1.1698,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3501,0.1291,0.1061,1.2168,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3502,0.1401,0.1555,0.9009,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3503,0.1823,0.187,0.9751,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3504,0.1536,0.1431,1.0739,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3505,0.259,0.2304,1.1238,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3506,0.2936,0.261,1.1249,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3507,0.7204,0.7096,1.0152,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3508,0.0494,0.0519,0.9509,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3509,0.1862,0.1585,1.1745,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3510,0.0495,0.0496,0.9971,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3511,0.2616,0.2565,1.02,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3512,0.2227,0.2022,1.1012,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3513,0.2362,0.2183,1.0822,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3514,0.2268,0.208,1.0901,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3515,0.3525,0.3462,1.0182,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3516,0.365,0.3844,0.9494,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3517,0.0503,0.0422,1.1921,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3518,0.0531,0.0649,0.8189,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3519,0.076,0.0804,0.9455,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3520,0.034,0.0354,0.9602,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3521,0.0801,0.0679,1.1795,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3522,0.0394,0.0245,1.6109,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3523,0.0561,0.0632,0.8881,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3524,0.2805,0.2393,1.1719,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3525,0.0978,0.0863,1.1337,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3526,0.2191,0.22,0.9959,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3527,0.0289,0.023,1.2548,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3528,0.2588,0.1726,1.4996,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3529,0.2943,0.4143,0.7102,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3530,0.273,0.2402,1.1363,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3531,0.2256,0.1884,1.1975,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3532,0.1488,0.1778,0.8367,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3533,0.4341,0.3602,1.2052,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3534,0.1919,0.1963,0.9778,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3535,0.0691,0.0591,1.1693,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3536,0.051,0.0414,1.2307,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3537,0.6752,0.466,1.4488,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3538,0.5133,0.4905,1.0465,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3539,0.1415,0.1326,1.0674,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3540,0.2026,0.1948,1.0402,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3541,0.2548,0.2665,0.9559,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3542,0.0564,0.0647,0.8721,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3543,0.0109,0.012,0.9105,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3544,0.1651,0.1446,1.1421,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3545,0.0009,0.0018,0.4693,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3546,0.2242,0.1936,1.158,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3547,0.0958,0.075,1.277,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3548,0.0024,0.0059,0.4108,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3549,0.1095,0.1998,0.5481,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3550,0.1144,0.0953,1.2,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3551,0.0829,0.1109,0.7472,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3552,0.1782,0.0607,2.9341,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3553,0.4813,0.413,1.1654,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3554,0.5692,0.5633,1.0104,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3555,0.5143,0.4266,1.2056,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3556,0.7162,0.4061,1.7635,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3557,0.1261,0.2109,0.5982,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3558,0.0593,0.0847,0.6995,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3559,0.0965,0.0909,1.0623,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3560,0.0907,0.0872,1.0407,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3561,0.5277,0.4984,1.0588,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3562,0.2405,0.2868,0.8384,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3563,0.1768,0.1815,0.9743,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3564,0.4742,0.5135,0.9235,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3565,0.4347,0.3778,1.1505,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3566,0.6359,0.5676,1.1203,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3567,0.3605,0.3302,1.0917,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3568,0.5281,0.4888,1.0804,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3569,0.3754,0.5045,0.744,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3570,0.2288,0.2379,0.9616,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3571,0.1511,0.171,0.8833,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3572,0.2296,0.2371,0.9685,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3573,0.2305,0.2848,0.8092,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3574,0.3919,0.2927,1.3389,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3575,0.6549,0.4814,1.3605,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3576,0.6519,0.7341,0.888,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3577,0.8923,0.9036,0.9875,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3578,0.7723,0.8062,0.9579,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3579,0.7097,0.7878,0.9008,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3580,0.7482,0.7262,1.0302,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3581,0.2516,0.2395,1.0505,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3582,0.2958,0.3445,0.8585,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3583,0.3441,0.3566,0.965,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3584,0.3343,0.3921,0.8526,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3585,0.2829,0.287,0.9857,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3586,0.247,0.2357,1.048,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3587,0.3754,0.4048,0.9276,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3588,0.3238,0.3459,0.9361,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3589,0.437,0.3991,1.0949,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3590,0.3897,0.4488,0.8684,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3591,0.1636,0.1548,1.0569,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3592,0.2136,0.1537,1.3899,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3593,0.2967,0.2671,1.1112,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3594,0.192,0.1237,1.5513,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3595,0.2425,0.269,0.9015,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3596,0.6402,0.6505,0.9841,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3597,0.8178,0.7914,1.0333,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3598,0.9697,0.9696,1.0001,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3599,0.4954,0.493,1.0049,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3600,0.3885,0.3773,1.0298,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3601,0.2646,0.2249,1.1765,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3602,0.5433,0.5505,0.9869,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3603,0.447,0.4434,1.008,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3604,0.3127,0.3935,0.7949,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3605,0.3899,0.3352,1.163,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3606,0.2557,0.2187,1.1691,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3607,0.2666,0.2836,0.9401,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3608,0.2613,0.2559,1.0213,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3609,0.2492,0.2532,0.984,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3610,0.0796,0.0548,1.4526,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3611,0.0111,0.0262,0.4247,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3612,0.2333,0.3135,0.7442,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3613,0.0422,0.0499,0.8444,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3614,0.2918,0.2891,1.0093,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3615,0.0086,0.0063,1.3659,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3616,0.3321,0.305,1.0889,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3617,0.3345,0.359,0.9318,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3618,0.4382,0.4063,1.0784,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3619,0.371,0.3525,1.0526,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3620,0.322,0.3265,0.9863,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3621,0.4083,0.3627,1.1257,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3622,0.1756,0.1526,1.1509,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3623,0.1222,0.1043,1.1719,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3624,0.1303,0.0867,1.5029,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3625,0.2843,0.3181,0.8938,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3626,0.3594,0.2278,1.5775,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3627,0.2953,0.2682,1.101,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3628,0.7512,0.6403,1.1733,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3629,0.0591,0.1158,0.51,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3630,0.2918,0.2193,1.3302,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3631,0.3749,0.3779,0.9921,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3632,0.3334,0.3024,1.1028,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3633,0.5203,0.3953,1.3163,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3634,0.7354,0.6212,1.1837,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3635,0.5121,0.5187,0.9873,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3636,0.5302,0.5469,0.9696,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3637,0.645,0.6979,0.9241,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3638,0.5873,0.4979,1.1795,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3639,0.3982,0.2243,1.7753,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3640,0.6585,0.6022,1.0934,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3641,0.7266,0.5767,1.26,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3642,0.2922,0.2364,1.236,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3643,0.3065,0.2713,1.1295,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3644,0.2457,0.2437,1.0085,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3645,0.33,0.4047,0.8153,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3646,0.4087,0.4176,0.9785,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3647,0.2022,0.3314,0.6101,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3648,0.473,0.4627,1.0222,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3649,0.2483,0.516,0.4813,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3650,0.2183,0.2156,1.0127,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3651,0.1862,0.1903,0.9786,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3652,0.256,0.1703,1.5029,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3653,0.1934,0.1637,1.1811,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3654,0.2405,0.2742,0.877,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3655,0.1815,0.1657,1.0953,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3656,0.0146,0.0196,0.7456,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3657,0.0177,0.0326,0.5443,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3658,0.037,0.0344,1.075,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3659,0.1186,0.1483,0.7994,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3660,0.1433,0.1829,0.7832,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3661,0.1587,0.1891,0.839,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3662,0.2413,0.1933,1.2484,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3663,0.269,0.3348,0.8033,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3664,0.1275,0.1104,1.1553,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3665,0.7824,0.4401,1.7779,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3666,0.2932,0.2804,1.0457,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3667,0.3404,0.3686,0.9233,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3668,0.45,0.452,0.9955,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3669,0.035,0.03,1.1652,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3670,0.188,0.1573,1.1957,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3671,0.0198,0.0229,0.8634,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3672,0.1102,0.0992,1.1106,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3673,0.1271,0.114,1.1146,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3674,0.4648,0.4756,0.9773,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3675,0.7928,0.7232,1.0963,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3676,0.1547,0.1542,1.0034,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3677,0.2687,0.2331,1.1527,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3678,0.152,0.1229,1.237,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3679,0.6011,0.5567,1.0797,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3680,0.4878,0.3369,1.4479,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3681,0.4314,0.3999,1.0789,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3682,0.0918,0.1233,0.7446,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3683,0.1765,0.1628,1.0839,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3684,0.1265,0.1026,1.2335,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3685,0.0973,0.0771,1.2625,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3686,0.0784,0.0692,1.1322,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3687,0.058,0.0673,0.8629,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3688,0.0572,0.0731,0.7822,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3689,0.5982,0.4825,1.2399,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3690,0.4441,0.4588,0.9681,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3691,0.7305,0.6965,1.0488,40x,OSCC,False
+swin_tiny_patch4_window7_224,p3692,0.3324,0.3046,1.0914,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3693,0.6251,0.6469,0.9662,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3694,0.3924,0.3607,1.0881,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3695,0.2465,0.2455,1.0039,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3696,0.298,0.3023,0.986,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3697,0.2118,0.2161,0.9802,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3698,0.1309,0.1267,1.0332,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3699,0.0171,0.0171,0.9984,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3700,0.2003,0.1946,1.0291,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3701,0.5539,0.5364,1.0327,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3702,0.4557,0.4405,1.0344,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3703,0.3147,0.3088,1.0192,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3704,0.1739,0.1903,0.914,40x,OSCC,False
+swin_tiny_patch4_window7_224,p3705,0.4765,0.4652,1.0243,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3706,0.7681,0.77,0.9976,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3707,0.8168,0.8055,1.0141,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3708,0.5512,0.5418,1.0175,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3709,0.0787,0.0967,0.8139,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3710,0.913,0.8973,1.0175,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3711,0.31,0.221,1.403,40x,OSCC,True
+swin_tiny_patch4_window7_224,p3712,0.112,0.1195,0.9373,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3713,0.1572,0.1419,1.1081,10x,OSCC,True
+swin_tiny_patch4_window7_224,p3714,0.1979,0.4115,0.481,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3715,0.0061,0.0103,0.5887,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3716,0.0641,0.0934,0.6865,40x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3717,0.0826,0.0662,1.2486,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3718,0.0477,0.074,0.6445,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3719,0.3441,0.3555,0.9677,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3720,0.0117,0.007,1.6608,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3721,0.0986,0.0707,1.3946,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3722,0.2052,0.3762,0.5454,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3723,0.0946,0.0456,2.0757,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3724,0.005,0.0036,1.4132,10x,Without dysplasia,True
+swin_tiny_patch4_window7_224,p3725,0.3973,0.2371,1.6753,40x,Without dysplasia,False
+swin_tiny_patch4_window7_224,p3726,0.4639,0.3668,1.2647,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3727,0.0816,0.0821,0.9938,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3728,0.0762,0.1009,0.7556,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3729,0.0007,0.0002,2.8553,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3730,0.0048,0.0055,0.8652,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3731,0.6772,0.686,0.9873,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3732,0.0704,0.0384,1.8313,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3733,0.0556,0.0727,0.7641,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3734,0.5599,0.5343,1.0479,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3735,0.0006,0.0006,0.8814,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3736,0.0316,0.0101,3.1159,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3737,0.2303,0.1972,1.1678,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3738,0.2662,0.2582,1.0308,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3739,0.0532,0.0172,3.0963,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3740,0.2158,0.1998,1.0802,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3741,0.8268,0.8413,0.9827,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3742,0.05,0.0468,1.068,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3743,0.1653,0.1242,1.3312,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3744,0.1037,0.0894,1.1605,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3745,0.4124,0.4024,1.0248,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3746,0.4565,0.2948,1.5487,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3747,0.3553,0.2573,1.3809,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3748,0.0588,0.0581,1.0118,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3749,0.5146,0.4521,1.1383,40x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3750,0.2287,0.2504,0.9131,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3751,0.3264,0.3151,1.0358,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3752,0.3447,0.139,2.4794,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3753,0.35,0.3621,0.9666,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3754,0.6913,0.6575,1.0514,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3755,0.7368,0.6903,1.0675,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3756,0.119,0.1426,0.8349,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3757,0.6953,0.6479,1.0732,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3758,0.301,0.2719,1.1069,40x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3759,0.1018,0.1153,0.8833,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3760,0.0039,0.0011,3.6093,10x,With dysplasia,False
+swin_tiny_patch4_window7_224,p3761,0.343,0.2706,1.2677,10x,With dysplasia,True
+swin_tiny_patch4_window7_224,p3762,0.2117,0.2148,0.9859,40x,With dysplasia,True
+vgg16,p3136,0.6025,0.5423,1.1111,40x,OSCC,True
+vgg16,p3137,0.6253,0.7156,0.8738,40x,OSCC,True
+vgg16,p3138,0.4539,0.4839,0.938,10x,OSCC,True
+vgg16,p3139,0.3315,0.2131,1.5557,10x,OSCC,True
+vgg16,p3140,0.5648,0.586,0.9637,40x,OSCC,True
+vgg16,p3141,0.3517,0.284,1.2386,40x,OSCC,True
+vgg16,p3142,0.4034,0.3542,1.1389,40x,OSCC,True
+vgg16,p3143,0.3479,0.3067,1.1345,40x,OSCC,True
+vgg16,p3144,0.556,0.5395,1.0305,40x,OSCC,True
+vgg16,p3145,0.5103,0.4259,1.198,40x,OSCC,True
+vgg16,p3146,0.2458,0.2019,1.2177,40x,OSCC,True
+vgg16,p3147,0.5842,0.5976,0.9777,10x,OSCC,True
+vgg16,p3148,0.4766,0.4529,1.0523,10x,OSCC,True
+vgg16,p3149,0.376,0.3721,1.0105,40x,OSCC,True
+vgg16,p3150,0.4465,0.4,1.1165,40x,OSCC,True
+vgg16,p3151,0.3804,0.401,0.9487,10x,OSCC,True
+vgg16,p3152,0.2402,0.1185,2.0278,10x,OSCC,True
+vgg16,p3153,0.4035,0.3553,1.1356,10x,OSCC,True
+vgg16,p3154,0.3807,0.2504,1.5206,10x,OSCC,True
+vgg16,p3155,0.7145,0.7038,1.0153,40x,OSCC,True
+vgg16,p3156,0.7064,0.5506,1.2831,40x,OSCC,True
+vgg16,p3157,0.1325,0.1135,1.1675,40x,OSCC,True
+vgg16,p3158,0.1277,0.1022,1.2503,40x,OSCC,True
+vgg16,p3159,0.3048,0.1819,1.6757,40x,OSCC,True
+vgg16,p3160,0.055,0.0521,1.0556,40x,OSCC,True
+vgg16,p3161,0.1881,0.2398,0.7845,40x,OSCC,True
+vgg16,p3162,0.3507,0.3158,1.1105,40x,OSCC,True
+vgg16,p3163,0.0261,0.027,0.9656,10x,OSCC,True
+vgg16,p3164,0.0237,0.0172,1.3755,10x,OSCC,True
+vgg16,p3165,0.0457,0.0379,1.2055,10x,OSCC,True
+vgg16,p3166,0.391,0.3377,1.1578,40x,OSCC,True
+vgg16,p3167,0.0006,0.0003,1.9809,10x,OSCC,True
+vgg16,p3168,0.4834,0.4896,0.9872,10x,OSCC,True
+vgg16,p3169,0.2656,0.2606,1.0192,10x,OSCC,True
+vgg16,p3170,0.2093,0.2704,0.774,40x,OSCC,True
+vgg16,p3171,0.3105,0.2926,1.0611,40x,OSCC,True
+vgg16,p3172,0.1229,0.1676,0.7336,40x,OSCC,True
+vgg16,p3173,0.1474,0.2732,0.5394,40x,OSCC,True
+vgg16,p3174,0.1089,0.116,0.9389,40x,OSCC,True
+vgg16,p3175,0.0661,0.2064,0.3205,40x,OSCC,True
+vgg16,p3176,0.1955,0.1786,1.0949,40x,OSCC,True
+vgg16,p3177,0.1251,0.1834,0.682,40x,OSCC,True
+vgg16,p3178,0.0955,0.1411,0.6767,10x,OSCC,True
+vgg16,p3179,0.443,0.5197,0.8525,10x,OSCC,True
+vgg16,p3180,0.2956,0.2723,1.0856,40x,OSCC,True
+vgg16,p3181,0.3281,0.2753,1.1915,40x,OSCC,True
+vgg16,p3182,0.336,0.269,1.2495,40x,OSCC,True
+vgg16,p3183,0.5605,0.4568,1.2269,40x,OSCC,True
+vgg16,p3184,0.3818,0.3774,1.0118,10x,OSCC,True
+vgg16,p3185,0.3706,0.3786,0.9789,40x,OSCC,True
+vgg16,p3186,0.5331,0.4723,1.1286,40x,OSCC,True
+vgg16,p3187,0.292,0.3776,0.7734,40x,OSCC,True
+vgg16,p3188,0.1871,0.1424,1.3134,10x,OSCC,True
+vgg16,p3189,0.209,0.1301,1.606,10x,OSCC,True
+vgg16,p3190,0.1691,0.0893,1.8937,10x,OSCC,True
+vgg16,p3191,0.215,0.1604,1.3409,10x,OSCC,True
+vgg16,p3192,0.182,0.2368,0.7685,40x,OSCC,True
+vgg16,p3193,0.2533,0.3233,0.7835,40x,OSCC,True
+vgg16,p3194,0.0364,0.0432,0.8423,40x,OSCC,True
+vgg16,p3195,0.0462,0.0609,0.7595,40x,OSCC,True
+vgg16,p3196,0.0735,0.0808,0.9099,40x,OSCC,True
+vgg16,p3197,0.041,0.1052,0.39,40x,OSCC,True
+vgg16,p3198,0.2017,0.2118,0.9527,40x,OSCC,True
+vgg16,p3199,0.4111,0.4265,0.964,10x,OSCC,True
+vgg16,p3200,0.0218,0.0208,1.0475,10x,OSCC,True
+vgg16,p3201,0.1334,0.096,1.39,10x,OSCC,True
+vgg16,p3202,0.1188,0.05,2.3749,10x,OSCC,True
+vgg16,p3203,0.0455,0.0334,1.361,10x,OSCC,True
+vgg16,p3204,0.0119,0.03,0.3951,10x,OSCC,True
+vgg16,p3205,0.1298,0.2529,0.513,10x,OSCC,True
+vgg16,p3206,0.0507,0.0561,0.9045,10x,OSCC,True
+vgg16,p3207,0.3694,0.4542,0.8133,10x,OSCC,True
+vgg16,p3208,0.0975,0.1125,0.8669,40x,OSCC,True
+vgg16,p3209,0.1117,0.1278,0.8737,40x,OSCC,True
+vgg16,p3210,0.1812,0.1013,1.7893,40x,OSCC,True
+vgg16,p3211,0.1429,0.0943,1.5141,40x,OSCC,True
+vgg16,p3212,0.1379,0.156,0.8842,10x,OSCC,True
+vgg16,p3213,0.1225,0.1537,0.7971,10x,OSCC,False
+vgg16,p3214,0.1474,0.16,0.921,10x,OSCC,True
+vgg16,p3215,0.1902,0.1905,0.9983,40x,OSCC,True
+vgg16,p3216,0.4624,0.4493,1.0292,40x,OSCC,True
+vgg16,p3217,0.5644,0.4301,1.3122,40x,OSCC,True
+vgg16,p3218,0.0958,0.1053,0.9097,10x,OSCC,True
+vgg16,p3219,0.0918,0.0967,0.9493,10x,OSCC,True
+vgg16,p3220,0.1687,0.1708,0.9879,10x,OSCC,True
+vgg16,p3221,0.1272,0.1176,1.0821,10x,OSCC,True
+vgg16,p3222,0.6097,0.5511,1.1063,10x,OSCC,True
+vgg16,p3223,0.459,0.4542,1.0105,40x,OSCC,True
+vgg16,p3224,0.0627,0.0605,1.0367,10x,OSCC,True
+vgg16,p3225,0.1222,0.1219,1.0026,10x,OSCC,True
+vgg16,p3226,0.1392,0.2532,0.5496,40x,OSCC,True
+vgg16,p3227,0.1447,0.0958,1.5109,40x,OSCC,True
+vgg16,p3228,0.2342,0.1828,1.2808,40x,OSCC,True
+vgg16,p3229,0.4044,0.3503,1.1544,40x,OSCC,True
+vgg16,p3230,0.5124,0.5359,0.9561,10x,OSCC,True
+vgg16,p3231,0.5817,0.6311,0.9219,10x,OSCC,True
+vgg16,p3232,0.3037,0.3743,0.8115,10x,OSCC,True
+vgg16,p3233,0.3982,0.3424,1.1631,10x,OSCC,True
+vgg16,p3234,0.2973,0.2536,1.1724,40x,OSCC,True
+vgg16,p3235,0.3343,0.3116,1.0731,40x,OSCC,True
+vgg16,p3236,0.3054,0.3422,0.8924,40x,OSCC,True
+vgg16,p3237,0.3248,0.3594,0.904,10x,OSCC,True
+vgg16,p3238,0.3503,0.3694,0.9482,10x,OSCC,True
+vgg16,p3239,0.2413,0.2653,0.9095,40x,OSCC,True
+vgg16,p3240,0.2277,0.2455,0.9272,40x,OSCC,False
+vgg16,p3241,0.3319,0.2735,1.2139,40x,OSCC,True
+vgg16,p3242,0.9994,0.923,1.0828,10x,OSCC,True
+vgg16,p3243,0.2691,0.4338,0.6204,10x,OSCC,True
+vgg16,p3244,0.6877,0.6852,1.0036,40x,OSCC,True
+vgg16,p3245,0.7804,0.7685,1.0156,40x,OSCC,True
+vgg16,p3246,0.7803,0.8356,0.9338,40x,OSCC,True
+vgg16,p3247,0.7466,0.7322,1.0196,40x,OSCC,True
+vgg16,p3248,0.7609,0.7477,1.0177,40x,OSCC,True
+vgg16,p3249,0.7741,0.7544,1.0261,40x,OSCC,True
+vgg16,p3250,0.7395,0.7357,1.0052,40x,OSCC,True
+vgg16,p3251,0.4072,0.4514,0.9021,10x,OSCC,True
+vgg16,p3252,0.2428,0.2457,0.9881,10x,OSCC,True
+vgg16,p3253,0.4264,0.3747,1.1379,10x,OSCC,True
+vgg16,p3254,0.4222,0.4581,0.9217,10x,OSCC,True
+vgg16,p3255,0.29,0.2478,1.1704,10x,OSCC,True
+vgg16,p3256,0.4178,0.3482,1.1998,10x,OSCC,True
+vgg16,p3257,0.5202,0.5382,0.9666,10x,OSCC,True
+vgg16,p3258,0.4273,0.3444,1.2407,10x,OSCC,True
+vgg16,p3259,0.0503,0.1031,0.4876,40x,OSCC,True
+vgg16,p3260,0.2287,0.2405,0.9509,10x,OSCC,True
+vgg16,p3261,0.3223,0.3144,1.0252,10x,OSCC,True
+vgg16,p3262,0.3332,0.3575,0.9321,10x,OSCC,True
+vgg16,p3263,0.2389,0.306,0.7808,40x,OSCC,True
+vgg16,p3264,0.2445,0.2627,0.9306,40x,OSCC,True
+vgg16,p3265,0.1385,0.0716,1.9327,40x,OSCC,True
+vgg16,p3266,0.1571,0.1825,0.8607,40x,OSCC,True
+vgg16,p3267,0.3062,0.2772,1.1048,40x,OSCC,True
+vgg16,p3268,0.8394,0.8703,0.9645,10x,OSCC,True
+vgg16,p3269,0.1514,0.4263,0.3551,10x,OSCC,True
+vgg16,p3270,0.6572,0.6212,1.058,10x,OSCC,True
+vgg16,p3271,0.2003,0.3571,0.561,10x,OSCC,True
+vgg16,p3272,0.5797,0.5826,0.995,10x,OSCC,True
+vgg16,p3273,0.966,0.9532,1.0134,10x,OSCC,True
+vgg16,p3274,0.1296,0.1066,1.2158,10x,OSCC,True
+vgg16,p3275,0.045,0.0461,0.9753,10x,OSCC,True
+vgg16,p3276,0.0828,0.112,0.7391,10x,OSCC,True
+vgg16,p3277,0.0935,0.0805,1.1625,10x,OSCC,True
+vgg16,p3278,0.2914,0.2327,1.2525,10x,OSCC,False
+vgg16,p3279,0.0952,0.0955,0.996,10x,OSCC,True
+vgg16,p3280,0.0928,0.0982,0.9447,10x,OSCC,True
+vgg16,p3281,0.3614,0.3016,1.198,10x,OSCC,True
+vgg16,p3282,0.0735,0.1392,0.5283,40x,OSCC,True
+vgg16,p3283,0.4695,0.3832,1.2252,10x,OSCC,True
+vgg16,p3284,0.0185,0.0307,0.6023,10x,OSCC,True
+vgg16,p3285,0.1663,0.1317,1.2623,10x,OSCC,True
+vgg16,p3286,0.1856,0.2099,0.8844,10x,OSCC,True
+vgg16,p3287,0.3208,0.3514,0.9127,10x,OSCC,True
+vgg16,p3288,0.2868,0.2326,1.233,10x,OSCC,True
+vgg16,p3289,0.407,0.5005,0.8132,40x,OSCC,True
+vgg16,p3290,0.1883,0.1861,1.012,40x,OSCC,True
+vgg16,p3291,0.1632,0.1476,1.1062,10x,OSCC,True
+vgg16,p3292,0.0731,0.0956,0.7648,10x,OSCC,True
+vgg16,p3293,0.116,0.1351,0.8585,10x,OSCC,True
+vgg16,p3294,0.0738,0.0684,1.0785,10x,OSCC,True
+vgg16,p3295,0.0255,0.0187,1.3629,10x,OSCC,True
+vgg16,p3296,0.0128,0.0215,0.5964,10x,OSCC,True
+vgg16,p3297,0.5645,0.6733,0.8384,40x,OSCC,True
+vgg16,p3298,0.4195,0.3696,1.1352,40x,OSCC,True
+vgg16,p3299,0.3313,0.3491,0.949,40x,OSCC,True
+vgg16,p3300,0.7157,0.3747,1.9101,10x,Without dysplasia,False
+vgg16,p3301,0.5406,0.5639,0.9587,10x,Without dysplasia,True
+vgg16,p3302,0.3278,0.3352,0.9778,10x,Without dysplasia,True
+vgg16,p3303,0.0203,0.0156,1.3017,10x,Without dysplasia,False
+vgg16,p3304,0.0334,0.0255,1.3139,10x,Without dysplasia,True
+vgg16,p3305,0.0013,0.002,0.6419,10x,Without dysplasia,True
+vgg16,p3306,0.0189,0.015,1.2545,10x,Without dysplasia,True
+vgg16,p3307,0.1756,0.1389,1.2642,10x,Without dysplasia,False
+vgg16,p3308,0.0626,0.0546,1.1454,10x,Without dysplasia,True
+vgg16,p3309,0.025,0.037,0.6751,10x,Without dysplasia,True
+vgg16,p3310,0.0751,0.0878,0.8555,10x,Without dysplasia,False
+vgg16,p3311,0.0979,0.0791,1.2384,40x,Without dysplasia,True
+vgg16,p3312,0.0918,0.0771,1.1909,40x,Without dysplasia,True
+vgg16,p3313,0.1913,0.3488,0.5485,10x,Without dysplasia,True
+vgg16,p3314,0.0648,0.0671,0.9653,40x,Without dysplasia,True
+vgg16,p3315,0.0148,0.0143,1.034,40x,Without dysplasia,True
+vgg16,p3316,0.2507,0.2246,1.1164,40x,Without dysplasia,True
+vgg16,p3317,0.6004,0.4669,1.286,10x,Without dysplasia,True
+vgg16,p3318,0.0141,0.0153,0.9197,10x,Without dysplasia,True
+vgg16,p3319,0.0478,0.0526,0.9094,10x,Without dysplasia,True
+vgg16,p3320,0.0,0.0008,0.0474,10x,Without dysplasia,True
+vgg16,p3321,0.0,0.0,0.2355,40x,Without dysplasia,True
+vgg16,p3322,0.0001,0.0001,0.6223,40x,Without dysplasia,True
+vgg16,p3323,0.2129,0.0777,2.7388,40x,Without dysplasia,False
+vgg16,p3324,0.1518,0.2312,0.6567,40x,Without dysplasia,True
+vgg16,p3325,0.022,0.0191,1.1499,40x,Without dysplasia,True
+vgg16,p3326,0.0533,0.0352,1.5152,40x,Without dysplasia,True
+vgg16,p3327,0.0882,0.0923,0.956,10x,Without dysplasia,True
+vgg16,p3328,0.1009,0.1133,0.8909,10x,Without dysplasia,True
+vgg16,p3329,0.0201,0.0149,1.3422,10x,Without dysplasia,True
+vgg16,p3330,0.0163,0.0135,1.2095,10x,Without dysplasia,True
+vgg16,p3331,0.1004,0.1035,0.9706,10x,Without dysplasia,True
+vgg16,p3332,0.5734,0.5051,1.1352,10x,Without dysplasia,True
+vgg16,p3333,0.1215,0.1078,1.127,10x,Without dysplasia,True
+vgg16,p3334,0.0277,0.0313,0.8837,10x,Without dysplasia,True
+vgg16,p3335,0.0481,0.0589,0.8167,10x,Without dysplasia,True
+vgg16,p3336,0.3845,0.3725,1.0321,10x,Without dysplasia,True
+vgg16,p3337,0.7102,0.7048,1.0077,10x,Without dysplasia,True
+vgg16,p3338,0.844,0.7351,1.1482,10x,Without dysplasia,False
+vgg16,p3339,0.0605,0.0279,2.1714,40x,Without dysplasia,True
+vgg16,p3340,0.0077,0.0148,0.5202,10x,Without dysplasia,True
+vgg16,p3341,0.0244,0.0252,0.972,10x,Without dysplasia,True
+vgg16,p3342,0.0579,0.0564,1.0272,10x,Without dysplasia,True
+vgg16,p3343,0.076,0.0718,1.0597,10x,Without dysplasia,True
+vgg16,p3344,0.4057,0.357,1.1362,10x,Without dysplasia,True
+vgg16,p3345,0.2072,0.1688,1.2277,10x,Without dysplasia,True
+vgg16,p3346,0.1189,0.0941,1.2633,10x,Without dysplasia,True
+vgg16,p3347,0.0179,0.0188,0.9504,10x,Without dysplasia,True
+vgg16,p3348,0.0251,0.0168,1.4916,10x,Without dysplasia,True
+vgg16,p3349,0.1607,0.2153,0.7463,10x,Without dysplasia,True
+vgg16,p3350,0.1626,0.1268,1.2827,40x,Without dysplasia,True
+vgg16,p3351,0.6715,0.5554,1.209,10x,Without dysplasia,True
+vgg16,p3352,0.6723,0.5757,1.1679,10x,Without dysplasia,True
+vgg16,p3353,0.5241,0.4751,1.1033,10x,Without dysplasia,True
+vgg16,p3354,0.8185,0.7619,1.0742,10x,Without dysplasia,True
+vgg16,p3355,0.0398,0.1006,0.3961,40x,Without dysplasia,False
+vgg16,p3357,0.0101,0.0063,1.5926,40x,Without dysplasia,True
+vgg16,p3358,0.8961,0.7758,1.1551,10x,Without dysplasia,True
+vgg16,p3359,0.7581,0.5369,1.412,10x,Without dysplasia,True
+vgg16,p3360,0.868,0.8102,1.0712,10x,Without dysplasia,True
+vgg16,p3361,0.1373,0.1414,0.971,40x,Without dysplasia,True
+vgg16,p3362,0.2167,0.1911,1.1337,40x,Without dysplasia,True
+vgg16,p3363,0.4715,0.4028,1.1706,40x,Without dysplasia,True
+vgg16,p3364,0.2277,0.2115,1.0769,40x,Without dysplasia,True
+vgg16,p3365,0.7464,0.364,2.0505,40x,Without dysplasia,True
+vgg16,p3366,0.2896,0.2082,1.3911,40x,Without dysplasia,True
+vgg16,p3367,0.1,0.159,0.6292,40x,Without dysplasia,True
+vgg16,p3368,0.3798,0.4945,0.768,10x,Without dysplasia,True
+vgg16,p3369,0.5492,0.4132,1.3293,10x,Without dysplasia,True
+vgg16,p3370,0.5305,0.4856,1.0924,10x,Without dysplasia,True
+vgg16,p3371,0.0074,0.0063,1.1877,40x,Without dysplasia,True
+vgg16,p3372,0.1689,0.1603,1.0539,40x,Without dysplasia,True
+vgg16,p3373,0.028,0.0434,0.6452,40x,Without dysplasia,True
+vgg16,p3374,0.1133,0.1084,1.045,10x,Without dysplasia,True
+vgg16,p3375,0.9879,0.9876,1.0003,10x,Without dysplasia,True
+vgg16,p3376,0.0432,0.0807,0.5356,40x,Without dysplasia,True
+vgg16,p3377,0.1889,0.2124,0.8897,40x,Without dysplasia,True
+vgg16,p3378,0.3072,0.3225,0.9524,40x,Without dysplasia,True
+vgg16,p3379,0.1497,0.14,1.069,40x,Without dysplasia,False
+vgg16,p3380,0.0608,0.0916,0.6639,40x,Without dysplasia,True
+vgg16,p3381,0.9881,0.9717,1.0169,10x,Without dysplasia,False
+vgg16,p3382,0.7012,0.6384,1.0984,10x,Without dysplasia,True
+vgg16,p3383,0.0191,0.0224,0.8535,40x,Without dysplasia,True
+vgg16,p3384,0.0287,0.0266,1.0797,40x,Without dysplasia,True
+vgg16,p3385,1.0,1.0,1.0,10x,Without dysplasia,False
+vgg16,p3386,1.0,1.0,1.0,10x,Without dysplasia,True
+vgg16,p3387,0.3911,0.3016,1.2969,10x,Without dysplasia,True
+vgg16,p3388,0.2251,0.196,1.1488,10x,Without dysplasia,True
+vgg16,p3389,0.2595,0.1829,1.4189,40x,Without dysplasia,False
+vgg16,p3390,0.0453,0.0707,0.6403,40x,Without dysplasia,True
+vgg16,p3391,0.0365,0.0466,0.784,40x,Without dysplasia,True
+vgg16,p3392,0.0102,0.0062,1.6498,10x,Without dysplasia,True
+vgg16,p3393,0.0088,0.0057,1.5572,10x,Without dysplasia,True
+vgg16,p3394,0.5647,0.7212,0.7829,10x,Without dysplasia,False
+vgg16,p3395,0.7284,0.7434,0.9798,10x,Without dysplasia,False
+vgg16,p3396,0.075,0.121,0.6195,40x,Without dysplasia,True
+vgg16,p3397,0.8196,0.8275,0.9904,10x,Without dysplasia,True
+vgg16,p3398,0.1057,0.0939,1.125,10x,Without dysplasia,True
+vgg16,p3399,0.1136,0.0865,1.3128,10x,Without dysplasia,True
+vgg16,p3400,0.0257,0.0278,0.9244,10x,Without dysplasia,True
+vgg16,p3401,0.0446,0.0408,1.0945,10x,Without dysplasia,False
+vgg16,p3402,0.1735,0.2014,0.8616,10x,Without dysplasia,True
+vgg16,p3403,0.0364,0.0327,1.1108,10x,Without dysplasia,False
+vgg16,p3404,0.0006,0.0008,0.8456,10x,Without dysplasia,True
+vgg16,p3405,0.001,0.0008,1.2745,10x,Without dysplasia,True
+vgg16,p3406,0.5112,0.3098,1.6502,10x,With dysplasia,True
+vgg16,p3407,0.6562,0.7109,0.923,10x,With dysplasia,True
+vgg16,p3408,0.511,0.5242,0.9749,40x,With dysplasia,True
+vgg16,p3409,0.6517,0.6365,1.0239,40x,With dysplasia,True
+vgg16,p3410,0.5437,0.6011,0.9046,40x,With dysplasia,True
+vgg16,p3411,0.0064,0.0073,0.8872,40x,With dysplasia,True
+vgg16,p3412,0.1173,0.1233,0.9514,40x,With dysplasia,True
+vgg16,p3413,0.5624,0.5302,1.0607,40x,With dysplasia,True
+vgg16,p3414,0.3057,0.299,1.0222,40x,With dysplasia,True
+vgg16,p3415,0.3557,0.29,1.2263,10x,With dysplasia,True
+vgg16,p3416,0.4271,0.314,1.3604,10x,With dysplasia,True
+vgg16,p3417,0.3983,0.3788,1.0515,10x,With dysplasia,True
+vgg16,p3418,0.0023,0.0014,1.6752,10x,With dysplasia,True
+vgg16,p3419,0.0004,0.0004,1.0874,10x,With dysplasia,True
+vgg16,p3420,0.0042,0.0021,2.0347,10x,With dysplasia,True
+vgg16,p3421,0.8561,0.7382,1.1597,40x,With dysplasia,True
+vgg16,p3422,0.0585,0.1207,0.4847,40x,With dysplasia,True
+vgg16,p3423,0.0747,0.0536,1.3952,10x,With dysplasia,True
+vgg16,p3424,0.0439,0.0311,1.4114,10x,With dysplasia,True
+vgg16,p3425,0.3815,0.3821,0.9985,10x,With dysplasia,True
+vgg16,p3426,0.2497,0.1541,1.6205,10x,With dysplasia,True
+vgg16,p3427,0.4603,0.5454,0.8441,10x,With dysplasia,True
+vgg16,p3428,0.1598,0.2476,0.6454,10x,With dysplasia,True
+vgg16,p3429,0.1103,0.1955,0.5641,10x,With dysplasia,True
+vgg16,p3430,0.1184,0.1175,1.0074,10x,With dysplasia,True
+vgg16,p3431,0.1144,0.1554,0.7365,10x,With dysplasia,True
+vgg16,p3432,0.115,0.1003,1.1467,40x,With dysplasia,False
+vgg16,p3433,0.1753,0.1893,0.926,40x,With dysplasia,False
+vgg16,p3434,0.0028,0.001,2.973,10x,With dysplasia,False
+vgg16,p3435,0.0083,0.0114,0.7272,40x,With dysplasia,True
+vgg16,p3436,0.0146,0.0125,1.1678,40x,With dysplasia,True
+vgg16,p3437,0.0167,0.0156,1.0694,40x,With dysplasia,True
+vgg16,p3438,0.7454,0.6176,1.2068,40x,With dysplasia,True
+vgg16,p3439,0.6743,0.6292,1.0717,40x,With dysplasia,True
+vgg16,p3440,0.8702,0.8584,1.0138,10x,With dysplasia,True
+vgg16,p3441,0.5715,0.6653,0.859,10x,With dysplasia,True
+vgg16,p3442,0.2727,0.2273,1.1997,10x,With dysplasia,False
+vgg16,p3443,0.1889,0.1589,1.1882,40x,With dysplasia,True
+vgg16,p3444,0.0383,0.0542,0.7065,40x,With dysplasia,True
+vgg16,p3445,0.2866,0.2696,1.0631,10x,With dysplasia,False
+vgg16,p3446,0.4118,0.3503,1.1755,10x,With dysplasia,True
+vgg16,p3447,0.454,0.4804,0.9451,10x,With dysplasia,True
+vgg16,p3448,0.3524,0.343,1.0273,40x,With dysplasia,True
+vgg16,p3449,0.1592,0.1684,0.9452,40x,With dysplasia,True
+vgg16,p3450,0.1464,0.1626,0.9004,10x,With dysplasia,True
+vgg16,p3451,0.1206,0.129,0.9344,10x,With dysplasia,True
+vgg16,p3452,0.0395,0.0421,0.9398,40x,With dysplasia,True
+vgg16,p3453,0.0132,0.0066,2.0046,40x,With dysplasia,True
+vgg16,p3454,0.0783,0.0776,1.0095,40x,With dysplasia,True
+vgg16,p3455,0.0075,0.0087,0.8524,40x,With dysplasia,True
+vgg16,p3456,0.0098,0.0134,0.729,40x,With dysplasia,True
+vgg16,p3457,0.0663,0.0594,1.1177,40x,With dysplasia,True
+vgg16,p3458,0.1741,0.1744,0.9985,40x,With dysplasia,True
+vgg16,p3459,0.2778,0.2654,1.0466,40x,With dysplasia,True
+vgg16,p3460,0.4238,0.3252,1.3034,40x,With dysplasia,True
+vgg16,p3461,0.2768,0.3206,0.8635,10x,With dysplasia,True
+vgg16,p3462,0.6155,0.5649,1.0896,10x,With dysplasia,True
+vgg16,p3463,0.6147,0.4149,1.4814,40x,With dysplasia,False
+vgg16,p3464,0.2705,0.3331,0.8119,40x,With dysplasia,True
+vgg16,p3465,0.2888,0.2822,1.0236,40x,With dysplasia,True
+vgg16,p3466,0.1442,0.1348,1.0696,10x,With dysplasia,True
+vgg16,p3467,0.1136,0.0624,1.8201,10x,With dysplasia,True
+vgg16,p3468,0.0266,0.0286,0.9326,40x,With dysplasia,True
+vgg16,p3469,0.0361,0.0388,0.9317,40x,With dysplasia,True
+vgg16,p3470,0.0536,0.0516,1.039,40x,With dysplasia,True
+vgg16,p3471,0.055,0.0442,1.2442,40x,With dysplasia,True
+vgg16,p3472,0.0087,0.0083,1.0471,10x,With dysplasia,True
+vgg16,p3473,0.082,0.0822,0.9981,40x,With dysplasia,True
+vgg16,p3474,0.1049,0.1053,0.9964,40x,With dysplasia,True
+vgg16,p3475,0.0145,0.0101,1.4386,40x,With dysplasia,True
+vgg16,p3476,0.1313,0.1119,1.1727,40x,With dysplasia,True
+vgg16,p3477,0.0019,0.0018,1.0138,40x,With dysplasia,True
+vgg16,p3478,0.0008,0.0002,3.3649,40x,With dysplasia,True
+vgg16,p3479,0.0248,0.019,1.3047,10x,With dysplasia,True
+vgg16,p3480,0.0208,0.0156,1.3334,10x,With dysplasia,True
+vgg16,p3481,0.3551,0.2586,1.3731,40x,With dysplasia,True
+vgg16,p3482,0.2598,0.2735,0.9501,10x,With dysplasia,True
+vgg16,p3483,0.2694,0.2761,0.9757,10x,With dysplasia,True
+vgg16,p3484,0.5006,0.5115,0.9787,40x,With dysplasia,True
+vgg16,p3485,0.6134,0.6183,0.992,40x,With dysplasia,True
+vgg16,p3486,0.6293,0.6336,0.9933,40x,With dysplasia,True
+vgg16,p3487,0.6339,0.6175,1.0266,40x,With dysplasia,True
+vgg16,p3488,0.5826,0.5788,1.0066,40x,With dysplasia,True
+vgg16,p3489,0.3063,0.2596,1.1798,40x,With dysplasia,True
+vgg16,p3490,0.6434,0.6483,0.9924,10x,With dysplasia,True
+vgg16,p3491,0.1447,0.1742,0.8304,10x,With dysplasia,False
+vgg16,p3492,0.0967,0.0947,1.021,40x,With dysplasia,True
+vgg16,p3493,0.0952,0.0973,0.9782,40x,With dysplasia,True
+vgg16,p3494,0.2548,0.2637,0.9662,40x,With dysplasia,True
+vgg16,p3495,0.1404,0.1585,0.8853,40x,With dysplasia,True
+vgg16,p3496,0.5099,0.4049,1.2592,10x,With dysplasia,True
+vgg16,p3497,0.1435,0.0873,1.6441,40x,With dysplasia,True
+vgg16,p3498,0.2159,0.152,1.4209,40x,With dysplasia,True
+vgg16,p3499,0.1706,0.1798,0.9489,40x,With dysplasia,True
+vgg16,p3500,0.08,0.0988,0.8091,40x,With dysplasia,True
+vgg16,p3501,0.1218,0.1061,1.1482,10x,With dysplasia,True
+vgg16,p3502,0.1661,0.1555,1.0679,10x,With dysplasia,False
+vgg16,p3503,0.2218,0.187,1.1861,10x,With dysplasia,True
+vgg16,p3504,0.166,0.1431,1.1606,40x,With dysplasia,True
+vgg16,p3505,0.2258,0.2304,0.98,40x,With dysplasia,True
+vgg16,p3506,0.2329,0.261,0.8923,40x,With dysplasia,True
+vgg16,p3507,0.7448,0.7096,1.0496,10x,With dysplasia,True
+vgg16,p3508,0.1037,0.0519,1.9976,40x,With dysplasia,True
+vgg16,p3509,0.1739,0.1585,1.0973,40x,With dysplasia,True
+vgg16,p3510,0.0431,0.0496,0.869,40x,With dysplasia,True
+vgg16,p3511,0.2902,0.2565,1.1314,40x,With dysplasia,True
+vgg16,p3512,0.2145,0.2022,1.0605,40x,With dysplasia,True
+vgg16,p3513,0.2537,0.2183,1.1623,40x,With dysplasia,True
+vgg16,p3514,0.2147,0.208,1.032,40x,With dysplasia,True
+vgg16,p3515,0.3546,0.3462,1.0242,40x,With dysplasia,True
+vgg16,p3516,0.3317,0.3844,0.8627,40x,With dysplasia,True
+vgg16,p3517,0.0395,0.0422,0.9374,10x,With dysplasia,False
+vgg16,p3518,0.0612,0.0649,0.943,10x,With dysplasia,True
+vgg16,p3519,0.0919,0.0804,1.1431,10x,With dysplasia,True
+vgg16,p3520,0.0557,0.0354,1.5746,10x,With dysplasia,True
+vgg16,p3521,0.079,0.0679,1.1633,40x,With dysplasia,True
+vgg16,p3522,0.0165,0.0245,0.6758,40x,With dysplasia,True
+vgg16,p3523,0.0657,0.0632,1.0399,40x,With dysplasia,True
+vgg16,p3524,0.2594,0.2393,1.0838,40x,With dysplasia,True
+vgg16,p3525,0.0977,0.0863,1.1329,40x,With dysplasia,True
+vgg16,p3526,0.1834,0.22,0.8335,40x,With dysplasia,True
+vgg16,p3527,0.0283,0.023,1.2302,40x,With dysplasia,False
+vgg16,p3528,0.1771,0.1726,1.0262,10x,With dysplasia,False
+vgg16,p3529,0.6517,0.4143,1.5729,40x,With dysplasia,True
+vgg16,p3530,0.2968,0.2402,1.2354,40x,With dysplasia,True
+vgg16,p3531,0.2312,0.1884,1.2268,40x,With dysplasia,True
+vgg16,p3532,0.122,0.1778,0.6858,40x,With dysplasia,True
+vgg16,p3533,0.3617,0.3602,1.0042,40x,With dysplasia,True
+vgg16,p3534,0.186,0.1963,0.9473,40x,With dysplasia,True
+vgg16,p3535,0.0957,0.0591,1.6192,40x,With dysplasia,True
+vgg16,p3536,0.0641,0.0414,1.5477,40x,With dysplasia,True
+vgg16,p3537,0.6322,0.466,1.3565,40x,With dysplasia,True
+vgg16,p3538,0.5992,0.4905,1.2216,40x,With dysplasia,True
+vgg16,p3539,0.1646,0.1326,1.242,40x,With dysplasia,True
+vgg16,p3540,0.2159,0.1948,1.1082,40x,With dysplasia,True
+vgg16,p3541,0.2878,0.2665,1.0797,40x,With dysplasia,True
+vgg16,p3542,0.0733,0.0647,1.1342,40x,With dysplasia,True
+vgg16,p3543,0.0077,0.012,0.639,40x,With dysplasia,True
+vgg16,p3544,0.1545,0.1446,1.0685,40x,With dysplasia,True
+vgg16,p3545,0.0017,0.0018,0.9183,10x,With dysplasia,True
+vgg16,p3546,0.1984,0.1936,1.0251,40x,With dysplasia,True
+vgg16,p3547,0.12,0.075,1.5999,40x,With dysplasia,True
+vgg16,p3548,0.0064,0.0059,1.0905,40x,With dysplasia,False
+vgg16,p3549,0.1786,0.1998,0.8937,10x,With dysplasia,True
+vgg16,p3550,0.1817,0.0953,1.9062,10x,With dysplasia,True
+vgg16,p3551,0.0805,0.1109,0.7253,40x,With dysplasia,False
+vgg16,p3552,0.0269,0.0607,0.4429,40x,With dysplasia,False
+vgg16,p3553,0.4137,0.413,1.0018,10x,With dysplasia,True
+vgg16,p3554,0.5946,0.5633,1.0555,10x,With dysplasia,True
+vgg16,p3555,0.4088,0.4266,0.9583,40x,With dysplasia,True
+vgg16,p3556,0.658,0.4061,1.6203,40x,With dysplasia,True
+vgg16,p3557,0.192,0.2109,0.9105,40x,With dysplasia,False
+vgg16,p3558,0.0896,0.0847,1.0579,40x,With dysplasia,True
+vgg16,p3559,0.1003,0.0909,1.1037,40x,With dysplasia,True
+vgg16,p3560,0.0905,0.0872,1.0376,40x,With dysplasia,True
+vgg16,p3561,0.5077,0.4984,1.0187,10x,With dysplasia,True
+vgg16,p3562,0.2589,0.2868,0.9027,40x,With dysplasia,True
+vgg16,p3563,0.1905,0.1815,1.0497,40x,With dysplasia,True
+vgg16,p3564,0.5422,0.5135,1.0558,40x,With dysplasia,True
+vgg16,p3565,0.4495,0.3778,1.1896,40x,With dysplasia,True
+vgg16,p3566,0.6345,0.5676,1.1178,40x,With dysplasia,True
+vgg16,p3567,0.3363,0.3302,1.0186,40x,With dysplasia,True
+vgg16,p3568,0.5576,0.4888,1.1407,40x,With dysplasia,True
+vgg16,p3569,0.5553,0.5045,1.1006,40x,With dysplasia,True
+vgg16,p3570,0.2469,0.2379,1.0376,40x,With dysplasia,True
+vgg16,p3571,0.1561,0.171,0.9125,40x,With dysplasia,True
+vgg16,p3572,0.2761,0.2371,1.1648,40x,With dysplasia,True
+vgg16,p3573,0.2947,0.2848,1.0347,40x,With dysplasia,True
+vgg16,p3574,0.3815,0.2927,1.3033,10x,With dysplasia,True
+vgg16,p3575,0.6061,0.4814,1.2591,10x,With dysplasia,True
+vgg16,p3576,0.7034,0.7341,0.9581,10x,With dysplasia,True
+vgg16,p3577,0.9214,0.9036,1.0196,10x,With dysplasia,False
+vgg16,p3578,0.8284,0.8062,1.0275,10x,With dysplasia,True
+vgg16,p3579,0.7739,0.7878,0.9823,10x,With dysplasia,True
+vgg16,p3580,0.7013,0.7262,0.9657,10x,With dysplasia,True
+vgg16,p3581,0.2648,0.2395,1.1054,40x,With dysplasia,True
+vgg16,p3582,0.3201,0.3445,0.9292,40x,With dysplasia,True
+vgg16,p3583,0.4408,0.3566,1.236,40x,With dysplasia,True
+vgg16,p3584,0.3636,0.3921,0.9274,40x,With dysplasia,True
+vgg16,p3585,0.3102,0.287,1.0809,40x,With dysplasia,True
+vgg16,p3586,0.2192,0.2357,0.9304,40x,With dysplasia,True
+vgg16,p3587,0.3642,0.4048,0.8997,40x,With dysplasia,True
+vgg16,p3588,0.4131,0.3459,1.1942,40x,With dysplasia,True
+vgg16,p3589,0.4059,0.3991,1.017,40x,With dysplasia,True
+vgg16,p3590,0.4077,0.4488,0.9086,40x,With dysplasia,True
+vgg16,p3591,0.1508,0.1548,0.974,40x,With dysplasia,True
+vgg16,p3592,0.2063,0.1537,1.3425,10x,With dysplasia,False
+vgg16,p3593,0.304,0.2671,1.1382,40x,With dysplasia,True
+vgg16,p3594,0.0952,0.1237,0.7697,40x,With dysplasia,True
+vgg16,p3595,0.2483,0.269,0.9229,40x,With dysplasia,False
+vgg16,p3596,0.6501,0.6505,0.9993,40x,With dysplasia,True
+vgg16,p3597,0.7914,0.7914,0.9999,40x,With dysplasia,True
+vgg16,p3598,0.9815,0.9696,1.0122,10x,With dysplasia,False
+vgg16,p3599,0.4004,0.493,0.8122,10x,With dysplasia,True
+vgg16,p3600,0.4818,0.3773,1.2772,10x,With dysplasia,True
+vgg16,p3601,0.2122,0.2249,0.9436,10x,With dysplasia,False
+vgg16,p3602,0.5596,0.5505,1.0166,10x,With dysplasia,True
+vgg16,p3603,0.4469,0.4434,1.0079,40x,With dysplasia,True
+vgg16,p3604,0.3473,0.3935,0.8828,40x,With dysplasia,True
+vgg16,p3605,0.2168,0.3352,0.6469,40x,With dysplasia,True
+vgg16,p3606,0.2319,0.2187,1.0604,40x,With dysplasia,True
+vgg16,p3607,0.2978,0.2836,1.05,40x,With dysplasia,True
+vgg16,p3608,0.2699,0.2559,1.0548,40x,With dysplasia,True
+vgg16,p3609,0.2604,0.2532,1.0283,40x,With dysplasia,True
+vgg16,p3610,0.0491,0.0548,0.8969,40x,With dysplasia,True
+vgg16,p3611,0.0142,0.0262,0.5435,40x,With dysplasia,True
+vgg16,p3612,0.2989,0.3135,0.9532,40x,With dysplasia,True
+vgg16,p3613,0.1015,0.0499,2.0322,40x,With dysplasia,True
+vgg16,p3614,0.2315,0.2891,0.8009,10x,With dysplasia,True
+vgg16,p3615,0.0055,0.0063,0.8656,10x,With dysplasia,True
+vgg16,p3616,0.3115,0.305,1.0212,40x,With dysplasia,True
+vgg16,p3617,0.3631,0.359,1.0115,40x,With dysplasia,True
+vgg16,p3618,0.4093,0.4063,1.0073,40x,With dysplasia,True
+vgg16,p3619,0.3843,0.3525,1.0902,40x,With dysplasia,True
+vgg16,p3620,0.3348,0.3265,1.0255,40x,With dysplasia,True
+vgg16,p3621,0.3634,0.3627,1.002,40x,With dysplasia,True
+vgg16,p3622,0.2498,0.1526,1.6368,40x,With dysplasia,True
+vgg16,p3623,0.0988,0.1043,0.9477,40x,With dysplasia,True
+vgg16,p3624,0.0679,0.0867,0.7834,40x,With dysplasia,True
+vgg16,p3625,0.3805,0.3181,1.1964,40x,With dysplasia,True
+vgg16,p3626,0.4828,0.2278,2.1194,40x,With dysplasia,True
+vgg16,p3627,0.2645,0.2682,0.9863,40x,With dysplasia,True
+vgg16,p3628,0.7617,0.6403,1.1896,10x,With dysplasia,True
+vgg16,p3629,0.0379,0.1158,0.3273,10x,With dysplasia,True
+vgg16,p3630,0.2754,0.2193,1.2556,10x,With dysplasia,True
+vgg16,p3631,0.3892,0.3779,1.0298,10x,With dysplasia,True
+vgg16,p3632,0.3381,0.3024,1.1181,40x,With dysplasia,True
+vgg16,p3633,0.6276,0.3953,1.5878,10x,With dysplasia,True
+vgg16,p3634,0.7879,0.6212,1.2683,10x,With dysplasia,True
+vgg16,p3635,0.5519,0.5187,1.0641,10x,With dysplasia,True
+vgg16,p3636,0.5812,0.5469,1.0628,40x,With dysplasia,True
+vgg16,p3637,0.7266,0.6979,1.0411,40x,With dysplasia,True
+vgg16,p3638,0.5274,0.4979,1.0592,40x,With dysplasia,True
+vgg16,p3639,0.2383,0.2243,1.0625,10x,With dysplasia,True
+vgg16,p3640,0.6307,0.6022,1.0473,40x,With dysplasia,True
+vgg16,p3641,0.6181,0.5767,1.0718,40x,With dysplasia,True
+vgg16,p3642,0.2327,0.2364,0.9843,40x,With dysplasia,True
+vgg16,p3643,0.2543,0.2713,0.9371,40x,With dysplasia,True
+vgg16,p3644,0.2573,0.2437,1.0558,40x,With dysplasia,True
+vgg16,p3645,0.3936,0.4047,0.9725,40x,With dysplasia,True
+vgg16,p3646,0.364,0.4176,0.8716,40x,With dysplasia,True
+vgg16,p3647,0.3426,0.3314,1.0338,40x,With dysplasia,True
+vgg16,p3648,0.4229,0.4627,0.914,40x,With dysplasia,True
+vgg16,p3649,0.591,0.516,1.1453,40x,With dysplasia,True
+vgg16,p3650,0.2601,0.2156,1.2065,10x,With dysplasia,True
+vgg16,p3651,0.1834,0.1903,0.964,10x,With dysplasia,True
+vgg16,p3652,0.2407,0.1703,1.4131,10x,With dysplasia,True
+vgg16,p3653,0.1255,0.1637,0.7667,40x,With dysplasia,True
+vgg16,p3654,0.2704,0.2742,0.9862,40x,With dysplasia,True
+vgg16,p3655,0.1607,0.1657,0.9694,40x,With dysplasia,True
+vgg16,p3656,0.0203,0.0196,1.0358,10x,With dysplasia,True
+vgg16,p3657,0.0304,0.0326,0.9339,10x,With dysplasia,True
+vgg16,p3658,0.0419,0.0344,1.2164,10x,With dysplasia,True
+vgg16,p3659,0.137,0.1483,0.9235,10x,With dysplasia,True
+vgg16,p3660,0.2416,0.1829,1.3207,10x,With dysplasia,True
+vgg16,p3661,0.1358,0.1891,0.7182,10x,With dysplasia,True
+vgg16,p3662,0.1457,0.1933,0.7539,10x,With dysplasia,True
+vgg16,p3663,0.2524,0.3348,0.7539,40x,With dysplasia,True
+vgg16,p3664,0.1263,0.1104,1.1447,10x,With dysplasia,False
+vgg16,p3665,0.3116,0.4401,0.708,10x,With dysplasia,True
+vgg16,p3666,0.2823,0.2804,1.0065,40x,With dysplasia,True
+vgg16,p3667,0.3925,0.3686,1.0647,40x,With dysplasia,True
+vgg16,p3668,0.4589,0.452,1.0153,40x,With dysplasia,True
+vgg16,p3669,0.0373,0.03,1.2437,40x,With dysplasia,True
+vgg16,p3670,0.1796,0.1573,1.1422,40x,With dysplasia,True
+vgg16,p3671,0.0273,0.0229,1.1944,40x,With dysplasia,True
+vgg16,p3672,0.0618,0.0992,0.6232,40x,With dysplasia,True
+vgg16,p3673,0.1198,0.114,1.0507,40x,With dysplasia,True
+vgg16,p3674,0.4995,0.4756,1.0504,10x,With dysplasia,True
+vgg16,p3675,0.7279,0.7232,1.0066,10x,With dysplasia,True
+vgg16,p3676,0.2876,0.1542,1.8655,10x,With dysplasia,True
+vgg16,p3677,0.2707,0.2331,1.1614,40x,With dysplasia,False
+vgg16,p3678,0.0933,0.1229,0.7589,40x,With dysplasia,False
+vgg16,p3679,0.5917,0.5567,1.0628,40x,With dysplasia,False
+vgg16,p3680,0.3125,0.3369,0.9274,40x,With dysplasia,True
+vgg16,p3681,0.32,0.3999,0.8001,40x,With dysplasia,False
+vgg16,p3682,0.121,0.1233,0.9811,40x,With dysplasia,True
+vgg16,p3683,0.1912,0.1628,1.1741,40x,With dysplasia,True
+vgg16,p3684,0.096,0.1026,0.9365,40x,With dysplasia,False
+vgg16,p3685,0.0824,0.0771,1.0692,40x,With dysplasia,True
+vgg16,p3686,0.0815,0.0692,1.1778,40x,With dysplasia,True
+vgg16,p3687,0.0755,0.0673,1.1219,40x,With dysplasia,True
+vgg16,p3688,0.0694,0.0731,0.9497,40x,With dysplasia,True
+vgg16,p3689,0.4346,0.4825,0.9008,40x,With dysplasia,True
+vgg16,p3690,0.5344,0.4588,1.1648,40x,With dysplasia,True
+vgg16,p3691,0.8237,0.6965,1.1826,40x,OSCC,False
+vgg16,p3692,0.3559,0.3046,1.1686,40x,OSCC,True
+vgg16,p3693,0.6739,0.6469,1.0417,40x,OSCC,True
+vgg16,p3694,0.444,0.3607,1.2311,40x,OSCC,True
+vgg16,p3695,0.2617,0.2455,1.0657,40x,OSCC,True
+vgg16,p3696,0.2644,0.3023,0.8748,10x,OSCC,True
+vgg16,p3697,0.1932,0.2161,0.8941,40x,OSCC,True
+vgg16,p3698,0.1393,0.1267,1.0991,40x,OSCC,True
+vgg16,p3699,0.0177,0.0171,1.0365,10x,OSCC,True
+vgg16,p3700,0.1926,0.1946,0.9895,40x,OSCC,True
+vgg16,p3701,0.427,0.5364,0.7961,10x,OSCC,True
+vgg16,p3702,0.543,0.4405,1.2325,40x,OSCC,True
+vgg16,p3703,0.3067,0.3088,0.9931,10x,OSCC,True
+vgg16,p3704,0.1696,0.1903,0.8917,40x,OSCC,False
+vgg16,p3705,0.4978,0.4652,1.0701,10x,OSCC,True
+vgg16,p3706,0.8575,0.77,1.1137,40x,OSCC,True
+vgg16,p3707,0.7921,0.8055,0.9834,40x,OSCC,True
+vgg16,p3708,0.55,0.5418,1.0151,10x,OSCC,True
+vgg16,p3709,0.2189,0.0967,2.2633,40x,OSCC,True
+vgg16,p3710,0.9418,0.8973,1.0496,10x,OSCC,True
+vgg16,p3711,0.2668,0.221,1.2072,40x,OSCC,True
+vgg16,p3712,0.1015,0.1195,0.849,10x,OSCC,True
+vgg16,p3713,0.1536,0.1419,1.0829,10x,OSCC,True
+vgg16,p3714,0.3281,0.4115,0.7974,10x,Without dysplasia,True
+vgg16,p3715,0.0119,0.0103,1.1542,10x,Without dysplasia,True
+vgg16,p3716,0.1262,0.0934,1.3506,40x,Without dysplasia,True
+vgg16,p3717,0.0497,0.0662,0.7503,10x,Without dysplasia,True
+vgg16,p3718,0.0932,0.074,1.2602,10x,Without dysplasia,True
+vgg16,p3719,0.4722,0.3555,1.3282,10x,Without dysplasia,True
+vgg16,p3720,0.0076,0.007,1.084,10x,Without dysplasia,True
+vgg16,p3721,0.065,0.0707,0.9202,10x,Without dysplasia,True
+vgg16,p3722,0.3348,0.3762,0.89,10x,Without dysplasia,True
+vgg16,p3723,0.0788,0.0456,1.7289,10x,Without dysplasia,True
+vgg16,p3724,0.0023,0.0036,0.6368,10x,Without dysplasia,True
+vgg16,p3725,0.1316,0.2371,0.555,40x,Without dysplasia,False
+vgg16,p3726,0.5017,0.3668,1.3675,10x,With dysplasia,True
+vgg16,p3727,0.1055,0.0821,1.2849,40x,With dysplasia,True
+vgg16,p3728,0.0629,0.1009,0.6233,10x,With dysplasia,True
+vgg16,p3729,0.0001,0.0002,0.6223,10x,With dysplasia,True
+vgg16,p3730,0.0062,0.0055,1.1197,40x,With dysplasia,True
+vgg16,p3731,0.6876,0.686,1.0024,40x,With dysplasia,True
+vgg16,p3732,0.0651,0.0384,1.694,40x,With dysplasia,True
+vgg16,p3733,0.0995,0.0727,1.3684,10x,With dysplasia,True
+vgg16,p3734,0.4229,0.5343,0.7914,10x,With dysplasia,False
+vgg16,p3735,0.0001,0.0006,0.1926,40x,With dysplasia,False
+vgg16,p3736,0.0065,0.0101,0.6416,40x,With dysplasia,True
+vgg16,p3737,0.2716,0.1972,1.3773,10x,With dysplasia,True
+vgg16,p3738,0.2674,0.2582,1.0356,10x,With dysplasia,True
+vgg16,p3739,0.0055,0.0172,0.3191,40x,With dysplasia,True
+vgg16,p3740,0.2394,0.1998,1.1982,40x,With dysplasia,True
+vgg16,p3741,0.8793,0.8413,1.0451,10x,With dysplasia,True
+vgg16,p3742,0.0644,0.0468,1.3755,40x,With dysplasia,True
+vgg16,p3743,0.1647,0.1242,1.3263,10x,With dysplasia,True
+vgg16,p3744,0.0913,0.0894,1.0219,40x,With dysplasia,True
+vgg16,p3745,0.4452,0.4024,1.1064,40x,With dysplasia,True
+vgg16,p3746,0.385,0.2948,1.306,10x,With dysplasia,False
+vgg16,p3747,0.2621,0.2573,1.0188,40x,With dysplasia,True
+vgg16,p3748,0.0739,0.0581,1.2729,40x,With dysplasia,True
+vgg16,p3749,0.5746,0.4521,1.271,40x,With dysplasia,True
+vgg16,p3750,0.2343,0.2504,0.9355,40x,With dysplasia,True
+vgg16,p3751,0.3398,0.3151,1.0783,40x,With dysplasia,True
+vgg16,p3752,0.2831,0.139,2.0361,10x,With dysplasia,True
+vgg16,p3753,0.3738,0.3621,1.0324,10x,With dysplasia,True
+vgg16,p3754,0.7202,0.6575,1.0953,10x,With dysplasia,True
+vgg16,p3755,0.6917,0.6903,1.002,40x,With dysplasia,True
+vgg16,p3756,0.1644,0.1426,1.1532,10x,With dysplasia,True
+vgg16,p3757,0.6602,0.6479,1.0189,40x,With dysplasia,True
+vgg16,p3758,0.3398,0.2719,1.2498,40x,With dysplasia,True
+vgg16,p3759,0.1414,0.1153,1.2268,10x,With dysplasia,True
+vgg16,p3760,0.0009,0.0011,0.7926,10x,With dysplasia,False
+vgg16,p3761,0.3357,0.2706,1.2408,10x,With dysplasia,True
+vgg16,p3762,0.2053,0.2148,0.9561,40x,With dysplasia,True

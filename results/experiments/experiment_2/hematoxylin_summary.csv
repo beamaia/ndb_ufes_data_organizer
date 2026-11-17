@@ -1,0 +1,33 @@
+model,grouped by,group,patches,median preference,share above 1,mean importance share,mean area share,threshold
+all models,all,all,1968,1.011,0.53,0.274,0.269,0.233
+densenet121,all,all,656,1.011,0.537,0.276,0.269,0.233
+swin_tiny_patch4_window7_224,all,all,656,1.006,0.517,0.274,0.269,0.233
+vgg16,all,all,656,1.016,0.538,0.272,0.269,0.233
+all models,right,False,804,1.007,0.516,0.241,0.238,0.233
+all models,right,True,1164,1.013,0.54,0.296,0.291,0.233
+densenet121,right,False,260,1.008,0.527,0.237,0.235,0.233
+densenet121,right,True,396,1.013,0.543,0.301,0.292,0.233
+swin_tiny_patch4_window7_224,right,False,270,1.002,0.5,0.232,0.223,0.233
+swin_tiny_patch4_window7_224,right,True,386,1.01,0.528,0.302,0.302,0.233
+vgg16,right,False,274,1.011,0.522,0.252,0.254,0.233
+vgg16,right,True,382,1.019,0.55,0.285,0.28,0.233
+all models,label,OSCC,567,1.008,0.529,0.239,0.237,0.233
+all models,label,With dysplasia,1065,1.014,0.536,0.281,0.273,0.233
+all models,label,Without dysplasia,336,1.01,0.515,0.311,0.311,0.233
+densenet121,label,OSCC,189,1.009,0.55,0.242,0.237,0.233
+densenet121,label,With dysplasia,355,1.018,0.552,0.285,0.273,0.233
+densenet121,label,Without dysplasia,112,0.986,0.464,0.305,0.311,0.233
+swin_tiny_patch4_window7_224,label,OSCC,189,0.994,0.487,0.236,0.237,0.233
+swin_tiny_patch4_window7_224,label,With dysplasia,355,1.011,0.521,0.284,0.273,0.233
+swin_tiny_patch4_window7_224,label,Without dysplasia,112,1.041,0.554,0.306,0.311,0.233
+vgg16,label,OSCC,189,1.021,0.55,0.238,0.237,0.233
+vgg16,label,With dysplasia,355,1.012,0.535,0.274,0.273,0.233
+vgg16,label,Without dysplasia,112,1.015,0.527,0.321,0.311,0.233
+all models,zoom,10x,939,1.01,0.526,0.268,0.265,0.233
+all models,zoom,40x,1029,1.012,0.534,0.279,0.274,0.233
+densenet121,zoom,10x,313,1.004,0.511,0.269,0.265,0.233
+densenet121,zoom,40x,343,1.015,0.56,0.282,0.274,0.233
+swin_tiny_patch4_window7_224,zoom,10x,313,1.009,0.527,0.266,0.265,0.233
+swin_tiny_patch4_window7_224,zoom,40x,343,1.006,0.507,0.28,0.274,0.233
+vgg16,zoom,10x,313,1.017,0.54,0.268,0.265,0.233
+vgg16,zoom,40x,343,1.014,0.536,0.274,0.274,0.233

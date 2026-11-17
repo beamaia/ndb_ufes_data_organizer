@@ -15,6 +15,7 @@ from src.phase2_report.figures import figures_arg_parser, run_figures
 from src.phase2_report.pages import pages_arg_parser, run_pages
 from src.phase2_report.slides import run_slides, slides_arg_parser
 from src.phase2_report.stats import run_stats, stats_arg_parser
+from src.phase2_report.thesis import run_thesis, thesis_arg_parser
 from src.phase2_report.zoom_review import run_zoom_review, zoom_review_arg_parser
 
 
@@ -26,6 +27,7 @@ COMMANDS = {
     "stats": ("Every table and statistic as a CSV file", stats_arg_parser, run_stats),
     "figures": ("The SVG charts of the wiki", figures_arg_parser, run_figures),
     "pages": ("The generated wiki pages", pages_arg_parser, run_pages),
+    "thesis": ("Static result charts, LaTeX tables and a figure catalog for the Overleaf project of the thesis", thesis_arg_parser, run_thesis),
     "slides": ("Figures for the private slides (SAB pictures): a picture with its patches, and patches split by the published folds", slides_arg_parser, run_slides),
 }
 

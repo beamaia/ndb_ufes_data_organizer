@@ -1,0 +1,33 @@
+model,grouped by,group,patches,pictures,median preference,low,high
+all models,all,all,1968,39,1.011,1.001,1.021
+densenet121,all,all,656,39,1.011,0.996,1.026
+swin_tiny_patch4_window7_224,all,all,656,39,1.006,0.993,1.028
+vgg16,all,all,656,39,1.016,0.995,1.038
+all models,right,False,804,31,1.007,0.992,1.02
+all models,right,True,1164,36,1.013,1.003,1.029
+densenet121,right,False,260,27,1.008,0.99,1.02
+densenet121,right,True,396,33,1.013,0.99,1.037
+swin_tiny_patch4_window7_224,right,False,270,25,1.002,0.976,1.037
+swin_tiny_patch4_window7_224,right,True,386,35,1.01,0.994,1.03
+vgg16,right,False,274,29,1.01,0.976,1.038
+vgg16,right,True,382,33,1.019,0.997,1.045
+all models,label,OSCC,567,11,1.008,0.994,1.024
+all models,label,With dysplasia,1065,29,1.014,1.0,1.028
+all models,label,Without dysplasia,336,13,1.01,0.98,1.054
+densenet121,label,OSCC,189,11,1.01,0.996,1.024
+densenet121,label,With dysplasia,355,29,1.018,0.995,1.04
+densenet121,label,Without dysplasia,112,13,0.986,0.942,1.029
+swin_tiny_patch4_window7_224,label,OSCC,189,11,0.994,0.966,1.016
+swin_tiny_patch4_window7_224,label,With dysplasia,355,29,1.011,0.994,1.032
+swin_tiny_patch4_window7_224,label,Without dysplasia,112,13,1.041,0.984,1.13
+vgg16,label,OSCC,189,11,1.021,0.98,1.051
+vgg16,label,With dysplasia,355,29,1.012,0.982,1.045
+vgg16,label,Without dysplasia,112,13,1.015,0.98,1.075
+all models,zoom,10x,939,20,1.01,0.994,1.029
+all models,zoom,40x,1029,19,1.012,0.998,1.027
+densenet121,zoom,10x,313,20,1.004,0.979,1.026
+densenet121,zoom,40x,343,19,1.014,1.002,1.04
+swin_tiny_patch4_window7_224,zoom,10x,313,20,1.009,0.983,1.055
+swin_tiny_patch4_window7_224,zoom,40x,343,19,1.006,0.981,1.02
+vgg16,zoom,10x,313,20,1.018,0.98,1.048
+vgg16,zoom,40x,343,19,1.014,0.986,1.043
